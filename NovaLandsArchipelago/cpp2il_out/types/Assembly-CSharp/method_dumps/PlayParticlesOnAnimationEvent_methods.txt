@@ -1,0 +1,476 @@
+Type: PlayParticlesOnAnimationEvent
+
+Method: System.Void PlayParticlesOnAnimationEvent::OnPlayParticleAnimationEvent():	Method Body (x86 ASM):
+		0x1809069F0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809069F2 sub rsp,70h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 112
+		0x1809069F6 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809069F9 cmp byte ptr [18329B88Ch],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516812 | None ||| N/A | 0
+		0x180906A00 jne short 0000000180906A39h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906A02 lea rcx,[1830F27B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493775800 | None ||| N/A | N/A
+		0x180906A09 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906A0E lea rcx,[1830F27A8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493775784 | None ||| N/A | N/A
+		0x180906A15 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906A1A lea rcx,[1830F2780h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493775744 | None ||| N/A | N/A
+		0x180906A21 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906A26 lea rcx,[1830F2790h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493775760 | None ||| N/A | N/A
+		0x180906A2D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906A32 mov byte ptr [18329B88Ch],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516812 | None ||| N/A | 1
+		0x180906A39 mov r9,[rbx+20h]		; DEBUG: {Register}/R9 {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x180906A3D test r9,r9		; DEBUG: {Register}/R9 {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x180906A40 je near ptr 0000000180906B60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906A46 xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180906A49 movdqu [rsp+40h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 64 | None ||| N/A | N/A
+		0x180906A4F mov [rsp+38h],r9		; DEBUG: {Memory}/None {Register}/R9 ||| RSP | 56 | None ||| N/A | N/A
+		0x180906A54 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180906A5B je short 0000000180906AA1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906A5D lea r8,[rsp+38h]		; DEBUG: {Register}/R8 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180906A62 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180906A66 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180906A6D mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180906A70 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180906A74 lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x180906A7B lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x180906A7F and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180906A83 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180906A86 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180906A90 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180906A93 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180906A96 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180906A9A lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x180906A9F jne short 0000000180906A90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906AA1 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180906AA3 mov [rsp+40h],ecx		; DEBUG: {Memory}/None {Register}/ECX ||| RSP | 64 | None ||| N/A | N/A
+		0x180906AA7 mov eax,[r9+1Ch]		; DEBUG: {Register}/EAX {Memory}/None ||| R9 | 28 | None ||| N/A | N/A
+		0x180906AAB mov [rsp+44h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 68 | None ||| N/A | N/A
+		0x180906AAF xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180906AB1 mov [rsp+48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 72 | None ||| N/A | N/A
+		0x180906AB6 movups xmm0,[rsp+38h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180906ABB movups [rsp+50h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 80 | None ||| N/A | N/A
+		0x180906AC0 movsd xmm1,qword ptr [rsp+48h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x180906AC6 movsd qword ptr [rsp+60h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 96 | None ||| N/A | N/A
+		0x180906ACC mov [rsp+28h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RSP | 40 | None ||| N/A | N/A
+		0x180906AD1 lea rax,[rsp+50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x180906AD6 mov [rsp+30h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 48 | None ||| N/A | N/A
+		0x180906ADB nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180906AE0 mov rdx,[1830F27A8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493775784 | None ||| N/A | N/A
+		0x180906AE7 lea rcx,[rsp+50h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x180906AEC call 0000000181058730h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906AF1 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180906AF3 je short 0000000180906B2Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906AF5 mov rbx,[rsp+60h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x180906AFA test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180906AFD je short 0000000180906B54h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906AFF mov rax,[1832AB680h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495581824 | None ||| N/A | N/A
+		0x180906B06 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180906B09 jne short 0000000180906B23h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906B0B lea rcx,[1829881A8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6486000040 | None ||| N/A | N/A
+		0x180906B12 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906B17 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180906B1A je short 0000000180906B3Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906B1C mov [1832AB680h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495581824 | None ||| N/A | N/A
+		0x180906B23 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180906B25 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180906B28 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180906B2A jmp short 0000000180906AE0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906B2C jmp short 0000000180906B38h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906B2E mov rcx,[rsp+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 40 | None ||| N/A | N/A
+		0x180906B33 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180906B36 jne short 0000000180906B5Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906B38 add rsp,70h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 112
+		0x180906B3C pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180906B3D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180906B3E lea rcx,[1829881A8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6486000040 | None ||| N/A | N/A
+		0x180906B45 call 0000000180323A80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906B4A xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180906B4C mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180906B4F call 0000000180321970h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906B54 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906B59 nop		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180906B5A call 00000001802C4E80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906B5F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PlayParticlesOnAnimationEvent::OnPlayParticleAnimationEvent():
+		End of function at 0x180906B60
+		Absolute End is at 0x180906B60
+		Identified Jump Destination addresses:
+			0x180906B38
+		0x1809069F0: Saves the content of rbx to the stack
+		0x1809069F6: Copies {'this' (function parameter, type PlayParticlesOnAnimationEvent)} from rcx into rbx
+		0x1809069F9: Compares {Unknown Global at 0x18329B88C, first ten bytes are [253 89 4 0 165 90 4 0 68 109], or as chars "ýY ¥Z Dm"} and 0
+		0x180906A00: Jumps to 0x180906A39 if {Unknown Global at 0x18329B88C, first ten bytes are [253 89 4 0 165 90 4 0 68 109], or as chars "ýY ¥Z Dm"} != 0
+
+		0x180906A02: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1/Enumerator::Dispose() on type System.Collections.Generic.List`1/Enumerator<UnityEngine.ParticleSystem> and stores the result in constant {'Dispose' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180906A09: Initializes runtime metadata value 
+		0x180906A0E: Loads the global generic method reference for method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on type System.Collections.Generic.List`1/Enumerator<UnityEngine.ParticleSystem> and stores the result in constant {'MoveNext' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180906A15: Initializes runtime metadata value 
+		0x180906A1A: Loads the global generic method reference for method T System.Collections.Generic.List`1/Enumerator::get_Current() on type System.Collections.Generic.List`1/Enumerator<UnityEngine.ParticleSystem> and stores the result in constant {'get_Current' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180906A21: Initializes runtime metadata value 
+		0x180906A26: Loads the global generic method reference for method System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1::GetEnumerator() on type System.Collections.Generic.List`1<UnityEngine.ParticleSystem> and stores the result in constant {'GetEnumerator' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180906A2D: Initializes runtime metadata value 
+		0x180906A39: [!] Reads field particles from {'this' (function parameter, type PlayParticlesOnAnimationEvent)} and stores in a new local {'particles' (type System.Collections.Generic.List`1<UnityEngine.ParticleSystem>)}
+
+		0x180906A3D: [!] Compares {'particles' (type System.Collections.Generic.List`1<UnityEngine.ParticleSystem>)} and 0
+		0x180906A40: Jumps to 0x180906B60 (which throws a NRE) if particles equals 0. Implicitly present in managed code, so ignored here.
+		0x180906A4F: Moves particles (type System.Collections.Generic.List`1<UnityEngine.ParticleSystem>) from register r9 to the stack at offset 56 (0x38)
+		0x180906A54: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180906A5B: Jumps to 0x180906AA1 if constant8 equals 0
+
+		0x180906A5D: Loads a pointer to stack offset 0x38 into register r8 as new constant constant10
+		0x180906A6D: Copies {'constant10' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r8 into rax
+		0x180906A74: Loads string "¡
+m" into register rcx as constant {'constant11' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180906A90: Loads the class pointer from il2cppMethodInfo into a constant constant12 in register rax
+		0x180906A93: Copies {'constant12' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x180906A9F: Jumps to 0x180906A90 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x180906AA1: Clears register rcx, yielding zero-local {'local3' (type System.Int32)}
+		0x180906AA3: Moves local3 (type System.Int32) from register rcx to the stack at offset 64 (0x40)
+		0x180906AA7: [!] Reads field _version from {'particles' (type System.Collections.Generic.List`1<UnityEngine.ParticleSystem>)} and stores in a new local {'_version' (type System.Int32)}
+
+		0x180906AAB: Moves _version (type System.Int32) from register rax to the stack at offset 68 (0x44)
+		0x180906AAF: Clears register rax, yielding zero-local {'local5' (type System.Int32)}
+		0x180906AB1: Moves local5 (type System.Int32) from register rax to the stack at offset 72 (0x48)
+		0x180906AB6: Reads local {'particles' (type System.Collections.Generic.List`1<UnityEngine.ParticleSystem>)} from stack offset 56 (0x38) into register xmm0
+		0x180906ABB: Moves particles (type System.Collections.Generic.List`1<UnityEngine.ParticleSystem>) from register xmm0 to the stack at offset 80 (0x50)
+		0x180906ACC: Moves local3 (type System.Int32) from register rcx to the stack at offset 40 (0x28)
+		0x180906AD1: Loads a pointer to stack offset 0x50 into register rax as new constant constant13
+		0x180906AD6: Moves constant13 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register rax to the stack at offset 48 (0x30) as a new local local6
+
+		Potential Loop Start (0x180906AE0):
+		0x180906AE0: Loads the global generic method reference for method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on type System.Collections.Generic.List`1/Enumerator<UnityEngine.ParticleSystem> and stores the result in constant {'MoveNext' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180906AE7: Loads a pointer to stack offset 0x50 into register rcx as new constant constant15
+		0x180906AEC: [!] Calls managed method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on instance  and stores the result in {'boolean' (type System.Boolean)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180906AF1: [!] Compares {'boolean' (type System.Boolean)} and False
+		0x180906AF3: Jumps to 0x180906B2C (which is an if statement's body) if boolean equals False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180906AF5: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register rbx as new constant constant17
+		0x180906AFA: [!] Compares {'constant17' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and 0
+		0x180906AFD: Jumps to 0x180906B54 (which throws a NRE) if constant17 equals 0. Implicitly present in managed code, so ignored here.
+		0x180906AFF: Loads string "°iêpÃ" into register rax as constant UnityEngine.ParticleSystem.Play
+		0x180906B06: Compares UnityEngine.ParticleSystem.Play and 0
+		0x180906B09: Jumps to 0x180906B23 if UnityEngine.ParticleSystem.Play != 0
+
+		0x180906B0B: Loads string "UnityEngine.ParticleSystem::Play(System.Boolean)" into register rcx as constant {'constant21' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180906B12: Looks up unity ICall by name "UnityEngine.ParticleSystem::Play(System.Boolean)" which resolves to System.Void UnityEngine.ParticleSystem::Play(System.Boolean)
+		0x180906B17: Compares UnityEngine.ParticleSystem.Play and 0
+		0x180906B1A: Jumps to 0x180906B3E if UnityEngine.ParticleSystem.Play equals 0 ;  - This is probably a goto, jumping to 0x180906B3E which is after end of current block @ 0x180906B2C (started at 0x180906AF5)
+
+		0x180906B23: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x180906B25: Copies {'constant17' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rbx into rcx
+		0x180906B28: [!] Calls managed method System.Void UnityEngine.ParticleSystem::Play(System.Boolean) on instance  with arguments [True]
+
+		0x180906B2A: Jumps to 0x180906AE0 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x180906B2C: Jumps to 0x180906B38 (which is an function-local jump destination)
+
+		0x180906B2E: Reads local {'local3' (type System.Int32)} from stack offset 40 (0x28) into register rcx
+		0x180906B33: [!] Compares {'local3' (type System.Int32)} and 0
+		0x180906B36: Jumps to 0x180906B5A if {'local3' (type System.Int32)} != 0 ;  - This is probably a goto, jumping to 0x180906B5A which is after end of current block @ 0x180906B2C (started at 0x180906AF5)
+
+
+		Jump Destination (0x180906B38):
+		0x180906B3D: [!] Returns from the function
+
+		0x180906B3E: Loads string "UnityEngine.ParticleSystem::Play(System.Boolean)" into register rcx as constant {'constant25' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180906B45: [!] Constructs and throws an exception of kind System.MissingMethodException
+
+		0x180906B4C: Copies {'local8' (type System.MissingMethodException)} from rax into rcx
+		0x180906B4F: [!] Throws {'local8' (type System.MissingMethodException)}
+		0x180906B54: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayParticlesOnAnimationEvent
+	System.Void OnPlayParticleAnimationEvent()
+		System.Collections.Generic.List`1<UnityEngine.ParticleSystem> particles = this.particles
+		ulong local3 = 0
+		System.Int32 _version = particles._version
+		ulong local5 = 0
+
+		System.Boolean boolean = .MoveNext()
+
+		if (boolean != False)
+
+		    .Play(True) //(Boolean withChildren)
+		endif
+        
+
+		if (local3 != 0)
+            goto INSN_180906B5A
+        endif
+		return
+		throw new System.MissingMethodException()
+		throw local8
+		throw new System.NullReferenceException()
+
+		INSN_180906B5A:
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionAction at (0x180906AEC) is corrupt (Method is non-static but don't have an instance) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void PlayParticlesOnAnimationEvent::OnStopParticleAnimationEvent():	Method Body (x86 ASM):
+		0x180906B70 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180906B72 sub rsp,70h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 112
+		0x180906B76 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180906B79 cmp byte ptr [18329B88Dh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516813 | None ||| N/A | 0
+		0x180906B80 jne short 0000000180906BB9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906B82 lea rcx,[1830F27B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493775800 | None ||| N/A | N/A
+		0x180906B89 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906B8E lea rcx,[1830F27A8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493775784 | None ||| N/A | N/A
+		0x180906B95 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906B9A lea rcx,[1830F2780h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493775744 | None ||| N/A | N/A
+		0x180906BA1 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906BA6 lea rcx,[1830F2790h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493775760 | None ||| N/A | N/A
+		0x180906BAD call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906BB2 mov byte ptr [18329B88Dh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516813 | None ||| N/A | 1
+		0x180906BB9 mov r9,[rbx+20h]		; DEBUG: {Register}/R9 {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x180906BBD test r9,r9		; DEBUG: {Register}/R9 {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x180906BC0 je near ptr 0000000180906CE8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906BC6 xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180906BC9 movdqu [rsp+40h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 64 | None ||| N/A | N/A
+		0x180906BCF mov [rsp+38h],r9		; DEBUG: {Memory}/None {Register}/R9 ||| RSP | 56 | None ||| N/A | N/A
+		0x180906BD4 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180906BDB je short 0000000180906C21h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906BDD lea r8,[rsp+38h]		; DEBUG: {Register}/R8 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180906BE2 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180906BE6 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180906BED mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180906BF0 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180906BF4 lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x180906BFB lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x180906BFF and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180906C03 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180906C06 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180906C10 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180906C13 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180906C16 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180906C1A lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x180906C1F jne short 0000000180906C10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906C21 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180906C23 mov [rsp+40h],ecx		; DEBUG: {Memory}/None {Register}/ECX ||| RSP | 64 | None ||| N/A | N/A
+		0x180906C27 mov eax,[r9+1Ch]		; DEBUG: {Register}/EAX {Memory}/None ||| R9 | 28 | None ||| N/A | N/A
+		0x180906C2B mov [rsp+44h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 68 | None ||| N/A | N/A
+		0x180906C2F xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180906C31 mov [rsp+48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 72 | None ||| N/A | N/A
+		0x180906C36 movups xmm0,[rsp+38h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180906C3B movups [rsp+50h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 80 | None ||| N/A | N/A
+		0x180906C40 movsd xmm1,qword ptr [rsp+48h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x180906C46 movsd qword ptr [rsp+60h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 96 | None ||| N/A | N/A
+		0x180906C4C mov [rsp+28h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RSP | 40 | None ||| N/A | N/A
+		0x180906C51 lea rax,[rsp+50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x180906C56 mov [rsp+30h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 48 | None ||| N/A | N/A
+		0x180906C5B nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180906C60 mov rdx,[1830F27A8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493775784 | None ||| N/A | N/A
+		0x180906C67 lea rcx,[rsp+50h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x180906C6C call 0000000181058730h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906C71 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180906C73 je short 0000000180906CB4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906C75 mov rbx,[rsp+60h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x180906C7A test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180906C7D je short 0000000180906CDCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906C7F mov rax,[1832AB688h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495581832 | None ||| N/A | N/A
+		0x180906C86 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180906C89 jne short 0000000180906CA3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906C8B lea rcx,[1829880B0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485999792 | None ||| N/A | N/A
+		0x180906C92 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906C97 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180906C9A je short 0000000180906CC6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906C9C mov [1832AB688h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495581832 | None ||| N/A | N/A
+		0x180906CA3 mov r8d,1		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 1
+		0x180906CA9 movzx edx,r8b		; DEBUG: {Register}/EDX {Register}/R8L ||| None | 0 | None ||| N/A | N/A
+		0x180906CAD mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180906CB0 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180906CB2 jmp short 0000000180906C60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906CB4 jmp short 0000000180906CC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906CB6 mov rcx,[rsp+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 40 | None ||| N/A | N/A
+		0x180906CBB test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180906CBE jne short 0000000180906CE2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906CC0 add rsp,70h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 112
+		0x180906CC4 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180906CC5 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180906CC6 lea rcx,[1829880B0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485999792 | None ||| N/A | N/A
+		0x180906CCD call 0000000180323A80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906CD2 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180906CD4 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180906CD7 call 0000000180321970h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906CDC call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906CE1 nop		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180906CE2 call 00000001802C4E80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180906CE7 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PlayParticlesOnAnimationEvent::OnStopParticleAnimationEvent():
+		End of function at 0x180906CE8
+		Absolute End is at 0x180906CE8
+		Identified Jump Destination addresses:
+			0x180906CC0
+		0x180906B70: Saves the content of rbx to the stack
+		0x180906B76: Copies {'this' (function parameter, type PlayParticlesOnAnimationEvent)} from rcx into rbx
+		0x180906B79: Compares {Unknown Global at 0x18329B88D, first ten bytes are [89 4 0 165 90 4 0 68 109 239], or as chars "Y ¥Z Dmï"} and 0
+		0x180906B80: Jumps to 0x180906BB9 if {Unknown Global at 0x18329B88D, first ten bytes are [89 4 0 165 90 4 0 68 109 239], or as chars "Y ¥Z Dmï"} != 0
+
+		0x180906B82: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1/Enumerator::Dispose() on type System.Collections.Generic.List`1/Enumerator<UnityEngine.ParticleSystem> and stores the result in constant {'Dispose' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180906B89: Initializes runtime metadata value 
+		0x180906B8E: Loads the global generic method reference for method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on type System.Collections.Generic.List`1/Enumerator<UnityEngine.ParticleSystem> and stores the result in constant {'MoveNext' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180906B95: Initializes runtime metadata value 
+		0x180906B9A: Loads the global generic method reference for method T System.Collections.Generic.List`1/Enumerator::get_Current() on type System.Collections.Generic.List`1/Enumerator<UnityEngine.ParticleSystem> and stores the result in constant {'get_Current' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180906BA1: Initializes runtime metadata value 
+		0x180906BA6: Loads the global generic method reference for method System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1::GetEnumerator() on type System.Collections.Generic.List`1<UnityEngine.ParticleSystem> and stores the result in constant {'GetEnumerator' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180906BAD: Initializes runtime metadata value 
+		0x180906BB9: [!] Reads field particles from {'this' (function parameter, type PlayParticlesOnAnimationEvent)} and stores in a new local {'particles' (type System.Collections.Generic.List`1<UnityEngine.ParticleSystem>)}
+
+		0x180906BBD: [!] Compares {'particles' (type System.Collections.Generic.List`1<UnityEngine.ParticleSystem>)} and 0
+		0x180906BC0: Jumps to 0x180906CE8 (which throws a NRE) if particles equals 0. Implicitly present in managed code, so ignored here.
+		0x180906BCF: Moves particles (type System.Collections.Generic.List`1<UnityEngine.ParticleSystem>) from register r9 to the stack at offset 56 (0x38)
+		0x180906BD4: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180906BDB: Jumps to 0x180906C21 if constant8 equals 0
+
+		0x180906BDD: Loads a pointer to stack offset 0x38 into register r8 as new constant constant10
+		0x180906BED: Copies {'constant10' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r8 into rax
+		0x180906BF4: Loads string "¡
+m" into register rcx as constant {'constant11' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180906C10: Loads the class pointer from il2cppMethodInfo into a constant constant12 in register rax
+		0x180906C13: Copies {'constant12' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x180906C1F: Jumps to 0x180906C10 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x180906C21: Clears register rcx, yielding zero-local {'local3' (type System.Int32)}
+		0x180906C23: Moves local3 (type System.Int32) from register rcx to the stack at offset 64 (0x40)
+		0x180906C27: [!] Reads field _version from {'particles' (type System.Collections.Generic.List`1<UnityEngine.ParticleSystem>)} and stores in a new local {'_version' (type System.Int32)}
+
+		0x180906C2B: Moves _version (type System.Int32) from register rax to the stack at offset 68 (0x44)
+		0x180906C2F: Clears register rax, yielding zero-local {'local5' (type System.Int32)}
+		0x180906C31: Moves local5 (type System.Int32) from register rax to the stack at offset 72 (0x48)
+		0x180906C36: Reads local {'particles' (type System.Collections.Generic.List`1<UnityEngine.ParticleSystem>)} from stack offset 56 (0x38) into register xmm0
+		0x180906C3B: Moves particles (type System.Collections.Generic.List`1<UnityEngine.ParticleSystem>) from register xmm0 to the stack at offset 80 (0x50)
+		0x180906C4C: Moves local3 (type System.Int32) from register rcx to the stack at offset 40 (0x28)
+		0x180906C51: Loads a pointer to stack offset 0x50 into register rax as new constant constant13
+		0x180906C56: Moves constant13 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register rax to the stack at offset 48 (0x30) as a new local local6
+
+		Potential Loop Start (0x180906C60):
+		0x180906C60: Loads the global generic method reference for method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on type System.Collections.Generic.List`1/Enumerator<UnityEngine.ParticleSystem> and stores the result in constant {'MoveNext' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180906C67: Loads a pointer to stack offset 0x50 into register rcx as new constant constant15
+		0x180906C6C: [!] Calls managed method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on instance  and stores the result in {'boolean' (type System.Boolean)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180906C71: [!] Compares {'boolean' (type System.Boolean)} and False
+		0x180906C73: Jumps to 0x180906CB4 (which is an if statement's body) if boolean equals False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180906C75: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register rbx as new constant constant17
+		0x180906C7A: [!] Compares {'constant17' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and 0
+		0x180906C7D: Jumps to 0x180906CDC (which throws a NRE) if constant17 equals 0. Implicitly present in managed code, so ignored here.
+		0x180906C7F: Reads {Unknown Global at 0x1832AB688, first ten bytes are [142 195 15 0 52 143 234 2 142 195], or as chars "Ã 4êÃ"} into register rax as a constant constant19
+		0x180906C86: Compares UnityEngine.ParticleSystem.Stop and 0
+		0x180906C89: Jumps to 0x180906CA3 if UnityEngine.ParticleSystem.Stop != 0
+
+		0x180906C8B: Loads string "UnityEngine.ParticleSystem::Stop(System.Boolean,UnityEngine.ParticleSystemStopBehavior)" into register rcx as constant {'constant21' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180906C92: Looks up unity ICall by name "UnityEngine.ParticleSystem::Stop(System.Boolean,UnityEngine.ParticleSystemStopBehavior)" which resolves to System.Void UnityEngine.ParticleSystem::Stop(System.Boolean,UnityEngine.ParticleSystemStopBehavior)
+		0x180906C97: Compares UnityEngine.ParticleSystem.Stop and 0
+		0x180906C9A: Jumps to 0x180906CC6 if UnityEngine.ParticleSystem.Stop equals 0 ;  - This is probably a goto, jumping to 0x180906CC6 which is after end of current block @ 0x180906CB4 (started at 0x180906C75)
+
+		0x180906CA3: [!] Writes the constant 0x1 into operand True (type UInt64) in register r8
+		0x180906CA9: Copies True from r8 into rdx
+		0x180906CAD: Copies {'constant17' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rbx into rcx
+		0x180906CB0: [!] Calls managed method System.Void UnityEngine.ParticleSystem::Stop(System.Boolean,UnityEngine.ParticleSystemStopBehavior) on instance  with arguments [True, True]
+
+		0x180906CB2: Jumps to 0x180906C60 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x180906CB4: Jumps to 0x180906CC0 (which is an function-local jump destination)
+
+		0x180906CB6: Reads local {'local3' (type System.Int32)} from stack offset 40 (0x28) into register rcx
+		0x180906CBB: [!] Compares {'local3' (type System.Int32)} and 0
+		0x180906CBE: Jumps to 0x180906CE2 if {'local3' (type System.Int32)} != 0 ;  - This is probably a goto, jumping to 0x180906CE2 which is after end of current block @ 0x180906CB4 (started at 0x180906C75)
+
+
+		Jump Destination (0x180906CC0):
+		0x180906CC5: [!] Returns from the function
+
+		0x180906CC6: Loads string "UnityEngine.ParticleSystem::Stop(System.Boolean,UnityEngine.ParticleSystemStopBehavior)" into register rcx as constant {'constant25' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180906CCD: [!] Constructs and throws an exception of kind System.MissingMethodException
+
+		0x180906CD4: Copies {'local8' (type System.MissingMethodException)} from rax into rcx
+		0x180906CD7: [!] Throws {'local8' (type System.MissingMethodException)}
+		0x180906CDC: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayParticlesOnAnimationEvent
+	System.Void OnStopParticleAnimationEvent()
+		System.Collections.Generic.List`1<UnityEngine.ParticleSystem> particles = this.particles
+		ulong local3 = 0
+		System.Int32 _version = particles._version
+		ulong local5 = 0
+
+		System.Boolean boolean = .MoveNext()
+
+		if (boolean != False)
+
+		    .Stop(True, True) //(Boolean withChildren, ParticleSystemStopBehavior stopBehavior)
+		endif
+        
+
+		if (local3 != 0)
+            goto INSN_180906CE2
+        endif
+		return
+		throw new System.MissingMethodException()
+		throw local8
+		throw new System.NullReferenceException()
+
+		INSN_180906CE2:
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionAction at (0x180906C6C) is corrupt (Method is non-static but don't have an instance) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void PlayParticlesOnAnimationEvent::.ctor():	Method Body (x86 ASM):
+		0x18037A630 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A634 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x18037A63B jne short 000000018037A650h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A63D lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A644 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A649 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x18037A650 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A657 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18037A65E jne short 000000018037A669h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A660 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A664 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A669 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A66D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18037A66E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PlayParticlesOnAnimationEvent::.ctor():
+		End of function at 0x18037A66F
+		Absolute End is at 0x18037A66F
+		Identified Jump Destination addresses:
+
+		0x18037A634: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x18037A63B: Jumps to 0x18037A650 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x18037A63D: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A644: Initializes runtime metadata value UnityEngine.Object
+		0x18037A650: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A657: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18037A65E: Jumps to 0x18037A669 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18037A66D: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayParticlesOnAnimationEvent
+	System.Void .ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ret
+	
+

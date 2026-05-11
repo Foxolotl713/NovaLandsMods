@@ -1,0 +1,85 @@
+Type: <>c__DisplayClass45_3
+
+Method: System.Void WorldBiome/<>c__DisplayClass45_3::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void WorldBiome/<>c__DisplayClass45_3::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: WorldBiome/<>c__DisplayClass45_3
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean WorldBiome/<>c__DisplayClass45_3::<GetPossibleProps>b__3(BaseBuilding):	Method Body (x86 ASM):
+		0x1806E3980 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1806E3984 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1806E3987 je short 00000001806E39A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806E3989 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1806E398D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1806E3990 je short 00000001806E39A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806E3992 mov eax,[rax+40h]		; DEBUG: {Register}/EAX {Memory}/None ||| RAX | 64 | None ||| N/A | N/A
+		0x1806E3995 cmp [rdx+40h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 64 | None ||| N/A | N/A
+		0x1806E3998 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806E399B add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1806E399F ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806E39A0 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806E39A5 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean WorldBiome/<>c__DisplayClass45_3::<GetPossibleProps>b__3(BaseBuilding):
+		End of function at 0x1806E39A6
+		Absolute End is at 0x1806E39A6
+		Identified Jump Destination addresses:
+
+		0x1806E3984: [!] Compares {'x' (function parameter, type BaseBuilding)} and 0
+		0x1806E3987: Jumps to 0x1806E39A0 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x1806E3989: [!] Reads field e from {'this' (function parameter, type WorldBiome/<>c__DisplayClass45_3)} and stores in a new local {'baseBuilding' (type BaseBuilding)}
+
+		0x1806E398D: [!] Compares {'baseBuilding' (type BaseBuilding)} and 0
+		0x1806E3990: Jumps to 0x1806E39A0 (which throws a NRE) if baseBuilding equals 0. Implicitly present in managed code, so ignored here.
+		0x1806E3992: [!] Reads field buildingId from {'baseBuilding' (type BaseBuilding)} and stores in a new local {'buildingId' (type System.Int32)}
+
+		0x1806E3995: [!] Compares {field buildingId, read from local {'x' (function parameter, type BaseBuilding)}} and {'buildingId' (type System.Int32)}
+		0x1806E3998: [!] Sets the boolean {'local4' (type System.Boolean)} in rax to true if x.buildingId is equal to buildingId, otherwise false.
+		0x1806E399F: [!] Returns {'local4' (type System.Boolean)} from the function
+
+		0x1806E39A0: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: WorldBiome/<>c__DisplayClass45_3
+	System.Boolean <GetPossibleProps>b__3(BaseBuilding x)
+		BaseBuilding baseBuilding = this.e
+		System.Int32 buildingId = baseBuilding.buildingId
+		System.Boolean local4 = x.buildingId == buildingId
+		return local4
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld BaseBuilding WorldBiome/<>c__DisplayClass45_3::e
+	IL_0006: ldfld System.Int32 BaseBuilding::buildingId
+	IL_000b: stloc.0
+	IL_000c: ldarg.1
+	IL_000d: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0012: ldloc.0
+	IL_0013: ceq
+	IL_0015: ret
+	IL_0016: newobj System.Void System.NullReferenceException::.ctor()
+	IL_001b: throw
+	
+

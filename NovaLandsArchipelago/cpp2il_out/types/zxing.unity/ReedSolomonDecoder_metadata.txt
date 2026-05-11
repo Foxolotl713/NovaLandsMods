@@ -1,0 +1,82 @@
+Type: ZXing.Common.ReedSolomon.ReedSolomonDecoder:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Field: field
+		Type: ZXing.Common.ReedSolomon.GenericGF
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00386E50
+		Ram Offset 0x180388050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: field
+			Type: ZXing.Common.ReedSolomon.GenericGF
+			Default Value: 
+	Method: decode:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x027C3870
+		Ram Offset 0x1827c4a70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: received
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 1:
+			Name: twoS
+			Type: System.Int32
+			Default Value: 
+	Method: runEuclideanAlgorithm:
+		Accessibility: Assembly
+		Return Type: ZXing.Common.ReedSolomon.GenericGFPoly[]
+		File Offset 0x027C3C30
+		Ram Offset 0x1827c4e30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: ZXing.Common.ReedSolomon.GenericGFPoly
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: ZXing.Common.ReedSolomon.GenericGFPoly
+			Default Value: 
+		Parameter 2:
+			Name: R
+			Type: System.Int32
+			Default Value: 
+	Method: findErrorLocations:
+		Accessibility: Private
+		Return Type: System.Int32[]
+		File Offset 0x027C3FD0
+		Ram Offset 0x1827c51d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: errorLocator
+			Type: ZXing.Common.ReedSolomon.GenericGFPoly
+			Default Value: 
+	Method: findErrorMagnitudes:
+		Accessibility: Private
+		Return Type: System.Int32[]
+		File Offset 0x027C4130
+		Ram Offset 0x1827c5330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: errorEvaluator
+			Type: ZXing.Common.ReedSolomon.GenericGFPoly
+			Default Value: 
+		Parameter 1:
+			Name: errorLocations
+			Type: System.Int32[]
+			Default Value: 

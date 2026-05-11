@@ -1,0 +1,97 @@
+Type: <>c__DisplayClass53_0
+
+Method: System.Void CheatsPopup/<>c__DisplayClass53_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void CheatsPopup/<>c__DisplayClass53_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: CheatsPopup/<>c__DisplayClass53_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Void CheatsPopup/<>c__DisplayClass53_0::<InitPropsList>b__0():	Method Body (x86 ASM):
+		0x180561330 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180561334 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x180561338 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18056133B je short 000000018056135Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18056133D mov edx,[rax+40h]		; DEBUG: {Register}/EDX {Memory}/None ||| RAX | 64 | None ||| N/A | N/A
+		0x180561340 mov rax,[rcx+18h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x180561344 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180561347 je short 000000018056135Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180561349 mov dword ptr [rax+1D0h],3		; DEBUG: {Memory}/None {Immediate32}/None ||| RAX | 464 | None ||| N/A | 3
+		0x180561353 mov [rax+1E8h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RAX | 488 | None ||| N/A | N/A
+		0x180561359 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18056135D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18056135E call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180561363 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void CheatsPopup/<>c__DisplayClass53_0::<InitPropsList>b__0():
+		End of function at 0x180561364
+		Absolute End is at 0x180561364
+		Identified Jump Destination addresses:
+
+		0x180561334: [!] Reads field p from {'this' (function parameter, type CheatsPopup/<>c__DisplayClass53_0)} and stores in a new local {'baseBuilding' (type BaseBuilding)}
+
+		0x180561338: [!] Compares {'baseBuilding' (type BaseBuilding)} and 0
+		0x18056133B: Jumps to 0x18056135E (which throws a NRE) if baseBuilding equals 0. Implicitly present in managed code, so ignored here.
+		0x18056133D: [!] Reads field buildingId from {'baseBuilding' (type BaseBuilding)} and stores in a new local {'buildingId' (type System.Int32)}
+
+		0x180561340: [!] Reads field <>4__this from {'this' (function parameter, type CheatsPopup/<>c__DisplayClass53_0)} and stores in a new local {'<>4__this' (type CheatsPopup)}
+
+		0x180561344: [!] Compares {'<>4__this' (type CheatsPopup)} and 0
+		0x180561347: Jumps to 0x18056135E (which throws a NRE) if <>4__this equals 0. Implicitly present in managed code, so ignored here.
+		0x180561349: [!] Sets the field currentPlacementState (Type CheatsPopup/CheatPopupPlacementState) on local {'<>4__this' (type CheatsPopup)} to the value stored in 3
+		0x180561353: [!] Sets the field currentPropId (Type System.Int32) on local {'<>4__this' (type CheatsPopup)} to the value stored in {'buildingId' (type System.Int32)}
+		0x18056135D: [!] Returns from the function
+
+		0x18056135E: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: CheatsPopup/<>c__DisplayClass53_0
+	System.Void <InitPropsList>b__0()
+		BaseBuilding baseBuilding = this.p
+		System.Int32 buildingId = baseBuilding.buildingId
+		CheatsPopup <>4__this = this.<>4__this
+		<>4__this.currentPlacementState = 3
+		<>4__this.currentPropId = buildingId
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld BaseBuilding CheatsPopup/<>c__DisplayClass53_0::p
+	IL_0006: ldfld System.Int32 BaseBuilding::buildingId
+	IL_000b: stloc.0
+	IL_000c: ldarg.0
+	IL_000d: ldfld CheatsPopup CheatsPopup/<>c__DisplayClass53_0::<>4__this
+	IL_0012: stloc.1
+	IL_0013: ldloc.1
+	IL_0014: ldc.i4.3
+	IL_0015: conv.i8
+	IL_0016: conv.u8
+	IL_0017: stfld CheatsPopup/CheatPopupPlacementState CheatsPopup::currentPlacementState
+	IL_001c: ldloc.1
+	IL_001d: ldloc.0
+	IL_001e: stfld System.Int32 CheatsPopup::currentPropId
+	IL_0023: ret
+	IL_0024: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0029: throw
+	
+

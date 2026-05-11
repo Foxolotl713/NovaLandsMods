@@ -1,0 +1,371 @@
+Type: UnityEngine.UI.Extensions.ScrollSnap:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+		UnityEngine.EventSystems.IBeginDragHandler
+		UnityEngine.EventSystems.IEventSystemHandler
+		UnityEngine.EventSystems.IEndDragHandler
+		UnityEngine.EventSystems.IDragHandler
+		UnityEngine.UI.Extensions.IScrollSnap
+
+	Nested Types:
+		UnityEngine.UI.Extensions.ScrollSnap/ScrollDirection
+		UnityEngine.UI.Extensions.ScrollSnap/PageSnapChange
+
+	Field: _scroll_rect
+		Type: UnityEngine.UI.ScrollRect
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _scrollRectTransform
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _listContainerTransform
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _pages
+		Type: System.Int32
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _startingPage
+		Type: System.Int32
+		Offset in Defining Type: 0x3C
+		Has Default: False
+
+	Field: _pageAnchorPositions
+		Type: UnityEngine.Vector3[]
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: _lerpTarget
+		Type: UnityEngine.Vector3
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: _lerp
+		Type: System.Boolean
+		Offset in Defining Type: 0x54
+		Has Default: False
+
+	Field: _listContainerMinPosition
+		Type: System.Single
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: _listContainerMaxPosition
+		Type: System.Single
+		Offset in Defining Type: 0x5C
+		Has Default: False
+
+	Field: _listContainerSize
+		Type: System.Single
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: _listContainerRectTransform
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: _listContainerCachedSize
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: _itemSize
+		Type: System.Single
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: _itemsCount
+		Type: System.Int32
+		Offset in Defining Type: 0x7C
+		Has Default: False
+
+	Field: _startDrag
+		Type: System.Boolean
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: _positionOnDragStart
+		Type: UnityEngine.Vector3
+		Offset in Defining Type: 0x84
+		Has Default: False
+
+	Field: _pageOnDragStart
+		Type: System.Int32
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: _fastSwipeTimer
+		Type: System.Boolean
+		Offset in Defining Type: 0x94
+		Has Default: False
+
+	Field: _fastSwipeCounter
+		Type: System.Int32
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: _fastSwipeTarget
+		Type: System.Int32
+		Offset in Defining Type: 0x9C
+		Has Default: False
+
+	Field: NextButton
+		Type: UnityEngine.UI.Button
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: PrevButton
+		Type: UnityEngine.UI.Button
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: ItemsVisibleAtOnce
+		Type: System.Int32
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: AutoLayoutItems
+		Type: System.Boolean
+		Offset in Defining Type: 0xB4
+		Has Default: False
+
+	Field: LinkScrolbarSteps
+		Type: System.Boolean
+		Offset in Defining Type: 0xB5
+		Has Default: False
+
+	Field: LinkScrolrectScrollSensitivity
+		Type: System.Boolean
+		Offset in Defining Type: 0xB6
+		Has Default: False
+
+	Field: UseFastSwipe
+		Type: System.Boolean
+		Offset in Defining Type: 0xB7
+		Has Default: False
+
+	Field: FastSwipeThreshold
+		Type: System.Int32
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: onPageChange
+		Type: UnityEngine.UI.Extensions.ScrollSnap/PageSnapChange
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: direction
+		Type: UnityEngine.UI.Extensions.ScrollSnap/ScrollDirection
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: fastSwipe
+		Type: System.Boolean
+		Offset in Defining Type: 0xCC
+		Has Default: False
+
+	Method: add_onPageChange:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A64C10
+		Ram Offset 0x180a65e10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.Extensions.ScrollSnap/PageSnapChange
+			Default Value: 
+	Method: remove_onPageChange:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A64D00
+		Ram Offset 0x180a65f00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.Extensions.ScrollSnap/PageSnapChange
+			Default Value: 
+	Method: Start:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A64DF0
+		Ram Offset 0x180a65ff0
+		Virtual Method Slot: 65535
+
+	Method: UpdateListItemsSize:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A655F0
+		Ram Offset 0x180a667f0
+		Virtual Method Slot: 65535
+
+	Method: UpdateListItemPositions:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A65E20
+		Ram Offset 0x180a67020
+		Virtual Method Slot: 65535
+
+	Method: ResetPage:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A66890
+		Ram Offset 0x180a67a90
+		Virtual Method Slot: 65535
+
+	Method: UpdateScrollbar:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A66930
+		Ram Offset 0x180a67b30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: linkSteps
+			Type: System.Boolean
+			Default Value: 
+	Method: LateUpdate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A66C60
+		Ram Offset 0x180a67e60
+		Virtual Method Slot: 65535
+
+	Method: NextScreen:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A670F0
+		Ram Offset 0x180a682f0
+		Virtual Method Slot: 65535
+
+	Method: PreviousScreen:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A67180
+		Ram Offset 0x180a68380
+		Virtual Method Slot: 65535
+
+	Method: NextScreenCommand:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A67210
+		Ram Offset 0x180a68410
+		Virtual Method Slot: 65535
+
+	Method: PrevScreenCommand:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A67290
+		Ram Offset 0x180a68490
+		Virtual Method Slot: 65535
+
+	Method: CurrentPage:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00A67310
+		Ram Offset 0x180a68510
+		Virtual Method Slot: 9
+
+	Method: SetLerp:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A67460
+		Ram Offset 0x180a68660
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ChangePage:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A67470
+		Ram Offset 0x180a68670
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: page
+			Type: System.Int32
+			Default Value: 
+	Method: PageChanged:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A674D0
+		Ram Offset 0x180a686d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: currentPage
+			Type: System.Int32
+			Default Value: 
+	Method: OnBeginDrag:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A67690
+		Ram Offset 0x180a68890
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnEndDrag:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A67710
+		Ram Offset 0x180a68910
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnDrag:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A67910
+		Ram Offset 0x180a68b10
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: StartScreenChange:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 10
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A679A0
+		Ram Offset 0x180a68ba0
+		Virtual Method Slot: 65535
+
+	Method: <Start>b__35_0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A670F0
+		Ram Offset 0x180a682f0
+		Virtual Method Slot: 65535
+
+	Method: <Start>b__35_1:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A67180
+		Ram Offset 0x180a68380
+		Virtual Method Slot: 65535

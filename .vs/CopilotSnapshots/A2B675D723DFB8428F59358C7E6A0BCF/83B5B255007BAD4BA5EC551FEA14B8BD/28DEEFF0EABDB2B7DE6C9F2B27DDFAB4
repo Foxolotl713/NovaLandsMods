@@ -1,0 +1,61 @@
+﻿using MelonLoader;
+using UnityEngine;
+
+[assembly: MelonInfo(typeof(NovaLandsArchipelago.Core), "NovaLandsArchipelago", "0.1.0", "Gott", null)]
+[assembly: MelonGame("BEHEMUTT", "Nova Lands")]
+
+namespace NovaLandsArchipelago
+{
+    public class Core : MelonMod
+    {
+        public override void OnSceneWasLoaded(int buildIndex, string sceneName)
+        {
+            LoggerInstance.Msg($"Scene {sceneName} with build index {buildIndex} has been loaded!");
+        }
+        public override void OnInitializeMelon()
+        {
+            LoggerInstance.Msg("Initialized.");
+            MelonEvents.OnGUI.Subscribe(DrawMenu, 100); // The higher the value, the lower the priority.
+        }
+
+        private string server = "";
+        private string playerName = "";
+        private string password = "";
+
+        private void DrawMenu()
+        {
+            // Layout values
+            int x = 10;
+            int y = 10;
+            int width = 300;
+            int height = 22;
+            int labelWidth = 60;
+            int spacing = 28;
+
+            // Background box covering all fields
+            GUI.Box(new Rect(x - 6, y - 8, width + 16, height * 3 + spacing * 2 + 16), "");
+
+            // Server
+            GUI.Label(new Rect(x, y, labelWidth, height), "Server:");
+            server = GUI.TextField(new Rect(x + labelWidth, y, width - labelWidth, height), server);
+            y += spacing;
+
+            // Name
+            GUI.Label(new Rect(x, y, labelWidth, height), "Name:");
+            playerName = GUI.TextField(new Rect(x + labelWidth, y, width - labelWidth, height), playerName);
+            y += spacing;
+
+            // Password (masked)
+            GUI.Label(new Rect(x, y, labelWidth, height), "Password:");
+            password = GUI.TextField(new Rect(x + labelWidth, y, width - labelWidth, height), password, '*');
+            y += spacing;
+
+            // Connect button
+            if (GUI.Button(new Rect(x, y, 120, height), "Connect"))
+            {
+                LoggerInstance.Msg($"Connect clicked. Server: {server}, Name: {playerName}");
+                // TODO: implement actual connection logic
+            }
+        }
+    }
+}

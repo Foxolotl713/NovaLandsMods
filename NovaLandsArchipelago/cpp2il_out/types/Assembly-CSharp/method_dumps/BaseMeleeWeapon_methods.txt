@@ -1,0 +1,746 @@
+Type: BaseMeleeWeapon
+
+Method: System.Void BaseMeleeWeapon::InitStatus():	Method Body (x86 ASM):
+		0x180786090 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786092 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180786096 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180786098 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18078609B call 0000000180786D80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807860A0 mov byte ptr [rbx+134h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 308 | None ||| N/A | 1
+		0x1807860A7 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807860AB pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807860AC ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807860AD int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BaseMeleeWeapon::InitStatus():
+		End of function at 0x1807860AE
+		Absolute End is at 0x1807860AE
+		Identified Jump Destination addresses:
+
+		0x180786090: Saves the content of rbx to the stack
+		0x180786098: Copies {'this' (function parameter, type BaseMeleeWeapon)} from rcx into rbx
+		0x18078609B: [!] Calls managed method System.Void BaseWeapon::InitStatus() on instance {'this' (function parameter, type BaseMeleeWeapon)}
+
+		0x1807860A0: [!] Sets the field isUp (Type System.Boolean) on local {'this' (function parameter, type BaseMeleeWeapon)} to the value stored in True
+		0x1807860AC: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BaseMeleeWeapon
+	System.Void InitStatus()
+
+		base.InitStatus()
+		this.isUp = True
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call System.Void BaseWeapon::InitStatus()
+	IL_0006: ldarg.0
+	IL_0007: ldc.i4.1
+	IL_0008: stfld System.Boolean BaseMeleeWeapon::isUp
+	IL_000d: ret
+	
+
+Method: System.Void BaseMeleeWeapon::OnEnable():	Method Body (x86 ASM):
+		0x1807860B0 mov byte ptr [rcx+134h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 308 | None ||| N/A | 1
+		0x1807860B7 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807860B8 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BaseMeleeWeapon::OnEnable():
+		End of function at 0x1807860B9
+		Absolute End is at 0x1807860B9
+		Identified Jump Destination addresses:
+
+		0x1807860B0: [!] Sets the field isUp (Type System.Boolean) on local {'this' (function parameter, type BaseMeleeWeapon)} to the value stored in True
+		0x1807860B7: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BaseMeleeWeapon
+	System.Void OnEnable()
+		this.isUp = True
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4.1
+	IL_0002: stfld System.Boolean BaseMeleeWeapon::isUp
+	IL_0007: ret
+	
+
+Method: System.Void BaseMeleeWeapon::Shoot(System.Boolean,System.Boolean,System.Action`1<BaseBullet>):	Method Body (x86 ASM):
+		0x1807860C0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807860C2 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1807860C6 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807860C9 mov qword ptr [rsp+20h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 32 | None ||| N/A | 0
+		0x1807860D2 call 0000000180788020h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807860D7 cmp byte ptr [rbx+134h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 308 | None ||| N/A | 0
+		0x1807860DE mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807860E1 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807860E4 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807860E6 mov [rbx+134h],al		; DEBUG: {Memory}/None {Register}/AL ||| RBX | 308 | None ||| N/A | N/A
+		0x1807860EC add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1807860F0 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807860F1 jmp near ptr 00000001807861D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807860F6 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BaseMeleeWeapon::Shoot(System.Boolean,System.Boolean,System.Action`1<BaseBullet>):
+		End of function at 0x1807860F7
+		Absolute End is at 0x1807860F7
+		Identified Jump Destination addresses:
+
+		0x1807860C0: Saves the content of rbx to the stack
+		0x1807860C6: Copies {'this' (function parameter, type BaseMeleeWeapon)} from rcx into rbx
+		0x1807860C9: Moves 0 (immediate ulong value) to the stack at offset 32 as a new local local4
+		0x1807860D2: [!] Calls managed method System.Void BaseWeapon::Shoot(System.Boolean,System.Boolean,System.Action`1<BaseBullet>) on instance {'this' (function parameter, type BaseMeleeWeapon)} with arguments [{'autoRotate' (function parameter, type System.Boolean)}, {'renderShadowsInMask' (function parameter, type System.Boolean)}, {'onBulletShoot' (function parameter, type System.Action`1<BaseBullet>)}]
+
+		0x1807860D7: [!] Compares {field isUp, read from local {'this' (function parameter, type BaseMeleeWeapon)}} and False
+		0x1807860DE: Copies {'this' (function parameter, type BaseMeleeWeapon)} from rbx into rcx
+		0x1807860E1: [!] Sets the boolean {'local5' (type System.Boolean)} in rax to true if this.isUp is equal to False, otherwise false.
+		0x1807860E6: [!] Sets the field isUp (Type System.Boolean) on local {'this' (function parameter, type BaseMeleeWeapon)} to the value stored in {'local5' (type System.Boolean)}
+		0x1807860F1: [!] Calls managed method System.Void BaseMeleeWeapon::ShakeForAttack() on instance {'this' (function parameter, type BaseMeleeWeapon)}
+
+		0x1807860F1: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BaseMeleeWeapon
+	System.Void Shoot(System.Boolean autoRotate, System.Boolean renderShadowsInMask, System.Action`1<BaseBullet> onBulletShoot)
+
+		base.Shoot(autoRotate, renderShadowsInMask, onBulletShoot) //(Boolean autoRotate, Boolean renderShadowsInMask, Action`1 onShootBullet)
+		System.Boolean local5 = this.isUp == False
+		this.isUp = local5
+
+		this.ShakeForAttack()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldarg.1
+	IL_0002: ldarg.2
+	IL_0003: ldarg.3
+	IL_0004: call System.Void BaseWeapon::Shoot(System.Boolean,System.Boolean,System.Action`1)
+	IL_0009: ldarg.0
+	IL_000a: ldfld System.Boolean BaseMeleeWeapon::isUp
+	IL_000f: ldc.i4.0
+	IL_0010: ceq
+	IL_0012: stloc.1
+	IL_0013: ldarg.0
+	IL_0014: ldloc.1
+	IL_0015: stfld System.Boolean BaseMeleeWeapon::isUp
+	IL_001a: ldarg.0
+	IL_001b: call System.Void BaseMeleeWeapon::ShakeForAttack()
+	IL_0020: ret
+	
+
+Method: System.Void BaseMeleeWeapon::SetIsUp():	Method Body (x86 ASM):
+		0x180786100 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786102 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180786106 cmp byte ptr [18329B31Dh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515421 | None ||| N/A | 0
+		0x18078610D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180786110 jne short 0000000180786125h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180786112 lea rcx,[1830FBB18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813528 | None ||| N/A | N/A
+		0x180786119 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078611E mov byte ptr [18329B31Dh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515421 | None ||| N/A | 1
+		0x180786125 cmp byte ptr [rbx+134h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 308 | None ||| N/A | 0
+		0x18078612C jne short 00000001807861A9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078612E mov rax,[1830FBB18h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493813528 | None ||| N/A | N/A
+		0x180786135 mov [rsp+38h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 56 | None ||| N/A | N/A
+		0x18078613A mov rdi,[rbx+0F8h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 248 | None ||| N/A | N/A
+		0x180786141 cmp dword ptr [rax+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 224 | None ||| N/A | 0
+		0x180786148 jne short 0000000180786159h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078614A mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18078614D call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180786152 mov rax,[1830FBB18h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493813528 | None ||| N/A | N/A
+		0x180786159 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18078615C je short 00000001807861AFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078615E mov rax,[rax+0B8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180786165 mov [rsp+30h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 48 | None ||| N/A | N/A
+		0x18078616A mov esi,[rax+44h]		; DEBUG: {Register}/ESI {Memory}/None ||| RAX | 68 | None ||| N/A | N/A
+		0x18078616D mov rax,[1832A85B0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495569328 | None ||| N/A | N/A
+		0x180786174 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180786177 jne short 0000000180786191h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180786179 lea rcx,[18296CF40h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485888832 | None ||| N/A | N/A
+		0x180786180 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180786185 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180786188 je short 00000001807861B5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078618A mov [1832A85B0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495569328 | None ||| N/A | N/A
+		0x180786191 mov edx,esi		; DEBUG: {Register}/EDX {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180786193 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180786196 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786198 mov rsi,[rsp+30h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x18078619D mov rdi,[rsp+38h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1807861A2 mov byte ptr [rbx+134h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 308 | None ||| N/A | 1
+		0x1807861A9 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807861AD pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807861AE ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807861AF call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807861B4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BaseMeleeWeapon::SetIsUp():
+		End of function at 0x1807861B5
+		Absolute End is at 0x1807861B5
+		Identified Jump Destination addresses:
+
+		0x180786100: Saves the content of rbx to the stack
+		0x180786106: Compares {Unknown Global at 0x18329B31D, first ten bytes are [243 3 0 203 243 3 0 160 104 239], or as chars "ó Ëó  hï"} and 0
+		0x18078610D: Copies {'this' (function parameter, type BaseMeleeWeapon)} from rcx into rbx
+		0x180786110: Jumps to 0x180786125 if {Unknown Global at 0x18329B31D, first ten bytes are [243 3 0 203 243 3 0 160 104 239], or as chars "ó Ëó  hï"} != 0
+
+		0x180786112: Loads the type definition for managed type AnimationName as a constant "AnimationName" in rcx
+		0x180786119: Initializes runtime metadata value AnimationName
+		0x180786125: [!] Compares {field isUp, read from local {'this' (function parameter, type BaseMeleeWeapon)}} and False
+		0x18078612C: Jumps to 0x1807861A9 (which is an if statement's body) if {field isUp, read from local {'this' (function parameter, type BaseMeleeWeapon)}} != False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18078612E: Loads the type definition for managed type AnimationName as a constant "AnimationName" in rax
+		0x18078613A: [!] Reads field animator from {'this' (function parameter, type BaseMeleeWeapon)} and stores in a new local {'animator' (type UnityEngine.Animator)}
+
+		0x180786141: Compares "{il2cpp field AnimationName->cctor_finished}" and 0
+		0x180786148: Jumps to 0x180786159 if "{il2cpp field AnimationName->cctor_finished}" != 0
+
+		0x18078614A: Copies {'AnimationName' (constant value of type Mono.Cecil.TypeReference)} from rax into rcx
+		0x18078614D: Calls the il2cpp cctor for the type AnimationName
+		0x180786152: Loads the type definition for managed type AnimationName as a constant "AnimationName" in rax
+		0x180786159: [!] Compares {'animator' (type UnityEngine.Animator)} and 0
+		0x18078615C: Jumps to 0x1807861AF (which throws a NRE) if animator equals 0. Implicitly present in managed code, so ignored here.
+		0x18078615E: Loads the pointer to the static fields for AnimationName and stores it in constant10 in register rax
+		0x18078616A: [!] Reads the static field System.Int32 AnimationName::ATTACK into new local aTTACK
+		0x18078616D: Loads string "§|" into register rax as constant UnityEngine.Animator.SetTrigger
+		0x180786174: Compares UnityEngine.Animator.SetTrigger and 0
+		0x180786177: Jumps to 0x180786191 if UnityEngine.Animator.SetTrigger != 0
+
+		0x180786179: Loads string "UnityEngine.Animator::SetTriggerID(System.Int32)" into register rcx as constant {'constant13' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180786180: Looks up unity ICall by name "UnityEngine.Animator::SetTriggerID(System.Int32)" which resolves to System.Void UnityEngine.Animator::SetTrigger(System.String)
+		0x180786185: Compares UnityEngine.Animator.SetTrigger and 0
+		0x180786188: Jumps to 0x1807861B5 if UnityEngine.Animator.SetTrigger equals 0 ;  - This is probably a goto, jumping to 0x1807861B5 which is after end of current block @ 0x1807861A9 (started at 0x18078612E)
+
+		0x180786191: Copies {'aTTACK' (type System.Int32)} from rsi into rdx
+		0x180786193: Copies {'animator' (type UnityEngine.Animator)} from rdi into rcx
+		0x180786196: [!] Calls managed method System.Void UnityEngine.Animator::SetTrigger(System.String) on instance {'animator' (type UnityEngine.Animator)} ;  - Mismatched parameters detected here.
+
+		0x180786198: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rsi as new constant constant15
+		0x18078619D: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rdi as new constant constant16
+		0x1807861A2: [!] Sets the field isUp (Type System.Boolean) on local {'this' (function parameter, type BaseMeleeWeapon)} to the value stored in True
+		0x1807861AE: [!] Returns from the function
+
+		0x1807861AF: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BaseMeleeWeapon
+	System.Void SetIsUp()
+
+		if (this.isUp == False)
+		    UnityEngine.Animator animator = this.animator
+		    System.Int32 aTTACK = AnimationName.ATTACK
+
+		    animator.SetTrigger()
+		    this.isUp = True
+		endif
+        
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionInRegAction at (0x180786196) is corrupt (Couldn't get arguments, or actual count (-1) is not equal to expected count (1)) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void BaseMeleeWeapon::ShakeForAttack():	Method Body (x86 ASM):
+		0x1807861D0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807861D2 sub rsp,60h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 96
+		0x1807861D6 cmp byte ptr [18329B31Eh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515422 | None ||| N/A | 0
+		0x1807861DD mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807861E0 jne short 00000001807861F5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807861E2 lea rcx,[1830FBAD8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813464 | None ||| N/A | N/A
+		0x1807861E9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807861EE mov byte ptr [18329B31Eh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515422 | None ||| N/A | 1
+		0x1807861F5 mov rax,[rbx+0D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 208 | None ||| N/A | N/A
+		0x1807861FC test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807861FF je near ptr 00000001807863ACh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180786205 mov r8,[rax]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180786208 mov rdx,[1830FBAD8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493813464 | None ||| N/A | N/A
+		0x18078620F movzx eax,byte ptr [rdx+130h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDX | 304 | None ||| N/A | N/A
+		0x180786216 cmp [r8+130h],al		; DEBUG: {Memory}/None {Register}/AL ||| R8 | 304 | None ||| N/A | N/A
+		0x18078621D jb near ptr 00000001807863ACh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180786223 movzx ecx,al		; DEBUG: {Register}/ECX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180786226 mov rax,[r8+0C8h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 200 | None ||| N/A | N/A
+		0x18078622D cmp [rax+rcx*8-8],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| RAX | 18446744073709551608 | RCX ||| N/A | N/A
+		0x180786232 jne near ptr 00000001807863ACh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180786238 mov rax,[1832A9D48h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x18078623F mov [rsp+78h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 120 | None ||| N/A | N/A
+		0x180786244 mov rdi,[rbx+0D0h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 208 | None ||| N/A | N/A
+		0x18078624B test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18078624E jne short 000000018078626Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180786250 lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x180786257 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078625C test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18078625F je near ptr 00000001807863B8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180786265 mov [1832A9D48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x18078626C mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18078626F call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786271 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180786274 je near ptr 00000001807863B2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078627A xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18078627D lea rcx,[rsp+50h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x180786282 mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180786285 call 00000001824985B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078628A mov ecx,[rax+8]		; DEBUG: {Register}/ECX {Memory}/None ||| RAX | 8 | None ||| N/A | N/A
+		0x18078628D movsd xmm0,qword ptr [rax]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180786291 mov [rsp+48h],ecx		; DEBUG: {Memory}/None {Register}/ECX ||| RSP | 72 | None ||| N/A | N/A
+		0x180786295 lea rcx,[rsp+40h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x18078629A movsd qword ptr [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x1807862A0 movsd qword ptr [rsp+40h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 64 | None ||| N/A | N/A
+		0x1807862A6 call 00000001803C7F30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807862AB movaps xmm3,xmm0		; DEBUG: {Register}/XMM3 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1807862AE comiss xmm3,dword ptr [182E6E350h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RIP | 6491136848 | None ||| N/A | N/A
+		0x1807862B5 ja short 00000001807862F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807862B7 cmp byte ptr [183298868h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504488 | None ||| N/A | 0
+		0x1807862BE jne short 00000001807862D3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807862C0 lea rcx,[1830FB700h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493812480 | None ||| N/A | N/A
+		0x1807862C7 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807862CC mov byte ptr [183298868h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504488 | None ||| N/A | 1
+		0x1807862D3 mov rax,[1830FB700h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493812480 | None ||| N/A | N/A
+		0x1807862DA mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1807862E1 movsd xmm1,qword ptr [rcx]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1807862E5 movss dword ptr [rsp+70h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 112 | None ||| N/A | N/A
+		0x1807862EB movaps xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x1807862EE jmp short 000000018078630Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807862F0 movss xmm0,dword ptr [rsp+30h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1807862F6 movss xmm1,dword ptr [rsp+34h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 52 | None ||| N/A | N/A
+		0x1807862FC divss xmm0,xmm3		; DEBUG: {Register}/XMM0 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180786300 divss xmm1,xmm3		; DEBUG: {Register}/XMM1 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180786304 unpcklps xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180786307 movss dword ptr [rsp+70h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 112 | None ||| N/A | N/A
+		0x18078630D movss xmm3,dword ptr [rbx+128h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RBX | 296 | None ||| N/A | N/A
+		0x180786315 movss xmm2,dword ptr [rbx+12Ch]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RBX | 300 | None ||| N/A | N/A
+		0x18078631D shufps xmm0,xmm0,55h		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180786321 movss dword ptr [rsp+74h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 116 | None ||| N/A | N/A
+		0x180786327 movss xmm0,dword ptr [rbx+130h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 304 | None ||| N/A | N/A
+		0x18078632F mov rdx,[1830FBAD8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493813464 | None ||| N/A | N/A
+		0x180786336 mov r8,[rdi]		; DEBUG: {Register}/R8 {Memory}/None ||| RDI | 0 | None ||| N/A | N/A
+		0x180786339 movzx eax,byte ptr [rdx+130h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDX | 304 | None ||| N/A | N/A
+		0x180786340 cmp [r8+130h],al		; DEBUG: {Memory}/None {Register}/AL ||| R8 | 304 | None ||| N/A | N/A
+		0x180786347 jb short 00000001807863B2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180786349 movzx ecx,al		; DEBUG: {Register}/ECX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x18078634C mov rax,[r8+0C8h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 200 | None ||| N/A | N/A
+		0x180786353 cmp [rax+rcx*8-8],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| RAX | 18446744073709551608 | RCX ||| N/A | N/A
+		0x180786358 jne short 00000001807863B2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078635A movzx ecx,byte ptr [rdx+130h]		; DEBUG: {Register}/ECX {Memory}/None ||| RDX | 304 | None ||| N/A | N/A
+		0x180786361 cmp [rax+rcx*8-8],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| RAX | 18446744073709551608 | RCX ||| N/A | N/A
+		0x180786366 jne short 000000018078636Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180786368 mov al,1		; DEBUG: {Register}/AL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x18078636A jmp short 000000018078636Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078636C xor al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x18078636E xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180786370 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180786372 cmovne rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180786376 mov rax,[rcx+518h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 1304 | None ||| N/A | N/A
+		0x18078637D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180786380 je short 00000001807863B2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180786382 cmp byte ptr [rax+80h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RAX | 128 | None ||| N/A | 0
+		0x180786389 je short 00000001807863A7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078638B mov rdx,[rsp+70h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x180786390 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180786393 mov qword ptr [rsp+28h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 40 | None ||| N/A | 0
+		0x18078639C movss dword ptr [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x1807863A2 call 00000001803F4EA0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807863A7 mov rdi,[rsp+78h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 120 | None ||| N/A | N/A
+		0x1807863AC add rsp,60h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 96
+		0x1807863B0 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807863B1 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807863B2 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807863B7 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BaseMeleeWeapon::ShakeForAttack():
+		End of function at 0x1807863B8
+		Absolute End is at 0x1807863B8
+		Identified Jump Destination addresses:
+			0x18078630D
+			0x18078636E
+		0x1807861D0: Saves the content of rbx to the stack
+		0x1807861D6: Compares {Unknown Global at 0x18329B31E, first ten bytes are [3 0 203 243 3 0 160 104 239 2], or as chars " Ëó  hï"} and 0
+		0x1807861DD: Copies {'this' (function parameter, type BaseMeleeWeapon)} from rcx into rbx
+		0x1807861E0: Jumps to 0x1807861F5 if {Unknown Global at 0x18329B31E, first ten bytes are [3 0 203 243 3 0 160 104 239 2], or as chars " Ëó  hï"} != 0
+
+		0x1807861E2: Loads the type definition for managed type BasePlayer as a constant "BasePlayer" in rcx
+		0x1807861E9: Initializes runtime metadata value BasePlayer
+		0x1807861F5: [!] Reads field owner from {'this' (function parameter, type BaseMeleeWeapon)} and stores in a new local {'owner' (type BaseCharacter)}
+
+		0x1807861FC: [!] Compares {'owner' (type BaseCharacter)} and 0
+		0x1807861FF: Jumps to 0x1807863AC (which is an if statement's body) if owner equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180786205: Loads the class pointer from owner into a constant constant5 in register r8
+		0x180786208: Loads the type definition for managed type BasePlayer as a constant "BasePlayer" in rdx
+		0x180786216: Compares "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x130}" and {'owner' (type BaseCharacter)}
+		0x180786223: Copies {'owner' (type BaseCharacter)} from rax into rcx
+		0x180786226: [!!] Reads value at unknown offset 200 (0xC8) on a klass pointer
+		0x18078622D: [!] Compares  and {'BasePlayer' (constant value of type Mono.Cecil.TypeReference)}
+		0x180786232: Jumps to 0x1807863AC (which is an if statement's body) if  != {'BasePlayer' (constant value of type Mono.Cecil.TypeReference)} ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180786238: Loads string "<õ7" into register rax as constant UnityEngine.Component.get_transform
+		0x180786244: [!] Reads field owner from {'this' (function parameter, type BaseMeleeWeapon)} and stores in a new local {'owner2' (type BaseCharacter)}
+
+		0x18078624B: Compares UnityEngine.Component.get_transform and 0
+		0x18078624E: Jumps to 0x18078626C if UnityEngine.Component.get_transform != 0
+
+		0x180786250: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant10' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180786257: Looks up unity ICall by name "UnityEngine.Component::get_transform()" which resolves to UnityEngine.Transform UnityEngine.Component::get_transform()
+		0x18078625C: Compares UnityEngine.Component.get_transform and 0
+		0x18078625F: Jumps to 0x1807863B8 if UnityEngine.Component.get_transform equals 0 ;  - This is probably a goto, jumping to 0x1807863B8 which is after end of current block @ 0x1807863AC (started at 0x180786238)
+
+		0x18078626C: Copies {'this' (function parameter, type BaseMeleeWeapon)} from rbx into rcx
+		0x18078626F: [!] Calls managed method UnityEngine.Transform UnityEngine.Component::get_transform() on instance {'this' (function parameter, type BaseMeleeWeapon)} and stores the result in {'transform' (type UnityEngine.Transform)}
+
+		0x180786271: [!] Compares {'transform' (type UnityEngine.Transform)} and 0
+		0x180786274: Jumps to 0x1807863B2 (which throws a NRE) if transform equals 0. Implicitly present in managed code, so ignored here.
+		0x18078627D: Loads a pointer to stack offset 0x50 into register rcx as new constant constant13
+		0x180786282: Copies {'transform' (type UnityEngine.Transform)} from rax into rdx
+		0x180786285: [!] Calls managed method UnityEngine.Vector3 UnityEngine.Transform::get_right() on instance  and stores the result in {'right' (type UnityEngine.Vector3)}
+
+		0x18078628A: [!] Reads field z from {'right' (type UnityEngine.Vector3)} and stores in a new local {'single' (type System.Single)}
+
+		0x180786291: Moves single (type System.Single) from register rcx to the stack at offset 72 (0x48)
+		0x180786295: Loads a pointer to stack offset 0x40 into register rcx as new constant constant14
+		0x1807862AE: Compares  and {Unknown Global at 0x182E6E350, first ten bytes are [172 197 39 55 128 0 128 55 0 0], or as chars "¬Å'7 7  "}
+		0x1807862B5: Jumps to 0x1807862F0 if  is greater than {Unknown Global at 0x182E6E350, first ten bytes are [172 197 39 55 128 0 128 55 0 0], or as chars "¬Å'7 7  "}
+
+		0x1807862B7: Compares {Unknown Global at 0x183298868, first ten bytes are [96 228 0 0 137 228 0 0 184 48], or as chars "`ä  ä  ¸0"} and 0
+		0x1807862BE: Jumps to 0x1807862D3 if {Unknown Global at 0x183298868, first ten bytes are [96 228 0 0 137 228 0 0 184 48], or as chars "`ä  ä  ¸0"} != 0
+
+		0x1807862C0: Loads the type definition for managed type UnityEngine.Vector3 as a constant "Vector3" in rcx
+		0x1807862C7: Initializes runtime metadata value UnityEngine.Vector3
+		0x1807862D3: Loads the type definition for managed type UnityEngine.Vector3 as a constant "Vector3" in rax
+		0x1807862DA: Loads the pointer to the static fields for UnityEngine.Vector3 and stores it in constant20 in register rcx
+		0x1807862EE: Jumps to 0x18078630D (which is an function-local jump destination)
+
+		0x1807862F0: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register xmm0 as new constant constant21
+		0x1807862F6: Reads unknown value in stack, offset 52 (0x34) and stores the pointer in register xmm1 as new constant constant22
+		0x180786307: Moves constant21 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm0 to the stack at offset 112 (0x70) as a new local local7
+
+		Jump Destination (0x18078630D):
+		0x180786321: Moves constant21 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm0 to the stack at offset 116 (0x74) as a new local local10
+		0x180786327: [!] Reads field attackShakeDelay from {'this' (function parameter, type BaseMeleeWeapon)} and stores in a new local {'attackShakeDelay' (type System.Single)}
+
+		0x18078632F: Loads the type definition for managed type BasePlayer as a constant "BasePlayer" in rdx
+		0x180786336: Loads the class pointer from owner2 into a constant constant24 in register r8
+		0x180786340: Compares "{il2cpp field on {'constant24' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x130}" and {'Vector3' (constant value of type Mono.Cecil.TypeReference)}
+		0x180786349: Copies {'Vector3' (constant value of type Mono.Cecil.TypeReference)} from rax into rcx
+		0x18078634C: [!!] Reads value at unknown offset 200 (0xC8) on a klass pointer
+		0x180786353: Compares "{il2cpp field on {'Vector3' (constant value of type Mono.Cecil.TypeReference)}, offset 0xFFFFFFFFFFFFFFF8}" and {'BasePlayer' (constant value of type Mono.Cecil.TypeReference)}
+		0x180786358: Jumps to 0x1807863B2 (which throws a NRE) if "{il2cpp field on {'Vector3' (constant value of type Mono.Cecil.TypeReference)}, offset 0xFFFFFFFFFFFFFFF8}" != {'BasePlayer' (constant value of type Mono.Cecil.TypeReference)}. Implicitly present in managed code, so ignored here.
+		0x180786361: Compares "{il2cpp field on {'Vector3' (constant value of type Mono.Cecil.TypeReference)}, offset 0xFFFFFFFFFFFFFFF8}" and {'BasePlayer' (constant value of type Mono.Cecil.TypeReference)}
+		0x180786366: Jumps to 0x18078636C if "{il2cpp field on {'Vector3' (constant value of type Mono.Cecil.TypeReference)}, offset 0xFFFFFFFFFFFFFFF8}" != {'BasePlayer' (constant value of type Mono.Cecil.TypeReference)}
+
+		0x180786368: [!] Writes the constant 0x1 into operand 1 (type UInt64) in register rax
+		0x18078636A: Jumps to 0x18078636E (which is an function-local jump destination)
+
+		0x18078636C: Clears register rax, yielding zero-local {'local12' (type System.Int32)}
+
+		Jump Destination (0x18078636E):
+		0x180786370: [!] Compares {'local12' (type System.Int32)} and 0
+		0x180786372: [!] Copies {'owner2' (type BaseCharacter)} from rdi into rcx based on previous comparison
+		0x180786376: [!] Reads field  from {'owner2' (type BaseCharacter)} and stores in a new local 
+
+		0x18078637D: [!] Compares {'local12' (type System.Int32)} and 0
+		0x180786380: Jumps to 0x1807863B2 (which throws a NRE) if local12 equals 0. Implicitly present in managed code, so ignored here.
+		0x180786382: [!] Compares  and 0
+		0x180786389: Jumps to 0x1807863A7 (which is an if statement's body) if  equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18078638B: Reads local {'local7' (type )} from stack offset 112 (0x70) into register rdx
+		0x180786390: Copies {'local12' (type System.Int32)} from rax into rcx
+		0x180786393: Moves 0 (immediate ulong value) to the stack at offset 40 as a new local local14
+		0x18078639C: Moves attackShakeDelay (type System.Single) from register xmm0 to the stack at offset 32 (0x20)
+		0x1807863A2: [!] Calls managed method System.Void PlayerCamera::ShakeCameraInDirection(UnityEngine.Vector2,System.Single,System.Single,System.Single) on instance {'local12' (type System.Int32)} ;  - parameters do not match, but there is only one function at this address. - This is an instance method, but the type of the 'this' parameter is mismatched. Expecting PlayerCamera, actually System.Int32
+
+		0x1807863A7: Reads unknown value in stack, offset 120 (0x78) and stores the pointer in register rdi as new constant constant32
+		0x1807863B1: [!] Returns from the function
+
+		0x1807863B2: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BaseMeleeWeapon
+	System.Void ShakeForAttack()
+		BaseCharacter owner = this.owner
+
+		if (owner != 0)
+		    //UNKNOWN CLASS OFFSET READ HERE
+
+		    if ( == BasePlayer)
+		        BaseCharacter owner2 = this.owner
+
+		        UnityEngine.Transform transform = this.transform
+
+		        UnityEngine.Vector3 right = .right
+		        System.Single single = right.z
+		        System.Single attackShakeDelay = this.attackShakeDelay
+		        //UNKNOWN CLASS OFFSET READ HERE
+		        ulong local12 = 0
+		          = owner2.
+
+		        if ( != 0)
+
+		            local12.ShakeCameraInDirection()
+		        endif
+                
+		    endif
+            
+		    return
+		    throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.UnknownClassOffsetReadAction at (0x180786226) is corrupt (Unknown class offset read) and cannot be created as IL. Aborting here.
+
+
+Method: System.Boolean BaseMeleeWeapon::IsWeaponBehindPlayer(UnityEngine.Vector2):	Method Body (x86 ASM):
+		0x1807863D0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807863D2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807863D6 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807863D9 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807863DC cmp [rcx+134h],r8b		; DEBUG: {Memory}/None {Register}/R8L ||| RCX | 308 | None ||| N/A | N/A
+		0x1807863E3 je short 0000000180786428h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807863E5 call 00000001803F73A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807863EA movss xmm1,dword ptr [rbx+58h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x1807863EF movaps xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1807863F2 movss xmm3,dword ptr [182E6EB48h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RIP | 6491138888 | None ||| N/A | N/A
+		0x1807863FA addss xmm1,xmm3		; DEBUG: {Register}/XMM1 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x1807863FE movss dword ptr [rbx+0C0h],xmm2		; DEBUG: {Memory}/None {Register}/XMM2 ||| RBX | 192 | None ||| N/A | N/A
+		0x180786406 comiss xmm2,xmm1		; DEBUG: {Register}/XMM2 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180786409 jae short 0000000180786413h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078640B mov al,1		; DEBUG: {Register}/AL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x18078640D add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180786411 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786412 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786413 movss xmm0,dword ptr [rbx+5Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 92 | None ||| N/A | N/A
+		0x180786418 addss xmm0,xmm3		; DEBUG: {Register}/XMM0 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x18078641C comiss xmm0,xmm2		; DEBUG: {Register}/XMM0 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x18078641F setb al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786422 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180786426 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786427 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786428 call 00000001803F73A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078642D movaps xmm1,xmm0		; DEBUG: {Register}/XMM1 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180786430 comiss xmm1,dword ptr [rbx+58h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x180786434 movss dword ptr [rbx+0C0h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 192 | None ||| N/A | N/A
+		0x18078643C jae short 0000000180786446h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078643E xor al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180786440 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180786444 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786445 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786446 movss xmm0,dword ptr [rbx+5Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 92 | None ||| N/A | N/A
+		0x18078644B comiss xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x18078644E setae al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786451 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180786455 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786456 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786457 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean BaseMeleeWeapon::IsWeaponBehindPlayer(UnityEngine.Vector2):
+		End of function at 0x180786458
+		Absolute End is at 0x180786458
+		Identified Jump Destination addresses:
+
+		0x1807863D0: Saves the content of rbx to the stack
+		0x1807863D6: Copies {'this' (function parameter, type BaseMeleeWeapon)} from rcx into rbx
+		0x1807863D9: Clears register r8, yielding zero-local {'local2' (type System.Int32)}
+		0x1807863DC: [!] Compares {field isUp, read from local {'this' (function parameter, type BaseMeleeWeapon)}} and {'local2' (type System.Int32)}
+		0x1807863E3: Jumps to 0x180786428 (which is an if statement's body) if this.isUp equals local2 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1807863E5: [!] Calls managed method System.Single BaseWeapon::AngleFromDir(UnityEngine.Vector2) on instance {'this' (function parameter, type BaseMeleeWeapon)} with arguments [{'dir' (function parameter, type UnityEngine.Vector2)}] and stores the result in {'single' (type System.Single)}
+
+		0x1807863EA: [!] Reads field stayBehindPlayerMinAngle from {'this' (function parameter, type BaseMeleeWeapon)} and stores in a new local {'stayBehindPlayerMinAngle' (type System.Single)}
+
+		0x1807863EF: Copies {'single' (type System.Single)} from xmm0 into xmm2
+		0x1807863F2: Reads {Unknown Global at 0x182E6EB48, first ten bytes are [0 0 52 67 0 0 63 67 0 0], or as chars "  4C  ?C  "} into register xmm3 as a constant constant1
+		0x1807863FE: [!] Sets the field debugAngle (Type System.Single) on local {'this' (function parameter, type BaseMeleeWeapon)} to the value stored in {'single' (type System.Single)}
+		0x180786406: [!] Compares {'single' (type System.Single)} and {'stayBehindPlayerMinAngle' (type System.Single)}
+		0x180786409: Jumps to 0x180786413 (which is an if statement's body) if {'single' (type System.Single)} is greater than or equal to {'stayBehindPlayerMinAngle' (type System.Single)} ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18078640B: [!] Writes the constant 0x1 into operand True (type UInt64) in register rax
+		0x180786412: [!] Returns True from the function
+
+		0x180786413: [!] Reads field stayBehindPlayerMaxAngle from {'this' (function parameter, type BaseMeleeWeapon)} and stores in a new local {'stayBehindPlayerMaxAngle' (type System.Single)}
+
+		0x18078641C: [!] Compares {'stayBehindPlayerMaxAngle' (type System.Single)} and {'single' (type System.Single)}
+		0x180786427: [!] Returns  from the function
+
+		0x180786428: [!] Calls managed method System.Single BaseWeapon::AngleFromDir(UnityEngine.Vector2) on instance {'this' (function parameter, type BaseMeleeWeapon)} with arguments [{'dir' (function parameter, type UnityEngine.Vector2)}] and stores the result in {'single2' (type System.Single)}
+
+		0x18078642D: Copies {'single2' (type System.Single)} from xmm0 into xmm1
+		0x180786430: [!] Compares {'single2' (type System.Single)} against itself
+		0x180786434: [!] Sets the field debugAngle (Type System.Single) on local {'this' (function parameter, type BaseMeleeWeapon)} to the value stored in {'single2' (type System.Single)}
+		0x18078643C: Jumps to 0x180786446 if {'single2' (type System.Single)} is greater than or equal to  ;  - This is probably a goto, jumping to 0x180786446 which is after end of current block @ 0x180786413 (started at 0x18078640B)
+
+		0x18078643E: Clears register rax, yielding zero-local {'local7' (type System.Int32)}
+		0x180786445: [!] Returns {'local7' (type System.Int32)} from the function
+
+		0x180786446: [!] Reads field stayBehindPlayerMaxAngle from {'this' (function parameter, type BaseMeleeWeapon)} and stores in a new local {'stayBehindPlayerMaxAngle2' (type System.Single)}
+
+		0x18078644B: [!] Compares {'stayBehindPlayerMaxAngle2' (type System.Single)} and {'single2' (type System.Single)}
+		0x180786456: [!] Returns {'local7' (type System.Int32)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BaseMeleeWeapon
+	System.Boolean IsWeaponBehindPlayer(UnityEngine.Vector2 dir)
+		ulong local2 = 0
+
+		if (this.isUp != local2)
+
+		    System.Single single = base.AngleFromDir(dir) //(Vector2 dir)
+		    System.Single stayBehindPlayerMinAngle = this.stayBehindPlayerMinAngle
+		    this.debugAngle = single
+
+		    if (single < stayBehindPlayerMinAngle)
+		        return True
+		    endif
+            
+		    System.Single stayBehindPlayerMaxAngle = this.stayBehindPlayerMaxAngle
+		    return 
+		endif
+        
+
+		System.Single single2 = base.AngleFromDir(dir) //(Vector2 dir)
+		this.debugAngle = single2
+
+		if (single2 >= )
+            goto INSN_180786446
+        endif
+		ulong local7 = 0
+		return local7
+
+		INSN_180786446:
+		System.Single stayBehindPlayerMaxAngle2 = this.stayBehindPlayerMaxAngle
+		return local7
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.ReturnFromFunctionAction at (0x180786427) is corrupt (Return value is missing) and cannot be created as IL. Aborting here.
+
+
+Method: System.Boolean BaseMeleeWeapon::get_IsUp():	Method Body (x86 ASM):
+		0x180786460 movzx eax,byte ptr [rcx+134h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 308 | None ||| N/A | N/A
+		0x180786467 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180786468 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean BaseMeleeWeapon::get_IsUp():
+		End of function at 0x180786469
+		Absolute End is at 0x180786469
+		Identified Jump Destination addresses:
+
+		0x180786460: [!] Reads field isUp from {'this' (function parameter, type BaseMeleeWeapon)} and stores in a new local {'isUp' (type System.Boolean)}
+
+		0x180786467: [!] Returns {'isUp' (type System.Boolean)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BaseMeleeWeapon
+	System.Boolean get_IsUp()
+		System.Boolean isUp = this.isUp
+		return isUp
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Boolean BaseMeleeWeapon::isUp
+	IL_0006: ret
+	
+
+Method: System.Void BaseMeleeWeapon::.ctor():	Method Body (x86 ASM):
+		0x180786470 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180786474 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x18078647B mov dword ptr [rcx+130h],3DCCCCCDh		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 304 | None ||| N/A | 1036831949
+		0x180786485 mov dword ptr [rcx+58h],42860000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 88 | None ||| N/A | 1116078080
+		0x18078648C mov dword ptr [rcx+5Ch],42E00000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 92 | None ||| N/A | 1121976320
+		0x180786493 mov dword ptr [rcx+0F4h],1		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 244 | None ||| N/A | 1
+		0x18078649D jne short 00000001807864B2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078649F lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807864A6 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807864AB mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x1807864B2 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807864B9 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1807864C0 jne short 00000001807864CBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807864C2 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1807864C6 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807864CB add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1807864CF ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BaseMeleeWeapon::.ctor():
+		End of function at 0x1807864D0
+		Absolute End is at 0x1807864D0
+		Identified Jump Destination addresses:
+
+		0x180786474: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x18078647B: [!] Sets the field attackShakeDelay (Type System.Single) on local {'this' (function parameter, type BaseMeleeWeapon)} to the value stored in 0,1
+		0x180786485: [!] Sets the field stayBehindPlayerMinAngle (Type System.Single) on local {'this' (function parameter, type BaseMeleeWeapon)} to the value stored in 67
+		0x18078648C: [!] Sets the field stayBehindPlayerMaxAngle (Type System.Single) on local {'this' (function parameter, type BaseMeleeWeapon)} to the value stored in 112
+		0x180786493: [!] Sets the field currentLevel (Type System.Int32) on local {'this' (function parameter, type BaseMeleeWeapon)} to the value stored in 1
+		0x18078649D: Jumps to 0x1807864B2 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x18078649F: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807864A6: Initializes runtime metadata value UnityEngine.Object
+		0x1807864B2: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807864B9: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1807864C0: Jumps to 0x1807864CB if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1807864CF: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BaseMeleeWeapon
+	System.Void .ctor()
+		this.attackShakeDelay = 0,1
+		this.stayBehindPlayerMinAngle = 67
+		this.stayBehindPlayerMaxAngle = 112
+		this.currentLevel = 1
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.r4 0,1
+	IL_0006: stfld System.Single BaseMeleeWeapon::attackShakeDelay
+	IL_000b: ldarg.0
+	IL_000c: ldc.r4 67
+	IL_0011: stfld System.Single BaseWeapon::stayBehindPlayerMinAngle
+	IL_0016: ldarg.0
+	IL_0017: ldc.r4 112
+	IL_001c: stfld System.Single BaseWeapon::stayBehindPlayerMaxAngle
+	IL_0021: ldarg.0
+	IL_0022: ldc.i4.1
+	IL_0023: conv.i8
+	IL_0024: conv.u8
+	IL_0025: stfld System.Int32 BaseWeapon::currentLevel
+	IL_002a: ret
+	
+

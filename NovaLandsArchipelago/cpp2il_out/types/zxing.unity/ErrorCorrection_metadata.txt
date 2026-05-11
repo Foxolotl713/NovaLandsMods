@@ -1,0 +1,90 @@
+Type: ZXing.PDF417.Internal.EC.ErrorCorrection:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Field: field
+		Type: ZXing.PDF417.Internal.EC.ModulusGF
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0281ABE0
+		Ram Offset 0x18281bde0
+		Virtual Method Slot: 65535
+
+	Method: decode:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0281AC90
+		Ram Offset 0x18281be90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: received
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 1:
+			Name: numECCodewords
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: erasures
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 3:
+			Name: errorLocationsCount
+			Type: System.Int32
+			Default Value: 
+	Method: runEuclideanAlgorithm:
+		Accessibility: Private
+		Return Type: ZXing.PDF417.Internal.EC.ModulusPoly[]
+		File Offset 0x0281B190
+		Ram Offset 0x18281c390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: ZXing.PDF417.Internal.EC.ModulusPoly
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: ZXing.PDF417.Internal.EC.ModulusPoly
+			Default Value: 
+		Parameter 2:
+			Name: R
+			Type: System.Int32
+			Default Value: 
+	Method: findErrorLocations:
+		Accessibility: Private
+		Return Type: System.Int32[]
+		File Offset 0x0281B4E0
+		Ram Offset 0x18281c6e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: errorLocator
+			Type: ZXing.PDF417.Internal.EC.ModulusPoly
+			Default Value: 
+	Method: findErrorMagnitudes:
+		Accessibility: Private
+		Return Type: System.Int32[]
+		File Offset 0x0281B5F0
+		Ram Offset 0x18281c7f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: errorEvaluator
+			Type: ZXing.PDF417.Internal.EC.ModulusPoly
+			Default Value: 
+		Parameter 1:
+			Name: errorLocator
+			Type: ZXing.PDF417.Internal.EC.ModulusPoly
+			Default Value: 
+		Parameter 2:
+			Name: errorLocations
+			Type: System.Int32[]
+			Default Value: 

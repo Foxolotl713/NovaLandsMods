@@ -1,0 +1,1431 @@
+Type: System.DateTimeParse:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		System.DateTimeParse/MatchNumberDelegate
+		System.DateTimeParse/DTT
+		System.DateTimeParse/TM
+		System.DateTimeParse/DS
+		System.DateTimeParse/<>c
+
+	Static Field: m_hebrewNumberParser
+		Type: System.DateTimeParse/MatchNumberDelegate
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: dateParsingStates
+		Type: System.DateTimeParse/DS[][]
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Method: ParseExact:
+		Accessibility: Assembly
+		Return Type: System.DateTime
+		File Offset 0x018850A0
+		Ram Offset 0x1818862a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: s
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: format
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 2:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 3:
+			Name: style
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+	Method: TryParseExact:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01885210
+		Ram Offset 0x181886410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: s
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: format
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 2:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 3:
+			Name: style
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+		Parameter 4:
+			Name: result
+			Type: System.DateTime
+			Default Value: 
+	Method: TryParseExact:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01885390
+		Ram Offset 0x181886590
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: s
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: format
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 2:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 3:
+			Name: style
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+		Parameter 4:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+	Method: MatchWord:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x018854E0
+		Ram Offset 0x1818866e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: target
+			Type: System.String
+			Default Value: 
+	Method: GetTimeZoneName:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01885690
+		Ram Offset 0x181886890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+	Method: IsDigit:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01885740
+		Ram Offset 0x181886940
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ch
+			Type: System.Char
+			Default Value: 
+	Method: ParseFraction:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01885750
+		Ram Offset 0x181886950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.Double
+			Default Value: 
+	Method: ParseTimeZone:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01885850
+		Ram Offset 0x181886a50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.TimeSpan
+			Default Value: 
+	Method: HandleTimeZone:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01885BB0
+		Ram Offset 0x181886db0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+	Method: Lex:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01885D60
+		Ram Offset 0x181886f60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dps
+			Type: System.DateTimeParse/DS
+			Default Value: 
+		Parameter 1:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 2:
+			Name: dtok
+			Type: System.DateTimeToken
+			Default Value: 
+		Parameter 3:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 4:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 5:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 6:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+	Method: GetJapaneseCalendarDefaultInstance:
+		Accessibility: Private
+		Return Type: System.Globalization.Calendar
+		File Offset 0x01886E60
+		Ram Offset 0x181888060
+		Virtual Method Slot: 65535
+
+	Method: GetTaiwanCalendarDefaultInstance:
+		Accessibility: Assembly
+		Return Type: System.Globalization.Calendar
+		File Offset 0x01886F50
+		Ram Offset 0x181888150
+		Virtual Method Slot: 65535
+
+	Method: VerifyValidPunctuation:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01887040
+		Ram Offset 0x181888240
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+	Method: GetYearMonthDayOrder:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01887210
+		Ram Offset 0x181888410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: datePattern
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: order
+			Type: System.Int32
+			Default Value: 
+	Method: GetYearMonthOrder:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01887430
+		Ram Offset 0x181888630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pattern
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: order
+			Type: System.Int32
+			Default Value: 
+	Method: GetMonthDayOrder:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x018875D0
+		Ram Offset 0x1818887d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pattern
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: order
+			Type: System.Int32
+			Default Value: 
+	Method: TryAdjustYear:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01887790
+		Ram Offset 0x181888990
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: year
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: adjustedYear
+			Type: System.Int32
+			Default Value: 
+	Method: SetDateYMD:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x018877F0
+		Ram Offset 0x1818889f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: year
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: month
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: day
+			Type: System.Int32
+			Default Value: 
+	Method: SetDateMDY:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01887870
+		Ram Offset 0x181888a70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: month
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: day
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: year
+			Type: System.Int32
+			Default Value: 
+	Method: SetDateDMY:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x018878F0
+		Ram Offset 0x181888af0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: day
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: month
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: year
+			Type: System.Int32
+			Default Value: 
+	Method: SetDateYDM:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01887970
+		Ram Offset 0x181888b70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: year
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: day
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: month
+			Type: System.Int32
+			Default Value: 
+	Method: GetDefaultYear:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x018879F0
+		Ram Offset 0x181888bf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+	Method: GetDayOfNN:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01887A90
+		Ram Offset 0x181888c90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+		Parameter 2:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 3:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+	Method: GetDayOfNNN:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01887C40
+		Ram Offset 0x181888e40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 2:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+	Method: GetDayOfMN:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01888070
+		Ram Offset 0x181889270
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+		Parameter 2:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 3:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+	Method: GetHebrewDayOfNM:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x018882A0
+		Ram Offset 0x1818894a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 2:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+	Method: GetDayOfNM:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01888430
+		Ram Offset 0x181889630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+		Parameter 2:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 3:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+	Method: GetDayOfMNN:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01888660
+		Ram Offset 0x181889860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 2:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+	Method: GetDayOfYNN:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x018889E0
+		Ram Offset 0x181889be0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 2:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+	Method: GetDayOfNNY:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01888B40
+		Ram Offset 0x181889d40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 2:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+	Method: GetDayOfYMN:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01888CE0
+		Ram Offset 0x181889ee0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+	Method: GetDayOfYN:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01888DC0
+		Ram Offset 0x181889fc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+	Method: GetDayOfYM:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01888E90
+		Ram Offset 0x18188a090
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+	Method: AdjustTimeMark:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01888F60
+		Ram Offset 0x18188a160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+	Method: AdjustHour:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01889020
+		Ram Offset 0x18188a220
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hour
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: timeMark
+			Type: System.DateTimeParse/TM
+			Default Value: 
+	Method: GetTimeOfN:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01889060
+		Ram Offset 0x18188a260
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+	Method: GetTimeOfNN:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x018890D0
+		Ram Offset 0x18188a2d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+	Method: GetTimeOfNNN:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01889140
+		Ram Offset 0x18188a340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+	Method: GetDateOfDSN:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x018891C0
+		Ram Offset 0x18188a3c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+	Method: GetDateOfNDS:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01889230
+		Ram Offset 0x18188a430
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+	Method: GetDateOfNNDS:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01889310
+		Ram Offset 0x18188a510
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 2:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+	Method: ProcessDateTimeSuffix:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01889560
+		Ram Offset 0x18188a760
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 2:
+			Name: dtok
+			Type: System.DateTimeToken
+			Default Value: 
+	Method: ProcessHebrewTerminalState:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01889620
+		Ram Offset 0x18188a820
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dps
+			Type: System.DateTimeParse/DS
+			Default Value: 
+		Parameter 1:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 3:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+		Parameter 4:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 5:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+	Method: ProcessTerminalState:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01889B80
+		Ram Offset 0x18188ad80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dps
+			Type: System.DateTimeParse/DS
+			Default Value: 
+		Parameter 1:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 3:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+		Parameter 4:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 5:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+	Method: Parse:
+		Accessibility: Assembly
+		Return Type: System.DateTime
+		File Offset 0x0188A100
+		Ram Offset 0x18188b300
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: s
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+	Method: TryParse:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0188A240
+		Ram Offset 0x18188b440
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: s
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+		Parameter 3:
+			Name: result
+			Type: System.DateTime
+			Default Value: 
+	Method: TryParse:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0188A390
+		Ram Offset 0x18188b590
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: s
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+		Parameter 3:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+	Method: DetermineTimeZoneAdjustments:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188AD60
+		Ram Offset 0x18188bf60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 2:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+		Parameter 3:
+			Name: bTimeOnly
+			Type: System.Boolean
+			Default Value: 
+	Method: DateTimeOffsetTimeZonePostProcessing:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188AFC0
+		Ram Offset 0x18188c1c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 2:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+	Method: AdjustTimeZoneToUniversal:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188B1F0
+		Ram Offset 0x18188c3f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+	Method: AdjustTimeZoneToLocal:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188B2A0
+		Ram Offset 0x18188c4a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: bTimeOnly
+			Type: System.Boolean
+			Default Value: 
+	Method: ParseISO8601:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188B4D0
+		Ram Offset 0x18188c6d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: raw
+			Type: System.DateTimeRawInfo
+			Default Value: 
+		Parameter 1:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 2:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+		Parameter 3:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+	Method: MatchHebrewDigits:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0188BAE0
+		Ram Offset 0x18188cce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: digitLen
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: number
+			Type: System.Int32
+			Default Value: 
+	Method: ParseDigits:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0188BBE0
+		Ram Offset 0x18188cde0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: digitLen
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.Int32
+			Default Value: 
+	Method: ParseDigits:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0188BCE0
+		Ram Offset 0x18188cee0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: minDigitLen
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: maxDigitLen
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: result
+			Type: System.Int32
+			Default Value: 
+	Method: ParseFractionExact:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188BD90
+		Ram Offset 0x18188cf90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: maxDigitLen
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.Double
+			Default Value: 
+	Method: ParseSign:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188BEA0
+		Ram Offset 0x18188d0a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.Boolean
+			Default Value: 
+	Method: ParseTimeZoneOffset:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188BF10
+		Ram Offset 0x18188d110
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: len
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.TimeSpan
+			Default Value: 
+	Method: MatchAbbreviatedMonthName:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188C2D0
+		Ram Offset 0x18188d4d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.Int32
+			Default Value: 
+	Method: MatchMonthName:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188C500
+		Ram Offset 0x18188d700
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.Int32
+			Default Value: 
+	Method: MatchAbbreviatedDayName:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188C810
+		Ram Offset 0x18188da10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.Int32
+			Default Value: 
+	Method: MatchDayName:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188C960
+		Ram Offset 0x18188db60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.Int32
+			Default Value: 
+	Method: MatchEraName:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188CAB0
+		Ram Offset 0x18188dcb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.Int32
+			Default Value: 
+	Method: MatchTimeMark:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188CBD0
+		Ram Offset 0x18188ddd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.DateTimeParse/TM
+			Default Value: 
+	Method: MatchAbbreviatedTimeMark:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188CCF0
+		Ram Offset 0x18188def0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.DateTimeParse/TM
+			Default Value: 
+	Method: CheckNewValue:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188CDE0
+		Ram Offset 0x18188dfe0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: currentValue
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: newValue
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: patternChar
+			Type: System.Char
+			Default Value: 
+		Parameter 3:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+	Method: GetDateTimeNow:
+		Accessibility: Private
+		Return Type: System.DateTime
+		File Offset 0x0188CE80
+		Ram Offset 0x18188e080
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+	Method: CheckDefaultDateTime:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188CF70
+		Ram Offset 0x18188e170
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+		Parameter 1:
+			Name: cal
+			Type: System.Globalization.Calendar
+			Default Value: 
+		Parameter 2:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+	Method: ExpandPredefinedFormat:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x0188D1A0
+		Ram Offset 0x18188e3a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: format
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 2:
+			Name: parseInfo
+			Type: System.ParsingInfo
+			Default Value: 
+		Parameter 3:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+	Method: ParseJapaneseEraStart:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188D640
+		Ram Offset 0x18188e840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+	Method: ParseByFormat:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188D710
+		Ram Offset 0x18188e910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.__DTString
+			Default Value: 
+		Parameter 1:
+			Name: format
+			Type: System.__DTString
+			Default Value: 
+		Parameter 2:
+			Name: parseInfo
+			Type: System.ParsingInfo
+			Default Value: 
+		Parameter 3:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 4:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+	Method: TryParseQuoteString:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0188EF00
+		Ram Offset 0x181890100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: format
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: pos
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.Text.StringBuilder
+			Default Value: 
+		Parameter 3:
+			Name: returnValue
+			Type: System.Int32
+			Default Value: 
+	Method: DoStrictParse:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0188F010
+		Ram Offset 0x181890210
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: s
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: formatParam
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 2:
+			Name: styles
+			Type: System.Globalization.DateTimeStyles
+			Default Value: 
+		Parameter 3:
+			Name: dtfi
+			Type: System.Globalization.DateTimeFormatInfo
+			Default Value: 
+		Parameter 4:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+	Method: GetDateTimeParseException:
+		Accessibility: Private
+		Return Type: System.Exception
+		File Offset 0x0188F9B0
+		Ram Offset 0x181890bb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.DateTimeResult
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0188FB60
+		Ram Offset 0x181890d60
+		Virtual Method Slot: 65535

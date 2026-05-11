@@ -1,0 +1,571 @@
+Type: DamageGroundEffect
+
+Method: System.Void DamageGroundEffect::ApplyEffect(BaseCharacter):	Method Body (x86 ASM):
+		0x1804E3800 mov [rsp+10h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 16 | None ||| N/A | N/A
+		0x1804E3805 mov [rsp+18h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 24 | None ||| N/A | N/A
+		0x1804E380A push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804E380B sub rsp,70h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 112
+		0x1804E380F cmp byte ptr [18329A5D5h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512021 | None ||| N/A | 0
+		0x1804E3816 mov rsi,rdx		; DEBUG: {Register}/RSI {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3819 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804E381C jne short 00000001804E383Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E381E lea rcx,[1831118E0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493903072 | None ||| N/A | N/A
+		0x1804E3825 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E382A lea rcx,[1831118B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493903032 | None ||| N/A | N/A
+		0x1804E3831 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3836 mov byte ptr [18329A5D5h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512021 | None ||| N/A | 1
+		0x1804E383D mov rcx,[rdi+48h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 72 | None ||| N/A | N/A
+		0x1804E3841 mov rbx,[rdi+50h]		; DEBUG: {Register}/RBX {Memory}/None ||| RDI | 80 | None ||| N/A | N/A
+		0x1804E3845 movaps [rsp+60h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 96 | None ||| N/A | N/A
+		0x1804E384A test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804E384D je near ptr 00000001804E396Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3853 mov rax,[1831118E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493903072 | None ||| N/A | N/A
+		0x1804E385A mov r9d,[rcx+18h]		; DEBUG: {Register}/R9D {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1804E385E mov rcx,[rcx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1804E3862 mov rdx,[rax+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 32 | None ||| N/A | N/A
+		0x1804E3866 mov rax,[rdx+0C0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 192 | None ||| N/A | N/A
+		0x1804E386D mov rdx,[rax+150h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 336 | None ||| N/A | N/A
+		0x1804E3874 mov [rsp+20h],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| RSP | 32 | None ||| N/A | N/A
+		0x1804E3879 mov rdx,rsi		; DEBUG: {Register}/RDX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1804E387C call 00000001800D74E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3881 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3884 je near ptr 00000001804E396Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E388A cmp eax,[rbx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBX | 24 | None ||| N/A | N/A
+		0x1804E388D jae near ptr 00000001804E397Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3893 mov rcx,[rbx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x1804E3897 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804E389A je near ptr 00000001804E396Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E38A0 cdqe		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804E38A2 cmp eax,[rcx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1804E38A5 jae near ptr 00000001804E3974h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E38AB mov dword ptr [rcx+rax*4+20h],0		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 32 | RAX ||| N/A | 0
+		0x1804E38B3 inc dword ptr [rbx+1Ch]		; DEBUG: {Memory}/None {Register}/None ||| RBX | 28 | None ||| N/A | N/A
+		0x1804E38B6 cmp byte ptr [183298856h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 0
+		0x1804E38BD movss xmm6,dword ptr [rdi+70h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RDI | 112 | None ||| N/A | N/A
+		0x1804E38C2 jne short 00000001804E38D7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E38C4 lea rcx,[1830F62D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x1804E38CB call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E38D0 mov byte ptr [183298856h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 1
+		0x1804E38D7 mov rax,[1830F62D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x1804E38DE mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1804E38E5 movss xmm0,dword ptr [rcx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1804E38E9 movss xmm1,dword ptr [rcx+4]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 4 | None ||| N/A | N/A
+		0x1804E38EE movss dword ptr [rsp+80h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 128 | None ||| N/A | N/A
+		0x1804E38F7 movss dword ptr [rsp+84h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 132 | None ||| N/A | N/A
+		0x1804E3900 xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1804E3903 test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1804E3906 je short 00000001804E396Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3908 mov r8,[rsi]		; DEBUG: {Register}/R8 {Memory}/None ||| RSI | 0 | None ||| N/A | N/A
+		0x1804E390B xorps xmm1,xmm1		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x1804E390E mov r9,[rsp+80h]		; DEBUG: {Register}/R9 {Memory}/None ||| RSP | 128 | None ||| N/A | N/A
+		0x1804E3916 movaps xmm2,xmm6		; DEBUG: {Register}/XMM2 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x1804E3919 movdqa [rsp+50h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 80 | None ||| N/A | N/A
+		0x1804E391F xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3921 movss xmm0,dword ptr [rdi+74h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDI | 116 | None ||| N/A | N/A
+		0x1804E3926 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1804E3929 mov rax,[r8+0AB0h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 2736 | None ||| N/A | N/A
+		0x1804E3930 mov [rsp+40h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 64 | None ||| N/A | N/A
+		0x1804E3935 lea rax,[rsp+50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1804E393A mov byte ptr [rsp+38h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RSP | 56 | None ||| N/A | 1
+		0x1804E393F mov [rsp+30h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 48 | None ||| N/A | N/A
+		0x1804E3944 movss dword ptr [rsp+28h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 40 | None ||| N/A | N/A
+		0x1804E394A movss dword ptr [rsp+20h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 32 | None ||| N/A | N/A
+		0x1804E3950 call qword ptr [r8+0AA8h]		; DEBUG: {Memory}/None {Register}/None ||| R8 | 2728 | None ||| N/A | N/A
+		0x1804E3957 movaps xmm6,[rsp+60h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x1804E395C lea r11,[rsp+70h]		; DEBUG: {Register}/R11 {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x1804E3961 mov rbx,[r11+18h]		; DEBUG: {Register}/RBX {Memory}/None ||| R11 | 24 | None ||| N/A | N/A
+		0x1804E3965 mov rsi,[r11+20h]		; DEBUG: {Register}/RSI {Memory}/None ||| R11 | 32 | None ||| N/A | N/A
+		0x1804E3969 mov rsp,r11		; DEBUG: {Register}/RSP {Register}/R11 ||| None | 0 | None ||| N/A | N/A
+		0x1804E396C pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804E396D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804E396E call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3973 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804E397A xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1804E397C call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3981 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DamageGroundEffect::ApplyEffect(BaseCharacter):
+		End of function at 0x1804E3982
+		Absolute End is at 0x1804E3982
+		Identified Jump Destination addresses:
+
+		0x1804E380A: Saves the content of rdi to the stack
+		0x1804E380F: Compares {Unknown Global at 0x18329A5D5, first ten bytes are [134 234 2 64 67 3 0 200 67 3], or as chars "ê@C ÈC"} and 0
+		0x1804E3816: Copies {'character' (function parameter, type BaseCharacter)} from rdx into rsi
+		0x1804E3819: Copies {'this' (function parameter, type DamageGroundEffect)} from rcx into rdi
+		0x1804E381C: Jumps to 0x1804E383D if {Unknown Global at 0x18329A5D5, first ten bytes are [134 234 2 64 67 3 0 200 67 3], or as chars "ê@C ÈC"} != 0
+
+		0x1804E381E: Loads the global generic method reference for method System.Int32 System.Collections.Generic.List`1::IndexOf(T) on type System.Collections.Generic.List`1<BaseCharacter> and stores the result in constant {'IndexOf' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1804E3825: Initializes runtime metadata value 
+		0x1804E382A: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::set_Item(System.Int32,T) on type System.Collections.Generic.List`1<System.Single> and stores the result in constant {'set_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1804E3831: Initializes runtime metadata value 
+		0x1804E383D: [!] Reads field affectedCharacters from {'this' (function parameter, type DamageGroundEffect)} and stores in a new local {'affectedCharacters' (type System.Collections.Generic.List`1<BaseCharacter>)}
+
+		0x1804E3841: [!] Reads field effectTimes from {'this' (function parameter, type DamageGroundEffect)} and stores in a new local {'effectTimes' (type System.Collections.Generic.List`1<System.Single>)}
+
+		0x1804E384A: [!] Compares {'affectedCharacters' (type System.Collections.Generic.List`1<BaseCharacter>)} and 0
+		0x1804E384D: Jumps to 0x1804E396E (which throws a NRE) if affectedCharacters equals 0. Implicitly present in managed code, so ignored here.
+		0x1804E3853: Loads the global generic method reference for method System.Int32 System.Collections.Generic.List`1::IndexOf(T) on type System.Collections.Generic.List`1<BaseCharacter> and stores the result in constant {'IndexOf' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rax
+		0x1804E3866: [!] Reads field dieSFX from {'character' (function parameter, type BaseCharacter)} and stores in a new local {'dieSFX' (type System.String)}
+
+		0x1804E386D: [!] Reads field  from {'dieSFX' (type System.String)} and stores in a new local 
+
+		0x1804E3874: Moves character (type BaseCharacter) from register rdx to the stack at offset 32 (0x20)
+		0x1804E3879: Copies {'character' (function parameter, type BaseCharacter)} from rsi into rdx
+		0x1804E3881: [!] Compares {'effectTimes' (type System.Collections.Generic.List`1<System.Single>)} and 0
+		0x1804E3884: Jumps to 0x1804E396E (which throws a NRE) if effectTimes equals 0. Implicitly present in managed code, so ignored here.
+		0x1804E388A: [!] Compares {'dieSFX' (type System.String)} against itself
+		0x1804E388D: Jumps to 0x1804E397A (which is an if statement's body) if {'dieSFX' (type System.String)} is greater than or equal to  ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1804E3893: [!] Reads field _items from {'effectTimes' (type System.Collections.Generic.List`1<System.Single>)} and stores in a new local {'_items' (type T[])}
+
+		0x1804E3897: [!] Compares {'_items' (type T[])} and 0
+		0x1804E389A: Jumps to 0x1804E396E (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x1804E38A2: [!] Compares {'dieSFX' (type System.String)} and {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}
+		0x1804E38A5: Jumps to 0x1804E3974 (which throws a NRE) if {'dieSFX' (type System.String)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}. Implicitly present in managed code, so ignored here.
+		0x1804E38AB: [!] Sets the field  (Type ) on local {'_items' (type T[])} to the value stored in 0
+		0x1804E38B6: Compares {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} and 0
+		0x1804E38C2: Jumps to 0x1804E38D7 if {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} != 0
+
+		0x1804E38C4: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rcx
+		0x1804E38CB: Initializes runtime metadata value UnityEngine.Vector2
+		0x1804E38D7: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rax
+		0x1804E38DE: Loads the pointer to the static fields for UnityEngine.Vector2 and stores it in constant13 in register rcx
+		0x1804E38E5: [!] Reads the static field UnityEngine.Vector2 UnityEngine.Vector2::zeroVector into new local zeroVector
+		0x1804E38E9: [!] Reads the static field  into new local 
+		0x1804E38EE: Moves zeroVector (type UnityEngine.Vector2) from register xmm0 to the stack at offset 128 (0x80)
+		0x1804E3900: Clears register xmm0, yielding zero-local {'local10' (type System.Int32)}
+		0x1804E3903: [!] Compares {'character' (function parameter, type BaseCharacter)} and 0
+		0x1804E3906: Jumps to 0x1804E396E (which throws a NRE) if character equals 0. Implicitly present in managed code, so ignored here.
+		0x1804E3908: Loads the class pointer from character into a constant constant15 in register r8
+		0x1804E390B: Clears register xmm1, yielding zero-local {'local11' (type System.Int32)}
+		0x1804E390E: Reads local {'zeroVector' (type UnityEngine.Vector2)} from stack offset 128 (0x80) into register r9
+		0x1804E3916: Copies {'local8' (type System.Single)} from xmm6 into xmm2
+		0x1804E3919: Moves local10 (type System.Int32) from register xmm0 to the stack at offset 80 (0x50)
+		0x1804E3921: [!] Reads field damageKnockbackDuration from {'this' (function parameter, type DamageGroundEffect)} and stores in a new local {'damageKnockbackDuration' (type System.Single)}
+
+		0x1804E3926: Copies {'character' (function parameter, type BaseCharacter)} from rsi into rcx
+		0x1804E3929: Loads the pointer to the implementation of virtual function System.Void BaseCharacter::WasHit(BaseCharacter,System.Single,UnityEngine.Vector2,System.Single,System.Single,UnityEngine.Color,System.Boolean) specific to BaseCharacter from the class pointer in r8, slot 151 (from memory offset 2736) and stores in constant constant16
+		0x1804E3930: Moves BaseCharacter.WasHit (type Mono.Cecil.MethodDefinition) from register rax to the stack at offset 64 (0x40) as a new local local14
+		0x1804E3935: Loads a pointer to stack offset 0x50 into register rax as new constant constant17
+		0x1804E393A: Moves 1 (immediate ulong value) to the stack at offset 56 as a new local local15
+		0x1804E393F: Moves constant17 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register rax to the stack at offset 48 (0x30) as a new local local16
+		0x1804E3944: Moves damageKnockbackDuration (type System.Single) from register xmm0 to the stack at offset 40 (0x28)
+		0x1804E394A: Moves local11 (type System.Int32) from register xmm1 to the stack at offset 32 (0x20)
+		0x1804E3950: [!] Calls managed method System.Void BaseCharacter::WasHit(BaseCharacter,System.Single,UnityEngine.Vector2,System.Single,System.Single,UnityEngine.Color,System.Boolean) on instance {'character' (function parameter, type BaseCharacter)} ;  - Arguments are incorrect?
+
+		0x1804E3957: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register xmm6 as new constant constant18
+		0x1804E395C: Loads a pointer to stack offset 0x70 into register r11 as new constant constant19
+		0x1804E3969: Copies {'constant19' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r11 into rsp
+		0x1804E396D: [!] Returns from the function
+
+		0x1804E396E: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1804E397A: Clears register rcx, yielding zero-local {'local18' (type System.Int32)}
+		0x1804E397C: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DamageGroundEffect
+	System.Void ApplyEffect(BaseCharacter character)
+		System.Collections.Generic.List`1<BaseCharacter> affectedCharacters = this.affectedCharacters
+		System.Collections.Generic.List`1<System.Single> effectTimes = this.effectTimes
+		System.String dieSFX = character.dieSFX
+		  = dieSFX.
+
+		if (dieSFX < )
+		    T[] _items = effectTimes._items
+		    _items. = 0
+		    UnityEngine.Vector2 zeroVector = UnityEngine.Vector2.zeroVector
+		      = .
+		    ulong local10 = 0
+		    ulong local11 = 0
+		    System.Single damageKnockbackDuration = this.damageKnockbackDuration
+
+		    character.WasHit()
+		    return
+		    throw new System.NullReferenceException()
+		endif
+        
+		ulong local18 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: System.Void DamageGroundEffect::OnLifetimeEnded():	Method Body (x86 ASM):
+		0x1804E3990 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1804E3995 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804E3996 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1804E399A cmp byte ptr [18329A5D8h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512024 | None ||| N/A | 0
+		0x1804E39A1 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804E39A4 jne short 00000001804E39B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E39A6 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804E39AD call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E39B2 mov byte ptr [18329A5D8h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512024 | None ||| N/A | 1
+		0x1804E39B9 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804E39C0 mov rdi,[rbx+78h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 120 | None ||| N/A | N/A
+		0x1804E39C4 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1804E39CB jne short 00000001804E39D2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E39CD call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E39D2 cmp byte ptr [1832A9F58h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575896 | None ||| N/A | 0
+		0x1804E39D9 jne short 00000001804E39EEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E39DB lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804E39E2 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E39E7 mov byte ptr [1832A9F58h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575896 | None ||| N/A | 1
+		0x1804E39EE mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804E39F5 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1804E39FC jne short 00000001804E3A03h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E39FE call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3A03 cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x1804E3A0A jne short 00000001804E3A1Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3A0C lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804E3A13 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3A18 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x1804E3A1F test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1804E3A22 je near ptr 00000001804E3B04h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3A28 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804E3A2F cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1804E3A36 jne short 00000001804E3A3Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3A38 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3A3D cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x1804E3A42 je near ptr 00000001804E3B04h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3A48 mov rdi,[rbx+78h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 120 | None ||| N/A | N/A
+		0x1804E3A4C test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1804E3A4F je near ptr 00000001804E3BE1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3A55 mov rax,[1832A9D48h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1804E3A5C test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3A5F jne short 00000001804E3A7Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3A61 lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x1804E3A68 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3A6D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3A70 je near ptr 00000001804E3B85h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3A76 mov [1832A9D48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1804E3A7D mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1804E3A80 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804E3A82 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3A85 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3A88 je near ptr 00000001804E3BE1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3A8E mov rax,[1832AA338h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576888 | None ||| N/A | N/A
+		0x1804E3A95 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3A98 jne short 00000001804E3AB6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3A9A lea rcx,[18297C190h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485950864 | None ||| N/A | N/A
+		0x1804E3AA1 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3AA6 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3AA9 je near ptr 00000001804E3B9Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3AAF mov [1832AA338h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576888 | None ||| N/A | N/A
+		0x1804E3AB6 mov r8b,1		; DEBUG: {Register}/R8L {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1804E3AB9 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3ABB mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1804E3ABE call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804E3AC0 mov rdi,[rbx+78h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 120 | None ||| N/A | N/A
+		0x1804E3AC4 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1804E3AC7 je near ptr 00000001804E3BE1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3ACD mov rax,[1832AB688h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495581832 | None ||| N/A | N/A
+		0x1804E3AD4 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3AD7 jne short 00000001804E3AF5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3AD9 lea rcx,[1829880B0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485999792 | None ||| N/A | N/A
+		0x1804E3AE0 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3AE5 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3AE8 je near ptr 00000001804E3BB3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3AEE mov [1832AB688h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495581832 | None ||| N/A | N/A
+		0x1804E3AF5 mov r8d,1		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 1
+		0x1804E3AFB mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1804E3AFE movzx edx,r8b		; DEBUG: {Register}/EDX {Register}/R8L ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B02 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B04 cmp byte ptr [18329A5D4h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512020 | None ||| N/A | 0
+		0x1804E3B0B jne short 00000001804E3B20h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3B0D lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804E3B14 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3B19 mov byte ptr [18329A5D4h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512020 | None ||| N/A | 1
+		0x1804E3B20 mov rcx,[rbx+68h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 104 | None ||| N/A | N/A
+		0x1804E3B24 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B27 je short 00000001804E3B30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3B29 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B2B call 0000000180CC7B80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3B30 mov rax,[1832A9D50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575376 | None ||| N/A | N/A
+		0x1804E3B37 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B3A jne short 00000001804E3B54h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3B3C lea rcx,[182979720h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485940000 | None ||| N/A | N/A
+		0x1804E3B43 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3B48 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B4B je short 00000001804E3BCAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3B4D mov [1832A9D50h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575376 | None ||| N/A | N/A
+		0x1804E3B54 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B57 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B59 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804E3B60 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B63 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1804E3B6A jne short 00000001804E3B71h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3B6C call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3B71 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B73 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B76 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1804E3B7B add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1804E3B7F pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B80 jmp near ptr 000000018248FF20h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3B85 lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x1804E3B8C call 0000000180323A80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3B91 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B94 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804E3B96 call 0000000180321970h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3B9B int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DamageGroundEffect::OnLifetimeEnded():
+		End of function at 0x1804E3B9C
+		Absolute End is at 0x1804E3B9C
+		Identified Jump Destination addresses:
+
+		0x1804E3995: Saves the content of rdi to the stack
+		0x1804E399A: Compares {Unknown Global at 0x18329A5D8, first ten bytes are [64 67 3 0 200 67 3 0 36 139], or as chars "@C ÈC $"} and 0
+		0x1804E39A1: Copies {'this' (function parameter, type DamageGroundEffect)} from rcx into rbx
+		0x1804E39A4: Jumps to 0x1804E39B9 if {Unknown Global at 0x18329A5D8, first ten bytes are [64 67 3 0 200 67 3 0 36 139], or as chars "@C ÈC $"} != 0
+
+		0x1804E39A6: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804E39AD: Initializes runtime metadata value UnityEngine.Object
+		0x1804E39B9: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804E39C0: [!] Reads field effectFeedback from {'this' (function parameter, type DamageGroundEffect)} and stores in a new local {'effectFeedback' (type UnityEngine.ParticleSystem)}
+
+		0x1804E39C4: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1804E39CB: Jumps to 0x1804E39D2 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1804E39CD: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1804E39D2: Compares {Unknown Global at 0x1832A9F58, first ten bytes are [128 23 238 2 240 161 14 0 234 162], or as chars "îð¡ ê¢"} and 0
+		0x1804E39D9: Jumps to 0x1804E39EE if {Unknown Global at 0x1832A9F58, first ten bytes are [128 23 238 2 240 161 14 0 234 162], or as chars "îð¡ ê¢"} != 0
+
+		0x1804E39DB: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804E39E2: Initializes runtime metadata value UnityEngine.Object
+		0x1804E39EE: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804E39F5: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1804E39FC: Jumps to 0x1804E3A03 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1804E39FE: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1804E3A03: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x1804E3A0A: Jumps to 0x1804E3A1F if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x1804E3A0C: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804E3A13: Initializes runtime metadata value UnityEngine.Object
+		0x1804E3A1F: [!] Compares {'effectFeedback' (type UnityEngine.ParticleSystem)} and 0
+		0x1804E3A22: Jumps to 0x1804E3B04 (which is an if statement's body) if effectFeedback equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1804E3A28: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804E3A2F: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1804E3A36: Jumps to 0x1804E3A3D if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1804E3A38: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1804E3A3D: [!] Compares  and 0
+		0x1804E3A42: Jumps to 0x1804E3B04 (which is an if statement's body) if  equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1804E3A48: [!] Reads field effectFeedback from {'this' (function parameter, type DamageGroundEffect)} and stores in a new local {'effectFeedback2' (type UnityEngine.ParticleSystem)}
+
+		0x1804E3A4C: [!] Compares {'effectFeedback2' (type UnityEngine.ParticleSystem)} and 0
+		0x1804E3A4F: Jumps to 0x1804E3BE1 (which throws a NRE) if effectFeedback2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804E3A55: Loads string "<õ7" into register rax as constant UnityEngine.Component.get_transform
+		0x1804E3A5C: Compares UnityEngine.Component.get_transform and 0
+		0x1804E3A5F: Jumps to 0x1804E3A7D if UnityEngine.Component.get_transform != 0
+
+		0x1804E3A61: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant24' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804E3A68: Looks up unity ICall by name "UnityEngine.Component::get_transform()" which resolves to UnityEngine.Transform UnityEngine.Component::get_transform()
+		0x1804E3A6D: Compares UnityEngine.Component.get_transform and 0
+		0x1804E3A70: Jumps to 0x1804E3B85 if UnityEngine.Component.get_transform equals 0 ;  - This is probably a goto, jumping to 0x1804E3B85 which is after end of current block @ 0x1804E3B04 (started at 0x1804E3A48)
+
+		0x1804E3A7D: Copies {'effectFeedback2' (type UnityEngine.ParticleSystem)} from rdi into rcx
+		0x1804E3A80: [!] Calls managed method UnityEngine.Transform UnityEngine.Component::get_transform() on instance {'effectFeedback2' (type UnityEngine.ParticleSystem)} and stores the result in {'transform' (type UnityEngine.Transform)}
+
+		0x1804E3A82: Copies {'transform' (type UnityEngine.Transform)} from rax into rdi
+		0x1804E3A85: [!] Compares {'transform' (type UnityEngine.Transform)} and 0
+		0x1804E3A88: Jumps to 0x1804E3BE1 (which throws a NRE) if transform equals 0. Implicitly present in managed code, so ignored here.
+		0x1804E3A8E: Loads string "÷Ô" into register rax as constant UnityEngine.Transform.SetParent
+		0x1804E3A95: Compares UnityEngine.Transform.SetParent and 0
+		0x1804E3A98: Jumps to 0x1804E3AB6 if UnityEngine.Transform.SetParent != 0
+
+		0x1804E3A9A: Loads string "UnityEngine.Transform::SetParent(UnityEngine.Transform,System.Boolean)" into register rcx as constant {'constant29' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804E3AA1: Looks up unity ICall by name "UnityEngine.Transform::SetParent(UnityEngine.Transform,System.Boolean)" which resolves to System.Void UnityEngine.Transform::SetParent(UnityEngine.Transform)
+		0x1804E3AA6: Compares UnityEngine.Transform.SetParent and 0
+		0x1804E3AA9: Jumps to 0x1804E3B9C if UnityEngine.Transform.SetParent equals 0 ;  - This is probably a goto, jumping to 0x1804E3B9C which is after end of current block @ 0x1804E3B04 (started at 0x1804E3A48)
+
+		0x1804E3AB6: [!] Writes the constant 0x1 into operand 1 (type UInt64) in register r8
+		0x1804E3AB9: Clears register rdx, yielding zero-local {'local4' (type System.Int32)}
+		0x1804E3ABB: Copies {'transform' (type UnityEngine.Transform)} from rdi into rcx
+		0x1804E3ABE: [!] Calls managed method System.Void UnityEngine.Transform::SetParent(UnityEngine.Transform) on instance {'transform' (type UnityEngine.Transform)} with arguments [{'local4' (type System.Int32)}]
+
+		0x1804E3AC0: [!] Reads field effectFeedback from {'this' (function parameter, type DamageGroundEffect)} and stores in a new local {'effectFeedback3' (type UnityEngine.ParticleSystem)}
+
+		0x1804E3AC4: [!] Compares {'effectFeedback3' (type UnityEngine.ParticleSystem)} and 0
+		0x1804E3AC7: Jumps to 0x1804E3BE1 (which throws a NRE) if effectFeedback3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804E3ACD: Reads {Unknown Global at 0x1832AB688, first ten bytes are [142 195 15 0 52 143 234 2 142 195], or as chars "Ã 4êÃ"} into register rax as a constant constant33
+		0x1804E3AD4: Compares UnityEngine.ParticleSystem.Stop and 0
+		0x1804E3AD7: Jumps to 0x1804E3AF5 if UnityEngine.ParticleSystem.Stop != 0
+
+		0x1804E3AD9: Loads string "UnityEngine.ParticleSystem::Stop(System.Boolean,UnityEngine.ParticleSystemStopBehavior)" into register rcx as constant {'constant35' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804E3AE0: Looks up unity ICall by name "UnityEngine.ParticleSystem::Stop(System.Boolean,UnityEngine.ParticleSystemStopBehavior)" which resolves to System.Void UnityEngine.ParticleSystem::Stop(System.Boolean,UnityEngine.ParticleSystemStopBehavior)
+		0x1804E3AE5: Compares UnityEngine.ParticleSystem.Stop and 0
+		0x1804E3AE8: Jumps to 0x1804E3BB3 if UnityEngine.ParticleSystem.Stop equals 0 ;  - This is probably a goto, jumping to 0x1804E3BB3 which is after end of current block @ 0x1804E3B04 (started at 0x1804E3A48)
+
+		0x1804E3AF5: [!] Writes the constant 0x1 into operand True (type UInt64) in register r8
+		0x1804E3AFB: Copies {'effectFeedback3' (type UnityEngine.ParticleSystem)} from rdi into rcx
+		0x1804E3AFE: Copies True from r8 into rdx
+		0x1804E3B02: [!] Calls managed method System.Void UnityEngine.ParticleSystem::Stop(System.Boolean,UnityEngine.ParticleSystemStopBehavior) on instance {'effectFeedback3' (type UnityEngine.ParticleSystem)} with arguments [True, True]
+
+		0x1804E3B04: Compares {Unknown Global at 0x18329A5D4, first ten bytes are [8 134 234 2 64 67 3 0 200 67], or as chars "ê@C ÈC"} and 0
+		0x1804E3B0B: Jumps to 0x1804E3B20 if {Unknown Global at 0x18329A5D4, first ten bytes are [8 134 234 2 64 67 3 0 200 67], or as chars "ê@C ÈC"} != 0 ;  - This is probably a goto, jumping to 0x1804E3B20 which is after end of current block @ 0x1804E3B04 (started at 0x1804E3A48)
+
+		0x1804E3B0D: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804E3B14: Initializes runtime metadata value UnityEngine.Object
+		0x1804E3B20: [!] Reads field currentSFX from {'this' (function parameter, type DamageGroundEffect)} and stores in a new local {'currentSFX' (type FMODUnity.StudioEventEmitter)}
+
+		0x1804E3B24: [!] Compares {'currentSFX' (type FMODUnity.StudioEventEmitter)} and 0
+		0x1804E3B27: Jumps to 0x1804E3B30 if currentSFX equals 0 ;  - This is probably a goto, jumping to 0x1804E3B30 which is after end of current block @ 0x1804E3B04 (started at 0x1804E3A48)
+
+		0x1804E3B2B: [!] Calls managed method System.Void FMODUnity.StudioEventEmitter::Stop() on instance {'currentSFX' (type FMODUnity.StudioEventEmitter)}
+
+		0x1804E3B30: Loads string "G" into register rax as constant UnityEngine.Component.get_gameObject
+		0x1804E3B37: Compares UnityEngine.Component.get_gameObject and 0
+		0x1804E3B3A: Jumps to 0x1804E3B54 if UnityEngine.Component.get_gameObject != 0 ;  - This is probably a goto, jumping to 0x1804E3B54 which is after end of current block @ 0x1804E3B04 (started at 0x1804E3A48)
+
+		0x1804E3B3C: Loads string "UnityEngine.Component::get_gameObject()" into register rcx as constant {'constant44' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804E3B43: Looks up unity ICall by name "UnityEngine.Component::get_gameObject()" which resolves to UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+		0x1804E3B48: Compares UnityEngine.Component.get_gameObject and 0
+		0x1804E3B4B: Jumps to 0x1804E3BCA if UnityEngine.Component.get_gameObject equals 0 ;  - This is probably a goto, jumping to 0x1804E3BCA which is after end of current block @ 0x1804E3B04 (started at 0x1804E3A48)
+
+		0x1804E3B54: Copies {'this' (function parameter, type DamageGroundEffect)} from rbx into rcx
+		0x1804E3B57: [!] Calls managed method UnityEngine.GameObject UnityEngine.Component::get_gameObject() on instance {'this' (function parameter, type DamageGroundEffect)} and stores the result in {'gameObject' (type UnityEngine.GameObject)}
+
+		0x1804E3B59: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804E3B60: Copies {'gameObject' (type UnityEngine.GameObject)} from rax into rbx
+		0x1804E3B63: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1804E3B6A: Jumps to 0x1804E3B71 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x1804E3B71 which is after end of current block @ 0x1804E3B04 (started at 0x1804E3A48)
+
+		0x1804E3B6C: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1804E3B73: Copies {'gameObject' (type UnityEngine.GameObject)} from rbx into rcx
+		0x1804E3B76: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant49
+		0x1804E3B80: [!] Calls static managed method System.Void UnityEngine.Object::Destroy(UnityEngine.Object) with arguments [{'gameObject' (type UnityEngine.GameObject)}]
+
+		0x1804E3B80: [!] Returns from the function
+
+		0x1804E3B85: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant50' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804E3B8C: [!] Constructs and throws an exception of kind System.MissingMethodException
+
+		0x1804E3B91: Copies {'local10' (type System.MissingMethodException)} from rax into rcx
+		0x1804E3B96: [!] Throws {'local10' (type System.MissingMethodException)}
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DamageGroundEffect
+	System.Void OnLifetimeEnded()
+		UnityEngine.ParticleSystem effectFeedback = this.effectFeedback
+
+		if (effectFeedback != 0)
+
+		    if ( != 0)
+		        UnityEngine.ParticleSystem effectFeedback2 = this.effectFeedback
+
+		        UnityEngine.Transform transform = effectFeedback2.transform
+		        ulong local4 = 0
+
+		        transform.SetParent(local4) //(Transform p)
+		        UnityEngine.ParticleSystem effectFeedback3 = this.effectFeedback
+
+		        effectFeedback3.Stop(True, True) //(Boolean withChildren, ParticleSystemStopBehavior stopBehavior)
+		    endif
+            
+		    FMODUnity.StudioEventEmitter currentSFX = this.currentSFX
+
+		    if (currentSFX == 0)
+                goto INSN_1804E3B30
+            endif
+
+		    currentSFX.Stop()
+
+		    INSN_1804E3B30:
+
+		    UnityEngine.GameObject gameObject = this.gameObject
+
+		    UnityEngine.Object.Destroy(gameObject) //(Object obj)
+		    return
+		    throw new System.MissingMethodException()
+		    throw local10
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.JumpIfZeroOrNullAction at (0x1804E3A42) is corrupt (One of the arguments is null) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void DamageGroundEffect::.ctor():	Method Body (x86 ASM):
+		0x1804E3BF0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1804E3BF4 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x1804E3BFB mov dword ptr [rcx+70h],41200000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 112 | None ||| N/A | 1092616192
+		0x1804E3C02 mov dword ptr [rcx+20h],3F800000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 32 | None ||| N/A | 1065353216
+		0x1804E3C09 mov dword ptr [rcx+24h],3F800000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 36 | None ||| N/A | 1065353216
+		0x1804E3C10 mov dword ptr [rcx+2Ch],3E800000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 44 | None ||| N/A | 1048576000
+		0x1804E3C17 jne short 00000001804E3C2Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3C19 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804E3C20 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3C25 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x1804E3C2C mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804E3C33 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1804E3C3A jne short 00000001804E3C45h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3C3C add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1804E3C40 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804E3C45 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1804E3C49 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804E3C4A int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DamageGroundEffect::.ctor():
+		End of function at 0x1804E3C4B
+		Absolute End is at 0x1804E3C4B
+		Identified Jump Destination addresses:
+
+		0x1804E3BF4: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x1804E3BFB: [!] Sets the field damagePerInterval (Type System.Single) on local {'this' (function parameter, type DamageGroundEffect)} to the value stored in 10
+		0x1804E3C02: [!] Sets the field delayToEnableEffect (Type System.Single) on local {'this' (function parameter, type DamageGroundEffect)} to the value stored in 1
+		0x1804E3C09: [!] Sets the field applyEffectInterval (Type System.Single) on local {'this' (function parameter, type DamageGroundEffect)} to the value stored in 1
+		0x1804E3C10: [!] Sets the field timeToDestroyOnLifeTimeEnded (Type System.Single) on local {'this' (function parameter, type DamageGroundEffect)} to the value stored in 0,25
+		0x1804E3C17: Jumps to 0x1804E3C2C if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x1804E3C19: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804E3C20: Initializes runtime metadata value UnityEngine.Object
+		0x1804E3C2C: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804E3C33: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1804E3C3A: Jumps to 0x1804E3C45 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1804E3C49: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DamageGroundEffect
+	System.Void .ctor()
+		this.damagePerInterval = 10
+		this.delayToEnableEffect = 1
+		this.applyEffectInterval = 1
+		this.timeToDestroyOnLifeTimeEnded = 0,25
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.r4 10
+	IL_0006: stfld System.Single DamageGroundEffect::damagePerInterval
+	IL_000b: ldarg.0
+	IL_000c: ldc.r4 1
+	IL_0011: stfld System.Single BaseGroundEffect::delayToEnableEffect
+	IL_0016: ldarg.0
+	IL_0017: ldc.r4 1
+	IL_001c: stfld System.Single BaseGroundEffect::applyEffectInterval
+	IL_0021: ldarg.0
+	IL_0022: ldc.r4 0,25
+	IL_0027: stfld System.Single BaseGroundEffect::timeToDestroyOnLifeTimeEnded
+	IL_002c: ret
+	
+

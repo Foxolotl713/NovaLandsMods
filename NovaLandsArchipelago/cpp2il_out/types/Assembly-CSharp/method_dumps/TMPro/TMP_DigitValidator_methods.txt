@@ -1,0 +1,80 @@
+Type: TMP_DigitValidator
+
+Method: System.Char TMPro.TMP_DigitValidator::Validate(System.String,System.Int32,System.Char):	Method Body (x86 ASM):
+		0x18091E410 lea eax,[r9-30h]		; DEBUG: {Register}/EAX {Memory}/None ||| R9 | 18446744073709551568 | None ||| N/A | N/A
+		0x18091E414 cmp ax,9		; DEBUG: {Register}/AX {Immediate8to16}/None ||| None | 0 | None ||| N/A | 9
+		0x18091E418 jbe short 000000018091E41Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091E41A xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18091E41C ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091E41D inc dword ptr [r8]		; DEBUG: {Memory}/None {Register}/None ||| R8 | 0 | None ||| N/A | N/A
+		0x18091E420 movzx eax,r9w		; DEBUG: {Register}/EAX {Register}/R9W ||| None | 0 | None ||| N/A | N/A
+		0x18091E424 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091E425 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Char TMPro.TMP_DigitValidator::Validate(System.String,System.Int32,System.Char):
+		End of function at 0x18091E426
+		Absolute End is at 0x18091E426
+		Identified Jump Destination addresses:
+
+		0x18091E410: Loads the pointer to the field  on {'ch' (function parameter, type System.Char)} into register rax
+		0x18091E414: [!] Compares  and 9
+		0x18091E418: Jumps to 0x18091E41D (which is an if statement's body) if  is less than or equal to 9 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18091E41A: Clears register rax, yielding zero-local {'local4' (type System.Int32)}
+		0x18091E41C: [!] Returns {'local4' (type System.Int32)} from the function
+
+		0x18091E420: Copies {'ch' (function parameter, type System.Char)} from r9 into rax
+		0x18091E424: [!] Returns {'ch' (function parameter, type System.Char)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: TMPro.TMP_DigitValidator
+	System.Char Validate(System.String text, System.Int32 pos, System.Char ch)
+
+		if ( > 9)
+		    ulong local4 = 0
+		    return local4
+		endif
+        
+		return ch
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.JumpIfLessThanOrEqualToAction at (0x18091E418) is corrupt (One of the arguments is null) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void TMPro.TMP_DigitValidator::.ctor():	Method Body (x86 ASM):
+		0x1807F48C0 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807F48C2 jmp near ptr 000000018248CA30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807F48C7 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void TMPro.TMP_DigitValidator::.ctor():
+		End of function at 0x1807F48C8
+		Absolute End is at 0x1807F48C8
+		Identified Jump Destination addresses:
+
+		0x1807F48C2: [!] Calls managed method System.Void UnityEngine.ScriptableObject::.ctor() on instance {'this' (function parameter, type TMPro.TMP_DigitValidator)}
+
+		0x1807F48C2: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: TMPro.TMP_DigitValidator
+	System.Void .ctor()
+
+		base..ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call System.Void UnityEngine.ScriptableObject::.ctor()
+	IL_0006: ret
+	
+

@@ -1,0 +1,151 @@
+Type: System.Net.FileWebResponse:
+	Base Class: 
+		System.Net.WebResponse
+
+	Interfaces:
+		System.Runtime.Serialization.ISerializable
+		System.Net.ICloseEx
+
+	Field: m_closed
+		Type: System.Boolean
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_contentLength
+		Type: System.Int64
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_fileAccess
+		Type: System.IO.FileAccess
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_headers
+		Type: System.Net.WebHeaderCollection
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_stream
+		Type: System.IO.Stream
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: m_uri
+		Type: System.Uri
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01F5BC30
+		Ram Offset 0x181f5ce30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: request
+			Type: System.Net.FileWebRequest
+			Default Value: 
+		Parameter 1:
+			Name: uri
+			Type: System.Uri
+			Default Value: 
+		Parameter 2:
+			Name: access
+			Type: System.IO.FileAccess
+			Default Value: 
+		Parameter 3:
+			Name: asyncHint
+			Type: System.Boolean
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01F5C150
+		Ram Offset 0x181f5d350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: serializationInfo
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: streamingContext
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: System.Runtime.Serialization.ISerializable.GetObjectData:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F45E20
+		Ram Offset 0x181f47020
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: serializationInfo
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: streamingContext
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: GetObjectData:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01F5C4E0
+		Ram Offset 0x181f5d6e0
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: serializationInfo
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: streamingContext
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: get_Headers:
+		Accessibility: Public
+		Return Type: System.Net.WebHeaderCollection
+		File Offset 0x01F5C9D0
+		Ram Offset 0x181f5dbd0
+		Virtual Method Slot: 14
+
+	Method: get_ResponseUri:
+		Accessibility: Public
+		Return Type: System.Uri
+		File Offset 0x01F5C9F0
+		Ram Offset 0x181f5dbf0
+		Virtual Method Slot: 13
+
+	Method: CheckDisposed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F5CA10
+		Ram Offset 0x181f5dc10
+		Virtual Method Slot: 65535
+
+	Method: Close:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01F5CAA0
+		Ram Offset 0x181f5dca0
+		Virtual Method Slot: 9
+
+	Method: System.Net.ICloseEx.CloseEx:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F5CAE0
+		Ram Offset 0x181f5dce0
+		Virtual Method Slot: 15
+
+		Parameter 0:
+			Name: closeState
+			Type: System.Net.CloseExState
+			Default Value: 
+	Method: GetResponseStream:
+		Accessibility: Public
+		Return Type: System.IO.Stream
+		File Offset 0x01F5CC40
+		Ram Offset 0x181f5de40
+		Virtual Method Slot: 12

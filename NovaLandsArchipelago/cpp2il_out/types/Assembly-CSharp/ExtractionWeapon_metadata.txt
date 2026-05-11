@@ -1,0 +1,449 @@
+Type: ExtractionWeapon:
+	Base Class: 
+		BaseWeapon
+
+	Interfaces:
+
+	Nested Types:
+		ExtractionWeapon/<>c
+
+	Field: laserEffect
+		Type: LaserEffect
+		Offset in Defining Type: 0x128
+		Has Default: False
+
+	Field: spawnParticlesCustomPosition
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x130
+		Has Default: False
+
+	Field: noTargetParticles
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: repairForce
+		Type: System.Single
+		Offset in Defining Type: 0x140
+		Has Default: False
+
+	Field: repairInterval
+		Type: System.Single
+		Offset in Defining Type: 0x144
+		Has Default: False
+
+	Field: captureForce
+		Type: System.Single
+		Offset in Defining Type: 0x148
+		Has Default: False
+
+	Field: noTargetOffset
+		Type: System.Single
+		Offset in Defining Type: 0x14C
+		Has Default: False
+
+	Field: delayToContinueExtractingController
+		Type: System.Single
+		Offset in Defining Type: 0x150
+		Has Default: False
+
+	Field: targetBuilding
+		Type: BaseBuilding
+		Offset in Defining Type: 0x158
+		Has Default: False
+
+	Field: prevTargetBuilding
+		Type: BaseBuilding
+		Offset in Defining Type: 0x160
+		Has Default: False
+
+	Field: targetCharacter
+		Type: BaseCharacter
+		Offset in Defining Type: 0x168
+		Has Default: False
+
+	Field: healing
+		Type: System.Boolean
+		Offset in Defining Type: 0x170
+		Has Default: False
+
+	Field: dismantling
+		Type: System.Boolean
+		Offset in Defining Type: 0x171
+		Has Default: False
+
+	Field: overlapTestColliders
+		Type: UnityEngine.Collider2D[]
+		Offset in Defining Type: 0x178
+		Has Default: False
+
+	Field: currentPlayerTurn
+		Type: System.Single
+		Offset in Defining Type: 0x180
+		Has Default: False
+
+	Field: prevPosition
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x184
+		Has Default: False
+
+	Field: hadResourcesOnBeginExtracting
+		Type: System.Boolean
+		Offset in Defining Type: 0x18C
+		Has Default: False
+
+	Field: collidersList
+		Type: System.Collections.Generic.List`1<UnityEngine.Collider2D>
+		Offset in Defining Type: 0x190
+		Has Default: False
+
+	Field: ignoreTargetUntilButtonUp
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x198
+		Has Default: False
+
+	Field: firstCaptureHit
+		Type: System.Boolean
+		Offset in Defining Type: 0x1A0
+		Has Default: False
+
+	Field: currentTimeToContinueExtractingController
+		Type: System.Single
+		Offset in Defining Type: 0x1A4
+		Has Default: False
+
+	Field: captureForceMultiplier
+		Type: System.Single
+		Offset in Defining Type: 0x1A8
+		Has Default: False
+
+	Field: previousTarget
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x1B0
+		Has Default: False
+
+	Field: hasGrapplingHook
+		Type: System.Boolean
+		Offset in Defining Type: 0x1B8
+		Has Default: False
+
+	Method: Awake:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0078B460
+		Ram Offset 0x18078c660
+		Virtual Method Slot: 17
+
+	Method: OnEnable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0078B650
+		Ram Offset 0x18078c850
+		Virtual Method Slot: 20
+
+	Method: OnDisable:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0078B830
+		Ram Offset 0x18078ca30
+		Virtual Method Slot: 65535
+
+	Method: SetCaptureForceMultiplier:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0078BA10
+		Ram Offset 0x18078cc10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: multiplier
+			Type: System.Single
+			Default Value: 
+	Method: SetCurrentLaser:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0078BA20
+		Ram Offset 0x18078cc20
+		Virtual Method Slot: 65535
+
+	Method: StopExtractor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0078BB30
+		Ram Offset 0x18078cd30
+		Virtual Method Slot: 65535
+
+	Method: SetTarget:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0078BB60
+		Ram Offset 0x18078cd60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: target
+			Type: BaseBuilding
+			Default Value: 
+	Method: SetTarget:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0078C2E0
+		Ram Offset 0x18078d4e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: target
+			Type: BaseCharacter
+			Default Value: 
+	Method: EnableGrapplingHook:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004E5BA0
+		Ram Offset 0x1804e6da0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: Shoot:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0078C6C0
+		Ram Offset 0x18078d8c0
+		Virtual Method Slot: 29
+
+		Parameter 0:
+			Name: autoRotate
+			Type: System.Boolean
+			Default Value: True
+		Parameter 1:
+			Name: renderShadowInMask
+			Type: System.Boolean
+			Default Value: False
+		Parameter 2:
+			Name: onBulletShoot
+			Type: System.Action`1<BaseBullet>
+			Default Value: 
+	Method: DealDamageToTarget:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0078CD00
+		Ram Offset 0x18078df00
+		Virtual Method Slot: 65535
+
+	Method: UpdateRotation:
+		Accessibility: Family
+		Return Type: System.Single
+		File Offset 0x0078D4E0
+		Ram Offset 0x18078e6e0
+		Virtual Method Slot: 25
+
+		Parameter 0:
+			Name: cursorPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: currentSortingOrder
+			Type: System.Int32
+			Default Value: 
+	Method: UpdateShooting:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0078DCD0
+		Ram Offset 0x18078eed0
+		Virtual Method Slot: 31
+
+		Parameter 0:
+			Name: rewiredPlayer
+			Type: Rewired.Player
+			Default Value: 
+		Parameter 1:
+			Name: cursorPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 2:
+			Name: activeWeaponActionId
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: autoRotate
+			Type: System.Boolean
+			Default Value: True
+		Parameter 4:
+			Name: lastInputWasController
+			Type: System.Boolean
+			Default Value: False
+		Parameter 5:
+			Name: renderShadowInMask
+			Type: System.Boolean
+			Default Value: False
+	Method: ShowExtractFeedback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0078E680
+		Ram Offset 0x18078f880
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: UpdateExtractFeedback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0078E740
+		Ram Offset 0x18078f940
+		Virtual Method Slot: 65535
+
+	Method: ClearOverlapTestColliders:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0078EE70
+		Ram Offset 0x180790070
+		Virtual Method Slot: 65535
+
+	Method: UpdateTarget:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0078EFB0
+		Ram Offset 0x1807901b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cursorPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: lastInputWasController
+			Type: System.Boolean
+			Default Value: False
+	Method: ResetTarget:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00790DF0
+		Ram Offset 0x180791ff0
+		Virtual Method Slot: 28
+
+	Method: IsRemovingPermanentProp:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00790E30
+		Ram Offset 0x180792030
+		Virtual Method Slot: 65535
+
+	Method: IsRemovingPermanentPropWithOrWithoutResources:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00790FC0
+		Ram Offset 0x1807921c0
+		Virtual Method Slot: 65535
+
+	Method: BeginPropRemoval:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00791120
+		Ram Offset 0x180792320
+		Virtual Method Slot: 65535
+
+	Method: UpdatePropRemoval:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00791440
+		Ram Offset 0x180792640
+		Virtual Method Slot: 65535
+
+	Method: FinishPropRemoval:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x007919E0
+		Ram Offset 0x180792be0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resetExtractionDelay
+			Type: System.Boolean
+			Default Value: True
+	Method: CanShoot:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 33
+
+	Method: get_IsTechUnlocked:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 37
+
+	Method: get_TargetBuilding:
+		Accessibility: Public
+		Return Type: BaseBuilding
+		File Offset 0x00791BE0
+		Ram Offset 0x180792de0
+		Virtual Method Slot: 65535
+
+	Method: get_TargetCharacter:
+		Accessibility: Public
+		Return Type: BaseCharacter
+		File Offset 0x003D59B0
+		Ram Offset 0x1803d6bb0
+		Virtual Method Slot: 65535
+
+	Method: get_Target:
+		Accessibility: Public
+		Return Type: UnityEngine.GameObject
+		File Offset 0x00791BF0
+		Ram Offset 0x180792df0
+		Virtual Method Slot: 65535
+
+	Method: get_RepairForce:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00791DF0
+		Ram Offset 0x180792ff0
+		Virtual Method Slot: 65535
+
+	Method: get_RepairInterval:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00791E10
+		Ram Offset 0x180793010
+		Virtual Method Slot: 65535
+
+	Method: get_CaptureForce:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00791E40
+		Ram Offset 0x180793040
+		Virtual Method Slot: 65535
+
+	Method: get_IsCapturing:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00791E70
+		Ram Offset 0x180793070
+		Virtual Method Slot: 65535
+
+	Method: get_IsActive:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00791F90
+		Ram Offset 0x180793190
+		Virtual Method Slot: 65535
+
+	Method: get_CaptureTarget:
+		Accessibility: Public
+		Return Type: BaseCharacter
+		File Offset 0x00791FB0
+		Ram Offset 0x1807931b0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00792090
+		Ram Offset 0x180793290
+		Virtual Method Slot: 65535

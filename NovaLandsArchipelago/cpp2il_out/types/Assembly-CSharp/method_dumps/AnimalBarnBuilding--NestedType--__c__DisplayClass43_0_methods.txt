@@ -1,0 +1,96 @@
+Type: <>c__DisplayClass43_0
+
+Method: System.Void AnimalBarnBuilding/<>c__DisplayClass43_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void AnimalBarnBuilding/<>c__DisplayClass43_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: AnimalBarnBuilding/<>c__DisplayClass43_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean AnimalBarnBuilding/<>c__DisplayClass43_0::<DropUnnecessaryResources>b__0(ResourceAmountPair):	Method Body (x86 ASM):
+		0x18072A4A0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18072A4A4 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18072A4A7 je short 000000018072A4C9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072A4A9 mov rdx,[rdx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x18072A4AD test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18072A4B0 je short 000000018072A4C9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072A4B2 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x18072A4B6 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18072A4B9 je short 000000018072A4C9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072A4BB mov eax,[rax+48h]		; DEBUG: {Register}/EAX {Memory}/None ||| RAX | 72 | None ||| N/A | N/A
+		0x18072A4BE cmp [rdx+18h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 24 | None ||| N/A | N/A
+		0x18072A4C1 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18072A4C4 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18072A4C8 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18072A4C9 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072A4CE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean AnimalBarnBuilding/<>c__DisplayClass43_0::<DropUnnecessaryResources>b__0(ResourceAmountPair):
+		End of function at 0x18072A4CF
+		Absolute End is at 0x18072A4CF
+		Identified Jump Destination addresses:
+
+		0x18072A4A4: [!] Compares {'x' (function parameter, type ResourceAmountPair)} and 0
+		0x18072A4A7: Jumps to 0x18072A4C9 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x18072A4A9: [!] Reads field resource from {'x' (function parameter, type ResourceAmountPair)} and stores in a new local {'resource' (type BaseResourceScriptableObject)}
+
+		0x18072A4AD: [!] Compares {'resource' (type BaseResourceScriptableObject)} and 0
+		0x18072A4B0: Jumps to 0x18072A4C9 (which throws a NRE) if resource equals 0. Implicitly present in managed code, so ignored here.
+		0x18072A4B2: [!] Reads field c from {'this' (function parameter, type AnimalBarnBuilding/<>c__DisplayClass43_0)} and stores in a new local {'inventoryItem' (type MuttInventory.InventoryItem)}
+
+		0x18072A4B6: [!] Compares {'inventoryItem' (type MuttInventory.InventoryItem)} and 0
+		0x18072A4B9: Jumps to 0x18072A4C9 (which throws a NRE) if inventoryItem equals 0. Implicitly present in managed code, so ignored here.
+		0x18072A4BB: [!] Reads field ItemTypeId from {'inventoryItem' (type MuttInventory.InventoryItem)} and stores in a new local {'itemTypeId' (type System.Int32)}
+
+		0x18072A4BE: [!] Compares {field resourceId, read from local {'resource' (type BaseResourceScriptableObject)}} and {'itemTypeId' (type System.Int32)}
+		0x18072A4C1: [!] Sets the boolean {'local5' (type System.Boolean)} in rax to true if resource.resourceId is equal to itemTypeId, otherwise false.
+		0x18072A4C8: [!] Returns {'local5' (type System.Boolean)} from the function
+
+		0x18072A4C9: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: AnimalBarnBuilding/<>c__DisplayClass43_0
+	System.Boolean <DropUnnecessaryResources>b__0(ResourceAmountPair x)
+		BaseResourceScriptableObject resource = x.resource
+		MuttInventory.InventoryItem inventoryItem = this.c
+		System.Int32 itemTypeId = inventoryItem.ItemTypeId
+		System.Boolean local5 = resource.resourceId == itemTypeId
+		return local5
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: ldfld BaseResourceScriptableObject ResourceAmountPair::resource
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld MuttInventory.InventoryItem AnimalBarnBuilding/<>c__DisplayClass43_0::c
+	IL_000d: ldfld System.Int32 MuttInventory.InventoryItem::ItemTypeId
+	IL_0012: stloc.1
+	IL_0013: ldloc.0
+	IL_0014: ldfld System.Int32 BaseResourceScriptableObject::resourceId
+	IL_0019: ldloc.1
+	IL_001a: ceq
+	IL_001c: ret
+	IL_001d: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0022: throw
+	
+

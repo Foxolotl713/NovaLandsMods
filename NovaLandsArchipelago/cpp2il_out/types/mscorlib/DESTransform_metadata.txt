@@ -1,0 +1,197 @@
+Type: System.Security.Cryptography.DESTransform:
+	Base Class: 
+		Mono.Security.Cryptography.SymmetricTransform
+
+	Interfaces:
+
+	Static Field: KEY_BIT_SIZE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: KEY_BYTE_SIZE
+		Type: System.Int32
+		Offset in Defining Type: 0x4
+		Has Default: False
+
+	Static Field: BLOCK_BIT_SIZE
+		Type: System.Int32
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: BLOCK_BYTE_SIZE
+		Type: System.Int32
+		Offset in Defining Type: 0xC
+		Has Default: False
+
+	Static Field: spBoxes
+		Type: System.UInt32[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: PC1
+		Type: System.Byte[]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: leftRotTotal
+		Type: System.Byte[]
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: PC2
+		Type: System.Byte[]
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: ipTab
+		Type: System.UInt32[]
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Static Field: fpTab
+		Type: System.UInt32[]
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: keySchedule
+		Type: System.Byte[]
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: byteBuff
+		Type: System.Byte[]
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: dwordBuff
+		Type: System.UInt32[]
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0171FB60
+		Ram Offset 0x181720d60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: symmAlgo
+			Type: System.Security.Cryptography.SymmetricAlgorithm
+			Default Value: 
+		Parameter 1:
+			Name: encryption
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: key
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 3:
+			Name: iv
+			Type: System.Byte[]
+			Default Value: 
+	Method: CipherFunct:
+		Accessibility: Private
+		Return Type: System.UInt32
+		File Offset 0x0171FFC0
+		Ram Offset 0x1817211c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: r
+			Type: System.UInt32
+			Default Value: 
+		Parameter 1:
+			Name: n
+			Type: System.Int32
+			Default Value: 
+	Method: Permutation:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01720290
+		Ram Offset 0x181721490
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: input
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: output
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: permTab
+			Type: System.UInt32[]
+			Default Value: 
+		Parameter 3:
+			Name: preSwap
+			Type: System.Boolean
+			Default Value: 
+	Method: BSwap:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01720620
+		Ram Offset 0x181721820
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: byteBuff
+			Type: System.Byte[]
+			Default Value: 
+	Method: SetKey:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x017206B0
+		Ram Offset 0x1817218b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: key
+			Type: System.Byte[]
+			Default Value: 
+	Method: ProcessBlock:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01720A80
+		Ram Offset 0x181721c80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: input
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: output
+			Type: System.Byte[]
+			Default Value: 
+	Method: ECB:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01720E60
+		Ram Offset 0x181722060
+		Virtual Method Slot: 15
+
+		Parameter 0:
+			Name: input
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: output
+			Type: System.Byte[]
+			Default Value: 
+	Method: GetStrongKey:
+		Accessibility: Assembly
+		Return Type: System.Byte[]
+		File Offset 0x01720F30
+		Ram Offset 0x181722130
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01721080
+		Ram Offset 0x181722280
+		Virtual Method Slot: 65535

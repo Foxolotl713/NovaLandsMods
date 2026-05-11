@@ -1,0 +1,322 @@
+Type: Test_RadialMenu
+
+Method: System.Void Rito.RadialMenu_v3.Test.Test_RadialMenu::Start():	Method Body (x86 ASM):
+		0x1809E3BA0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809E3BA4 mov rax,[rcx+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x1809E3BA8 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3BAB je short 00000001809E3BC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3BAD mov rdx,[rcx+30h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 48 | None ||| N/A | N/A
+		0x1809E3BB1 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1809E3BB4 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3BB7 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809E3BBB jmp near ptr 00000001809E0000h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3BC0 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3BC5 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rito.RadialMenu_v3.Test.Test_RadialMenu::Start():
+		End of function at 0x1809E3BC6
+		Absolute End is at 0x1809E3BC6
+		Identified Jump Destination addresses:
+
+		0x1809E3BA4: [!] Reads field radialMenu from {'this' (function parameter, type Rito.RadialMenu_v3.Test.Test_RadialMenu)} and stores in a new local {'radialMenu' (type Rito.RadialMenu_v3.RadialMenu)}
+
+		0x1809E3BA8: [!] Compares {'radialMenu' (type Rito.RadialMenu_v3.RadialMenu)} and 0
+		0x1809E3BAB: Jumps to 0x1809E3BC0 (which throws a NRE) if radialMenu equals 0. Implicitly present in managed code, so ignored here.
+		0x1809E3BAD: [!] Reads field sprites from {'this' (function parameter, type Rito.RadialMenu_v3.Test.Test_RadialMenu)} and stores in a new local {'sprites' (type UnityEngine.Sprite[])}
+
+		0x1809E3BB4: Copies {'radialMenu' (type Rito.RadialMenu_v3.RadialMenu)} from rax into rcx
+		0x1809E3BBB: [!] Calls managed method System.Void Rito.RadialMenu_v3.RadialMenu::SetPieceImageSprites(UnityEngine.Sprite[]) on instance {'radialMenu' (type Rito.RadialMenu_v3.RadialMenu)} with arguments [{'sprites' (type UnityEngine.Sprite[])}]
+
+		0x1809E3BBB: [!] Returns from the function
+
+		0x1809E3BC0: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rito.RadialMenu_v3.Test.Test_RadialMenu
+	System.Void Start()
+		Rito.RadialMenu_v3.RadialMenu radialMenu = this.radialMenu
+		UnityEngine.Sprite[] sprites = this.sprites
+
+		radialMenu.SetPieceImageSprites(sprites) //(Sprite[] sprites)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld Rito.RadialMenu_v3.RadialMenu Rito.RadialMenu_v3.Test.Test_RadialMenu::radialMenu
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld UnityEngine.Sprite[] Rito.RadialMenu_v3.Test.Test_RadialMenu::sprites
+	IL_000d: stloc.1
+	IL_000e: ldloc.0
+	IL_000f: ldloc.1
+	IL_0010: call System.Void Rito.RadialMenu_v3.RadialMenu::SetPieceImageSprites(UnityEngine.Sprite[])
+	IL_0015: ret
+	IL_0016: newobj System.Void System.NullReferenceException::.ctor()
+	IL_001b: throw
+	
+
+Method: System.Void Rito.RadialMenu_v3.Test.Test_RadialMenu::Update():	Method Body (x86 ASM):
+		0x1809E3BD0 mov [rsp+10h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 16 | None ||| N/A | N/A
+		0x1809E3BD5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809E3BD6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809E3BDA cmp byte ptr [18329BE3Ch],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518268 | None ||| N/A | 0
+		0x1809E3BE1 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3BE4 jne short 00000001809E3C11h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3BE6 lea rcx,[1830F67E8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792232 | None ||| N/A | N/A
+		0x1809E3BED call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3BF2 lea rcx,[1830F66D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493791952 | None ||| N/A | N/A
+		0x1809E3BF9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3BFE lea rcx,[183103480h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493844608 | None ||| N/A | N/A
+		0x1809E3C05 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3C0A mov byte ptr [18329BE3Ch],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518268 | None ||| N/A | 1
+		0x1809E3C11 mov rax,[1832AB4C0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495581376 | None ||| N/A | N/A
+		0x1809E3C18 mov edi,[rbx+28h]		; DEBUG: {Register}/EDI {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1809E3C1B test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3C1E jne short 00000001809E3C3Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3C20 lea rcx,[182987410h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485996560 | None ||| N/A | N/A
+		0x1809E3C27 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3C2C test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3C2F je near ptr 00000001809E3CFFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3C35 mov [1832AB4C0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495581376 | None ||| N/A | N/A
+		0x1809E3C3C mov ecx,edi		; DEBUG: {Register}/ECX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x1809E3C3E call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809E3C40 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1809E3C42 jne near ptr 00000001809E3CDFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3C48 mov rax,[1832AB4B8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495581368 | None ||| N/A | N/A
+		0x1809E3C4F mov edi,[rbx+28h]		; DEBUG: {Register}/EDI {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1809E3C52 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3C55 jne short 00000001809E3C73h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3C57 lea rcx,[1829873D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485996504 | None ||| N/A | N/A
+		0x1809E3C5E call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3C63 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3C66 je near ptr 00000001809E3D16h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3C6C mov [1832AB4B8h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495581368 | None ||| N/A | N/A
+		0x1809E3C73 mov ecx,edi		; DEBUG: {Register}/ECX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x1809E3C75 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809E3C77 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1809E3C79 je short 00000001809E3CD4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3C7B mov rcx,[rbx+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x1809E3C7F test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3C82 je short 00000001809E3CF9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3C84 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3C86 call 00000001809DFD40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3C8B mov rcx,[1830F66D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493791952 | None ||| N/A | N/A
+		0x1809E3C92 lea rdx,[rsp+30h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1809E3C97 mov [rsp+30h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 48 | None ||| N/A | N/A
+		0x1809E3C9B call 00000001802EE5C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3CA0 mov rcx,[183103480h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493844608 | None ||| N/A | N/A
+		0x1809E3CA7 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1809E3CAA mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3CAD call 00000001816C9E40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3CB2 mov rcx,[1830F67E8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792232 | None ||| N/A | N/A
+		0x1809E3CB9 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3CBC cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1809E3CC3 jne short 00000001809E3CCAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3CC5 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3CCA xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3CCC mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3CCF call 0000000182451750h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3CD4 mov rbx,[rsp+38h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1809E3CD9 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809E3CDD pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809E3CDE ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809E3CDF mov rcx,[rbx+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x1809E3CE3 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3CE6 je short 00000001809E3CF9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3CE8 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1809E3CEA mov rbx,[rsp+38h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1809E3CEF add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809E3CF3 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809E3CF4 jmp near ptr 00000001809DF9C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3CF9 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3CFE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rito.RadialMenu_v3.Test.Test_RadialMenu::Update():
+		End of function at 0x1809E3CFF
+		Absolute End is at 0x1809E3CFF
+		Identified Jump Destination addresses:
+
+		0x1809E3BD5: Saves the content of rdi to the stack
+		0x1809E3BDA: Compares {Unknown Global at 0x18329BE3C, first ten bytes are [225 165 4 0 180 104 234 2 240 165], or as chars "á¥ ´hêð¥"} and 0
+		0x1809E3BE1: Copies {'this' (function parameter, type Rito.RadialMenu_v3.Test.Test_RadialMenu)} from rcx into rbx
+		0x1809E3BE4: Jumps to 0x1809E3C11 if {Unknown Global at 0x18329BE3C, first ten bytes are [225 165 4 0 180 104 234 2 240 165], or as chars "á¥ ´hêð¥"} != 0
+
+		0x1809E3BE6: Loads the type definition for managed type UnityEngine.Debug as a constant "Debug" in rcx
+		0x1809E3BED: Initializes runtime metadata value UnityEngine.Debug
+		0x1809E3BF2: Loads the type definition for managed type System.Int32 as a constant "Int32" in rcx
+		0x1809E3BF9: Initializes runtime metadata value System.Int32
+		0x1809E3BFE: Loads the string literal "Selected : {0}" as a constant "constant5" in rcx
+		0x1809E3C05: Initializes runtime metadata value Selected : {0}
+		0x1809E3C11: Reads {Unknown Global at 0x1832AB4C0, first ten bytes are [15 176 15 0 56 128 235 2 32 176], or as chars "° 8ë °"} into register rax as a constant constant6
+		0x1809E3C18: [!] Reads field key from {'this' (function parameter, type Rito.RadialMenu_v3.Test.Test_RadialMenu)} and stores in a new local {'keyCode' (type UnityEngine.KeyCode)}
+
+		0x1809E3C1B: Compares UnityEngine.Input.GetKeyDownInt and 0
+		0x1809E3C1E: Jumps to 0x1809E3C3C if UnityEngine.Input.GetKeyDownInt != 0
+
+		0x1809E3C20: Loads string "UnityEngine.Input::GetKeyDownInt(UnityEngine.KeyCode)" into register rcx as constant {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809E3C27: Looks up unity ICall by name "UnityEngine.Input::GetKeyDownInt(UnityEngine.KeyCode)" which resolves to System.Boolean UnityEngine.Input::GetKeyDownInt(UnityEngine.KeyCode)
+		0x1809E3C2C: Compares UnityEngine.Input.GetKeyDownInt and 0
+		0x1809E3C2F: Jumps to 0x1809E3CFF if UnityEngine.Input.GetKeyDownInt equals 0
+
+		0x1809E3C3C: [!] Implicitly reads field at offset 0 (which is value__) from struct keyCode of type UnityEngine.KeyCode and stores in new local {'local2' (type System.Int32)}
+		0x1809E3C3E: [!] Calls static managed method System.Boolean UnityEngine.Input::GetKeyDownInt(UnityEngine.KeyCode) and stores the result in {'keyDownInt' (type System.Boolean)} ;  - Mismatched parameters detected here.
+
+		0x1809E3C40: [!] Compares {'keyDownInt' (type System.Boolean)} and False
+		0x1809E3C42: Jumps to 0x1809E3CDF (which is an if statement's body) if {'keyDownInt' (type System.Boolean)} != False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809E3C48: Reads {Unknown Global at 0x1832AB4B8, first ten bytes are [132 107 234 2 224 174 15 0 15 176], or as chars "kêà® °"} into register rax as a constant constant11
+		0x1809E3C4F: [!] Reads field key from {'this' (function parameter, type Rito.RadialMenu_v3.Test.Test_RadialMenu)} and stores in a new local {'keyCode2' (type UnityEngine.KeyCode)}
+
+		0x1809E3C52: Compares UnityEngine.Input.GetKeyUpInt and 0
+		0x1809E3C55: Jumps to 0x1809E3C73 if UnityEngine.Input.GetKeyUpInt != 0
+
+		0x1809E3C57: Loads string "UnityEngine.Input::GetKeyUpInt(UnityEngine.KeyCode)" into register rcx as constant {'constant13' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809E3C5E: Looks up unity ICall by name "UnityEngine.Input::GetKeyUpInt(UnityEngine.KeyCode)" which resolves to System.Boolean UnityEngine.Input::GetKeyUpInt(UnityEngine.KeyCode)
+		0x1809E3C63: Compares UnityEngine.Input.GetKeyUpInt and 0
+		0x1809E3C66: Jumps to 0x1809E3D16 if UnityEngine.Input.GetKeyUpInt equals 0 ;  - This is probably a goto, jumping to 0x1809E3D16 which is after end of current block @ 0x1809E3CDF (started at 0x1809E3C48)
+
+		0x1809E3C73: [!] Implicitly reads field at offset 0 (which is value__) from struct keyCode2 of type UnityEngine.KeyCode and stores in new local {'local5' (type System.Int32)}
+		0x1809E3C75: [!] Calls static managed method System.Boolean UnityEngine.Input::GetKeyUpInt(UnityEngine.KeyCode) and stores the result in {'keyUpInt' (type System.Boolean)} ;  - Mismatched parameters detected here.
+
+		0x1809E3C77: [!] Compares {'keyUpInt' (type System.Boolean)} and False
+		0x1809E3C79: Jumps to 0x1809E3CD4 (which is an if statement's body) if keyUpInt equals False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809E3C7B: [!] Reads field radialMenu from {'this' (function parameter, type Rito.RadialMenu_v3.Test.Test_RadialMenu)} and stores in a new local {'radialMenu' (type Rito.RadialMenu_v3.RadialMenu)}
+
+		0x1809E3C7F: [!] Compares {'radialMenu' (type Rito.RadialMenu_v3.RadialMenu)} and 0
+		0x1809E3C82: Jumps to 0x1809E3CF9 (which throws a NRE) if radialMenu equals 0. Implicitly present in managed code, so ignored here.
+		0x1809E3C86: [!] Calls managed method System.Int32 Rito.RadialMenu_v3.RadialMenu::Hide() on instance {'radialMenu' (type Rito.RadialMenu_v3.RadialMenu)} and stores the result in {'int32' (type System.Int32)}
+
+		0x1809E3C8B: Loads the type definition for managed type System.Int32 as a constant "Int32" in rcx
+		0x1809E3C92: Loads a pointer to stack offset 0x30 into register rdx as new constant constant18
+		0x1809E3C97: Moves int32 (type System.Int32) from register rax to the stack at offset 48 (0x30)
+		0x1809E3C9B: Boxes a cpp primitive value {'int32' (type System.Int32)} to managed type System.Int32 and stores the result in new local  in register rax.
+		0x1809E3CA0: Loads the string literal "Selected : {0}" as a constant "constant19" in rcx
+		0x1809E3CAA: Copies {'int32' (type System.Int32)} from rax into rdx
+		0x1809E3CAD: [!] Calls static managed method System.String System.String::Format(System.String,System.Object) with arguments ["Selected : {0}", {'int32' (type System.Int32)}] and stores the result in {'string' (type System.String)}
+
+		0x1809E3CB2: Loads the type definition for managed type UnityEngine.Debug as a constant "Debug" in rcx
+		0x1809E3CB9: Copies {'string' (type System.String)} from rax into rbx
+		0x1809E3CBC: Compares "{il2cpp field UnityEngine.Debug->cctor_finished}" and 0
+		0x1809E3CC3: Jumps to 0x1809E3CCA if "{il2cpp field UnityEngine.Debug->cctor_finished}" != 0
+
+		0x1809E3CC5: Calls the il2cpp cctor for the type UnityEngine.Debug
+		0x1809E3CCC: Copies {'string' (type System.String)} from rbx into rcx
+		0x1809E3CCF: [!] Calls static managed method System.Void UnityEngine.Debug::Log(System.Object) with arguments [{'string' (type System.String)}]
+
+		0x1809E3CD4: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rbx as new constant constant23
+		0x1809E3CDE: [!] Returns from the function
+
+		0x1809E3CDF: [!] Reads field radialMenu from {'this' (function parameter, type Rito.RadialMenu_v3.Test.Test_RadialMenu)} and stores in a new local {'radialMenu2' (type Rito.RadialMenu_v3.RadialMenu)}
+
+		0x1809E3CE3: [!] Compares {'radialMenu2' (type Rito.RadialMenu_v3.RadialMenu)} and 0
+		0x1809E3CE6: Jumps to 0x1809E3CF9 (which throws a NRE) if radialMenu2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1809E3CEA: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rbx as new constant constant25
+		0x1809E3CF4: [!] Calls managed method System.Void Rito.RadialMenu_v3.RadialMenu::Show() on instance {'radialMenu2' (type Rito.RadialMenu_v3.RadialMenu)}
+
+		0x1809E3CF4: [!] Returns from the function
+
+		0x1809E3CF9: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rito.RadialMenu_v3.Test.Test_RadialMenu
+	System.Void Update()
+		UnityEngine.KeyCode keyCode = this.key
+		System.Int32 local2 = keyCode.value__
+
+		System.Boolean keyDownInt = UnityEngine.Input.GetKeyDownInt()
+
+		if (keyDownInt == False)
+		    UnityEngine.KeyCode keyCode2 = this.key
+		    System.Int32 local5 = keyCode2.value__
+
+		    System.Boolean keyUpInt = UnityEngine.Input.GetKeyUpInt()
+
+		    if (keyUpInt != False)
+		        Rito.RadialMenu_v3.RadialMenu radialMenu = this.radialMenu
+
+		        System.Int32 int32 = radialMenu.Hide()
+
+		        System.String string = System.String.Format("Selected : {0}", int32) //(String format, Object arg0)
+
+		        UnityEngine.Debug.Log(string) //(Object message)
+		    endif
+            
+		    return
+		endif
+        
+		Rito.RadialMenu_v3.RadialMenu radialMenu2 = this.radialMenu
+
+		radialMenu2.Show()
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.Implicit4ByteFieldReadAction at (0x1809E3C3C) is corrupt (Local local2 has been stripped out for being unused, so doesn't have a variable.) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void Rito.RadialMenu_v3.Test.Test_RadialMenu::.ctor():	Method Body (x86 ASM):
+		0x1809E3D30 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809E3D34 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x1809E3D3B mov dword ptr [rcx+28h],67h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 40 | None ||| N/A | 103
+		0x1809E3D42 jne short 00000001809E3D57h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3D44 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809E3D4B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3D50 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x1809E3D57 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809E3D5E cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1809E3D65 jne short 00000001809E3D70h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3D67 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809E3D6B jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809E3D70 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809E3D74 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809E3D75 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rito.RadialMenu_v3.Test.Test_RadialMenu::.ctor():
+		End of function at 0x1809E3D76
+		Absolute End is at 0x1809E3D76
+		Identified Jump Destination addresses:
+
+		0x1809E3D34: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x1809E3D3B: [!] Sets the field key (Type UnityEngine.KeyCode) on local {'this' (function parameter, type Rito.RadialMenu_v3.Test.Test_RadialMenu)} to the value stored in 103
+		0x1809E3D42: Jumps to 0x1809E3D57 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x1809E3D44: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809E3D4B: Initializes runtime metadata value UnityEngine.Object
+		0x1809E3D57: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809E3D5E: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1809E3D65: Jumps to 0x1809E3D70 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1809E3D74: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rito.RadialMenu_v3.Test.Test_RadialMenu
+	System.Void .ctor()
+		this.key = 103
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4.s 103
+	IL_0003: conv.i8
+	IL_0004: conv.u8
+	IL_0005: stfld UnityEngine.KeyCode Rito.RadialMenu_v3.Test.Test_RadialMenu::key
+	IL_000a: ret
+	
+

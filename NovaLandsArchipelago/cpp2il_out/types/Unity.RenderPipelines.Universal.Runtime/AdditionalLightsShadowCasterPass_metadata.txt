@@ -1,0 +1,500 @@
+Type: UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass:
+	Base Class: 
+		UnityEngine.Rendering.Universal.ScriptableRenderPass
+
+	Interfaces:
+
+	Nested Types:
+		UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass/AdditionalShadowsConstantBuffer
+		UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass/ShadowResolutionRequest
+		UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass/PassData
+		UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass/<>c
+
+	Static Field: m_AdditionalShadowsBufferId
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: kMinimumPunctualLightHardShadowResolution
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 8
+
+	Static Field: kMinimumPunctualLightSoftShadowResolution
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 16
+
+	Static Field: LightTypeIdentifierInShadowParams_Point
+		Type: System.Single
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Static Field: k_ShadowmapBufferBits
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 16
+
+	Static Field: LightTypeIdentifierInShadowParams_Spot
+		Type: System.Single
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 0
+
+	Static Field: m_AdditionalShadowsIndicesId
+		Type: System.Int32
+		Offset in Defining Type: 0x4
+		Has Default: False
+
+	Static Field: c_DefaultShadowParams
+		Type: UnityEngine.Vector4
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: m_AdditionalLightsWorldToShadow_SSBO
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: m_AdditionalShadowParams_SSBO
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: m_UseStructuredBuffer
+		Type: System.Boolean
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: m_AdditionalLightsShadowmapID
+		Type: System.Int32
+		Offset in Defining Type: 0xE4
+		Has Default: False
+
+	Field: m_AdditionalLightsShadowmapHandle
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: m_MaxShadowDistanceSq
+		Type: System.Single
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: m_CascadeBorder
+		Type: System.Single
+		Offset in Defining Type: 0xF4
+		Has Default: False
+
+	Field: m_AdditionalLightsShadowSlices
+		Type: UnityEngine.Rendering.Universal.ShadowSliceData[]
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: m_VisibleLightIndexToAdditionalLightIndex
+		Type: System.Int32[]
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: m_AdditionalLightIndexToVisibleLightIndex
+		Type: System.Int32[]
+		Offset in Defining Type: 0x108
+		Has Default: False
+
+	Field: m_ShadowSliceToAdditionalLightIndex
+		Type: System.Collections.Generic.List`1<System.Int32>
+		Offset in Defining Type: 0x110
+		Has Default: False
+
+	Field: m_GlobalShadowSliceIndexToPerLightShadowSliceIndex
+		Type: System.Collections.Generic.List`1<System.Int32>
+		Offset in Defining Type: 0x118
+		Has Default: False
+
+	Field: m_AdditionalLightIndexToShadowParams
+		Type: UnityEngine.Vector4[]
+		Offset in Defining Type: 0x120
+		Has Default: False
+
+	Field: m_AdditionalLightShadowSliceIndexTo_WorldShadowMatrix
+		Type: UnityEngine.Matrix4x4[]
+		Offset in Defining Type: 0x128
+		Has Default: False
+
+	Field: m_ShadowResolutionRequests
+		Type: System.Collections.Generic.List`1<UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass/ShadowResolutionRequest>
+		Offset in Defining Type: 0x130
+		Has Default: False
+
+	Field: m_VisibleLightIndexToCameraSquareDistance
+		Type: System.Single[]
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: m_SortedShadowResolutionRequests
+		Type: UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass/ShadowResolutionRequest[]
+		Offset in Defining Type: 0x140
+		Has Default: False
+
+	Field: m_VisibleLightIndexToSortedShadowResolutionRequestsFirstSliceIndex
+		Type: System.Int32[]
+		Offset in Defining Type: 0x148
+		Has Default: False
+
+	Field: m_UnusedAtlasSquareAreas
+		Type: System.Collections.Generic.List`1<UnityEngine.RectInt>
+		Offset in Defining Type: 0x150
+		Has Default: False
+
+	Field: m_CreateEmptyShadowmap
+		Type: System.Boolean
+		Offset in Defining Type: 0x158
+		Has Default: False
+
+	Field: renderTargetWidth
+		Type: System.Int32
+		Offset in Defining Type: 0x15C
+		Has Default: False
+
+	Field: renderTargetHeight
+		Type: System.Int32
+		Offset in Defining Type: 0x160
+		Has Default: False
+
+	Field: m_ProfilingSetupSampler
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0x168
+		Has Default: False
+
+	Field: m_ShadowRequestsHashes
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.UInt64>
+		Offset in Defining Type: 0x170
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x022F8F90
+		Ram Offset 0x1822fa190
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: evt
+			Type: UnityEngine.Rendering.Universal.RenderPassEvent
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x022307F0
+		Ram Offset 0x1822319f0
+		Virtual Method Slot: 65535
+
+	Method: GetPunctualLightShadowSlicesCount:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x022F9C30
+		Ram Offset 0x1822fae30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: lightType
+			Type: UnityEngine.LightType
+			Default Value: 
+	Method: CalcGuardAngle:
+		Accessibility: Assembly
+		Return Type: System.Single
+		File Offset 0x022F9C50
+		Ram Offset 0x1822fae50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: frustumAngleInDegrees
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: guardBandSizeInTexels
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: sliceResolutionInTexels
+			Type: System.Single
+			Default Value: 
+	Method: MinimalPunctualLightShadowResolution:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x022F9CE0
+		Ram Offset 0x1822faee0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: softShadow
+			Type: System.Boolean
+			Default Value: 
+	Method: GetPointLightShadowFrustumFovBiasInDegrees:
+		Accessibility: Assembly
+		Return Type: System.Single
+		File Offset 0x022F9CF0
+		Ram Offset 0x1822faef0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: shadowSliceResolution
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: shadowFiltering
+			Type: System.Boolean
+			Default Value: 
+	Method: InsertionSort:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x022F9DE0
+		Ram Offset 0x1822fafe0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: array
+			Type: UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass/ShadowResolutionRequest[]
+			Default Value: 
+		Parameter 1:
+			Name: startIndex
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: lastIndex
+			Type: System.Int32
+			Default Value: 
+	Method: EstimateScaleFactorNeededToFitAllShadowsInAtlas:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x022FA130
+		Ram Offset 0x1822fb330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: shadowResolutionRequests
+			Type: UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass/ShadowResolutionRequest[]
+			Default Value: 
+		Parameter 1:
+			Name: endIndex
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: atlasWidth
+			Type: System.Int32
+			Default Value: 
+	Method: AtlasLayout:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022FA1C0
+		Ram Offset 0x1822fb3c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: atlasSize
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: totalShadowSlicesCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: estimatedScaleFactor
+			Type: System.Int32
+			Default Value: 
+	Method: ResolutionLog2ForHash:
+		Accessibility: Private
+		Return Type: System.UInt64
+		File Offset 0x022FA590
+		Ram Offset 0x1822fb790
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resolution
+			Type: System.Int32
+			Default Value: 
+	Method: ComputeShadowRequestHash:
+		Accessibility: Private
+		Return Type: System.UInt64
+		File Offset 0x022FA5E0
+		Ram Offset 0x1822fb7e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x022FA890
+		Ram Offset 0x1822fba90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: SetupForEmptyRendering:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x022FC850
+		Ram Offset 0x1822fda50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: Configure:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x022FC9C0
+		Ram Offset 0x1822fdbc0
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: cameraTextureDescriptor
+			Type: UnityEngine.RenderTextureDescriptor
+			Default Value: 
+	Method: Execute:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x022FCA00
+		Ram Offset 0x1822fdc00
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: GetShadowLightIndexFromLightIndex:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x022FCB60
+		Ram Offset 0x1822fdd60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: visibleLightIndex
+			Type: System.Int32
+			Default Value: 
+	Method: Clear:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022FCBA0
+		Ram Offset 0x1822fdda0
+		Virtual Method Slot: 65535
+
+	Method: SetEmptyAdditionalShadowmapAtlas:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022FCC00
+		Ram Offset 0x1822fde00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: RenderAdditionalShadowmapAtlas:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022FCD90
+		Ram Offset 0x1822fdf90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: SetupAdditionalLightsShadowReceiverConstants:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022FD710
+		Ram Offset 0x1822fe910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: softShadows
+			Type: System.Boolean
+			Default Value: 
+	Method: IsValidShadowCastingLight:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x022FDC90
+		Ram Offset 0x1822fee90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: lightData
+			Type: UnityEngine.Rendering.Universal.LightData
+			Default Value: 
+		Parameter 1:
+			Name: i
+			Type: System.Int32
+			Default Value: 
+	Method: Render:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle
+		File Offset 0x022FDDD0
+		Ram Offset 0x1822fefd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: InitPassData:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022FEA50
+		Ram Offset 0x1822ffc50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: passData
+			Type: UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass/PassData
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+		Parameter 2:
+			Name: graph
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022FECF0
+		Ram Offset 0x1822ffef0
+		Virtual Method Slot: 65535

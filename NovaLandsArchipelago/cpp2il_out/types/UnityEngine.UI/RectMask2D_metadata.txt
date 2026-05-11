@@ -1,0 +1,224 @@
+Type: UnityEngine.UI.RectMask2D:
+	Base Class: 
+		UnityEngine.EventSystems.UIBehaviour
+
+	Interfaces:
+		UnityEngine.UI.IClipper
+		UnityEngine.ICanvasRaycastFilter
+
+	Field: m_VertexClipper
+		Type: UnityEngine.UI.RectangularVertexClipper
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_RectTransform
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_MaskableTargets
+		Type: System.Collections.Generic.HashSet`1<UnityEngine.UI.MaskableGraphic>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_ClipTargets
+		Type: System.Collections.Generic.HashSet`1<UnityEngine.UI.IClippable>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_ShouldRecalculateClipRects
+		Type: System.Boolean
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: m_Clippers
+		Type: System.Collections.Generic.List`1<UnityEngine.UI.RectMask2D>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: m_LastClipRectCanvasSpace
+		Type: UnityEngine.Rect
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: m_ForceClip
+		Type: System.Boolean
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: m_Padding
+		Type: UnityEngine.Vector4
+		Offset in Defining Type: 0x64
+		Has Default: False
+
+	Field: m_Softness
+		Type: UnityEngine.Vector2Int
+		Offset in Defining Type: 0x74
+		Has Default: False
+
+	Field: m_Canvas
+		Type: UnityEngine.Canvas
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: m_Corners
+		Type: UnityEngine.Vector3[]
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Method: get_padding:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector4
+		File Offset 0x025A7970
+		Ram Offset 0x1825a8b70
+		Virtual Method Slot: 65535
+
+	Method: set_padding:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025A7980
+		Ram Offset 0x1825a8b80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Vector4
+			Default Value: 
+	Method: get_softness:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2Int
+		File Offset 0x025A7990
+		Ram Offset 0x1825a8b90
+		Virtual Method Slot: 65535
+
+	Method: set_softness:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025A79A0
+		Ram Offset 0x1825a8ba0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Vector2Int
+			Default Value: 
+	Method: get_Canvas:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Canvas
+		File Offset 0x025A79D0
+		Ram Offset 0x1825a8bd0
+		Virtual Method Slot: 65535
+
+	Method: get_canvasRect:
+		Accessibility: Public
+		Return Type: UnityEngine.Rect
+		File Offset 0x025A7CB0
+		Ram Offset 0x1825a8eb0
+		Virtual Method Slot: 65535
+
+	Method: get_rectTransform:
+		Accessibility: Public
+		Return Type: UnityEngine.RectTransform
+		File Offset 0x025A7D30
+		Ram Offset 0x1825a8f30
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x025A7DD0
+		Ram Offset 0x1825a8fd0
+		Virtual Method Slot: 65535
+
+	Method: OnEnable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x025A8190
+		Ram Offset 0x1825a9390
+		Virtual Method Slot: 5
+
+	Method: OnDisable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x025A8200
+		Ram Offset 0x1825a9400
+		Virtual Method Slot: 7
+
+	Method: OnDestroy:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x02568E40
+		Ram Offset 0x18256a040
+		Virtual Method Slot: 8
+
+	Method: IsRaycastLocationValid:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x025A8370
+		Ram Offset 0x1825a9570
+		Virtual Method Slot: 19
+
+		Parameter 0:
+			Name: sp
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: eventCamera
+			Type: UnityEngine.Camera
+			Default Value: 
+	Method: get_rootCanvasRect:
+		Accessibility: Private
+		Return Type: UnityEngine.Rect
+		File Offset 0x025A8470
+		Ram Offset 0x1825a9670
+		Virtual Method Slot: 65535
+
+	Method: PerformClipping:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025A86F0
+		Ram Offset 0x1825a98f0
+		Virtual Method Slot: 20
+
+	Method: UpdateClipSoftness:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025A9210
+		Ram Offset 0x1825aa410
+		Virtual Method Slot: 21
+
+	Method: AddClippable:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025A95E0
+		Ram Offset 0x1825aa7e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: clippable
+			Type: UnityEngine.UI.IClippable
+			Default Value: 
+	Method: RemoveClippable:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025A9770
+		Ram Offset 0x1825aa970
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: clippable
+			Type: UnityEngine.UI.IClippable
+			Default Value: 
+	Method: OnTransformParentChanged:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x025A9980
+		Ram Offset 0x1825aab80
+		Virtual Method Slot: 12
+
+	Method: OnCanvasHierarchyChanged:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x025A9980
+		Ram Offset 0x1825aab80
+		Virtual Method Slot: 15

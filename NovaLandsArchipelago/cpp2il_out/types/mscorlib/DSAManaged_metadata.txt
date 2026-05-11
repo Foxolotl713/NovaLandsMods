@@ -1,0 +1,238 @@
+Type: Mono.Security.Cryptography.DSAManaged:
+	Base Class: 
+		System.Security.Cryptography.DSA
+
+	Interfaces:
+
+	Nested Types:
+		Mono.Security.Cryptography.DSAManaged/KeyGeneratedEventHandler
+
+	Field: keypairGenerated
+		Type: System.Boolean
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_disposed
+		Type: System.Boolean
+		Offset in Defining Type: 0x21
+		Has Default: False
+
+	Field: p
+		Type: Mono.Math.BigInteger
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: q
+		Type: Mono.Math.BigInteger
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: g
+		Type: Mono.Math.BigInteger
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: x
+		Type: Mono.Math.BigInteger
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: y
+		Type: Mono.Math.BigInteger
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: j
+		Type: Mono.Math.BigInteger
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: seed
+		Type: Mono.Math.BigInteger
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: counter
+		Type: System.Int32
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: j_missing
+		Type: System.Boolean
+		Offset in Defining Type: 0x64
+		Has Default: False
+
+	Field: rng
+		Type: System.Security.Cryptography.RandomNumberGenerator
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: KeyGenerated
+		Type: Mono.Security.Cryptography.DSAManaged/KeyGeneratedEventHandler
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016B8FB0
+		Ram Offset 0x1816ba1b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dwKeySize
+			Type: System.Int32
+			Default Value: 
+	Method: Finalize:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0168DC90
+		Ram Offset 0x18168ee90
+		Virtual Method Slot: 1
+
+	Method: Generate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016B90F0
+		Ram Offset 0x1816ba2f0
+		Virtual Method Slot: 65535
+
+	Method: GenerateKeyPair:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016B9140
+		Ram Offset 0x1816ba340
+		Virtual Method Slot: 65535
+
+	Method: add:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016B9420
+		Ram Offset 0x1816ba620
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: GenerateParams:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016B94A0
+		Ram Offset 0x1816ba6a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: keyLength
+			Type: System.Int32
+			Default Value: 
+	Method: get_Random:
+		Accessibility: Private
+		Return Type: System.Security.Cryptography.RandomNumberGenerator
+		File Offset 0x016BA000
+		Ram Offset 0x1816bb200
+		Virtual Method Slot: 65535
+
+	Method: get_KeySize:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x016BA080
+		Ram Offset 0x1816bb280
+		Virtual Method Slot: 6
+
+	Method: get_PublicOnly:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x016BA0B0
+		Ram Offset 0x1816bb2b0
+		Virtual Method Slot: 65535
+
+	Method: NormalizeArray:
+		Accessibility: Private
+		Return Type: System.Byte[]
+		File Offset 0x016BA110
+		Ram Offset 0x1816bb310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: array
+			Type: System.Byte[]
+			Default Value: 
+	Method: ExportParameters:
+		Accessibility: Public
+		Return Type: System.Security.Cryptography.DSAParameters
+		File Offset 0x016BA1C0
+		Ram Offset 0x1816bb3c0
+		Virtual Method Slot: 11
+
+		Parameter 0:
+			Name: includePrivateParameters
+			Type: System.Boolean
+			Default Value: 
+	Method: ImportParameters:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016BA700
+		Ram Offset 0x1816bb900
+		Virtual Method Slot: 12
+
+		Parameter 0:
+			Name: parameters
+			Type: System.Security.Cryptography.DSAParameters
+			Default Value: 
+	Method: VerifySignature:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x016BAB20
+		Ram Offset 0x1816bbd20
+		Virtual Method Slot: 10
+
+		Parameter 0:
+			Name: rgbHash
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: rgbSignature
+			Type: System.Byte[]
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x016BB0E0
+		Ram Offset 0x1816bc2e0
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: add_KeyGenerated:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016BB3D0
+		Ram Offset 0x1816bc5d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: Mono.Security.Cryptography.DSAManaged/KeyGeneratedEventHandler
+			Default Value: 
+	Method: remove_KeyGenerated:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016BB4C0
+		Ram Offset 0x1816bc6c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: Mono.Security.Cryptography.DSAManaged/KeyGeneratedEventHandler
+			Default Value: 

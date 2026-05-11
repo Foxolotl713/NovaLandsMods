@@ -1,0 +1,104 @@
+Type: ZXing.OneD.RSS.Expanded.Decoders.AI013x0x1xDecoder:
+	Base Class: 
+		ZXing.OneD.RSS.Expanded.Decoders.AI01weightDecoder
+
+	Interfaces:
+
+	Static Field: HEADER_SIZE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: WEIGHT_SIZE
+		Type: System.Int32
+		Offset in Defining Type: 0x4
+		Has Default: False
+
+	Static Field: DATE_SIZE
+		Type: System.Int32
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Field: dateCode
+		Type: System.String
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: firstAIdigits
+		Type: System.String
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x027FD7D0
+		Ram Offset 0x1827fe9d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: information
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: firstAIdigits
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: dateCode
+			Type: System.String
+			Default Value: 
+	Method: parseInformation:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x027FD8F0
+		Ram Offset 0x1827feaf0
+		Virtual Method Slot: 4
+
+	Method: encodeCompressedDate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027FDB70
+		Ram Offset 0x1827fed70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buf
+			Type: System.Text.StringBuilder
+			Default Value: 
+		Parameter 1:
+			Name: currentPos
+			Type: System.Int32
+			Default Value: 
+	Method: addWeightCode:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x027FDDD0
+		Ram Offset 0x1827fefd0
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: buf
+			Type: System.Text.StringBuilder
+			Default Value: 
+		Parameter 1:
+			Name: weight
+			Type: System.Int32
+			Default Value: 
+	Method: checkWeight:
+		Accessibility: Family
+		Return Type: System.Int32
+		File Offset 0x027FDEF0
+		Ram Offset 0x1827ff0f0
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: weight
+			Type: System.Int32
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027FDF20
+		Ram Offset 0x1827ff120
+		Virtual Method Slot: 65535

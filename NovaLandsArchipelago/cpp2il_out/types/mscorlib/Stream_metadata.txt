@@ -1,0 +1,732 @@
+Type: System.IO.Stream:
+	Base Class: 
+		System.MarshalByRefObject
+
+	Interfaces:
+		System.IDisposable
+
+	Nested Types:
+		System.IO.Stream/ReadWriteParameters
+		System.IO.Stream/ReadWriteTask
+		System.IO.Stream/NullStream
+		System.IO.Stream/SynchronousAsyncResult
+		System.IO.Stream/<>c
+		System.IO.Stream/<FinishWriteAsync>d__57
+		System.IO.Stream/<<ReadAsync>g__FinishReadAsync|44_0>d
+
+	Static Field: Null
+		Type: System.IO.Stream
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _activeReadWriteTask
+		Type: System.IO.Stream/ReadWriteTask
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _asyncActiveSemaphore
+		Type: System.Threading.SemaphoreSlim
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Method: EnsureAsyncActiveSemaphoreInitialized:
+		Accessibility: Assembly
+		Return Type: System.Threading.SemaphoreSlim
+		File Offset 0x018633A0
+		Ram Offset 0x1818645a0
+		Virtual Method Slot: 65535
+
+	Method: get_CanRead:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 7
+
+	Method: get_CanSeek:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 8
+
+	Method: get_CanTimeout:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 9
+
+	Method: get_CanWrite:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 10
+
+	Method: get_Length:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 11
+
+	Method: get_Position:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 12
+
+	Method: set_Position:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 13
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: get_ReadTimeout:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x018634F0
+		Ram Offset 0x1818646f0
+		Virtual Method Slot: 14
+
+	Method: set_ReadTimeout:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01863540
+		Ram Offset 0x181864740
+		Virtual Method Slot: 15
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_WriteTimeout:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01863590
+		Ram Offset 0x181864790
+		Virtual Method Slot: 16
+
+	Method: set_WriteTimeout:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x018635E0
+		Ram Offset 0x1818647e0
+		Virtual Method Slot: 17
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: Close:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01863630
+		Ram Offset 0x181864830
+		Virtual Method Slot: 18
+
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00F36BF0
+		Ram Offset 0x180f37df0
+		Virtual Method Slot: 6
+
+	Method: Dispose:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 19
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: Flush:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 20
+
+	Method: BeginRead:
+		Accessibility: Public
+		Return Type: System.IAsyncResult
+		File Offset 0x01863690
+		Ram Offset 0x181864890
+		Virtual Method Slot: 21
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: callback
+			Type: System.AsyncCallback
+			Default Value: 
+		Parameter 4:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: BeginReadInternal:
+		Accessibility: Assembly
+		Return Type: System.IAsyncResult
+		File Offset 0x018636D0
+		Ram Offset 0x1818648d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: callback
+			Type: System.AsyncCallback
+			Default Value: 
+		Parameter 4:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 5:
+			Name: serializeAsynchronously
+			Type: System.Boolean
+			Default Value: 
+		Parameter 6:
+			Name: apm
+			Type: System.Boolean
+			Default Value: 
+	Method: EndRead:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01863960
+		Ram Offset 0x181864b60
+		Virtual Method Slot: 22
+
+		Parameter 0:
+			Name: asyncResult
+			Type: System.IAsyncResult
+			Default Value: 
+	Method: ReadAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<System.Int32>
+		File Offset 0x01863B90
+		Ram Offset 0x181864d90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: ReadAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<System.Int32>
+		File Offset 0x01863C30
+		Ram Offset 0x181864e30
+		Virtual Method Slot: 23
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: ReadAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.ValueTask`1<System.Int32>
+		File Offset 0x01863CF0
+		Ram Offset 0x181864ef0
+		Virtual Method Slot: 24
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Memory`1<System.Byte>
+			Default Value: 
+		Parameter 1:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: BeginEndReadAsync:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task`1<System.Int32>
+		File Offset 0x01863F50
+		Ram Offset 0x181865150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: BeginWrite:
+		Accessibility: Public
+		Return Type: System.IAsyncResult
+		File Offset 0x01864260
+		Ram Offset 0x181865460
+		Virtual Method Slot: 25
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: callback
+			Type: System.AsyncCallback
+			Default Value: 
+		Parameter 4:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: BeginWriteInternal:
+		Accessibility: Assembly
+		Return Type: System.IAsyncResult
+		File Offset 0x018642A0
+		Ram Offset 0x1818654a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: callback
+			Type: System.AsyncCallback
+			Default Value: 
+		Parameter 4:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 5:
+			Name: serializeAsynchronously
+			Type: System.Boolean
+			Default Value: 
+		Parameter 6:
+			Name: apm
+			Type: System.Boolean
+			Default Value: 
+	Method: RunReadWriteTaskWhenReady:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01864530
+		Ram Offset 0x181865730
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: asyncWaiter
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+		Parameter 1:
+			Name: readWriteTask
+			Type: System.IO.Stream/ReadWriteTask
+			Default Value: 
+	Method: RunReadWriteTask:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01864890
+		Ram Offset 0x181865a90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: readWriteTask
+			Type: System.IO.Stream/ReadWriteTask
+			Default Value: 
+	Method: FinishTrackingAsyncOperation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x018649F0
+		Ram Offset 0x181865bf0
+		Virtual Method Slot: 65535
+
+	Method: EndWrite:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01864A60
+		Ram Offset 0x181865c60
+		Virtual Method Slot: 26
+
+		Parameter 0:
+			Name: asyncResult
+			Type: System.IAsyncResult
+			Default Value: 
+	Method: WriteAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01864C80
+		Ram Offset 0x181865e80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: WriteAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01864D20
+		Ram Offset 0x181865f20
+		Virtual Method Slot: 27
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: WriteAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.ValueTask
+		File Offset 0x01864E00
+		Ram Offset 0x181866000
+		Virtual Method Slot: 28
+
+		Parameter 0:
+			Name: buffer
+			Type: System.ReadOnlyMemory`1<System.Byte>
+			Default Value: 
+		Parameter 1:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: FinishWriteAsync:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x018651A0
+		Ram Offset 0x1818663a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: writeTask
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+		Parameter 1:
+			Name: localBuffer
+			Type: System.Byte[]
+			Default Value: 
+	Method: BeginEndWriteAsync:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01865390
+		Ram Offset 0x181866590
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: Seek:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 29
+
+		Parameter 0:
+			Name: offset
+			Type: System.Int64
+			Default Value: 
+		Parameter 1:
+			Name: origin
+			Type: System.IO.SeekOrigin
+			Default Value: 
+	Method: SetLength:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 30
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: Read:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 31
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: Read:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x018656A0
+		Ram Offset 0x1818668a0
+		Virtual Method Slot: 32
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Span`1<System.Byte>
+			Default Value: 
+	Method: ReadByte:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01865970
+		Ram Offset 0x181866b70
+		Virtual Method Slot: 33
+
+	Method: Write:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 34
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: Write:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01865A10
+		Ram Offset 0x181866c10
+		Virtual Method Slot: 35
+
+		Parameter 0:
+			Name: buffer
+			Type: System.ReadOnlySpan`1<System.Byte>
+			Default Value: 
+	Method: WriteByte:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01865BA0
+		Ram Offset 0x181866da0
+		Virtual Method Slot: 36
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: BlockingBeginRead:
+		Accessibility: Assembly
+		Return Type: System.IAsyncResult
+		File Offset 0x01865C30
+		Ram Offset 0x181866e30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: callback
+			Type: System.AsyncCallback
+			Default Value: 
+		Parameter 4:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: BlockingEndRead:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x01865D60
+		Ram Offset 0x181866f60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: asyncResult
+			Type: System.IAsyncResult
+			Default Value: 
+	Method: BlockingBeginWrite:
+		Accessibility: Assembly
+		Return Type: System.IAsyncResult
+		File Offset 0x01865E80
+		Ram Offset 0x181867080
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: callback
+			Type: System.AsyncCallback
+			Default Value: 
+		Parameter 4:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: BlockingEndWrite:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01865FB0
+		Ram Offset 0x1818671b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: asyncResult
+			Type: System.IAsyncResult
+			Default Value: 
+	Method: HasOverriddenBeginEndRead:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 65535
+
+	Method: HasOverriddenBeginEndWrite:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x018660D0
+		Ram Offset 0x1818672d0
+		Virtual Method Slot: 65535
+
+	Method: <ReadAsync>g__FinishReadAsync|44_0:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.ValueTask`1<System.Int32>
+		File Offset 0x018661B0
+		Ram Offset 0x1818673b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: readTask
+			Type: System.Threading.Tasks.Task`1<System.Int32>
+			Default Value: 
+		Parameter 1:
+			Name: localBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: localDestination
+			Type: System.Memory`1<System.Byte>
+			Default Value: 

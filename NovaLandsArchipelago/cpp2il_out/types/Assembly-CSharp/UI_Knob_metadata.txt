@@ -1,0 +1,299 @@
+Type: UnityEngine.UI.Extensions.UI_Knob:
+	Base Class: 
+		UnityEngine.UI.Selectable
+
+	Interfaces:
+		UnityEngine.EventSystems.IPointerDownHandler
+		UnityEngine.EventSystems.IEventSystemHandler
+		UnityEngine.EventSystems.IPointerUpHandler
+		UnityEngine.EventSystems.IPointerEnterHandler
+		UnityEngine.EventSystems.IPointerExitHandler
+		UnityEngine.EventSystems.IDragHandler
+		UnityEngine.EventSystems.IInitializePotentialDragHandler
+
+	Nested Types:
+		UnityEngine.UI.Extensions.UI_Knob/Direction
+
+	Field: direction
+		Type: UnityEngine.UI.Extensions.UI_Knob/Direction
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: KnobValue
+		Type: System.Single
+		Offset in Defining Type: 0x104
+		Has Default: False
+
+	Field: MaxValue
+		Type: System.Single
+		Offset in Defining Type: 0x108
+		Has Default: False
+
+	Field: Loops
+		Type: System.Int32
+		Offset in Defining Type: 0x10C
+		Has Default: False
+
+	Field: ClampOutput01
+		Type: System.Boolean
+		Offset in Defining Type: 0x110
+		Has Default: False
+
+	Field: SnapToPosition
+		Type: System.Boolean
+		Offset in Defining Type: 0x111
+		Has Default: False
+
+	Field: SnapStepsPerLoop
+		Type: System.Int32
+		Offset in Defining Type: 0x114
+		Has Default: False
+
+	Field: ParentTouchMask
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x118
+		Has Default: False
+
+	Field: MaskBackground
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x120
+		Has Default: False
+
+	Field: OnValueChanged
+		Type: UnityEngine.UI.Extensions.KnobFloatValueEvent
+		Offset in Defining Type: 0x130
+		Has Default: False
+
+	Field: _currentLoops
+		Type: System.Single
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: _previousValue
+		Type: System.Single
+		Offset in Defining Type: 0x13C
+		Has Default: False
+
+	Field: _initAngle
+		Type: System.Single
+		Offset in Defining Type: 0x140
+		Has Default: False
+
+	Field: _currentAngle
+		Type: System.Single
+		Offset in Defining Type: 0x144
+		Has Default: False
+
+	Field: _currentVector
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x148
+		Has Default: False
+
+	Field: _initRotation
+		Type: UnityEngine.Quaternion
+		Offset in Defining Type: 0x150
+		Has Default: False
+
+	Field: _canDrag
+		Type: System.Boolean
+		Offset in Defining Type: 0x160
+		Has Default: False
+
+	Field: _screenSpaceOverlay
+		Type: System.Boolean
+		Offset in Defining Type: 0x161
+		Has Default: False
+
+	Method: Awake:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00A385C0
+		Ram Offset 0x180a397c0
+		Virtual Method Slot: 4
+
+	Method: Start:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00A386B0
+		Ram Offset 0x180a398b0
+		Virtual Method Slot: 6
+
+	Method: CheckForParentTouchMask:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A386C0
+		Ram Offset 0x180a398c0
+		Virtual Method Slot: 65535
+
+	Method: OnPointerUp:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A38C20
+		Ram Offset 0x180a39e20
+		Virtual Method Slot: 33
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnPointerEnter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A38C30
+		Ram Offset 0x180a39e30
+		Virtual Method Slot: 34
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnPointerExit:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A38C20
+		Ram Offset 0x180a39e20
+		Virtual Method Slot: 35
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnPointerDown:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A38C40
+		Ram Offset 0x180a39e40
+		Virtual Method Slot: 32
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnDrag:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A38FB0
+		Ram Offset 0x180a3a1b0
+		Virtual Method Slot: 39
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: UpdateKnobValue:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A39790
+		Ram Offset 0x180a3a990
+		Virtual Method Slot: 65535
+
+	Method: SetKnobValue:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A39A30
+		Ram Offset 0x180a3ac30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: loops
+			Type: System.Int32
+			Default Value: 0
+	Method: SnapToPositionValue:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A39C80
+		Ram Offset 0x180a3ae80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: knobValue
+			Type: System.Single
+			Default Value: 
+	Method: InvokeEvents:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A39CD0
+		Ram Offset 0x180a3aed0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: OnInitializePotentialDrag:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A12C50
+		Ram Offset 0x180a13e50
+		Virtual Method Slot: 41
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A39D40
+		Ram Offset 0x180a3af40
+		Virtual Method Slot: 65535
+
+	Method: <CheckForParentTouchMask>b__21_0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A39DA0
+		Ram Offset 0x180a3afa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: <CheckForParentTouchMask>b__21_1:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A39E30
+		Ram Offset 0x180a3b030
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: <CheckForParentTouchMask>b__21_2:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A39EC0
+		Ram Offset 0x180a3b0c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: <CheckForParentTouchMask>b__21_3:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A39F50
+		Ram Offset 0x180a3b150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: <CheckForParentTouchMask>b__21_4:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A39FE0
+		Ram Offset 0x180a3b1e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 

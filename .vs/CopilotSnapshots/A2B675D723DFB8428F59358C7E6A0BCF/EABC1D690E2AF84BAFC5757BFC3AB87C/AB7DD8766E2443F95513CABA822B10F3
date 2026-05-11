@@ -1,0 +1,37 @@
+﻿using MelonLoader;
+using UnityEngine;
+
+[assembly: MelonInfo(typeof(NovaLandsArchipelago.Core), "NovaLandsArchipelago", "0.1.0", "Gott", null)]
+[assembly: MelonGame("BEHEMUTT", "Nova Lands")]
+
+namespace NovaLandsArchipelago
+{
+    public class Core : MelonMod
+    {
+        public override void OnSceneWasLoaded(int buildIndex, string sceneName)
+        {
+            LoggerInstance.Msg($"Scene {sceneName} with build index {buildIndex} has been loaded!");
+        }
+        public override void OnInitializeMelon()
+        {
+            LoggerInstance.Msg("Initialized.");
+            MelonEvents.OnGUI.Subscribe(DrawMenu, 100); // The higher the value, the lower the priority.
+        }
+
+        private string inputText = "";
+
+        private void DrawMenu()
+        {
+            Event e = Event.current;
+            if (e.type == EventType.KeyDown)
+            {
+                if (e.keyCode == KeyCode.Backspace && inputText.Length > 0)
+                    inputText = inputText.Substring(0, inputText.Length - 1);
+                else if (!char.IsControl(e.character))
+                    inputText += e.character;
+            }
+
+            GUI.Box(new Rect(10, 10, 200, 20), inputText);
+        }
+    }
+}

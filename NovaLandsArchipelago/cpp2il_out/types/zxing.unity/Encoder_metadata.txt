@@ -1,0 +1,377 @@
+Type: ZXing.QrCode.Internal.Encoder:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: ALPHANUMERIC_TABLE
+		Type: System.Int32[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: DEFAULT_BYTE_MODE_ENCODING
+		Type: System.String
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Method: calculateMaskPenalty:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0283F9A0
+		Ram Offset 0x182840ba0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: encode:
+		Accessibility: Public
+		Return Type: ZXing.QrCode.Internal.QRCode
+		File Offset 0x0283FBF0
+		Ram Offset 0x182840df0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: content
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ecLevel
+			Type: ZXing.QrCode.Internal.ErrorCorrectionLevel
+			Default Value: 
+	Method: encode:
+		Accessibility: Public
+		Return Type: ZXing.QrCode.Internal.QRCode
+		File Offset 0x0283FC50
+		Ram Offset 0x182840e50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: content
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ecLevel
+			Type: ZXing.QrCode.Internal.ErrorCorrectionLevel
+			Default Value: 
+		Parameter 2:
+			Name: hints
+			Type: System.Collections.Generic.IDictionary`2<ZXing.EncodeHintType, System.Object>
+			Default Value: 
+	Method: getAlphanumericCode:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x028405C0
+		Ram Offset 0x1828417c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: code
+			Type: System.Int32
+			Default Value: 
+	Method: chooseMode:
+		Accessibility: Public
+		Return Type: ZXing.QrCode.Internal.Mode
+		File Offset 0x02840660
+		Ram Offset 0x182841860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: content
+			Type: System.String
+			Default Value: 
+	Method: chooseMode:
+		Accessibility: Private
+		Return Type: ZXing.QrCode.Internal.Mode
+		File Offset 0x028406B0
+		Ram Offset 0x1828418b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: content
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: encoding
+			Type: System.String
+			Default Value: 
+	Method: isOnlyDoubleByteKanji:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x02840900
+		Ram Offset 0x182841b00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: content
+			Type: System.String
+			Default Value: 
+	Method: chooseMaskPattern:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x028409C0
+		Ram Offset 0x182841bc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: ecLevel
+			Type: ZXing.QrCode.Internal.ErrorCorrectionLevel
+			Default Value: 
+		Parameter 2:
+			Name: version
+			Type: ZXing.QrCode.Internal.Version
+			Default Value: 
+		Parameter 3:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: chooseVersion:
+		Accessibility: Private
+		Return Type: ZXing.QrCode.Internal.Version
+		File Offset 0x02840AE0
+		Ram Offset 0x182841ce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: numInputBits
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: ecLevel
+			Type: ZXing.QrCode.Internal.ErrorCorrectionLevel
+			Default Value: 
+	Method: terminateBits:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02840C40
+		Ram Offset 0x182841e40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: numDataBytes
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: bits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+	Method: getNumDataBytesAndNumECBytesForBlockID:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02840EE0
+		Ram Offset 0x1828420e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: numTotalBytes
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: numDataBytes
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: numRSBlocks
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: blockID
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: numDataBytesInBlock
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 5:
+			Name: numECBytesInBlock
+			Type: System.Int32[]
+			Default Value: 
+	Method: interleaveWithECBytes:
+		Accessibility: Assembly
+		Return Type: ZXing.Common.BitArray
+		File Offset 0x028410C0
+		Ram Offset 0x1828422c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: numTotalBytes
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: numDataBytes
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: numRSBlocks
+			Type: System.Int32
+			Default Value: 
+	Method: generateECBytes:
+		Accessibility: Assembly
+		Return Type: System.Byte[]
+		File Offset 0x02841C60
+		Ram Offset 0x182842e60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dataBytes
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: numEcBytesInBlock
+			Type: System.Int32
+			Default Value: 
+	Method: appendModeInfo:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02841DF0
+		Ram Offset 0x182842ff0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: mode
+			Type: ZXing.QrCode.Internal.Mode
+			Default Value: 
+		Parameter 1:
+			Name: bits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+	Method: appendLengthInfo:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02841EA0
+		Ram Offset 0x1828430a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: numLetters
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: version
+			Type: ZXing.QrCode.Internal.Version
+			Default Value: 
+		Parameter 2:
+			Name: mode
+			Type: ZXing.QrCode.Internal.Mode
+			Default Value: 
+		Parameter 3:
+			Name: bits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+	Method: appendBytes:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02841FC0
+		Ram Offset 0x1828431c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: content
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: mode
+			Type: ZXing.QrCode.Internal.Mode
+			Default Value: 
+		Parameter 2:
+			Name: bits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 3:
+			Name: encoding
+			Type: System.String
+			Default Value: 
+	Method: appendNumericBytes:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x028423E0
+		Ram Offset 0x1828435e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: content
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: bits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+	Method: appendAlphanumericBytes:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x028425B0
+		Ram Offset 0x1828437b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: content
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: bits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+	Method: append8BitBytes:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x028427D0
+		Ram Offset 0x1828439d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: content
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: bits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 2:
+			Name: encoding
+			Type: System.String
+			Default Value: 
+	Method: appendKanjiBytes:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02842960
+		Ram Offset 0x182843b60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: content
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: bits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+	Method: appendECI:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02842B60
+		Ram Offset 0x182843d60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eci
+			Type: ZXing.Common.CharacterSetECI
+			Default Value: 
+		Parameter 1:
+			Name: bits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02842D10
+		Ram Offset 0x182843f10
+		Virtual Method Slot: 65535

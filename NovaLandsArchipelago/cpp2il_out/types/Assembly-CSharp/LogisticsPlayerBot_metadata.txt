@@ -1,0 +1,842 @@
+Type: LogisticsPlayerBot:
+	Base Class: 
+		BasePlayerBot
+
+	Interfaces:
+
+	Nested Types:
+		LogisticsPlayerBot/LogisticsBotTrailSettingsPerSpeedBonus
+		LogisticsPlayerBot/<>c__DisplayClass72_0
+
+	Static Field: TRIES_TO_GET_NEXT_TASK
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 3
+
+	Field: spriteGhostTrailComponent
+		Type: SpriteGhostTrail
+		Offset in Defining Type: 0x648
+		Has Default: False
+
+	Field: speedTrailComponent
+		Type: UnityEngine.TrailRenderer
+		Offset in Defining Type: 0x650
+		Has Default: False
+
+	Field: trailSettingsPerSpeedBonus
+		Type: System.Collections.Generic.List`1<LogisticsPlayerBot/LogisticsBotTrailSettingsPerSpeedBonus>
+		Offset in Defining Type: 0x658
+		Has Default: False
+
+	Field: carriedResourcePosition
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x660
+		Has Default: False
+
+	Field: resourceDetectionRange
+		Type: System.Single
+		Offset in Defining Type: 0x668
+		Has Default: False
+
+	Field: distanceToCollectResource
+		Type: System.Single
+		Offset in Defining Type: 0x66C
+		Has Default: False
+
+	Field: depositDuration
+		Type: System.Single
+		Offset in Defining Type: 0x670
+		Has Default: False
+
+	Field: intervalToLookForResourcesIdle
+		Type: System.Single
+		Offset in Defining Type: 0x674
+		Has Default: False
+
+	Field: intervalToLookForTasksIdle
+		Type: System.Single
+		Offset in Defining Type: 0x678
+		Has Default: False
+
+	Field: numberOfInventorySlots
+		Type: UnityEngine.Vector2Int
+		Offset in Defining Type: 0x67C
+		Has Default: False
+
+	Field: inventorySlotsCapacity
+		Type: System.Int32
+		Offset in Defining Type: 0x684
+		Has Default: False
+
+	Field: timeToWaitAfterCollectingResource
+		Type: System.Single
+		Offset in Defining Type: 0x688
+		Has Default: False
+
+	Field: currentDepositTime
+		Type: System.Single
+		Offset in Defining Type: 0x68C
+		Has Default: False
+
+	Field: intervalToDepositResource
+		Type: System.Single
+		Offset in Defining Type: 0x690
+		Has Default: False
+
+	Field: currentTimeToCheckResources
+		Type: System.Single
+		Offset in Defining Type: 0x694
+		Has Default: False
+
+	Field: willReceiveResources
+		Type: System.Boolean
+		Offset in Defining Type: 0x698
+		Has Default: False
+
+	Field: currentTimeToCheckTasks
+		Type: System.Single
+		Offset in Defining Type: 0x69C
+		Has Default: False
+
+	Field: currentTimeToWaitAfterCollectingResource
+		Type: System.Single
+		Offset in Defining Type: 0x6A0
+		Has Default: False
+
+	Field: currentTask
+		Type: LogisticsBotTask
+		Offset in Defining Type: 0x6A8
+		Has Default: False
+
+	Field: carriedResource
+		Type: BaseResource
+		Offset in Defining Type: 0x6B0
+		Has Default: False
+
+	Field: currentTargetResource
+		Type: BaseResource
+		Offset in Defining Type: 0x6B8
+		Has Default: False
+
+	Field: serveOxygenator
+		Type: System.Boolean
+		Offset in Defining Type: 0x6C0
+		Has Default: False
+
+	Field: serveRecipes
+		Type: System.Boolean
+		Offset in Defining Type: 0x6C1
+		Has Default: False
+
+	Field: serveGenerators
+		Type: System.Boolean
+		Offset in Defining Type: 0x6C2
+		Has Default: False
+
+	Field: serveFarming
+		Type: System.Boolean
+		Offset in Defining Type: 0x6C3
+		Has Default: False
+
+	Field: serveContainers
+		Type: System.Boolean
+		Offset in Defining Type: 0x6C4
+		Has Default: False
+
+	Field: needToLoadTask
+		Type: System.Boolean
+		Offset in Defining Type: 0x6C5
+		Has Default: False
+
+	Field: currentTriesToGetNextTask
+		Type: System.Int32
+		Offset in Defining Type: 0x6C8
+		Has Default: False
+
+	Field: unavailableLogisticsResources
+		Type: System.Collections.Generic.List`1<System.Int32>
+		Offset in Defining Type: 0x6D0
+		Has Default: False
+
+	Field: targetResourceTween
+		Type: DG.Tweening.Tween
+		Offset in Defining Type: 0x6D8
+		Has Default: False
+
+	Field: shouldReenableCharacterCollider
+		Type: System.Boolean
+		Offset in Defining Type: 0x6E0
+		Has Default: False
+
+	Field: currentTimeToKeepCharacterColliderDisabled
+		Type: System.Single
+		Offset in Defining Type: 0x6E4
+		Has Default: False
+
+	Field: timeToKeepCharacterColliderDisabled
+		Type: System.Single
+		Offset in Defining Type: 0x6E8
+		Has Default: False
+
+	Method: Awake:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003C6EB0
+		Ram Offset 0x1803c80b0
+		Virtual Method Slot: 4
+
+	Method: InitProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003C6F20
+		Ram Offset 0x1803c8120
+		Virtual Method Slot: 26
+
+	Method: SetWillPack:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003C7060
+		Ram Offset 0x1803c8260
+		Virtual Method Slot: 235
+
+		Parameter 0:
+			Name: willPack
+			Type: System.Boolean
+			Default Value: 
+	Method: SetTarget:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003C7190
+		Ram Offset 0x1803c8390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resource
+			Type: BaseResource
+			Default Value: 
+	Method: SetTarget:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003C73A0
+		Ram Offset 0x1803c85a0
+		Virtual Method Slot: 68
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+	Method: ResetTask:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003C74C0
+		Ram Offset 0x1803c86c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: onlyTargetBuilding
+			Type: System.Boolean
+			Default Value: False
+	Method: LoadTask:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003C75B0
+		Ram Offset 0x1803c87b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: task
+			Type: LogisticsBotTask
+			Default Value: 
+	Method: GetNextTask:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x003C7880
+		Ram Offset 0x1803c8a80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: registerUnavailableResources
+			Type: System.Boolean
+			Default Value: False
+	Method: ServesLogisticsPriority:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003C7BD0
+		Ram Offset 0x1803c8dd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: priority
+			Type: LogisticsPriority
+			Default Value: 
+	Method: ReturnTaskAndReducePriority:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x003C7C50
+		Ram Offset 0x1803c8e50
+		Virtual Method Slot: 65535
+
+	Method: GetCollectionTarget:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003C7D90
+		Ram Offset 0x1803c8f90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tryToGetNextTask
+			Type: System.Boolean
+			Default Value: True
+		Parameter 1:
+			Name: registerUnavailableResources
+			Type: System.Boolean
+			Default Value: False
+	Method: IsCloseToAntenna:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003C9100
+		Ram Offset 0x1803ca300
+		Virtual Method Slot: 196
+
+	Method: Pack:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003C9380
+		Ram Offset 0x1803ca580
+		Virtual Method Slot: 236
+
+		Parameter 0:
+			Name: willDestroy
+			Type: System.Boolean
+			Default Value: False
+	Method: UpdateTargetOverlayFeedback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003C93B0
+		Ram Offset 0x1803ca5b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: target
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: IsTargetResourceValid:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003C97B0
+		Ram Offset 0x1803ca9b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resource
+			Type: BaseResource
+			Default Value: 
+	Method: BecameInvisibleCallback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003C9930
+		Ram Offset 0x1803cab30
+		Virtual Method Slot: 18
+
+	Method: BecameVisibleCallback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003C99A0
+		Ram Offset 0x1803caba0
+		Virtual Method Slot: 17
+
+	Method: SetCarriedResource:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003C9A30
+		Ram Offset 0x1803cac30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resource
+			Type: BaseResource
+			Default Value: 
+		Parameter 1:
+			Name: setPosition
+			Type: System.Boolean
+			Default Value: True
+	Method: DepositResources:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003C9D60
+		Ram Offset 0x1803caf60
+		Virtual Method Slot: 65535
+
+	Method: DestroyCarriedResource:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x003CA430
+		Ram Offset 0x1803cb630
+		Virtual Method Slot: 65535
+
+	Method: DropResources:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003CA570
+		Ram Offset 0x1803cb770
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: willDestroy
+			Type: System.Boolean
+			Default Value: False
+	Method: CanConsumeResource:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 45
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+	Method: GetInventorySlots:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<MuttInventory.InventorySlot>
+		File Offset 0x003CA9C0
+		Ram Offset 0x1803cbbc0
+		Virtual Method Slot: 200
+
+	Method: ChaseOnCurrentTargetOnIdle:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x003CAA60
+		Ram Offset 0x1803cbc60
+		Virtual Method Slot: 78
+
+	Method: EnterIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CACF0
+		Ram Offset 0x1803cbef0
+		Virtual Method Slot: 79
+
+	Method: UpdateIdle:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003CAE90
+		Ram Offset 0x1803cc090
+		Virtual Method Slot: 80
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: ExitIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 82
+
+	Method: EnterWandering:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CAF40
+		Ram Offset 0x1803cc140
+		Virtual Method Slot: 85
+
+	Method: UpdateWandering:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CB020
+		Ram Offset 0x1803cc220
+		Virtual Method Slot: 86
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateWandering:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003BA400
+		Ram Offset 0x1803bb600
+		Virtual Method Slot: 87
+
+	Method: CheckLookForTask:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x003CB0C0
+		Ram Offset 0x1803cc2c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+	Method: UpdateChasing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CB630
+		Ram Offset 0x1803cc830
+		Virtual Method Slot: 107
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: HandleStuck:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x003CBB80
+		Ram Offset 0x1803ccd80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: UpdateChasingAntenna:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x003CBC60
+		Ram Offset 0x1803cce60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: UpdateDelivering:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x003CC1D0
+		Ram Offset 0x1803cd3d0
+		Virtual Method Slot: 65535
+
+	Method: UpdateReturningResource:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x003CC8E0
+		Ram Offset 0x1803cdae0
+		Virtual Method Slot: 65535
+
+	Method: UpdateChasingCollectTarget:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x003CCFB0
+		Ram Offset 0x1803ce1b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateChasing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CD6F0
+		Ram Offset 0x1803ce8f0
+		Virtual Method Slot: 108
+
+	Method: EnterCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CD840
+		Ram Offset 0x1803cea40
+		Virtual Method Slot: 47
+
+	Method: OnCompleteTargetResourceLocalMoveTween:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x003CE180
+		Ram Offset 0x1803cf380
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: targetResource
+			Type: BaseResource
+			Default Value: 
+	Method: UpdateCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CE240
+		Ram Offset 0x1803cf440
+		Virtual Method Slot: 48
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003B1720
+		Ram Offset 0x1803b2920
+		Virtual Method Slot: 49
+
+	Method: EnterDepositing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CE390
+		Ram Offset 0x1803cf590
+		Virtual Method Slot: 229
+
+	Method: UpdateDepositing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CE540
+		Ram Offset 0x1803cf740
+		Virtual Method Slot: 230
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateDepositing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003B1720
+		Ram Offset 0x1803b2920
+		Virtual Method Slot: 231
+
+	Method: ExitDepositing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 232
+
+	Method: EnterDead:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CE710
+		Ram Offset 0x1803cf910
+		Virtual Method Slot: 132
+
+	Method: OnFinishKnockback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CE820
+		Ram Offset 0x1803cfa20
+		Virtual Method Slot: 125
+
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x003CEB10
+		Ram Offset 0x1803cfd10
+		Virtual Method Slot: 40
+
+		Parameter 0:
+			Name: firstSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: SetupFromLoadedData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CF3B0
+		Ram Offset 0x1803d05b0
+		Virtual Method Slot: 192
+
+		Parameter 0:
+			Name: worldArea
+			Type: WorldArea
+			Default Value: 
+		Parameter 1:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+	Method: LoadDependentData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CF660
+		Ram Offset 0x1803d0860
+		Virtual Method Slot: 21
+
+	Method: ReleaseTaskIfFailToReassignOnLoad:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CF6E0
+		Ram Offset 0x1803d08e0
+		Virtual Method Slot: 65535
+
+	Method: AddSpeedBonus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CF700
+		Ram Offset 0x1803d0900
+		Virtual Method Slot: 155
+
+		Parameter 0:
+			Name: bonus
+			Type: System.Single
+			Default Value: 
+	Method: get_InventorySlotsCapacity:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x003CF920
+		Ram Offset 0x1803d0b20
+		Virtual Method Slot: 65535
+
+	Method: get_NumberOfInventorySlots:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2Int
+		File Offset 0x003CF930
+		Ram Offset 0x1803d0b30
+		Virtual Method Slot: 65535
+
+	Method: get_InventorySize:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2Int
+		File Offset 0x003CF940
+		Ram Offset 0x1803d0b40
+		Virtual Method Slot: 65535
+
+	Method: get_InventoryContent:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<MuttInventory.InventoryItem>
+		File Offset 0x003CF9D0
+		Ram Offset 0x1803d0bd0
+		Virtual Method Slot: 65535
+
+	Method: get_ServeOxygenator:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003CFA70
+		Ram Offset 0x1803d0c70
+		Virtual Method Slot: 65535
+
+	Method: set_ServeOxygenator:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CFA80
+		Ram Offset 0x1803d0c80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_ServeRecipes:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003CFB80
+		Ram Offset 0x1803d0d80
+		Virtual Method Slot: 65535
+
+	Method: set_ServeRecipes:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CFB90
+		Ram Offset 0x1803d0d90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_ServeFarming:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003CFC90
+		Ram Offset 0x1803d0e90
+		Virtual Method Slot: 65535
+
+	Method: set_ServeFarming:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CFCA0
+		Ram Offset 0x1803d0ea0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_ServeGenerators:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003CFDA0
+		Ram Offset 0x1803d0fa0
+		Virtual Method Slot: 65535
+
+	Method: set_ServeGenerators:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CFDB0
+		Ram Offset 0x1803d0fb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_ServeContainers:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003CFEB0
+		Ram Offset 0x1803d10b0
+		Virtual Method Slot: 65535
+
+	Method: set_ServeContainers:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003CFEC0
+		Ram Offset 0x1803d10c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_ServeNothing:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003CFFC0
+		Ram Offset 0x1803d11c0
+		Virtual Method Slot: 65535
+
+	Method: get_IsWorking:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003D0080
+		Ram Offset 0x1803d1280
+		Virtual Method Slot: 65535
+
+	Method: get_CarriedResource:
+		Accessibility: Public
+		Return Type: BaseResource
+		File Offset 0x003D0150
+		Ram Offset 0x1803d1350
+		Virtual Method Slot: 65535
+
+	Method: get_TargetContainer:
+		Accessibility: Public
+		Return Type: BaseBuilding
+		File Offset 0x003D0160
+		Ram Offset 0x1803d1360
+		Virtual Method Slot: 65535
+
+	Method: get_DepositDuration:
+		Accessibility: Family
+		Return Type: System.Single
+		File Offset 0x003D0180
+		Ram Offset 0x1803d1380
+		Virtual Method Slot: 65535
+
+	Method: get_TimeToWaitAfterCollectingResource:
+		Accessibility: Family
+		Return Type: System.Single
+		File Offset 0x003D01A0
+		Ram Offset 0x1803d13a0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003D01C0
+		Ram Offset 0x1803d13c0
+		Virtual Method Slot: 65535

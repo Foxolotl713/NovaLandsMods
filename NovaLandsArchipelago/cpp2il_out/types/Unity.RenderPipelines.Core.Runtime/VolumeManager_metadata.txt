@@ -1,0 +1,420 @@
+Type: UnityEngine.Rendering.VolumeManager:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		UnityEngine.Rendering.VolumeManager/<>c
+
+	Static Field: s_Instance
+		Type: System.Lazy`1<UnityEngine.Rendering.VolumeManager>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: k_MaxLayerCount
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 32
+
+	Static Field: s_SupportedVolumeComponentsForRenderPipeline
+		Type: System.Collections.Generic.Dictionary`2<System.Type,System.Collections.Generic.List`1<System.ValueTuple`2<System.String,System.Type>>>
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Field: <stack>k__BackingField
+		Type: UnityEngine.Rendering.VolumeStack
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: <baseComponentTypeArray>k__BackingField
+		Type: System.Type[]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_SortedVolumes
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.Collections.Generic.List`1<UnityEngine.Rendering.Volume>>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_Volumes
+		Type: System.Collections.Generic.List`1<UnityEngine.Rendering.Volume>
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_SortNeeded
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.Boolean>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_ComponentsDefaultState
+		Type: System.Collections.Generic.List`1<UnityEngine.Rendering.VolumeComponent>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_TempColliders
+		Type: System.Collections.Generic.List`1<UnityEngine.Collider>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: m_DefaultStack
+		Type: UnityEngine.Rendering.VolumeStack
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Method: get_instance:
+		Accessibility: Public
+		Return Type: UnityEngine.Rendering.VolumeManager
+		File Offset 0x021DDC70
+		Ram Offset 0x1821dee70
+		Virtual Method Slot: 65535
+
+	Method: get_stack:
+		Accessibility: Public
+		Return Type: UnityEngine.Rendering.VolumeStack
+		File Offset 0x00386E40
+		Ram Offset 0x180388040
+		Virtual Method Slot: 65535
+
+	Method: set_stack:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00386E50
+		Ram Offset 0x180388050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Rendering.VolumeStack
+			Default Value: 
+	Method: get_baseComponentTypes:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.IEnumerable`1<System.Type>
+		File Offset 0x00379690
+		Ram Offset 0x18037a890
+		Virtual Method Slot: 65535
+
+	Method: set_baseComponentTypes:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x021DDD10
+		Ram Offset 0x1821def10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Collections.Generic.IEnumerable`1<System.Type>
+			Default Value: 
+	Method: GetSupportedVolumeComponents:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.List`1<System.ValueTuple`2<System.String, System.Type>>
+		File Offset 0x021DDE20
+		Ram Offset 0x1821df020
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: currentPipelineType
+			Type: System.Type
+			Default Value: 
+	Method: FilterVolumeComponentTypes:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.List`1<System.ValueTuple`2<System.String, System.Type>>
+		File Offset 0x021DDF40
+		Ram Offset 0x1821df140
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: types
+			Type: System.Type[]
+			Default Value: 
+		Parameter 1:
+			Name: currentPipelineType
+			Type: System.Type
+			Default Value: 
+	Method: get_baseComponentTypeArray:
+		Accessibility: Public
+		Return Type: System.Type[]
+		File Offset 0x00379690
+		Ram Offset 0x18037a890
+		Virtual Method Slot: 65535
+
+	Method: set_baseComponentTypeArray:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00395810
+		Ram Offset 0x180396a10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Type[]
+			Default Value: 
+	Method: GetDefaultVolumeComponent:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Rendering.VolumeComponent
+		File Offset 0x021DE520
+		Ram Offset 0x1821df720
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: volumeComponentType
+			Type: System.Type
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x021DE6B0
+		Ram Offset 0x1821df8b0
+		Virtual Method Slot: 65535
+
+	Method: CreateStack:
+		Accessibility: Public
+		Return Type: UnityEngine.Rendering.VolumeStack
+		File Offset 0x021DEB20
+		Ram Offset 0x1821dfd20
+		Virtual Method Slot: 65535
+
+	Method: ResetMainStack:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021DEC20
+		Ram Offset 0x1821dfe20
+		Virtual Method Slot: 65535
+
+	Method: DestroyStack:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021DEC80
+		Ram Offset 0x1821dfe80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stack
+			Type: UnityEngine.Rendering.VolumeStack
+			Default Value: 
+	Method: ReloadBaseTypes:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x021DECA0
+		Ram Offset 0x1821dfea0
+		Virtual Method Slot: 65535
+
+	Method: Register:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021DF120
+		Ram Offset 0x1821e0320
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: volume
+			Type: UnityEngine.Rendering.Volume
+			Default Value: 
+		Parameter 1:
+			Name: layer
+			Type: System.Int32
+			Default Value: 
+	Method: Unregister:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021DF330
+		Ram Offset 0x1821e0530
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: volume
+			Type: UnityEngine.Rendering.Volume
+			Default Value: 
+		Parameter 1:
+			Name: layer
+			Type: System.Int32
+			Default Value: 
+	Method: IsComponentActiveInMask:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00E03690
+		Ram Offset 0x180e04890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: layerMask
+			Type: UnityEngine.LayerMask
+			Default Value: 
+	Method: SetLayerDirty:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x021DF500
+		Ram Offset 0x1821e0700
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: layer
+			Type: System.Int32
+			Default Value: 
+	Method: UpdateVolumeLayer:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x021DF6B0
+		Ram Offset 0x1821e08b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: volume
+			Type: UnityEngine.Rendering.Volume
+			Default Value: 
+		Parameter 1:
+			Name: prevLayer
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: newLayer
+			Type: System.Int32
+			Default Value: 
+	Method: OverrideData:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x021DF6F0
+		Ram Offset 0x1821e08f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stack
+			Type: UnityEngine.Rendering.VolumeStack
+			Default Value: 
+		Parameter 1:
+			Name: components
+			Type: System.Collections.Generic.List`1<UnityEngine.Rendering.VolumeComponent>
+			Default Value: 
+		Parameter 2:
+			Name: interpFactor
+			Type: System.Single
+			Default Value: 
+	Method: ReplaceData:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x021DF890
+		Ram Offset 0x1821e0a90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stack
+			Type: UnityEngine.Rendering.VolumeStack
+			Default Value: 
+	Method: CheckBaseTypes:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021DF940
+		Ram Offset 0x1821e0b40
+		Virtual Method Slot: 65535
+
+	Method: CheckStack:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021DFA70
+		Ram Offset 0x1821e0c70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stack
+			Type: UnityEngine.Rendering.VolumeStack
+			Default Value: 
+	Method: CheckUpdateRequired:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x021DFCE0
+		Ram Offset 0x1821e0ee0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stack
+			Type: UnityEngine.Rendering.VolumeStack
+			Default Value: 
+	Method: Update:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021DFD60
+		Ram Offset 0x1821e0f60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: trigger
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 1:
+			Name: layerMask
+			Type: UnityEngine.LayerMask
+			Default Value: 
+	Method: Update:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021DFD90
+		Ram Offset 0x1821e0f90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stack
+			Type: UnityEngine.Rendering.VolumeStack
+			Default Value: 
+		Parameter 1:
+			Name: trigger
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: layerMask
+			Type: UnityEngine.LayerMask
+			Default Value: 
+	Method: GetVolumes:
+		Accessibility: Public
+		Return Type: UnityEngine.Rendering.Volume[]
+		File Offset 0x021E07D0
+		Ram Offset 0x1821e19d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: layerMask
+			Type: UnityEngine.LayerMask
+			Default Value: 
+	Method: GrabVolumes:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.List`1<UnityEngine.Rendering.Volume>
+		File Offset 0x021E0960
+		Ram Offset 0x1821e1b60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: mask
+			Type: UnityEngine.LayerMask
+			Default Value: 
+	Method: SortByPriority:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x021E0EA0
+		Ram Offset 0x1821e20a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: volumes
+			Type: System.Collections.Generic.List`1<UnityEngine.Rendering.Volume>
+			Default Value: 
+	Method: IsVolumeRenderedByCamera:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: volume
+			Type: UnityEngine.Rendering.Volume
+			Default Value: 
+		Parameter 1:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x021E0FD0
+		Ram Offset 0x1821e21d0
+		Virtual Method Slot: 65535

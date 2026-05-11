@@ -1,0 +1,318 @@
+Type: System.Net.WebProxy:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.Net.IWebProxy
+		System.Runtime.Serialization.ISerializable
+
+	Field: _UseRegistry
+		Type: System.Boolean
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: _BypassOnLocal
+		Type: System.Boolean
+		Offset in Defining Type: 0x11
+		Has Default: False
+
+	Field: m_EnableAutoproxy
+		Type: System.Boolean
+		Offset in Defining Type: 0x12
+		Has Default: False
+
+	Field: _ProxyAddress
+		Type: System.Uri
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _BypassList
+		Type: System.Collections.ArrayList
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _Credentials
+		Type: System.Net.ICredentials
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _RegExBypassList
+		Type: System.Text.RegularExpressions.Regex[]
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _ProxyHostAddresses
+		Type: System.Collections.Hashtable
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_ScriptEngine
+		Type: System.Net.AutoWebProxyScriptEngine
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01F5CC80
+		Ram Offset 0x181f5de80
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01F5CD60
+		Ram Offset 0x181f5df60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: Address
+			Type: System.Uri
+			Default Value: 
+		Parameter 1:
+			Name: BypassOnLocal
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: BypassList
+			Type: System.String[]
+			Default Value: 
+		Parameter 3:
+			Name: Credentials
+			Type: System.Net.ICredentials
+			Default Value: 
+	Method: get_Credentials:
+		Accessibility: Public
+		Return Type: System.Net.ICredentials
+		File Offset 0x003A7D00
+		Ram Offset 0x1803a8f00
+		Virtual Method Slot: 6
+
+	Method: get_UseDefaultCredentials:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01F5CEF0
+		Ram Offset 0x181f5e0f0
+		Virtual Method Slot: 65535
+
+	Method: set_UseDefaultCredentials:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01F5CF60
+		Ram Offset 0x181f5e160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: GetProxy:
+		Accessibility: Public
+		Return Type: System.Uri
+		File Offset 0x01F5D010
+		Ram Offset 0x181f5e210
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: destination
+			Type: System.Uri
+			Default Value: 
+	Method: UpdateRegExList:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F5D260
+		Ram Offset 0x181f5e460
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: canThrow
+			Type: System.Boolean
+			Default Value: 
+	Method: IsMatchInBypassList:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F5D4F0
+		Ram Offset 0x181f5e6f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: input
+			Type: System.Uri
+			Default Value: 
+	Method: IsLocal:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F5D780
+		Ram Offset 0x181f5e980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: host
+			Type: System.Uri
+			Default Value: 
+	Method: IsLocalInProxyHash:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F5DD20
+		Ram Offset 0x181f5ef20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: host
+			Type: System.Uri
+			Default Value: 
+	Method: IsBypassed:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01F5DE00
+		Ram Offset 0x181f5f000
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: host
+			Type: System.Uri
+			Default Value: 
+	Method: IsBypassedManual:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F5DF30
+		Ram Offset 0x181f5f130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: host
+			Type: System.Uri
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01F5E0A0
+		Ram Offset 0x181f5f2a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: serializationInfo
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: streamingContext
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: System.Runtime.Serialization.ISerializable.GetObjectData:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F45E20
+		Ram Offset 0x181f47020
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: serializationInfo
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: streamingContext
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: GetObjectData:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01F5E4B0
+		Ram Offset 0x181f5f6b0
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: serializationInfo
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: streamingContext
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: get_ScriptEngine:
+		Accessibility: Assembly
+		Return Type: System.Net.AutoWebProxyScriptEngine
+		File Offset 0x0051A3F0
+		Ram Offset 0x18051b5f0
+		Virtual Method Slot: 65535
+
+	Method: CreateDefaultProxy:
+		Accessibility: Public
+		Return Type: System.Net.IWebProxy
+		File Offset 0x01F5E990
+		Ram Offset 0x181f5fb90
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01F5E9D0
+		Ram Offset 0x181f5fbd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enableAutoproxy
+			Type: System.Boolean
+			Default Value: 
+	Method: UnsafeUpdateFromRegistry:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01392530
+		Ram Offset 0x181393730
+		Virtual Method Slot: 65535
+
+	Method: GetProxyAuto:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F5E9E0
+		Ram Offset 0x181f5fbe0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: destination
+			Type: System.Uri
+			Default Value: 
+		Parameter 1:
+			Name: proxyUri
+			Type: System.Uri
+			Default Value: 
+	Method: IsBypassedAuto:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F5EAE0
+		Ram Offset 0x181f5fce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: destination
+			Type: System.Uri
+			Default Value: 
+		Parameter 1:
+			Name: isBypassed
+			Type: System.Boolean
+			Default Value: 
+	Method: AreAllBypassed:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F5EB70
+		Ram Offset 0x181f5fd70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: proxies
+			Type: System.Collections.Generic.IEnumerable`1<System.String>
+			Default Value: 
+		Parameter 1:
+			Name: checkFirstOnly
+			Type: System.Boolean
+			Default Value: 
+	Method: ProxyUri:
+		Accessibility: Private
+		Return Type: System.Uri
+		File Offset 0x01F5ECF0
+		Ram Offset 0x181f5fef0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: proxyName
+			Type: System.String
+			Default Value: 

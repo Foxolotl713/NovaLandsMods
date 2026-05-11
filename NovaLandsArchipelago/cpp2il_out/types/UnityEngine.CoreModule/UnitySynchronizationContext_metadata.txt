@@ -1,0 +1,145 @@
+Type: UnityEngine.UnitySynchronizationContext:
+	Base Class: 
+		System.Threading.SynchronizationContext
+
+	Interfaces:
+
+	Nested Types:
+		UnityEngine.UnitySynchronizationContext/WorkRequest
+
+	Field: m_AsyncWorkQueue
+		Type: System.Collections.Generic.List`1<UnityEngine.UnitySynchronizationContext/WorkRequest>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_CurrentFrameWork
+		Type: System.Collections.Generic.List`1<UnityEngine.UnitySynchronizationContext/WorkRequest>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_MainThreadID
+		Type: System.Int32
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_TrackedCount
+		Type: System.Int32
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0248FA90
+		Ram Offset 0x182490c90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: mainThreadID
+			Type: System.Int32
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0248FD00
+		Ram Offset 0x182490f00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: queue
+			Type: System.Collections.Generic.List`1<UnityEngine.UnitySynchronizationContext/WorkRequest>
+			Default Value: 
+		Parameter 1:
+			Name: mainThreadID
+			Type: System.Int32
+			Default Value: 
+	Method: Send:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0248FEB0
+		Ram Offset 0x1824910b0
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: callback
+			Type: System.Threading.SendOrPostCallback
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: OperationStarted:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024901F0
+		Ram Offset 0x1824913f0
+		Virtual Method Slot: 6
+
+	Method: OperationCompleted:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02490200
+		Ram Offset 0x182491400
+		Virtual Method Slot: 7
+
+	Method: Post:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02490210
+		Ram Offset 0x182491410
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: callback
+			Type: System.Threading.SendOrPostCallback
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: CreateCopy:
+		Accessibility: Public
+		Return Type: System.Threading.SynchronizationContext
+		File Offset 0x02490400
+		Ram Offset 0x182491600
+		Virtual Method Slot: 9
+
+	Method: Exec:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024905E0
+		Ram Offset 0x1824917e0
+		Virtual Method Slot: 65535
+
+	Method: HasPendingTasks:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x02490970
+		Ram Offset 0x182491b70
+		Virtual Method Slot: 65535
+
+	Method: InitializeSynchronizationContext:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x024909D0
+		Ram Offset 0x182491bd0
+		Virtual Method Slot: 65535
+
+	Method: ExecuteTasks:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02490A80
+		Ram Offset 0x182491c80
+		Virtual Method Slot: 65535
+
+	Method: ExecutePendingTasks:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x02490AE0
+		Ram Offset 0x182491ce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: millisecondsTimeout
+			Type: System.Int64
+			Default Value: 

@@ -1,0 +1,483 @@
+Type: ZXing.PDF417.Internal.PDF417ScanningDecoder:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: CODEWORD_SKEW_SIZE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 2
+
+	Static Field: MAX_ERRORS
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 3
+
+	Static Field: MAX_EC_CODEWORDS
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 512
+
+	Static Field: errorCorrection
+		Type: ZXing.PDF417.Internal.EC.ErrorCorrection
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Method: decode:
+		Accessibility: Public
+		Return Type: ZXing.Common.DecoderResult
+		File Offset 0x0281DFA0
+		Ram Offset 0x18281f1a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: image
+			Type: ZXing.Common.BitMatrix
+			Default Value: 
+		Parameter 1:
+			Name: imageTopLeft
+			Type: ZXing.ResultPoint
+			Default Value: 
+		Parameter 2:
+			Name: imageBottomLeft
+			Type: ZXing.ResultPoint
+			Default Value: 
+		Parameter 3:
+			Name: imageTopRight
+			Type: ZXing.ResultPoint
+			Default Value: 
+		Parameter 4:
+			Name: imageBottomRight
+			Type: ZXing.ResultPoint
+			Default Value: 
+		Parameter 5:
+			Name: minCodewordWidth
+			Type: System.Int32
+			Default Value: 
+		Parameter 6:
+			Name: maxCodewordWidth
+			Type: System.Int32
+			Default Value: 
+	Method: merge:
+		Accessibility: Private
+		Return Type: ZXing.PDF417.Internal.DetectionResult
+		File Offset 0x0281E820
+		Ram Offset 0x18281fa20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: leftRowIndicatorColumn
+			Type: ZXing.PDF417.Internal.DetectionResultRowIndicatorColumn
+			Default Value: 
+		Parameter 1:
+			Name: rightRowIndicatorColumn
+			Type: ZXing.PDF417.Internal.DetectionResultRowIndicatorColumn
+			Default Value: 
+	Method: adjustBoundingBox:
+		Accessibility: Private
+		Return Type: ZXing.PDF417.Internal.BoundingBox
+		File Offset 0x0281EB10
+		Ram Offset 0x18281fd10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rowIndicatorColumn
+			Type: ZXing.PDF417.Internal.DetectionResultRowIndicatorColumn
+			Default Value: 
+	Method: getMax:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0281EDA0
+		Ram Offset 0x18281ffa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: values
+			Type: System.Int32[]
+			Default Value: 
+	Method: getBarcodeMetadata:
+		Accessibility: Private
+		Return Type: ZXing.PDF417.Internal.BarcodeMetadata
+		File Offset 0x0281EE40
+		Ram Offset 0x182820040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: leftRowIndicatorColumn
+			Type: ZXing.PDF417.Internal.DetectionResultRowIndicatorColumn
+			Default Value: 
+		Parameter 1:
+			Name: rightRowIndicatorColumn
+			Type: ZXing.PDF417.Internal.DetectionResultRowIndicatorColumn
+			Default Value: 
+	Method: getRowIndicatorColumn:
+		Accessibility: Private
+		Return Type: ZXing.PDF417.Internal.DetectionResultRowIndicatorColumn
+		File Offset 0x0281EEE0
+		Ram Offset 0x1828200e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: image
+			Type: ZXing.Common.BitMatrix
+			Default Value: 
+		Parameter 1:
+			Name: boundingBox
+			Type: ZXing.PDF417.Internal.BoundingBox
+			Default Value: 
+		Parameter 2:
+			Name: startPoint
+			Type: ZXing.ResultPoint
+			Default Value: 
+		Parameter 3:
+			Name: leftToRight
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: minCodewordWidth
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: maxCodewordWidth
+			Type: System.Int32
+			Default Value: 
+	Method: adjustCodewordCount:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0281F0C0
+		Ram Offset 0x1828202c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: detectionResult
+			Type: ZXing.PDF417.Internal.DetectionResult
+			Default Value: 
+		Parameter 1:
+			Name: barcodeMatrix
+			Type: ZXing.PDF417.Internal.BarcodeValue[][]
+			Default Value: 
+	Method: createDecoderResult:
+		Accessibility: Private
+		Return Type: ZXing.Common.DecoderResult
+		File Offset 0x0281F240
+		Ram Offset 0x182820440
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: detectionResult
+			Type: ZXing.PDF417.Internal.DetectionResult
+			Default Value: 
+	Method: createDecoderResultFromAmbiguousValues:
+		Accessibility: Private
+		Return Type: ZXing.Common.DecoderResult
+		File Offset 0x0281F680
+		Ram Offset 0x182820880
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ecLevel
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: codewords
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 2:
+			Name: erasureArray
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 3:
+			Name: ambiguousIndexes
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 4:
+			Name: ambiguousIndexValues
+			Type: System.Int32[][]
+			Default Value: 
+	Method: createBarcodeMatrix:
+		Accessibility: Private
+		Return Type: ZXing.PDF417.Internal.BarcodeValue[][]
+		File Offset 0x0281F8A0
+		Ram Offset 0x182820aa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: detectionResult
+			Type: ZXing.PDF417.Internal.DetectionResult
+			Default Value: 
+	Method: isValidBarcodeColumn:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0281FB20
+		Ram Offset 0x182820d20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: detectionResult
+			Type: ZXing.PDF417.Internal.DetectionResult
+			Default Value: 
+		Parameter 1:
+			Name: barcodeColumn
+			Type: System.Int32
+			Default Value: 
+	Method: getStartColumn:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0281FB60
+		Ram Offset 0x182820d60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: detectionResult
+			Type: ZXing.PDF417.Internal.DetectionResult
+			Default Value: 
+		Parameter 1:
+			Name: barcodeColumn
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: imageRow
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: leftToRight
+			Type: System.Boolean
+			Default Value: 
+	Method: detectCodeword:
+		Accessibility: Private
+		Return Type: ZXing.PDF417.Internal.Codeword
+		File Offset 0x0281FE00
+		Ram Offset 0x182821000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: image
+			Type: ZXing.Common.BitMatrix
+			Default Value: 
+		Parameter 1:
+			Name: minColumn
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: maxColumn
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: leftToRight
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: startColumn
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: imageRow
+			Type: System.Int32
+			Default Value: 
+		Parameter 6:
+			Name: minCodewordWidth
+			Type: System.Int32
+			Default Value: 
+		Parameter 7:
+			Name: maxCodewordWidth
+			Type: System.Int32
+			Default Value: 
+	Method: getModuleBitCount:
+		Accessibility: Private
+		Return Type: System.Int32[]
+		File Offset 0x02820330
+		Ram Offset 0x182821530
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: image
+			Type: ZXing.Common.BitMatrix
+			Default Value: 
+		Parameter 1:
+			Name: minColumn
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: maxColumn
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: leftToRight
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: startColumn
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: imageRow
+			Type: System.Int32
+			Default Value: 
+	Method: getNumberOfECCodeWords:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x02820490
+		Ram Offset 0x182821690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: barcodeECLevel
+			Type: System.Int32
+			Default Value: 
+	Method: adjustCodewordStartColumn:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x028204A0
+		Ram Offset 0x1828216a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: image
+			Type: ZXing.Common.BitMatrix
+			Default Value: 
+		Parameter 1:
+			Name: minColumn
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: maxColumn
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: leftToRight
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: codewordStartColumn
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: imageRow
+			Type: System.Int32
+			Default Value: 
+	Method: checkCodewordSkew:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x028205A0
+		Ram Offset 0x1828217a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: codewordSize
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: minCodewordWidth
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: maxCodewordWidth
+			Type: System.Int32
+			Default Value: 
+	Method: decodeCodewords:
+		Accessibility: Private
+		Return Type: ZXing.Common.DecoderResult
+		File Offset 0x028205C0
+		Ram Offset 0x1828217c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: codewords
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 1:
+			Name: ecLevel
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: erasures
+			Type: System.Int32[]
+			Default Value: 
+	Method: correctErrors:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x02820790
+		Ram Offset 0x182821990
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: codewords
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 1:
+			Name: erasures
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 2:
+			Name: numECCodewords
+			Type: System.Int32
+			Default Value: 
+	Method: verifyCodewordCount:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x02820870
+		Ram Offset 0x182821a70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: codewords
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 1:
+			Name: numECCodewords
+			Type: System.Int32
+			Default Value: 
+	Method: getBitCountForCodeword:
+		Accessibility: Private
+		Return Type: System.Int32[]
+		File Offset 0x028208C0
+		Ram Offset 0x182821ac0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: codeword
+			Type: System.Int32
+			Default Value: 
+	Method: getCodewordBucketNumber:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x02820940
+		Ram Offset 0x182821b40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: codeword
+			Type: System.Int32
+			Default Value: 
+	Method: getCodewordBucketNumber:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x02820A40
+		Ram Offset 0x182821c40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: moduleBitCount
+			Type: System.Int32[]
+			Default Value: 
+	Method: ToString:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x02820AA0
+		Ram Offset 0x182821ca0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: barcodeMatrix
+			Type: ZXing.PDF417.Internal.BarcodeValue[][]
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02820F20
+		Ram Offset 0x182822120
+		Virtual Method Slot: 65535

@@ -1,0 +1,132 @@
+Type: Mono.Xml.SecurityParser:
+	Base Class: 
+		Mono.Xml.SmallXmlParser
+
+	Interfaces:
+		Mono.Xml.SmallXmlParser/IContentHandler
+
+	Field: root
+		Type: System.Security.SecurityElement
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: current
+		Type: System.Security.SecurityElement
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: stack
+		Type: System.Collections.Stack
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0169F250
+		Ram Offset 0x1816a0450
+		Virtual Method Slot: 65535
+
+	Method: LoadXml:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0169F2F0
+		Ram Offset 0x1816a04f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: xml
+			Type: System.String
+			Default Value: 
+	Method: ToXml:
+		Accessibility: Public
+		Return Type: System.Security.SecurityElement
+		File Offset 0x00530090
+		Ram Offset 0x180531290
+		Virtual Method Slot: 65535
+
+	Method: OnStartParsing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: parser
+			Type: Mono.Xml.SmallXmlParser
+			Default Value: 
+	Method: OnProcessingInstruction:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: text
+			Type: System.String
+			Default Value: 
+	Method: OnIgnorableWhitespace:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 10
+
+		Parameter 0:
+			Name: s
+			Type: System.String
+			Default Value: 
+	Method: OnStartElement:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0169F3D0
+		Ram Offset 0x1816a05d0
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: attrs
+			Type: Mono.Xml.SmallXmlParser/IAttrList
+			Default Value: 
+	Method: OnEndElement:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0169F760
+		Ram Offset 0x1816a0960
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: OnChars:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0169F850
+		Ram Offset 0x1816a0a50
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: ch
+			Type: System.String
+			Default Value: 
+	Method: OnEndParsing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: parser
+			Type: Mono.Xml.SmallXmlParser
+			Default Value: 

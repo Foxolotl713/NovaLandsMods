@@ -1,0 +1,672 @@
+Type: UnityEngine.UI.Graphic:
+	Base Class: 
+		UnityEngine.EventSystems.UIBehaviour
+
+	Interfaces:
+		UnityEngine.UI.ICanvasElement
+
+	Static Field: s_DefaultUI
+		Type: UnityEngine.Material
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: s_WhiteTexture
+		Type: UnityEngine.Texture2D
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: s_Mesh
+		Type: UnityEngine.Mesh
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: s_VertexHelper
+		Type: UnityEngine.UI.VertexHelper
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_Material
+		Type: UnityEngine.Material
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_Color
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_SkipLayoutUpdate
+		Type: System.Boolean
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_SkipMaterialUpdate
+		Type: System.Boolean
+		Offset in Defining Type: 0x39
+		Has Default: False
+
+	Field: m_RaycastTarget
+		Type: System.Boolean
+		Offset in Defining Type: 0x3A
+		Has Default: False
+
+	Field: m_RaycastTargetCache
+		Type: System.Boolean
+		Offset in Defining Type: 0x3B
+		Has Default: False
+
+	Field: m_RaycastPadding
+		Type: UnityEngine.Vector4
+		Offset in Defining Type: 0x3C
+		Has Default: False
+
+	Field: m_RectTransform
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: m_CanvasRenderer
+		Type: UnityEngine.CanvasRenderer
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: m_Canvas
+		Type: UnityEngine.Canvas
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: m_VertsDirty
+		Type: System.Boolean
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: m_MaterialDirty
+		Type: System.Boolean
+		Offset in Defining Type: 0x69
+		Has Default: False
+
+	Field: m_OnDirtyLayoutCallback
+		Type: UnityEngine.Events.UnityAction
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: m_OnDirtyVertsCallback
+		Type: UnityEngine.Events.UnityAction
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: m_OnDirtyMaterialCallback
+		Type: UnityEngine.Events.UnityAction
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: m_CachedMesh
+		Type: UnityEngine.Mesh
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: m_CachedUvs
+		Type: UnityEngine.Vector2[]
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: m_ColorTweenRunner
+		Type: UnityEngine.UI.CoroutineTween.TweenRunner`1<UnityEngine.UI.CoroutineTween.ColorTween>
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: <useLegacyMeshGeneration>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Method: get_defaultGraphicMaterial:
+		Accessibility: Public
+		Return Type: UnityEngine.Material
+		File Offset 0x02577DF0
+		Ram Offset 0x182578ff0
+		Virtual Method Slot: 65535
+
+	Method: get_color:
+		Accessibility: Public
+		Return Type: UnityEngine.Color
+		File Offset 0x009B2530
+		Ram Offset 0x1809b3730
+		Virtual Method Slot: 22
+
+	Method: set_color:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02577FC0
+		Ram Offset 0x1825791c0
+		Virtual Method Slot: 23
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Color
+			Default Value: 
+	Method: get_raycastTarget:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01759ED0
+		Ram Offset 0x18175b0d0
+		Virtual Method Slot: 24
+
+	Method: set_raycastTarget:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02578020
+		Ram Offset 0x182579220
+		Virtual Method Slot: 25
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_raycastPadding:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector4
+		File Offset 0x01656D10
+		Ram Offset 0x181657f10
+		Virtual Method Slot: 65535
+
+	Method: set_raycastPadding:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02578130
+		Ram Offset 0x182579330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Vector4
+			Default Value: 
+	Method: get_useLegacyMeshGeneration:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0097DE00
+		Ram Offset 0x18097f000
+		Virtual Method Slot: 65535
+
+	Method: set_useLegacyMeshGeneration:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0097DE10
+		Ram Offset 0x18097f010
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x02578140
+		Ram Offset 0x182579340
+		Virtual Method Slot: 65535
+
+	Method: SetAllDirty:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025782C0
+		Ram Offset 0x1825794c0
+		Virtual Method Slot: 26
+
+	Method: SetLayoutDirty:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02578330
+		Ram Offset 0x182579530
+		Virtual Method Slot: 27
+
+	Method: SetVerticesDirty:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025783D0
+		Ram Offset 0x1825795d0
+		Virtual Method Slot: 28
+
+	Method: SetMaterialDirty:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02578460
+		Ram Offset 0x182579660
+		Virtual Method Slot: 29
+
+	Method: SetRaycastDirty:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025784F0
+		Ram Offset 0x1825796f0
+		Virtual Method Slot: 65535
+
+	Method: OnRectTransformDimensionsChange:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x02578600
+		Ram Offset 0x182579800
+		Virtual Method Slot: 10
+
+	Method: OnBeforeTransformParentChanged:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x02578770
+		Ram Offset 0x182579970
+		Virtual Method Slot: 11
+
+	Method: OnTransformParentChanged:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x02578810
+		Ram Offset 0x182579a10
+		Virtual Method Slot: 12
+
+	Method: get_depth:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x02578900
+		Ram Offset 0x182579b00
+		Virtual Method Slot: 65535
+
+	Method: get_rectTransform:
+		Accessibility: Public
+		Return Type: UnityEngine.RectTransform
+		File Offset 0x02578970
+		Ram Offset 0x182579b70
+		Virtual Method Slot: 30
+
+	Method: get_canvas:
+		Accessibility: Public
+		Return Type: UnityEngine.Canvas
+		File Offset 0x02578A00
+		Ram Offset 0x182579c00
+		Virtual Method Slot: 65535
+
+	Method: CacheCanvas:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02578AD0
+		Ram Offset 0x182579cd0
+		Virtual Method Slot: 65535
+
+	Method: get_canvasRenderer:
+		Accessibility: Public
+		Return Type: UnityEngine.CanvasRenderer
+		File Offset 0x02578D30
+		Ram Offset 0x182579f30
+		Virtual Method Slot: 65535
+
+	Method: get_defaultMaterial:
+		Accessibility: Public
+		Return Type: UnityEngine.Material
+		File Offset 0x02578EB0
+		Ram Offset 0x18257a0b0
+		Virtual Method Slot: 31
+
+	Method: get_material:
+		Accessibility: Public
+		Return Type: UnityEngine.Material
+		File Offset 0x02578EF0
+		Ram Offset 0x18257a0f0
+		Virtual Method Slot: 32
+
+	Method: set_material:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02578FD0
+		Ram Offset 0x18257a1d0
+		Virtual Method Slot: 33
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: get_materialForRendering:
+		Accessibility: Public
+		Return Type: UnityEngine.Material
+		File Offset 0x02579140
+		Ram Offset 0x18257a340
+		Virtual Method Slot: 34
+
+	Method: get_mainTexture:
+		Accessibility: Public
+		Return Type: UnityEngine.Texture
+		File Offset 0x02579330
+		Ram Offset 0x18257a530
+		Virtual Method Slot: 35
+
+	Method: OnEnable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x02579380
+		Ram Offset 0x18257a580
+		Virtual Method Slot: 5
+
+	Method: OnDisable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x02579590
+		Ram Offset 0x18257a790
+		Virtual Method Slot: 7
+
+	Method: OnDestroy:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x02579750
+		Ram Offset 0x18257a950
+		Virtual Method Slot: 8
+
+	Method: OnCanvasHierarchyChanged:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x025798F0
+		Ram Offset 0x18257aaf0
+		Virtual Method Slot: 15
+
+	Method: OnCullingChanged:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02579B30
+		Ram Offset 0x18257ad30
+		Virtual Method Slot: 36
+
+	Method: Rebuild:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02579BF0
+		Ram Offset 0x18257adf0
+		Virtual Method Slot: 37
+
+		Parameter 0:
+			Name: update
+			Type: UnityEngine.UI.CanvasUpdate
+			Default Value: 
+	Method: LayoutComplete:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 38
+
+	Method: GraphicUpdateComplete:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 39
+
+	Method: UpdateMaterial:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x02579D60
+		Ram Offset 0x18257af60
+		Virtual Method Slot: 40
+
+	Method: UpdateGeometry:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x02579EF0
+		Ram Offset 0x18257b0f0
+		Virtual Method Slot: 41
+
+	Method: DoMeshGeneration:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02579F10
+		Ram Offset 0x18257b110
+		Virtual Method Slot: 65535
+
+	Method: DoLegacyMeshGeneration:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0257A4C0
+		Ram Offset 0x18257b6c0
+		Virtual Method Slot: 65535
+
+	Method: get_workerMesh:
+		Accessibility: Family
+		Return Type: UnityEngine.Mesh
+		File Offset 0x0257AA50
+		Ram Offset 0x18257bc50
+		Virtual Method Slot: 65535
+
+	Method: OnFillVBO:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 42
+
+		Parameter 0:
+			Name: vbo
+			Type: System.Collections.Generic.List`1<UnityEngine.UIVertex>
+			Default Value: 
+	Method: OnPopulateMesh:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0257AC40
+		Ram Offset 0x18257be40
+		Virtual Method Slot: 43
+
+		Parameter 0:
+			Name: m
+			Type: UnityEngine.Mesh
+			Default Value: 
+	Method: OnPopulateMesh:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0257ACE0
+		Ram Offset 0x18257bee0
+		Virtual Method Slot: 44
+
+		Parameter 0:
+			Name: vh
+			Type: UnityEngine.UI.VertexHelper
+			Default Value: 
+	Method: OnDidApplyAnimationProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01D99940
+		Ram Offset 0x181d9ab40
+		Virtual Method Slot: 13
+
+	Method: SetNativeSize:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 45
+
+	Method: Raycast:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0257AEE0
+		Ram Offset 0x18257c0e0
+		Virtual Method Slot: 46
+
+		Parameter 0:
+			Name: sp
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: eventCamera
+			Type: UnityEngine.Camera
+			Default Value: 
+	Method: PixelAdjustPoint:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x0257B3B0
+		Ram Offset 0x18257c5b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: point
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: GetPixelAdjustedRect:
+		Accessibility: Public
+		Return Type: UnityEngine.Rect
+		File Offset 0x0257B660
+		Ram Offset 0x18257c860
+		Virtual Method Slot: 65535
+
+	Method: CrossFadeColor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0257B960
+		Ram Offset 0x18257cb60
+		Virtual Method Slot: 47
+
+		Parameter 0:
+			Name: targetColor
+			Type: UnityEngine.Color
+			Default Value: 
+		Parameter 1:
+			Name: duration
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: ignoreTimeScale
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: useAlpha
+			Type: System.Boolean
+			Default Value: 
+	Method: CrossFadeColor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0257B9A0
+		Ram Offset 0x18257cba0
+		Virtual Method Slot: 48
+
+		Parameter 0:
+			Name: targetColor
+			Type: UnityEngine.Color
+			Default Value: 
+		Parameter 1:
+			Name: duration
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: ignoreTimeScale
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: useAlpha
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: useRGB
+			Type: System.Boolean
+			Default Value: 
+	Method: CreateColorFromAlpha:
+		Accessibility: Private
+		Return Type: UnityEngine.Color
+		File Offset 0x0257BDC0
+		Ram Offset 0x18257cfc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: alpha
+			Type: System.Single
+			Default Value: 
+	Method: CrossFadeAlpha:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0257BDE0
+		Ram Offset 0x18257cfe0
+		Virtual Method Slot: 49
+
+		Parameter 0:
+			Name: alpha
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: duration
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: ignoreTimeScale
+			Type: System.Boolean
+			Default Value: 
+	Method: RegisterDirtyLayoutCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0257BEB0
+		Ram Offset 0x18257d0b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: UnregisterDirtyLayoutCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0257BFA0
+		Ram Offset 0x18257d1a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: RegisterDirtyVerticesCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0257C090
+		Ram Offset 0x18257d290
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: UnregisterDirtyVerticesCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0257C180
+		Ram Offset 0x18257d380
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: RegisterDirtyMaterialCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0257C270
+		Ram Offset 0x18257d470
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: UnregisterDirtyMaterialCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0257C370
+		Ram Offset 0x18257d570
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0257C470
+		Ram Offset 0x18257d670
+		Virtual Method Slot: 65535
+
+	Method: UnityEngine.UI.ICanvasElement.get_transform:
+		Accessibility: Private
+		Return Type: UnityEngine.Transform
+		File Offset 0x00A0EE10
+		Ram Offset 0x180a10010
+		Virtual Method Slot: 18

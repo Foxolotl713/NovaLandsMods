@@ -1,0 +1,427 @@
+Type: TutorialManager:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Nested Types:
+		TutorialManager/<>c
+		TutorialManager/<>c__DisplayClass37_0
+		TutorialManager/<>c__DisplayClass40_0
+		TutorialManager/<ShowBuildMoreFurnacesCoroutine>d__51
+		TutorialManager/<ShowHowToConnectBotTutorial>d__55
+
+	Static Field: HOW_TO_WALK_TUTORIAL
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: HowToWalk
+
+	Static Field: TIME_SUFFIX
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: Time
+
+	Static Field: STATUS_SUFFIX
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: Status
+
+	Static Field: BUILD_MORE_FURNACES_TUTORIAL
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: BuildMoreFurnaces
+
+	Static Field: REQUIRE_RESOURCE_CONTAINER
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: RequireResourceContainer
+
+	Static Field: HOW_TO_CONNECT_BOT_TUTORIAL
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: HowToConnectBot
+
+	Static Field: <Instance>k__BackingField
+		Type: TutorialManager
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: EXTRACT_POD
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: ExtractPod
+
+	Static Field: BUILD_OXYGENATOR
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: HowToBuildOxygenator
+
+	Static Field: BUILD_FURNACE
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: HowToBuildFurnace
+
+	Static Field: HOW_TO_EXTRACT_TUTORIAL
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: HowToExtract
+
+	Static Field: HOW_TO_MAKE_OXYGEN_TUTORIAL
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: HowToMakeOxygen
+
+	Field: tutorialMessages
+		Type: System.Collections.Generic.List`1<StringGameObjectPair>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: defaultControllerLeftStickWindows
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: defaultControllerLeftStickNintendo
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: defaultControllerLeftStickSony
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: waterIndicatorTemplate
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: timeToShowBuildMoreFurnacesTutorial
+		Type: System.Single
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: hudManager
+		Type: HUDManager
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: currentTutorialStep
+		Type: System.String
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: currentStepDuration
+		Type: System.Single
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: currentTime
+		Type: System.Single
+		Offset in Defining Type: 0x64
+		Has Default: False
+
+	Field: loaded
+		Type: System.Boolean
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: waterIndicators
+		Type: System.Collections.Generic.List`1<UnityEngine.GameObject>
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: currentTimeToShowBuildMoreFurnacesTutorial
+		Type: System.Single
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: shouldShowBuildMoreFurnaces
+		Type: System.Boolean
+		Offset in Defining Type: 0x7C
+		Has Default: False
+
+	Field: buildMoreFurnacesTimerCoroutine
+		Type: UnityEngine.Coroutine
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Method: get_Instance:
+		Accessibility: Public
+		Return Type: TutorialManager
+		File Offset 0x006A2AA0
+		Ram Offset 0x1806a3ca0
+		Virtual Method Slot: 65535
+
+	Method: set_Instance:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A2AE0
+		Ram Offset 0x1806a3ce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: TutorialManager
+			Default Value: 
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A2B70
+		Ram Offset 0x1806a3d70
+		Virtual Method Slot: 65535
+
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x006A2CC0
+		Ram Offset 0x1806a3ec0
+		Virtual Method Slot: 65535
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003C62A0
+		Ram Offset 0x1803c74a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hudManager
+			Type: HUDManager
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006A32B0
+		Ram Offset 0x1806a44b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hudManager
+			Type: HUDManager
+			Default Value: 
+		Parameter 1:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+	Method: SetComplete:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006A38F0
+		Ram Offset 0x1806a4af0
+		Virtual Method Slot: 65535
+
+	Method: LoadStep:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A3A30
+		Ram Offset 0x1806a4c30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: step
+			Type: System.String
+			Default Value: 
+	Method: Update:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A3A40
+		Ram Offset 0x1806a4c40
+		Virtual Method Slot: 65535
+
+	Method: HideTutorialStep:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006A3B60
+		Ram Offset 0x1806a4d60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: step
+			Type: System.String
+			Default Value: 
+	Method: HideTutorialMessages:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A3E90
+		Ram Offset 0x1806a5090
+		Virtual Method Slot: 65535
+
+	Method: ShowTutorialMessage:
+		Accessibility: Private
+		Return Type: UnityEngine.GameObject
+		File Offset 0x006A3FB0
+		Ram Offset 0x1806a51b0
+		Virtual Method Slot: 65535
+
+	Method: SetTutorialStep:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006A40A0
+		Ram Offset 0x1806a52a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: step
+			Type: System.String
+			Default Value: 
+	Method: SetTutorialStepComplete:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006A47C0
+		Ram Offset 0x1806a59c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: step
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: complete
+			Type: System.Boolean
+			Default Value: 
+	Method: ShowHowToWalkTutorial:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A48E0
+		Ram Offset 0x1806a5ae0
+		Virtual Method Slot: 65535
+
+	Method: ShowHowToExtractTutorial:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A58D0
+		Ram Offset 0x1806a6ad0
+		Virtual Method Slot: 65535
+
+	Method: ShowHowToMakeOxygenTutorial:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A5A70
+		Ram Offset 0x1806a6c70
+		Virtual Method Slot: 65535
+
+	Method: InstantiateWaterIndicators:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A5D20
+		Ram Offset 0x1806a6f20
+		Virtual Method Slot: 65535
+
+	Method: DestroyWaterIndicators:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A6220
+		Ram Offset 0x1806a7420
+		Virtual Method Slot: 65535
+
+	Method: ShowBuildOxygenatorTutorial:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A6410
+		Ram Offset 0x1806a7610
+		Virtual Method Slot: 65535
+
+	Method: ShowBuildFurnaceTutorial:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A65E0
+		Ram Offset 0x1806a77e0
+		Virtual Method Slot: 65535
+
+	Method: HideBuildMoreFurnacesTutorial:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006A67B0
+		Ram Offset 0x1806a79b0
+		Virtual Method Slot: 65535
+
+	Method: CheckShouldShowBuildMoreFurnacesTutorial:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006A69A0
+		Ram Offset 0x1806a7ba0
+		Virtual Method Slot: 65535
+
+	Method: ShowBuildMoreFurnacesCoroutine:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x006A6D20
+		Ram Offset 0x1806a7f20
+		Virtual Method Slot: 65535
+
+	Method: ShowBuildMoreFurnacesTutorial:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A6DB0
+		Ram Offset 0x1806a7fb0
+		Virtual Method Slot: 65535
+
+	Method: ShowExtractPodTutorial:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A6FB0
+		Ram Offset 0x1806a81b0
+		Virtual Method Slot: 65535
+
+	Method: HideExtractPodTutorial:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A7300
+		Ram Offset 0x1806a8500
+		Virtual Method Slot: 65535
+
+	Method: ShowHowToConnectBotTutorial:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x006A77D0
+		Ram Offset 0x1806a89d0
+		Virtual Method Slot: 65535
+
+	Method: IsTutorialStepComplete:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x006A7860
+		Ram Offset 0x1806a8a60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: step
+			Type: System.String
+			Default Value: 
+	Method: get_CurrentTutorialStep:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x0040DAA0
+		Ram Offset 0x18040eca0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006A78B0
+		Ram Offset 0x1806a8ab0
+		Virtual Method Slot: 65535
+
+	Method: <ShowTutorialMessage>b__39_0:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x006A7900
+		Ram Offset 0x1806a8b00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x
+			Type: StringGameObjectPair
+			Default Value: 

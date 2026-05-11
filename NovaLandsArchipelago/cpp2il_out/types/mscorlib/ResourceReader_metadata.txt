@@ -1,0 +1,356 @@
+Type: System.Resources.ResourceReader:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.Resources.IResourceReader
+		System.Collections.IEnumerable
+		System.IDisposable
+
+	Nested Types:
+		System.Resources.ResourceReader/ResourceEnumerator
+
+	Field: _store
+		Type: System.IO.BinaryReader
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: _resCache
+		Type: System.Collections.Generic.Dictionary`2<System.String,System.Resources.ResourceLocator>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _nameSectionOffset
+		Type: System.Int64
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _dataSectionOffset
+		Type: System.Int64
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _nameHashes
+		Type: System.Int32[]
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _nameHashesPtr
+		Type: System.Int32*
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _namePositions
+		Type: System.Int32[]
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: _namePositionsPtr
+		Type: System.Int32*
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: _typeTable
+		Type: System.RuntimeType[]
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: _typeNamePositions
+		Type: System.Int32[]
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: _objFormatter
+		Type: System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: _numResources
+		Type: System.Int32
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: _ums
+		Type: System.IO.UnmanagedMemoryStream
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: _version
+		Type: System.Int32
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x017AE650
+		Ram Offset 0x1817af850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stream
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 1:
+			Name: resCache
+			Type: System.Collections.Generic.Dictionary`2<System.String, System.Resources.ResourceLocator>
+			Default Value: 
+	Method: Close:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x017AE820
+		Ram Offset 0x1817afa20
+		Virtual Method Slot: 4
+
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x017AE820
+		Ram Offset 0x1817afa20
+		Virtual Method Slot: 7
+
+	Method: Dispose:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x017AE830
+		Ram Offset 0x1817afa30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: ReadUnalignedI4:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x017AEA80
+		Ram Offset 0x1817afc80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: p
+			Type: System.Int32*
+			Default Value: 
+	Method: SkipString:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x017AEAA0
+		Ram Offset 0x1817afca0
+		Virtual Method Slot: 65535
+
+	Method: GetNameHash:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x017AEB70
+		Ram Offset 0x1817afd70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: GetNamePosition:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x017AEBE0
+		Ram Offset 0x1817afde0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: System.Collections.IEnumerable.GetEnumerator:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x017AED20
+		Ram Offset 0x1817aff20
+		Virtual Method Slot: 6
+
+	Method: GetEnumerator:
+		Accessibility: Public
+		Return Type: System.Collections.IDictionaryEnumerator
+		File Offset 0x017AED20
+		Ram Offset 0x1817aff20
+		Virtual Method Slot: 5
+
+	Method: GetEnumeratorInternal:
+		Accessibility: Assembly
+		Return Type: System.Resources.ResourceReader/ResourceEnumerator
+		File Offset 0x017AEDE0
+		Ram Offset 0x1817affe0
+		Virtual Method Slot: 65535
+
+	Method: FindPosForResource:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x017AEE80
+		Ram Offset 0x1817b0080
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: CompareStringEqualsName:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x017AF3A0
+		Ram Offset 0x1817b05a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: AllocateStringForNameIndex:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x017AF7A0
+		Ram Offset 0x1817b09a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: dataOffset
+			Type: System.Int32
+			Default Value: 
+	Method: GetValueForNameIndex:
+		Accessibility: Private
+		Return Type: System.Object
+		File Offset 0x017AFFC0
+		Ram Offset 0x1817b11c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: LoadString:
+		Accessibility: Assembly
+		Return Type: System.String
+		File Offset 0x017B0320
+		Ram Offset 0x1817b1520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pos
+			Type: System.Int32
+			Default Value: 
+	Method: LoadObject:
+		Accessibility: Assembly
+		Return Type: System.Object
+		File Offset 0x017B0620
+		Ram Offset 0x1817b1820
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pos
+			Type: System.Int32
+			Default Value: 
+	Method: LoadObject:
+		Accessibility: Assembly
+		Return Type: System.Object
+		File Offset 0x017B0660
+		Ram Offset 0x1817b1860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pos
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: typeCode
+			Type: System.Resources.ResourceTypeCode
+			Default Value: 
+	Method: LoadObjectV1:
+		Accessibility: Assembly
+		Return Type: System.Object
+		File Offset 0x017B0700
+		Ram Offset 0x1817b1900
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pos
+			Type: System.Int32
+			Default Value: 
+	Method: _LoadObjectV1:
+		Accessibility: Private
+		Return Type: System.Object
+		File Offset 0x017B0800
+		Ram Offset 0x1817b1a00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pos
+			Type: System.Int32
+			Default Value: 
+	Method: LoadObjectV2:
+		Accessibility: Assembly
+		Return Type: System.Object
+		File Offset 0x017B0FF0
+		Ram Offset 0x1817b21f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pos
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: typeCode
+			Type: System.Resources.ResourceTypeCode
+			Default Value: 
+	Method: _LoadObjectV2:
+		Accessibility: Private
+		Return Type: System.Object
+		File Offset 0x017B10F0
+		Ram Offset 0x1817b22f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pos
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: typeCode
+			Type: System.Resources.ResourceTypeCode
+			Default Value: 
+	Method: DeserializeObject:
+		Accessibility: Private
+		Return Type: System.Object
+		File Offset 0x017B1DD0
+		Ram Offset 0x1817b2fd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: typeIndex
+			Type: System.Int32
+			Default Value: 
+	Method: ReadResources:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x017B1FB0
+		Ram Offset 0x1817b31b0
+		Virtual Method Slot: 65535
+
+	Method: _ReadResources:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x017B21B0
+		Ram Offset 0x1817b33b0
+		Virtual Method Slot: 65535
+
+	Method: FindType:
+		Accessibility: Private
+		Return Type: System.RuntimeType
+		File Offset 0x017B2CD0
+		Ram Offset 0x1817b3ed0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: typeIndex
+			Type: System.Int32
+			Default Value: 

@@ -1,0 +1,672 @@
+Type: System.Runtime.Serialization.Formatters.Binary.ObjectWriter:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Field: m_objectQueue
+		Type: System.Collections.Queue
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_idGenerator
+		Type: System.Runtime.Serialization.ObjectIDGenerator
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_currentId
+		Type: System.Int32
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_surrogates
+		Type: System.Runtime.Serialization.ISurrogateSelector
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_context
+		Type: System.Runtime.Serialization.StreamingContext
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: serWriter
+		Type: System.Runtime.Serialization.Formatters.Binary.__BinaryWriter
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: m_objectManager
+		Type: System.Runtime.Serialization.SerializationObjectManager
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: topId
+		Type: System.Int64
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: topName
+		Type: System.String
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: headers
+		Type: System.Runtime.Remoting.Messaging.Header[]
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: formatterEnums
+		Type: System.Runtime.Serialization.Formatters.Binary.InternalFE
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: m_binder
+		Type: System.Runtime.Serialization.SerializationBinder
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: serObjectInfoInit
+		Type: System.Runtime.Serialization.Formatters.Binary.SerObjectInfoInit
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: m_formatterConverter
+		Type: System.Runtime.Serialization.IFormatterConverter
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: crossAppDomainArray
+		Type: System.Object[]
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: previousObj
+		Type: System.Object
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: previousId
+		Type: System.Int64
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: previousType
+		Type: System.Type
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: previousCode
+		Type: System.Runtime.Serialization.Formatters.Binary.InternalPrimitiveTypeE
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: assemblyToIdTable
+		Type: System.Collections.Hashtable
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: niPool
+		Type: System.Runtime.Serialization.Formatters.Binary.SerStack
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01793EB0
+		Ram Offset 0x1817950b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: selector
+			Type: System.Runtime.Serialization.ISurrogateSelector
+			Default Value: 
+		Parameter 1:
+			Name: context
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+		Parameter 2:
+			Name: formatterEnums
+			Type: System.Runtime.Serialization.Formatters.Binary.InternalFE
+			Default Value: 
+		Parameter 3:
+			Name: binder
+			Type: System.Runtime.Serialization.SerializationBinder
+			Default Value: 
+	Method: Serialize:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01794250
+		Ram Offset 0x181795450
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: graph
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: inHeaders
+			Type: System.Runtime.Remoting.Messaging.Header[]
+			Default Value: 
+		Parameter 2:
+			Name: serWriter
+			Type: System.Runtime.Serialization.Formatters.Binary.__BinaryWriter
+			Default Value: 
+		Parameter 3:
+			Name: fCheck
+			Type: System.Boolean
+			Default Value: 
+	Method: get_ObjectManager:
+		Accessibility: Assembly
+		Return Type: System.Runtime.Serialization.SerializationObjectManager
+		File Offset 0x003F4770
+		Ram Offset 0x1803f5970
+		Virtual Method Slot: 65535
+
+	Method: Write:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01794820
+		Ram Offset 0x181795a20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: objectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+		Parameter 1:
+			Name: memberNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 2:
+			Name: typeNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+	Method: Write:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01795180
+		Ram Offset 0x181796380
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: objectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+		Parameter 1:
+			Name: memberNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 2:
+			Name: typeNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 3:
+			Name: memberNames
+			Type: System.String[]
+			Default Value: 
+		Parameter 4:
+			Name: memberTypes
+			Type: System.Type[]
+			Default Value: 
+		Parameter 5:
+			Name: memberData
+			Type: System.Object[]
+			Default Value: 
+		Parameter 6:
+			Name: memberObjectInfos
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo[]
+			Default Value: 
+	Method: WriteMemberSetup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01795570
+		Ram Offset 0x181796770
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: objectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+		Parameter 1:
+			Name: memberNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 2:
+			Name: typeNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 3:
+			Name: memberName
+			Type: System.String
+			Default Value: 
+		Parameter 4:
+			Name: memberType
+			Type: System.Type
+			Default Value: 
+		Parameter 5:
+			Name: memberData
+			Type: System.Object
+			Default Value: 
+		Parameter 6:
+			Name: memberObjectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+	Method: WriteMembers:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01795710
+		Ram Offset 0x181796910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: memberNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 1:
+			Name: memberTypeNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 2:
+			Name: memberData
+			Type: System.Object
+			Default Value: 
+		Parameter 3:
+			Name: objectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+		Parameter 4:
+			Name: typeNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 5:
+			Name: memberObjectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+	Method: WriteArray:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01795E00
+		Ram Offset 0x181797000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: objectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+		Parameter 1:
+			Name: memberNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 2:
+			Name: memberObjectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+	Method: WriteArrayMember:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01796AB0
+		Ram Offset 0x181797cb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: objectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+		Parameter 1:
+			Name: arrayElemTypeNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 2:
+			Name: data
+			Type: System.Object
+			Default Value: 
+	Method: WriteRectangle:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01796F70
+		Ram Offset 0x181798170
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: objectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+		Parameter 1:
+			Name: rank
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: maxA
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 3:
+			Name: array
+			Type: System.Array
+			Default Value: 
+		Parameter 4:
+			Name: arrayElemNameTypeInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 5:
+			Name: lowerBoundA
+			Type: System.Int32[]
+			Default Value: 
+	Method: GetNext:
+		Accessibility: Private
+		Return Type: System.Object
+		File Offset 0x01797170
+		Ram Offset 0x181798370
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: objID
+			Type: System.Int64
+			Default Value: 
+	Method: InternalGetId:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x01797330
+		Ram Offset 0x181798530
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: obj
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: assignUniqueIdToValueType
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: type
+			Type: System.Type
+			Default Value: 
+		Parameter 3:
+			Name: isNew
+			Type: System.Boolean
+			Default Value: 
+	Method: Schedule:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x01797470
+		Ram Offset 0x181798670
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: obj
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: assignUniqueIdToValueType
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: type
+			Type: System.Type
+			Default Value: 
+	Method: Schedule:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x017974F0
+		Ram Offset 0x1817986f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: obj
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: assignUniqueIdToValueType
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: type
+			Type: System.Type
+			Default Value: 
+		Parameter 3:
+			Name: objectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+	Method: WriteKnownValueClass:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x017975A0
+		Ram Offset 0x1817987a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: memberNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 1:
+			Name: typeNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 2:
+			Name: data
+			Type: System.Object
+			Default Value: 
+	Method: WriteObjectRef:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x017976A0
+		Ram Offset 0x1817988a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 1:
+			Name: objectId
+			Type: System.Int64
+			Default Value: 
+	Method: WriteString:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x017976C0
+		Ram Offset 0x1817988c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: memberNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 1:
+			Name: typeNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 2:
+			Name: stringObject
+			Type: System.Object
+			Default Value: 
+	Method: CheckForNull:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01797870
+		Ram Offset 0x181798a70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: objectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+		Parameter 1:
+			Name: memberNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 2:
+			Name: typeNameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+		Parameter 3:
+			Name: data
+			Type: System.Object
+			Default Value: 
+	Method: WriteSerializedStreamHeader:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01797A40
+		Ram Offset 0x181798c40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: topId
+			Type: System.Int64
+			Default Value: 
+		Parameter 1:
+			Name: headerId
+			Type: System.Int64
+			Default Value: 
+	Method: TypeToNameInfo:
+		Accessibility: Private
+		Return Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+		File Offset 0x01797B60
+		Ram Offset 0x181798d60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+		Parameter 1:
+			Name: objectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+		Parameter 2:
+			Name: code
+			Type: System.Runtime.Serialization.Formatters.Binary.InternalPrimitiveTypeE
+			Default Value: 
+		Parameter 3:
+			Name: nameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+	Method: TypeToNameInfo:
+		Accessibility: Private
+		Return Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+		File Offset 0x01797C50
+		Ram Offset 0x181798e50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+	Method: TypeToNameInfo:
+		Accessibility: Private
+		Return Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+		File Offset 0x01797CF0
+		Ram Offset 0x181798ef0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: objectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+	Method: TypeToNameInfo:
+		Accessibility: Private
+		Return Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+		File Offset 0x01797D50
+		Ram Offset 0x181798f50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: objectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+		Parameter 1:
+			Name: nameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+	Method: TypeToNameInfo:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01797DC0
+		Ram Offset 0x181798fc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+		Parameter 1:
+			Name: nameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 
+	Method: MemberToNameInfo:
+		Accessibility: Private
+		Return Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+		File Offset 0x01797E70
+		Ram Offset 0x181799070
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: ToCode:
+		Accessibility: Assembly
+		Return Type: System.Runtime.Serialization.Formatters.Binary.InternalPrimitiveTypeE
+		File Offset 0x01797EE0
+		Ram Offset 0x1817990e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+	Method: GetAssemblyId:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x01797FC0
+		Ram Offset 0x1817991c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: objectInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.WriteObjectInfo
+			Default Value: 
+	Method: GetType:
+		Accessibility: Private
+		Return Type: System.Type
+		File Offset 0x01798280
+		Ram Offset 0x181799480
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: obj
+			Type: System.Object
+			Default Value: 
+	Method: GetNameInfo:
+		Accessibility: Private
+		Return Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+		File Offset 0x017982A0
+		Ram Offset 0x1817994a0
+		Virtual Method Slot: 65535
+
+	Method: CheckTypeFormat:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01798340
+		Ram Offset 0x181799540
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: test
+			Type: System.Runtime.Serialization.Formatters.FormatterTypeStyle
+			Default Value: 
+		Parameter 1:
+			Name: want
+			Type: System.Runtime.Serialization.Formatters.FormatterTypeStyle
+			Default Value: 
+	Method: PutNameInfo:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01798350
+		Ram Offset 0x181799550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nameInfo
+			Type: System.Runtime.Serialization.Formatters.Binary.NameInfo
+			Default Value: 

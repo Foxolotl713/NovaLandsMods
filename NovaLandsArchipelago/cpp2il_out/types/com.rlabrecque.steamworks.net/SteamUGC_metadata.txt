@@ -1,0 +1,1484 @@
+Type: Steamworks.SteamUGC:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Method: CreateQueryUserUGCRequest:
+		Accessibility: Public
+		Return Type: Steamworks.UGCQueryHandle_t
+		File Offset 0x00B9D500
+		Ram Offset 0x180b9e700
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: unAccountID
+			Type: Steamworks.AccountID_t
+			Default Value: 
+		Parameter 1:
+			Name: eListType
+			Type: Steamworks.EUserUGCList
+			Default Value: 
+		Parameter 2:
+			Name: eMatchingUGCType
+			Type: Steamworks.EUGCMatchingUGCType
+			Default Value: 
+		Parameter 3:
+			Name: eSortOrder
+			Type: Steamworks.EUserUGCListSortOrder
+			Default Value: 
+		Parameter 4:
+			Name: nCreatorAppID
+			Type: Steamworks.AppId_t
+			Default Value: 
+		Parameter 5:
+			Name: nConsumerAppID
+			Type: Steamworks.AppId_t
+			Default Value: 
+		Parameter 6:
+			Name: unPage
+			Type: System.UInt32
+			Default Value: 
+	Method: CreateQueryAllUGCRequest:
+		Accessibility: Public
+		Return Type: Steamworks.UGCQueryHandle_t
+		File Offset 0x00B9D5E0
+		Ram Offset 0x180b9e7e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eQueryType
+			Type: Steamworks.EUGCQuery
+			Default Value: 
+		Parameter 1:
+			Name: eMatchingeMatchingUGCTypeFileType
+			Type: Steamworks.EUGCMatchingUGCType
+			Default Value: 
+		Parameter 2:
+			Name: nCreatorAppID
+			Type: Steamworks.AppId_t
+			Default Value: 
+		Parameter 3:
+			Name: nConsumerAppID
+			Type: Steamworks.AppId_t
+			Default Value: 
+		Parameter 4:
+			Name: unPage
+			Type: System.UInt32
+			Default Value: 
+	Method: CreateQueryAllUGCRequest:
+		Accessibility: Public
+		Return Type: Steamworks.UGCQueryHandle_t
+		File Offset 0x00B9D6B0
+		Ram Offset 0x180b9e8b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eQueryType
+			Type: Steamworks.EUGCQuery
+			Default Value: 
+		Parameter 1:
+			Name: eMatchingeMatchingUGCTypeFileType
+			Type: Steamworks.EUGCMatchingUGCType
+			Default Value: 
+		Parameter 2:
+			Name: nCreatorAppID
+			Type: Steamworks.AppId_t
+			Default Value: 
+		Parameter 3:
+			Name: nConsumerAppID
+			Type: Steamworks.AppId_t
+			Default Value: 
+		Parameter 4:
+			Name: pchCursor
+			Type: System.String
+			Default Value: 
+	Method: CreateQueryUGCDetailsRequest:
+		Accessibility: Public
+		Return Type: Steamworks.UGCQueryHandle_t
+		File Offset 0x00B9D830
+		Ram Offset 0x180b9ea30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pvecPublishedFileID
+			Type: Steamworks.PublishedFileId_t[]
+			Default Value: 
+		Parameter 1:
+			Name: unNumPublishedFileIDs
+			Type: System.UInt32
+			Default Value: 
+	Method: SendQueryUGCRequest:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00B9D940
+		Ram Offset 0x180b9eb40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+	Method: GetQueryUGCResult:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9D9D0
+		Ram Offset 0x180b9ebd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: pDetails
+			Type: Steamworks.SteamUGCDetails_t
+			Default Value: 
+	Method: GetQueryUGCNumTags:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x00B9DA50
+		Ram Offset 0x180b9ec50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+	Method: GetQueryUGCTag:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9DAB0
+		Ram Offset 0x180b9ecb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: indexTag
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: pchValue
+			Type: System.String
+			Default Value: 
+		Parameter 4:
+			Name: cchValueSize
+			Type: System.UInt32
+			Default Value: 
+	Method: GetQueryUGCTagDisplayName:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9DC50
+		Ram Offset 0x180b9ee50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: indexTag
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: pchValue
+			Type: System.String
+			Default Value: 
+		Parameter 4:
+			Name: cchValueSize
+			Type: System.UInt32
+			Default Value: 
+	Method: GetQueryUGCPreviewURL:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9DDF0
+		Ram Offset 0x180b9eff0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: pchURL
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: cchURLSize
+			Type: System.UInt32
+			Default Value: 
+	Method: GetQueryUGCMetadata:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9DF70
+		Ram Offset 0x180b9f170
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: pchMetadata
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: cchMetadatasize
+			Type: System.UInt32
+			Default Value: 
+	Method: GetQueryUGCChildren:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9E0F0
+		Ram Offset 0x180b9f2f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: pvecPublishedFileID
+			Type: Steamworks.PublishedFileId_t[]
+			Default Value: 
+		Parameter 3:
+			Name: cMaxEntries
+			Type: System.UInt32
+			Default Value: 
+	Method: GetQueryUGCStatistic:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9E180
+		Ram Offset 0x180b9f380
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: eStatType
+			Type: Steamworks.EItemStatistic
+			Default Value: 
+		Parameter 3:
+			Name: pStatValue
+			Type: System.UInt64
+			Default Value: 
+	Method: GetQueryUGCNumAdditionalPreviews:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x00B9E210
+		Ram Offset 0x180b9f410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+	Method: GetQueryUGCAdditionalPreview:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9E270
+		Ram Offset 0x180b9f470
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: previewIndex
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: pchURLOrVideoID
+			Type: System.String
+			Default Value: 
+		Parameter 4:
+			Name: cchURLSize
+			Type: System.UInt32
+			Default Value: 
+		Parameter 5:
+			Name: pchOriginalFileName
+			Type: System.String
+			Default Value: 
+		Parameter 6:
+			Name: cchOriginalFileNameSize
+			Type: System.UInt32
+			Default Value: 
+		Parameter 7:
+			Name: pPreviewType
+			Type: Steamworks.EItemPreviewType
+			Default Value: 
+	Method: GetQueryUGCNumKeyValueTags:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x00B9E510
+		Ram Offset 0x180b9f710
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+	Method: GetQueryUGCKeyValueTag:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9E570
+		Ram Offset 0x180b9f770
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: keyValueTagIndex
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: pchKey
+			Type: System.String
+			Default Value: 
+		Parameter 4:
+			Name: cchKeySize
+			Type: System.UInt32
+			Default Value: 
+		Parameter 5:
+			Name: pchValue
+			Type: System.String
+			Default Value: 
+		Parameter 6:
+			Name: cchValueSize
+			Type: System.UInt32
+			Default Value: 
+	Method: GetQueryUGCKeyValueTag:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9E800
+		Ram Offset 0x180b9fa00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: pchKey
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: pchValue
+			Type: System.String
+			Default Value: 
+		Parameter 4:
+			Name: cchValueSize
+			Type: System.UInt32
+			Default Value: 
+	Method: GetQueryUGCContentDescriptors:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x00B9EA30
+		Ram Offset 0x180b9fc30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: pvecDescriptors
+			Type: Steamworks.EUGCContentDescriptorID
+			Default Value: 
+		Parameter 3:
+			Name: cMaxEntries
+			Type: System.UInt32
+			Default Value: 
+	Method: ReleaseQueryUGCRequest:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9EAC0
+		Ram Offset 0x180b9fcc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+	Method: AddRequiredTag:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9EB10
+		Ram Offset 0x180b9fd10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pTagName
+			Type: System.String
+			Default Value: 
+	Method: AddRequiredTagGroup:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9EC30
+		Ram Offset 0x180b9fe30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pTagGroups
+			Type: System.Collections.Generic.IList`1<System.String>
+			Default Value: 
+	Method: AddExcludedTag:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9ECF0
+		Ram Offset 0x180b9fef0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pTagName
+			Type: System.String
+			Default Value: 
+	Method: SetReturnOnlyIDs:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9EE10
+		Ram Offset 0x180ba0010
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: bReturnOnlyIDs
+			Type: System.Boolean
+			Default Value: 
+	Method: SetReturnKeyValueTags:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9EE70
+		Ram Offset 0x180ba0070
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: bReturnKeyValueTags
+			Type: System.Boolean
+			Default Value: 
+	Method: SetReturnLongDescription:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9EED0
+		Ram Offset 0x180ba00d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: bReturnLongDescription
+			Type: System.Boolean
+			Default Value: 
+	Method: SetReturnMetadata:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9EF30
+		Ram Offset 0x180ba0130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: bReturnMetadata
+			Type: System.Boolean
+			Default Value: 
+	Method: SetReturnChildren:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9EF90
+		Ram Offset 0x180ba0190
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: bReturnChildren
+			Type: System.Boolean
+			Default Value: 
+	Method: SetReturnAdditionalPreviews:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9EFF0
+		Ram Offset 0x180ba01f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: bReturnAdditionalPreviews
+			Type: System.Boolean
+			Default Value: 
+	Method: SetReturnTotalOnly:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9F050
+		Ram Offset 0x180ba0250
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: bReturnTotalOnly
+			Type: System.Boolean
+			Default Value: 
+	Method: SetReturnPlaytimeStats:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9F0B0
+		Ram Offset 0x180ba02b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: unDays
+			Type: System.UInt32
+			Default Value: 
+	Method: SetLanguage:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9F110
+		Ram Offset 0x180ba0310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pchLanguage
+			Type: System.String
+			Default Value: 
+	Method: SetAllowCachedResponse:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9F230
+		Ram Offset 0x180ba0430
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: unMaxAgeSeconds
+			Type: System.UInt32
+			Default Value: 
+	Method: SetCloudFileNameFilter:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9F290
+		Ram Offset 0x180ba0490
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pMatchCloudFileName
+			Type: System.String
+			Default Value: 
+	Method: SetMatchAnyTag:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9F3B0
+		Ram Offset 0x180ba05b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: bMatchAnyTag
+			Type: System.Boolean
+			Default Value: 
+	Method: SetSearchText:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9F410
+		Ram Offset 0x180ba0610
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pSearchText
+			Type: System.String
+			Default Value: 
+	Method: SetRankedByTrendDays:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9F530
+		Ram Offset 0x180ba0730
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: unDays
+			Type: System.UInt32
+			Default Value: 
+	Method: SetTimeCreatedDateRange:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9F590
+		Ram Offset 0x180ba0790
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: rtStart
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: rtEnd
+			Type: System.UInt32
+			Default Value: 
+	Method: SetTimeUpdatedDateRange:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9F610
+		Ram Offset 0x180ba0810
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: rtStart
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: rtEnd
+			Type: System.UInt32
+			Default Value: 
+	Method: AddRequiredKeyValueTag:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9F690
+		Ram Offset 0x180ba0890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCQueryHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pKey
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: pValue
+			Type: System.String
+			Default Value: 
+	Method: RequestUGCDetails:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00B9F860
+		Ram Offset 0x180ba0a60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+		Parameter 1:
+			Name: unMaxAgeSeconds
+			Type: System.UInt32
+			Default Value: 
+	Method: CreateItem:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00B9F900
+		Ram Offset 0x180ba0b00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nConsumerAppId
+			Type: Steamworks.AppId_t
+			Default Value: 
+		Parameter 1:
+			Name: eFileType
+			Type: Steamworks.EWorkshopFileType
+			Default Value: 
+	Method: StartItemUpdate:
+		Accessibility: Public
+		Return Type: Steamworks.UGCUpdateHandle_t
+		File Offset 0x00B9F9A0
+		Ram Offset 0x180ba0ba0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nConsumerAppId
+			Type: Steamworks.AppId_t
+			Default Value: 
+		Parameter 1:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+	Method: SetItemTitle:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9FA40
+		Ram Offset 0x180ba0c40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pchTitle
+			Type: System.String
+			Default Value: 
+	Method: SetItemDescription:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9FB60
+		Ram Offset 0x180ba0d60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pchDescription
+			Type: System.String
+			Default Value: 
+	Method: SetItemUpdateLanguage:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9FC80
+		Ram Offset 0x180ba0e80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pchLanguage
+			Type: System.String
+			Default Value: 
+	Method: SetItemMetadata:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9FDA0
+		Ram Offset 0x180ba0fa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pchMetaData
+			Type: System.String
+			Default Value: 
+	Method: SetItemVisibility:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9FEC0
+		Ram Offset 0x180ba10c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: eVisibility
+			Type: Steamworks.ERemoteStoragePublishedFileVisibility
+			Default Value: 
+	Method: SetItemTags:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9FF20
+		Ram Offset 0x180ba1120
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: updateHandle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pTags
+			Type: System.Collections.Generic.IList`1<System.String>
+			Default Value: 
+	Method: SetItemContent:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B9FFE0
+		Ram Offset 0x180ba11e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pszContentFolder
+			Type: System.String
+			Default Value: 
+	Method: SetItemPreview:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA0100
+		Ram Offset 0x180ba1300
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pszPreviewFile
+			Type: System.String
+			Default Value: 
+	Method: SetAllowLegacyUpload:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA0220
+		Ram Offset 0x180ba1420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: bAllowLegacyUpload
+			Type: System.Boolean
+			Default Value: 
+	Method: RemoveAllItemKeyValueTags:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA0280
+		Ram Offset 0x180ba1480
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+	Method: RemoveItemKeyValueTags:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA02D0
+		Ram Offset 0x180ba14d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pchKey
+			Type: System.String
+			Default Value: 
+	Method: AddItemKeyValueTag:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA03F0
+		Ram Offset 0x180ba15f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pchKey
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: pchValue
+			Type: System.String
+			Default Value: 
+	Method: AddItemPreviewFile:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA05C0
+		Ram Offset 0x180ba17c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pszPreviewFile
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: type
+			Type: Steamworks.EItemPreviewType
+			Default Value: 
+	Method: AddItemPreviewVideo:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA06F0
+		Ram Offset 0x180ba18f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pszVideoID
+			Type: System.String
+			Default Value: 
+	Method: UpdateItemPreviewFile:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA0810
+		Ram Offset 0x180ba1a10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: pszPreviewFile
+			Type: System.String
+			Default Value: 
+	Method: UpdateItemPreviewVideo:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA0940
+		Ram Offset 0x180ba1b40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: pszVideoID
+			Type: System.String
+			Default Value: 
+	Method: RemoveItemPreview:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA0A70
+		Ram Offset 0x180ba1c70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+	Method: AddContentDescriptor:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA0AD0
+		Ram Offset 0x180ba1cd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: descid
+			Type: Steamworks.EUGCContentDescriptorID
+			Default Value: 
+	Method: RemoveContentDescriptor:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA0B30
+		Ram Offset 0x180ba1d30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: descid
+			Type: Steamworks.EUGCContentDescriptorID
+			Default Value: 
+	Method: SubmitItemUpdate:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA0B90
+		Ram Offset 0x180ba1d90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pchChangeNote
+			Type: System.String
+			Default Value: 
+	Method: GetItemUpdateProgress:
+		Accessibility: Public
+		Return Type: Steamworks.EItemUpdateStatus
+		File Offset 0x00BA0CE0
+		Ram Offset 0x180ba1ee0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.UGCUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: punBytesProcessed
+			Type: System.UInt64
+			Default Value: 
+		Parameter 2:
+			Name: punBytesTotal
+			Type: System.UInt64
+			Default Value: 
+	Method: SetUserItemVote:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA0D60
+		Ram Offset 0x180ba1f60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+		Parameter 1:
+			Name: bVoteUp
+			Type: System.Boolean
+			Default Value: 
+	Method: GetUserItemVote:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA0E00
+		Ram Offset 0x180ba2000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+	Method: AddItemToFavorites:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA0E90
+		Ram Offset 0x180ba2090
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nAppId
+			Type: Steamworks.AppId_t
+			Default Value: 
+		Parameter 1:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+	Method: RemoveItemFromFavorites:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA0F30
+		Ram Offset 0x180ba2130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nAppId
+			Type: Steamworks.AppId_t
+			Default Value: 
+		Parameter 1:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+	Method: SubscribeItem:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA0FD0
+		Ram Offset 0x180ba21d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+	Method: UnsubscribeItem:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA1060
+		Ram Offset 0x180ba2260
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+	Method: GetNumSubscribedItems:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x00BA10F0
+		Ram Offset 0x180ba22f0
+		Virtual Method Slot: 65535
+
+	Method: GetSubscribedItems:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x00BA1140
+		Ram Offset 0x180ba2340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pvecPublishedFileID
+			Type: Steamworks.PublishedFileId_t[]
+			Default Value: 
+		Parameter 1:
+			Name: cMaxEntries
+			Type: System.UInt32
+			Default Value: 
+	Method: GetItemState:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x00BA1220
+		Ram Offset 0x180ba2420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+	Method: GetItemInstallInfo:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA1270
+		Ram Offset 0x180ba2470
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+		Parameter 1:
+			Name: punSizeOnDisk
+			Type: System.UInt64
+			Default Value: 
+		Parameter 2:
+			Name: pchFolder
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: cchFolderSize
+			Type: System.UInt32
+			Default Value: 
+		Parameter 4:
+			Name: punTimeStamp
+			Type: System.UInt32
+			Default Value: 
+	Method: GetItemDownloadInfo:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA13F0
+		Ram Offset 0x180ba25f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+		Parameter 1:
+			Name: punBytesDownloaded
+			Type: System.UInt64
+			Default Value: 
+		Parameter 2:
+			Name: punBytesTotal
+			Type: System.UInt64
+			Default Value: 
+	Method: DownloadItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA1470
+		Ram Offset 0x180ba2670
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+		Parameter 1:
+			Name: bHighPriority
+			Type: System.Boolean
+			Default Value: 
+	Method: BInitWorkshopForGameServer:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA14D0
+		Ram Offset 0x180ba26d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: unWorkshopDepotID
+			Type: Steamworks.DepotId_t
+			Default Value: 
+		Parameter 1:
+			Name: pszFolder
+			Type: System.String
+			Default Value: 
+	Method: SuspendDownloads:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00BA15F0
+		Ram Offset 0x180ba27f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bSuspend
+			Type: System.Boolean
+			Default Value: 
+	Method: StartPlaytimeTracking:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA1640
+		Ram Offset 0x180ba2840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pvecPublishedFileID
+			Type: Steamworks.PublishedFileId_t[]
+			Default Value: 
+		Parameter 1:
+			Name: unNumPublishedFileIDs
+			Type: System.UInt32
+			Default Value: 
+	Method: StopPlaytimeTracking:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA1750
+		Ram Offset 0x180ba2950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pvecPublishedFileID
+			Type: Steamworks.PublishedFileId_t[]
+			Default Value: 
+		Parameter 1:
+			Name: unNumPublishedFileIDs
+			Type: System.UInt32
+			Default Value: 
+	Method: StopPlaytimeTrackingForAllItems:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA1860
+		Ram Offset 0x180ba2a60
+		Virtual Method Slot: 65535
+
+	Method: AddDependency:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA18E0
+		Ram Offset 0x180ba2ae0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nParentPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+		Parameter 1:
+			Name: nChildPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+	Method: RemoveDependency:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA1980
+		Ram Offset 0x180ba2b80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nParentPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+		Parameter 1:
+			Name: nChildPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+	Method: AddAppDependency:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA1A20
+		Ram Offset 0x180ba2c20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+		Parameter 1:
+			Name: nAppID
+			Type: Steamworks.AppId_t
+			Default Value: 
+	Method: RemoveAppDependency:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA1AC0
+		Ram Offset 0x180ba2cc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+		Parameter 1:
+			Name: nAppID
+			Type: Steamworks.AppId_t
+			Default Value: 
+	Method: GetAppDependencies:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA1B60
+		Ram Offset 0x180ba2d60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+	Method: DeleteItem:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA1BF0
+		Ram Offset 0x180ba2df0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nPublishedFileID
+			Type: Steamworks.PublishedFileId_t
+			Default Value: 
+	Method: ShowWorkshopEULA:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA1C80
+		Ram Offset 0x180ba2e80
+		Virtual Method Slot: 65535
+
+	Method: GetWorkshopEULAStatus:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA1CD0
+		Ram Offset 0x180ba2ed0
+		Virtual Method Slot: 65535

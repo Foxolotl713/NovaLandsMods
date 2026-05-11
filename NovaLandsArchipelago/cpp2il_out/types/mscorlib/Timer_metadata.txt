@@ -1,0 +1,202 @@
+Type: System.Threading.Timer:
+	Base Class: 
+		System.MarshalByRefObject
+
+	Interfaces:
+		System.IDisposable
+
+	Nested Types:
+		System.Threading.Timer/TimerComparer
+		System.Threading.Timer/Scheduler
+
+	Static Field: MaxValue
+		Type: System.Int64
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 4294967294
+
+	Field: callback
+		Type: System.Threading.TimerCallback
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: state
+		Type: System.Object
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: due_time_ms
+		Type: System.Int64
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: period_ms
+		Type: System.Int64
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: next_run
+		Type: System.Int64
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: disposed
+		Type: System.Boolean
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: is_dead
+		Type: System.Boolean
+		Offset in Defining Type: 0x41
+		Has Default: False
+
+	Field: is_added
+		Type: System.Boolean
+		Offset in Defining Type: 0x42
+		Has Default: False
+
+	Method: get_scheduler:
+		Accessibility: Private
+		Return Type: System.Threading.Timer/Scheduler
+		File Offset 0x0192ABA0
+		Ram Offset 0x18192bda0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0192AC30
+		Ram Offset 0x18192be30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: System.Threading.TimerCallback
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: dueTime
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: period
+			Type: System.Int32
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0192AC50
+		Ram Offset 0x18192be50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: System.Threading.TimerCallback
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: dueTime
+			Type: System.TimeSpan
+			Default Value: 
+		Parameter 3:
+			Name: period
+			Type: System.TimeSpan
+			Default Value: 
+	Method: Init:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0192ACD0
+		Ram Offset 0x18192bed0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: System.Threading.TimerCallback
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: dueTime
+			Type: System.Int64
+			Default Value: 
+		Parameter 3:
+			Name: period
+			Type: System.Int64
+			Default Value: 
+	Method: Change:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0192AE00
+		Ram Offset 0x18192c000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dueTime
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: period
+			Type: System.Int32
+			Default Value: 
+	Method: Change:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0192AE20
+		Ram Offset 0x18192c020
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dueTime
+			Type: System.TimeSpan
+			Default Value: 
+		Parameter 1:
+			Name: period
+			Type: System.TimeSpan
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0192AEA0
+		Ram Offset 0x18192c0a0
+		Virtual Method Slot: 6
+
+	Method: Change:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0192AEE0
+		Ram Offset 0x18192c0e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dueTime
+			Type: System.Int64
+			Default Value: 
+		Parameter 1:
+			Name: period
+			Type: System.Int64
+			Default Value: 
+		Parameter 2:
+			Name: first
+			Type: System.Boolean
+			Default Value: 
+	Method: KeepRootedWhileScheduled:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: GetTimeMonotonic:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x0192B150
+		Ram Offset 0x18192c350
+		Virtual Method Slot: 65535

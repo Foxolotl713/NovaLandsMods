@@ -1,0 +1,282 @@
+Type: UnityEngine.UIElements.UIElementsUtility:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		UnityEngine.UIElements.IUIElementsUtility
+
+	Static Field: s_ContainerStack
+		Type: System.Collections.Generic.Stack`1<UnityEngine.UIElements.IMGUIContainer>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: s_UIElementsCache
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,UnityEngine.UIElements.Panel>
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: s_EventInstance
+		Type: UnityEngine.Event
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: editorPlayModeTintColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: singleLineHeight
+		Type: System.Single
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: s_Instance
+		Type: UnityEngine.UIElements.UIElementsUtility
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Static Field: s_PanelsIterationList
+		Type: System.Collections.Generic.List`1<UnityEngine.UIElements.Panel>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Static Field: s_RepaintProfilerMarkerName
+		Type: System.String
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Static Field: s_EventProfilerMarkerName
+		Type: System.String
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Static Field: s_RepaintProfilerMarker
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Static Field: s_EventProfilerMarker
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0276C850
+		Ram Offset 0x18276da50
+		Virtual Method Slot: 65535
+
+	Method: UnityEngine.UIElements.IUIElementsUtility.MakeCurrentIMGUIContainerDirty:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0276C900
+		Ram Offset 0x18276db00
+		Virtual Method Slot: 9
+
+	Method: UnityEngine.UIElements.IUIElementsUtility.TakeCapture:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0276C9E0
+		Ram Offset 0x18276dbe0
+		Virtual Method Slot: 4
+
+	Method: UnityEngine.UIElements.IUIElementsUtility.ReleaseCapture:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00D91FF0
+		Ram Offset 0x180d931f0
+		Virtual Method Slot: 5
+
+	Method: UnityEngine.UIElements.IUIElementsUtility.ProcessEvent:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0276CAA0
+		Ram Offset 0x18276dca0
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: instanceID
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: nativeEventPtr
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 2:
+			Name: eventHandled
+			Type: System.Boolean
+			Default Value: 
+	Method: UnityEngine.UIElements.IUIElementsUtility.CleanupRoots:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0276CBE0
+		Ram Offset 0x18276dde0
+		Virtual Method Slot: 7
+
+	Method: UnityEngine.UIElements.IUIElementsUtility.EndContainerGUIFromException:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0276CD70
+		Ram Offset 0x18276df70
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: exception
+			Type: System.Exception
+			Default Value: 
+	Method: RegisterCachedPanel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0276CE30
+		Ram Offset 0x18276e030
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instanceID
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: panel
+			Type: UnityEngine.UIElements.Panel
+			Default Value: 
+	Method: RemoveCachedPanel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0276CEE0
+		Ram Offset 0x18276e0e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instanceID
+			Type: System.Int32
+			Default Value: 
+	Method: TryGetPanel:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0276CF60
+		Ram Offset 0x18276e160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instanceID
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: panel
+			Type: UnityEngine.UIElements.Panel
+			Default Value: 
+	Method: BeginContainerGUI:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0276CFF0
+		Ram Offset 0x18276e1f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cache
+			Type: UnityEngine.GUILayoutUtility/LayoutCache
+			Default Value: 
+		Parameter 1:
+			Name: evt
+			Type: UnityEngine.Event
+			Default Value: 
+		Parameter 2:
+			Name: container
+			Type: UnityEngine.UIElements.IMGUIContainer
+			Default Value: 
+	Method: EndContainerGUI:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0276D550
+		Ram Offset 0x18276e750
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: evt
+			Type: UnityEngine.Event
+			Default Value: 
+		Parameter 1:
+			Name: layoutSize
+			Type: UnityEngine.Rect
+			Default Value: 
+	Method: CreateEvent:
+		Accessibility: Assembly
+		Return Type: UnityEngine.UIElements.EventBase
+		File Offset 0x0276D840
+		Ram Offset 0x18276ea40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: systemEvent
+			Type: UnityEngine.Event
+			Default Value: 
+	Method: CreateEvent:
+		Accessibility: Assembly
+		Return Type: UnityEngine.UIElements.EventBase
+		File Offset 0x0276D8F0
+		Ram Offset 0x18276eaf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: systemEvent
+			Type: UnityEngine.Event
+			Default Value: 
+		Parameter 1:
+			Name: eventType
+			Type: UnityEngine.EventType
+			Default Value: 
+	Method: DoDispatch:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0276DE10
+		Ram Offset 0x18276f010
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: panel
+			Type: UnityEngine.UIElements.BaseVisualElementPanel
+			Default Value: 
+	Method: GetAllPanels:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0276E650
+		Ram Offset 0x18276f850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: panels
+			Type: System.Collections.Generic.List`1<UnityEngine.UIElements.Panel>
+			Default Value: 
+		Parameter 1:
+			Name: contextType
+			Type: UnityEngine.UIElements.ContextType
+			Default Value: 
+	Method: GetPanelsIterator:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.Dictionary`2/Enumerator<System.Int32, UnityEngine.UIElements.Panel>
+		File Offset 0x0276E780
+		Ram Offset 0x18276f980
+		Virtual Method Slot: 65535
+
+	Method: PixelsPerUnitScaleForElement:
+		Accessibility: Assembly
+		Return Type: System.Single
+		File Offset 0x0276E8A0
+		Ram Offset 0x18276faa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: sprite
+			Type: UnityEngine.Sprite
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0276EA20
+		Ram Offset 0x18276fc20
+		Virtual Method Slot: 65535

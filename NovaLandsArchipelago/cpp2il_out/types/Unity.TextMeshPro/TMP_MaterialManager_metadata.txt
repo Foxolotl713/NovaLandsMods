@@ -1,0 +1,279 @@
+Type: TMPro.TMP_MaterialManager:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		TMPro.TMP_MaterialManager/FallbackMaterial
+		TMPro.TMP_MaterialManager/MaskingMaterial
+		TMPro.TMP_MaterialManager/<>c__DisplayClass11_0
+		TMPro.TMP_MaterialManager/<>c__DisplayClass12_0
+		TMPro.TMP_MaterialManager/<>c__DisplayClass13_0
+		TMPro.TMP_MaterialManager/<>c__DisplayClass9_0
+
+	Static Field: m_materialList
+		Type: System.Collections.Generic.List`1<TMPro.TMP_MaterialManager/MaskingMaterial>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: m_fallbackMaterials
+		Type: System.Collections.Generic.Dictionary`2<System.Int64,TMPro.TMP_MaterialManager/FallbackMaterial>
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: m_fallbackMaterialLookup
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.Int64>
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: m_fallbackCleanupList
+		Type: System.Collections.Generic.List`1<TMPro.TMP_MaterialManager/FallbackMaterial>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: isFallbackListDirty
+		Type: System.Boolean
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023A72B0
+		Ram Offset 0x1823a84b0
+		Virtual Method Slot: 65535
+
+	Method: OnPreRender:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023A7630
+		Ram Offset 0x1823a8830
+		Virtual Method Slot: 65535
+
+	Method: GetStencilMaterial:
+		Accessibility: Public
+		Return Type: UnityEngine.Material
+		File Offset 0x023A76B0
+		Ram Offset 0x1823a88b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: baseMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 1:
+			Name: stencilID
+			Type: System.Int32
+			Default Value: 
+	Method: ReleaseStencilMaterial:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023A7B90
+		Ram Offset 0x1823a8d90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stencilMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: GetBaseMaterial:
+		Accessibility: Public
+		Return Type: UnityEngine.Material
+		File Offset 0x023A7E00
+		Ram Offset 0x1823a9000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stencilMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: SetStencil:
+		Accessibility: Public
+		Return Type: UnityEngine.Material
+		File Offset 0x023A7FD0
+		Ram Offset 0x1823a91d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: material
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 1:
+			Name: stencilID
+			Type: System.Int32
+			Default Value: 
+	Method: AddMaskingMaterial:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023A8190
+		Ram Offset 0x1823a9390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: baseMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 1:
+			Name: stencilMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 2:
+			Name: stencilID
+			Type: System.Int32
+			Default Value: 
+	Method: RemoveStencilMaterial:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023A8540
+		Ram Offset 0x1823a9740
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stencilMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: ReleaseBaseMaterial:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023A86D0
+		Ram Offset 0x1823a98d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: baseMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: ClearMaterials:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023A8D20
+		Ram Offset 0x1823a9f20
+		Virtual Method Slot: 65535
+
+	Method: GetStencilID:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x023A8F90
+		Ram Offset 0x1823aa190
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: obj
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: GetMaterialForRendering:
+		Accessibility: Public
+		Return Type: UnityEngine.Material
+		File Offset 0x023A9490
+		Ram Offset 0x1823aa690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: graphic
+			Type: UnityEngine.UI.MaskableGraphic
+			Default Value: 
+		Parameter 1:
+			Name: baseMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: FindRootSortOverrideCanvas:
+		Accessibility: Private
+		Return Type: UnityEngine.Transform
+		File Offset 0x023A9720
+		Ram Offset 0x1823aa920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: start
+			Type: UnityEngine.Transform
+			Default Value: 
+	Method: GetFallbackMaterial:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Material
+		File Offset 0x023A9990
+		Ram Offset 0x1823aab90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fontAsset
+			Type: TMPro.TMP_FontAsset
+			Default Value: 
+		Parameter 1:
+			Name: sourceMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 2:
+			Name: atlasIndex
+			Type: System.Int32
+			Default Value: 
+	Method: GetFallbackMaterial:
+		Accessibility: Public
+		Return Type: UnityEngine.Material
+		File Offset 0x023A9E50
+		Ram Offset 0x1823ab050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sourceMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 1:
+			Name: targetMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: AddFallbackMaterialReference:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023AA4C0
+		Ram Offset 0x1823ab6c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: targetMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: RemoveFallbackMaterialReference:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023AA710
+		Ram Offset 0x1823ab910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: targetMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: CleanupFallbackMaterials:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023AA9D0
+		Ram Offset 0x1823abbd0
+		Virtual Method Slot: 65535
+
+	Method: ReleaseFallbackMaterial:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023AAC40
+		Ram Offset 0x1823abe40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fallbackMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: CopyMaterialPresetProperties:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023AAF20
+		Ram Offset 0x1823ac120
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: source
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 1:
+			Name: destination
+			Type: UnityEngine.Material
+			Default Value: 

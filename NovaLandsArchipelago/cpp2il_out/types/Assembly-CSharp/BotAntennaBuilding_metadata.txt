@@ -1,0 +1,923 @@
+Type: BotAntennaBuilding:
+	Base Class: 
+		BaseBuilding
+
+	Interfaces:
+
+	Nested Types:
+		BotAntennaBuilding/<>c__DisplayClass65_0
+		BotAntennaBuilding/<DelayedRepairBotCoroutine>d__93
+		BotAntennaBuilding/<RepairBotCoroutine>d__94
+
+	Static Field: HOLD_TO_MOVE_COMMAND_INDEX
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Field: botSpawningPositions
+		Type: System.Collections.Generic.List`1<UnityEngine.Transform>
+		Offset in Defining Type: 0x580
+		Has Default: False
+
+	Field: antennaPopupPrefab
+		Type: AntennaPopup
+		Offset in Defining Type: 0x588
+		Has Default: False
+
+	Field: baseNumberOfBotSlots
+		Type: System.Int32
+		Offset in Defining Type: 0x590
+		Has Default: False
+
+	Field: depositArea
+		Type: BaseBuilding
+		Offset in Defining Type: 0x598
+		Has Default: False
+
+	Field: healBotsConstantParticle
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x5A0
+		Has Default: False
+
+	Field: healBotsBurstParticle
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x5A8
+		Has Default: False
+
+	Field: healBotsSFX
+		Type: System.String
+		Offset in Defining Type: 0x5B0
+		Has Default: False
+
+	Field: feedbackEmptyFlag
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0x5B8
+		Has Default: False
+
+	Field: feedbackCollectorFlag
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0x5C0
+		Has Default: False
+
+	Field: feedbackFighterFlag
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0x5C8
+		Has Default: False
+
+	Field: feedbackLogisticsFlag
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0x5D0
+		Has Default: False
+
+	Field: flagsSprites
+		Type: System.Collections.Generic.List`1<UnityEngine.SpriteRenderer>
+		Offset in Defining Type: 0x5D8
+		Has Default: False
+
+	Field: oxygenHiPriorityLevelPriority
+		Type: System.Int32
+		Offset in Defining Type: 0x5E0
+		Has Default: False
+
+	Field: recipePausedPriority
+		Type: System.Int32
+		Offset in Defining Type: 0x5E4
+		Has Default: False
+
+	Field: generatorHiPriorityLevelPriority
+		Type: System.Int32
+		Offset in Defining Type: 0x5E8
+		Has Default: False
+
+	Field: transporterAntennaHiPriorityLevelPriority
+		Type: System.Int32
+		Offset in Defining Type: 0x5EC
+		Has Default: False
+
+	Field: farmingHiPriority
+		Type: System.Int32
+		Offset in Defining Type: 0x5F0
+		Has Default: False
+
+	Field: recipesUnderResourcesLimitPriority
+		Type: System.Int32
+		Offset in Defining Type: 0x5F4
+		Has Default: False
+
+	Field: oxygenLoPriorityLevelPriority
+		Type: System.Int32
+		Offset in Defining Type: 0x5F8
+		Has Default: False
+
+	Field: generatorLoPriorityLevelPriority
+		Type: System.Int32
+		Offset in Defining Type: 0x5FC
+		Has Default: False
+
+	Field: transporterAntennaLoPriorityLevelPriority
+		Type: System.Int32
+		Offset in Defining Type: 0x600
+		Has Default: False
+
+	Field: depositResourcesPriority
+		Type: System.Int32
+		Offset in Defining Type: 0x604
+		Has Default: False
+
+	Field: feedAnimalsPriority
+		Type: System.Int32
+		Offset in Defining Type: 0x608
+		Has Default: False
+
+	Field: farmingLoPriority
+		Type: System.Int32
+		Offset in Defining Type: 0x60C
+		Has Default: False
+
+	Field: assignedBots
+		Type: System.Collections.Generic.List`1<BasePlayerBot>
+		Offset in Defining Type: 0x610
+		Has Default: False
+
+	Field: antennaPopup
+		Type: AntennaPopup
+		Offset in Defining Type: 0x618
+		Has Default: False
+
+	Field: logisticsPriority
+		Type: System.Int32[]
+		Offset in Defining Type: 0x620
+		Has Default: False
+
+	Field: logisticsPriorityReversed
+		Type: LogisticsPriority[]
+		Offset in Defining Type: 0x628
+		Has Default: False
+
+	Field: currentTasks
+		Type: System.Collections.Generic.List`1<LogisticsBotTask>[]
+		Offset in Defining Type: 0x630
+		Has Default: False
+
+	Field: toRemoveGetLogisticsTask
+		Type: System.Collections.Generic.List`1<LogisticsBotTask>
+		Offset in Defining Type: 0x638
+		Has Default: False
+
+	Field: invalidResourcesGetLogisticsTask
+		Type: System.Collections.Generic.List`1<System.Int32>
+		Offset in Defining Type: 0x640
+		Has Default: False
+
+	Field: currentTaskId
+		Type: System.Int32
+		Offset in Defining Type: 0x648
+		Has Default: False
+
+	Field: bonusSlotCount
+		Type: System.Int32
+		Offset in Defining Type: 0x64C
+		Has Default: False
+
+	Field: repairBotsCoroutine
+		Type: UnityEngine.Coroutine
+		Offset in Defining Type: 0x650
+		Has Default: False
+
+	Field: waitRepairBots
+		Type: UnityEngine.WaitForSecondsRealtime
+		Offset in Defining Type: 0x658
+		Has Default: False
+
+	Field: <LoadedData>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x660
+		Has Default: False
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A965D0
+		Ram Offset 0x180a977d0
+		Virtual Method Slot: 17
+
+		Parameter 0:
+			Name: parentArea
+			Type: WorldArea
+			Default Value: 
+	Method: InitProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00A96680
+		Ram Offset 0x180a97880
+		Virtual Method Slot: 25
+
+	Method: InitInteractionFeedbacks:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00A969C0
+		Ram Offset 0x180a97bc0
+		Virtual Method Slot: 100
+
+	Method: UpdateInteractionLabels:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00A97150
+		Ram Offset 0x180a98350
+		Virtual Method Slot: 102
+
+	Method: Reposition:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A97370
+		Ram Offset 0x180a98570
+		Virtual Method Slot: 49
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector3
+			Default Value: 
+	Method: ShowPopup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A97670
+		Ram Offset 0x180a98870
+		Virtual Method Slot: 116
+
+	Method: HidePopup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A977E0
+		Ram Offset 0x180a989e0
+		Virtual Method Slot: 117
+
+	Method: HidePopupPublic:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A97890
+		Ram Offset 0x180a98a90
+		Virtual Method Slot: 65535
+
+	Method: HideBotsPopup:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00A97970
+		Ram Offset 0x180a98b70
+		Virtual Method Slot: 65535
+
+	Method: OnDestroy:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00A97A50
+		Ram Offset 0x180a98c50
+		Virtual Method Slot: 8
+
+	Method: OnDismantle:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00A97A90
+		Ram Offset 0x180a98c90
+		Virtual Method Slot: 90
+
+	Method: OnClickConfirmCantDismantle:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A98050
+		Ram Offset 0x180a99250
+		Virtual Method Slot: 65535
+
+	Method: OnClickConfirmDismantleHaveBots:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A980F0
+		Ram Offset 0x180a992f0
+		Virtual Method Slot: 65535
+
+	Method: OnClickCancelDismantleHaveBots:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A98050
+		Ram Offset 0x180a99250
+		Virtual Method Slot: 65535
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A981A0
+		Ram Offset 0x180a993a0
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: parentArea
+			Type: WorldArea
+			Default Value: 
+	Method: LoadTasks:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A985A0
+		Ram Offset 0x180a997a0
+		Virtual Method Slot: 65535
+
+	Method: LoadDependentData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A988B0
+		Ram Offset 0x180a99ab0
+		Virtual Method Slot: 20
+
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x00A98B00
+		Ram Offset 0x180a99d00
+		Virtual Method Slot: 97
+
+		Parameter 0:
+			Name: firstSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: InitLogisticsPriority:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A98E70
+		Ram Offset 0x180a9a070
+		Virtual Method Slot: 65535
+
+	Method: GetLogisticsTask:
+		Accessibility: Public
+		Return Type: LogisticsBotTask
+		File Offset 0x00A994D0
+		Ram Offset 0x180a9a6d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bot
+			Type: LogisticsPlayerBot
+			Default Value: 
+		Parameter 1:
+			Name: unavailableResources
+			Type: System.Collections.Generic.List`1<System.Int32>
+			Default Value: 
+	Method: GetLogisticsTask:
+		Accessibility: Public
+		Return Type: LogisticsBotTask
+		File Offset 0x00A998C0
+		Ram Offset 0x180a9aac0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: transporterAntenna
+			Type: TransporterAntenna
+			Default Value: 
+		Parameter 1:
+			Name: unavailableResources
+			Type: System.Collections.Generic.List`1<System.Int32>
+			Default Value: 
+	Method: HasTask:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A99EC0
+		Ram Offset 0x180a9b0c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: task
+			Type: LogisticsBotTask
+			Default Value: 
+	Method: BotServesThisPriority:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00A99FE0
+		Ram Offset 0x180a9b1e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bot
+			Type: LogisticsPlayerBot
+			Default Value: 
+		Parameter 1:
+			Name: priority
+			Type: LogisticsPriority
+			Default Value: 
+	Method: GetTaskTaskPrioritiesIndexes:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A9A080
+		Ram Offset 0x180a9b280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+		Parameter 1:
+			Name: loPriorityIndex
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: hiPriorityIndex
+			Type: System.Int32
+			Default Value: 
+	Method: UpdateTaskId:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A9A4B0
+		Ram Offset 0x180a9b6b0
+		Virtual Method Slot: 65535
+
+	Method: UpdateTransporterAntennasTasks:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A9A5B0
+		Ram Offset 0x180a9b7b0
+		Virtual Method Slot: 65535
+
+	Method: AddLogisticsTask:
+		Accessibility: Public
+		Return Type: LogisticsBotTask
+		File Offset 0x00A9A730
+		Ram Offset 0x180a9b930
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: task
+			Type: LogisticsBotTask
+			Default Value: 
+	Method: AddLogisticsTask:
+		Accessibility: Public
+		Return Type: LogisticsBotTask
+		File Offset 0x00A9A890
+		Ram Offset 0x180a9ba90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+		Parameter 1:
+			Name: resource
+			Type: BaseResourceScriptableObject
+			Default Value: 
+		Parameter 2:
+			Name: hiPriority
+			Type: System.Boolean
+			Default Value: 
+	Method: RemoveLogisticsTask:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9AAD0
+		Ram Offset 0x180a9bcd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: task
+			Type: LogisticsBotTask
+			Default Value: 
+		Parameter 1:
+			Name: notifyBot
+			Type: System.Boolean
+			Default Value: False
+	Method: RemoveLogisticsTask:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9ABA0
+		Ram Offset 0x180a9bda0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+		Parameter 1:
+			Name: notifyBot
+			Type: System.Boolean
+			Default Value: False
+		Parameter 2:
+			Name: updateLogistics
+			Type: System.Boolean
+			Default Value: True
+	Method: ReturnLogisticsTaskDueToNoResource:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9AED0
+		Ram Offset 0x180a9c0d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: task
+			Type: LogisticsBotTask
+			Default Value: 
+	Method: IsTaskExecutable:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A9B000
+		Ram Offset 0x180a9c200
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: task
+			Type: LogisticsBotTask
+			Default Value: 
+	Method: IsTaskExecutable:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A9B130
+		Ram Offset 0x180a9c330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: task
+			Type: LogisticsBotTask
+			Default Value: 
+		Parameter 1:
+			Name: antenna
+			Type: TransporterAntenna
+			Default Value: 
+	Method: UpdateTaskPriority:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9B290
+		Ram Offset 0x180a9c490
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: task
+			Type: LogisticsBotTask
+			Default Value: 
+	Method: UnassignTasksOnDestroyed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A9B3D0
+		Ram Offset 0x180a9c5d0
+		Virtual Method Slot: 65535
+
+	Method: NotifyAntennaPlaced:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9B500
+		Ram Offset 0x180a9c700
+		Virtual Method Slot: 65535
+
+	Method: RemoveAllUnclaimedTasks:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9B720
+		Ram Offset 0x180a9c920
+		Virtual Method Slot: 65535
+
+	Method: NotifyBaseAttacked:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9BA80
+		Ram Offset 0x180a9cc80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: attacker
+			Type: BaseCharacter
+			Default Value: 
+	Method: NotifyEntitySpawned:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9BD00
+		Ram Offset 0x180a9cf00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newEntity
+			Type: BaseCharacter
+			Default Value: 
+	Method: UpdateBotsFlags:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9BF80
+		Ram Offset 0x180a9d180
+		Virtual Method Slot: 65535
+
+	Method: CanAddItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A9C290
+		Ram Offset 0x180a9d490
+		Virtual Method Slot: 120
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: isRecipe
+			Type: System.Boolean
+			Default Value: 
+	Method: TryToConsumeItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00A9C2B0
+		Ram Offset 0x180a9d4b0
+		Virtual Method Slot: 118
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+		Parameter 1:
+			Name: sourceCharacter
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: dropToTheGround
+			Type: System.Boolean
+			Default Value: 
+	Method: AssignBotOnDragAndDrop:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A9C4A0
+		Ram Offset 0x180a9d6a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: botItem
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+	Method: SpawnBot:
+		Accessibility: Public
+		Return Type: BasePlayerBot
+		File Offset 0x00A9C940
+		Ram Offset 0x180a9db40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: itemId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: botData
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 2:
+			Name: loading
+			Type: System.Boolean
+			Default Value: False
+	Method: SpawnBot:
+		Accessibility: Public
+		Return Type: BasePlayerBot
+		File Offset 0x00A9CC20
+		Ram Offset 0x180a9de20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: botData
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: loading
+			Type: System.Boolean
+			Default Value: False
+	Method: SpawnBot:
+		Accessibility: Public
+		Return Type: BasePlayerBot
+		File Offset 0x00A9CD20
+		Ram Offset 0x180a9df20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: botResourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: loading
+			Type: System.Boolean
+			Default Value: False
+	Method: AssignBot:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9CDB0
+		Ram Offset 0x180a9dfb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bot
+			Type: BasePlayerBot
+			Default Value: 
+	Method: UnassignBot:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9CF70
+		Ram Offset 0x180a9e170
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bot
+			Type: BasePlayerBot
+			Default Value: 
+	Method: UnassignBotsOnDestroyed:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00A9D030
+		Ram Offset 0x180a9e230
+		Virtual Method Slot: 65535
+
+	Method: CanResourceBeCollectedByLogisticsBot:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A9D1E0
+		Ram Offset 0x180a9e3e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bot
+			Type: LogisticsPlayerBot
+			Default Value: 
+		Parameter 1:
+			Name: resource
+			Type: BaseResource
+			Default Value: 
+	Method: CanResourceBeCollectedByLogisticsBot:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A9D540
+		Ram Offset 0x180a9e740
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bot
+			Type: LogisticsPlayerBot
+			Default Value: 
+		Parameter 1:
+			Name: container
+			Type: BaseBuilding
+			Default Value: 
+		Parameter 2:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+	Method: GetLootToBeSpawned:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+		File Offset 0x00A9D8C0
+		Ram Offset 0x180a9eac0
+		Virtual Method Slot: 60
+
+	Method: Despawn:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9E0A0
+		Ram Offset 0x180a9f2a0
+		Virtual Method Slot: 68
+
+	Method: EnterDestroyed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9E310
+		Ram Offset 0x180a9f510
+		Virtual Method Slot: 166
+
+	Method: AddSlotBonus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9E340
+		Ram Offset 0x180a9f540
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bonus
+			Type: System.Int32
+			Default Value: 
+	Method: CheckUnlockedRelics:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9E360
+		Ram Offset 0x180a9f560
+		Virtual Method Slot: 176
+
+	Method: OnUnlockRelic:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9E420
+		Ram Offset 0x180a9f620
+		Virtual Method Slot: 177
+
+		Parameter 0:
+			Name: relic
+			Type: RelicScriptableObject
+			Default Value: 
+	Method: DelayedRepairBotCoroutine:
+		Accessibility: Public
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00A9E780
+		Ram Offset 0x180a9f980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: antenna
+			Type: BotAntennaBuilding
+			Default Value: 
+	Method: RepairBotCoroutine:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00A9E880
+		Ram Offset 0x180a9fa80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: amount
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: interval
+			Type: System.Single
+			Default Value: 
+	Method: get_AssignedBots:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<BasePlayerBot>
+		File Offset 0x00A9E940
+		Ram Offset 0x180a9fb40
+		Virtual Method Slot: 65535
+
+	Method: get_NumberOfBotSlots:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00A9E950
+		Ram Offset 0x180a9fb50
+		Virtual Method Slot: 65535
+
+	Method: get_EmptySlots:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00A9E960
+		Ram Offset 0x180a9fb60
+		Virtual Method Slot: 65535
+
+	Method: get_IsPopupOpen:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A9E9B0
+		Ram Offset 0x180a9fbb0
+		Virtual Method Slot: 182
+
+	Method: get_DepositArea:
+		Accessibility: Public
+		Return Type: BaseBuilding
+		File Offset 0x0041BEC0
+		Ram Offset 0x18041d0c0
+		Virtual Method Slot: 65535
+
+	Method: get_CurrentTasks:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<LogisticsBotTask>[]
+		File Offset 0x00A9EB20
+		Ram Offset 0x180a9fd20
+		Virtual Method Slot: 65535
+
+	Method: get_BonusSlotCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x003C1880
+		Ram Offset 0x1803c2a80
+		Virtual Method Slot: 65535
+
+	Method: get_LoadedData:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A9EB30
+		Ram Offset 0x180a9fd30
+		Virtual Method Slot: 65535
+
+	Method: set_LoadedData:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A9EB40
+		Ram Offset 0x180a9fd40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A9EB50
+		Ram Offset 0x180a9fd50
+		Virtual Method Slot: 65535
+
+	Method: <UpdateTaskId>b__60_0:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00A9EB70
+		Ram Offset 0x180a9fd70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x
+			Type: LogisticsBotTask
+			Default Value: 

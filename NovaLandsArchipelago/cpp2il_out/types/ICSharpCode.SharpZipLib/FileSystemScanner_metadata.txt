@@ -1,0 +1,195 @@
+Type: ICSharpCode.SharpZipLib.Core.FileSystemScanner:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Field: ProcessDirectory
+		Type: ICSharpCode.SharpZipLib.Core.ProcessDirectoryHandler
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: ProcessFile
+		Type: ICSharpCode.SharpZipLib.Core.ProcessFileHandler
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: CompletedFile
+		Type: ICSharpCode.SharpZipLib.Core.CompletedFileHandler
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: DirectoryFailure
+		Type: ICSharpCode.SharpZipLib.Core.DirectoryFailureHandler
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: FileFailure
+		Type: ICSharpCode.SharpZipLib.Core.FileFailureHandler
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: fileFilter_
+		Type: ICSharpCode.SharpZipLib.Core.IScanFilter
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: directoryFilter_
+		Type: ICSharpCode.SharpZipLib.Core.IScanFilter
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: alive_
+		Type: System.Boolean
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01608580
+		Ram Offset 0x181609780
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: filter
+			Type: System.String
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01608640
+		Ram Offset 0x181609840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fileFilter
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: directoryFilter
+			Type: System.String
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0068B340
+		Ram Offset 0x18068c540
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fileFilter
+			Type: ICSharpCode.SharpZipLib.Core.IScanFilter
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01608770
+		Ram Offset 0x181609970
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fileFilter
+			Type: ICSharpCode.SharpZipLib.Core.IScanFilter
+			Default Value: 
+		Parameter 1:
+			Name: directoryFilter
+			Type: ICSharpCode.SharpZipLib.Core.IScanFilter
+			Default Value: 
+	Method: OnDirectoryFailure:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01608820
+		Ram Offset 0x181609a20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: directory
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: e
+			Type: System.Exception
+			Default Value: 
+	Method: OnFileFailure:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x016088D0
+		Ram Offset 0x181609ad0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: file
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: e
+			Type: System.Exception
+			Default Value: 
+	Method: OnProcessFile:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01608990
+		Ram Offset 0x181609b90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: file
+			Type: System.String
+			Default Value: 
+	Method: OnCompleteFile:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01608A30
+		Ram Offset 0x181609c30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: file
+			Type: System.String
+			Default Value: 
+	Method: OnProcessDirectory:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01608AD0
+		Ram Offset 0x181609cd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: directory
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: hasMatchingFiles
+			Type: System.Boolean
+			Default Value: 
+	Method: Scan:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01608B70
+		Ram Offset 0x181609d70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: directory
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: recurse
+			Type: System.Boolean
+			Default Value: 
+	Method: ScanDir:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01608B80
+		Ram Offset 0x181609d80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: directory
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: recurse
+			Type: System.Boolean
+			Default Value: 

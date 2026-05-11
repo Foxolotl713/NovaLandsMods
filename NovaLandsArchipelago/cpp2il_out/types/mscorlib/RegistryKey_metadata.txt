@@ -1,0 +1,404 @@
+Type: Microsoft.Win32.RegistryKey:
+	Base Class: 
+		System.MarshalByRefObject
+
+	Interfaces:
+		System.IDisposable
+
+	Nested Types:
+		Microsoft.Win32.RegistryKey/StateFlags
+
+	Static Field: HKEY_CLASSES_ROOT
+		Type: System.IntPtr
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: HKEY_CURRENT_USER
+		Type: System.IntPtr
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: HKEY_LOCAL_MACHINE
+		Type: System.IntPtr
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: HKEY_USERS
+		Type: System.IntPtr
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _hkey
+		Type: Microsoft.Win32.SafeHandles.SafeRegistryHandle
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: HKEY_PERFORMANCE_DATA
+		Type: System.IntPtr
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _keyName
+		Type: System.String
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: HKEY_CURRENT_CONFIG
+		Type: System.IntPtr
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _remoteKey
+		Type: System.Boolean
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _state
+		Type: Microsoft.Win32.RegistryKey/StateFlags
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Static Field: HKEY_DYN_DATA
+		Type: System.IntPtr
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _checkMode
+		Type: Microsoft.Win32.RegistryKeyPermissionCheck
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _regView
+		Type: Microsoft.Win32.RegistryView
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Static Field: s_hkeyNames
+		Type: System.String[]
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Method: ClosePerfDataKey:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016C1600
+		Ram Offset 0x1816c2800
+		Virtual Method Slot: 65535
+
+	Method: OpenBaseKeyCore:
+		Accessibility: Private
+		Return Type: Microsoft.Win32.RegistryKey
+		File Offset 0x016C1660
+		Ram Offset 0x1816c2860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hKeyHive
+			Type: Microsoft.Win32.RegistryHive
+			Default Value: 
+		Parameter 1:
+			Name: view
+			Type: Microsoft.Win32.RegistryView
+			Default Value: 
+	Method: InternalOpenSubKeyCore:
+		Accessibility: Private
+		Return Type: Microsoft.Win32.RegistryKey
+		File Offset 0x016C17F0
+		Ram Offset 0x1816c29f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: writable
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: throwOnPermissionFailure
+			Type: System.Boolean
+			Default Value: 
+	Method: InternalSubKeyCountCore:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x016C1BA0
+		Ram Offset 0x1816c2da0
+		Virtual Method Slot: 65535
+
+	Method: InternalGetSubKeyNamesCore:
+		Accessibility: Private
+		Return Type: System.String[]
+		File Offset 0x016C1CE0
+		Ram Offset 0x1816c2ee0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: subkeys
+			Type: System.Int32
+			Default Value: 
+	Method: InternalGetValueCore:
+		Accessibility: Private
+		Return Type: System.Object
+		File Offset 0x016C2050
+		Ram Offset 0x1816c3250
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: defaultValue
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: doNotExpand
+			Type: System.Boolean
+			Default Value: 
+	Method: Win32Error:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016C30E0
+		Ram Offset 0x1816c42e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: errorCode
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: str
+			Type: System.String
+			Default Value: 
+	Method: GetRegistryKeyAccess:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x016C3280
+		Ram Offset 0x1816c4480
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: isWritable
+			Type: System.Boolean
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016C32A0
+		Ram Offset 0x1816c44a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hkey
+			Type: Microsoft.Win32.SafeHandles.SafeRegistryHandle
+			Default Value: 
+		Parameter 1:
+			Name: writable
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: systemkey
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: remoteKey
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: isPerfData
+			Type: System.Boolean
+			Default Value: 
+		Parameter 5:
+			Name: view
+			Type: Microsoft.Win32.RegistryView
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016C34A0
+		Ram Offset 0x1816c46a0
+		Virtual Method Slot: 6
+
+	Method: OpenBaseKey:
+		Accessibility: Public
+		Return Type: Microsoft.Win32.RegistryKey
+		File Offset 0x016C3650
+		Ram Offset 0x1816c4850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hKey
+			Type: Microsoft.Win32.RegistryHive
+			Default Value: 
+		Parameter 1:
+			Name: view
+			Type: Microsoft.Win32.RegistryView
+			Default Value: 
+	Method: OpenSubKey:
+		Accessibility: Public
+		Return Type: Microsoft.Win32.RegistryKey
+		File Offset 0x016C3870
+		Ram Offset 0x1816c4a70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: writable
+			Type: System.Boolean
+			Default Value: 
+	Method: InternalSubKeyCount:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x016C3940
+		Ram Offset 0x1816c4b40
+		Virtual Method Slot: 65535
+
+	Method: GetSubKeyNames:
+		Accessibility: Public
+		Return Type: System.String[]
+		File Offset 0x016C3B00
+		Ram Offset 0x1816c4d00
+		Virtual Method Slot: 65535
+
+	Method: InternalGetSubKeyNames:
+		Accessibility: Private
+		Return Type: System.String[]
+		File Offset 0x016C3B10
+		Ram Offset 0x1816c4d10
+		Virtual Method Slot: 65535
+
+	Method: GetValue:
+		Accessibility: Public
+		Return Type: System.Object
+		File Offset 0x016C3D50
+		Ram Offset 0x1816c4f50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: defaultValue
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: options
+			Type: Microsoft.Win32.RegistryValueOptions
+			Default Value: 
+	Method: InternalGetValue:
+		Accessibility: Private
+		Return Type: System.Object
+		File Offset 0x016C3E80
+		Ram Offset 0x1816c5080
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: defaultValue
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: doNotExpand
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: checkSecurity
+			Type: System.Boolean
+			Default Value: 
+	Method: ToString:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x016C3F20
+		Ram Offset 0x1816c5120
+		Virtual Method Slot: 3
+
+	Method: FixupName:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x016C3F80
+		Ram Offset 0x1816c5180
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: FixupPath:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016C41A0
+		Ram Offset 0x1816c53a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.Text.StringBuilder
+			Default Value: 
+	Method: EnsureNotDisposed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016C42D0
+		Ram Offset 0x1816c54d0
+		Virtual Method Slot: 65535
+
+	Method: GetSubKeyPermissionCheck:
+		Accessibility: Private
+		Return Type: Microsoft.Win32.RegistryKeyPermissionCheck
+		File Offset 0x016C4330
+		Ram Offset 0x1816c5530
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: subkeyWritable
+			Type: System.Boolean
+			Default Value: 
+	Method: ValidateKeyName:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016C4350
+		Ram Offset 0x1816c5550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: ValidateKeyView:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016C47A0
+		Ram Offset 0x1816c59a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: view
+			Type: Microsoft.Win32.RegistryView
+			Default Value: 
+	Method: IsSystemKey:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x016C4800
+		Ram Offset 0x1816c5a00
+		Virtual Method Slot: 65535
+
+	Method: IsPerfDataKey:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x016C4810
+		Ram Offset 0x1816c5a10
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016C4820
+		Ram Offset 0x1816c5a20
+		Virtual Method Slot: 65535

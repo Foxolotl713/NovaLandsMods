@@ -1,0 +1,1130 @@
+Type: Rewired.ComponentControls.TouchInteractable:
+	Base Class: 
+		Rewired.ComponentControls.TouchControl
+
+	Interfaces:
+		UnityEngine.EventSystems.IPointerDownHandler
+		UnityEngine.EventSystems.IEventSystemHandler
+		UnityEngine.EventSystems.IPointerUpHandler
+		UnityEngine.EventSystems.IPointerEnterHandler
+		UnityEngine.EventSystems.IPointerExitHandler
+		UnityEngine.EventSystems.IBeginDragHandler
+		UnityEngine.EventSystems.IDragHandler
+		UnityEngine.EventSystems.IEndDragHandler
+
+	Nested Types:
+		Rewired.ComponentControls.TouchInteractable/InteractionState
+		Rewired.ComponentControls.TouchInteractable/TransitionTypeFlags
+		Rewired.ComponentControls.TouchInteractable/MouseButtonFlags
+		Rewired.ComponentControls.TouchInteractable/InteractionStateTransitionEventHandler
+		Rewired.ComponentControls.TouchInteractable/VisibilityChangedEventHandler
+		Rewired.ComponentControls.TouchInteractable/InteractionStateTransitionArgs
+		Rewired.ComponentControls.TouchInteractable/IInteractionStateTransitionHandler
+		Rewired.ComponentControls.TouchInteractable/VSAQnmurgFMpchsnaqNBBfUxlBun
+
+	Static Field: POINTER_ID_NULL
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: -2147483648
+
+	Static Field: POINTER_ID_MOUSE_LEFT_BUTTON
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: -1
+
+	Static Field: POINTER_ID_MOUSE_RIGHT_BUTTON
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: -2
+
+	Static Field: POINTER_ID_MOUSE_MIDDLE_BUTTON
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: -3
+
+	Static Field: MAX_MOUSE_BUTTONS
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 3
+
+	Static Field: _transitionArgs
+		Type: Rewired.ComponentControls.TouchInteractable/InteractionStateTransitionArgs
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: __interactionStateTransitionHandlerDelegate
+		Type: YVQfKeazIqgFlQlVhbEkyBsluncmA/EventFunction`2<Rewired.ComponentControls.TouchInteractable/IInteractionStateTransitionHandler,Rewired.ComponentControls.TouchInteractable/InteractionStateTransitionArgs>
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Field: _interactable
+		Type: System.Boolean
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: _visible
+		Type: System.Boolean
+		Offset in Defining Type: 0x41
+		Has Default: False
+
+	Field: _hideWhenIdle
+		Type: System.Boolean
+		Offset in Defining Type: 0x42
+		Has Default: False
+
+	Field: _allowedMouseButtons
+		Type: Rewired.ComponentControls.TouchInteractable/MouseButtonFlags
+		Offset in Defining Type: 0x44
+		Has Default: False
+
+	Field: _transitionType
+		Type: Rewired.ComponentControls.TouchInteractable/TransitionTypeFlags
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: _transitionColorTint
+		Type: UnityEngine.UI.ColorBlock
+		Offset in Defining Type: 0x4C
+		Has Default: False
+
+	Field: _transitionSpriteState
+		Type: UnityEngine.UI.SpriteState
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: _transitionAnimationTriggers
+		Type: UnityEngine.UI.AnimationTriggers
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: _targetGraphic
+		Type: UnityEngine.UI.Graphic
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: _onInteractionStateTransition
+		Type: Rewired.ComponentControls.TouchInteractable/InteractionStateTransitionEventHandler
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: _onVisibilityChanged
+		Type: Rewired.ComponentControls.TouchInteractable/VisibilityChangedEventHandler
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: _onInteractionStateChangedToNormal
+		Type: UnityEngine.Events.UnityEvent
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: _onInteractionStateChangedToHighlighted
+		Type: UnityEngine.Events.UnityEvent
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: _onInteractionStateChangedToPressed
+		Type: UnityEngine.Events.UnityEvent
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: _onInteractionStateChangedToDisabled
+		Type: UnityEngine.Events.UnityEvent
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: _canvasGroupCache
+		Type: System.Collections.Generic.List`1<UnityEngine.CanvasGroup>
+		Offset in Defining Type: 0x108
+		Has Default: False
+
+	Field: _groupsAllowInteraction
+		Type: System.Boolean
+		Offset in Defining Type: 0x110
+		Has Default: False
+
+	Field: _interactionState
+		Type: Rewired.ComponentControls.TouchInteractable/InteractionState
+		Offset in Defining Type: 0x114
+		Has Default: False
+
+	Field: hJTzhxIFfzQTiYkWavAlvqVGkFYb
+		Type: System.Boolean
+		Offset in Defining Type: 0x118
+		Has Default: False
+
+	Field: pLPhhaSJxXCgjjmmWxGfMVCxcFIqA
+		Type: System.Boolean
+		Offset in Defining Type: 0x119
+		Has Default: False
+
+	Field: _varWatch_visible
+		Type: System.Boolean
+		Offset in Defining Type: 0x11A
+		Has Default: False
+
+	Field: _varWatch_interactable
+		Type: System.Boolean
+		Offset in Defining Type: 0x11B
+		Has Default: False
+
+	Field: _allowSendingEvents
+		Type: System.Boolean
+		Offset in Defining Type: 0x11C
+		Has Default: False
+
+	Field: __hierarchyVisibilityChangedHandlers
+		Type: YVQfKeazIqgFlQlVhbEkyBsluncmA/HierarchyEventHelper`2<Rewired.UI.IVisibilityChangedHandler,System.Boolean>
+		Offset in Defining Type: 0x120
+		Has Default: False
+
+	Field: __hierarchyInteractionStateTransitionHandlers
+		Type: YVQfKeazIqgFlQlVhbEkyBsluncmA/HierarchyEventHelper`2<Rewired.ComponentControls.TouchInteractable/IInteractionStateTransitionHandler,Rewired.ComponentControls.TouchInteractable/InteractionStateTransitionArgs>
+		Offset in Defining Type: 0x128
+		Has Default: False
+
+	Method: add_InteractionStateSetEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6C0C0
+		Ram Offset 0x181a6d2c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction`1<Rewired.ComponentControls.TouchInteractable/InteractionStateTransitionArgs>
+			Default Value: 
+	Method: remove_InteractionStateSetEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6C120
+		Ram Offset 0x181a6d320
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction`1<Rewired.ComponentControls.TouchInteractable/InteractionStateTransitionArgs>
+			Default Value: 
+	Method: add_VisibilityChangedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6C1B0
+		Ram Offset 0x181a6d3b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction`1<System.Boolean>
+			Default Value: 
+	Method: remove_VisibilityChangedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6C200
+		Ram Offset 0x181a6d400
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction`1<System.Boolean>
+			Default Value: 
+	Method: add_InteractionStateChangedToNormal:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6C290
+		Ram Offset 0x181a6d490
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: remove_InteractionStateChangedToNormal:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6C2C0
+		Ram Offset 0x181a6d4c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: add_InteractionStateChangedToHighlighted:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6C320
+		Ram Offset 0x181a6d520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: remove_InteractionStateChangedToHighlighted:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6C350
+		Ram Offset 0x181a6d550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: add_InteractionStateChangedToPressed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6C3B0
+		Ram Offset 0x181a6d5b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: remove_InteractionStateChangedToPressed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6C3E0
+		Ram Offset 0x181a6d5e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: add_InteractionStateChangedToDisabled:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6C440
+		Ram Offset 0x181a6d640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: remove_InteractionStateChangedToDisabled:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6C470
+		Ram Offset 0x181a6d670
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: wfaJkWghtZovitstkbAmxyKAOSXHA:
+		Accessibility: Private
+		Return Type: YVQfKeazIqgFlQlVhbEkyBsluncmA/HierarchyEventHelper`2<Rewired.UI.IVisibilityChangedHandler, System.Boolean>
+		File Offset 0x01A6C4D0
+		Ram Offset 0x181a6d6d0
+		Virtual Method Slot: 65535
+
+	Method: kHUNPKuedAraMPKVNAFQGuzJKaveA:
+		Accessibility: Private
+		Return Type: YVQfKeazIqgFlQlVhbEkyBsluncmA/HierarchyEventHelper`2<Rewired.ComponentControls.TouchInteractable/IInteractionStateTransitionHandler, Rewired.ComponentControls.TouchInteractable/InteractionStateTransitionArgs>
+		File Offset 0x01A6C910
+		Ram Offset 0x181a6db10
+		Virtual Method Slot: 65535
+
+	Method: get_interactable:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x009B2240
+		Ram Offset 0x1809b3440
+		Virtual Method Slot: 65535
+
+	Method: set_interactable:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6CBD0
+		Ram Offset 0x181a6ddd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_visible:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097D5A0
+		Ram Offset 0x18097e7a0
+		Virtual Method Slot: 65535
+
+	Method: set_visible:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6CBF0
+		Ram Offset 0x181a6ddf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_hideWhenIdle:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097D610
+		Ram Offset 0x18097e810
+		Virtual Method Slot: 65535
+
+	Method: set_hideWhenIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6CC30
+		Ram Offset 0x181a6de30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_allowedMouseButtons:
+		Accessibility: Public
+		Return Type: Rewired.ComponentControls.TouchInteractable/MouseButtonFlags
+		File Offset 0x0040E2D0
+		Ram Offset 0x18040f4d0
+		Virtual Method Slot: 65535
+
+	Method: set_allowedMouseButtons:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6CC50
+		Ram Offset 0x181a6de50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: Rewired.ComponentControls.TouchInteractable/MouseButtonFlags
+			Default Value: 
+	Method: get_transitionType:
+		Accessibility: Public
+		Return Type: Rewired.ComponentControls.TouchInteractable/TransitionTypeFlags
+		File Offset 0x00789EB0
+		Ram Offset 0x18078b0b0
+		Virtual Method Slot: 65535
+
+	Method: set_transitionType:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6CC70
+		Ram Offset 0x181a6de70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: Rewired.ComponentControls.TouchInteractable/TransitionTypeFlags
+			Default Value: 
+	Method: get_transitionColorTint:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.ColorBlock
+		File Offset 0x01A6CC90
+		Ram Offset 0x181a6de90
+		Virtual Method Slot: 65535
+
+	Method: set_transitionColorTint:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6CCD0
+		Ram Offset 0x181a6ded0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.ColorBlock
+			Default Value: 
+	Method: get_transitionSpriteState:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.SpriteState
+		File Offset 0x01A6CD20
+		Ram Offset 0x181a6df20
+		Virtual Method Slot: 65535
+
+	Method: set_transitionSpriteState:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6CD40
+		Ram Offset 0x181a6df40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.SpriteState
+			Default Value: 
+	Method: get_transitionAnimationTriggers:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.AnimationTriggers
+		File Offset 0x00708A70
+		Ram Offset 0x180709c70
+		Virtual Method Slot: 65535
+
+	Method: set_transitionAnimationTriggers:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6CE00
+		Ram Offset 0x181a6e000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.AnimationTriggers
+			Default Value: 
+	Method: get_targetGraphic:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Graphic
+		File Offset 0x004FF760
+		Ram Offset 0x180500960
+		Virtual Method Slot: 65535
+
+	Method: set_targetGraphic:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6CE80
+		Ram Offset 0x181a6e080
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.Graphic
+			Default Value: 
+	Method: get_image:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Image
+		File Offset 0x01A6D000
+		Ram Offset 0x181a6e200
+		Virtual Method Slot: 65535
+
+	Method: set_image:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A6D090
+		Ram Offset 0x181a6e290
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.Image
+			Default Value: 
+	Method: get_animator:
+		Accessibility: Public
+		Return Type: UnityEngine.Animator
+		File Offset 0x01A6D210
+		Ram Offset 0x181a6e410
+		Virtual Method Slot: 65535
+
+	Method: get_interactionState:
+		Accessibility: Public
+		Return Type: Rewired.ComponentControls.TouchInteractable/InteractionState
+		File Offset 0x00582E90
+		Ram Offset 0x180584090
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A6D2A0
+		Ram Offset 0x181a6e4a0
+		Virtual Method Slot: 65535
+
+	Method: Awake:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A6D940
+		Ram Offset 0x181a6eb40
+		Virtual Method Slot: 8
+
+	Method: OnCanvasGroupChanged:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A6DB40
+		Ram Offset 0x181a6ed40
+		Virtual Method Slot: 14
+
+	Method: OnDidApplyAnimationProperties:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A6DDA0
+		Ram Offset 0x181a6efa0
+		Virtual Method Slot: 16
+
+	Method: OnEnable:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A6DDB0
+		Ram Offset 0x181a6efb0
+		Virtual Method Slot: 10
+
+	Method: OnDisable:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A6DF90
+		Ram Offset 0x181a6f190
+		Virtual Method Slot: 11
+
+	Method: OnValidate:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A6E0B0
+		Ram Offset 0x181a6f2b0
+		Virtual Method Slot: 13
+
+	Method: Reset:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A6E3E0
+		Ram Offset 0x181a6f5e0
+		Virtual Method Slot: 17
+
+	Method: UrxvCbTTyrcwzAlwHnkPcfjwZqaC:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A6E4C0
+		Ram Offset 0x181a6f6c0
+		Virtual Method Slot: 23
+
+	Method: VPtGcdIWFwGqODRIGeBhZDUxQRBJA:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A6E510
+		Ram Offset 0x181a6f710
+		Virtual Method Slot: 25
+
+	Method: YGxiizcFKQlkcCqgtUyzMeSYDAHT:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A6E520
+		Ram Offset 0x181a6f720
+		Virtual Method Slot: 65535
+
+	Method: LDYQrwgNbDQbEcQyPAYcuafjhnlT:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A6E5B0
+		Ram Offset 0x181a6f7b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: Rewired.ComponentControls.TouchInteractable/InteractionState
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: System.Boolean
+			Default Value: 
+	Method: IeQNTBXYjzHzTymQiWmOyluoOwJB:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A6EB10
+		Ram Offset 0x181a6fd10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: UnityEngine.Color
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: System.Boolean
+			Default Value: 
+	Method: BBLFQapWNonTVqanzssFVUqmDjNU:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A6EC40
+		Ram Offset 0x181a6fe40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: UnityEngine.Sprite
+			Default Value: 
+	Method: zhDqtloOcYwcQQopnEUPXjfpWNyR:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A6ED40
+		Ram Offset 0x181a6ff40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.String
+			Default Value: 
+	Method: WyoeRRAKgForKYQrMlITPeErpcPYA:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A6F000
+		Ram Offset 0x181a70200
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Boolean
+			Default Value: 
+	Method: IsInteractable:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01A6F090
+		Ram Offset 0x181a70290
+		Virtual Method Slot: 65535
+
+	Method: HpmTdMtQcZfhtraXmCUiIBYzbvdhA:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01A6F0B0
+		Ram Offset 0x181a702b0
+		Virtual Method Slot: 42
+
+	Method: qTbQveApfHOMSehJBxKYMzaVLcgX:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A6F120
+		Ram Offset 0x181a70320
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: xEwQUZcqFhGubfvZUNKxwzzGTqdF:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01A6F2D0
+		Ram Offset 0x181a704d0
+		Virtual Method Slot: 43
+
+		Parameter 0:
+			Name: 
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: sBTJJuaTQpaYYzeGQCBfBpenWPag:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01A6F440
+		Ram Offset 0x181a70640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: WDJiERFVpjCXhCJYBgAVlQqYCposb:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01A6F530
+		Ram Offset 0x181a70730
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: GjvFfYsyhRjlwLtZssVtJxaDmYFP:
+		Accessibility: Private
+		Return Type: Rewired.ComponentControls.TouchInteractable/InteractionState
+		File Offset 0x01A6F740
+		Ram Offset 0x181a70940
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: fWpDpIVsDRQtGJmxeQOEqhkfcsBL:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01A6F880
+		Ram Offset 0x181a70a80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: Rewired.ComponentControls.TouchInteractable/InteractionState
+			Default Value: 
+	Method: TtjldDxDBgMpUKeeSGyRKxEaHnJw:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A6F8B0
+		Ram Offset 0x181a70ab0
+		Virtual Method Slot: 65535
+
+	Method: xvmyiGcSerwUpwdLLJHKzBmIcuAq:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A6F8C0
+		Ram Offset 0x181a70ac0
+		Virtual Method Slot: 65535
+
+	Method: oQkqrcUQooqIwfXjwVSDfhjSMgzr:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A6F970
+		Ram Offset 0x181a70b70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: System.Boolean
+			Default Value: 
+	Method: iHBlpDkwpHpbjROOnMQpWFQzVuyV:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A6FA50
+		Ram Offset 0x181a70c50
+		Virtual Method Slot: 65535
+
+	Method: McHEPYWFVjGorBeukirgpOhZGTzWA:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A6FD40
+		Ram Offset 0x181a70f40
+		Virtual Method Slot: 65535
+
+	Method: fptrtufnrpaQomaApSpHHlZoBHVd:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A6FE10
+		Ram Offset 0x181a71010
+		Virtual Method Slot: 65535
+
+	Method: lzyAWFqxsDbeSkCOeBWDRGXRbmtDA:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A6FF70
+		Ram Offset 0x181a71170
+		Virtual Method Slot: 65535
+
+	Method: OnPointerDown:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A70070
+		Ram Offset 0x181a71270
+		Virtual Method Slot: 44
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnPointerUp:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A70110
+		Ram Offset 0x181a71310
+		Virtual Method Slot: 45
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnPointerEnter:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A701B0
+		Ram Offset 0x181a713b0
+		Virtual Method Slot: 46
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnPointerExit:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A70250
+		Ram Offset 0x181a71450
+		Virtual Method Slot: 47
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnBeginDrag:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A702F0
+		Ram Offset 0x181a714f0
+		Virtual Method Slot: 48
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnDrag:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A70360
+		Ram Offset 0x181a71560
+		Virtual Method Slot: 49
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnEndDrag:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01A703D0
+		Ram Offset 0x181a715d0
+		Virtual Method Slot: 50
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: UnityEngine.EventSystems.IPointerDownHandler.OnPointerDown:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A70440
+		Ram Offset 0x181a71640
+		Virtual Method Slot: 33
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: UnityEngine.EventSystems.IPointerUpHandler.OnPointerUp:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A70460
+		Ram Offset 0x181a71660
+		Virtual Method Slot: 34
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: UnityEngine.EventSystems.IPointerEnterHandler.OnPointerEnter:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004113F0
+		Ram Offset 0x1804125f0
+		Virtual Method Slot: 35
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: UnityEngine.EventSystems.IPointerExitHandler.OnPointerExit:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A70480
+		Ram Offset 0x181a71680
+		Virtual Method Slot: 36
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: UnityEngine.EventSystems.IBeginDragHandler.OnBeginDrag:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A704A0
+		Ram Offset 0x181a716a0
+		Virtual Method Slot: 37
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: UnityEngine.EventSystems.IDragHandler.OnDrag:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A704C0
+		Ram Offset 0x181a716c0
+		Virtual Method Slot: 38
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: UnityEngine.EventSystems.IEndDragHandler.OnEndDrag:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A704E0
+		Ram Offset 0x181a716e0
+		Virtual Method Slot: 39
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: ZYwGYYdmSzHakANXcUYVgtqvzOUJ:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01A70500
+		Ram Offset 0x181a71700
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Int32
+			Default Value: 
+	Method: SlvklMDRFubBrxxwogKeezCPTKAI:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Vector3
+		File Offset 0x01A706B0
+		Ram Offset 0x181a718b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Int32
+			Default Value: 
+	Method: YOjWGKtwerAoiAXAEISfxlNHfJJw:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x009FFE00
+		Ram Offset 0x180a01000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Int32
+			Default Value: 
+	Method: zfMRdxEWpVdbDLsvqJxSDUMtmNpl:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01A708D0
+		Ram Offset 0x181a71ad0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Int32
+			Default Value: 
+	Method: UCqtGVcdqIUipwEikYYjAKaBMvEB:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01A708F0
+		Ram Offset 0x181a71af0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Int32
+			Default Value: 
+	Method: XMYKisHOuAMOphjZpyMUNUzWMhnV:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01A70A30
+		Ram Offset 0x181a71c30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: Rewired.ComponentControls.TouchInteractable/MouseButtonFlags
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: System.Int32
+			Default Value: 
+	Method: huwFYwviPBIHedLtnJhUNhcSRoNC:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01A70B80
+		Ram Offset 0x181a71d80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: Rewired.ComponentControls.TouchInteractable/MouseButtonFlags
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: System.Int32
+			Default Value: 
+	Method: PkzAozGWsUqtyGsgzpbfDLskGwmeB:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01A70BB0
+		Ram Offset 0x181a71db0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Int32
+			Default Value: 
+	Method: wosOqXdFSlBXaFBgRvyXXgngpsXH:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01A70C40
+		Ram Offset 0x181a71e40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: Rewired.ComponentControls.TouchInteractable/MouseButtonFlags
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: System.Int32
+			Default Value: 
+	Method: JGWFphEzfGdSUNCbtbtdWjvDOLzcb:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01A70CB0
+		Ram Offset 0x181a71eb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: Rewired.ComponentControls.TouchInteractable/MouseButtonFlags
+			Default Value: 
+		Parameter 2:
+			Name: 
+			Type: UnityEngine.EventSystems.EventTriggerType
+			Default Value: 
+	Method: bvaavvcdoRyDQyElLKVutjdctzVO:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01A70E70
+		Ram Offset 0x181a72070
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: Rewired.ComponentControls.TouchInteractable/MouseButtonFlags
+			Default Value: 
+	Method: rSNRwbPFCvuvshzXbvlbVCxlPZQb:
+		Accessibility: Assembly
+		Return Type: YVQfKeazIqgFlQlVhbEkyBsluncmA/EventFunction`2<Rewired.ComponentControls.TouchInteractable/IInteractionStateTransitionHandler, Rewired.ComponentControls.TouchInteractable/InteractionStateTransitionArgs>
+		File Offset 0x01A70EF0
+		Ram Offset 0x181a720f0
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A71110
+		Ram Offset 0x181a72310
+		Virtual Method Slot: 65535
+
+	Method: USnuLvIeCSaYHxHzTncJjbnskqJt:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A73430
+		Ram Offset 0x180a74630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Boolean
+			Default Value: 

@@ -1,0 +1,234 @@
+Type: ZXing.Client.Result.VCardResultParser:
+	Base Class: 
+		ZXing.Client.Result.ResultParser
+
+	Interfaces:
+
+	Static Field: BEGIN_VCARD
+		Type: System.Text.RegularExpressions.Regex
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: VCARD_LIKE_DATE
+		Type: System.Text.RegularExpressions.Regex
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: CR_LF_SPACE_TAB
+		Type: System.Text.RegularExpressions.Regex
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: NEWLINE_ESCAPE
+		Type: System.Text.RegularExpressions.Regex
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: VCARD_ESCAPES
+		Type: System.Text.RegularExpressions.Regex
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: EQUALS
+		Type: System.Text.RegularExpressions.Regex
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: SEMICOLON
+		Type: System.Text.RegularExpressions.Regex
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Static Field: UNESCAPED_SEMICOLONS
+		Type: System.Text.RegularExpressions.Regex
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Static Field: COMMA
+		Type: System.Text.RegularExpressions.Regex
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Static Field: SEMICOLON_OR_COMMA
+		Type: System.Text.RegularExpressions.Regex
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x027AAB80
+		Ram Offset 0x1827abd80
+		Virtual Method Slot: 65535
+
+	Method: parse:
+		Accessibility: Public
+		Return Type: ZXing.Client.Result.ParsedResult
+		File Offset 0x027AABC0
+		Ram Offset 0x1827abdc0
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: result
+			Type: ZXing.Result
+			Default Value: 
+	Method: matchVCardPrefixedField:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<System.Collections.Generic.List`1<System.String>>
+		File Offset 0x027AB510
+		Ram Offset 0x1827ac710
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: prefix
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: rawText
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: trim
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: parseFieldDivider
+			Type: System.Boolean
+			Default Value: 
+	Method: decodeQuotedPrintable:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x027AC050
+		Ram Offset 0x1827ad250
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: charset
+			Type: System.String
+			Default Value: 
+	Method: maybeAppendFragment:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027AC360
+		Ram Offset 0x1827ad560
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fragmentBuffer
+			Type: System.IO.MemoryStream
+			Default Value: 
+		Parameter 1:
+			Name: charset
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.Text.StringBuilder
+			Default Value: 
+	Method: matchSingleVCardPrefixedField:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.List`1<System.String>
+		File Offset 0x027AC510
+		Ram Offset 0x1827ad710
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: prefix
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: rawText
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: trim
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: parseFieldDivider
+			Type: System.Boolean
+			Default Value: 
+	Method: toPrimaryValue:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x027AC5F0
+		Ram Offset 0x1827ad7f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: list
+			Type: System.Collections.Generic.List`1<System.String>
+			Default Value: 
+	Method: toPrimaryValues:
+		Accessibility: Private
+		Return Type: System.String[]
+		File Offset 0x027AC670
+		Ram Offset 0x1827ad870
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: lists
+			Type: System.Collections.Generic.ICollection`1<System.Collections.Generic.List`1<System.String>>
+			Default Value: 
+	Method: toTypes:
+		Accessibility: Private
+		Return Type: System.String[]
+		File Offset 0x027AC920
+		Ram Offset 0x1827adb20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: lists
+			Type: System.Collections.Generic.ICollection`1<System.Collections.Generic.List`1<System.String>>
+			Default Value: 
+	Method: isLikeVCardDate:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x027ACC80
+		Ram Offset 0x1827ade80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: formatNames:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027ACD50
+		Ram Offset 0x1827adf50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: names
+			Type: System.Collections.Generic.IEnumerable`1<System.Collections.Generic.List`1<System.String>>
+			Default Value: 
+	Method: maybeAppendComponent:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027AD250
+		Ram Offset 0x1827ae450
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: components
+			Type: System.String[]
+			Default Value: 
+		Parameter 1:
+			Name: i
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: newName
+			Type: System.Text.StringBuilder
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027AD2E0
+		Ram Offset 0x1827ae4e0
+		Virtual Method Slot: 65535

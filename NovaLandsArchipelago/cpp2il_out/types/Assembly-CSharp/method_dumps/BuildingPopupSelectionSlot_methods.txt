@@ -1,0 +1,897 @@
+Type: BuildingPopupSelectionSlot
+
+Method: System.Void BuildingPopupSelectionSlot::Setup(ImmediateProductionBuildingPopup,BaseRecipe,System.Boolean,System.Int32):	Method Body (x86 ASM):
+		0x18053D110 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x18053D115 mov [rsp+10h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 16 | None ||| N/A | N/A
+		0x18053D11A mov [rsp+18h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 24 | None ||| N/A | N/A
+		0x18053D11F push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D120 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x18053D124 cmp byte ptr [18329A769h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512425 | None ||| N/A | 0
+		0x18053D12B movzx ebp,r9b		; DEBUG: {Register}/EBP {Register}/R9L ||| None | 0 | None ||| N/A | N/A
+		0x18053D12F mov rdi,r8		; DEBUG: {Register}/RDI {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18053D132 mov rsi,rdx		; DEBUG: {Register}/RSI {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18053D135 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18053D138 jne short 000000018053D159h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D13A lea rcx,[183102C80h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493842560 | None ||| N/A | N/A
+		0x18053D141 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D146 lea rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x18053D14D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D152 mov byte ptr [18329A769h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512425 | None ||| N/A | 1
+		0x18053D159 mov eax,[1832990E4h]		; DEBUG: {Register}/EAX {Memory}/None ||| RIP | 6495506660 | None ||| N/A | N/A
+		0x18053D15F lea r9,[1832AE560h]		; DEBUG: {Register}/R9 {Memory}/None ||| RIP | 6495593824 | None ||| N/A | N/A
+		0x18053D166 mov [rbx+70h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RBX | 112 | None ||| N/A | N/A
+		0x18053D16A test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D16C je short 000000018053D1BFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D16E lea r8,[rbx+70h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 112 | None ||| N/A | N/A
+		0x18053D172 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x18053D176 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x18053D17D mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18053D180 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x18053D184 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x18053D188 lea rdx,[r9+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| R9 | 0 | RAX ||| N/A | N/A
+		0x18053D18C prefetchw [rdx+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x18053D193 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x18053D197 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x18053D1A0 mov rax,[rdx+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x18053D1A7 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D1AA bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18053D1AE lock cmpxchg [rdx+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 287456 | None ||| N/A | N/A
+		0x18053D1B7 jne short 000000018053D1A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D1B9 mov eax,[1832990E4h]		; DEBUG: {Register}/EAX {Memory}/None ||| RIP | 6495506660 | None ||| N/A | N/A
+		0x18053D1BF mov [rbx+68h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RBX | 104 | None ||| N/A | N/A
+		0x18053D1C3 test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D1C5 je short 000000018053D209h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D1C7 lea r8,[rbx+68h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 104 | None ||| N/A | N/A
+		0x18053D1CB shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x18053D1CF and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x18053D1D6 mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18053D1D9 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x18053D1DD and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x18053D1E1 lea rdx,[r9+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| R9 | 0 | RAX ||| N/A | N/A
+		0x18053D1E5 prefetchw [rdx+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x18053D1EC nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x18053D1F0 mov rax,[rdx+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x18053D1F7 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D1FA bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18053D1FE lock cmpxchg [rdx+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 287456 | None ||| N/A | N/A
+		0x18053D207 jne short 000000018053D1F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D209 mov eax,[rsp+60h]		; DEBUG: {Register}/EAX {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x18053D20D mov r9,[rbx+20h]		; DEBUG: {Register}/R9 {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x18053D211 mov [rbx+60h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBX | 96 | None ||| N/A | N/A
+		0x18053D214 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18053D217 je near ptr 000000018053D376h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D21D mov rax,[rdi+28h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDI | 40 | None ||| N/A | N/A
+		0x18053D221 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D224 je near ptr 000000018053D376h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D22A cmp dword ptr [rax+18h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 24 | None ||| N/A | 0
+		0x18053D22E jbe near ptr 000000018053D399h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D234 mov rcx,[rax+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x18053D238 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18053D23B je near ptr 000000018053D376h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D241 cmp dword ptr [rcx+18h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 24 | None ||| N/A | 0
+		0x18053D245 jbe near ptr 000000018053D37Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D24B mov rax,[rcx+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x18053D24F test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D252 je near ptr 000000018053D376h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D258 mov rdx,[rax+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x18053D25C test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18053D25F je near ptr 000000018053D376h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D265 test r9,r9		; DEBUG: {Register}/R9 {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x18053D268 je near ptr 000000018053D376h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D26E mov rdx,[rdx+38h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 56 | None ||| N/A | N/A
+		0x18053D272 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18053D275 mov rcx,r9		; DEBUG: {Register}/RCX {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x18053D278 call 0000000182581060h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D27D mov rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x18053D284 mov edi,[rdi+18h]		; DEBUG: {Register}/EDI {Memory}/None ||| RDI | 24 | None ||| N/A | N/A
+		0x18053D287 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18053D28E jne short 000000018053D295h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D290 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D295 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18053D297 mov ecx,edi		; DEBUG: {Register}/ECX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x18053D299 call 000000018084CBB0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D29E test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x18053D2A0 sete dil		; DEBUG: {Register}/DIL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D2A4 cmp byte ptr [18329A76Ah],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512426 | None ||| N/A | 0
+		0x18053D2AB jne short 000000018053D2C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D2AD lea rcx,[1830F91C8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493802952 | None ||| N/A | N/A
+		0x18053D2B4 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D2B9 mov byte ptr [18329A76Ah],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512426 | None ||| N/A | 1
+		0x18053D2C0 mov rsi,[rbx+30h]		; DEBUG: {Register}/RSI {Memory}/None ||| RBX | 48 | None ||| N/A | N/A
+		0x18053D2C4 test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x18053D2C7 je near ptr 000000018053D376h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D2CD mov rax,[1832A9DF0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575536 | None ||| N/A | N/A
+		0x18053D2D4 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D2D7 jne short 000000018053D2F5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D2D9 lea rcx,[182979C38h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485941304 | None ||| N/A | N/A
+		0x18053D2E0 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D2E5 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D2E8 je near ptr 000000018053D382h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D2EE mov [1832A9DF0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575536 | None ||| N/A | N/A
+		0x18053D2F5 movzx edx,dil		; DEBUG: {Register}/EDX {Register}/DIL ||| None | 0 | None ||| N/A | N/A
+		0x18053D2F9 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x18053D2FC call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D2FE mov rdx,[1830F91C8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493802952 | None ||| N/A | N/A
+		0x18053D305 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18053D308 call 0000000180D40810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D30D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D310 je short 000000018053D376h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D312 xor dil,1		; DEBUG: {Register}/DIL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x18053D316 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18053D319 movzx edx,dil		; DEBUG: {Register}/EDX {Register}/DIL ||| None | 0 | None ||| N/A | N/A
+		0x18053D31D mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D320 call 00000001825B41D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D325 mov rcx,[rbx+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x18053D329 test bpl,bpl		; DEBUG: {Register}/BPL {Register}/BPL ||| None | 0 | None ||| N/A | N/A
+		0x18053D32C je short 000000018053D334h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D32E movups xmm0,[rbx+40h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 64 | None ||| N/A | N/A
+		0x18053D332 jmp short 000000018053D338h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D334 movups xmm0,[rbx+50h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 80 | None ||| N/A | N/A
+		0x18053D338 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18053D33B je short 000000018053D376h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D33D mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x18053D340 lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x18053D345 movdqa [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x18053D34B mov r8,[rax+2B0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 688 | None ||| N/A | N/A
+		0x18053D352 call qword ptr [rax+2A8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 680 | None ||| N/A | N/A
+		0x18053D358 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18053D35A mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18053D35D mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x18053D362 mov rbp,[rsp+48h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x18053D367 mov rsi,[rsp+50h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x18053D36C add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x18053D370 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D371 jmp near ptr 000000018053D4C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D376 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D37B int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D399 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x18053D39B call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D3A0 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BuildingPopupSelectionSlot::Setup(ImmediateProductionBuildingPopup,BaseRecipe,System.Boolean,System.Int32):
+		End of function at 0x18053D3A1
+		Absolute End is at 0x18053D3A1
+		Identified Jump Destination addresses:
+			0x18053D338
+		0x18053D11F: Saves the content of rdi to the stack
+		0x18053D124: Compares {Unknown Global at 0x18329A769, first ten bytes are [88 3 0 164 100 239 2 96 88 3], or as chars "X ¤dï`X"} and 0
+		0x18053D12B: Copies {'hasResources' (function parameter, type System.Boolean)} from r9 into rbp
+		0x18053D12F: Copies {'recipe' (function parameter, type BaseRecipe)} from r8 into rdi
+		0x18053D132: Copies {'popup' (function parameter, type ImmediateProductionBuildingPopup)} from rdx into rsi
+		0x18053D135: Copies {'this' (function parameter, type BuildingPopupSelectionSlot)} from rcx into rbx
+		0x18053D138: Jumps to 0x18053D159 if {Unknown Global at 0x18329A769, first ten bytes are [88 3 0 164 100 239 2 96 88 3], or as chars "X ¤dï`X"} != 0
+
+		0x18053D13A: Loads the global generic method reference for method T System.Collections.Generic.List`1::get_Item(System.Int32) on type System.Collections.Generic.List`1<ResourceAmountPair> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18053D141: Initializes runtime metadata value 
+		0x18053D146: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x18053D14D: Initializes runtime metadata value PlayerStatus
+		0x18053D159: Loads string "YB" into register rax as constant {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18053D15F: Reads {Unknown Global at 0x1832AE560, first ten bytes are [20 59 240 2 208 31 18 0 228 32], or as chars ";ðÐ ä "} into register r9 as a constant constant6
+		0x18053D166: [!] Sets the field popup (Type ImmediateProductionBuildingPopup) on local {'this' (function parameter, type BuildingPopupSelectionSlot)} to the value stored in {'popup' (function parameter, type ImmediateProductionBuildingPopup)}
+		0x18053D16A: Compares {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} and 0
+		0x18053D16C: Jumps to 0x18053D1BF if constant5 equals 0
+
+		0x18053D16E: Loads the pointer to the field popup on {'this' (function parameter, type BuildingPopupSelectionSlot)} into register r8
+		0x18053D17D: Copies {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x18053D1A0: [!] Reads field  from {'popup' (function parameter, type ImmediateProductionBuildingPopup)} and stores in a new local 
+
+		0x18053D1A7: Copies {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from rax into rcx
+		0x18053D1B7: Jumps to 0x18053D1A0 if {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} != 0
+
+		0x18053D1B9: Loads string "YB" into register rax as constant {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18053D1BF: [!] Sets the field recipe (Type BaseRecipe) on local {'this' (function parameter, type BuildingPopupSelectionSlot)} to the value stored in {'recipe' (function parameter, type BaseRecipe)}
+		0x18053D1C3: Compares {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} and 0
+		0x18053D1C5: Jumps to 0x18053D209 if constant9 equals 0
+
+		0x18053D1C7: Loads the pointer to the field recipe on {'this' (function parameter, type BuildingPopupSelectionSlot)} into register r8
+		0x18053D1D6: Copies {'constant11' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x18053D1F0: [!] Reads field  from {'popup' (function parameter, type ImmediateProductionBuildingPopup)} and stores in a new local 
+
+		0x18053D1F7: Copies {'constant11' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from rax into rcx
+		0x18053D207: Jumps to 0x18053D1F0 if {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} != 0
+
+		0x18053D209: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register rax as new constant constant12
+		0x18053D20D: [!] Reads field iconImage from {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores in a new local {'iconImage' (type UnityEngine.UI.Image)}
+
+		0x18053D211: [!] Sets the field index (Type System.Int32) on local {'this' (function parameter, type BuildingPopupSelectionSlot)} to the value stored in 0
+		0x18053D214: [!] Compares {'recipe' (function parameter, type BaseRecipe)} and 0
+		0x18053D217: Jumps to 0x18053D376 (which throws a NRE) if recipe equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D21D: [!] Reads field output from {'recipe' (function parameter, type BaseRecipe)} and stores in a new local {'output' (type System.Collections.Generic.List`1<ResourceAmountPair>)}
+
+		0x18053D221: [!] Compares {'output' (type System.Collections.Generic.List`1<ResourceAmountPair>)} and 0
+		0x18053D224: Jumps to 0x18053D376 (which throws a NRE) if output equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D22A: [!] Compares  and 0
+		0x18053D22E: Jumps to 0x18053D399 (which is an if statement's body) if  is less than or equal to 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18053D234: [!] Reads field _items from {'output' (type System.Collections.Generic.List`1<ResourceAmountPair>)} and stores in a new local {'_items' (type T[])}
+
+		0x18053D238: [!] Compares {'_items' (type T[])} and 0
+		0x18053D23B: Jumps to 0x18053D376 (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D241: [!] Compares {Property System.Int32 System.Array::Length() on {'_items' (type T[])}} and 0
+		0x18053D245: Jumps to 0x18053D37C (which throws a NRE) if {Property System.Int32 System.Array::Length() on {'_items' (type T[])}} is less than or equal to 0. Implicitly present in managed code, so ignored here.
+		0x18053D24B: [!] Reads a value from the array {'_items' (type T[])} at index 0, into a new local {'local8' (type T)}
+
+		0x18053D24F: [!] Compares {'local8' (type T)} and 0
+		0x18053D252: Jumps to 0x18053D376 (which throws a NRE) if local8 equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D258: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rax is {'local8' (type T)}, offset is 16 (0x10)
+
+		0x18053D25C: [!] Compares {'popup' (function parameter, type ImmediateProductionBuildingPopup)} and 0
+		0x18053D25F: Jumps to 0x18053D376 (which throws a NRE) if popup equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D265: [!] Compares {'iconImage' (type UnityEngine.UI.Image)} and 0
+		0x18053D268: Jumps to 0x18053D376 (which throws a NRE) if iconImage equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D275: Copies {'iconImage' (type UnityEngine.UI.Image)} from r9 into rcx
+		0x18053D278: [!] Calls managed method System.Void UnityEngine.UI.Image::set_sprite(UnityEngine.Sprite) on instance {'iconImage' (type UnityEngine.UI.Image)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x18053D27D: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x18053D284: [!] Reads field recipeId from {'recipe' (function parameter, type BaseRecipe)} and stores in a new local {'recipeId' (type System.Int32)}
+
+		0x18053D287: Compares "{il2cpp field PlayerStatus->cctor_finished}" and 0
+		0x18053D28E: Jumps to 0x18053D295 if "{il2cpp field PlayerStatus->cctor_finished}" != 0
+
+		0x18053D290: Calls the il2cpp cctor for the type PlayerStatus
+		0x18053D297: Copies {'recipeId' (type System.Int32)} from rdi into rcx
+		0x18053D299: [!] Calls static managed method System.Boolean PlayerStatus::IsTechUnlocked(System.Int32) with arguments [{'recipeId' (type System.Int32)}] and stores the result in {'isTechUnlocked' (type System.Boolean)}
+
+		0x18053D29E: [!] Compares {'isTechUnlocked' (type System.Boolean)} and False
+		0x18053D2A0: [!] Sets the boolean {'local14' (type System.Boolean)} in rdi to true if isTechUnlocked is equal to False, otherwise false.
+		0x18053D2A4: Compares {Unknown Global at 0x18329A76A, first ten bytes are [3 0 164 100 239 2 96 88 3 0], or as chars " ¤dï`X "} and 0
+		0x18053D2AB: Jumps to 0x18053D2C0 if {Unknown Global at 0x18329A76A, first ten bytes are [3 0 164 100 239 2 96 88 3 0], or as chars " ¤dï`X "} != 0
+
+		0x18053D2AD: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.UI.Toggle>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18053D2B4: Initializes runtime metadata value 
+		0x18053D2C0: [!] Reads field lockedFeedback from {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores in a new local {'lockedFeedback' (type UnityEngine.GameObject)}
+
+		0x18053D2C4: [!] Compares {'lockedFeedback' (type UnityEngine.GameObject)} and 0
+		0x18053D2C7: Jumps to 0x18053D376 (which throws a NRE) if lockedFeedback equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D2CD: Loads string "äõ×" into register rax as constant UnityEngine.GameObject.SetActive
+		0x18053D2D4: Compares UnityEngine.GameObject.SetActive and 0
+		0x18053D2D7: Jumps to 0x18053D2F5 if UnityEngine.GameObject.SetActive != 0
+
+		0x18053D2D9: Loads string "UnityEngine.GameObject::SetActive(System.Boolean)" into register rcx as constant {'constant31' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18053D2E0: Looks up unity ICall by name "UnityEngine.GameObject::SetActive(System.Boolean)" which resolves to System.Void UnityEngine.GameObject::SetActive(System.Boolean)
+		0x18053D2E5: Compares UnityEngine.GameObject.SetActive and 0
+		0x18053D2E8: Jumps to 0x18053D382 if UnityEngine.GameObject.SetActive equals 0
+
+		0x18053D2F5: Copies {'local14' (type System.Boolean)} from rdi into rdx
+		0x18053D2F9: Copies {'lockedFeedback' (type UnityEngine.GameObject)} from rsi into rcx
+		0x18053D2FC: [!] Calls managed method System.Void UnityEngine.GameObject::SetActive(System.Boolean) on instance {'lockedFeedback' (type UnityEngine.GameObject)} with arguments [{'local14' (type System.Boolean)}]
+
+		0x18053D2FE: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.UI.Toggle>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x18053D305: Copies {'this' (function parameter, type BuildingPopupSelectionSlot)} from rbx into rcx
+		0x18053D308: [!] Calls managed method T UnityEngine.Component::GetComponent<UnityEngine.UI.Toggle>() on instance {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores the result in {'component' (type UnityEngine.UI.Toggle)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x18053D30D: [!] Compares {'component' (type UnityEngine.UI.Toggle)} and 0
+		0x18053D310: Jumps to 0x18053D376 (which throws a NRE) if component equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D319: Copies {'local14' (type System.Boolean)} from rdi into rdx
+		0x18053D31D: Copies {'component' (type UnityEngine.UI.Toggle)} from rax into rcx
+		0x18053D320: [!] Calls managed method System.Void UnityEngine.UI.Selectable::set_interactable(System.Boolean) on instance {'component' (type UnityEngine.UI.Toggle)} with arguments [{'local14' (type System.Boolean)}]
+
+		0x18053D325: [!] Reads field bgImage from {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores in a new local {'bgImage' (type UnityEngine.UI.Image)}
+
+		0x18053D329: [!] Compares {'hasResources' (function parameter, type System.Boolean)} and False
+		0x18053D32C: Jumps to 0x18053D334 if hasResources equals False ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x18053D332: Jumps to 0x18053D338 (which is an function-local jump destination)
+
+		0x18053D334: [!] Reads field noResourcesColor from {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores in a new local {'noResourcesColor' (type UnityEngine.Color)}
+
+
+		End Of If-Else Block (at 0x18053D338) where the else started at 0x18053D334
+		0x18053D338: [!] Compares {'bgImage' (type UnityEngine.UI.Image)} and 0
+		0x18053D33B: Jumps to 0x18053D376 (which throws a NRE) if bgImage equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D33D: Loads the class pointer from bgImage into a constant constant37 in register rax
+		0x18053D340: Loads a pointer to stack offset 0x20 into register rdx as new constant constant38
+		0x18053D345: Moves noResourcesColor (type UnityEngine.Color) from register xmm0 to the stack at offset 32 (0x20)
+		0x18053D34B: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) specific to UnityEngine.UI.Image from the class pointer in rax, slot 23 (from memory offset 688) and stores in constant constant39
+		0x18053D352: [!] Calls managed method System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) on instance {'bgImage' (type UnityEngine.UI.Image)} with arguments [{'noResourcesColor' (type UnityEngine.Color)}]
+
+		0x18053D35A: Copies {'this' (function parameter, type BuildingPopupSelectionSlot)} from rbx into rcx
+		0x18053D35D: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant40
+		0x18053D362: Reads unknown value in stack, offset 72 (0x48) and stores the pointer in register rbp as new constant constant41
+		0x18053D367: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register rsi as new constant constant42
+		0x18053D371: [!] Calls managed method System.Void BuildingPopupSelectionSlot::UpdateNewState() on instance {'this' (function parameter, type BuildingPopupSelectionSlot)}
+
+		0x18053D371: [!] Returns from the function
+
+		0x18053D376: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x18053D399: Clears register rcx, yielding zero-local {'local23' (type System.Int32)}
+		0x18053D39B: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BuildingPopupSelectionSlot
+	System.Void Setup(ImmediateProductionBuildingPopup popup, BaseRecipe recipe, System.Boolean hasResources, System.Int32 index)
+		this.popup = popup
+		  = popup.
+		this.recipe = recipe
+		  = popup.
+		UnityEngine.UI.Image iconImage = this.iconImage
+		this.index = 0
+		System.Collections.Generic.List`1<ResourceAmountPair> output = recipe.output
+
+		if ( > 0)
+		    T[] _items = output._items
+		    T local8 = _items[0]
+		      = .
+
+		    iconImage.set_sprite()
+		    System.Int32 recipeId = recipe.recipeId
+
+		    System.Boolean isTechUnlocked = PlayerStatus.IsTechUnlocked(recipeId) //(Int32 techId)
+		    System.Boolean local14 = isTechUnlocked == False
+		    UnityEngine.GameObject lockedFeedback = this.lockedFeedback
+
+		    lockedFeedback.SetActive(local14) //(Boolean value)
+
+		    UnityEngine.UI.Toggle component = base.GetComponent<UnityEngine.UI.Toggle>()
+
+		    component.interactable = local14
+		    UnityEngine.UI.Image bgImage = this.bgImage
+
+		    if (hasResources != False)
+		    else
+		        UnityEngine.Color noResourcesColor = this.noResourcesColor
+		    endif
+            
+
+		    bgImage.color = noResourcesColor
+
+		    this.UpdateNewState()
+		    return
+		    throw new System.NullReferenceException()
+		endif
+        
+		ulong local23 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: System.Void BuildingPopupSelectionSlot::SetHasResources(System.Boolean):	Method Body (x86 ASM):
+		0x18053D3B0 sub rsp,38h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 56
+		0x18053D3B4 mov r9,[rcx+28h]		; DEBUG: {Register}/R9 {Memory}/None ||| RCX | 40 | None ||| N/A | N/A
+		0x18053D3B8 test dl,dl		; DEBUG: {Register}/DL {Register}/DL ||| None | 0 | None ||| N/A | N/A
+		0x18053D3BA je short 000000018053D3C2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D3BC movups xmm0,[rcx+40h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 64 | None ||| N/A | N/A
+		0x18053D3C0 jmp short 000000018053D3C6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D3C2 movups xmm0,[rcx+50h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 80 | None ||| N/A | N/A
+		0x18053D3C6 test r9,r9		; DEBUG: {Register}/R9 {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x18053D3C9 je short 000000018053D3EEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D3CB mov rax,[r9]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 0 | None ||| N/A | N/A
+		0x18053D3CE lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x18053D3D3 mov rcx,r9		; DEBUG: {Register}/RCX {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x18053D3D6 movdqa [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x18053D3DC mov r8,[rax+2B0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 688 | None ||| N/A | N/A
+		0x18053D3E3 call qword ptr [rax+2A8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 680 | None ||| N/A | N/A
+		0x18053D3E9 add rsp,38h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 56
+		0x18053D3ED ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D3EE call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D3F3 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BuildingPopupSelectionSlot::SetHasResources(System.Boolean):
+		End of function at 0x18053D3F4
+		Absolute End is at 0x18053D3F4
+		Identified Jump Destination addresses:
+			0x18053D3C6
+		0x18053D3B4: [!] Reads field bgImage from {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores in a new local {'bgImage' (type UnityEngine.UI.Image)}
+
+		0x18053D3B8: [!] Compares {'hasResources' (function parameter, type System.Boolean)} and False
+		0x18053D3BA: Jumps to 0x18053D3C2 if hasResources equals False ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x18053D3C0: Jumps to 0x18053D3C6 (which is an function-local jump destination)
+
+		0x18053D3C2: [!] Reads field noResourcesColor from {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores in a new local {'noResourcesColor' (type UnityEngine.Color)}
+
+
+		End Of If-Else Block (at 0x18053D3C6) where the else started at 0x18053D3C2
+		0x18053D3C6: [!] Compares {'bgImage' (type UnityEngine.UI.Image)} and 0
+		0x18053D3C9: Jumps to 0x18053D3EE (which throws a NRE) if bgImage equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D3CB: Loads the class pointer from bgImage into a constant constant3 in register rax
+		0x18053D3CE: Loads a pointer to stack offset 0x20 into register rdx as new constant constant4
+		0x18053D3D3: Copies {'bgImage' (type UnityEngine.UI.Image)} from r9 into rcx
+		0x18053D3D6: Moves noResourcesColor (type UnityEngine.Color) from register xmm0 to the stack at offset 32 (0x20)
+		0x18053D3DC: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) specific to UnityEngine.UI.Image from the class pointer in rax, slot 23 (from memory offset 688) and stores in constant constant5
+		0x18053D3E3: [!] Calls managed method System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) on instance {'bgImage' (type UnityEngine.UI.Image)} with arguments [{'noResourcesColor' (type UnityEngine.Color)}]
+
+		0x18053D3ED: [!] Returns from the function
+
+		0x18053D3EE: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BuildingPopupSelectionSlot
+	System.Void SetHasResources(System.Boolean hasResources)
+		UnityEngine.UI.Image bgImage = this.bgImage
+
+		if (hasResources != False)
+		else
+		    UnityEngine.Color noResourcesColor = this.noResourcesColor
+		endif
+        
+
+		bgImage.color = noResourcesColor
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld UnityEngine.UI.Image BuildingPopupSelectionSlot::bgImage
+	IL_0006: stloc.0
+	IL_0007: ldarg.1
+	IL_0008: ldc.i4.0
+	IL_0009: beq.s IL_000b
+	IL_000b: ldarg.0
+	IL_000c: ldfld UnityEngine.Color BuildingPopupSelectionSlot::noResourcesColor
+	IL_0011: stloc.1
+	IL_0012: ldloc.0
+	IL_0013: ldloc.1
+	IL_0014: callvirt System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color)
+	IL_0019: ret
+	IL_001a: newobj System.Void System.NullReferenceException::.ctor()
+	IL_001f: throw
+	
+
+Method: System.Void BuildingPopupSelectionSlot::SetLocked(System.Boolean):	Method Body (x86 ASM):
+		0x18053D400 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x18053D405 mov [rsp+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 16 | None ||| N/A | N/A
+		0x18053D40A push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D40B sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18053D40F cmp byte ptr [18329A76Ah],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512426 | None ||| N/A | 0
+		0x18053D416 movzx ebx,dl		; DEBUG: {Register}/EBX {Register}/DL ||| None | 0 | None ||| N/A | N/A
+		0x18053D419 mov rsi,rcx		; DEBUG: {Register}/RSI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18053D41C jne short 000000018053D431h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D41E lea rcx,[1830F91C8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493802952 | None ||| N/A | N/A
+		0x18053D425 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D42A mov byte ptr [18329A76Ah],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512426 | None ||| N/A | 1
+		0x18053D431 mov rdi,[rsi+30h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSI | 48 | None ||| N/A | N/A
+		0x18053D435 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18053D438 je short 000000018053D49Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D43A mov rax,[1832A9DF0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575536 | None ||| N/A | N/A
+		0x18053D441 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D444 jne short 000000018053D45Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D446 lea rcx,[182979C38h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485941304 | None ||| N/A | N/A
+		0x18053D44D call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D452 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D455 je short 000000018053D4A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D457 mov [1832A9DF0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575536 | None ||| N/A | N/A
+		0x18053D45E movzx edx,bl		; DEBUG: {Register}/EDX {Register}/BL ||| None | 0 | None ||| N/A | N/A
+		0x18053D461 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18053D464 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D466 mov rdx,[1830F91C8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493802952 | None ||| N/A | N/A
+		0x18053D46D mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x18053D470 call 0000000180D40810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D475 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D478 je short 000000018053D49Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D47A xor bl,1		; DEBUG: {Register}/BL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x18053D47D xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18053D480 movzx edx,bl		; DEBUG: {Register}/EDX {Register}/BL ||| None | 0 | None ||| N/A | N/A
+		0x18053D483 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D486 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x18053D48B mov rsi,[rsp+38h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x18053D490 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18053D494 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D495 jmp near ptr 00000001825B41D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D49A call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D49F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BuildingPopupSelectionSlot::SetLocked(System.Boolean):
+		End of function at 0x18053D4A0
+		Absolute End is at 0x18053D4A0
+		Identified Jump Destination addresses:
+
+		0x18053D40A: Saves the content of rdi to the stack
+		0x18053D40F: Compares {Unknown Global at 0x18329A76A, first ten bytes are [3 0 164 100 239 2 96 88 3 0], or as chars " ¤dï`X "} and 0
+		0x18053D416: Copies {'locked' (function parameter, type System.Boolean)} from rdx into rbx
+		0x18053D419: Copies {'this' (function parameter, type BuildingPopupSelectionSlot)} from rcx into rsi
+		0x18053D41C: Jumps to 0x18053D431 if {Unknown Global at 0x18329A76A, first ten bytes are [3 0 164 100 239 2 96 88 3 0], or as chars " ¤dï`X "} != 0
+
+		0x18053D41E: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.UI.Toggle>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18053D425: Initializes runtime metadata value 
+		0x18053D431: [!] Reads field lockedFeedback from {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores in a new local {'lockedFeedback' (type UnityEngine.GameObject)}
+
+		0x18053D435: [!] Compares {'lockedFeedback' (type UnityEngine.GameObject)} and 0
+		0x18053D438: Jumps to 0x18053D49A (which throws a NRE) if lockedFeedback equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D43A: Loads string "äõ×" into register rax as constant UnityEngine.GameObject.SetActive
+		0x18053D441: Compares UnityEngine.GameObject.SetActive and 0
+		0x18053D444: Jumps to 0x18053D45E if UnityEngine.GameObject.SetActive != 0
+
+		0x18053D446: Loads string "UnityEngine.GameObject::SetActive(System.Boolean)" into register rcx as constant {'constant7' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18053D44D: Looks up unity ICall by name "UnityEngine.GameObject::SetActive(System.Boolean)" which resolves to System.Void UnityEngine.GameObject::SetActive(System.Boolean)
+		0x18053D452: Compares UnityEngine.GameObject.SetActive and 0
+		0x18053D455: Jumps to 0x18053D4A0 if UnityEngine.GameObject.SetActive equals 0
+
+		0x18053D45E: Copies {'locked' (function parameter, type System.Boolean)} from rbx into rdx
+		0x18053D461: Copies {'lockedFeedback' (type UnityEngine.GameObject)} from rdi into rcx
+		0x18053D464: [!] Calls managed method System.Void UnityEngine.GameObject::SetActive(System.Boolean) on instance {'lockedFeedback' (type UnityEngine.GameObject)} with arguments [{'locked' (function parameter, type System.Boolean)}]
+
+		0x18053D466: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.UI.Toggle>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x18053D46D: Copies {'this' (function parameter, type BuildingPopupSelectionSlot)} from rsi into rcx
+		0x18053D470: [!] Calls managed method T UnityEngine.Component::GetComponent<UnityEngine.UI.Toggle>() on instance {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores the result in {'component' (type UnityEngine.UI.Toggle)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x18053D475: [!] Compares {'component' (type UnityEngine.UI.Toggle)} and 0
+		0x18053D478: Jumps to 0x18053D49A (which throws a NRE) if component equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D480: Copies {'locked' (function parameter, type System.Boolean)} from rbx into rdx
+		0x18053D483: Copies {'component' (type UnityEngine.UI.Toggle)} from rax into rcx
+		0x18053D486: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant11
+		0x18053D48B: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rsi as new constant constant12
+		0x18053D495: [!] Calls managed method System.Void UnityEngine.UI.Selectable::set_interactable(System.Boolean) on instance {'component' (type UnityEngine.UI.Toggle)} with arguments [{'locked' (function parameter, type System.Boolean)}]
+
+		0x18053D495: [!] Returns from the function
+
+		0x18053D49A: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BuildingPopupSelectionSlot
+	System.Void SetLocked(System.Boolean locked)
+		UnityEngine.GameObject lockedFeedback = this.lockedFeedback
+
+		lockedFeedback.SetActive(locked) //(Boolean value)
+
+		UnityEngine.UI.Toggle component = base.GetComponent<UnityEngine.UI.Toggle>()
+
+		component.interactable = locked
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld UnityEngine.GameObject BuildingPopupSelectionSlot::lockedFeedback
+	IL_0006: ldarg.1
+	IL_0007: call System.Void UnityEngine.GameObject::SetActive(System.Boolean)
+	IL_000c: ldarg.0
+	IL_000d: call T UnityEngine.Component::GetComponent<UnityEngine.UI.Toggle>()
+	IL_0012: ldarg.1
+	IL_0013: call System.Void UnityEngine.UI.Selectable::set_interactable(System.Boolean)
+	IL_0018: ret
+	IL_0019: newobj System.Void System.NullReferenceException::.ctor()
+	IL_001e: throw
+	
+
+Method: System.Void BuildingPopupSelectionSlot::UpdateNewState():	Method Body (x86 ASM):
+		0x18053D4C0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x18053D4C5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D4C6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18053D4CA cmp byte ptr [18329A76Bh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512427 | None ||| N/A | 0
+		0x18053D4D1 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18053D4D4 jne short 000000018053D4E9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D4D6 lea rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x18053D4DD call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D4E2 mov byte ptr [18329A76Bh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512427 | None ||| N/A | 1
+		0x18053D4E9 mov rax,[rbx+68h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 104 | None ||| N/A | N/A
+		0x18053D4ED mov rdi,[rbx+38h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 56 | None ||| N/A | N/A
+		0x18053D4F1 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D4F4 je short 000000018053D558h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D4F6 mov rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x18053D4FD mov ebx,[rax+18h]		; DEBUG: {Register}/EBX {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x18053D500 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18053D507 jne short 000000018053D50Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D509 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D50E xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18053D510 mov ecx,ebx		; DEBUG: {Register}/ECX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x18053D512 call 000000018084D780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D517 movzx ebx,al		; DEBUG: {Register}/EBX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x18053D51A test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18053D51D je short 000000018053D558h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D51F mov rax,[1832A9DF0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575536 | None ||| N/A | N/A
+		0x18053D526 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D529 jne short 000000018053D543h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D52B lea rcx,[182979C38h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485941304 | None ||| N/A | N/A
+		0x18053D532 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D537 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D53A je short 000000018053D55Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D53C mov [1832A9DF0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575536 | None ||| N/A | N/A
+		0x18053D543 test bl,bl		; DEBUG: {Register}/BL {Register}/BL ||| None | 0 | None ||| N/A | N/A
+		0x18053D545 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18053D548 sete dl		; DEBUG: {Register}/DL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D54B mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x18053D550 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18053D554 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D555 jmp rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D558 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D55D int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BuildingPopupSelectionSlot::UpdateNewState():
+		End of function at 0x18053D55E
+		Absolute End is at 0x18053D55E
+		Identified Jump Destination addresses:
+
+		0x18053D4C5: Saves the content of rdi to the stack
+		0x18053D4CA: Compares {Unknown Global at 0x18329A76B, first ten bytes are [0 164 100 239 2 96 88 3 0 242], or as chars " ¤dï`X ò"} and 0
+		0x18053D4D1: Copies {'this' (function parameter, type BuildingPopupSelectionSlot)} from rcx into rbx
+		0x18053D4D4: Jumps to 0x18053D4E9 if {Unknown Global at 0x18329A76B, first ten bytes are [0 164 100 239 2 96 88 3 0 242], or as chars " ¤dï`X ò"} != 0
+
+		0x18053D4D6: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x18053D4DD: Initializes runtime metadata value PlayerStatus
+		0x18053D4E9: [!] Reads field recipe from {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores in a new local {'recipe' (type BaseRecipe)}
+
+		0x18053D4ED: [!] Reads field newFeedback from {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores in a new local {'newFeedback' (type UnityEngine.GameObject)}
+
+		0x18053D4F1: [!] Compares {'recipe' (type BaseRecipe)} and 0
+		0x18053D4F4: Jumps to 0x18053D558 (which throws a NRE) if recipe equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D4F6: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x18053D4FD: [!] Reads field recipeId from {'recipe' (type BaseRecipe)} and stores in a new local {'recipeId' (type System.Int32)}
+
+		0x18053D500: Compares "{il2cpp field PlayerStatus->cctor_finished}" and 0
+		0x18053D507: Jumps to 0x18053D50E if "{il2cpp field PlayerStatus->cctor_finished}" != 0
+
+		0x18053D509: Calls the il2cpp cctor for the type PlayerStatus
+		0x18053D510: Copies {'recipeId' (type System.Int32)} from rbx into rcx
+		0x18053D512: [!] Calls static managed method System.Boolean PlayerStatus::IsTechMadeOnce(System.Int32) with arguments [{'recipeId' (type System.Int32)}] and stores the result in {'isTechMadeOnce' (type System.Boolean)}
+
+		0x18053D517: Copies {'isTechMadeOnce' (type System.Boolean)} from rax into rbx
+		0x18053D51A: [!] Compares {'newFeedback' (type UnityEngine.GameObject)} and 0
+		0x18053D51D: Jumps to 0x18053D558 (which throws a NRE) if newFeedback equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D51F: Loads string "äõ×" into register rax as constant UnityEngine.GameObject.SetActive
+		0x18053D526: Compares UnityEngine.GameObject.SetActive and 0
+		0x18053D529: Jumps to 0x18053D543 if UnityEngine.GameObject.SetActive != 0
+
+		0x18053D52B: Loads string "UnityEngine.GameObject::SetActive(System.Boolean)" into register rcx as constant {'constant11' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18053D532: Looks up unity ICall by name "UnityEngine.GameObject::SetActive(System.Boolean)" which resolves to System.Void UnityEngine.GameObject::SetActive(System.Boolean)
+		0x18053D537: Compares UnityEngine.GameObject.SetActive and 0
+		0x18053D53A: Jumps to 0x18053D55E if UnityEngine.GameObject.SetActive equals 0
+
+		0x18053D543: [!] Compares {'isTechMadeOnce' (type System.Boolean)} and False
+		0x18053D545: Copies {'newFeedback' (type UnityEngine.GameObject)} from rdi into rcx
+		0x18053D548: [!] Sets the boolean {'local6' (type System.Boolean)} in rdx to true if isTechMadeOnce is equal to False, otherwise false.
+		0x18053D54B: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant14
+		0x18053D558: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BuildingPopupSelectionSlot
+	System.Void UpdateNewState()
+		BaseRecipe recipe = this.recipe
+		UnityEngine.GameObject newFeedback = this.newFeedback
+		System.Int32 recipeId = recipe.recipeId
+
+		System.Boolean isTechMadeOnce = PlayerStatus.IsTechMadeOnce(recipeId) //(Int32 techId)
+		System.Boolean local6 = isTechMadeOnce == False
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.EqualRegisterSetAction at (0x18053D548) is corrupt (Destination local has been stripped) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void BuildingPopupSelectionSlot::OnSelect():	Method Body (x86 ASM):
+		0x18053D580 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D582 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18053D586 cmp byte ptr [18329A76Ch],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512428 | None ||| N/A | 0
+		0x18053D58D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18053D590 jne short 000000018053D5B1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D592 lea rcx,[18311DF60h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493953888 | None ||| N/A | N/A
+		0x18053D599 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D59E lea rcx,[1830F6718h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792024 | None ||| N/A | N/A
+		0x18053D5A5 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D5AA mov byte ptr [18329A76Ch],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512428 | None ||| N/A | 1
+		0x18053D5B1 cmp byte ptr [183298877h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504503 | None ||| N/A | 0
+		0x18053D5B8 jne short 000000018053D5CDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D5BA lea rcx,[183102290h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493840016 | None ||| N/A | N/A
+		0x18053D5C1 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D5C6 mov byte ptr [183298877h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504503 | None ||| N/A | 1
+		0x18053D5CD mov rax,[183102290h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493840016 | None ||| N/A | N/A
+		0x18053D5D4 mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x18053D5DB mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x18053D5DE test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D5E1 je short 000000018053D63Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D5E3 cmp byte ptr [rax+90h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RAX | 144 | None ||| N/A | 0
+		0x18053D5EA je short 000000018053D637h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D5EC mov rdx,[18311DF60h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493953888 | None ||| N/A | N/A
+		0x18053D5F3 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18053D5F6 call 0000000180D40810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D5FB test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D5FE je short 000000018053D63Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D600 mov word ptr [rax+31h],1		; DEBUG: {Memory}/None {Immediate16}/None ||| RAX | 49 | None ||| N/A | 1
+		0x18053D606 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18053D609 mov rdx,[1830F6718h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493792024 | None ||| N/A | N/A
+		0x18053D610 call 0000000180D40810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D615 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18053D617 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D61A call 000000018082FE10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D61F mov rdx,[18311DF60h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493953888 | None ||| N/A | N/A
+		0x18053D626 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18053D629 call 0000000180D40810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D62E test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18053D631 je short 000000018053D63Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D633 mov byte ptr [rax+31h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RAX | 49 | None ||| N/A | 0
+		0x18053D637 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18053D63B pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D63C ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18053D63D call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18053D642 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BuildingPopupSelectionSlot::OnSelect():
+		End of function at 0x18053D643
+		Absolute End is at 0x18053D643
+		Identified Jump Destination addresses:
+
+		0x18053D580: Saves the content of rbx to the stack
+		0x18053D586: Compares {Unknown Global at 0x18329A76C, first ten bytes are [164 100 239 2 96 88 3 0 242 88], or as chars "¤dï`X òX"} and 0
+		0x18053D58D: Copies {'this' (function parameter, type BuildingPopupSelectionSlot)} from rcx into rbx
+		0x18053D590: Jumps to 0x18053D5B1 if {Unknown Global at 0x18329A76C, first ten bytes are [164 100 239 2 96 88 3 0 242 88], or as chars "¤dï`X òX"} != 0
+
+		0x18053D592: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<ButtonSoundManager>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18053D599: Initializes runtime metadata value 
+		0x18053D59E: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.UI.Selectable>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18053D5A5: Initializes runtime metadata value 
+		0x18053D5B1: Compares {Unknown Global at 0x183298877, first ten bytes are [0 27 229 0 0 12 166 237 2 27], or as chars " å  ¦í"} and 0
+		0x18053D5B8: Jumps to 0x18053D5CD if {Unknown Global at 0x183298877, first ten bytes are [0 27 229 0 0 12 166 237 2 27], or as chars " å  ¦í"} != 0
+
+		0x18053D5BA: Loads the type definition for managed type CursorManager as a constant "CursorManager" in rcx
+		0x18053D5C1: Initializes runtime metadata value CursorManager
+		0x18053D5CD: Loads the type definition for managed type CursorManager as a constant "CursorManager" in rax
+		0x18053D5D4: Loads the pointer to the static fields for CursorManager and stores it in constant9 in register rcx
+		0x18053D5DB: [!] Reads the static field CursorManager CursorManager::instance into new local instance
+		0x18053D5DE: [!] Compares {'instance' (type CursorManager)} and 0
+		0x18053D5E1: Jumps to 0x18053D63D (which throws a NRE) if instance equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D5E3: [!] Compares {field lastInputWasController, read from local {'instance' (type CursorManager)}} and False
+		0x18053D5EA: Jumps to 0x18053D637 (which is an if statement's body) if instance.lastInputWasController equals False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18053D5EC: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<ButtonSoundManager>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x18053D5F3: Copies {'this' (function parameter, type BuildingPopupSelectionSlot)} from rbx into rcx
+		0x18053D5F6: [!] Calls managed method T UnityEngine.Component::GetComponent<ButtonSoundManager>() on instance {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores the result in {'component' (type ButtonSoundManager)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x18053D5FB: [!] Compares {'component' (type ButtonSoundManager)} and 0
+		0x18053D5FE: Jumps to 0x18053D63D (which throws a NRE) if component equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D600: [!] Sets the field muteOnClick (Type System.Boolean) on local {'component' (type ButtonSoundManager)} to the value stored in True
+		0x18053D606: Copies {'this' (function parameter, type BuildingPopupSelectionSlot)} from rbx into rcx
+		0x18053D609: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.UI.Selectable>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x18053D610: [!] Calls managed method T UnityEngine.Component::GetComponent<UnityEngine.UI.Selectable>() on instance {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores the result in {'component2' (type UnityEngine.UI.Selectable)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x18053D617: Copies {'component2' (type UnityEngine.UI.Selectable)} from rax into rcx
+		0x18053D61A: [!] Calls static managed method System.Void InterfaceUtils::SimulateButtonClick(UnityEngine.UI.Selectable) with arguments [{'component2' (type UnityEngine.UI.Selectable)}]
+
+		0x18053D61F: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<ButtonSoundManager>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x18053D626: Copies {'this' (function parameter, type BuildingPopupSelectionSlot)} from rbx into rcx
+		0x18053D629: [!] Calls managed method T UnityEngine.Component::GetComponent<ButtonSoundManager>() on instance {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores the result in {'component3' (type ButtonSoundManager)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x18053D62E: [!] Compares {'component3' (type ButtonSoundManager)} and 0
+		0x18053D631: Jumps to 0x18053D63D (which throws a NRE) if component3 equals 0. Implicitly present in managed code, so ignored here.
+		0x18053D633: [!] Sets the field muteOnClick (Type System.Boolean) on local {'component3' (type ButtonSoundManager)} to the value stored in False
+		0x18053D63C: [!] Returns from the function
+
+		0x18053D63D: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BuildingPopupSelectionSlot
+	System.Void OnSelect()
+		CursorManager instance = CursorManager.instance
+
+		if (instance.lastInputWasController != False)
+
+		    ButtonSoundManager component = base.GetComponent<ButtonSoundManager>()
+		    component.muteOnClick = True
+
+		    UnityEngine.UI.Selectable component2 = base.GetComponent<UnityEngine.UI.Selectable>()
+
+		    InterfaceUtils.SimulateButtonClick(component2) //(Selectable button)
+
+		    ButtonSoundManager component3 = base.GetComponent<ButtonSoundManager>()
+		    component3.muteOnClick = False
+		endif
+        
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldsfld CursorManager CursorManager::instance
+	IL_0005: ldfld System.Boolean CursorManager::lastInputWasController
+	IL_000a: ldc.i4.0
+	IL_000b: beq.s IL_0030
+	IL_000d: ldarg.0
+	IL_000e: call T UnityEngine.Component::GetComponent<ButtonSoundManager>()
+	IL_0013: ldc.i4.1
+	IL_0014: stfld System.Boolean ButtonSoundManager::muteOnClick
+	IL_0019: ldarg.0
+	IL_001a: call T UnityEngine.Component::GetComponent<UnityEngine.UI.Selectable>()
+	IL_001f: call System.Void InterfaceUtils::SimulateButtonClick(UnityEngine.UI.Selectable)
+	IL_0024: ldarg.0
+	IL_0025: call T UnityEngine.Component::GetComponent<ButtonSoundManager>()
+	IL_002a: ldc.i4.0
+	IL_002b: stfld System.Boolean ButtonSoundManager::muteOnClick
+	IL_0030: ret
+	IL_0031: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0036: throw
+	
+
+Method: System.Int32 BuildingPopupSelectionSlot::get_Index():	Method Body (x86 ASM):
+		0x1804E1700 mov eax,[rcx+60h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 96 | None ||| N/A | N/A
+		0x1804E1703 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804E1704 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Int32 BuildingPopupSelectionSlot::get_Index():
+		End of function at 0x1804E1705
+		Absolute End is at 0x1804E1705
+		Identified Jump Destination addresses:
+
+		0x1804E1700: [!] Reads field index from {'this' (function parameter, type BuildingPopupSelectionSlot)} and stores in a new local {'index' (type System.Int32)}
+
+		0x1804E1703: [!] Returns {'index' (type System.Int32)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BuildingPopupSelectionSlot
+	System.Int32 get_Index()
+		System.Int32 index = this.index
+		return index
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Int32 BuildingPopupSelectionSlot::index
+	IL_0006: ret
+	
+
+Method: System.Void BuildingPopupSelectionSlot::.ctor():	Method Body (x86 ASM):
+		0x18037A630 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A634 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x18037A63B jne short 000000018037A650h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A63D lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A644 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A649 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x18037A650 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A657 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18037A65E jne short 000000018037A669h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A660 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A664 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A669 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A66D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18037A66E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BuildingPopupSelectionSlot::.ctor():
+		End of function at 0x18037A66F
+		Absolute End is at 0x18037A66F
+		Identified Jump Destination addresses:
+
+		0x18037A634: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x18037A63B: Jumps to 0x18037A650 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x18037A63D: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A644: Initializes runtime metadata value UnityEngine.Object
+		0x18037A650: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A657: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18037A65E: Jumps to 0x18037A669 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18037A66D: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BuildingPopupSelectionSlot
+	System.Void .ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ret
+	
+

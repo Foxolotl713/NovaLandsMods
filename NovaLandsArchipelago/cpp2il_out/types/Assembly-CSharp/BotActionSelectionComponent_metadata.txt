@@ -1,0 +1,354 @@
+Type: BotActionSelectionComponent:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Nested Types:
+		BotActionSelectionComponent/<>c__DisplayClass21_0
+		BotActionSelectionComponent/<>c__DisplayClass22_0
+		BotActionSelectionComponent/<>c__DisplayClass23_0
+		BotActionSelectionComponent/<>c__DisplayClass27_0
+
+	Field: dropdown
+		Type: UnityEngine.UI.Dropdown
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: textDropdown
+		Type: TMPro.TMP_Dropdown
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: actionLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: returningIcon
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: returnToBaseTargetIconColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: returnToBaseTargetTextColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: returnToBaseDropdownBackgroundColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: dropdownBackground
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: returnToBaseDropdownBackgroundOriginalColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: availableBuildingTargets
+		Type: System.Collections.Generic.List`1<BaseBuilding>
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: availableCharacterTargets
+		Type: System.Collections.Generic.List`1<BaseCharacter>
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: currentBuildingTarget
+		Type: BaseBuilding
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: currentCharacterTarget
+		Type: BaseCharacter
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: onSelectBuildingTarget
+		Type: System.Action`1<BaseBuilding>
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: onSelectCharacterTarget
+		Type: System.Action`1<BaseCharacter>
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: availableBehaviors
+		Type: System.Collections.Generic.List`1<FighterBotMovementBehavior>
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: currentBehavior
+		Type: FighterBotMovementBehavior
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: onSelectFighterBotBehavior
+		Type: System.Action`1<FighterBotMovementBehavior>
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: adjustDropdownContentSize
+		Type: System.Boolean
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: onChangeDropdownVisibility
+		Type: System.Action`1<System.Boolean>
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: <IsDropdownActive>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00507F50
+		Ram Offset 0x180509150
+		Virtual Method Slot: 65535
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00507F60
+		Ram Offset 0x180509160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: actionNameString
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: targets
+			Type: System.Collections.Generic.List`1<BaseBuilding>
+			Default Value: 
+		Parameter 2:
+			Name: currentTarget
+			Type: BaseBuilding
+			Default Value: 
+		Parameter 3:
+			Name: onSelectBuildingTarget
+			Type: System.Action`1<BaseBuilding>
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00508650
+		Ram Offset 0x180509850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: actionNameString
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: targets
+			Type: System.Collections.Generic.List`1<BaseCharacter>
+			Default Value: 
+		Parameter 2:
+			Name: currentTarget
+			Type: BaseCharacter
+			Default Value: 
+		Parameter 3:
+			Name: onSelectHuntingTarget
+			Type: System.Action`1<BaseCharacter>
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00508ED0
+		Ram Offset 0x18050a0d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: actionNameString
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: behaviors
+			Type: System.Collections.Generic.List`1<FighterBotMovementBehavior>
+			Default Value: 
+		Parameter 2:
+			Name: currentBehavior
+			Type: FighterBotMovementBehavior
+			Default Value: 
+		Parameter 3:
+			Name: onSelectFighterBotBehavior
+			Type: System.Action`1<FighterBotMovementBehavior>
+			Default Value: 
+	Method: SetOnChangeDropdownVisibilityCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005096B0
+		Ram Offset 0x18050a8b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: onChangeDropdownVisibility
+			Type: System.Action`1<System.Boolean>
+			Default Value: 
+	Method: SetupDropdown:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00509710
+		Ram Offset 0x18050a910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: s
+			Type: UnityEngine.UI.Selectable
+			Default Value: 
+	Method: OnDropdownVisibilityChange:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00509980
+		Ram Offset 0x18050ab80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enabled
+			Type: System.Boolean
+			Default Value: 
+	Method: SetSelection:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005099A0
+		Ram Offset 0x18050aba0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: target
+			Type: BaseBuilding
+			Default Value: 
+	Method: LateUpdate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00509C50
+		Ram Offset 0x18050ae50
+		Virtual Method Slot: 65535
+
+	Method: SetReturning:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00509C60
+		Ram Offset 0x18050ae60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: returning
+			Type: System.Boolean
+			Default Value: 
+	Method: SetCurrentTarget:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0050A090
+		Ram Offset 0x18050b290
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: target
+			Type: BaseBuilding
+			Default Value: 
+	Method: SetCurrentTarget:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0050A180
+		Ram Offset 0x18050b380
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: target
+			Type: BaseCharacter
+			Default Value: 
+	Method: OnChangeTarget:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0050A270
+		Ram Offset 0x18050b470
+		Virtual Method Slot: 65535
+
+	Method: SetFighterCurrentBehavior:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0050A360
+		Ram Offset 0x18050b560
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: behavior
+			Type: FighterBotMovementBehavior
+			Default Value: 
+	Method: OnChangeFighterBehavior:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0050A390
+		Ram Offset 0x18050b590
+		Virtual Method Slot: 65535
+
+	Method: AdjustDropdownViewportSizeEvent:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0050A430
+		Ram Offset 0x18050b630
+		Virtual Method Slot: 65535
+
+	Method: AdjustDropdownViewportSize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0050A440
+		Ram Offset 0x18050b640
+		Virtual Method Slot: 65535
+
+	Method: UpdateAdjustDropdownViewportSize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00509C50
+		Ram Offset 0x18050ae50
+		Virtual Method Slot: 65535
+
+	Method: get_Dropdown:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Selectable
+		File Offset 0x0050A9F0
+		Ram Offset 0x18050bbf0
+		Virtual Method Slot: 65535
+
+	Method: get_IsDropdownActive:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0050AB60
+		Ram Offset 0x18050bd60
+		Virtual Method Slot: 65535
+
+	Method: set_IsDropdownActive:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0050AB70
+		Ram Offset 0x18050bd70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379430
+		Ram Offset 0x18037a630
+		Virtual Method Slot: 65535

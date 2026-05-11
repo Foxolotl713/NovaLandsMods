@@ -1,0 +1,275 @@
+Type: Mono.Xml.SmallXmlParser:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		Mono.Xml.SmallXmlParser/IContentHandler
+		Mono.Xml.SmallXmlParser/IAttrList
+		Mono.Xml.SmallXmlParser/AttrListImpl
+
+	Field: handler
+		Type: Mono.Xml.SmallXmlParser/IContentHandler
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: reader
+		Type: System.IO.TextReader
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: elementNames
+		Type: System.Collections.Stack
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: xmlSpaces
+		Type: System.Collections.Stack
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: xmlSpace
+		Type: System.String
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: buffer
+		Type: System.Text.StringBuilder
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: nameBuffer
+		Type: System.Char[]
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: isWhitespace
+		Type: System.Boolean
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: attributes
+		Type: Mono.Xml.SmallXmlParser/AttrListImpl
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: line
+		Type: System.Int32
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: column
+		Type: System.Int32
+		Offset in Defining Type: 0x5C
+		Has Default: False
+
+	Field: resetColumn
+		Type: System.Boolean
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0169F8D0
+		Ram Offset 0x1816a0ad0
+		Virtual Method Slot: 65535
+
+	Method: Error:
+		Accessibility: Private
+		Return Type: System.Exception
+		File Offset 0x0169FCD0
+		Ram Offset 0x1816a0ed0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: System.String
+			Default Value: 
+	Method: UnexpectedEndError:
+		Accessibility: Private
+		Return Type: System.Exception
+		File Offset 0x0169FE00
+		Ram Offset 0x1816a1000
+		Virtual Method Slot: 65535
+
+	Method: IsNameChar:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0169FF90
+		Ram Offset 0x1816a1190
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: c
+			Type: System.Char
+			Default Value: 
+		Parameter 1:
+			Name: start
+			Type: System.Boolean
+			Default Value: 
+	Method: IsWhitespace:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x016A00A0
+		Ram Offset 0x1816a12a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: c
+			Type: System.Int32
+			Default Value: 
+	Method: SkipWhitespaces:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016A00C0
+		Ram Offset 0x1816a12c0
+		Virtual Method Slot: 65535
+
+	Method: HandleWhitespaces:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016A00D0
+		Ram Offset 0x1816a12d0
+		Virtual Method Slot: 65535
+
+	Method: SkipWhitespaces:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016A0220
+		Ram Offset 0x1816a1420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: expected
+			Type: System.Boolean
+			Default Value: 
+	Method: Peek:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x016A0300
+		Ram Offset 0x1816a1500
+		Virtual Method Slot: 65535
+
+	Method: Read:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x016A0330
+		Ram Offset 0x1816a1530
+		Virtual Method Slot: 65535
+
+	Method: Expect:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016A0390
+		Ram Offset 0x1816a1590
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: c
+			Type: System.Int32
+			Default Value: 
+	Method: ReadUntil:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x016A04C0
+		Ram Offset 0x1816a16c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: until
+			Type: System.Char
+			Default Value: 
+		Parameter 1:
+			Name: handleReferences
+			Type: System.Boolean
+			Default Value: 
+	Method: ReadName:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x016A0640
+		Ram Offset 0x1816a1840
+		Virtual Method Slot: 65535
+
+	Method: Parse:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016A0860
+		Ram Offset 0x1816a1a60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: input
+			Type: System.IO.TextReader
+			Default Value: 
+		Parameter 1:
+			Name: handler
+			Type: Mono.Xml.SmallXmlParser/IContentHandler
+			Default Value: 
+	Method: Cleanup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016A0BB0
+		Ram Offset 0x1816a1db0
+		Virtual Method Slot: 65535
+
+	Method: ReadContent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016A0D50
+		Ram Offset 0x1816a1f50
+		Virtual Method Slot: 65535
+
+	Method: HandleBufferedContent:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016A18B0
+		Ram Offset 0x1816a2ab0
+		Virtual Method Slot: 65535
+
+	Method: ReadCharacters:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016A1960
+		Ram Offset 0x1816a2b60
+		Virtual Method Slot: 65535
+
+	Method: ReadReference:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016A1AC0
+		Ram Offset 0x1816a2cc0
+		Virtual Method Slot: 65535
+
+	Method: ReadCharacterReference:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x016A1E00
+		Ram Offset 0x1816a3000
+		Virtual Method Slot: 65535
+
+	Method: ReadAttribute:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016A1FF0
+		Ram Offset 0x1816a31f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: Mono.Xml.SmallXmlParser/AttrListImpl
+			Default Value: 
+	Method: ReadCDATASection:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016A21D0
+		Ram Offset 0x1816a33d0
+		Virtual Method Slot: 65535
+
+	Method: ReadComment:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016A2410
+		Ram Offset 0x1816a3610
+		Virtual Method Slot: 65535

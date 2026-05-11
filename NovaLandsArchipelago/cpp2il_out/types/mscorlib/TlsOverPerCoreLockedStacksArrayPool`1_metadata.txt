@@ -1,0 +1,130 @@
+Type: System.Buffers.TlsOverPerCoreLockedStacksArrayPool`1:
+	Base Class: 
+		System.Buffers.ArrayPool`1<T>
+
+	Interfaces:
+
+	Nested Types:
+		System.Buffers.TlsOverPerCoreLockedStacksArrayPool`1/MemoryPressure
+		System.Buffers.TlsOverPerCoreLockedStacksArrayPool`1/PerCoreLockedStacks
+		System.Buffers.TlsOverPerCoreLockedStacksArrayPool`1/LockedStack
+
+	Field: _bucketArraySizes
+		Type: System.Int32[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _buckets
+		Type: System.Buffers.TlsOverPerCoreLockedStacksArrayPool`1/PerCoreLockedStacks<T>[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _callbackCreated
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: s_trimBuffers
+		Type: System.Boolean
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: s_allTlsBuckets
+		Type: System.Runtime.CompilerServices.ConditionalWeakTable`2<T[][],System.Object>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: t_tlsBuckets
+		Type: T[][]
+		Offset in Defining Type: 0xFFFFFFFFFFFFFFFF
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01492600
+		Ram Offset 0x181493800
+		Virtual Method Slot: 65535
+
+	Method: CreatePerCoreLockedStacks:
+		Accessibility: Private
+		Return Type: System.Buffers.TlsOverPerCoreLockedStacksArrayPool`1/PerCoreLockedStacks<T>
+		File Offset 0x014927B0
+		Ram Offset 0x1814939b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bucketIndex
+			Type: System.Int32
+			Default Value: 
+	Method: get_Id:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x014928A0
+		Ram Offset 0x181493aa0
+		Virtual Method Slot: 65535
+
+	Method: Rent:
+		Accessibility: Public
+		Return Type: T[]
+		File Offset 0x014928D0
+		Ram Offset 0x181493ad0
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: minimumLength
+			Type: System.Int32
+			Default Value: 
+	Method: Return:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01492C10
+		Ram Offset 0x181493e10
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: array
+			Type: T[]
+			Default Value: 
+		Parameter 1:
+			Name: clearArray
+			Type: System.Boolean
+			Default Value: False
+	Method: Trim:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x014931A0
+		Ram Offset 0x1814943a0
+		Virtual Method Slot: 65535
+
+	Method: Gen2GcCallbackFunc:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x014935E0
+		Ram Offset 0x1814947e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: target
+			Type: System.Object
+			Default Value: 
+	Method: GetMemoryPressure:
+		Accessibility: Private
+		Return Type: System.Buffers.TlsOverPerCoreLockedStacksArrayPool`1/MemoryPressure<T>
+		File Offset 0x014936F0
+		Ram Offset 0x1814948f0
+		Virtual Method Slot: 65535
+
+	Method: GetTrimBuffers:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01493730
+		Ram Offset 0x181494930
+		Virtual Method Slot: 65535

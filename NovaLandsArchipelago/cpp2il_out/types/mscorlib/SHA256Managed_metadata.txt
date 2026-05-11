@@ -1,0 +1,237 @@
+Type: System.Security.Cryptography.SHA256Managed:
+	Base Class: 
+		System.Security.Cryptography.SHA256
+
+	Interfaces:
+
+	Static Field: _K
+		Type: System.UInt32[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _buffer
+		Type: System.Byte[]
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _count
+		Type: System.Int64
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _stateSHA256
+		Type: System.UInt32[]
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _W
+		Type: System.UInt32[]
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01714610
+		Ram Offset 0x181715810
+		Virtual Method Slot: 65535
+
+	Method: Initialize:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x017147B0
+		Ram Offset 0x1817159b0
+		Virtual Method Slot: 18
+
+	Method: HashCore:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01714800
+		Ram Offset 0x181715a00
+		Virtual Method Slot: 16
+
+		Parameter 0:
+			Name: rgb
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: ibStart
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: cbSize
+			Type: System.Int32
+			Default Value: 
+	Method: HashFinal:
+		Accessibility: Family
+		Return Type: System.Byte[]
+		File Offset 0x01714810
+		Ram Offset 0x181715a10
+		Virtual Method Slot: 17
+
+	Method: InitializeState:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01714820
+		Ram Offset 0x181715a20
+		Virtual Method Slot: 65535
+
+	Method: _HashData:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01714910
+		Ram Offset 0x181715b10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: partIn
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: ibStart
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: cbSize
+			Type: System.Int32
+			Default Value: 
+	Method: _EndHash:
+		Accessibility: Private
+		Return Type: System.Byte[]
+		File Offset 0x01714C30
+		Ram Offset 0x181715e30
+		Virtual Method Slot: 65535
+
+	Method: SHATransform:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01714EE0
+		Ram Offset 0x1817160e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: expandedBuffer
+			Type: System.UInt32*
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.UInt32*
+			Default Value: 
+		Parameter 2:
+			Name: block
+			Type: System.Byte*
+			Default Value: 
+	Method: RotateRight:
+		Accessibility: Private
+		Return Type: System.UInt32
+		File Offset 0x01715AC0
+		Ram Offset 0x181716cc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x
+			Type: System.UInt32
+			Default Value: 
+		Parameter 1:
+			Name: n
+			Type: System.Int32
+			Default Value: 
+	Method: Ch:
+		Accessibility: Private
+		Return Type: System.UInt32
+		File Offset 0x01715AE0
+		Ram Offset 0x181716ce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x
+			Type: System.UInt32
+			Default Value: 
+		Parameter 1:
+			Name: y
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: z
+			Type: System.UInt32
+			Default Value: 
+	Method: Maj:
+		Accessibility: Private
+		Return Type: System.UInt32
+		File Offset 0x01715AF0
+		Ram Offset 0x181716cf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x
+			Type: System.UInt32
+			Default Value: 
+		Parameter 1:
+			Name: y
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: z
+			Type: System.UInt32
+			Default Value: 
+	Method: sigma_0:
+		Accessibility: Private
+		Return Type: System.UInt32
+		File Offset 0x01715B00
+		Ram Offset 0x181716d00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x
+			Type: System.UInt32
+			Default Value: 
+	Method: sigma_1:
+		Accessibility: Private
+		Return Type: System.UInt32
+		File Offset 0x01715B60
+		Ram Offset 0x181716d60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x
+			Type: System.UInt32
+			Default Value: 
+	Method: Sigma_0:
+		Accessibility: Private
+		Return Type: System.UInt32
+		File Offset 0x01715BC0
+		Ram Offset 0x181716dc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x
+			Type: System.UInt32
+			Default Value: 
+	Method: Sigma_1:
+		Accessibility: Private
+		Return Type: System.UInt32
+		File Offset 0x01715C30
+		Ram Offset 0x181716e30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x
+			Type: System.UInt32
+			Default Value: 
+	Method: SHA256Expand:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01715CA0
+		Ram Offset 0x181716ea0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x
+			Type: System.UInt32*
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01715DE0
+		Ram Offset 0x181716fe0
+		Virtual Method Slot: 65535

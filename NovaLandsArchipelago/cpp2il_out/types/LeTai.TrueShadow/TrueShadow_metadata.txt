@@ -1,0 +1,1066 @@
+Type: LeTai.TrueShadow.TrueShadow:
+	Base Class: 
+		UnityEngine.EventSystems.UIBehaviour
+
+	Interfaces:
+		UnityEngine.UI.IMeshModifier
+		UnityEngine.UI.ICanvasElement
+
+	Static Field: DEFAULT_COLOR
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: nextTextureRevision
+		Type: System.Int32
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: size
+		Type: System.Single
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: spread
+		Type: System.Single
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Field: useGlobalAngle
+		Type: System.Boolean
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: offsetAngle
+		Type: System.Single
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Field: offsetDistance
+		Type: System.Single
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: offset
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Field: color
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x3C
+		Has Default: False
+
+	Field: inset
+		Type: System.Boolean
+		Offset in Defining Type: 0x4C
+		Has Default: False
+
+	Field: blendMode
+		Type: LeTai.TrueShadow.BlendMode
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: useCasterAlpha
+		Type: System.Boolean
+		Offset in Defining Type: 0x54
+		Has Default: False
+
+	Field: ignoreCasterColor
+		Type: System.Boolean
+		Offset in Defining Type: 0x55
+		Has Default: False
+
+	Field: colorBleedMode
+		Type: LeTai.TrueShadow.ColorBleedMode
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: disableFitCompensation
+		Type: System.Boolean
+		Offset in Defining Type: 0x5C
+		Has Default: False
+
+	Field: shadowAsSibling
+		Type: System.Boolean
+		Offset in Defining Type: 0x5D
+		Has Default: False
+
+	Field: cutout
+		Type: System.Boolean
+		Offset in Defining Type: 0x5E
+		Has Default: False
+
+	Field: baked
+		Type: System.Boolean
+		Offset in Defining Type: 0x5F
+		Has Default: False
+
+	Field: modifiedFromInspector
+		Type: System.Boolean
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: bakedShadows
+		Type: System.Collections.Generic.List`1<UnityEngine.Sprite>
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: shadowRenderer
+		Type: LeTai.TrueShadow.ShadowRenderer
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: <SpriteMesh>k__BackingField
+		Type: UnityEngine.Mesh
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: <Graphic>k__BackingField
+		Type: UnityEngine.UI.Graphic
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: <CanvasRenderer>k__BackingField
+		Type: UnityEngine.CanvasRenderer
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: <RectTransform>k__BackingField
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: shadowContainer
+		Type: LeTai.TrueShadow.ShadowContainer
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: customHash
+		Type: System.Int32
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: textureDirty
+		Type: System.Boolean
+		Offset in Defining Type: 0xA4
+		Has Default: False
+
+	Field: layoutDirty
+		Type: System.Boolean
+		Offset in Defining Type: 0xA5
+		Has Default: False
+
+	Field: <HierachyDirty>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0xA6
+		Has Default: False
+
+	Field: <TextureRevision>k__BackingField
+		Type: System.Int32
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: checkHierarchyDirtiedDelegate
+		Type: System.Action
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: transformTrackers
+		Type: LeTai.TrueShadow.IChangeTracker[]
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: hierachyTrackers
+		Type: LeTai.TrueShadow.ChangeTracker`1<System.Int32>[]
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: casterMaterialProvider
+		Type: LeTai.TrueShadow.PluginInterfaces.ITrueShadowCasterMaterialProvider
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: casterMaterialPropertiesModifier
+		Type: LeTai.TrueShadow.PluginInterfaces.ITrueShadowCasterMaterialPropertiesModifier
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: casterMeshModifier
+		Type: LeTai.TrueShadow.PluginInterfaces.ITrueShadowCasterMeshModifier
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: casterClearColorProvider
+		Type: LeTai.TrueShadow.PluginInterfaces.ITrueShadowCasterClearColorProvider
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: rendererMaterialProvider
+		Type: LeTai.TrueShadow.PluginInterfaces.ITrueShadowRendererMaterialProvider
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: rendererMaterialModifier
+		Type: LeTai.TrueShadow.PluginInterfaces.ITrueShadowRendererMaterialModifier
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: rendererMeshModifier
+		Type: LeTai.TrueShadow.PluginInterfaces.ITrueShadowRendererMeshModifier
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: meshColors
+		Type: System.Collections.Generic.List`1<UnityEngine.Color32>
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: meshColorsOpaque
+		Type: System.Collections.Generic.List`1<UnityEngine.Color32>
+		Offset in Defining Type: 0x108
+		Has Default: False
+
+	Method: get_Size:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x007131F0
+		Ram Offset 0x1807143f0
+		Virtual Method Slot: 65535
+
+	Method: set_Size:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01656770
+		Ram Offset 0x181657970
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_Spread:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x003A78B0
+		Ram Offset 0x1803a8ab0
+		Virtual Method Slot: 65535
+
+	Method: set_Spread:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01656840
+		Ram Offset 0x181657a40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_UseGlobalAngle:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003A0750
+		Ram Offset 0x1803a1950
+		Virtual Method Slot: 65535
+
+	Method: set_UseGlobalAngle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016568B0
+		Ram Offset 0x181657ab0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_OffsetAngle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x009B2D30
+		Ram Offset 0x1809b3f30
+		Virtual Method Slot: 65535
+
+	Method: set_OffsetAngle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01656A70
+		Ram Offset 0x181657c70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_OffsetDistance:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00773B80
+		Ram Offset 0x180774d80
+		Virtual Method Slot: 65535
+
+	Method: set_OffsetDistance:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01656B60
+		Ram Offset 0x181657d60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_Color:
+		Accessibility: Public
+		Return Type: UnityEngine.Color
+		File Offset 0x01656D10
+		Ram Offset 0x181657f10
+		Virtual Method Slot: 65535
+
+	Method: set_Color:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01656D20
+		Ram Offset 0x181657f20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Color
+			Default Value: 
+	Method: get_UseCasterAlpha:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01656DA0
+		Ram Offset 0x181657fa0
+		Virtual Method Slot: 65535
+
+	Method: set_UseCasterAlpha:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01656DB0
+		Ram Offset 0x181657fb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_IgnoreCasterColor:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01656DD0
+		Ram Offset 0x181657fd0
+		Virtual Method Slot: 65535
+
+	Method: set_IgnoreCasterColor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01656DE0
+		Ram Offset 0x181657fe0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_Inset:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01656E00
+		Ram Offset 0x181658000
+		Virtual Method Slot: 65535
+
+	Method: set_Inset:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01656E10
+		Ram Offset 0x181658010
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_BlendMode:
+		Accessibility: Public
+		Return Type: LeTai.TrueShadow.BlendMode
+		File Offset 0x0069F1F0
+		Ram Offset 0x1806a03f0
+		Virtual Method Slot: 65535
+
+	Method: set_BlendMode:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01656E50
+		Ram Offset 0x181658050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: LeTai.TrueShadow.BlendMode
+			Default Value: 
+	Method: get_ColorBleedMode:
+		Accessibility: Public
+		Return Type: LeTai.TrueShadow.ColorBleedMode
+		File Offset 0x00624080
+		Ram Offset 0x180625280
+		Virtual Method Slot: 65535
+
+	Method: set_ColorBleedMode:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01656FF0
+		Ram Offset 0x1816581f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: LeTai.TrueShadow.ColorBleedMode
+			Default Value: 
+	Method: get_DisableFitCompensation:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01657010
+		Ram Offset 0x181658210
+		Virtual Method Slot: 65535
+
+	Method: set_DisableFitCompensation:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01657020
+		Ram Offset 0x181658220
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_ClearColor:
+		Accessibility: Public
+		Return Type: UnityEngine.Color
+		File Offset 0x01657040
+		Ram Offset 0x181658240
+		Virtual Method Slot: 65535
+
+	Method: get_ShadowAsSibling:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x016571B0
+		Ram Offset 0x1816583b0
+		Virtual Method Slot: 65535
+
+	Method: set_ShadowAsSibling:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016571C0
+		Ram Offset 0x1816583c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_CustomHash:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0139D120
+		Ram Offset 0x18139e320
+		Virtual Method Slot: 65535
+
+	Method: set_CustomHash:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016573F0
+		Ram Offset 0x1816585f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_Offset:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x01657410
+		Ram Offset 0x181658610
+		Virtual Method Slot: 65535
+
+	Method: get_Cutout:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01657430
+		Ram Offset 0x181658630
+		Virtual Method Slot: 65535
+
+	Method: set_Cutout:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01657440
+		Ram Offset 0x181658640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_SpriteMesh:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Mesh
+		File Offset 0x003933D0
+		Ram Offset 0x1803945d0
+		Virtual Method Slot: 65535
+
+	Method: set_SpriteMesh:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0061D3C0
+		Ram Offset 0x18061e5c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Mesh
+			Default Value: 
+	Method: get_Graphic:
+		Accessibility: Assembly
+		Return Type: UnityEngine.UI.Graphic
+		File Offset 0x00616D20
+		Ram Offset 0x180617f20
+		Virtual Method Slot: 65535
+
+	Method: set_Graphic:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00970A10
+		Ram Offset 0x180971c10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.Graphic
+			Default Value: 
+	Method: get_CanvasRenderer:
+		Accessibility: Assembly
+		Return Type: UnityEngine.CanvasRenderer
+		File Offset 0x00530430
+		Ram Offset 0x180531630
+		Virtual Method Slot: 65535
+
+	Method: set_CanvasRenderer:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x003ED5D0
+		Ram Offset 0x1803ee7d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.CanvasRenderer
+			Default Value: 
+	Method: get_RectTransform:
+		Accessibility: Assembly
+		Return Type: UnityEngine.RectTransform
+		File Offset 0x0040DAB0
+		Ram Offset 0x18040ecb0
+		Virtual Method Slot: 65535
+
+	Method: set_RectTransform:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A1DFF0
+		Ram Offset 0x180a1f1f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.RectTransform
+			Default Value: 
+	Method: get_Content:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Texture
+		File Offset 0x01657450
+		Ram Offset 0x181658650
+		Virtual Method Slot: 65535
+
+	Method: get_ShadowContainer:
+		Accessibility: Assembly
+		Return Type: LeTai.TrueShadow.ShadowContainer
+		File Offset 0x0040E2C0
+		Ram Offset 0x18040f4c0
+		Virtual Method Slot: 65535
+
+	Method: get_HierachyDirty:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01657670
+		Ram Offset 0x181658870
+		Virtual Method Slot: 65535
+
+	Method: set_HierachyDirty:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01657680
+		Ram Offset 0x181658880
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_TextureRevision:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x009F6F60
+		Ram Offset 0x1809f8160
+		Virtual Method Slot: 65535
+
+	Method: set_TextureRevision:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F13C0
+		Ram Offset 0x1809f25c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: OnGlobalAngleChanged:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01657690
+		Ram Offset 0x181658890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: angle
+			Type: System.Single
+			Default Value: 
+	Method: Awake:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01657750
+		Ram Offset 0x181658950
+		Virtual Method Slot: 4
+
+	Method: OnEnable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01657790
+		Ram Offset 0x181658990
+		Virtual Method Slot: 5
+
+	Method: ApplySerializedData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01657D10
+		Ram Offset 0x181658f10
+		Virtual Method Slot: 65535
+
+	Method: OnDisable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01657EB0
+		Ram Offset 0x1816590b0
+		Virtual Method Slot: 7
+
+	Method: OnDestroy:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x016581C0
+		Ram Offset 0x1816593c0
+		Virtual Method Slot: 8
+
+	Method: ShouldPerformWorks:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01658320
+		Ram Offset 0x181659520
+		Virtual Method Slot: 65535
+
+	Method: LateUpdate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01658560
+		Ram Offset 0x181659760
+		Virtual Method Slot: 65535
+
+	Method: Rebuild:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01658590
+		Ram Offset 0x181659790
+		Virtual Method Slot: 19
+
+		Parameter 0:
+			Name: executing
+			Type: UnityEngine.UI.CanvasUpdate
+			Default Value: 
+	Method: OnWillRenderCanvas:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016585E0
+		Ram Offset 0x1816597e0
+		Virtual Method Slot: 65535
+
+	Method: LayoutComplete:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 21
+
+	Method: GraphicUpdateComplete:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 22
+
+	Method: SetTextureDirty:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01658A10
+		Ram Offset 0x181659c10
+		Virtual Method Slot: 65535
+
+	Method: ForceTextureDirty:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01658A20
+		Ram Offset 0x181659c20
+		Virtual Method Slot: 65535
+
+	Method: SetLayoutDirty:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01658A90
+		Ram Offset 0x181659c90
+		Virtual Method Slot: 65535
+
+	Method: SetHierachyDirty:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01658AA0
+		Ram Offset 0x181659ca0
+		Virtual Method Slot: 65535
+
+	Method: UnSetHierachyDirty:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01658AB0
+		Ram Offset 0x181659cb0
+		Virtual Method Slot: 65535
+
+	Method: InitInvalidator:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01658AC0
+		Ram Offset 0x181659cc0
+		Virtual Method Slot: 65535
+
+	Method: TerminateInvalidator:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01659670
+		Ram Offset 0x18165a870
+		Virtual Method Slot: 65535
+
+	Method: OnGraphicMaterialDirty:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016598F0
+		Ram Offset 0x18165aaf0
+		Virtual Method Slot: 65535
+
+	Method: CheckTransformDirtied:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01659920
+		Ram Offset 0x18165ab20
+		Virtual Method Slot: 65535
+
+	Method: CheckHierarchyDirtied:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01659A40
+		Ram Offset 0x18165ac40
+		Virtual Method Slot: 65535
+
+	Method: ForgetSiblingIndexChanges:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01659BB0
+		Ram Offset 0x18165adb0
+		Virtual Method Slot: 65535
+
+	Method: OnTransformParentChanged:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01659C60
+		Ram Offset 0x18165ae60
+		Virtual Method Slot: 12
+
+	Method: OnRectTransformDimensionsChange:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01659D70
+		Ram Offset 0x18165af70
+		Virtual Method Slot: 10
+
+	Method: OnDidApplyAnimationProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01659D70
+		Ram Offset 0x18165af70
+		Virtual Method Slot: 13
+
+	Method: ModifyMesh:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01659DE0
+		Ram Offset 0x18165afe0
+		Virtual Method Slot: 17
+
+		Parameter 0:
+			Name: mesh
+			Type: UnityEngine.Mesh
+			Default Value: 
+	Method: ModifyMesh:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01659F90
+		Ram Offset 0x18165b190
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: verts
+			Type: UnityEngine.UI.VertexHelper
+			Default Value: 
+	Method: ForceLayoutTextureDirty:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0165A100
+		Ram Offset 0x18165b300
+		Virtual Method Slot: 65535
+
+	Method: get_UsingRendererMaterialProvider:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0165A1D0
+		Ram Offset 0x18165b3d0
+		Virtual Method Slot: 65535
+
+	Method: InitializePlugins:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0165A1E0
+		Ram Offset 0x18165b3e0
+		Virtual Method Slot: 65535
+
+	Method: TerminatePlugins:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0165A6D0
+		Ram Offset 0x18165b8d0
+		Virtual Method Slot: 65535
+
+	Method: RefreshPlugins:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0165A890
+		Ram Offset 0x18165ba90
+		Virtual Method Slot: 65535
+
+	Method: HandleCasterMaterialReplaced:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01658A10
+		Ram Offset 0x181659c10
+		Virtual Method Slot: 65535
+
+	Method: HandleRendererMaterialReplaced:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0165A8B0
+		Ram Offset 0x18165bab0
+		Virtual Method Slot: 65535
+
+	Method: HandleCasterMaterialModified:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01658A10
+		Ram Offset 0x181659c10
+		Virtual Method Slot: 65535
+
+	Method: HandleRendererMaterialModified:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0165A990
+		Ram Offset 0x18165bb90
+		Virtual Method Slot: 65535
+
+	Method: GetShadowCastingMaterial:
+		Accessibility: Public
+		Return Type: UnityEngine.Material
+		File Offset 0x0165AA80
+		Ram Offset 0x18165bc80
+		Virtual Method Slot: 24
+
+	Method: ModifyShadowCastingMaterialProperties:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0165AC00
+		Ram Offset 0x18165be00
+		Virtual Method Slot: 25
+
+		Parameter 0:
+			Name: propertyBlock
+			Type: UnityEngine.MaterialPropertyBlock
+			Default Value: 
+	Method: ModifyShadowCastingMesh:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0165ACC0
+		Ram Offset 0x18165bec0
+		Virtual Method Slot: 26
+
+		Parameter 0:
+			Name: mesh
+			Type: UnityEngine.Mesh
+			Default Value: 
+	Method: MakeOpaque:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0165AD20
+		Ram Offset 0x18165bf20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: mesh
+			Type: UnityEngine.Mesh
+			Default Value: 
+	Method: GetShadowRenderingMaterial:
+		Accessibility: Public
+		Return Type: UnityEngine.Material
+		File Offset 0x0165B0D0
+		Ram Offset 0x18165c2d0
+		Virtual Method Slot: 27
+
+	Method: ModifyShadowRendererMaterial:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0165B1D0
+		Ram Offset 0x18165c3d0
+		Virtual Method Slot: 28
+
+		Parameter 0:
+			Name: baseMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: ModifyShadowRendererMesh:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0165B290
+		Ram Offset 0x18165c490
+		Virtual Method Slot: 29
+
+		Parameter 0:
+			Name: vertexHelper
+			Type: UnityEngine.UI.VertexHelper
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0165B2F0
+		Ram Offset 0x18165c4f0
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0165B5D0
+		Ram Offset 0x18165c7d0
+		Virtual Method Slot: 65535
+
+	Method: UnityEngine.UI.ICanvasElement.get_transform:
+		Accessibility: Private
+		Return Type: UnityEngine.Transform
+		File Offset 0x00A0EE10
+		Ram Offset 0x180a10010
+		Virtual Method Slot: 20
+
+	Method: <InitInvalidator>b__122_0:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0165B630
+		Ram Offset 0x18165c830
+		Virtual Method Slot: 65535
+
+	Method: <InitInvalidator>b__122_1:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0165B6D0
+		Ram Offset 0x18165c8d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newValue
+			Type: System.Int32
+			Default Value: 
+	Method: <InitInvalidator>b__122_2:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0165B6E0
+		Ram Offset 0x18165c8e0
+		Virtual Method Slot: 65535
+
+	Method: <InitInvalidator>b__122_3:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0165B6D0
+		Ram Offset 0x18165c8d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newValue
+			Type: System.Int32
+			Default Value: 
+	Method: <InitInvalidator>b__122_4:
+		Accessibility: Private
+		Return Type: UnityEngine.Vector3
+		File Offset 0x0165B850
+		Ram Offset 0x18165ca50
+		Virtual Method Slot: 65535
+
+	Method: <InitInvalidator>b__122_5:
+		Accessibility: Private
+		Return Type: UnityEngine.Vector3
+		File Offset 0x0165B920
+		Ram Offset 0x18165cb20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newValue
+			Type: UnityEngine.Vector3
+			Default Value: 
+	Method: <InitInvalidator>b__122_6:
+		Accessibility: Private
+		Return Type: UnityEngine.Quaternion
+		File Offset 0x0165B940
+		Ram Offset 0x18165cb40
+		Virtual Method Slot: 65535
+
+	Method: <InitInvalidator>b__122_7:
+		Accessibility: Private
+		Return Type: UnityEngine.Quaternion
+		File Offset 0x0165BA10
+		Ram Offset 0x18165cc10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newValue
+			Type: UnityEngine.Quaternion
+			Default Value: 

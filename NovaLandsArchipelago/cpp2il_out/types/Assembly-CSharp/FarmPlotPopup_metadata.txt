@@ -1,0 +1,707 @@
+Type: FarmPlotPopup:
+	Base Class: 
+		BuildingPopup
+
+	Interfaces:
+
+	Nested Types:
+		FarmPlotPopup/<>c
+
+	Field: noCropContext
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: haveCropContext
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: mainArea
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: logisticsArea
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: mainAreaLogisticsEnabledBottomAnchor
+		Type: System.Single
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: noCropContextCropNameLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: seedPlacementInventory
+		Type: MuttInventory.InventoryWindow
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: plantButton
+		Type: CommandActionPair
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: plantButtonString
+		Type: System.String
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: plantButtonAction
+		Type: System.Int32
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: haveCropContextCropNameLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: currentCropImage
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: growthStatusBar
+		Type: HealthBarUI
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: growthStatusLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: fertilizerInventory
+		Type: MuttInventory.InventoryWindow
+		Offset in Defining Type: 0x108
+		Has Default: False
+
+	Field: fertilizerStatusBar
+		Type: HealthBarUI
+		Offset in Defining Type: 0x110
+		Has Default: False
+
+	Field: fertilizerStatusLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x118
+		Has Default: False
+
+	Field: fertilizerNameLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x120
+		Has Default: False
+
+	Field: fertilizerImage
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x128
+		Has Default: False
+
+	Field: waterLevelBar
+		Type: WaterLevelBar
+		Offset in Defining Type: 0x130
+		Has Default: False
+
+	Field: removeCropButton
+		Type: CommandActionPair
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: cropHaltedString
+		Type: System.String
+		Offset in Defining Type: 0x140
+		Has Default: False
+
+	Field: cropGrowingString
+		Type: System.String
+		Offset in Defining Type: 0x148
+		Has Default: False
+
+	Field: cropReadyString
+		Type: System.String
+		Offset in Defining Type: 0x150
+		Has Default: False
+
+	Field: cropFertilizerNoneString
+		Type: System.String
+		Offset in Defining Type: 0x158
+		Has Default: False
+
+	Field: cropFertilizerFastGrowthString
+		Type: System.String
+		Offset in Defining Type: 0x160
+		Has Default: False
+
+	Field: logisticsAttendedToggle
+		Type: SwapSpritesToggleButton
+		Offset in Defining Type: 0x168
+		Has Default: False
+
+	Field: cropToBePlantedDropdown
+		Type: MultidimensionalDropDown
+		Offset in Defining Type: 0x170
+		Has Default: False
+
+	Field: fertilizerToDeliverDropdown
+		Type: MultidimensionalDropDown
+		Offset in Defining Type: 0x178
+		Has Default: False
+
+	Field: cropsDropdownOriginalSelectedTextAnchor
+		Type: System.Single
+		Offset in Defining Type: 0x180
+		Has Default: False
+
+	Field: cropsDropdownBlankSelectedTextAnchor
+		Type: System.Single
+		Offset in Defining Type: 0x184
+		Has Default: False
+
+	Field: fertilizerDropdownOriginalSelectedTextAnchor
+		Type: System.Single
+		Offset in Defining Type: 0x188
+		Has Default: False
+
+	Field: fertilizerDropdownBlankSelectedTextAnchor
+		Type: System.Single
+		Offset in Defining Type: 0x18C
+		Has Default: False
+
+	Field: farmPlot
+		Type: FarmPlotBuilding
+		Offset in Defining Type: 0x190
+		Has Default: False
+
+	Field: inventoryManager
+		Type: MuttInventory.InventoryManager
+		Offset in Defining Type: 0x198
+		Has Default: False
+
+	Field: seedInventoryParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x1A0
+		Has Default: False
+
+	Field: seedInventoryOriginalPosition
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x1A8
+		Has Default: False
+
+	Field: fertilizerInventoryParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x1B0
+		Has Default: False
+
+	Field: fertilizerInventoryOriginalPosition
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x1B8
+		Has Default: False
+
+	Field: shouldAdjustCropsFirstDropdownItem
+		Type: System.Boolean
+		Offset in Defining Type: 0x1C0
+		Has Default: False
+
+	Field: shouldAdjustFertilizerFirstDropdownItem
+		Type: System.Boolean
+		Offset in Defining Type: 0x1C1
+		Has Default: False
+
+	Field: cropdownResources
+		Type: System.Collections.Generic.List`1<BaseResourceScriptableObject>
+		Offset in Defining Type: 0x1C8
+		Has Default: False
+
+	Field: fertilizerResources
+		Type: System.Collections.Generic.List`1<BaseResourceScriptableObject>
+		Offset in Defining Type: 0x1D0
+		Has Default: False
+
+	Field: pressedPlantWithSeedSlotOccupied
+		Type: System.Boolean
+		Offset in Defining Type: 0x1D8
+		Has Default: False
+
+	Field: gameObjectBuffer
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x1E0
+		Has Default: False
+
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005C2920
+		Ram Offset 0x1805c3b20
+		Virtual Method Slot: 65535
+
+	Method: PreSetup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005C2B50
+		Ram Offset 0x1805c3d50
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005C2EC0
+		Ram Offset 0x1805c40c0
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+		Parameter 1:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: GetBottomSelectable:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Selectable
+		File Offset 0x005C30E0
+		Ram Offset 0x1805c42e0
+		Virtual Method Slot: 20
+
+	Method: SelectFirstSelectable:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005C34D0
+		Ram Offset 0x1805c46d0
+		Virtual Method Slot: 21
+
+	Method: GetFirstSelectable:
+		Accessibility: Public
+		Return Type: UnityEngine.GameObject
+		File Offset 0x005C3850
+		Ram Offset 0x1805c4a50
+		Virtual Method Slot: 22
+
+	Method: UpdateNavigation:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005C3B00
+		Ram Offset 0x1805c4d00
+		Virtual Method Slot: 19
+
+	Method: UpdateNavigationNoCrop:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005C3B40
+		Ram Offset 0x1805c4d40
+		Virtual Method Slot: 23
+
+	Method: UpdateNavigationCrop:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005C4DC0
+		Ram Offset 0x1805c5fc0
+		Virtual Method Slot: 24
+
+	Method: Update:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005C5E40
+		Ram Offset 0x1805c7040
+		Virtual Method Slot: 14
+
+	Method: UpdateInput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005C5F10
+		Ram Offset 0x1805c7110
+		Virtual Method Slot: 65535
+
+	Method: OnEnable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005C62E0
+		Ram Offset 0x1805c74e0
+		Virtual Method Slot: 9
+
+	Method: OnDisable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005C65D0
+		Ram Offset 0x1805c77d0
+		Virtual Method Slot: 10
+
+	Method: InitInventory:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005C6AA0
+		Ram Offset 0x1805c7ca0
+		Virtual Method Slot: 65535
+
+	Method: UpdateInventoriesPositions:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005C72E0
+		Ram Offset 0x1805c84e0
+		Virtual Method Slot: 65535
+
+	Method: OnChangeItemsCount:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005C7600
+		Ram Offset 0x1805c8800
+		Virtual Method Slot: 25
+
+		Parameter 0:
+			Name: change
+			Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+			Default Value: 
+	Method: OnChangeInputItemsCount:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005C7640
+		Ram Offset 0x1805c8840
+		Virtual Method Slot: 26
+
+		Parameter 0:
+			Name: change
+			Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+			Default Value: 
+	Method: OnUseInventoryItem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005C7650
+		Ram Offset 0x1805c8850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+	Method: OnChangeItems:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005C7800
+		Ram Offset 0x1805c8a00
+		Virtual Method Slot: 65535
+
+	Method: OnDropInventoryItem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005C79F0
+		Ram Offset 0x1805c8bf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+	Method: HasSeed:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x005C7BA0
+		Ram Offset 0x1805c8da0
+		Virtual Method Slot: 65535
+
+	Method: GetSeedInventoryItems:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+		File Offset 0x005C7DF0
+		Ram Offset 0x1805c8ff0
+		Virtual Method Slot: 65535
+
+	Method: GetSeedInventorySlotsContent:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<MuttInventory.InventoryItem>
+		File Offset 0x005C7E20
+		Ram Offset 0x1805c9020
+		Virtual Method Slot: 65535
+
+	Method: SetSeedInventoryContent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005C7E50
+		Ram Offset 0x1805c9050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inventoryContentData
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: windowType
+			Type: MuttInventory.InventoryWindowType
+			Default Value: 
+	Method: GetFertilizerInventoryItems:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+		File Offset 0x005C8220
+		Ram Offset 0x1805c9420
+		Virtual Method Slot: 65535
+
+	Method: GetFertilizerInventorySlotsContent:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<MuttInventory.InventoryItem>
+		File Offset 0x005C8250
+		Ram Offset 0x1805c9450
+		Virtual Method Slot: 65535
+
+	Method: SetFertilizerInventoryContent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005C8280
+		Ram Offset 0x1805c9480
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inventoryContentData
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: windowType
+			Type: MuttInventory.InventoryWindowType
+			Default Value: 
+	Method: SetupNoCropContext:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005C8650
+		Ram Offset 0x1805c9850
+		Virtual Method Slot: 65535
+
+	Method: OnClickPlant:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005C8B80
+		Ram Offset 0x1805c9d80
+		Virtual Method Slot: 65535
+
+	Method: PlantCrop:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005C8D40
+		Ram Offset 0x1805c9f40
+		Virtual Method Slot: 65535
+
+	Method: ConsumeSeed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005C8E90
+		Ram Offset 0x1805ca090
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: itemId
+			Type: System.Int32
+			Default Value: 
+	Method: UpdateNoCropCurrentCropName:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005C8F10
+		Ram Offset 0x1805ca110
+		Virtual Method Slot: 65535
+
+	Method: OnBotDeliverSeed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005C9270
+		Ram Offset 0x1805ca470
+		Virtual Method Slot: 65535
+
+	Method: SetupHaveCropContext:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005C9330
+		Ram Offset 0x1805ca530
+		Virtual Method Slot: 65535
+
+	Method: SetupGrowthStatus:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005C9A20
+		Ram Offset 0x1805cac20
+		Virtual Method Slot: 65535
+
+	Method: SetupFertilizerStatus:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005C9CC0
+		Ram Offset 0x1805caec0
+		Virtual Method Slot: 65535
+
+	Method: SetupWaterLevel:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005C9D30
+		Ram Offset 0x1805caf30
+		Virtual Method Slot: 65535
+
+	Method: UpdatePopup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005C9D80
+		Ram Offset 0x1805caf80
+		Virtual Method Slot: 65535
+
+	Method: UpdateFertilizerState:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005CA190
+		Ram Offset 0x1805cb390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fertilizer
+			Type: FertilizerScriptableObject
+			Default Value: 
+		Parameter 1:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+		Parameter 2:
+			Name: setupFertilizerBar
+			Type: System.Boolean
+			Default Value: False
+	Method: UpdateFertilizerUsage:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005CA750
+		Ram Offset 0x1805cb950
+		Virtual Method Slot: 65535
+
+	Method: OnClickRemoveCrop:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005CAAE0
+		Ram Offset 0x1805cbce0
+		Virtual Method Slot: 65535
+
+	Method: InitLogistics:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005CAC10
+		Ram Offset 0x1805cbe10
+		Virtual Method Slot: 27
+
+	Method: InitLogisticsDropdowns:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005CB030
+		Ram Offset 0x1805cc230
+		Virtual Method Slot: 65535
+
+	Method: OnToggleAttendedByLogistics:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005CB050
+		Ram Offset 0x1805cc250
+		Virtual Method Slot: 28
+
+		Parameter 0:
+			Name: isOn
+			Type: System.Boolean
+			Default Value: 
+	Method: OnClickLogisticsDropdowns:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005CB0C0
+		Ram Offset 0x1805cc2c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dropdown
+			Type: MultidimensionalDropDown
+			Default Value: 
+	Method: OnCropsDropdownChangedVisibility:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005CB1B0
+		Ram Offset 0x1805cc3b0
+		Virtual Method Slot: 65535
+
+	Method: UpdateSelectedLogisticsCropdownTextSize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005CB4A0
+		Ram Offset 0x1805cc6a0
+		Virtual Method Slot: 65535
+
+	Method: AdjustFirstCropsDropdownItem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005CB720
+		Ram Offset 0x1805cc920
+		Virtual Method Slot: 65535
+
+	Method: SetupCropsLogisticsDropdown:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005CBB90
+		Ram Offset 0x1805ccd90
+		Virtual Method Slot: 65535
+
+	Method: GetFilteredCrops:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.List`1<BaseResourceScriptableObject>
+		File Offset 0x005CC460
+		Ram Offset 0x1805cd660
+		Virtual Method Slot: 65535
+
+	Method: OnLogisticsCropsDropdownChanged:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005CCA50
+		Ram Offset 0x1805cdc50
+		Virtual Method Slot: 65535
+
+	Method: OnFertilizerDropdownChangedVisibility:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005CCC00
+		Ram Offset 0x1805cde00
+		Virtual Method Slot: 65535
+
+	Method: UpdateSelectedLogisticsFertilizerTextSize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005CCEF0
+		Ram Offset 0x1805ce0f0
+		Virtual Method Slot: 65535
+
+	Method: AdjustFirstFertilizerDropdownItem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005CD170
+		Ram Offset 0x1805ce370
+		Virtual Method Slot: 65535
+
+	Method: SetupFertilizerLogisticsDropdown:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005CD5E0
+		Ram Offset 0x1805ce7e0
+		Virtual Method Slot: 65535
+
+	Method: GetFilteredFertilizers:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.List`1<BaseResourceScriptableObject>
+		File Offset 0x005CDE00
+		Ram Offset 0x1805cf000
+		Virtual Method Slot: 65535
+
+	Method: OnLogisticsFertilizerDropdownChanged:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005CE060
+		Ram Offset 0x1805cf260
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005CE1F0
+		Ram Offset 0x1805cf3f0
+		Virtual Method Slot: 65535

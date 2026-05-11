@@ -1,0 +1,258 @@
+Type: ZXing.OneD.UPCEANReader:
+	Base Class: 
+		ZXing.OneD.OneDReader
+
+	Interfaces:
+
+	Static Field: MAX_AVG_VARIANCE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: MAX_INDIVIDUAL_VARIANCE
+		Type: System.Int32
+		Offset in Defining Type: 0x4
+		Has Default: False
+
+	Static Field: START_END_PATTERN
+		Type: System.Int32[]
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: MIDDLE_PATTERN
+		Type: System.Int32[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: decodeRowStringBuffer
+		Type: System.Text.StringBuilder
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: L_PATTERNS
+		Type: System.Int32[][]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: extensionReader
+		Type: ZXing.OneD.UPCEANExtensionSupport
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: L_AND_G_PATTERNS
+		Type: System.Int32[][]
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: eanManSupport
+		Type: ZXing.OneD.EANManufacturerOrgSupport
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x028124C0
+		Ram Offset 0x1828136c0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x02812ED0
+		Ram Offset 0x1828140d0
+		Virtual Method Slot: 65535
+
+	Method: findStartGuardPattern:
+		Accessibility: Assembly
+		Return Type: System.Int32[]
+		File Offset 0x02813210
+		Ram Offset 0x182814410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+	Method: decodeRow:
+		Accessibility: Public
+		Return Type: ZXing.Result
+		File Offset 0x028133B0
+		Ram Offset 0x1828145b0
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: rowNumber
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 2:
+			Name: hints
+			Type: System.Collections.Generic.IDictionary`2<ZXing.DecodeHintType, System.Object>
+			Default Value: 
+	Method: decodeRow:
+		Accessibility: Public
+		Return Type: ZXing.Result
+		File Offset 0x02813450
+		Ram Offset 0x182814650
+		Virtual Method Slot: 10
+
+		Parameter 0:
+			Name: rowNumber
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 2:
+			Name: startGuardRange
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 3:
+			Name: hints
+			Type: System.Collections.Generic.IDictionary`2<ZXing.DecodeHintType, System.Object>
+			Default Value: 
+	Method: checkChecksum:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x02813D50
+		Ram Offset 0x182814f50
+		Virtual Method Slot: 11
+
+		Parameter 0:
+			Name: s
+			Type: System.String
+			Default Value: 
+	Method: checkStandardUPCEANChecksum:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x02813DA0
+		Ram Offset 0x182814fa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: s
+			Type: System.String
+			Default Value: 
+	Method: decodeEnd:
+		Accessibility: Family
+		Return Type: System.Int32[]
+		File Offset 0x02813E80
+		Ram Offset 0x182815080
+		Virtual Method Slot: 12
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: endStart
+			Type: System.Int32
+			Default Value: 
+	Method: findGuardPattern:
+		Accessibility: Assembly
+		Return Type: System.Int32[]
+		File Offset 0x02813F00
+		Ram Offset 0x182815100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: rowOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: whiteFirst
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: pattern
+			Type: System.Int32[]
+			Default Value: 
+	Method: findGuardPattern:
+		Accessibility: Assembly
+		Return Type: System.Int32[]
+		File Offset 0x02813FC0
+		Ram Offset 0x1828151c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: rowOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: whiteFirst
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: pattern
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 4:
+			Name: counters
+			Type: System.Int32[]
+			Default Value: 
+	Method: decodeDigit:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x02814240
+		Ram Offset 0x182815440
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: counters
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 2:
+			Name: rowOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: patterns
+			Type: System.Int32[][]
+			Default Value: 
+		Parameter 4:
+			Name: digit
+			Type: System.Int32
+			Default Value: 
+	Method: get_BarcodeFormat:
+		Accessibility: Assembly
+		Return Type: ZXing.BarcodeFormat
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 13
+
+	Method: decodeMiddle:
+		Accessibility: FamORAssem
+		Return Type: System.Int32
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 14
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: startRange
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 2:
+			Name: resultString
+			Type: System.Text.StringBuilder
+			Default Value: 

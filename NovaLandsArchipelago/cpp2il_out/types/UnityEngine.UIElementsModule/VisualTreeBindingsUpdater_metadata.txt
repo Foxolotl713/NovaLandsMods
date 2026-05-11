@@ -1,0 +1,232 @@
+Type: UnityEngine.UIElements.VisualTreeBindingsUpdater:
+	Base Class: 
+		UnityEngine.UIElements.BaseVisualTreeHierarchyTrackerUpdater
+
+	Interfaces:
+
+	Static Field: s_BindingRequestObjectVEPropertyName
+		Type: UnityEngine.PropertyName
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: s_AdditionalBindingObjectVEPropertyName
+		Type: UnityEngine.PropertyName
+		Offset in Defining Type: 0x4
+		Has Default: False
+
+	Static Field: s_Description
+		Type: System.String
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: s_ProfilerMarker
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: s_ProfilerBindingRequestsMarker
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: s_MarkerUpdate
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: s_MarkerPoll
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: <disableBindingsThrottling>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_ElementsWithBindings
+		Type: System.Collections.Generic.HashSet`1<UnityEngine.UIElements.VisualElement>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_ElementsToAdd
+		Type: System.Collections.Generic.HashSet`1<UnityEngine.UIElements.VisualElement>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: m_ElementsToRemove
+		Type: System.Collections.Generic.HashSet`1<UnityEngine.UIElements.VisualElement>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: m_LastUpdateTime
+		Type: System.Int64
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: m_ElementsToBind
+		Type: System.Collections.Generic.HashSet`1<UnityEngine.UIElements.VisualElement>
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: <temporaryObjectCache>k__BackingField
+		Type: System.Collections.Generic.Dictionary`2<System.Object,System.Object>
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: updatedBindings
+		Type: System.Collections.Generic.List`1<UnityEngine.UIElements.IBinding>
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Method: get_profilerMarker:
+		Accessibility: Public
+		Return Type: Unity.Profiling.ProfilerMarker
+		File Offset 0x025E3640
+		Ram Offset 0x1825e4840
+		Virtual Method Slot: 10
+
+	Method: GetBindingObjectFromElement:
+		Accessibility: Private
+		Return Type: UnityEngine.UIElements.IBinding
+		File Offset 0x025E3690
+		Ram Offset 0x1825e4890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+	Method: StartTracking:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025E37A0
+		Ram Offset 0x1825e49a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+	Method: StopTracking:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025E3830
+		Ram Offset 0x1825e4a30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+	Method: get_temporaryObjectCache:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2<System.Object, System.Object>
+		File Offset 0x0063CCB0
+		Ram Offset 0x18063deb0
+		Virtual Method Slot: 65535
+
+	Method: GetAdditionalBinding:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.IBinding
+		File Offset 0x025E38C0
+		Ram Offset 0x1825e4ac0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+	Method: StartTrackingRecursive:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025E3950
+		Ram Offset 0x1825e4b50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+	Method: StopTrackingRecursive:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025E3B00
+		Ram Offset 0x1825e4d00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+	Method: OnVersionChanged:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025E3C90
+		Ram Offset 0x1825e4e90
+		Virtual Method Slot: 13
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: versionChangeType
+			Type: UnityEngine.UIElements.VersionChangeType
+			Default Value: 
+	Method: OnHierarchyChange:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x025E3D90
+		Ram Offset 0x1825e4f90
+		Virtual Method Slot: 14
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: type
+			Type: UnityEngine.UIElements.HierarchyChangeType
+			Default Value: 
+	Method: CurrentTime:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x025E3DC0
+		Ram Offset 0x1825e4fc0
+		Virtual Method Slot: 65535
+
+	Method: PerformTrackingOperations:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025E3E00
+		Ram Offset 0x1825e5000
+		Virtual Method Slot: 65535
+
+	Method: Update:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025E4110
+		Ram Offset 0x1825e5310
+		Virtual Method Slot: 12
+
+	Method: UpdateBindings:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025E4770
+		Ram Offset 0x1825e5970
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025E4D20
+		Ram Offset 0x1825e5f20
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025E5060
+		Ram Offset 0x1825e6260
+		Virtual Method Slot: 65535

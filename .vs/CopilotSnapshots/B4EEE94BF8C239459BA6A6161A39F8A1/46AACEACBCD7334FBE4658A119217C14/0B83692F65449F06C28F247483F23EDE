@@ -1,0 +1,48 @@
+﻿using System;
+using System.Reflection;
+using HarmonyLib;
+using MelonLoader;
+
+namespace NovaLandsArchipelago
+{
+    public static class HarmonyPatches
+    {
+        // Apply Harmony patches used by this mod
+        public static void Apply(global::HarmonyLib.Harmony harmony)
+        {
+            try
+            {
+                var targetType = AccessTools.TypeByName("SaveToFileManager");
+                if (targetType == null)
+                {
+                    MelonLogger.Error("HarmonyPatches: Unable to find type 'SaveToFileManager'.");
+                    return;
+                }
+
+                var targetMethod = AccessTools.Method(targetType, "Load", new Type[] { typeof(string) });
+                if (targetMethod == null)
+                {
+                    MelonLogger.Error("HarmonyPatches: Unable to find method 'Load(string)'.");
+                    return;
+                }
+
+                var prefix = typeof(HarmonyPatches).GetMethod(nameof(Load_Prefix), BindingFlags.Static | BindingFlags.NonPublic);
+                harmony.Patch(targetMethod, prefix: new HarmonyMethod(prefix));
+
+                MelonLogger.Msg("HarmonyPatches: Patched SaveToFileManager.Load(string).");
+            }
+            catch (Exception ex)
+            {
+                MelonLogger.Error($"HarmonyPatches: Failed to apply patch: {ex}");
+            }
+        }
+
+        // Prefix runs before SaveToFileManager.Load(string fileName).
+        // Returning true allows the original method to run; returning false would skip it.
+        static bool Load_Prefix(string fileName)
+        {
+            MelonLogger.Msg($"SaveToFileManager.Load called with fileName: {fileName}");
+            return true;
+        }
+    }
+}

@@ -1,0 +1,439 @@
+Type: UniqueItem:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Field: sprite
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: shadow
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: animator
+		Type: UnityEngine.Animator
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: interactionAreaPrefab
+		Type: InteractableAreaFeedback
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: interactionAreaParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: interactionCollider
+		Type: UnityEngine.Collider2D
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: itemCollider
+		Type: UnityEngine.Collider2D
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: moveUpAmount
+		Type: System.Single
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: moveToTargetAnimationTime
+		Type: System.Single
+		Offset in Defining Type: 0x5C
+		Has Default: False
+
+	Field: moveToTargetAnimationEase
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: fadeOutAnimationTime
+		Type: System.Single
+		Offset in Defining Type: 0x64
+		Has Default: False
+
+	Field: fadeOutAnimationEase
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: origin
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x6C
+		Has Default: False
+
+	Field: target
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: worldArea
+		Type: WorldArea
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: interactingCharacter
+		Type: BasePlayer
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: interactionArea
+		Type: InteractableAreaFeedback
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: contentToUnlock
+		Type: System.Object
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: contentToUnlock2
+		Type: System.Object
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: unlockedRelic
+		Type: RelicScriptableObject
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: onCollect
+		Type: System.Action
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0077F080
+		Ram Offset 0x180780280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: origin
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0077F5D0
+		Ram Offset 0x1807807d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: worldArea
+			Type: WorldArea
+			Default Value: 
+		Parameter 1:
+			Name: contentToUnlock
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: unlockedRelic
+			Type: RelicScriptableObject
+			Default Value: 
+		Parameter 3:
+			Name: playAnimation
+			Type: System.Boolean
+			Default Value: True
+		Parameter 4:
+			Name: interactString
+			Type: System.String
+			Default Value: 
+		Parameter 5:
+			Name: interactAction
+			Type: System.Int32
+			Default Value: -1
+		Parameter 6:
+			Name: contentToUnlock2
+			Type: System.Object
+			Default Value: 
+	Method: SetOnCollect:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0049B190
+		Ram Offset 0x18049c390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: onCollect
+			Type: System.Action
+			Default Value: 
+	Method: FadeOut:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0077FF80
+		Ram Offset 0x180781180
+		Virtual Method Slot: 65535
+
+	Method: DestroyMe:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00780180
+		Ram Offset 0x180781380
+		Virtual Method Slot: 65535
+
+	Method: GetContentUnlockId:
+		Accessibility: Family
+		Return Type: System.String
+		File Offset 0x00780610
+		Ram Offset 0x180781810
+		Virtual Method Slot: 65535
+
+	Method: GetContentUnlock2Id:
+		Accessibility: Family
+		Return Type: System.String
+		File Offset 0x00780910
+		Ram Offset 0x180781b10
+		Virtual Method Slot: 65535
+
+	Method: UnlockContent:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x007809F0
+		Ram Offset 0x180781bf0
+		Virtual Method Slot: 65535
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00781E70
+		Ram Offset 0x180783070
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: worldArea
+			Type: WorldArea
+			Default Value: 
+		Parameter 2:
+			Name: playAnimation
+			Type: System.Boolean
+			Default Value: True
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x007826A0
+		Ram Offset 0x1807838a0
+		Virtual Method Slot: 65535
+
+	Method: InitInteractionArea:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00782CD0
+		Ram Offset 0x180783ed0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: interactAction
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: interactString
+			Type: System.String
+			Default Value: 
+	Method: EnableInteractionCollider:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x007831F0
+		Ram Offset 0x1807843f0
+		Virtual Method Slot: 65535
+
+	Method: DisableInteractionCollider:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00708F20
+		Ram Offset 0x18070a120
+		Virtual Method Slot: 65535
+
+	Method: OnPlayerEnter:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00783260
+		Ram Offset 0x180784460
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: collider
+			Type: UnityEngine.Collider2D
+			Default Value: 
+	Method: OnPlayerExit:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x007833B0
+		Ram Offset 0x1807845b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: collider
+			Type: UnityEngine.Collider2D
+			Default Value: 
+	Method: HideInteractionFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00783500
+		Ram Offset 0x180784700
+		Virtual Method Slot: 65535
+
+	Method: ShowInteractionFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x007835E0
+		Ram Offset 0x1807847e0
+		Virtual Method Slot: 65535
+
+	Method: ShowPressedInteractionFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x007836C0
+		Ram Offset 0x1807848c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: playerIndex
+			Type: System.Int32
+			Default Value: 
+	Method: OnInteract:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x007837A0
+		Ram Offset 0x1807849a0
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: EnableAnimator:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x007839B0
+		Ram Offset 0x180784bb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: AnimateDestruction:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00783AD0
+		Ram Offset 0x180784cd0
+		Virtual Method Slot: 65535
+
+	Method: OnInteractSecondary:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00783DE0
+		Ram Offset 0x180784fe0
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: CanInteract:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: CanInteractSecondary:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: ExecuteSecondaryInteraction:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+	Method: OnLeaveInteraction:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00783F20
+		Ram Offset 0x180785120
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+		Parameter 1:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+	Method: SetInteractingPlayer:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x007841F0
+		Ram Offset 0x1807853f0
+		Virtual Method Slot: 10
+
+		Parameter 0:
+			Name: character
+			Type: BasePlayer
+			Default Value: 
+	Method: IsInteractingWith:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x007843C0
+		Ram Offset 0x1807855c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: get_InteractingCharacter:
+		Accessibility: Public
+		Return Type: BaseCharacter
+		File Offset 0x00530430
+		Ram Offset 0x180531630
+		Virtual Method Slot: 65535
+
+	Method: get_Icon:
+		Accessibility: Public
+		Return Type: UnityEngine.Sprite
+		File Offset 0x007844F0
+		Ram Offset 0x1807856f0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379430
+		Ram Offset 0x18037a630
+		Virtual Method Slot: 65535

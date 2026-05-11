@@ -1,0 +1,691 @@
+Type: WorldSpaceCanvasCameraAssigner
+
+Method: System.Void WorldSpaceCanvasCameraAssigner::Start():	Method Body (x86 ASM):
+		0x18090FCA0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x18090FCA5 mov [rsp+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 16 | None ||| N/A | N/A
+		0x18090FCAA push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18090FCAB sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18090FCAF cmp byte ptr [18329B8CBh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516875 | None ||| N/A | 0
+		0x18090FCB6 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18090FCB9 jne short 000000018090FCDAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FCBB lea rcx,[183119A70h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493936240 | None ||| N/A | N/A
+		0x18090FCC2 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FCC7 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18090FCCE call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FCD3 mov byte ptr [18329B8CBh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516875 | None ||| N/A | 1
+		0x18090FCDA mov rdx,[183119A70h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493936240 | None ||| N/A | N/A
+		0x18090FCE1 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18090FCE4 call 0000000180D40810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FCE9 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x18090FCF0 lea rsi,[1832AE560h]		; DEBUG: {Register}/RSI {Memory}/None ||| RIP | 6495593824 | None ||| N/A | N/A
+		0x18090FCF7 mov [rbx+20h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBX | 32 | None ||| N/A | N/A
+		0x18090FCFB je short 000000018090FD3Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FCFD lea r8,[rbx+20h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x18090FD01 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x18090FD05 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x18090FD0C mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18090FD0F shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x18090FD13 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x18090FD17 lea rdx,[rsi+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RSI | 0 | RAX ||| N/A | N/A
+		0x18090FD1B prefetchw [rdx+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x18090FD22 mov rax,[rdx+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x18090FD29 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090FD2C bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18090FD30 lock cmpxchg [rdx+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 287456 | None ||| N/A | N/A
+		0x18090FD39 jne short 000000018090FD22h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FD3B mov rdi,[rbx+20h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x18090FD3F test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18090FD42 je near ptr 000000018090FEC2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FD48 mov rax,[1832AD288h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495589000 | None ||| N/A | N/A
+		0x18090FD4F test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090FD52 jne short 000000018090FD70h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FD54 lea rcx,[182992410h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6486041616 | None ||| N/A | N/A
+		0x18090FD5B call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FD60 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090FD63 je near ptr 000000018090FEC8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FD69 mov [1832AD288h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495589000 | None ||| N/A | N/A
+		0x18090FD70 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18090FD73 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18090FD75 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18090FD7C mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090FD7F cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18090FD86 jne short 000000018090FD8Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FD88 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FD8D cmp byte ptr [1832A9FABh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 0
+		0x18090FD94 jne short 000000018090FDA9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FD96 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18090FD9D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FDA2 mov byte ptr [1832A9FABh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 1
+		0x18090FDA9 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18090FDB0 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18090FDB7 jne short 000000018090FDBEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FDB9 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FDBE cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x18090FDC5 jne short 000000018090FDDAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FDC7 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18090FDCE call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FDD3 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x18090FDDA test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18090FDDD je short 000000018090FDFFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FDDF mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18090FDE6 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18090FDED jne short 000000018090FDF4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FDEF call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FDF4 cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x18090FDF9 jne near ptr 000000018090FEB2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FDFF mov rax,[1832A8C28h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495570984 | None ||| N/A | N/A
+		0x18090FE06 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090FE09 jne short 000000018090FE27h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FE0B lea rcx,[1829709B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485903800 | None ||| N/A | N/A
+		0x18090FE12 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FE17 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090FE1A je near ptr 000000018090FEDFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FE20 mov [1832A8C28h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495570984 | None ||| N/A | N/A
+		0x18090FE27 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18090FE29 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x18090FE30 mov [rbx+28h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBX | 40 | None ||| N/A | N/A
+		0x18090FE34 je short 000000018090FE79h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FE36 lea r8,[rbx+28h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x18090FE3A shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x18090FE3E and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x18090FE45 mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18090FE48 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x18090FE4C and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x18090FE50 lea rdx,[rsi+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RSI | 0 | RAX ||| N/A | N/A
+		0x18090FE54 prefetchw [rdx+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x18090FE5B nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x18090FE60 mov rax,[rdx+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x18090FE67 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090FE6A bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18090FE6E lock cmpxchg [rdx+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 287456 | None ||| N/A | N/A
+		0x18090FE77 jne short 000000018090FE60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FE79 mov rdi,[rbx+20h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x18090FE7D mov rbx,[rbx+28h]		; DEBUG: {Register}/RBX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x18090FE81 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18090FE84 je short 000000018090FEC2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FE86 mov rax,[1832AD290h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495589008 | None ||| N/A | N/A
+		0x18090FE8D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090FE90 jne short 000000018090FEAAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FE92 lea rcx,[1829923D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6486041560 | None ||| N/A | N/A
+		0x18090FE99 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FE9E test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090FEA1 je short 000000018090FEF6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FEA3 mov [1832AD290h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495589008 | None ||| N/A | N/A
+		0x18090FEAA mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18090FEAD mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18090FEB0 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18090FEB2 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x18090FEB7 mov rsi,[rsp+38h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x18090FEBC add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18090FEC0 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18090FEC1 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18090FEC2 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FEC7 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void WorldSpaceCanvasCameraAssigner::Start():
+		End of function at 0x18090FEC8
+		Absolute End is at 0x18090FEC8
+		Identified Jump Destination addresses:
+
+		0x18090FCAA: Saves the content of rdi to the stack
+		0x18090FCAF: Compares {Unknown Global at 0x18329B8CB, first ten bytes are [0 232 91 4 0 196 174 234 2 240], or as chars " è[ Ä®êð"} and 0
+		0x18090FCB6: Copies {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} from rcx into rbx
+		0x18090FCB9: Jumps to 0x18090FCDA if {Unknown Global at 0x18329B8CB, first ten bytes are [0 232 91 4 0 196 174 234 2 240], or as chars " è[ Ä®êð"} != 0
+
+		0x18090FCBB: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.Canvas>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18090FCC2: Initializes runtime metadata value 
+		0x18090FCC7: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18090FCCE: Initializes runtime metadata value UnityEngine.Object
+		0x18090FCDA: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.Canvas>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x18090FCE1: Copies {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} from rbx into rcx
+		0x18090FCE4: [!] Calls managed method T UnityEngine.Component::GetComponent<UnityEngine.Canvas>() on instance {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} and stores the result in {'component' (type UnityEngine.Canvas)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x18090FCE9: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x18090FCF0: Reads {Unknown Global at 0x1832AE560, first ten bytes are [20 59 240 2 208 31 18 0 228 32], or as chars ";ðÐ ä "} into register rsi as a constant constant8
+		0x18090FCF7: [!] Sets the field canvas (Type UnityEngine.Canvas) on local {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} to the value stored in {'component' (type UnityEngine.Canvas)}
+		0x18090FCFB: Jumps to 0x18090FD3B if constant6 equals 0
+
+		0x18090FCFD: Loads the pointer to the field canvas on {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} into register r8
+		0x18090FD0C: Copies {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x18090FD29: Copies {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from rax into rcx
+		0x18090FD39: Jumps to 0x18090FD22 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x18090FD3B: [!] Reads field canvas from {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} and stores in a new local {'canvas' (type UnityEngine.Canvas)}
+
+		0x18090FD3F: [!] Compares {'canvas' (type UnityEngine.Canvas)} and 0
+		0x18090FD42: Jumps to 0x18090FEC2 (which throws a NRE) if canvas equals 0. Implicitly present in managed code, so ignored here.
+		0x18090FD48: Loads string "°iê@5" into register rax as constant UnityEngine.Canvas.get_worldCamera
+		0x18090FD4F: Compares UnityEngine.Canvas.get_worldCamera and 0
+		0x18090FD52: Jumps to 0x18090FD70 if UnityEngine.Canvas.get_worldCamera != 0
+
+		0x18090FD54: Loads string "UnityEngine.Canvas::get_worldCamera()" into register rcx as constant {'constant13' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18090FD5B: Looks up unity ICall by name "UnityEngine.Canvas::get_worldCamera()" which resolves to UnityEngine.Camera UnityEngine.Canvas::get_worldCamera()
+		0x18090FD60: Compares UnityEngine.Canvas.get_worldCamera and 0
+		0x18090FD63: Jumps to 0x18090FEC8 if UnityEngine.Canvas.get_worldCamera equals 0
+
+		0x18090FD70: Copies {'canvas' (type UnityEngine.Canvas)} from rdi into rcx
+		0x18090FD73: [!] Calls managed method UnityEngine.Camera UnityEngine.Canvas::get_worldCamera() on instance {'canvas' (type UnityEngine.Canvas)} and stores the result in {'worldCamera' (type UnityEngine.Camera)}
+
+		0x18090FD75: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18090FD7C: Copies {'worldCamera' (type UnityEngine.Camera)} from rax into rdi
+		0x18090FD7F: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18090FD86: Jumps to 0x18090FD8D if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18090FD88: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x18090FD8D: Compares {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} and 0
+		0x18090FD94: Jumps to 0x18090FDA9 if {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} != 0
+
+		0x18090FD96: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18090FD9D: Initializes runtime metadata value UnityEngine.Object
+		0x18090FDA9: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18090FDB0: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18090FDB7: Jumps to 0x18090FDBE if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18090FDB9: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x18090FDBE: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x18090FDC5: Jumps to 0x18090FDDA if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x18090FDC7: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18090FDCE: Initializes runtime metadata value UnityEngine.Object
+		0x18090FDDA: [!] Compares {'worldCamera' (type UnityEngine.Camera)} and 0
+		0x18090FDDD: Jumps to 0x18090FDFF (which is an if statement's body) if worldCamera equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18090FDDF: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18090FDE6: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18090FDED: Jumps to 0x18090FDF4 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18090FDEF: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x18090FDF4: [!] Compares {field onPostRender, read from local {'worldCamera' (type UnityEngine.Camera)}} and 0
+		0x18090FDF9: Jumps to 0x18090FEB2 if {field onPostRender, read from local {'worldCamera' (type UnityEngine.Camera)}} != 0 ;  - This is probably a goto, jumping to 0x18090FEB2 which is after end of current block @ 0x18090FDFF (started at 0x18090FDDF)
+
+		0x18090FDFF: Reads {Unknown Global at 0x1832A8C28, first ten bytes are [188 194 13 0 152 104 234 2 192 194], or as chars "¼Â hêÀÂ"} into register rax as a constant constant32
+		0x18090FE06: Compares UnityEngine.Camera.get_main and 0
+		0x18090FE09: Jumps to 0x18090FE27 if UnityEngine.Camera.get_main != 0 ;  - This is probably a goto, jumping to 0x18090FE27 which is after end of current block @ 0x18090FDFF (started at 0x18090FDDF)
+
+		0x18090FE0B: Loads string "UnityEngine.Camera::get_main()" into register rcx as constant {'constant34' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18090FE12: Looks up unity ICall by name "UnityEngine.Camera::get_main()" which resolves to UnityEngine.Camera UnityEngine.Camera::get_main()
+		0x18090FE17: Compares UnityEngine.Camera.get_main and 0
+		0x18090FE1A: Jumps to 0x18090FEDF if UnityEngine.Camera.get_main equals 0 ;  - This is probably a goto, jumping to 0x18090FEDF which is after end of current block @ 0x18090FDFF (started at 0x18090FDDF)
+
+		0x18090FE27: [!] Calls static managed method UnityEngine.Camera UnityEngine.Camera::get_main() and stores the result in {'main' (type UnityEngine.Camera)}
+
+		0x18090FE29: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x18090FE30: [!] Sets the field mainCamera (Type UnityEngine.Camera) on local {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} to the value stored in {'main' (type UnityEngine.Camera)}
+		0x18090FE34: Jumps to 0x18090FE79 if constant36 equals 0 ;  - This is probably a goto, jumping to 0x18090FE79 which is after end of current block @ 0x18090FDFF (started at 0x18090FDDF)
+
+		0x18090FE36: Loads the pointer to the field mainCamera on {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} into register r8
+		0x18090FE45: Copies {'constant38' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x18090FE67: Copies {'constant38' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from rax into rcx
+		0x18090FE77: Jumps to 0x18090FE60 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0 ;  - This is probably a goto, jumping to 0x18090FE60 which is after end of current block @ 0x18090FDFF (started at 0x18090FDDF)
+
+		0x18090FE79: [!] Reads field canvas from {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} and stores in a new local {'canvas2' (type UnityEngine.Canvas)}
+
+		0x18090FE7D: [!] Reads field mainCamera from {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} and stores in a new local {'mainCamera' (type UnityEngine.Camera)}
+
+		0x18090FE81: [!] Compares {'canvas2' (type UnityEngine.Canvas)} and 0
+		0x18090FE84: Jumps to 0x18090FEC2 (which throws a NRE) if canvas2 equals 0. Implicitly present in managed code, so ignored here.
+		0x18090FE86: Reads {Unknown Global at 0x1832AD290, first ten bytes are [7 54 17 0 204 125 234 2 16 54], or as chars "6 Ì}ê6"} into register rax as a constant constant40
+		0x18090FE8D: Compares UnityEngine.Canvas.set_worldCamera and 0
+		0x18090FE90: Jumps to 0x18090FEAA if UnityEngine.Canvas.set_worldCamera != 0 ;  - This is probably a goto, jumping to 0x18090FEAA which is after end of current block @ 0x18090FDFF (started at 0x18090FDDF)
+
+		0x18090FE92: Loads string "UnityEngine.Canvas::set_worldCamera(UnityEngine.Camera)" into register rcx as constant {'constant42' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18090FE99: Looks up unity ICall by name "UnityEngine.Canvas::set_worldCamera(UnityEngine.Camera)" which resolves to System.Void UnityEngine.Canvas::set_worldCamera(UnityEngine.Camera)
+		0x18090FE9E: Compares UnityEngine.Canvas.set_worldCamera and 0
+		0x18090FEA1: Jumps to 0x18090FEF6 if UnityEngine.Canvas.set_worldCamera equals 0 ;  - This is probably a goto, jumping to 0x18090FEF6 which is after end of current block @ 0x18090FDFF (started at 0x18090FDDF)
+
+		0x18090FEAA: Copies {'mainCamera' (type UnityEngine.Camera)} from rbx into rdx
+		0x18090FEAD: Copies {'canvas2' (type UnityEngine.Canvas)} from rdi into rcx
+		0x18090FEB0: [!] Calls managed method System.Void UnityEngine.Canvas::set_worldCamera(UnityEngine.Camera) on instance {'canvas2' (type UnityEngine.Canvas)} with arguments [{'mainCamera' (type UnityEngine.Camera)}]
+
+		0x18090FEB2: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant44
+		0x18090FEB7: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rsi as new constant constant45
+		0x18090FEC1: [!] Returns from the function
+
+		0x18090FEC2: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: WorldSpaceCanvasCameraAssigner
+	System.Void Start()
+
+		UnityEngine.Canvas component = base.GetComponent<UnityEngine.Canvas>()
+		this.canvas = component
+		UnityEngine.Canvas canvas = this.canvas
+
+		UnityEngine.Camera worldCamera = canvas.worldCamera
+
+		if (worldCamera != 0)
+
+		    if (worldCamera.onPostRender != 0)
+                goto INSN_18090FEB2
+            endif
+		endif
+        
+
+		UnityEngine.Camera main = UnityEngine.Camera.main
+		this.mainCamera = main
+		UnityEngine.Canvas canvas2 = this.canvas
+		UnityEngine.Camera mainCamera = this.mainCamera
+
+		canvas2.worldCamera = mainCamera
+
+		INSN_18090FEB2:
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call T UnityEngine.Component::GetComponent<UnityEngine.Canvas>()
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldloc.0
+	IL_0009: stfld UnityEngine.Canvas WorldSpaceCanvasCameraAssigner::canvas
+	IL_000e: ldarg.0
+	IL_000f: ldfld UnityEngine.Canvas WorldSpaceCanvasCameraAssigner::canvas
+	IL_0014: call UnityEngine.Camera UnityEngine.Canvas::get_worldCamera()
+	IL_0019: stloc.1
+	IL_001a: ldloc.1
+	IL_001b: ldc.i4.0
+	IL_001c: beq.s IL_0029
+	IL_001e: ldloc.1
+	IL_001f: ldfld UnityEngine.Camera/CameraCallback UnityEngine.Camera::onPostRender
+	IL_0024: ldc.i4.0
+	IL_0025: conv.i8
+	IL_0026: conv.u8
+	IL_0027: bne.un.s IL_004d
+	IL_0029: call UnityEngine.Camera UnityEngine.Camera::get_main()
+	IL_002e: stloc.2
+	IL_002f: ldarg.0
+	IL_0030: ldloc.2
+	IL_0031: stfld UnityEngine.Camera WorldSpaceCanvasCameraAssigner::mainCamera
+	IL_0036: ldarg.0
+	IL_0037: ldfld UnityEngine.Canvas WorldSpaceCanvasCameraAssigner::canvas
+	IL_003c: stloc.3
+	IL_003d: ldarg.0
+	IL_003e: ldfld UnityEngine.Camera WorldSpaceCanvasCameraAssigner::mainCamera
+	IL_0043: stloc.s V_4
+	IL_0045: ldloc.3
+	IL_0046: ldloc.s V_4
+	IL_0048: call System.Void UnityEngine.Canvas::set_worldCamera(UnityEngine.Camera)
+	IL_004d: ret
+	IL_004e: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0053: throw
+	
+
+Method: System.Void WorldSpaceCanvasCameraAssigner::Update():	Method Body (x86 ASM):
+		0x18090FF10 mov [rsp+10h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 16 | None ||| N/A | N/A
+		0x18090FF15 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18090FF16 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18090FF1A cmp byte ptr [18329B8CCh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516876 | None ||| N/A | 0
+		0x18090FF21 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18090FF24 jne short 000000018090FF39h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FF26 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18090FF2D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FF32 mov byte ptr [18329B8CCh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516876 | None ||| N/A | 1
+		0x18090FF39 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18090FF40 mov rdi,[rbx+28h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x18090FF44 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18090FF4B jne short 000000018090FF52h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FF4D call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FF52 cmp byte ptr [1832A9FABh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 0
+		0x18090FF59 jne short 000000018090FF6Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FF5B lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18090FF62 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FF67 mov byte ptr [1832A9FABh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 1
+		0x18090FF6E mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18090FF75 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18090FF7C jne short 000000018090FF83h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FF7E call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FF83 cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x18090FF8A jne short 000000018090FF9Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FF8C lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18090FF93 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FF98 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x18090FF9F test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18090FFA2 je short 000000018090FFFAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FFA4 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18090FFAB cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18090FFB2 jne short 000000018090FFB9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FFB4 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FFB9 cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x18090FFBE je short 000000018090FFFAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FFC0 mov rax,[1832A9D28h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575336 | None ||| N/A | N/A
+		0x18090FFC7 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090FFCA jne short 000000018090FFE8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FFCC lea rcx,[182979748h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485940040 | None ||| N/A | N/A
+		0x18090FFD3 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FFD8 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090FFDB je near ptr 0000000180910183h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090FFE1 mov [1832A9D28h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575336 | None ||| N/A | N/A
+		0x18090FFE8 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18090FFEA mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18090FFED mov rbx,[rsp+38h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x18090FFF2 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18090FFF6 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18090FFF7 jmp rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18090FFFA mov rax,[1832A8C28h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495570984 | None ||| N/A | N/A
+		0x180910001 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180910004 jne short 0000000180910022h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180910006 lea rcx,[1829709B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485903800 | None ||| N/A | N/A
+		0x18091000D call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180910012 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180910015 je near ptr 000000018091019Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091001B mov [1832A8C28h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495570984 | None ||| N/A | N/A
+		0x180910022 mov [rsp+30h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 48 | None ||| N/A | N/A
+		0x180910027 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180910029 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180910030 mov [rbx+28h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBX | 40 | None ||| N/A | N/A
+		0x180910034 je short 0000000180910071h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180910036 lea r8,[rbx+28h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x18091003A shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x18091003E lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x180910045 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x18091004C mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18091004F shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180910053 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180910057 lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x18091005B prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x18091005E xchg ax,ax		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180910060 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180910063 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180910066 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18091006A lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x18091006F jne short 0000000180910060h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180910071 mov rdi,[rbx+20h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x180910075 mov rsi,[rbx+28h]		; DEBUG: {Register}/RSI {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x180910079 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18091007C je near ptr 000000018091017Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180910082 mov rax,[1832AD290h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495589008 | None ||| N/A | N/A
+		0x180910089 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18091008C jne short 00000001809100AAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091008E lea rcx,[1829923D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6486041560 | None ||| N/A | N/A
+		0x180910095 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091009A test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18091009D je near ptr 00000001809101B1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809100A3 mov [1832AD290h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495589008 | None ||| N/A | N/A
+		0x1809100AA mov rdx,rsi		; DEBUG: {Register}/RDX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1809100AD mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809100B0 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809100B2 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809100B9 mov rdi,[rbx+28h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1809100BD cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1809100C4 jne short 00000001809100CBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809100C6 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809100CB cmp byte ptr [1832A9FABh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 0
+		0x1809100D2 jne short 00000001809100E7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809100D4 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809100DB call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809100E0 mov byte ptr [1832A9FABh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 1
+		0x1809100E7 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809100EE cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1809100F5 jne short 00000001809100FCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809100F7 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809100FC cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x180910103 jne short 0000000180910118h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180910105 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18091010C call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180910111 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x180910118 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18091011B je short 000000018091013Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091011D mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180910124 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18091012B jne short 0000000180910132h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091012D call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180910132 cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x180910137 sete dil		; DEBUG: {Register}/DIL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091013B jmp short 0000000180910140h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091013D mov dil,1		; DEBUG: {Register}/DIL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180910140 mov rax,[1832A9D28h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575336 | None ||| N/A | N/A
+		0x180910147 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18091014A jne short 0000000180910164h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091014C lea rcx,[182979748h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485940040 | None ||| N/A | N/A
+		0x180910153 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180910158 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18091015B je short 00000001809101C8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091015D mov [1832A9D28h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575336 | None ||| N/A | N/A
+		0x180910164 movzx edx,dil		; DEBUG: {Register}/EDX {Register}/DIL ||| None | 0 | None ||| N/A | N/A
+		0x180910168 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18091016B mov rsi,[rsp+30h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180910170 mov rbx,[rsp+38h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180910175 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180910179 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091017A jmp rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091017D call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180910182 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void WorldSpaceCanvasCameraAssigner::Update():
+		End of function at 0x180910183
+		Absolute End is at 0x180910183
+		Identified Jump Destination addresses:
+			0x180910140
+		0x18090FF15: Saves the content of rdi to the stack
+		0x18090FF1A: Compares {Unknown Global at 0x18329B8CC, first ten bytes are [232 91 4 0 196 174 234 2 240 91], or as chars "è[ Ä®êð["} and 0
+		0x18090FF21: Copies {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} from rcx into rbx
+		0x18090FF24: Jumps to 0x18090FF39 if {Unknown Global at 0x18329B8CC, first ten bytes are [232 91 4 0 196 174 234 2 240 91], or as chars "è[ Ä®êð["} != 0
+
+		0x18090FF26: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18090FF2D: Initializes runtime metadata value UnityEngine.Object
+		0x18090FF39: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18090FF40: [!] Reads field mainCamera from {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} and stores in a new local {'mainCamera' (type UnityEngine.Camera)}
+
+		0x18090FF44: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18090FF4B: Jumps to 0x18090FF52 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18090FF4D: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x18090FF52: Compares {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} and 0
+		0x18090FF59: Jumps to 0x18090FF6E if {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} != 0
+
+		0x18090FF5B: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18090FF62: Initializes runtime metadata value UnityEngine.Object
+		0x18090FF6E: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18090FF75: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18090FF7C: Jumps to 0x18090FF83 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18090FF7E: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x18090FF83: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x18090FF8A: Jumps to 0x18090FF9F if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x18090FF8C: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18090FF93: Initializes runtime metadata value UnityEngine.Object
+		0x18090FF9F: [!] Compares {'mainCamera' (type UnityEngine.Camera)} and 0
+		0x18090FFA2: Jumps to 0x18090FFFA (which is an if statement's body) if mainCamera equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18090FFA4: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18090FFAB: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18090FFB2: Jumps to 0x18090FFB9 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18090FFB4: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x18090FFB9: [!] Compares {field onPostRender, read from local {'mainCamera' (type UnityEngine.Camera)}} and 0
+		0x18090FFBE: Jumps to 0x18090FFFA (which is an if statement's body) if mainCamera.onPostRender equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18090FFC0: Loads string "P" into register rax as constant UnityEngine.Behaviour.set_enabled
+		0x18090FFC7: Compares UnityEngine.Behaviour.set_enabled and 0
+		0x18090FFCA: Jumps to 0x18090FFE8 if UnityEngine.Behaviour.set_enabled != 0
+
+		0x18090FFCC: Loads string "UnityEngine.Behaviour::set_enabled(System.Boolean)" into register rcx as constant {'constant23' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18090FFD3: Looks up unity ICall by name "UnityEngine.Behaviour::set_enabled(System.Boolean)" which resolves to System.Void UnityEngine.Behaviour::set_enabled(System.Boolean)
+		0x18090FFD8: Compares UnityEngine.Behaviour.set_enabled and 0
+		0x18090FFDB: Jumps to 0x180910183 if UnityEngine.Behaviour.set_enabled equals 0 ;  - This is probably a goto, jumping to 0x180910183 which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x18090FFEA: Copies {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} from rbx into rcx
+		0x18090FFED: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rbx as new constant constant25
+		0x18090FFFA: Reads {Unknown Global at 0x1832A8C28, first ten bytes are [188 194 13 0 152 104 234 2 192 194], or as chars "¼Â hêÀÂ"} into register rax as a constant constant26
+		0x180910001: Compares UnityEngine.Camera.get_main and 0
+		0x180910004: Jumps to 0x180910022 if UnityEngine.Camera.get_main != 0 ;  - This is probably a goto, jumping to 0x180910022 which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x180910006: Loads string "UnityEngine.Camera::get_main()" into register rcx as constant {'constant28' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18091000D: Looks up unity ICall by name "UnityEngine.Camera::get_main()" which resolves to UnityEngine.Camera UnityEngine.Camera::get_main()
+		0x180910012: Compares UnityEngine.Camera.get_main and 0
+		0x180910015: Jumps to 0x18091019A if UnityEngine.Camera.get_main equals 0 ;  - This is probably a goto, jumping to 0x18091019A which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x180910027: [!] Calls static managed method UnityEngine.Camera UnityEngine.Camera::get_main() and stores the result in {'main' (type UnityEngine.Camera)}
+
+		0x180910029: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180910030: [!] Sets the field mainCamera (Type UnityEngine.Camera) on local {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} to the value stored in {'main' (type UnityEngine.Camera)}
+		0x180910034: Jumps to 0x180910071 if constant30 equals 0 ;  - This is probably a goto, jumping to 0x180910071 which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x180910036: Loads the pointer to the field mainCamera on {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} into register r8
+		0x18091003E: Loads string "¡
+m" into register rcx as constant {'constant33' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18091004C: Copies {'constant32' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x180910060: Loads the class pointer from il2cppMethodInfo into a constant constant34 in register rax
+		0x180910063: Copies {'constant34' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x18091006F: Jumps to 0x180910060 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0 ;  - This is probably a goto, jumping to 0x180910060 which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x180910071: [!] Reads field canvas from {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} and stores in a new local {'canvas' (type UnityEngine.Canvas)}
+
+		0x180910075: [!] Reads field mainCamera from {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} and stores in a new local {'mainCamera2' (type UnityEngine.Camera)}
+
+		0x180910079: [!] Compares {'canvas' (type UnityEngine.Canvas)} and 0
+		0x18091007C: Jumps to 0x18091017D (which throws a NRE) if canvas equals 0. Implicitly present in managed code, so ignored here.
+		0x180910082: Reads {Unknown Global at 0x1832AD290, first ten bytes are [7 54 17 0 204 125 234 2 16 54], or as chars "6 Ì}ê6"} into register rax as a constant constant36
+		0x180910089: Compares UnityEngine.Canvas.set_worldCamera and 0
+		0x18091008C: Jumps to 0x1809100AA if UnityEngine.Canvas.set_worldCamera != 0 ;  - This is probably a goto, jumping to 0x1809100AA which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x18091008E: Loads string "UnityEngine.Canvas::set_worldCamera(UnityEngine.Camera)" into register rcx as constant {'constant38' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180910095: Looks up unity ICall by name "UnityEngine.Canvas::set_worldCamera(UnityEngine.Camera)" which resolves to System.Void UnityEngine.Canvas::set_worldCamera(UnityEngine.Camera)
+		0x18091009A: Compares UnityEngine.Canvas.set_worldCamera and 0
+		0x18091009D: Jumps to 0x1809101B1 if UnityEngine.Canvas.set_worldCamera equals 0 ;  - This is probably a goto, jumping to 0x1809101B1 which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x1809100AA: Copies {'mainCamera2' (type UnityEngine.Camera)} from rsi into rdx
+		0x1809100AD: Copies {'canvas' (type UnityEngine.Canvas)} from rdi into rcx
+		0x1809100B0: [!] Calls managed method System.Void UnityEngine.Canvas::set_worldCamera(UnityEngine.Camera) on instance {'canvas' (type UnityEngine.Canvas)} with arguments [{'mainCamera2' (type UnityEngine.Camera)}]
+
+		0x1809100B2: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809100B9: [!] Reads field mainCamera from {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} and stores in a new local {'mainCamera3' (type UnityEngine.Camera)}
+
+		0x1809100BD: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1809100C4: Jumps to 0x1809100CB if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x1809100CB which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x1809100C6: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1809100CB: Compares {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} and 0
+		0x1809100D2: Jumps to 0x1809100E7 if {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} != 0 ;  - This is probably a goto, jumping to 0x1809100E7 which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x1809100D4: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809100DB: Initializes runtime metadata value UnityEngine.Object
+		0x1809100E7: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809100EE: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1809100F5: Jumps to 0x1809100FC if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x1809100FC which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x1809100F7: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1809100FC: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x180910103: Jumps to 0x180910118 if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0 ;  - This is probably a goto, jumping to 0x180910118 which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x180910105: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18091010C: Initializes runtime metadata value UnityEngine.Object
+		0x180910118: [!] Compares {'mainCamera3' (type UnityEngine.Camera)} and 0
+		0x18091011B: Jumps to 0x18091013D if mainCamera3 equals 0 ;  - This is probably a goto, jumping to 0x18091013D which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x18091011D: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180910124: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18091012B: Jumps to 0x180910132 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x180910132 which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x18091012D: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180910132: [!] Compares {field onPostRender, read from local {'mainCamera3' (type UnityEngine.Camera)}} and 0
+		0x180910137: [!] Sets the boolean {'local7' (type System.Boolean)} in rdi to true if mainCamera3.onPostRender is equal to 0, otherwise false.
+		0x18091013B: Jumps to 0x180910140 (which is an function-local jump destination)
+
+		0x18091013D: [!] Writes the constant 0x1 into operand 1 (type UInt64) in register rdi
+
+		Jump Destination (0x180910140):
+		0x180910140: Loads string "P" into register rax as constant UnityEngine.Behaviour.set_enabled
+		0x180910147: Compares UnityEngine.Behaviour.set_enabled and 0
+		0x18091014A: Jumps to 0x180910164 if UnityEngine.Behaviour.set_enabled != 0 ;  - This is probably a goto, jumping to 0x180910164 which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x18091014C: Loads string "UnityEngine.Behaviour::set_enabled(System.Boolean)" into register rcx as constant {'constant60' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180910153: Looks up unity ICall by name "UnityEngine.Behaviour::set_enabled(System.Boolean)" which resolves to System.Void UnityEngine.Behaviour::set_enabled(System.Boolean)
+		0x180910158: Compares UnityEngine.Behaviour.set_enabled and 0
+		0x18091015B: Jumps to 0x1809101C8 if UnityEngine.Behaviour.set_enabled equals 0 ;  - This is probably a goto, jumping to 0x1809101C8 which is after end of current block @ 0x18090FFFA (started at 0x18090FFC0)
+
+		0x180910164: Copies 1 from rdi into rdx
+		0x180910168: Copies {'this' (function parameter, type WorldSpaceCanvasCameraAssigner)} from rbx into rcx
+		0x18091016B: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rsi as new constant constant62
+		0x180910170: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rbx as new constant constant63
+		0x18091017D: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: WorldSpaceCanvasCameraAssigner
+	System.Void Update()
+		UnityEngine.Camera mainCamera = this.mainCamera
+
+		if (mainCamera != 0)
+
+		    if (mainCamera.onPostRender != 0)
+		    endif
+            
+
+		    UnityEngine.Camera main = UnityEngine.Camera.main
+		    this.mainCamera = main
+		    UnityEngine.Canvas canvas = this.canvas
+		    UnityEngine.Camera mainCamera2 = this.mainCamera
+
+		    canvas.worldCamera = mainCamera2
+		    UnityEngine.Camera mainCamera3 = this.mainCamera
+
+		    if (mainCamera3 == 0)
+                goto INSN_18091013D
+            endif
+		    System.Boolean local7 = mainCamera3.onPostRender == 0
+
+		    INSN_18091013D:
+		    throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.EqualRegisterSetAction at (0x180910137) is corrupt (Destination local has been stripped) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void WorldSpaceCanvasCameraAssigner::.ctor():	Method Body (x86 ASM):
+		0x18037A630 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A634 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x18037A63B jne short 000000018037A650h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A63D lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A644 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A649 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x18037A650 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A657 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18037A65E jne short 000000018037A669h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A660 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A664 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A669 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A66D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18037A66E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void WorldSpaceCanvasCameraAssigner::.ctor():
+		End of function at 0x18037A66F
+		Absolute End is at 0x18037A66F
+		Identified Jump Destination addresses:
+
+		0x18037A634: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x18037A63B: Jumps to 0x18037A650 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x18037A63D: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A644: Initializes runtime metadata value UnityEngine.Object
+		0x18037A650: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A657: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18037A65E: Jumps to 0x18037A669 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18037A66D: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: WorldSpaceCanvasCameraAssigner
+	System.Void .ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ret
+	
+

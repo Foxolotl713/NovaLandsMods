@@ -1,0 +1,255 @@
+Type: <>c__DisplayClass70_0
+
+Method: System.Void PlayerCamera/<>c__DisplayClass70_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PlayerCamera/<>c__DisplayClass70_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerCamera/<>c__DisplayClass70_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Single PlayerCamera/<>c__DisplayClass70_0::<ShakeCamera>b__0():	Method Body (x86 ASM):
+		0x1803F5D80 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1803F5D84 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1803F5D88 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1803F5D8B je short 00000001803F5D9Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803F5D8D movss xmm0,dword ptr [rax+0E0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 224 | None ||| N/A | N/A
+		0x1803F5D95 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1803F5D99 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803F5D9A call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803F5D9F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Single PlayerCamera/<>c__DisplayClass70_0::<ShakeCamera>b__0():
+		End of function at 0x1803F5DA0
+		Absolute End is at 0x1803F5DA0
+		Identified Jump Destination addresses:
+
+		0x1803F5D84: [!] Reads field <>4__this from {'this' (function parameter, type PlayerCamera/<>c__DisplayClass70_0)} and stores in a new local {'<>4__this' (type PlayerCamera)}
+
+		0x1803F5D88: [!] Compares {'<>4__this' (type PlayerCamera)} and 0
+		0x1803F5D8B: Jumps to 0x1803F5D9A (which throws a NRE) if <>4__this equals 0. Implicitly present in managed code, so ignored here.
+		0x1803F5D8D: [!] Reads field cameraShakeProgress from {'<>4__this' (type PlayerCamera)} and stores in a new local {'cameraShakeProgress' (type System.Single)}
+
+		0x1803F5D99: [!] Returns {'cameraShakeProgress' (type System.Single)} from the function
+
+		0x1803F5D9A: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerCamera/<>c__DisplayClass70_0
+	System.Single <ShakeCamera>b__0()
+		PlayerCamera <>4__this = this.<>4__this
+		System.Single cameraShakeProgress = <>4__this.cameraShakeProgress
+		return cameraShakeProgress
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld PlayerCamera PlayerCamera/<>c__DisplayClass70_0::<>4__this
+	IL_0006: ldfld System.Single PlayerCamera::cameraShakeProgress
+	IL_000b: ret
+	IL_000c: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0011: throw
+	
+
+Method: System.Void PlayerCamera/<>c__DisplayClass70_0::<ShakeCamera>b__1(System.Single):	Method Body (x86 ASM):
+		0x1803F5DA0 mov [rsp+10h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 16 | None ||| N/A | N/A
+		0x1803F5DA5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803F5DA6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1803F5DAA mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1803F5DAE mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1803F5DB1 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1803F5DB4 je near ptr 00000001803F5E4Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803F5DBA movss dword ptr [rax+0E0h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RAX | 224 | None ||| N/A | N/A
+		0x1803F5DC2 xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1803F5DC4 mov rdi,[rcx+10h]		; DEBUG: {Register}/RDI {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1803F5DC8 mov [rsp+30h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 48 | None ||| N/A | N/A
+		0x1803F5DCD mov rax,[1832A9CA8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575208 | None ||| N/A | N/A
+		0x1803F5DD4 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1803F5DD7 jne short 00000001803F5DF1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803F5DD9 lea rcx,[182978E58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485937752 | None ||| N/A | N/A
+		0x1803F5DE0 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803F5DE5 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1803F5DE8 je short 00000001803F5E52h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803F5DEA mov [1832A9CA8h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575208 | None ||| N/A | N/A
+		0x1803F5DF1 lea rcx,[rsp+30h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1803F5DF6 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803F5DF8 mov rax,[rbx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x1803F5DFC test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1803F5DFF je short 00000001803F5E4Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803F5E01 movss xmm0,dword ptr [rbx+1Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 28 | None ||| N/A | N/A
+		0x1803F5E06 subss xmm0,dword ptr [rbx+18h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 24 | None ||| N/A | N/A
+		0x1803F5E0B movss xmm1,dword ptr [rsp+30h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1803F5E11 movss xmm2,dword ptr [rsp+34h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RSP | 52 | None ||| N/A | N/A
+		0x1803F5E17 mulss xmm0,dword ptr [rax+0E0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 224 | None ||| N/A | N/A
+		0x1803F5E1F addss xmm0,dword ptr [rbx+18h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 24 | None ||| N/A | N/A
+		0x1803F5E24 mulss xmm1,xmm0		; DEBUG: {Register}/XMM1 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1803F5E28 mulss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1803F5E2C test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1803F5E2F je short 00000001803F5E4Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803F5E31 mov rbx,[rsp+38h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1803F5E36 movss dword ptr [rdi+0D8h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RDI | 216 | None ||| N/A | N/A
+		0x1803F5E3E movss dword ptr [rdi+0DCh],xmm2		; DEBUG: {Memory}/None {Register}/XMM2 ||| RDI | 220 | None ||| N/A | N/A
+		0x1803F5E46 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1803F5E4A pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803F5E4B ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803F5E4C call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803F5E51 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PlayerCamera/<>c__DisplayClass70_0::<ShakeCamera>b__1(System.Single):
+		End of function at 0x1803F5E52
+		Absolute End is at 0x1803F5E52
+		Identified Jump Destination addresses:
+
+		0x1803F5DA5: Saves the content of rdi to the stack
+		0x1803F5DAA: [!] Reads field <>4__this from {'this' (function parameter, type PlayerCamera/<>c__DisplayClass70_0)} and stores in a new local {'<>4__this' (type PlayerCamera)}
+
+		0x1803F5DAE: Copies {'this' (function parameter, type PlayerCamera/<>c__DisplayClass70_0)} from rcx into rbx
+		0x1803F5DB1: [!] Compares {'<>4__this' (type PlayerCamera)} and 0
+		0x1803F5DB4: Jumps to 0x1803F5E4C (which throws a NRE) if <>4__this equals 0. Implicitly present in managed code, so ignored here.
+		0x1803F5DBA: [!] Sets the field cameraShakeProgress (Type System.Single) on local {'<>4__this' (type PlayerCamera)} to the value stored in {'x' (function parameter, type System.Single)}
+		0x1803F5DC2: Clears register rax, yielding zero-local {'local3' (type System.Int32)}
+		0x1803F5DC4: [!] Reads field <>4__this from {'this' (function parameter, type PlayerCamera/<>c__DisplayClass70_0)} and stores in a new local {'<>4__this2' (type PlayerCamera)}
+
+		0x1803F5DC8: Moves local3 (type System.Int32) from register rax to the stack at offset 48 (0x30)
+		0x1803F5DCD: Loads string "[" into register rax as constant UnityEngine.Random.GetRandomUnitCircle
+		0x1803F5DD4: Compares UnityEngine.Random.GetRandomUnitCircle and 0
+		0x1803F5DD7: Jumps to 0x1803F5DF1 if UnityEngine.Random.GetRandomUnitCircle != 0
+
+		0x1803F5DD9: Loads string "UnityEngine.Random::GetRandomUnitCircle(UnityEngine.Vector2&)" into register rcx as constant {'constant4' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1803F5DE0: Looks up unity ICall by name "UnityEngine.Random::GetRandomUnitCircle(UnityEngine.Vector2&)" which resolves to System.Void UnityEngine.Random::GetRandomUnitCircle(UnityEngine.Vector2)
+		0x1803F5DE5: Compares UnityEngine.Random.GetRandomUnitCircle and 0
+		0x1803F5DE8: Jumps to 0x1803F5E52 if UnityEngine.Random.GetRandomUnitCircle equals 0
+
+		0x1803F5DF1: Loads a pointer to stack offset 0x30 into register rcx as new constant constant6
+		0x1803F5DF6: [!] Calls static managed method System.Void UnityEngine.Random::GetRandomUnitCircle(UnityEngine.Vector2) with arguments [{'local3' (type System.Int32)}]
+
+		0x1803F5DF8: [!] Reads field <>4__this from {'this' (function parameter, type PlayerCamera/<>c__DisplayClass70_0)} and stores in a new local {'<>4__this3' (type PlayerCamera)}
+
+		0x1803F5DFC: [!] Compares {'<>4__this3' (type PlayerCamera)} and 0
+		0x1803F5DFF: Jumps to 0x1803F5E4C (which throws a NRE) if <>4__this3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1803F5E01: [!] Reads field finalStrength from {'this' (function parameter, type PlayerCamera/<>c__DisplayClass70_0)} and stores in a new local {'finalStrength' (type System.Single)}
+
+		0x1803F5E0B: Reads local {'local3' (type System.Int32)} from stack offset 48 (0x30) into register xmm1
+		0x1803F5E11: Reads unknown value in stack, offset 52 (0x34) and stores the pointer in register xmm2 as new constant constant8
+		0x1803F5E17: Multiplies {'finalStrength' (type System.Single)} by the field cameraShakeProgress from {'<>4__this3' (type PlayerCamera)}, and stores the result in new local {'local7' (type System.Single)} in register xmm0
+		0x1803F5E2C: [!] Compares {'<>4__this2' (type PlayerCamera)} and 0
+		0x1803F5E2F: Jumps to 0x1803F5E4C (which throws a NRE) if <>4__this2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1803F5E31: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rbx as new constant constant10
+		0x1803F5E36: [!] Sets the field cameraDisplacement (Type UnityEngine.Vector2) on local {'<>4__this2' (type PlayerCamera)} to the value stored in {'local3' (type System.Int32)}
+		0x1803F5E3E: [!] Sets the field cameraDisplacement.y (Type System.Single) on local {'<>4__this2' (type PlayerCamera)} to the value stored in 0
+		0x1803F5E4B: [!] Returns from the function
+
+		0x1803F5E4C: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerCamera/<>c__DisplayClass70_0
+	System.Void <ShakeCamera>b__1(System.Single x)
+		PlayerCamera <>4__this = this.<>4__this
+		<>4__this.cameraShakeProgress = x
+		ulong local3 = 0
+		PlayerCamera <>4__this2 = this.<>4__this
+
+		UnityEngine.Random.GetRandomUnitCircle(local3) //(Vector2 output)
+		PlayerCamera <>4__this3 = this.<>4__this
+		System.Single finalStrength = this.finalStrength
+		System.Single local7 = finalStrength * <>4__this3.cameraShakeProgress
+		<>4__this2.cameraDisplacement = local3
+		<>4__this2.cameraDisplacement.y = 0
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.MultiplyRegByFieldAction at (0x1803F5E17) is corrupt (Operand we were multiplying by is null or local made was stripped) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void PlayerCamera/<>c__DisplayClass70_0::<ShakeCamera>b__2():	Method Body (x86 ASM):
+		0x1803F5E70 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803F5E72 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1803F5E76 cmp byte ptr [183298856h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 0
+		0x1803F5E7D mov rbx,[rcx+10h]		; DEBUG: {Register}/RBX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1803F5E81 jne short 00000001803F5E96h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803F5E83 lea rcx,[1830F62D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x1803F5E8A call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803F5E8F mov byte ptr [183298856h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 1
+		0x1803F5E96 mov rax,[1830F62D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x1803F5E9D mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1803F5EA4 movss xmm0,dword ptr [rcx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1803F5EA8 movss xmm1,dword ptr [rcx+4]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 4 | None ||| N/A | N/A
+		0x1803F5EAD test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1803F5EB0 je short 00000001803F5EC8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803F5EB2 movss dword ptr [rbx+0D8h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 216 | None ||| N/A | N/A
+		0x1803F5EBA movss dword ptr [rbx+0DCh],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 220 | None ||| N/A | N/A
+		0x1803F5EC2 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1803F5EC6 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803F5EC7 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803F5EC8 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803F5ECD int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PlayerCamera/<>c__DisplayClass70_0::<ShakeCamera>b__2():
+		End of function at 0x1803F5ECE
+		Absolute End is at 0x1803F5ECE
+		Identified Jump Destination addresses:
+
+		0x1803F5E70: Saves the content of rbx to the stack
+		0x1803F5E76: Compares {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} and 0
+		0x1803F5E7D: [!] Reads field <>4__this from {'this' (function parameter, type PlayerCamera/<>c__DisplayClass70_0)} and stores in a new local {'<>4__this' (type PlayerCamera)}
+
+		0x1803F5E81: Jumps to 0x1803F5E96 if {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} != 0
+
+		0x1803F5E83: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rcx
+		0x1803F5E8A: Initializes runtime metadata value UnityEngine.Vector2
+		0x1803F5E96: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rax
+		0x1803F5E9D: Loads the pointer to the static fields for UnityEngine.Vector2 and stores it in constant5 in register rcx
+		0x1803F5EA4: [!] Reads the static field UnityEngine.Vector2 UnityEngine.Vector2::zeroVector into new local zeroVector
+		0x1803F5EA8: [!] Reads the static field  into new local 
+		0x1803F5EAD: [!] Compares {'<>4__this' (type PlayerCamera)} and 0
+		0x1803F5EB0: Jumps to 0x1803F5EC8 (which throws a NRE) if <>4__this equals 0. Implicitly present in managed code, so ignored here.
+		0x1803F5EB2: [!] Sets the field cameraDisplacement (Type UnityEngine.Vector2) on local {'<>4__this' (type PlayerCamera)} to the value stored in {'zeroVector' (type UnityEngine.Vector2)}
+		0x1803F5EBA: [!] Sets the field cameraDisplacement.y (Type System.Single) on local {'<>4__this' (type PlayerCamera)} to the value stored in 
+		0x1803F5EC7: [!] Returns from the function
+
+		0x1803F5EC8: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerCamera/<>c__DisplayClass70_0
+	System.Void <ShakeCamera>b__2()
+		PlayerCamera <>4__this = this.<>4__this
+		UnityEngine.Vector2 zeroVector = UnityEngine.Vector2.zeroVector
+		  = .
+		<>4__this.cameraDisplacement = zeroVector
+		<>4__this.cameraDisplacement.y = 
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.StaticFieldToRegAction at (0x1803F5EA8) is corrupt (Couldn't identify the field being read (or its type).) and cannot be created as IL. Aborting here.
+
+

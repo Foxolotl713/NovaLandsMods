@@ -1,0 +1,353 @@
+Type: System.Net.WebConnection:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.IDisposable
+
+	Nested Types:
+		System.Net.WebConnection/<>c
+		System.Net.WebConnection/<Connect>d__16
+		System.Net.WebConnection/<CreateStream>d__18
+		System.Net.WebConnection/<InitConnection>d__19
+
+	Field: ntlm_credentials
+		Type: System.Net.NetworkCredential
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: ntlm_authenticated
+		Type: System.Boolean
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: unsafe_sharing
+		Type: System.Boolean
+		Offset in Defining Type: 0x19
+		Has Default: False
+
+	Field: networkStream
+		Type: System.IO.Stream
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: socket
+		Type: System.Net.Sockets.Socket
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: monoTlsStream
+		Type: Mono.Net.Security.MonoTlsStream
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: tunnel
+		Type: System.Net.WebConnectionTunnel
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: disposed
+		Type: System.Int32
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: <ServicePoint>k__BackingField
+		Type: System.Net.ServicePoint
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: idleSince
+		Type: System.DateTime
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: currentOperation
+		Type: System.Net.WebOperation
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Method: get_ServicePoint:
+		Accessibility: Public
+		Return Type: System.Net.ServicePoint
+		File Offset 0x003F4770
+		Ram Offset 0x1803f5970
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00998D30
+		Ram Offset 0x180999f30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sPoint
+			Type: System.Net.ServicePoint
+			Default Value: 
+	Method: CanReuse:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F7B170
+		Ram Offset 0x181f7c370
+		Virtual Method Slot: 65535
+
+	Method: CheckReusable:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F7B250
+		Ram Offset 0x181f7c450
+		Virtual Method Slot: 65535
+
+	Method: Connect:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01F7B360
+		Ram Offset 0x181f7c560
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: operation
+			Type: System.Net.WebOperation
+			Default Value: 
+		Parameter 1:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: CreateStream:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task`1<System.Boolean>
+		File Offset 0x01F7B5B0
+		Ram Offset 0x181f7c7b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: operation
+			Type: System.Net.WebOperation
+			Default Value: 
+		Parameter 1:
+			Name: reused
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: InitConnection:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.Task`1<System.Net.WebRequestStream>
+		File Offset 0x01F7B810
+		Ram Offset 0x181f7ca10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: operation
+			Type: System.Net.WebOperation
+			Default Value: 
+		Parameter 1:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: GetException:
+		Accessibility: Assembly
+		Return Type: System.Net.WebException
+		File Offset 0x01F7BA50
+		Ram Offset 0x181f7cc50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: status
+			Type: System.Net.WebExceptionStatus
+			Default Value: 
+		Parameter 1:
+			Name: error
+			Type: System.Exception
+			Default Value: 
+	Method: ReadLine:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01F7BBD0
+		Ram Offset 0x181f7cdd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: start
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: max
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: output
+			Type: System.String
+			Default Value: 
+	Method: CanReuseConnection:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01F7BE30
+		Ram Offset 0x181f7d030
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: operation
+			Type: System.Net.WebOperation
+			Default Value: 
+	Method: PrepareSharingNtlm:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F7C2E0
+		Ram Offset 0x181f7d4e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: operation
+			Type: System.Net.WebOperation
+			Default Value: 
+	Method: Reset:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F7C590
+		Ram Offset 0x181f7d790
+		Virtual Method Slot: 65535
+
+	Method: Close:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F7C780
+		Ram Offset 0x181f7d980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: reset
+			Type: System.Boolean
+			Default Value: 
+	Method: CloseSocket:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F7C8D0
+		Ram Offset 0x181f7dad0
+		Virtual Method Slot: 65535
+
+	Method: get_Closed:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01F7CC70
+		Ram Offset 0x181f7de70
+		Virtual Method Slot: 65535
+
+	Method: get_IdleSince:
+		Accessibility: Public
+		Return Type: System.DateTime
+		File Offset 0x003C6290
+		Ram Offset 0x1803c7490
+		Virtual Method Slot: 65535
+
+	Method: StartOperation:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01F7CC80
+		Ram Offset 0x181f7de80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: operation
+			Type: System.Net.WebOperation
+			Default Value: 
+		Parameter 1:
+			Name: reused
+			Type: System.Boolean
+			Default Value: 
+	Method: Continue:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01F7CF90
+		Ram Offset 0x181f7e190
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: next
+			Type: System.Net.WebOperation
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F7D1F0
+		Ram Offset 0x181f7e3f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01F7D1F0
+		Ram Offset 0x181f7e3f0
+		Virtual Method Slot: 4
+
+	Method: ResetNtlm:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F7D210
+		Ram Offset 0x181f7e410
+		Virtual Method Slot: 65535
+
+	Method: get_NtlmAuthenticated:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00960420
+		Ram Offset 0x180961620
+		Virtual Method Slot: 65535
+
+	Method: set_NtlmAuthenticated:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00960430
+		Ram Offset 0x180961630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_NtlmCredential:
+		Accessibility: Assembly
+		Return Type: System.Net.NetworkCredential
+		File Offset 0x00386E40
+		Ram Offset 0x180388040
+		Virtual Method Slot: 65535
+
+	Method: set_NtlmCredential:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00386E50
+		Ram Offset 0x180388050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Net.NetworkCredential
+			Default Value: 
+	Method: get_UnsafeAuthenticatedConnectionSharing:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0162BD60
+		Ram Offset 0x18162cf60
+		Virtual Method Slot: 65535
+
+	Method: set_UnsafeAuthenticatedConnectionSharing:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01B68670
+		Ram Offset 0x181b69870
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 

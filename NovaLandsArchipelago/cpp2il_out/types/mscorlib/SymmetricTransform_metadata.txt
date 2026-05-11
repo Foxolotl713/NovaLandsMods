@@ -1,0 +1,398 @@
+Type: Mono.Security.Cryptography.SymmetricTransform:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.Security.Cryptography.ICryptoTransform
+		System.IDisposable
+
+	Field: algo
+		Type: System.Security.Cryptography.SymmetricAlgorithm
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: encrypt
+		Type: System.Boolean
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: BlockSizeByte
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: temp
+		Type: System.Byte[]
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: temp2
+		Type: System.Byte[]
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: workBuff
+		Type: System.Byte[]
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: workout
+		Type: System.Byte[]
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: padmode
+		Type: System.Security.Cryptography.PaddingMode
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: FeedBackByte
+		Type: System.Int32
+		Offset in Defining Type: 0x44
+		Has Default: False
+
+	Field: m_disposed
+		Type: System.Boolean
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: lastBlock
+		Type: System.Boolean
+		Offset in Defining Type: 0x49
+		Has Default: False
+
+	Field: _rng
+		Type: System.Security.Cryptography.RandomNumberGenerator
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016B70C0
+		Ram Offset 0x1816b82c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: symmAlgo
+			Type: System.Security.Cryptography.SymmetricAlgorithm
+			Default Value: 
+		Parameter 1:
+			Name: encryption
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: rgbIV
+			Type: System.Byte[]
+			Default Value: 
+	Method: Finalize:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x016B7510
+		Ram Offset 0x1816b8710
+		Virtual Method Slot: 1
+
+	Method: System.IDisposable.Dispose:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016B7560
+		Ram Offset 0x1816b8760
+		Virtual Method Slot: 9
+
+	Method: Dispose:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x016B75C0
+		Ram Offset 0x1816b87c0
+		Virtual Method Slot: 10
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: get_CanTransformMultipleBlocks:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 11
+
+	Method: get_InputBlockSize:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00387E90
+		Ram Offset 0x180389090
+		Virtual Method Slot: 12
+
+	Method: get_OutputBlockSize:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00387E90
+		Ram Offset 0x180389090
+		Virtual Method Slot: 13
+
+	Method: Transform:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x016B76C0
+		Ram Offset 0x1816b88c0
+		Virtual Method Slot: 14
+
+		Parameter 0:
+			Name: input
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: output
+			Type: System.Byte[]
+			Default Value: 
+	Method: ECB:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 15
+
+		Parameter 0:
+			Name: input
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: output
+			Type: System.Byte[]
+			Default Value: 
+	Method: CBC:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x016B78A0
+		Ram Offset 0x1816b8aa0
+		Virtual Method Slot: 16
+
+		Parameter 0:
+			Name: input
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: output
+			Type: System.Byte[]
+			Default Value: 
+	Method: CFB:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x016B79E0
+		Ram Offset 0x1816b8be0
+		Virtual Method Slot: 17
+
+		Parameter 0:
+			Name: input
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: output
+			Type: System.Byte[]
+			Default Value: 
+	Method: OFB:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x016B7E60
+		Ram Offset 0x1816b9060
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: input
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: output
+			Type: System.Byte[]
+			Default Value: 
+	Method: CTS:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x016B7EB0
+		Ram Offset 0x1816b90b0
+		Virtual Method Slot: 19
+
+		Parameter 0:
+			Name: input
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: output
+			Type: System.Byte[]
+			Default Value: 
+	Method: CheckInput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016B7F00
+		Ram Offset 0x1816b9100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 
+	Method: TransformBlock:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x016B80A0
+		Ram Offset 0x1816b92a0
+		Virtual Method Slot: 20
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: outputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 4:
+			Name: outputOffset
+			Type: System.Int32
+			Default Value: 
+	Method: get_KeepLastBlock:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x016B83C0
+		Ram Offset 0x1816b95c0
+		Virtual Method Slot: 65535
+
+	Method: InternalTransformBlock:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x016B83E0
+		Ram Offset 0x1816b95e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: outputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 4:
+			Name: outputOffset
+			Type: System.Int32
+			Default Value: 
+	Method: Random:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016B85D0
+		Ram Offset 0x1816b97d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: start
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+	Method: ThrowBadPaddingException:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016B86E0
+		Ram Offset 0x1816b98e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: padding
+			Type: System.Security.Cryptography.PaddingMode
+			Default Value: 
+		Parameter 1:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: position
+			Type: System.Int32
+			Default Value: 
+	Method: FinalEncrypt:
+		Accessibility: Family
+		Return Type: System.Byte[]
+		File Offset 0x016B8840
+		Ram Offset 0x1816b9a40
+		Virtual Method Slot: 21
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 
+	Method: FinalDecrypt:
+		Accessibility: Family
+		Return Type: System.Byte[]
+		File Offset 0x016B8BD0
+		Ram Offset 0x1816b9dd0
+		Virtual Method Slot: 22
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 
+	Method: TransformFinalBlock:
+		Accessibility: Public
+		Return Type: System.Byte[]
+		File Offset 0x016B8EE0
+		Ram Offset 0x1816ba0e0
+		Virtual Method Slot: 23
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 

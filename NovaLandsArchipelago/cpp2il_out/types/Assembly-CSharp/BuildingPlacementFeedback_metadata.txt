@@ -1,0 +1,320 @@
+Type: BuildingPlacementFeedback:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Field: sprite
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: gridSprite
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: textFeedback
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: textFeedbackLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: buildInstructionCanvas
+		Type: UnityEngine.Canvas
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: buildInstructionLabel
+		Type: CommandActionPair
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: keepBuildingInstructionLabel
+		Type: CommandActionPair
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: moveBuildingInstructionLabel
+		Type: CommandActionPair
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: buildPossibleFeedbackColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: buildImossibleFeedbackColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: checkCollisionMask
+		Type: UnityEngine.LayerMask
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: canPlace
+		Type: System.Boolean
+		Offset in Defining Type: 0x84
+		Has Default: False
+
+	Field: collider
+		Type: UnityEngine.Collider2D
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: offset
+		Type: UnityEngine.Vector3
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: buildingInstructionsYOffset
+		Type: System.Single
+		Offset in Defining Type: 0x9C
+		Has Default: False
+
+	Field: player
+		Type: BasePlayer
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: building
+		Type: BaseBuilding
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: actionsCanvasOriginalPosition
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: checkWaterColliderScale
+		Type: System.Single
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: canPlaceOverProps
+		Type: System.Boolean
+		Offset in Defining Type: 0xBC
+		Has Default: False
+
+	Field: extractorLevel
+		Type: System.Int32
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: isEncampmentIsland
+		Type: System.Boolean
+		Offset in Defining Type: 0xC4
+		Has Default: False
+
+	Field: currentDecorationType
+		Type: HouseDecorationType
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: invert
+		Type: System.Boolean
+		Offset in Defining Type: 0xCC
+		Has Default: False
+
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005304D0
+		Ram Offset 0x1805316d0
+		Virtual Method Slot: 65535
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005307D0
+		Ram Offset 0x1805319d0
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+		Parameter 1:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+		Parameter 2:
+			Name: sprite
+			Type: UnityEngine.Sprite
+			Default Value: 
+		Parameter 3:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 4:
+			Name: collider
+			Type: UnityEngine.Collider2D
+			Default Value: 
+		Parameter 5:
+			Name: checkCollisionMask
+			Type: UnityEngine.LayerMask
+			Default Value: 
+		Parameter 6:
+			Name: feedbackText
+			Type: System.String
+			Default Value: 
+		Parameter 7:
+			Name: customMaterialOffset
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 8:
+			Name: checkWaterColliderScale
+			Type: System.Single
+			Default Value: -1
+		Parameter 9:
+			Name: buildingInstructionsYOffset
+			Type: System.Single
+			Default Value: 0
+	Method: OnDestroy:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005312A0
+		Ram Offset 0x1805324a0
+		Virtual Method Slot: 65535
+
+	Method: InitInteractionFeedbacks:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00531360
+		Ram Offset 0x180532560
+		Virtual Method Slot: 5
+
+	Method: UpdateInteractionFeedbacks:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005316E0
+		Ram Offset 0x1805328e0
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: canKeepBuilding
+			Type: System.Boolean
+			Default Value: 
+	Method: UpdateInteractionFeedbacksControlsDelayed:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00531B50
+		Ram Offset 0x180532d50
+		Virtual Method Slot: 65535
+
+	Method: UpdateInteractionFeedbacksControls:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00531B70
+		Ram Offset 0x180532d70
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: controllerType
+			Type: Rewired.ControllerType
+			Default Value: 
+	Method: ShowTextFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00531CD0
+		Ram Offset 0x180532ed0
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: text
+			Type: System.String
+			Default Value: 
+	Method: UpdateFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00532070
+		Ram Offset 0x180533270
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: invert
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: canPlace
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: canKeepBuilding
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: decorationType
+			Type: HouseDecorationType
+			Default Value: 3
+	Method: CastCurrentPosition:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x005323B0
+		Ram Offset 0x1805335b0
+		Virtual Method Slot: 10
+
+	Method: CheckCanBuildOverProp:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00533050
+		Ram Offset 0x180534250
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cols
+			Type: UnityEngine.Collider2D[]
+			Default Value: 
+	Method: GetBuildPosition:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x00533290
+		Ram Offset 0x180534490
+		Virtual Method Slot: 65535
+
+	Method: GetBuild2Position:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x00533290
+		Ram Offset 0x180534490
+		Virtual Method Slot: 11
+
+	Method: GetTransporterSlot:
+		Accessibility: Public
+		Return Type: TransporterContainerSlot
+		File Offset 0x00380910
+		Ram Offset 0x180381b10
+		Virtual Method Slot: 12
+
+	Method: UpdateColor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00533380
+		Ram Offset 0x180534580
+		Virtual Method Slot: 13
+
+	Method: get_CanPlace:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00533400
+		Ram Offset 0x180534600
+		Virtual Method Slot: 14
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00533410
+		Ram Offset 0x180534610
+		Virtual Method Slot: 65535

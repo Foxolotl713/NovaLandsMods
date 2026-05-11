@@ -1,0 +1,861 @@
+Type: ExportRocketBuilding:
+	Base Class: 
+		DepositAreaContainer
+
+	Interfaces:
+
+	Nested Types:
+		ExportRocketBuilding/<>c
+		ExportRocketBuilding/<>c__DisplayClass61_0
+		ExportRocketBuilding/<>c__DisplayClass75_0
+		ExportRocketBuilding/<>c__DisplayClass77_0
+		ExportRocketBuilding/<>c__DisplayClass78_0
+		ExportRocketBuilding/<CheckReadyToDepartDelayed>d__56
+		ExportRocketBuilding/<ResetSpriteOrderDelayed>d__69
+		ExportRocketBuilding/<UpdateRocketLightFeedbackCoroutine>d__46
+
+	Field: fuelContentOverlay
+		Type: ItemsContentOverlay
+		Offset in Defining Type: 0x660
+		Has Default: False
+
+	Field: rocket
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x668
+		Has Default: False
+
+	Field: secondarySprites
+		Type: System.Collections.Generic.List`1<UnityEngine.SpriteRenderer>
+		Offset in Defining Type: 0x670
+		Has Default: False
+
+	Field: rocketAnimator
+		Type: UnityEngine.Animator
+		Offset in Defining Type: 0x678
+		Has Default: False
+
+	Field: rocketLightAnimator
+		Type: UnityEngine.Animator
+		Offset in Defining Type: 0x680
+		Has Default: False
+
+	Field: rocketTransferItemsPosition
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x688
+		Has Default: False
+
+	Field: transferItemsStateDuration
+		Type: System.Single
+		Offset in Defining Type: 0x690
+		Has Default: False
+
+	Field: transferSingleItemDuration
+		Type: System.Single
+		Offset in Defining Type: 0x694
+		Has Default: False
+
+	Field: transferItemsMaxAmount
+		Type: System.Int32
+		Offset in Defining Type: 0x698
+		Has Default: False
+
+	Field: transferItemsPoolSize
+		Type: System.Int32
+		Offset in Defining Type: 0x69C
+		Has Default: False
+
+	Field: transferItemFadeEaseType
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0x6A0
+		Has Default: False
+
+	Field: rocketTakeOffParticles
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x6A8
+		Has Default: False
+
+	Field: rocketTakeOffFireParticles
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x6B0
+		Has Default: False
+
+	Field: rocketLandingParticles
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x6B8
+		Has Default: False
+
+	Field: rocketLandingFireParticles
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x6C0
+		Has Default: False
+
+	Field: transportUpAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0x6C8
+		Has Default: False
+
+	Field: transportDownAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0x6CC
+		Has Default: False
+
+	Field: deliveryTime
+		Type: System.Single
+		Offset in Defining Type: 0x6D0
+		Has Default: False
+
+	Field: requiredFuelAmountPerType
+		Type: System.Collections.Generic.List`1<ResourceAmountPair>
+		Offset in Defining Type: 0x6D8
+		Has Default: False
+
+	Field: currentContract
+		Type: MarketContractScriptableObject
+		Offset in Defining Type: 0x6E0
+		Has Default: False
+
+	Field: contractInLastDelivery
+		Type: MarketContractScriptableObject
+		Offset in Defining Type: 0x6E8
+		Has Default: False
+
+	Field: rocketPopup
+		Type: ExportRocketBuildingPopup
+		Offset in Defining Type: 0x6F0
+		Has Default: False
+
+	Field: checkInventoryFullCoroutine
+		Type: UnityEngine.Coroutine
+		Offset in Defining Type: 0x6F8
+		Has Default: False
+
+	Field: updateRocketLightFeedbackCoroutine
+		Type: UnityEngine.Coroutine
+		Offset in Defining Type: 0x700
+		Has Default: False
+
+	Field: currentRocketState
+		Type: ExportRocketState
+		Offset in Defining Type: 0x708
+		Has Default: False
+
+	Field: currentTransportTime
+		Type: System.Single
+		Offset in Defining Type: 0x70C
+		Has Default: False
+
+	Field: transportAnimationSpeed
+		Type: System.Single
+		Offset in Defining Type: 0x710
+		Has Default: False
+
+	Field: player
+		Type: BasePlayer
+		Offset in Defining Type: 0x718
+		Has Default: False
+
+	Field: transferItemsFeedbacks
+		Type: System.Collections.Generic.List`1<System.Collections.Generic.List`1<StorageItemTemplate>>
+		Offset in Defining Type: 0x720
+		Has Default: False
+
+	Field: transferItemsOriginalPositions
+		Type: System.Collections.Generic.List`1<System.Collections.Generic.List`1<UnityEngine.Vector2>>
+		Offset in Defining Type: 0x728
+		Has Default: False
+
+	Field: transferItemsMoveTweens
+		Type: System.Collections.Generic.List`1<System.Collections.Generic.List`1<DG.Tweening.Tween>>
+		Offset in Defining Type: 0x730
+		Has Default: False
+
+	Field: transferItemsFadeTweens
+		Type: System.Collections.Generic.List`1<System.Collections.Generic.List`1<DG.Tweening.Tween>>
+		Offset in Defining Type: 0x738
+		Has Default: False
+
+	Field: requiredFuelAmountPerTypeDict
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.Int32>
+		Offset in Defining Type: 0x740
+		Has Default: False
+
+	Field: currentRequiredFuel
+		Type: BaseResourceScriptableObject
+		Offset in Defining Type: 0x748
+		Has Default: False
+
+	Field: exportMode
+		Type: ExportRocketExportMode
+		Offset in Defining Type: 0x750
+		Has Default: False
+
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x00AEB760
+		Ram Offset 0x180aec960
+		Virtual Method Slot: 97
+
+		Parameter 0:
+			Name: firstSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AEBC60
+		Ram Offset 0x180aece60
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: parentArea
+			Type: WorldArea
+			Default Value: 
+	Method: LoadDependentData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AEBFF0
+		Ram Offset 0x180aed1f0
+		Virtual Method Slot: 20
+
+	Method: InitProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEC180
+		Ram Offset 0x180aed380
+		Virtual Method Slot: 25
+
+	Method: InitComponents:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEC670
+		Ram Offset 0x180aed870
+		Virtual Method Slot: 26
+
+	Method: InitPopup:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEC6F0
+		Ram Offset 0x180aed8f0
+		Virtual Method Slot: 115
+
+	Method: LoadRocketState:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AEC830
+		Ram Offset 0x180aeda30
+		Virtual Method Slot: 65535
+
+	Method: PlayRocketLightAnimation:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEC970
+		Ram Offset 0x180aedb70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: animation
+			Type: System.Int32
+			Default Value: 
+	Method: ResumeRocketAnimation:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AECA20
+		Ram Offset 0x180aedc20
+		Virtual Method Slot: 65535
+
+	Method: BecameVisibleCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AECB10
+		Ram Offset 0x180aedd10
+		Virtual Method Slot: 54
+
+	Method: UpdateRocketLightFeedbackDelayed:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AECB60
+		Ram Offset 0x180aedd60
+		Virtual Method Slot: 65535
+
+	Method: UpdateRocketLightFeedbackCoroutine:
+		Accessibility: Family
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00AECC20
+		Ram Offset 0x180aede20
+		Virtual Method Slot: 65535
+
+	Method: UpdateRocketLightFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AECC60
+		Ram Offset 0x180aede60
+		Virtual Method Slot: 65535
+
+	Method: UpdateRocketLightFeedback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AECCA0
+		Ram Offset 0x180aedea0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hasResourcesToDepart
+			Type: System.Boolean
+			Default Value: 
+	Method: UpdatePopupState:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AECE50
+		Ram Offset 0x180aee050
+		Virtual Method Slot: 65535
+
+	Method: EnableUIHighlightInteraction:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AECF30
+		Ram Offset 0x180aee130
+		Virtual Method Slot: 78
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: EnableUIHighlightSprite:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AED130
+		Ram Offset 0x180aee330
+		Virtual Method Slot: 76
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: SetCurrentContract:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AED720
+		Ram Offset 0x180aee920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: contract
+			Type: MarketContractScriptableObject
+			Default Value: 
+	Method: NotifyDronesBases:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEDAE0
+		Ram Offset 0x180aeece0
+		Virtual Method Slot: 65535
+
+	Method: RemoveTasksOnContractChange:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEDB30
+		Ram Offset 0x180aeed30
+		Virtual Method Slot: 65535
+
+	Method: CheckReadyToDepart:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AEDE90
+		Ram Offset 0x180aef090
+		Virtual Method Slot: 65535
+
+	Method: CheckReadyToDepartDelayed:
+		Accessibility: Family
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00AEDFE0
+		Ram Offset 0x180aef1e0
+		Virtual Method Slot: 65535
+
+	Method: PlayRocketAnimation:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEE070
+		Ram Offset 0x180aef270
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: animation
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: normalizedTime
+			Type: System.Single
+			Default Value: 0
+	Method: Dismantle:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEE180
+		Ram Offset 0x180aef380
+		Virtual Method Slot: 91
+
+	Method: StartTransporting:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEE1C0
+		Ram Offset 0x180aef3c0
+		Virtual Method Slot: 65535
+
+	Method: GetNumberOfStackFeedbackItemsPerItemAmount:
+		Accessibility: Family
+		Return Type: System.Int32
+		File Offset 0x00AEE3C0
+		Ram Offset 0x180aef5c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: itemAmount
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: TransferItems:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEE5E0
+		Ram Offset 0x180aef7e0
+		Virtual Method Slot: 65535
+
+	Method: UpdateIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AEEDF0
+		Ram Offset 0x180aefff0
+		Virtual Method Slot: 161
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: UpdateTransporting:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEF010
+		Ram Offset 0x180af0210
+		Virtual Method Slot: 65535
+
+	Method: OnTransportFinished:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEF1D0
+		Ram Offset 0x180af03d0
+		Virtual Method Slot: 65535
+
+	Method: InitFeedbackItems:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEF7C0
+		Ram Offset 0x180af09c0
+		Virtual Method Slot: 201
+
+	Method: InitFeedbackItemsZOrder:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AEFF30
+		Ram Offset 0x180af1130
+		Virtual Method Slot: 202
+
+	Method: ResetSpriteOrder:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF02D0
+		Ram Offset 0x180af14d0
+		Virtual Method Slot: 51
+
+	Method: Reposition:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF0500
+		Ram Offset 0x180af1700
+		Virtual Method Slot: 49
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector3
+			Default Value: 
+	Method: ResetSpriteOrderDelayed:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00AF07C0
+		Ram Offset 0x180af19c0
+		Virtual Method Slot: 65535
+
+	Method: AnimationEventHandler:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF0850
+		Ram Offset 0x180af1a50
+		Virtual Method Slot: 34
+
+		Parameter 0:
+			Name: eventName
+			Type: System.String
+			Default Value: 
+	Method: EnableUpdater:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF0D00
+		Ram Offset 0x180af1f00
+		Virtual Method Slot: 79
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: GetPlayer:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AF0E00
+		Ram Offset 0x180af2000
+		Virtual Method Slot: 65535
+
+	Method: ShowMovingFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF0F90
+		Ram Offset 0x180af2190
+		Virtual Method Slot: 178
+
+	Method: HideMovingFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF1170
+		Ram Offset 0x180af2370
+		Virtual Method Slot: 179
+
+	Method: IsTaskValid:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AF1350
+		Ram Offset 0x180af2550
+		Virtual Method Slot: 139
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+	Method: UpdateLogistics:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF1610
+		Ram Offset 0x180af2810
+		Virtual Method Slot: 142
+
+		Parameter 0:
+			Name: checkCurrentResources
+			Type: System.Boolean
+			Default Value: False
+	Method: GetNumberOfLogisticsCargoTasksToAdd:
+		Accessibility: Family
+		Return Type: System.Int32
+		File Offset 0x00AF1F50
+		Ram Offset 0x180af3150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hiPriority
+			Type: System.Boolean
+			Default Value: 
+	Method: GetNumberOfLogisticsFuelTasksToAdd:
+		Accessibility: Family
+		Return Type: System.Int32
+		File Offset 0x00AF21E0
+		Ram Offset 0x180af33e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hiPriority
+			Type: System.Boolean
+			Default Value: 
+	Method: GetRequiredFuelAmountPerType:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00AF24D0
+		Ram Offset 0x180af36d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+	Method: IsLogisticsHiPriority:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00AF2570
+		Ram Offset 0x180af3770
+		Virtual Method Slot: 150
+
+	Method: IsLogisticsLoPriority:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00AF2660
+		Ram Offset 0x180af3860
+		Virtual Method Slot: 149
+
+	Method: HasLogisticsPriority:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00AF2680
+		Ram Offset 0x180af3880
+		Virtual Method Slot: 148
+
+	Method: ClearResourcesTasks:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: ClearFuelTasks:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AF26D0
+		Ram Offset 0x180af38d0
+		Virtual Method Slot: 65535
+
+	Method: OnAddItem:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AF28D0
+		Ram Offset 0x180af3ad0
+		Virtual Method Slot: 200
+
+	Method: OnChangeInventory:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF2AA0
+		Ram Offset 0x180af3ca0
+		Virtual Method Slot: 188
+
+	Method: DropUnnecessaryResources:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF2B00
+		Ram Offset 0x180af3d00
+		Virtual Method Slot: 203
+
+	Method: CanAddItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AF3220
+		Ram Offset 0x180af4420
+		Virtual Method Slot: 120
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: isRecipe
+			Type: System.Boolean
+			Default Value: 
+	Method: TryToConsumeItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00AF3750
+		Ram Offset 0x180af4950
+		Virtual Method Slot: 118
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+		Parameter 1:
+			Name: sourceCharacter
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: dropToTheGround
+			Type: System.Boolean
+			Default Value: 
+	Method: AddItemToInventory:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00AF3B50
+		Ram Offset 0x180af4d50
+		Virtual Method Slot: 193
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: feedbackTargetPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 3:
+			Name: destroyAfterTime
+			Type: System.Single
+			Default Value: -1
+		Parameter 4:
+			Name: resourceToSpawnOnDestroy
+			Type: System.Int32
+			Default Value: -1
+	Method: AddItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00AF4220
+		Ram Offset 0x180af5420
+		Virtual Method Slot: 136
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: feedbackTargetPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 3:
+			Name: destroyAfterTime
+			Type: System.Single
+			Default Value: -1
+		Parameter 4:
+			Name: resourceToSpawnOnDestroy
+			Type: System.Int32
+			Default Value: -1
+	Method: InitContentOverlay:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AF4240
+		Ram Offset 0x180af5440
+		Virtual Method Slot: 187
+
+	Method: EnableOverlay:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF4290
+		Ram Offset 0x180af5490
+		Virtual Method Slot: 33
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: UpdateContentOverlay:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF4450
+		Ram Offset 0x180af5650
+		Virtual Method Slot: 189
+
+	Method: get_CurrentRequiredResource:
+		Accessibility: Public
+		Return Type: BaseResourceScriptableObject
+		File Offset 0x00AF4930
+		Ram Offset 0x180af5b30
+		Virtual Method Slot: 197
+
+	Method: get_DeliveryTime:
+		Accessibility: Family
+		Return Type: System.Single
+		File Offset 0x00AF4A20
+		Ram Offset 0x180af5c20
+		Virtual Method Slot: 65535
+
+	Method: get_IsResourceSource:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 199
+
+	Method: get_IsReady:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AF4A30
+		Ram Offset 0x180af5c30
+		Virtual Method Slot: 65535
+
+	Method: get_IsCargoReady:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AF4A90
+		Ram Offset 0x180af5c90
+		Virtual Method Slot: 65535
+
+	Method: get_IsFuelReady:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AF4BD0
+		Ram Offset 0x180af5dd0
+		Virtual Method Slot: 65535
+
+	Method: get_ExportMode:
+		Accessibility: Public
+		Return Type: ExportRocketExportMode
+		File Offset 0x00AF4CD0
+		Ram Offset 0x180af5ed0
+		Virtual Method Slot: 65535
+
+	Method: set_ExportMode:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF4D40
+		Ram Offset 0x180af5f40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: ExportRocketExportMode
+			Default Value: 
+	Method: get_CurrentRequiredFuel:
+		Accessibility: Public
+		Return Type: BaseResourceScriptableObject
+		File Offset 0x00AD9A90
+		Ram Offset 0x180adac90
+		Virtual Method Slot: 65535
+
+	Method: set_CurrentRequiredFuel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF4D50
+		Ram Offset 0x180af5f50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: BaseResourceScriptableObject
+			Default Value: 
+	Method: get_CurrentRocketState:
+		Accessibility: Public
+		Return Type: ExportRocketState
+		File Offset 0x00AF4EC0
+		Ram Offset 0x180af60c0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AF4ED0
+		Ram Offset 0x180af60d0
+		Virtual Method Slot: 65535
+
+	Method: <TransferItems>b__61_2:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AF4F40
+		Ram Offset 0x180af6140
+		Virtual Method Slot: 65535

@@ -1,0 +1,141 @@
+Type: Delaunay.HalfedgePriorityQueue:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		Delaunay.Utils.IDisposable
+
+	Field: _hash
+		Type: Delaunay.Halfedge[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: _count
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _minBucket
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: _hashsize
+		Type: System.Int32
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _ymin
+		Type: System.Single
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Field: _deltay
+		Type: System.Single
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009155D0
+		Ram Offset 0x1809167d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ymin
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: deltay
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: sqrt_nsites
+			Type: System.Int32
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009155F0
+		Ram Offset 0x1809167f0
+		Virtual Method Slot: 4
+
+	Method: Initialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00915740
+		Ram Offset 0x180916940
+		Virtual Method Slot: 65535
+
+	Method: Insert:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00915960
+		Ram Offset 0x180916b60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: halfEdge
+			Type: Delaunay.Halfedge
+			Default Value: 
+	Method: Remove:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00915AF0
+		Ram Offset 0x180916cf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: halfEdge
+			Type: Delaunay.Halfedge
+			Default Value: 
+	Method: Bucket:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x00915D30
+		Ram Offset 0x180916f30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: halfEdge
+			Type: Delaunay.Halfedge
+			Default Value: 
+	Method: IsEmpty:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00915D80
+		Ram Offset 0x180916f80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bucket
+			Type: System.Int32
+			Default Value: 
+	Method: AdjustMinBucket:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00915DC0
+		Ram Offset 0x180916fc0
+		Virtual Method Slot: 65535
+
+	Method: Empty:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00915E20
+		Ram Offset 0x180917020
+		Virtual Method Slot: 65535
+
+	Method: Min:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x00915E30
+		Ram Offset 0x180917030
+		Virtual Method Slot: 65535
+
+	Method: ExtractMin:
+		Accessibility: Public
+		Return Type: Delaunay.Halfedge
+		File Offset 0x00915ED0
+		Ram Offset 0x1809170d0
+		Virtual Method Slot: 65535

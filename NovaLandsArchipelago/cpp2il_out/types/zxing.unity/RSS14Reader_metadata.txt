@@ -1,0 +1,234 @@
+Type: ZXing.OneD.RSS.RSS14Reader:
+	Base Class: 
+		ZXing.OneD.RSS.AbstractRSSReader
+
+	Interfaces:
+
+	Static Field: OUTSIDE_EVEN_TOTAL_SUBSET
+		Type: System.Int32[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: INSIDE_ODD_TOTAL_SUBSET
+		Type: System.Int32[]
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: OUTSIDE_GSUM
+		Type: System.Int32[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: INSIDE_GSUM
+		Type: System.Int32[]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: OUTSIDE_ODD_WIDEST
+		Type: System.Int32[]
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: INSIDE_ODD_WIDEST
+		Type: System.Int32[]
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: FINDER_PATTERNS
+		Type: System.Int32[][]
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: possibleLeftPairs
+		Type: System.Collections.Generic.List`1<ZXing.OneD.RSS.Pair>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: possibleRightPairs
+		Type: System.Collections.Generic.List`1<ZXing.OneD.RSS.Pair>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0280D470
+		Ram Offset 0x18280e670
+		Virtual Method Slot: 65535
+
+	Method: decodeRow:
+		Accessibility: Public
+		Return Type: ZXing.Result
+		File Offset 0x0280D5D0
+		Ram Offset 0x18280e7d0
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: rowNumber
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 2:
+			Name: hints
+			Type: System.Collections.Generic.IDictionary`2<ZXing.DecodeHintType, System.Object>
+			Default Value: 
+	Method: addOrTally:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0280D870
+		Ram Offset 0x18280ea70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: possiblePairs
+			Type: System.Collections.Generic.IList`1<ZXing.OneD.RSS.Pair>
+			Default Value: 
+		Parameter 1:
+			Name: pair
+			Type: ZXing.OneD.RSS.Pair
+			Default Value: 
+	Method: reset:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0280DAE0
+		Ram Offset 0x18280ece0
+		Virtual Method Slot: 8
+
+	Method: constructResult:
+		Accessibility: Private
+		Return Type: ZXing.Result
+		File Offset 0x0280DB70
+		Ram Offset 0x18280ed70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: leftPair
+			Type: ZXing.OneD.RSS.Pair
+			Default Value: 
+		Parameter 1:
+			Name: rightPair
+			Type: ZXing.OneD.RSS.Pair
+			Default Value: 
+	Method: checkChecksum:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0280E000
+		Ram Offset 0x18280f200
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: leftPair
+			Type: ZXing.OneD.RSS.Pair
+			Default Value: 
+		Parameter 1:
+			Name: rightPair
+			Type: ZXing.OneD.RSS.Pair
+			Default Value: 
+	Method: decodePair:
+		Accessibility: Private
+		Return Type: ZXing.OneD.RSS.Pair
+		File Offset 0x0280E080
+		Ram Offset 0x18280f280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: right
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: rowNumber
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: hints
+			Type: System.Collections.Generic.IDictionary`2<ZXing.DecodeHintType, System.Object>
+			Default Value: 
+	Method: decodeDataCharacter:
+		Accessibility: Private
+		Return Type: ZXing.OneD.RSS.DataCharacter
+		File Offset 0x0280E320
+		Ram Offset 0x18280f520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: pattern
+			Type: ZXing.OneD.RSS.FinderPattern
+			Default Value: 
+		Parameter 2:
+			Name: outsideChar
+			Type: System.Boolean
+			Default Value: 
+	Method: findFinderPattern:
+		Accessibility: Private
+		Return Type: System.Int32[]
+		File Offset 0x0280E8E0
+		Ram Offset 0x18280fae0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: rowOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: rightFinderPattern
+			Type: System.Boolean
+			Default Value: 
+	Method: parseFoundFinderPattern:
+		Accessibility: Private
+		Return Type: ZXing.OneD.RSS.FinderPattern
+		File Offset 0x0280EB30
+		Ram Offset 0x18280fd30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: rowNumber
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: right
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: startEnd
+			Type: System.Int32[]
+			Default Value: 
+	Method: adjustOddEvenCounts:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0280EDB0
+		Ram Offset 0x18280ffb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: outsideChar
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: numModules
+			Type: System.Int32
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0280F1A0
+		Ram Offset 0x1828103a0
+		Virtual Method Slot: 65535

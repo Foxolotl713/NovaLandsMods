@@ -1,0 +1,1835 @@
+Type: MuseumDioramaUnlockAction
+
+Method: System.Void MuseumDioramaUnlockAction::Setup(BasePlayer,UnityEngine.Vector2,UnityEngine.GameObject):	Method Body (x86 ASM):
+		0x18071FDD0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x18071FDD5 mov [rsp+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 16 | None ||| N/A | N/A
+		0x18071FDDA push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18071FDDB sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x18071FDDF cmp byte ptr [18329B09Dh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514781 | None ||| N/A | 0
+		0x18071FDE6 mov rsi,r9		; DEBUG: {Register}/RSI {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x18071FDE9 movaps [rsp+20h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 32 | None ||| N/A | N/A
+		0x18071FDEE mov rbx,rdx		; DEBUG: {Register}/RBX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18071FDF1 movq xmm6,r8		; DEBUG: {Register}/XMM6 {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18071FDF6 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18071FDF9 jne short 000000018071FE1Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FDFB lea rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x18071FE02 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FE07 lea rcx,[1830D5240h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493655616 | None ||| N/A | N/A
+		0x18071FE0E call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FE13 mov byte ptr [18329B09Dh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514781 | None ||| N/A | 1
+		0x18071FE1A mov eax,[1832990E4h]		; DEBUG: {Register}/EAX {Memory}/None ||| RIP | 6495506660 | None ||| N/A | N/A
+		0x18071FE20 lea r9,[1832AE560h]		; DEBUG: {Register}/R9 {Memory}/None ||| RIP | 6495593824 | None ||| N/A | N/A
+		0x18071FE27 mov [rdi+40h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RDI | 64 | None ||| N/A | N/A
+		0x18071FE2B test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18071FE2D je short 000000018071FE81h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FE2F lea r8,[rdi+40h]		; DEBUG: {Register}/R8 {Memory}/None ||| RDI | 64 | None ||| N/A | N/A
+		0x18071FE33 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x18071FE37 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x18071FE3E mov edx,r8d		; DEBUG: {Register}/EDX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18071FE41 shr rdx,6		; DEBUG: {Register}/RDX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x18071FE45 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x18071FE49 prefetchw [r9+rdx*8+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x18071FE52 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x18071FE56 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x18071FE60 mov rax,[r9+rdx*8+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x18071FE68 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18071FE6B bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18071FE6F lock cmpxchg [r9+rdx*8+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x18071FE79 jne short 000000018071FE60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FE7B mov eax,[1832990E4h]		; DEBUG: {Register}/EAX {Memory}/None ||| RIP | 6495506660 | None ||| N/A | N/A
+		0x18071FE81 movsd qword ptr [rdi+48h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RDI | 72 | None ||| N/A | N/A
+		0x18071FE86 mov [rdi+50h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RDI | 80 | None ||| N/A | N/A
+		0x18071FE8A test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18071FE8C je short 000000018071FECCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FE8E lea r8,[rdi+50h]		; DEBUG: {Register}/R8 {Memory}/None ||| RDI | 80 | None ||| N/A | N/A
+		0x18071FE92 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x18071FE96 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x18071FE9D mov edx,r8d		; DEBUG: {Register}/EDX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18071FEA0 shr rdx,6		; DEBUG: {Register}/RDX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x18071FEA4 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x18071FEA8 prefetchw [r9+rdx*8+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x18071FEB1 mov rax,[r9+rdx*8+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x18071FEB9 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18071FEBC bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18071FEC0 lock cmpxchg [r9+rdx*8+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x18071FECA jne short 000000018071FEB1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FECC xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18071FECE xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18071FED1 call 00000001807141C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FED6 mov rbx,[rdi+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RDI | 64 | None ||| N/A | N/A
+		0x18071FEDA test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18071FEDD je near ptr 000000018072008Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FEE3 cmp byte ptr [183298856h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 0
+		0x18071FEEA mov byte ptr [rbx+7A8h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 1960 | None ||| N/A | 0
+		0x18071FEF1 jne short 000000018071FF06h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FEF3 lea rcx,[1830F62D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x18071FEFA call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FEFF mov byte ptr [183298856h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 1
+		0x18071FF06 mov rax,[1830F62D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x18071FF0D mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x18071FF14 movss xmm0,dword ptr [rcx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x18071FF18 movss xmm1,dword ptr [rcx+4]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 4 | None ||| N/A | N/A
+		0x18071FF1D mov rcx,[rbx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 1600 | None ||| N/A | N/A
+		0x18071FF24 movss dword ptr [rbx+2B4h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 692 | None ||| N/A | N/A
+		0x18071FF2C movss dword ptr [rbx+2B8h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 696 | None ||| N/A | N/A
+		0x18071FF34 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18071FF37 je near ptr 000000018072008Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FF3D xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18071FF40 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18071FF43 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18071FF45 call 00000001806C5CC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FF4A mov rcx,[rdi+40h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 64 | None ||| N/A | N/A
+		0x18071FF4E test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18071FF51 je near ptr 000000018072008Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FF57 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18071FF5A xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18071FF5C call 000000018044B000h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FF61 mov rbx,[rdi+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RDI | 64 | None ||| N/A | N/A
+		0x18071FF65 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18071FF68 je near ptr 000000018072008Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FF6E cmp byte ptr [183298856h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 0
+		0x18071FF75 mov byte ptr [rbx+7A8h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 1960 | None ||| N/A | 0
+		0x18071FF7C jne short 000000018071FF91h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FF7E lea rcx,[1830F62D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x18071FF85 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FF8A mov byte ptr [183298856h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 1
+		0x18071FF91 mov rax,[1830F62D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x18071FF98 mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x18071FF9F movss xmm0,dword ptr [rcx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x18071FFA3 movss xmm1,dword ptr [rcx+4]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 4 | None ||| N/A | N/A
+		0x18071FFA8 mov rcx,[rbx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 1600 | None ||| N/A | N/A
+		0x18071FFAF movss dword ptr [rbx+2B4h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 692 | None ||| N/A | N/A
+		0x18071FFB7 movss dword ptr [rbx+2B8h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 696 | None ||| N/A | N/A
+		0x18071FFBF test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18071FFC2 je near ptr 000000018072008Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FFC8 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18071FFCB xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18071FFCE xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18071FFD0 call 00000001806C5CC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FFD5 mov rcx,[rdi+40h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 64 | None ||| N/A | N/A
+		0x18071FFD9 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18071FFDC je near ptr 000000018072008Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FFE2 mov rcx,[rcx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 1600 | None ||| N/A | N/A
+		0x18071FFE9 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18071FFEC je near ptr 000000018072008Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FFF2 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18071FFF5 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18071FFF7 call 00000001806C4D30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18071FFFC cmp byte ptr [183298874h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504500 | None ||| N/A | 0
+		0x180720003 jne short 0000000180720018h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720005 lea rcx,[183100600h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493832704 | None ||| N/A | N/A
+		0x18072000C call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720011 mov byte ptr [183298874h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504500 | None ||| N/A | 1
+		0x180720018 mov rax,[183100600h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493832704 | None ||| N/A | N/A
+		0x18072001F mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180720026 mov rcx,[rcx]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180720029 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18072002C je short 000000018072008Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072002E xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180720030 call 00000001803ED270h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720035 mov rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x18072003C call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720041 mov r8,[1830D5240h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493655616 | None ||| N/A | N/A
+		0x180720048 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18072004B mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18072004E mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720051 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720054 call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720059 movss xmm2,dword ptr [rdi+24h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 36 | None ||| N/A | N/A
+		0x18072005E xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180720061 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180720064 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180720067 call 00000001807208F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072006C xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18072006F mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720072 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180720075 mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x18072007A mov rsi,[rsp+48h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x18072007F movaps xmm6,[rsp+20h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180720084 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180720088 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180720089 jmp near ptr 000000018248C0A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072008E call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720093 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void MuseumDioramaUnlockAction::Setup(BasePlayer,UnityEngine.Vector2,UnityEngine.GameObject):
+		End of function at 0x180720094
+		Absolute End is at 0x180720094
+		Identified Jump Destination addresses:
+
+		0x18071FDDA: Saves the content of rdi to the stack
+		0x18071FDDF: Compares {Unknown Global at 0x18329B09D, first ten bytes are [210 238 2 48 208 3 0 98 208 3], or as chars "Òî0Ð bÐ"} and 0
+		0x18071FDE6: Copies {'diorama' (function parameter, type UnityEngine.GameObject)} from r9 into rsi
+		0x18071FDEE: Copies {'player' (function parameter, type BasePlayer)} from rdx into rbx
+		0x18071FDF6: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rcx into rdi
+		0x18071FDF9: Jumps to 0x18071FE1A if {Unknown Global at 0x18329B09D, first ten bytes are [210 238 2 48 208 3 0 98 208 3], or as chars "Òî0Ð bÐ"} != 0
+
+		0x18071FDFB: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x18071FE02: Initializes runtime metadata value System.Action
+		0x18071FE07: Loads the method definition for managed method System.Void MuseumDioramaUnlockAction::FocusStoreStep0() as a constant "FocusStoreStep0"
+		0x18071FE0E: Initializes runtime metadata value System.Void MuseumDioramaUnlockAction::FocusStoreStep0()
+		0x18071FE1A: Loads string "YB" into register rax as constant {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18071FE20: Reads {Unknown Global at 0x1832AE560, first ten bytes are [20 59 240 2 208 31 18 0 228 32], or as chars ";ðÐ ä "} into register r9 as a constant constant6
+		0x18071FE27: [!] Sets the field player (Type BasePlayer) on local {'this' (function parameter, type MuseumDioramaUnlockAction)} to the value stored in {'player' (function parameter, type BasePlayer)}
+		0x18071FE2B: Compares {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} and 0
+		0x18071FE2D: Jumps to 0x18071FE81 if constant5 equals 0
+
+		0x18071FE2F: Loads the pointer to the field player on {'this' (function parameter, type MuseumDioramaUnlockAction)} into register r8
+		0x18071FE3E: Copies {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rdx
+		0x18071FE68: Copies {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} from rax into rcx
+		0x18071FE79: Jumps to 0x18071FE60 if {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} != 0
+
+		0x18071FE7B: Loads string "YB" into register rax as constant {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18071FE86: [!] Sets the field store (Type UnityEngine.GameObject) on local {'this' (function parameter, type MuseumDioramaUnlockAction)} to the value stored in {'diorama' (function parameter, type UnityEngine.GameObject)}
+		0x18071FE8A: Compares {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} and 0
+		0x18071FE8C: Jumps to 0x18071FECC if constant9 equals 0
+
+		0x18071FE8E: Loads the pointer to the field store on {'this' (function parameter, type MuseumDioramaUnlockAction)} into register r8
+		0x18071FE9D: Copies {'constant11' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rdx
+		0x18071FEB9: Copies {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} from rax into rcx
+		0x18071FECA: Jumps to 0x18071FEB1 if {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} != 0
+
+		0x18071FECE: Clears register xmm0, yielding zero-local {'local5' (type System.Int32)}
+		0x18071FED1: [!] Calls static managed method System.Void WorldTimeManager::set_TimeScale(System.Single) with arguments [{'local5' (type System.Int32)}]
+
+		0x18071FED6: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player' (type BasePlayer)}
+
+		0x18071FEDA: [!] Compares {'player' (type BasePlayer)} and 0
+		0x18071FEDD: Jumps to 0x18072008E (which throws a NRE) if player equals 0. Implicitly present in managed code, so ignored here.
+		0x18071FEE3: Compares {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} and 0
+		0x18071FEEA: [!] Sets the field inputEnabled (Type System.Boolean) on local {'player' (type BasePlayer)} to the value stored in False
+		0x18071FEF1: Jumps to 0x18071FF06 if {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} != 0
+
+		0x18071FEF3: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rcx
+		0x18071FEFA: Initializes runtime metadata value UnityEngine.Vector2
+		0x18071FF06: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rax
+		0x18071FF0D: Loads the pointer to the static fields for UnityEngine.Vector2 and stores it in constant17 in register rcx
+		0x18071FF14: [!] Reads the static field UnityEngine.Vector2 UnityEngine.Vector2::zeroVector into new local zeroVector
+		0x18071FF18: [!] Reads the static field  into new local 
+		0x18071FF1D: [!] Reads field hudManager from {'player' (type BasePlayer)} and stores in a new local {'hudManager' (type HUDManager)}
+
+		0x18071FF24: [!] Sets the field currentDirection (Type UnityEngine.Vector2) on local {'player' (type BasePlayer)} to the value stored in {'zeroVector' (type UnityEngine.Vector2)}
+		0x18071FF2C: [!] Sets the field currentDirection.y (Type System.Single) on local {'player' (type BasePlayer)} to the value stored in 
+		0x18071FF34: [!] Compares {'hudManager' (type HUDManager)} and 0
+		0x18071FF37: Jumps to 0x18072008E (which throws a NRE) if hudManager equals 0. Implicitly present in managed code, so ignored here.
+		0x18071FF40: Clears register r8, yielding zero-local {'local10' (type System.Int32)}
+		0x18071FF43: Clears register rdx, yielding zero-local {'local11' (type System.Int32)}
+		0x18071FF45: [!] Calls managed method System.Void HUDManager::EnableMainHUDInput(System.Boolean,System.Boolean) on instance {'hudManager' (type HUDManager)} with arguments [{'local11' (type System.Int32)}, {'local10' (type System.Int32)}]
+
+		0x18071FF4A: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player2' (type BasePlayer)}
+
+		0x18071FF4E: [!] Compares {'player2' (type BasePlayer)} and 0
+		0x18071FF51: Jumps to 0x18072008E (which throws a NRE) if player2 equals 0. Implicitly present in managed code, so ignored here.
+		0x18071FF5A: Clears register rdx, yielding zero-local {'local14' (type System.Int32)}
+		0x18071FF5C: [!] Calls managed method System.Void BasePlayer::CloseInteractingPopup(System.Boolean) on instance {'player2' (type BasePlayer)} with arguments [{'local14' (type System.Int32)}]
+
+		0x18071FF61: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player3' (type BasePlayer)}
+
+		0x18071FF65: [!] Compares {'player3' (type BasePlayer)} and 0
+		0x18071FF68: Jumps to 0x18072008E (which throws a NRE) if player3 equals 0. Implicitly present in managed code, so ignored here.
+		0x18071FF6E: Compares {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} and 0
+		0x18071FF75: [!] Sets the field inputEnabled (Type System.Boolean) on local {'player3' (type BasePlayer)} to the value stored in False
+		0x18071FF7C: Jumps to 0x18071FF91 if {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} != 0
+
+		0x18071FF7E: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rcx
+		0x18071FF85: Initializes runtime metadata value UnityEngine.Vector2
+		0x18071FF91: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rax
+		0x18071FF98: Loads the pointer to the static fields for UnityEngine.Vector2 and stores it in constant25 in register rcx
+		0x18071FF9F: [!] Reads the static field UnityEngine.Vector2 UnityEngine.Vector2::zeroVector into new local zeroVector2
+		0x18071FFA3: [!] Reads the static field  into new local 
+		0x18071FFA8: [!] Reads field hudManager from {'player3' (type BasePlayer)} and stores in a new local {'hudManager2' (type HUDManager)}
+
+		0x18071FFAF: [!] Sets the field currentDirection (Type UnityEngine.Vector2) on local {'player3' (type BasePlayer)} to the value stored in {'zeroVector2' (type UnityEngine.Vector2)}
+		0x18071FFB7: [!] Sets the field currentDirection.y (Type System.Single) on local {'player3' (type BasePlayer)} to the value stored in 
+		0x18071FFBF: [!] Compares {'hudManager2' (type HUDManager)} and 0
+		0x18071FFC2: Jumps to 0x18072008E (which throws a NRE) if hudManager2 equals 0. Implicitly present in managed code, so ignored here.
+		0x18071FFCB: Clears register r8, yielding zero-local {'local19' (type System.Int32)}
+		0x18071FFCE: Clears register rdx, yielding zero-local {'local20' (type System.Int32)}
+		0x18071FFD0: [!] Calls managed method System.Void HUDManager::EnableMainHUDInput(System.Boolean,System.Boolean) on instance {'hudManager2' (type HUDManager)} with arguments [{'local20' (type System.Int32)}, {'local19' (type System.Int32)}]
+
+		0x18071FFD5: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player4' (type BasePlayer)}
+
+		0x18071FFD9: [!] Compares {'player4' (type BasePlayer)} and 0
+		0x18071FFDC: Jumps to 0x18072008E (which throws a NRE) if player4 equals 0. Implicitly present in managed code, so ignored here.
+		0x18071FFE2: [!] Reads field hudManager from {'player4' (type BasePlayer)} and stores in a new local {'hudManager3' (type HUDManager)}
+
+		0x18071FFE9: [!] Compares {'hudManager3' (type HUDManager)} and 0
+		0x18071FFEC: Jumps to 0x18072008E (which throws a NRE) if hudManager3 equals 0. Implicitly present in managed code, so ignored here.
+		0x18071FFF5: Clears register rdx, yielding zero-local {'local24' (type System.Int32)}
+		0x18071FFF7: [!] Calls managed method System.Void HUDManager::SetVisible(System.Boolean) on instance {'hudManager3' (type HUDManager)} with arguments [{'local24' (type System.Int32)}]
+
+		0x18071FFFC: Compares {Unknown Global at 0x183298874, first ten bytes are [137 228 0 0 27 229 0 0 12 166], or as chars "ä  å  ¦"} and 0
+		0x180720003: Jumps to 0x180720018 if {Unknown Global at 0x183298874, first ten bytes are [137 228 0 0 27 229 0 0 12 166], or as chars "ä  å  ¦"} != 0
+
+		0x180720005: Loads the type definition for managed type FinalCamera as a constant "FinalCamera" in rcx
+		0x18072000C: Initializes runtime metadata value FinalCamera
+		0x180720018: Loads the type definition for managed type FinalCamera as a constant "FinalCamera" in rax
+		0x18072001F: Loads the pointer to the static fields for FinalCamera and stores it in constant33 in register rcx
+		0x180720026: [!] Reads the static field FinalCamera FinalCamera::<Instance>k__BackingField into new local Instance
+		0x180720029: [!] Compares {'Instance' (type FinalCamera)} and 0
+		0x18072002C: Jumps to 0x18072008E (which throws a NRE) if Instance equals 0. Implicitly present in managed code, so ignored here.
+		0x180720030: [!] Calls managed method System.Void FinalCamera::ShowCinematicBars() on instance {'Instance' (type FinalCamera)}
+
+		0x180720035: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x18072003C: [!] Allocates an instance of type System.Action and stores it as action in rax.
+
+		0x180720041: Loads the method definition for managed method System.Void MuseumDioramaUnlockAction::FocusStoreStep0() as a constant "FocusStoreStep0"
+		0x18072004B: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rdi into rdx
+		0x18072004E: Copies {'action' (type System.Action)} from rax into rcx
+		0x180720051: Copies {'action' (type System.Action)} from rax into rbx
+		0x180720054: [!] Calls managed method System.Void System.Action::.ctor(System.Object,System.IntPtr) on instance {'action' (type System.Action)} with arguments [{'this' (function parameter, type MuseumDioramaUnlockAction)}, {'FocusStoreStep0' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x180720059: [!] Reads field delayToFocusCameraOnDiorama from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'delayToFocusCameraOnDiorama' (type System.Single)}
+
+		0x180720061: Copies {'action' (type System.Action)} from rbx into rdx
+		0x180720064: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rdi into rcx
+		0x180720067: [!] Calls managed method System.Collections.IEnumerator MuseumDioramaUnlockAction::InvokeRealtimeCoroutine(System.Action,System.Single) on instance {'this' (function parameter, type MuseumDioramaUnlockAction)} with arguments [{'action' (type System.Action)}, {'delayToFocusCameraOnDiorama' (type System.Single)}] and stores the result in {'iEnumerator' (type System.Collections.IEnumerator)}
+
+		0x18072006F: Copies {'iEnumerator' (type System.Collections.IEnumerator)} from rax into rdx
+		0x180720072: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rdi into rcx
+		0x180720075: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant37
+		0x18072007A: Reads unknown value in stack, offset 72 (0x48) and stores the pointer in register rsi as new constant constant38
+		0x18072007F: Reads unknown value in stack, offset 32 (0x20) and stores the pointer in register xmm6 as new constant constant39
+		0x180720089: [!] Calls managed method UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator) on instance {'this' (function parameter, type MuseumDioramaUnlockAction)} with arguments [{'iEnumerator' (type System.Collections.IEnumerator)}] and stores the result in {'coroutine' (type UnityEngine.Coroutine)}
+
+		0x180720089: [!] Returns from the function
+
+		0x18072008E: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: MuseumDioramaUnlockAction
+	System.Void Setup(BasePlayer player, UnityEngine.Vector2 storeFocusPosition, UnityEngine.GameObject diorama)
+		this.player = player
+		this.store = diorama
+		ulong local5 = 0
+
+		WorldTimeManager.TimeScale = local5
+		BasePlayer player = this.player
+		player.inputEnabled = False
+		UnityEngine.Vector2 zeroVector = UnityEngine.Vector2.zeroVector
+		  = .
+		HUDManager hudManager = player.hudManager
+		player.currentDirection = zeroVector
+		player.currentDirection.y = 
+		ulong local10 = 0
+		ulong local11 = 0
+
+		hudManager.EnableMainHUDInput(local11, local10) //(Boolean enable, Boolean ignreRadialMenu)
+		BasePlayer player2 = this.player
+		ulong local14 = 0
+
+		player2.CloseInteractingPopup(local14) //(Boolean forceUpdateInteractingObjects)
+		BasePlayer player3 = this.player
+		player3.inputEnabled = False
+		UnityEngine.Vector2 zeroVector2 = UnityEngine.Vector2.zeroVector
+		  = .
+		HUDManager hudManager2 = player3.hudManager
+		player3.currentDirection = zeroVector2
+		player3.currentDirection.y = 
+		ulong local19 = 0
+		ulong local20 = 0
+
+		hudManager2.EnableMainHUDInput(local20, local19) //(Boolean enable, Boolean ignreRadialMenu)
+		BasePlayer player4 = this.player
+		HUDManager hudManager3 = player4.hudManager
+		ulong local24 = 0
+
+		hudManager3.SetVisible(local24) //(Boolean visible)
+		FinalCamera Instance = FinalCamera.<Instance>k__BackingField
+
+		Instance.ShowCinematicBars()
+		System.Action action = new System.Action()
+
+		action..ctor(this, {'FocusStoreStep0' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+		System.Single delayToFocusCameraOnDiorama = this.delayToFocusCameraOnDiorama
+
+		System.Collections.IEnumerator iEnumerator = this.InvokeRealtimeCoroutine(action, delayToFocusCameraOnDiorama) //(Action callback, Single duration)
+
+		UnityEngine.Coroutine coroutine = base.StartCoroutine(iEnumerator) //(IEnumerator routine)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.ImmediateToFieldAction at (0x18071FEEA) is corrupt (Local player is a function parameter but is missing its parameter definition) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void MuseumDioramaUnlockAction::InitialSetup():	Method Body (x86 ASM):
+		0x1807200A0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1807200A5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807200A6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807200AA xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807200AC xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1807200AF mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807200B2 call 00000001807141C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807200B7 mov rbx,[rdi+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RDI | 64 | None ||| N/A | N/A
+		0x1807200BB test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807200BE je near ptr 00000001807201DBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807200C4 cmp byte ptr [183298856h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 0
+		0x1807200CB mov byte ptr [rbx+7A8h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 1960 | None ||| N/A | 0
+		0x1807200D2 jne short 00000001807200E7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807200D4 lea rcx,[1830F62D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x1807200DB call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807200E0 mov byte ptr [183298856h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 1
+		0x1807200E7 mov rax,[1830F62D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x1807200EE mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1807200F5 movss xmm0,dword ptr [rcx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1807200F9 movss xmm1,dword ptr [rcx+4]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 4 | None ||| N/A | N/A
+		0x1807200FE mov rcx,[rbx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 1600 | None ||| N/A | N/A
+		0x180720105 movss dword ptr [rbx+2B4h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 692 | None ||| N/A | N/A
+		0x18072010D movss dword ptr [rbx+2B8h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 696 | None ||| N/A | N/A
+		0x180720115 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180720118 je near ptr 00000001807201DBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072011E xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180720121 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180720124 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180720126 call 00000001806C5CC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072012B mov rcx,[rdi+40h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 64 | None ||| N/A | N/A
+		0x18072012F test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180720132 je near ptr 00000001807201DBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720138 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18072013B xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18072013D call 000000018044B000h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720142 mov rbx,[rdi+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RDI | 64 | None ||| N/A | N/A
+		0x180720146 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180720149 je near ptr 00000001807201DBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072014F cmp byte ptr [183298856h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 0
+		0x180720156 mov byte ptr [rbx+7A8h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 1960 | None ||| N/A | 0
+		0x18072015D jne short 0000000180720172h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072015F lea rcx,[1830F62D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x180720166 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072016B mov byte ptr [183298856h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 1
+		0x180720172 mov rax,[1830F62D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x180720179 mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180720180 movss xmm0,dword ptr [rcx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180720184 movss xmm1,dword ptr [rcx+4]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 4 | None ||| N/A | N/A
+		0x180720189 mov rcx,[rbx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 1600 | None ||| N/A | N/A
+		0x180720190 movss dword ptr [rbx+2B4h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 692 | None ||| N/A | N/A
+		0x180720198 movss dword ptr [rbx+2B8h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 696 | None ||| N/A | N/A
+		0x1807201A0 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807201A3 je short 00000001807201DBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807201A5 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1807201A8 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807201AB xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807201AD call 00000001806C5CC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807201B2 mov rcx,[rdi+40h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 64 | None ||| N/A | N/A
+		0x1807201B6 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807201B9 je short 00000001807201DBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807201BB mov rcx,[rcx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 1600 | None ||| N/A | N/A
+		0x1807201C2 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807201C5 je short 00000001807201DBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807201C7 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807201CA xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807201CC mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1807201D1 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807201D5 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807201D6 jmp near ptr 00000001806C4D30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807201DB call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807201E0 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void MuseumDioramaUnlockAction::InitialSetup():
+		End of function at 0x1807201E1
+		Absolute End is at 0x1807201E1
+		Identified Jump Destination addresses:
+
+		0x1807200A5: Saves the content of rdi to the stack
+		0x1807200AC: Clears register xmm0, yielding zero-local {'local2' (type System.Int32)}
+		0x1807200AF: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rcx into rdi
+		0x1807200B2: [!] Calls static managed method System.Void WorldTimeManager::set_TimeScale(System.Single) with arguments [{'local2' (type System.Int32)}]
+
+		0x1807200B7: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player' (type BasePlayer)}
+
+		0x1807200BB: [!] Compares {'player' (type BasePlayer)} and 0
+		0x1807200BE: Jumps to 0x1807201DB (which throws a NRE) if player equals 0. Implicitly present in managed code, so ignored here.
+		0x1807200C4: Compares {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} and 0
+		0x1807200CB: [!] Sets the field inputEnabled (Type System.Boolean) on local {'player' (type BasePlayer)} to the value stored in False
+		0x1807200D2: Jumps to 0x1807200E7 if {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} != 0
+
+		0x1807200D4: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rcx
+		0x1807200DB: Initializes runtime metadata value UnityEngine.Vector2
+		0x1807200E7: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rax
+		0x1807200EE: Loads the pointer to the static fields for UnityEngine.Vector2 and stores it in constant6 in register rcx
+		0x1807200F5: [!] Reads the static field UnityEngine.Vector2 UnityEngine.Vector2::zeroVector into new local zeroVector
+		0x1807200F9: [!] Reads the static field  into new local 
+		0x1807200FE: [!] Reads field hudManager from {'player' (type BasePlayer)} and stores in a new local {'hudManager' (type HUDManager)}
+
+		0x180720105: [!] Sets the field currentDirection (Type UnityEngine.Vector2) on local {'player' (type BasePlayer)} to the value stored in {'zeroVector' (type UnityEngine.Vector2)}
+		0x18072010D: [!] Sets the field currentDirection.y (Type System.Single) on local {'player' (type BasePlayer)} to the value stored in 
+		0x180720115: [!] Compares {'hudManager' (type HUDManager)} and 0
+		0x180720118: Jumps to 0x1807201DB (which throws a NRE) if hudManager equals 0. Implicitly present in managed code, so ignored here.
+		0x180720121: Clears register r8, yielding zero-local {'local7' (type System.Int32)}
+		0x180720124: Clears register rdx, yielding zero-local {'local8' (type System.Int32)}
+		0x180720126: [!] Calls managed method System.Void HUDManager::EnableMainHUDInput(System.Boolean,System.Boolean) on instance {'hudManager' (type HUDManager)} with arguments [{'local8' (type System.Int32)}, {'local7' (type System.Int32)}]
+
+		0x18072012B: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player2' (type BasePlayer)}
+
+		0x18072012F: [!] Compares {'player2' (type BasePlayer)} and 0
+		0x180720132: Jumps to 0x1807201DB (which throws a NRE) if player2 equals 0. Implicitly present in managed code, so ignored here.
+		0x18072013B: Clears register rdx, yielding zero-local {'local11' (type System.Int32)}
+		0x18072013D: [!] Calls managed method System.Void BasePlayer::CloseInteractingPopup(System.Boolean) on instance {'player2' (type BasePlayer)} with arguments [{'local11' (type System.Int32)}]
+
+		0x180720142: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player3' (type BasePlayer)}
+
+		0x180720146: [!] Compares {'player3' (type BasePlayer)} and 0
+		0x180720149: Jumps to 0x1807201DB (which throws a NRE) if player3 equals 0. Implicitly present in managed code, so ignored here.
+		0x18072014F: Compares {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} and 0
+		0x180720156: [!] Sets the field inputEnabled (Type System.Boolean) on local {'player3' (type BasePlayer)} to the value stored in False
+		0x18072015D: Jumps to 0x180720172 if {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} != 0
+
+		0x18072015F: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rcx
+		0x180720166: Initializes runtime metadata value UnityEngine.Vector2
+		0x180720172: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rax
+		0x180720179: Loads the pointer to the static fields for UnityEngine.Vector2 and stores it in constant14 in register rcx
+		0x180720180: [!] Reads the static field UnityEngine.Vector2 UnityEngine.Vector2::zeroVector into new local zeroVector2
+		0x180720184: [!] Reads the static field  into new local 
+		0x180720189: [!] Reads field hudManager from {'player3' (type BasePlayer)} and stores in a new local {'hudManager2' (type HUDManager)}
+
+		0x180720190: [!] Sets the field currentDirection (Type UnityEngine.Vector2) on local {'player3' (type BasePlayer)} to the value stored in {'zeroVector2' (type UnityEngine.Vector2)}
+		0x180720198: [!] Sets the field currentDirection.y (Type System.Single) on local {'player3' (type BasePlayer)} to the value stored in 
+		0x1807201A0: [!] Compares {'hudManager2' (type HUDManager)} and 0
+		0x1807201A3: Jumps to 0x1807201DB (which throws a NRE) if hudManager2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807201A8: Clears register r8, yielding zero-local {'local16' (type System.Int32)}
+		0x1807201AB: Clears register rdx, yielding zero-local {'local17' (type System.Int32)}
+		0x1807201AD: [!] Calls managed method System.Void HUDManager::EnableMainHUDInput(System.Boolean,System.Boolean) on instance {'hudManager2' (type HUDManager)} with arguments [{'local17' (type System.Int32)}, {'local16' (type System.Int32)}]
+
+		0x1807201B2: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player4' (type BasePlayer)}
+
+		0x1807201B6: [!] Compares {'player4' (type BasePlayer)} and 0
+		0x1807201B9: Jumps to 0x1807201DB (which throws a NRE) if player4 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807201BB: [!] Reads field hudManager from {'player4' (type BasePlayer)} and stores in a new local {'hudManager3' (type HUDManager)}
+
+		0x1807201C2: [!] Compares {'hudManager3' (type HUDManager)} and 0
+		0x1807201C5: Jumps to 0x1807201DB (which throws a NRE) if hudManager3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807201CA: Clears register rdx, yielding zero-local {'local21' (type System.Int32)}
+		0x1807201CC: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant18
+		0x1807201D6: [!] Calls managed method System.Void HUDManager::SetVisible(System.Boolean) on instance {'hudManager3' (type HUDManager)} with arguments [{'local21' (type System.Int32)}]
+
+		0x1807201D6: [!] Returns from the function
+
+		0x1807201DB: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: MuseumDioramaUnlockAction
+	System.Void InitialSetup()
+		ulong local2 = 0
+
+		WorldTimeManager.TimeScale = local2
+		BasePlayer player = this.player
+		player.inputEnabled = False
+		UnityEngine.Vector2 zeroVector = UnityEngine.Vector2.zeroVector
+		  = .
+		HUDManager hudManager = player.hudManager
+		player.currentDirection = zeroVector
+		player.currentDirection.y = 
+		ulong local7 = 0
+		ulong local8 = 0
+
+		hudManager.EnableMainHUDInput(local8, local7) //(Boolean enable, Boolean ignreRadialMenu)
+		BasePlayer player2 = this.player
+		ulong local11 = 0
+
+		player2.CloseInteractingPopup(local11) //(Boolean forceUpdateInteractingObjects)
+		BasePlayer player3 = this.player
+		player3.inputEnabled = False
+		UnityEngine.Vector2 zeroVector2 = UnityEngine.Vector2.zeroVector
+		  = .
+		HUDManager hudManager2 = player3.hudManager
+		player3.currentDirection = zeroVector2
+		player3.currentDirection.y = 
+		ulong local16 = 0
+		ulong local17 = 0
+
+		hudManager2.EnableMainHUDInput(local17, local16) //(Boolean enable, Boolean ignreRadialMenu)
+		BasePlayer player4 = this.player
+		HUDManager hudManager3 = player4.hudManager
+		ulong local21 = 0
+
+		hudManager3.SetVisible(local21) //(Boolean visible)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.StaticFieldToRegAction at (0x1807200F9) is corrupt (Couldn't identify the field being read (or its type).) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void MuseumDioramaUnlockAction::FocusStoreStep0():	Method Body (x86 ASM):
+		0x1807201F0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807201F2 sub rsp,50h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 80
+		0x1807201F6 cmp byte ptr [18329B09Eh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514782 | None ||| N/A | 0
+		0x1807201FD mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180720200 jne short 0000000180720221h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720202 lea rcx,[1830D5230h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493655600 | None ||| N/A | N/A
+		0x180720209 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072020E lea rcx,[1830FBD78h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814136 | None ||| N/A | N/A
+		0x180720215 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072021A mov byte ptr [18329B09Eh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514782 | None ||| N/A | 1
+		0x180720221 mov rax,[rbx+40h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 64 | None ||| N/A | N/A
+		0x180720225 mov [rsp+68h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 104 | None ||| N/A | N/A
+		0x18072022A mov [rsp+70h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 112 | None ||| N/A | N/A
+		0x18072022F movaps [rsp+40h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 64 | None ||| N/A | N/A
+		0x180720234 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720237 je near ptr 00000001807202CAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072023D movss xmm0,dword ptr [rbx+48h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 72 | None ||| N/A | N/A
+		0x180720242 movss xmm1,dword ptr [rbx+4Ch]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBX | 76 | None ||| N/A | N/A
+		0x180720247 mov rcx,[1830FBD78h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814136 | None ||| N/A | N/A
+		0x18072024E mov rdi,[rax+518h]		; DEBUG: {Register}/RDI {Memory}/None ||| RAX | 1304 | None ||| N/A | N/A
+		0x180720255 movss xmm6,dword ptr [rbx+28h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x18072025A movss dword ptr [rsp+60h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 96 | None ||| N/A | N/A
+		0x180720260 movss dword ptr [rsp+64h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 100 | None ||| N/A | N/A
+		0x180720266 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072026B mov r8,[1830D5230h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493655600 | None ||| N/A | N/A
+		0x180720272 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180720275 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180720278 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18072027B mov rsi,rax		; DEBUG: {Register}/RSI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18072027E call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720283 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180720286 je short 00000001807202CAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720288 mov edx,[rbx+20h]		; DEBUG: {Register}/EDX {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x18072028B mov r9,rsi		; DEBUG: {Register}/R9 {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x18072028E mov qword ptr [rsp+38h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 56 | None ||| N/A | 0
+		0x180720297 movaps xmm2,xmm6		; DEBUG: {Register}/XMM2 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x18072029A mov byte ptr [rsp+30h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RSP | 48 | None ||| N/A | 1
+		0x18072029F mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1807202A2 mov [rsp+28h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RSP | 40 | None ||| N/A | N/A
+		0x1807202A6 mov rdx,[rsp+60h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x1807202AB mov byte ptr [rsp+20h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RSP | 32 | None ||| N/A | 1
+		0x1807202B0 call 00000001803F1A10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807202B5 movaps xmm6,[rsp+40h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1807202BA mov rdi,[rsp+70h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x1807202BF mov rsi,[rsp+68h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 104 | None ||| N/A | N/A
+		0x1807202C4 add rsp,50h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 80
+		0x1807202C8 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807202C9 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807202CA call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807202CF int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void MuseumDioramaUnlockAction::FocusStoreStep0():
+		End of function at 0x1807202D0
+		Absolute End is at 0x1807202D0
+		Identified Jump Destination addresses:
+
+		0x1807201F0: Saves the content of rbx to the stack
+		0x1807201F6: Compares {Unknown Global at 0x18329B09E, first ten bytes are [238 2 48 208 3 0 98 208 3 0], or as chars "î0Ð bÐ "} and 0
+		0x1807201FD: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rcx into rbx
+		0x180720200: Jumps to 0x180720221 if {Unknown Global at 0x18329B09E, first ten bytes are [238 2 48 208 3 0 98 208 3 0], or as chars "î0Ð bÐ "} != 0
+
+		0x180720202: Loads the method definition for managed method System.Void MuseumDioramaUnlockAction::OnCameraFocusDiorama() as a constant "OnCameraFocusDiorama"
+		0x180720209: Initializes runtime metadata value System.Void MuseumDioramaUnlockAction::OnCameraFocusDiorama()
+		0x18072020E: Loads the type definition for managed type DG.Tweening.TweenCallback as a constant "TweenCallback" in rcx
+		0x180720215: Initializes runtime metadata value DG.Tweening.TweenCallback
+		0x180720221: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player' (type BasePlayer)}
+
+		0x180720234: [!] Compares {'player' (type BasePlayer)} and 0
+		0x180720237: Jumps to 0x1807202CA (which throws a NRE) if player equals 0. Implicitly present in managed code, so ignored here.
+		0x18072023D: [!] Reads field storeFocusPosition from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'storeFocusPosition' (type UnityEngine.Vector2)}
+
+		0x180720242: [!] Reads field storeFocusPosition.y from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'single' (type System.Single)}
+
+		0x180720247: Loads the type definition for managed type DG.Tweening.TweenCallback as a constant "TweenCallback" in rcx
+		0x18072024E: [!] Reads field playerCamera from {'player' (type BasePlayer)} and stores in a new local {'playerCamera' (type PlayerCamera)}
+
+		0x180720255: [!] Reads field focusDioramaCameraSpeed from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'focusDioramaCameraSpeed' (type System.Single)}
+
+		0x18072025A: Moves storeFocusPosition (type UnityEngine.Vector2) from register xmm0 to the stack at offset 96 (0x60)
+		0x180720260: Moves single (type System.Single) from register xmm1 to the stack at offset 100 (0x64)
+		0x180720266: [!] Allocates an instance of type DG.Tweening.TweenCallback and stores it as tweenCallback in rax.
+
+		0x18072026B: Loads the method definition for managed method System.Void MuseumDioramaUnlockAction::OnCameraFocusDiorama() as a constant "OnCameraFocusDiorama"
+		0x180720275: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rbx into rdx
+		0x180720278: Copies {'tweenCallback' (type DG.Tweening.TweenCallback)} from rax into rcx
+		0x18072027B: Copies {'tweenCallback' (type DG.Tweening.TweenCallback)} from rax into rsi
+		0x18072027E: [!] Calls managed method System.Void DG.Tweening.TweenCallback::.ctor(System.Object,System.IntPtr) on instance {'tweenCallback' (type DG.Tweening.TweenCallback)} with arguments [{'this' (function parameter, type MuseumDioramaUnlockAction)}, {'OnCameraFocusDiorama' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x180720283: [!] Compares {'playerCamera' (type PlayerCamera)} and 0
+		0x180720286: Jumps to 0x1807202CA (which throws a NRE) if playerCamera equals 0. Implicitly present in managed code, so ignored here.
+		0x180720288: [!] Reads field cameraMovementEaseType from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'cameraMovementEaseType' (type DG.Tweening.Ease)}
+
+		0x18072028B: Copies {'tweenCallback' (type DG.Tweening.TweenCallback)} from rsi into r9
+		0x18072028E: Moves 0 (immediate ulong value) to the stack at offset 56 as a new local local9
+		0x180720297: Copies {'focusDioramaCameraSpeed' (type System.Single)} from xmm6 into xmm2
+		0x18072029A: Moves 1 (immediate ulong value) to the stack at offset 48 as a new local local10
+		0x18072029F: Copies {'playerCamera' (type PlayerCamera)} from rdi into rcx
+		0x1807202A2: Moves cameraMovementEaseType (type DG.Tweening.Ease) from register rdx to the stack at offset 40 (0x28)
+		0x1807202A6: Reads local {'storeFocusPosition' (type UnityEngine.Vector2)} from stack offset 96 (0x60) into register rdx
+		0x1807202AB: Moves 1 (immediate ulong value) to the stack at offset 32 as a new local local11
+		0x1807202B0: [!] Calls managed method System.Void PlayerCamera::FocusOnPosition(UnityEngine.Vector2,System.Single,DG.Tweening.TweenCallback,System.Boolean,DG.Tweening.Ease,System.Boolean) on instance {'playerCamera' (type PlayerCamera)} with arguments [{'storeFocusPosition' (type UnityEngine.Vector2)}, {'focusDioramaCameraSpeed' (type System.Single)}, {'tweenCallback' (type DG.Tweening.TweenCallback)}, {'local11' (type System.UInt64)}, {'cameraMovementEaseType' (type DG.Tweening.Ease)}, {'local10' (type System.UInt64)}]
+
+		0x1807202B5: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register xmm6 as new constant constant9
+		0x1807202BA: Reads unknown value in stack, offset 112 (0x70) and stores the pointer in register rdi as new constant constant10
+		0x1807202BF: Reads unknown value in stack, offset 104 (0x68) and stores the pointer in register rsi as new constant constant11
+		0x1807202C9: [!] Returns from the function
+
+		0x1807202CA: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: MuseumDioramaUnlockAction
+	System.Void FocusStoreStep0()
+		BasePlayer player = this.player
+		UnityEngine.Vector2 storeFocusPosition = this.storeFocusPosition
+		System.Single single = this.storeFocusPosition.y
+		PlayerCamera playerCamera = player.playerCamera
+		System.Single focusDioramaCameraSpeed = this.focusDioramaCameraSpeed
+		DG.Tweening.TweenCallback tweenCallback = new DG.Tweening.TweenCallback()
+
+		tweenCallback..ctor(this, {'OnCameraFocusDiorama' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+		DG.Tweening.Ease cameraMovementEaseType = this.cameraMovementEaseType
+
+		playerCamera.FocusOnPosition(storeFocusPosition, focusDioramaCameraSpeed, tweenCallback, local11, cameraMovementEaseType, local10) //(Vector2 position, Single speed, TweenCallback onComplete, Boolean unscaledTime, Ease easeType, Boolean killCurrentTween)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld BasePlayer MuseumDioramaUnlockAction::player
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld UnityEngine.Vector2 MuseumDioramaUnlockAction::storeFocusPosition
+	IL_000d: stloc.1
+	IL_000e: ldarg.0
+	IL_000f: ldfld UnityEngine.Vector2 MuseumDioramaUnlockAction::storeFocusPosition
+	IL_0014: ldfld System.Single UnityEngine.Vector2::y
+	IL_0019: stloc.2
+	IL_001a: ldloc.0
+	IL_001b: ldfld PlayerCamera BasePlayer::playerCamera
+	IL_0020: stloc.3
+	IL_0021: ldarg.0
+	IL_0022: ldfld System.Single MuseumDioramaUnlockAction::focusDioramaCameraSpeed
+	IL_0027: stloc.s V_4
+	IL_0029: ldarg.0
+	IL_002a: ldftn System.Void MuseumDioramaUnlockAction::OnCameraFocusDiorama()
+	IL_0030: newobj System.Void DG.Tweening.TweenCallback::.ctor(System.Object,System.IntPtr)
+	IL_0035: stloc.s V_5
+	IL_0037: ldarg.0
+	IL_0038: ldfld DG.Tweening.Ease MuseumDioramaUnlockAction::cameraMovementEaseType
+	IL_003d: stloc.s V_6
+	IL_003f: ldloc.3
+	IL_0040: ldloc.1
+	IL_0041: ldloc.s V_4
+	IL_0043: ldloc.s V_5
+	IL_0045: ldloc.s V_9
+	IL_0047: ldloc.s V_6
+	IL_0049: ldloc.s V_8
+	IL_004b: call System.Void PlayerCamera::FocusOnPosition(UnityEngine.Vector2,System.Single,DG.Tweening.TweenCallback,System.Boolean,DG.Tweening.Ease,System.Boolean)
+	IL_0050: ret
+	IL_0051: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0056: throw
+	
+
+Method: System.Void MuseumDioramaUnlockAction::OnCameraFocusDiorama():	Method Body (x86 ASM):
+		0x1807202D0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1807202D5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807202D6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807202DA cmp byte ptr [18329B09Fh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514783 | None ||| N/A | 0
+		0x1807202E1 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807202E4 jne short 0000000180720305h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807202E6 lea rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x1807202ED call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807202F2 lea rcx,[1830D5220h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493655584 | None ||| N/A | N/A
+		0x1807202F9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807202FE mov byte ptr [18329B09Fh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514783 | None ||| N/A | 1
+		0x180720305 mov rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x18072030C call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720311 mov r8,[1830D5220h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493655584 | None ||| N/A | N/A
+		0x180720318 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18072031B mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18072031E mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720321 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720324 call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720329 movss xmm2,dword ptr [rdi+2Ch]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 44 | None ||| N/A | N/A
+		0x18072032E xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180720331 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180720334 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180720337 call 00000001807208F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072033C xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18072033F mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720342 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180720345 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x18072034A add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18072034E pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18072034F jmp near ptr 000000018248C0A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720354 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void MuseumDioramaUnlockAction::OnCameraFocusDiorama():
+		End of function at 0x180720355
+		Absolute End is at 0x180720355
+		Identified Jump Destination addresses:
+
+		0x1807202D5: Saves the content of rdi to the stack
+		0x1807202DA: Compares {Unknown Global at 0x18329B09F, first ten bytes are [2 48 208 3 0 98 208 3 0 196], or as chars "0Ð bÐ Ä"} and 0
+		0x1807202E1: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rcx into rdi
+		0x1807202E4: Jumps to 0x180720305 if {Unknown Global at 0x18329B09F, first ten bytes are [2 48 208 3 0 98 208 3 0 196], or as chars "0Ð bÐ Ä"} != 0
+
+		0x1807202E6: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x1807202ED: Initializes runtime metadata value System.Action
+		0x1807202F2: Loads the method definition for managed method System.Void MuseumDioramaUnlockAction::EnableDiorama() as a constant "EnableDiorama"
+		0x1807202F9: Initializes runtime metadata value System.Void MuseumDioramaUnlockAction::EnableDiorama()
+		0x180720305: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x18072030C: [!] Allocates an instance of type System.Action and stores it as action in rax.
+
+		0x180720311: Loads the method definition for managed method System.Void MuseumDioramaUnlockAction::EnableDiorama() as a constant "EnableDiorama"
+		0x18072031B: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rdi into rdx
+		0x18072031E: Copies {'action' (type System.Action)} from rax into rcx
+		0x180720321: Copies {'action' (type System.Action)} from rax into rbx
+		0x180720324: [!] Calls managed method System.Void System.Action::.ctor(System.Object,System.IntPtr) on instance {'action' (type System.Action)} with arguments [{'this' (function parameter, type MuseumDioramaUnlockAction)}, {'EnableDiorama' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x180720329: [!] Reads field delayToEnableDiorama from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'delayToEnableDiorama' (type System.Single)}
+
+		0x180720331: Copies {'action' (type System.Action)} from rbx into rdx
+		0x180720334: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rdi into rcx
+		0x180720337: [!] Calls managed method System.Collections.IEnumerator MuseumDioramaUnlockAction::InvokeRealtimeCoroutine(System.Action,System.Single) on instance {'this' (function parameter, type MuseumDioramaUnlockAction)} with arguments [{'action' (type System.Action)}, {'delayToEnableDiorama' (type System.Single)}] and stores the result in {'iEnumerator' (type System.Collections.IEnumerator)}
+
+		0x18072033F: Copies {'iEnumerator' (type System.Collections.IEnumerator)} from rax into rdx
+		0x180720342: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rdi into rcx
+		0x180720345: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant7
+		0x18072034F: [!] Calls managed method UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator) on instance {'this' (function parameter, type MuseumDioramaUnlockAction)} with arguments [{'iEnumerator' (type System.Collections.IEnumerator)}] and stores the result in {'coroutine' (type UnityEngine.Coroutine)}
+
+		0x18072034F: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: MuseumDioramaUnlockAction
+	System.Void OnCameraFocusDiorama()
+		System.Action action = new System.Action()
+
+		action..ctor(this, {'EnableDiorama' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+		System.Single delayToEnableDiorama = this.delayToEnableDiorama
+
+		System.Collections.IEnumerator iEnumerator = this.InvokeRealtimeCoroutine(action, delayToEnableDiorama) //(Action callback, Single duration)
+
+		UnityEngine.Coroutine coroutine = base.StartCoroutine(iEnumerator) //(IEnumerator routine)
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldftn System.Void MuseumDioramaUnlockAction::EnableDiorama()
+	IL_0007: newobj System.Void System.Action::.ctor(System.Object,System.IntPtr)
+	IL_000c: stloc.0
+	IL_000d: ldarg.0
+	IL_000e: ldfld System.Single MuseumDioramaUnlockAction::delayToEnableDiorama
+	IL_0013: stloc.1
+	IL_0014: ldarg.0
+	IL_0015: ldloc.0
+	IL_0016: ldloc.1
+	IL_0017: call System.Collections.IEnumerator MuseumDioramaUnlockAction::InvokeRealtimeCoroutine(System.Action,System.Single)
+	IL_001c: stloc.2
+	IL_001d: ldarg.0
+	IL_001e: ldloc.2
+	IL_001f: call UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
+	IL_0024: stloc.3
+	IL_0025: ret
+	
+
+Method: System.Void MuseumDioramaUnlockAction::EnableDiorama():	Method Body (x86 ASM):
+		0x180720360 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180720362 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180720366 cmp byte ptr [18329B0A0h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514784 | None ||| N/A | 0
+		0x18072036D mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180720370 jne short 000000018072039Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720372 lea rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x180720379 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072037E lea rcx,[1830D5218h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493655576 | None ||| N/A | N/A
+		0x180720385 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072038A lea rcx,[1830D5208h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493655560 | None ||| N/A | N/A
+		0x180720391 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720396 mov byte ptr [18329B0A0h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514784 | None ||| N/A | 1
+		0x18072039D mov rcx,[rdi+50h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 80 | None ||| N/A | N/A
+		0x1807203A1 mov [rsp+40h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 64 | None ||| N/A | N/A
+		0x1807203A6 mov [rsp+48h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 72 | None ||| N/A | N/A
+		0x1807203AB test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807203AE je near ptr 0000000180720489h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807203B4 mov rdx,[1830D5218h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493655576 | None ||| N/A | N/A
+		0x1807203BB call 0000000180D6BC30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807203C0 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807203C3 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807203C6 je near ptr 0000000180720489h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807203CC cmp byte ptr [18329B061h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514721 | None ||| N/A | 0
+		0x1807203D3 jne short 00000001807203E8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807203D5 lea rcx,[1830D59A8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493657512 | None ||| N/A | N/A
+		0x1807203DC call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807203E1 mov byte ptr [18329B061h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514721 | None ||| N/A | 1
+		0x1807203E8 mov rsi,[rbx+30h]		; DEBUG: {Register}/RSI {Memory}/None ||| RBX | 48 | None ||| N/A | N/A
+		0x1807203EC lea rcx,[rbx+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1807203F0 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807203F2 call 0000000181899170h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807203F7 mov rcx,[1830D59A8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493657512 | None ||| N/A | N/A
+		0x1807203FE xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180720401 mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720404 call 00000001816C95B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720409 test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x18072040C je short 0000000180720489h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072040E movss xmm3,dword ptr [182E6EDDCh]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RIP | 6491139548 | None ||| N/A | N/A
+		0x180720416 mov r8d,0FFFFFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 4294967295
+		0x18072041C mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18072041F mov qword ptr [rsp+20h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 32 | None ||| N/A | 0
+		0x180720428 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x18072042B call 00000001824409B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720430 mov rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x180720437 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072043C mov r8,[1830D5208h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493655560 | None ||| N/A | N/A
+		0x180720443 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180720446 mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180720449 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18072044C mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18072044F call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720454 movss xmm2,dword ptr [rdi+34h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 52 | None ||| N/A | N/A
+		0x180720459 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18072045C addss xmm2,dword ptr [rdi+30h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 48 | None ||| N/A | N/A
+		0x180720461 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180720464 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180720467 call 00000001807208F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072046C xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18072046F mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720472 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180720475 mov rsi,[rsp+48h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x18072047A mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x18072047F add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180720483 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180720484 jmp near ptr 000000018248C0A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720489 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072048E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void MuseumDioramaUnlockAction::EnableDiorama():
+		End of function at 0x18072048F
+		Absolute End is at 0x18072048F
+		Identified Jump Destination addresses:
+
+		0x180720360: Saves the content of rdi to the stack
+		0x180720366: Compares {Unknown Global at 0x18329B0A0, first ten bytes are [48 208 3 0 98 208 3 0 196 174], or as chars "0Ð bÐ Ä®"} and 0
+		0x18072036D: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rcx into rdi
+		0x180720370: Jumps to 0x18072039D if {Unknown Global at 0x18329B0A0, first ten bytes are [48 208 3 0 98 208 3 0 196 174], or as chars "0Ð bÐ Ä®"} != 0
+
+		0x180720372: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x180720379: Initializes runtime metadata value System.Action
+		0x18072037E: Loads the global generic method reference for method T UnityEngine.GameObject::GetComponent<MuseumDiorama>() on type UnityEngine.GameObject and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180720385: Initializes runtime metadata value 
+		0x18072038A: Loads the method definition for managed method System.Void MuseumDioramaUnlockAction::FocusPlayerStep2() as a constant "FocusPlayerStep2"
+		0x180720391: Initializes runtime metadata value System.Void MuseumDioramaUnlockAction::FocusPlayerStep2()
+		0x18072039D: [!] Reads field store from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'store' (type UnityEngine.GameObject)}
+
+		0x1807203AB: [!] Compares {'store' (type UnityEngine.GameObject)} and 0
+		0x1807203AE: Jumps to 0x180720489 (which throws a NRE) if store equals 0. Implicitly present in managed code, so ignored here.
+		0x1807203B4: Loads the global generic method reference for method T UnityEngine.GameObject::GetComponent<MuseumDiorama>() on type UnityEngine.GameObject and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x1807203BB: [!] Calls managed method T UnityEngine.GameObject::GetComponent<MuseumDiorama>() on instance {'store' (type UnityEngine.GameObject)} and stores the result in {'component' (type MuseumDiorama)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x1807203C0: Copies {'component' (type MuseumDiorama)} from rax into rbx
+		0x1807203C3: [!] Compares {'component' (type MuseumDiorama)} and 0
+		0x1807203C6: Jumps to 0x180720489 (which throws a NRE) if component equals 0. Implicitly present in managed code, so ignored here.
+		0x1807203CC: Compares {Unknown Global at 0x18329B061, first ten bytes are [102 239 2 192 204 3 0 116 205 3], or as chars "fïÀÌ tÍ"} and 0
+		0x1807203D3: Jumps to 0x1807203E8 if {Unknown Global at 0x18329B061, first ten bytes are [102 239 2 192 204 3 0 116 205 3], or as chars "fïÀÌ tÍ"} != 0
+
+		0x1807203D5: Loads the string literal "Step" as a constant "constant11" in rcx
+		0x1807203DC: Initializes runtime metadata value Step
+		0x1807203E8: [!] Reads field dioramaAnimator from {'component' (type MuseumDiorama)} and stores in a new local {'dioramaAnimator' (type UnityEngine.Animator)}
+
+		0x1807203EC: Loads the pointer to the field numberOfSteps on {'component' (type MuseumDiorama)} into register rcx
+		0x1807203F2: [!] Calls managed method System.String System.Int32::ToString() on instance  and stores the result in {'string' (type System.String)}
+
+		0x1807203F7: Loads the string literal "Step" as a constant "constant13" in rcx
+		0x180720401: Copies {'string' (type System.String)} from rax into rdx
+		0x180720404: [!] Calls static managed method System.String System.String::Concat(System.String,System.String) with arguments ["Step", {'string' (type System.String)}] and stores the result in {'string2' (type System.String)}
+
+		0x180720409: [!] Compares {'dioramaAnimator' (type UnityEngine.Animator)} and 0
+		0x18072040C: Jumps to 0x180720489 (which throws a NRE) if dioramaAnimator equals 0. Implicitly present in managed code, so ignored here.
+		0x18072040E: Reads {Unknown Global at 0x182E6EDDC, first ten bytes are [0 0 128 255 255 255 255 255 255 255], or as chars "  ÿÿÿÿÿÿÿ"} into register xmm3 as a constant constant15
+		0x180720416: [!] Writes the constant 0xFFFFFFFF into operand -1 (type UInt64) in register r8
+		0x18072041C: Copies {'string2' (type System.String)} from rax into rdx
+		0x18072041F: Moves 0 (immediate ulong value) to the stack at offset 32 as a new local local8
+		0x180720428: Copies {'dioramaAnimator' (type UnityEngine.Animator)} from rsi into rcx
+		0x18072042B: [!] Calls managed method System.Void UnityEngine.Animator::Play(System.String,System.Int32,System.Single) on instance {'dioramaAnimator' (type UnityEngine.Animator)} with arguments [{'string2' (type System.String)}, -1, -Infinity]
+
+		0x180720430: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x180720437: [!] Allocates an instance of type System.Action and stores it as action in rax.
+
+		0x18072043C: Loads the method definition for managed method System.Void MuseumDioramaUnlockAction::FocusPlayerStep2() as a constant "FocusPlayerStep2"
+		0x180720446: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rdi into rdx
+		0x180720449: Copies {'action' (type System.Action)} from rax into rcx
+		0x18072044C: Copies {'action' (type System.Action)} from rax into rbx
+		0x18072044F: [!] Calls managed method System.Void System.Action::.ctor(System.Object,System.IntPtr) on instance {'action' (type System.Action)} with arguments [{'this' (function parameter, type MuseumDioramaUnlockAction)}, {'FocusPlayerStep2' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x180720454: [!] Reads field delayToFocusPlayerAgain from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'delayToFocusPlayerAgain' (type System.Single)}
+
+		0x180720461: Copies {'action' (type System.Action)} from rbx into rdx
+		0x180720464: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rdi into rcx
+		0x180720467: [!] Calls managed method System.Collections.IEnumerator MuseumDioramaUnlockAction::InvokeRealtimeCoroutine(System.Action,System.Single) on instance {'this' (function parameter, type MuseumDioramaUnlockAction)} with arguments [{'action' (type System.Action)}, {'delayToFocusPlayerAgain' (type System.Single)}] and stores the result in {'iEnumerator' (type System.Collections.IEnumerator)}
+
+		0x18072046F: Copies {'iEnumerator' (type System.Collections.IEnumerator)} from rax into rdx
+		0x180720472: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rdi into rcx
+		0x180720475: Reads unknown value in stack, offset 72 (0x48) and stores the pointer in register rsi as new constant constant19
+		0x18072047A: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant20
+		0x180720484: [!] Calls managed method UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator) on instance {'this' (function parameter, type MuseumDioramaUnlockAction)} with arguments [{'iEnumerator' (type System.Collections.IEnumerator)}] and stores the result in {'coroutine' (type UnityEngine.Coroutine)}
+
+		0x180720484: [!] Returns from the function
+
+		0x180720489: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: MuseumDioramaUnlockAction
+	System.Void EnableDiorama()
+		UnityEngine.GameObject store = this.store
+
+		MuseumDiorama component = store.GetComponent<MuseumDiorama>()
+		UnityEngine.Animator dioramaAnimator = component.dioramaAnimator
+
+		System.String string = .ToString()
+
+		System.String string2 = System.String.Concat("Step", string) //(String str0, String str1)
+
+		dioramaAnimator.Play(string2, -1, -Infinity) //(String stateName, Int32 layer, Single normalizedTime)
+		System.Action action = new System.Action()
+
+		action..ctor(this, {'FocusPlayerStep2' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+		System.Single delayToFocusPlayerAgain = this.delayToFocusPlayerAgain
+
+		System.Collections.IEnumerator iEnumerator = this.InvokeRealtimeCoroutine(action, delayToFocusPlayerAgain) //(Action callback, Single duration)
+
+		UnityEngine.Coroutine coroutine = base.StartCoroutine(iEnumerator) //(IEnumerator routine)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionAction at (0x1807203F2) is corrupt (Method is non-static but don't have an instance) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void MuseumDioramaUnlockAction::FocusPlayerStep2():	Method Body (x86 ASM):
+		0x180720490 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180720492 sub rsp,60h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 96
+		0x180720496 cmp byte ptr [18329B0A1h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514785 | None ||| N/A | 0
+		0x18072049D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807204A0 jne short 00000001807204C1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807204A2 lea rcx,[1830D5200h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493655552 | None ||| N/A | N/A
+		0x1807204A9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807204AE lea rcx,[1830FBD78h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814136 | None ||| N/A | N/A
+		0x1807204B5 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807204BA mov byte ptr [18329B0A1h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514785 | None ||| N/A | 1
+		0x1807204C1 mov rax,[rbx+40h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 64 | None ||| N/A | N/A
+		0x1807204C5 mov [rsp+78h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 120 | None ||| N/A | N/A
+		0x1807204CA mov [rsp+80h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 128 | None ||| N/A | N/A
+		0x1807204D2 movaps [rsp+50h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 80 | None ||| N/A | N/A
+		0x1807204D7 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807204DA je near ptr 00000001807205EBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807204E0 mov rsi,[rax+518h]		; DEBUG: {Register}/RSI {Memory}/None ||| RAX | 1304 | None ||| N/A | N/A
+		0x1807204E7 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807204EA mov rax,[1832A9D48h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1807204F1 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807204F4 jne short 0000000180720512h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807204F6 lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x1807204FD call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720502 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720505 je near ptr 00000001807205F1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072050B mov [1832A9D48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x180720512 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180720515 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180720517 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18072051A test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18072051D je near ptr 00000001807205EBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720523 xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180720525 mov [rsp+40h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 64 | None ||| N/A | N/A
+		0x18072052A mov [rsp+48h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 72 | None ||| N/A | N/A
+		0x18072052E mov rax,[1832AA3B0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495577008 | None ||| N/A | N/A
+		0x180720535 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720538 jne short 0000000180720556h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072053A lea rcx,[18297C680h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485952128 | None ||| N/A | N/A
+		0x180720541 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720546 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720549 je near ptr 0000000180720608h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072054F mov [1832AA3B0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495577008 | None ||| N/A | N/A
+		0x180720556 lea rdx,[rsp+40h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x18072055B mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18072055E call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180720560 movss xmm0,dword ptr [rsp+40h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x180720566 movss xmm1,dword ptr [rsp+44h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 68 | None ||| N/A | N/A
+		0x18072056C movss dword ptr [rsp+70h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 112 | None ||| N/A | N/A
+		0x180720572 movss dword ptr [rsp+74h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 116 | None ||| N/A | N/A
+		0x180720578 mov rcx,[1830FBD78h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814136 | None ||| N/A | N/A
+		0x18072057F movss xmm6,dword ptr [rbx+38h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RBX | 56 | None ||| N/A | N/A
+		0x180720584 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720589 mov r8,[1830D5200h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493655552 | None ||| N/A | N/A
+		0x180720590 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180720593 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180720596 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720599 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18072059C call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807205A1 test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1807205A4 je short 00000001807205EBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807205A6 mov edx,[rbx+20h]		; DEBUG: {Register}/EDX {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x1807205A9 mov r9,rdi		; DEBUG: {Register}/R9 {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1807205AC mov qword ptr [rsp+38h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 56 | None ||| N/A | 0
+		0x1807205B5 movaps xmm2,xmm6		; DEBUG: {Register}/XMM2 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x1807205B8 mov byte ptr [rsp+30h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RSP | 48 | None ||| N/A | 1
+		0x1807205BD mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1807205C0 mov [rsp+28h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RSP | 40 | None ||| N/A | N/A
+		0x1807205C4 mov rdx,[rsp+70h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x1807205C9 mov byte ptr [rsp+20h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RSP | 32 | None ||| N/A | 1
+		0x1807205CE call 00000001803F1A10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807205D3 movaps xmm6,[rsp+50h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1807205D8 mov rdi,[rsp+80h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 128 | None ||| N/A | N/A
+		0x1807205E0 mov rsi,[rsp+78h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 120 | None ||| N/A | N/A
+		0x1807205E5 add rsp,60h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 96
+		0x1807205E9 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807205EA ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807205EB call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807205F0 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void MuseumDioramaUnlockAction::FocusPlayerStep2():
+		End of function at 0x1807205F1
+		Absolute End is at 0x1807205F1
+		Identified Jump Destination addresses:
+
+		0x180720490: Saves the content of rbx to the stack
+		0x180720496: Compares {Unknown Global at 0x18329B0A1, first ten bytes are [208 3 0 98 208 3 0 196 174 234], or as chars "Ð bÐ Ä®ê"} and 0
+		0x18072049D: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rcx into rbx
+		0x1807204A0: Jumps to 0x1807204C1 if {Unknown Global at 0x18329B0A1, first ten bytes are [208 3 0 98 208 3 0 196 174 234], or as chars "Ð bÐ Ä®ê"} != 0
+
+		0x1807204A2: Loads the method definition for managed method System.Void MuseumDioramaUnlockAction::OnCameraFocusPlayer() as a constant "OnCameraFocusPlayer"
+		0x1807204A9: Initializes runtime metadata value System.Void MuseumDioramaUnlockAction::OnCameraFocusPlayer()
+		0x1807204AE: Loads the type definition for managed type DG.Tweening.TweenCallback as a constant "TweenCallback" in rcx
+		0x1807204B5: Initializes runtime metadata value DG.Tweening.TweenCallback
+		0x1807204C1: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player' (type BasePlayer)}
+
+		0x1807204D7: [!] Compares {'player' (type BasePlayer)} and 0
+		0x1807204DA: Jumps to 0x1807205EB (which throws a NRE) if player equals 0. Implicitly present in managed code, so ignored here.
+		0x1807204E0: [!] Reads field playerCamera from {'player' (type BasePlayer)} and stores in a new local {'playerCamera' (type PlayerCamera)}
+
+		0x1807204E7: Copies {'player' (type BasePlayer)} from rax into rdi
+		0x1807204EA: Loads string "<õ7" into register rax as constant UnityEngine.Component.get_transform
+		0x1807204F1: Compares UnityEngine.Component.get_transform and 0
+		0x1807204F4: Jumps to 0x180720512 if UnityEngine.Component.get_transform != 0
+
+		0x1807204F6: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1807204FD: Looks up unity ICall by name "UnityEngine.Component::get_transform()" which resolves to UnityEngine.Transform UnityEngine.Component::get_transform()
+		0x180720502: Compares UnityEngine.Component.get_transform and 0
+		0x180720505: Jumps to 0x1807205F1 if UnityEngine.Component.get_transform equals 0
+
+		0x180720512: Copies {'player' (type BasePlayer)} from rdi into rcx
+		0x180720515: [!] Calls managed method UnityEngine.Transform UnityEngine.Component::get_transform() on instance {'player' (type BasePlayer)} and stores the result in {'transform' (type UnityEngine.Transform)}
+
+		0x180720517: Copies {'transform' (type UnityEngine.Transform)} from rax into rdi
+		0x18072051A: [!] Compares {'transform' (type UnityEngine.Transform)} and 0
+		0x18072051D: Jumps to 0x1807205EB (which throws a NRE) if transform equals 0. Implicitly present in managed code, so ignored here.
+		0x180720523: Clears register rax, yielding zero-local {'local4' (type System.Int32)}
+		0x180720525: Moves local4 (type System.Int32) from register rax to the stack at offset 64 (0x40)
+		0x18072052A: Moves local4 (type System.Int32) from register rax to the stack at offset 72 (0x48)
+		0x18072052E: Loads string "+Û" into register rax as constant UnityEngine.Transform.get_position
+		0x180720535: Compares UnityEngine.Transform.get_position and 0
+		0x180720538: Jumps to 0x180720556 if UnityEngine.Transform.get_position != 0
+
+		0x18072053A: Loads string "UnityEngine.Transform::get_position_Injected(UnityEngine.Vector3&)" into register rcx as constant {'constant13' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180720541: Looks up unity ICall by name "UnityEngine.Transform::get_position_Injected(UnityEngine.Vector3&)" which resolves to UnityEngine.Vector3 UnityEngine.Transform::get_position()
+		0x180720546: Compares UnityEngine.Transform.get_position and 0
+		0x180720549: Jumps to 0x180720608 if UnityEngine.Transform.get_position equals 0
+
+		0x180720556: Loads a pointer to stack offset 0x40 into register rdx as new constant constant15
+		0x18072055B: Copies {'transform' (type UnityEngine.Transform)} from rdi into rcx
+		0x18072055E: [!] Calls managed method UnityEngine.Vector3 UnityEngine.Transform::get_position() on instance {'transform' (type UnityEngine.Transform)} and stores the result in {'position' (type UnityEngine.Vector3)}
+
+		0x180720560: Reads local {'local4' (type System.Int32)} from stack offset 64 (0x40) into register xmm0
+		0x180720566: Reads unknown value in stack, offset 68 (0x44) and stores the pointer in register xmm1 as new constant constant16
+		0x18072056C: Moves local4 (type System.Int32) from register xmm0 to the stack at offset 112 (0x70)
+		0x180720572: Moves constant16 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm1 to the stack at offset 116 (0x74) as a new local local6
+		0x180720578: Loads the type definition for managed type DG.Tweening.TweenCallback as a constant "TweenCallback" in rcx
+		0x18072057F: [!] Reads field focusPlayerCameraSpeed from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'focusPlayerCameraSpeed' (type System.Single)}
+
+		0x180720584: [!] Allocates an instance of type DG.Tweening.TweenCallback and stores it as tweenCallback in rax.
+
+		0x180720589: Loads the method definition for managed method System.Void MuseumDioramaUnlockAction::OnCameraFocusPlayer() as a constant "OnCameraFocusPlayer"
+		0x180720593: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rbx into rdx
+		0x180720596: Copies {'tweenCallback' (type DG.Tweening.TweenCallback)} from rax into rcx
+		0x180720599: Copies {'tweenCallback' (type DG.Tweening.TweenCallback)} from rax into rdi
+		0x18072059C: [!] Calls managed method System.Void DG.Tweening.TweenCallback::.ctor(System.Object,System.IntPtr) on instance {'tweenCallback' (type DG.Tweening.TweenCallback)} with arguments [{'this' (function parameter, type MuseumDioramaUnlockAction)}, {'OnCameraFocusPlayer' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x1807205A1: [!] Compares {'playerCamera' (type PlayerCamera)} and 0
+		0x1807205A4: Jumps to 0x1807205EB (which throws a NRE) if playerCamera equals 0. Implicitly present in managed code, so ignored here.
+		0x1807205A6: [!] Reads field cameraMovementEaseType from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'cameraMovementEaseType' (type DG.Tweening.Ease)}
+
+		0x1807205A9: Copies {'tweenCallback' (type DG.Tweening.TweenCallback)} from rdi into r9
+		0x1807205AC: Moves 0 (immediate ulong value) to the stack at offset 56 as a new local local11
+		0x1807205B5: Copies {'focusPlayerCameraSpeed' (type System.Single)} from xmm6 into xmm2
+		0x1807205B8: Moves 1 (immediate ulong value) to the stack at offset 48 as a new local local12
+		0x1807205BD: Copies {'playerCamera' (type PlayerCamera)} from rsi into rcx
+		0x1807205C0: Moves cameraMovementEaseType (type DG.Tweening.Ease) from register rdx to the stack at offset 40 (0x28)
+		0x1807205C4: Reads local {'local4' (type System.Int32)} from stack offset 112 (0x70) into register rdx
+		0x1807205C9: Moves 1 (immediate ulong value) to the stack at offset 32 as a new local local13
+		0x1807205CE: [!] Calls managed method System.Void PlayerCamera::FocusOnPosition(UnityEngine.Vector2,System.Single,DG.Tweening.TweenCallback,System.Boolean,DG.Tweening.Ease,System.Boolean) on instance {'playerCamera' (type PlayerCamera)} with arguments [{'local4' (type System.Int32)}, {'focusPlayerCameraSpeed' (type System.Single)}, {'tweenCallback' (type DG.Tweening.TweenCallback)}, {'local13' (type System.UInt64)}, {'cameraMovementEaseType' (type DG.Tweening.Ease)}, {'local12' (type System.UInt64)}]
+
+		0x1807205D3: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register xmm6 as new constant constant20
+		0x1807205D8: Reads unknown value in stack, offset 128 (0x80) and stores the pointer in register rdi as new constant constant21
+		0x1807205E0: Reads unknown value in stack, offset 120 (0x78) and stores the pointer in register rsi as new constant constant22
+		0x1807205EA: [!] Returns from the function
+
+		0x1807205EB: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: MuseumDioramaUnlockAction
+	System.Void FocusPlayerStep2()
+		BasePlayer player = this.player
+		PlayerCamera playerCamera = player.playerCamera
+
+		UnityEngine.Transform transform = player.transform
+		ulong local4 = 0
+
+		UnityEngine.Vector3 position = transform.position
+		System.Single focusPlayerCameraSpeed = this.focusPlayerCameraSpeed
+		DG.Tweening.TweenCallback tweenCallback = new DG.Tweening.TweenCallback()
+
+		tweenCallback..ctor(this, {'OnCameraFocusPlayer' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+		DG.Tweening.Ease cameraMovementEaseType = this.cameraMovementEaseType
+
+		playerCamera.FocusOnPosition(local4, focusPlayerCameraSpeed, tweenCallback, local13, cameraMovementEaseType, local12) //(Vector2 position, Single speed, TweenCallback onComplete, Boolean unscaledTime, Ease easeType, Boolean killCurrentTween)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld BasePlayer MuseumDioramaUnlockAction::player
+	IL_0006: stloc.0
+	IL_0007: ldloc.0
+	IL_0008: ldfld PlayerCamera BasePlayer::playerCamera
+	IL_000d: stloc.1
+	IL_000e: ldloc.0
+	IL_000f: call UnityEngine.Transform UnityEngine.Component::get_transform()
+	IL_0014: stloc.2
+	IL_0015: ldc.i4.0
+	IL_0016: stloc.3
+	IL_0017: ldloc.2
+	IL_0018: call UnityEngine.Vector3 UnityEngine.Transform::get_position()
+	IL_001d: stloc.s V_4
+	IL_001f: ldarg.0
+	IL_0020: ldfld System.Single MuseumDioramaUnlockAction::focusPlayerCameraSpeed
+	IL_0025: stloc.s V_5
+	IL_0027: ldarg.0
+	IL_0028: ldftn System.Void MuseumDioramaUnlockAction::OnCameraFocusPlayer()
+	IL_002e: newobj System.Void DG.Tweening.TweenCallback::.ctor(System.Object,System.IntPtr)
+	IL_0033: stloc.s V_6
+	IL_0035: ldarg.0
+	IL_0036: ldfld DG.Tweening.Ease MuseumDioramaUnlockAction::cameraMovementEaseType
+	IL_003b: stloc.s V_7
+	IL_003d: ldloc.1
+	IL_003e: ldloc.3
+	IL_003f: ldloc.s V_5
+	IL_0041: ldloc.s V_6
+	IL_0043: ldloc.s V_10
+	IL_0045: ldloc.s V_7
+	IL_0047: ldloc.s V_9
+	IL_0049: call System.Void PlayerCamera::FocusOnPosition(UnityEngine.Vector2,System.Single,DG.Tweening.TweenCallback,System.Boolean,DG.Tweening.Ease,System.Boolean)
+	IL_004e: ret
+	IL_004f: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0054: throw
+	
+
+Method: System.Void MuseumDioramaUnlockAction::OnCameraFocusPlayer():	Method Body (x86 ASM):
+		0x180720620 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180720625 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180720626 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18072062A cmp byte ptr [18329B0A2h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514786 | None ||| N/A | 0
+		0x180720631 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180720634 jne short 0000000180720655h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720636 lea rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x18072063D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720642 lea rcx,[1830D51E8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493655528 | None ||| N/A | N/A
+		0x180720649 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072064E mov byte ptr [18329B0A2h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514786 | None ||| N/A | 1
+		0x180720655 mov rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x18072065C call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720661 mov r8,[1830D51E8h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493655528 | None ||| N/A | N/A
+		0x180720668 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18072066B mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18072066E mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720671 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720674 call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720679 movss xmm2,dword ptr [rdi+3Ch]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 60 | None ||| N/A | N/A
+		0x18072067E xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180720681 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180720684 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180720687 call 00000001807208F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072068C xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18072068F mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720692 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180720695 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x18072069A add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18072069E pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18072069F jmp near ptr 000000018248C0A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807206A4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void MuseumDioramaUnlockAction::OnCameraFocusPlayer():
+		End of function at 0x1807206A5
+		Absolute End is at 0x1807206A5
+		Identified Jump Destination addresses:
+
+		0x180720625: Saves the content of rdi to the stack
+		0x18072062A: Compares {Unknown Global at 0x18329B0A2, first ten bytes are [3 0 98 208 3 0 196 174 234 2], or as chars " bÐ Ä®ê"} and 0
+		0x180720631: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rcx into rdi
+		0x180720634: Jumps to 0x180720655 if {Unknown Global at 0x18329B0A2, first ten bytes are [3 0 98 208 3 0 196 174 234 2], or as chars " bÐ Ä®ê"} != 0
+
+		0x180720636: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x18072063D: Initializes runtime metadata value System.Action
+		0x180720642: Loads the method definition for managed method System.Void MuseumDioramaUnlockAction::FinishCutscene() as a constant "FinishCutscene"
+		0x180720649: Initializes runtime metadata value System.Void MuseumDioramaUnlockAction::FinishCutscene()
+		0x180720655: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x18072065C: [!] Allocates an instance of type System.Action and stores it as action in rax.
+
+		0x180720661: Loads the method definition for managed method System.Void MuseumDioramaUnlockAction::FinishCutscene() as a constant "FinishCutscene"
+		0x18072066B: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rdi into rdx
+		0x18072066E: Copies {'action' (type System.Action)} from rax into rcx
+		0x180720671: Copies {'action' (type System.Action)} from rax into rbx
+		0x180720674: [!] Calls managed method System.Void System.Action::.ctor(System.Object,System.IntPtr) on instance {'action' (type System.Action)} with arguments [{'this' (function parameter, type MuseumDioramaUnlockAction)}, {'FinishCutscene' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x180720679: [!] Reads field delayToEnablePlayerInput from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'delayToEnablePlayerInput' (type System.Single)}
+
+		0x180720681: Copies {'action' (type System.Action)} from rbx into rdx
+		0x180720684: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rdi into rcx
+		0x180720687: [!] Calls managed method System.Collections.IEnumerator MuseumDioramaUnlockAction::InvokeRealtimeCoroutine(System.Action,System.Single) on instance {'this' (function parameter, type MuseumDioramaUnlockAction)} with arguments [{'action' (type System.Action)}, {'delayToEnablePlayerInput' (type System.Single)}] and stores the result in {'iEnumerator' (type System.Collections.IEnumerator)}
+
+		0x18072068F: Copies {'iEnumerator' (type System.Collections.IEnumerator)} from rax into rdx
+		0x180720692: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rdi into rcx
+		0x180720695: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant7
+		0x18072069F: [!] Calls managed method UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator) on instance {'this' (function parameter, type MuseumDioramaUnlockAction)} with arguments [{'iEnumerator' (type System.Collections.IEnumerator)}] and stores the result in {'coroutine' (type UnityEngine.Coroutine)}
+
+		0x18072069F: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: MuseumDioramaUnlockAction
+	System.Void OnCameraFocusPlayer()
+		System.Action action = new System.Action()
+
+		action..ctor(this, {'FinishCutscene' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+		System.Single delayToEnablePlayerInput = this.delayToEnablePlayerInput
+
+		System.Collections.IEnumerator iEnumerator = this.InvokeRealtimeCoroutine(action, delayToEnablePlayerInput) //(Action callback, Single duration)
+
+		UnityEngine.Coroutine coroutine = base.StartCoroutine(iEnumerator) //(IEnumerator routine)
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldftn System.Void MuseumDioramaUnlockAction::FinishCutscene()
+	IL_0007: newobj System.Void System.Action::.ctor(System.Object,System.IntPtr)
+	IL_000c: stloc.0
+	IL_000d: ldarg.0
+	IL_000e: ldfld System.Single MuseumDioramaUnlockAction::delayToEnablePlayerInput
+	IL_0013: stloc.1
+	IL_0014: ldarg.0
+	IL_0015: ldloc.0
+	IL_0016: ldloc.1
+	IL_0017: call System.Collections.IEnumerator MuseumDioramaUnlockAction::InvokeRealtimeCoroutine(System.Action,System.Single)
+	IL_001c: stloc.2
+	IL_001d: ldarg.0
+	IL_001e: ldloc.2
+	IL_001f: call UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
+	IL_0024: stloc.3
+	IL_0025: ret
+	
+
+Method: System.Void MuseumDioramaUnlockAction::FinishCutscene():	Method Body (x86 ASM):
+		0x1807206B0 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807206B2 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1807206B6 cmp byte ptr [18329B0A3h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514787 | None ||| N/A | 0
+		0x1807206BD mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807206C0 jne short 00000001807206E1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807206C2 lea rcx,[1830D51D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493655512 | None ||| N/A | N/A
+		0x1807206C9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807206CE lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807206D5 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807206DA mov byte ptr [18329B0A3h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514787 | None ||| N/A | 1
+		0x1807206E1 cmp byte ptr [183298874h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504500 | None ||| N/A | 0
+		0x1807206E8 jne short 00000001807206FDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807206EA lea rcx,[183100600h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493832704 | None ||| N/A | N/A
+		0x1807206F1 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807206F6 mov byte ptr [183298874h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504500 | None ||| N/A | 1
+		0x1807206FD mov rax,[183100600h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493832704 | None ||| N/A | N/A
+		0x180720704 mov [rsp+40h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 64 | None ||| N/A | N/A
+		0x180720709 mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180720710 mov rcx,[rcx]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180720713 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180720716 je near ptr 00000001807208DCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072071C xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18072071E call 00000001803ED9B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720723 mov rbx,[rdi+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RDI | 64 | None ||| N/A | N/A
+		0x180720727 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18072072A je near ptr 00000001807208DCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720730 cmp byte ptr [183298856h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 0
+		0x180720737 mov byte ptr [rbx+7A8h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 1960 | None ||| N/A | 1
+		0x18072073E jne short 0000000180720753h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720740 lea rcx,[1830F62D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x180720747 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072074C mov byte ptr [183298856h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 1
+		0x180720753 mov rax,[1830F62D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x18072075A mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180720761 movss xmm0,dword ptr [rcx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180720765 movss xmm1,dword ptr [rcx+4]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 4 | None ||| N/A | N/A
+		0x18072076A mov rcx,[rbx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 1600 | None ||| N/A | N/A
+		0x180720771 movss dword ptr [rbx+2B4h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 692 | None ||| N/A | N/A
+		0x180720779 movss dword ptr [rbx+2B8h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 696 | None ||| N/A | N/A
+		0x180720781 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180720784 je near ptr 00000001807208DCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072078A xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18072078D xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180720790 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180720792 call 00000001806C5CC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720797 mov rcx,[rdi+40h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 64 | None ||| N/A | N/A
+		0x18072079B test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18072079E je near ptr 00000001807208DCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807207A4 mov rcx,[rcx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 1600 | None ||| N/A | N/A
+		0x1807207AB test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807207AE je near ptr 00000001807208DCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807207B4 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807207B7 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1807207B9 call 00000001806C4D30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807207BE mov rcx,[rdi+40h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 64 | None ||| N/A | N/A
+		0x1807207C2 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807207C5 je near ptr 00000001807208DCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807207CB mov rcx,[rcx+518h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 1304 | None ||| N/A | N/A
+		0x1807207D2 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807207D5 je near ptr 00000001807208DCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807207DB movss xmm1,dword ptr [182E6ECE0h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RIP | 6491139296 | None ||| N/A | N/A
+		0x1807207E3 mov r9b,1		; DEBUG: {Register}/R9L {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1807207E6 mov qword ptr [rsp+28h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 40 | None ||| N/A | 0
+		0x1807207EF xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807207F2 mov dword ptr [rsp+20h],1		; DEBUG: {Memory}/None {Immediate32}/None ||| RSP | 32 | None ||| N/A | 1
+		0x1807207FA call 00000001803F2C80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807207FF mov rax,[rdi+40h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDI | 64 | None ||| N/A | N/A
+		0x180720803 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720806 je near ptr 00000001807208DCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072080C mov rax,[rax+518h]		; DEBUG: {Register}/RAX {Memory}/None ||| RAX | 1304 | None ||| N/A | N/A
+		0x180720813 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720816 je near ptr 00000001807208DCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072081C movss xmm0,dword ptr [182E6E600h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491137536 | None ||| N/A | N/A
+		0x180720824 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180720826 mov byte ptr [rax+80h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RAX | 128 | None ||| N/A | 1
+		0x18072082D call 00000001807141C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720832 mov rdx,[1830D51D8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493655512 | None ||| N/A | N/A
+		0x180720839 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18072083C call 0000000180D41240h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720841 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180720848 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18072084B cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180720852 jne short 0000000180720859h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720854 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720859 cmp byte ptr [1832A9F58h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575896 | None ||| N/A | 0
+		0x180720860 jne short 0000000180720875h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720862 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180720869 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072086E mov byte ptr [1832A9F58h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575896 | None ||| N/A | 1
+		0x180720875 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18072087C cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180720883 jne short 000000018072088Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720885 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072088A cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x180720891 jne short 00000001807208A6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720893 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18072089A call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072089F mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x1807208A6 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807208A9 je short 00000001807208D1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807208AB mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807208B2 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1807208B9 jne short 00000001807208C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807208BB call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807208C0 cmp qword ptr [rbx+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RBX | 16 | None ||| N/A | 0
+		0x1807208C5 je short 00000001807208D1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807208C7 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807208C9 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807208CC call 00000001807DE6E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807208D1 mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1807208D6 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1807208DA pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807208DB ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807208DC call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807208E1 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void MuseumDioramaUnlockAction::FinishCutscene():
+		End of function at 0x1807208E2
+		Absolute End is at 0x1807208E2
+		Identified Jump Destination addresses:
+
+		0x1807206B0: Saves the content of rdi to the stack
+		0x1807206B6: Compares {Unknown Global at 0x18329B0A3, first ten bytes are [0 98 208 3 0 196 174 234 2 112], or as chars " bÐ Ä®êp"} and 0
+		0x1807206BD: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rcx into rdi
+		0x1807206C0: Jumps to 0x1807206E1 if {Unknown Global at 0x18329B0A3, first ten bytes are [0 98 208 3 0 196 174 234 2 112], or as chars " bÐ Ä®êp"} != 0
+
+		0x1807206C2: Loads the global generic method reference for method T UnityEngine.Component::GetComponentInParent<MuseumAreaController>() on type UnityEngine.Component and stores the result in constant {'GetComponentInParent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1807206C9: Initializes runtime metadata value 
+		0x1807206CE: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807206D5: Initializes runtime metadata value UnityEngine.Object
+		0x1807206E1: Compares {Unknown Global at 0x183298874, first ten bytes are [137 228 0 0 27 229 0 0 12 166], or as chars "ä  å  ¦"} and 0
+		0x1807206E8: Jumps to 0x1807206FD if {Unknown Global at 0x183298874, first ten bytes are [137 228 0 0 27 229 0 0 12 166], or as chars "ä  å  ¦"} != 0
+
+		0x1807206EA: Loads the type definition for managed type FinalCamera as a constant "FinalCamera" in rcx
+		0x1807206F1: Initializes runtime metadata value FinalCamera
+		0x1807206FD: Loads the type definition for managed type FinalCamera as a constant "FinalCamera" in rax
+		0x180720709: Loads the pointer to the static fields for FinalCamera and stores it in constant9 in register rcx
+		0x180720710: [!] Reads the static field FinalCamera FinalCamera::<Instance>k__BackingField into new local Instance
+		0x180720713: [!] Compares {'Instance' (type FinalCamera)} and 0
+		0x180720716: Jumps to 0x1807208DC (which throws a NRE) if Instance equals 0. Implicitly present in managed code, so ignored here.
+		0x18072071E: [!] Calls managed method System.Void FinalCamera::HideCinematicBars() on instance {'Instance' (type FinalCamera)}
+
+		0x180720723: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player' (type BasePlayer)}
+
+		0x180720727: [!] Compares {'player' (type BasePlayer)} and 0
+		0x18072072A: Jumps to 0x1807208DC (which throws a NRE) if player equals 0. Implicitly present in managed code, so ignored here.
+		0x180720730: Compares {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} and 0
+		0x180720737: [!] Sets the field inputEnabled (Type System.Boolean) on local {'player' (type BasePlayer)} to the value stored in True
+		0x18072073E: Jumps to 0x180720753 if {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} != 0
+
+		0x180720740: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rcx
+		0x180720747: Initializes runtime metadata value UnityEngine.Vector2
+		0x180720753: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rax
+		0x18072075A: Loads the pointer to the static fields for UnityEngine.Vector2 and stores it in constant16 in register rcx
+		0x180720761: [!] Reads the static field UnityEngine.Vector2 UnityEngine.Vector2::zeroVector into new local zeroVector
+		0x180720765: [!] Reads the static field  into new local 
+		0x18072076A: [!] Reads field hudManager from {'player' (type BasePlayer)} and stores in a new local {'hudManager' (type HUDManager)}
+
+		0x180720771: [!] Sets the field currentDirection (Type UnityEngine.Vector2) on local {'player' (type BasePlayer)} to the value stored in {'zeroVector' (type UnityEngine.Vector2)}
+		0x180720779: [!] Sets the field currentDirection.y (Type System.Single) on local {'player' (type BasePlayer)} to the value stored in 
+		0x180720781: [!] Compares {'hudManager' (type HUDManager)} and 0
+		0x180720784: Jumps to 0x1807208DC (which throws a NRE) if hudManager equals 0. Implicitly present in managed code, so ignored here.
+		0x18072078D: Clears register r8, yielding zero-local {'local7' (type System.Int32)}
+		0x180720790: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x180720792: [!] Calls managed method System.Void HUDManager::EnableMainHUDInput(System.Boolean,System.Boolean) on instance {'hudManager' (type HUDManager)} with arguments [True, {'local7' (type System.Int32)}]
+
+		0x180720797: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player2' (type BasePlayer)}
+
+		0x18072079B: [!] Compares {'player2' (type BasePlayer)} and 0
+		0x18072079E: Jumps to 0x1807208DC (which throws a NRE) if player2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807207A4: [!] Reads field hudManager from {'player2' (type BasePlayer)} and stores in a new local {'hudManager2' (type HUDManager)}
+
+		0x1807207AB: [!] Compares {'hudManager2' (type HUDManager)} and 0
+		0x1807207AE: Jumps to 0x1807208DC (which throws a NRE) if hudManager2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807207B7: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x1807207B9: [!] Calls managed method System.Void HUDManager::SetVisible(System.Boolean) on instance {'hudManager2' (type HUDManager)} with arguments [True]
+
+		0x1807207BE: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player3' (type BasePlayer)}
+
+		0x1807207C2: [!] Compares {'player3' (type BasePlayer)} and 0
+		0x1807207C5: Jumps to 0x1807208DC (which throws a NRE) if player3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807207CB: [!] Reads field playerCamera from {'player3' (type BasePlayer)} and stores in a new local {'playerCamera' (type PlayerCamera)}
+
+		0x1807207D2: [!] Compares {'playerCamera' (type PlayerCamera)} and 0
+		0x1807207D5: Jumps to 0x1807208DC (which throws a NRE) if playerCamera equals 0. Implicitly present in managed code, so ignored here.
+		0x1807207DB: Reads {Unknown Global at 0x182E6ECE0, first ten bytes are [0 0 128 191 0 0 0 0 123 20], or as chars "  ¿    {"} into register xmm1 as a constant constant24
+		0x1807207E3: [!] Writes the constant 0x1 into operand True (type UInt64) in register r9
+		0x1807207E6: Moves 0 (immediate ulong value) to the stack at offset 40 as a new local local13
+		0x1807207F2: Moves 1 (immediate ulong value) to the stack at offset 32 as a new local local15
+		0x1807207FA: [!] Calls managed method System.Void PlayerCamera::ResetZoom(System.Single,DG.Tweening.TweenCallback,System.Boolean,DG.Tweening.Ease) on instance {'playerCamera' (type PlayerCamera)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x1807207FF: [!] Reads field player from {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores in a new local {'player4' (type BasePlayer)}
+
+		0x180720803: [!] Compares {'player4' (type BasePlayer)} and 0
+		0x180720806: Jumps to 0x1807208DC (which throws a NRE) if player4 equals 0. Implicitly present in managed code, so ignored here.
+		0x18072080C: [!] Reads field playerCamera from {'player4' (type BasePlayer)} and stores in a new local {'playerCamera2' (type PlayerCamera)}
+
+		0x180720813: [!] Compares {'playerCamera2' (type PlayerCamera)} and 0
+		0x180720816: Jumps to 0x1807208DC (which throws a NRE) if playerCamera2 equals 0. Implicitly present in managed code, so ignored here.
+		0x18072081C: Reads {Unknown Global at 0x182E6E600, first ten bytes are [0 0 128 63 84 0 128 63 146 65], or as chars "  ?T ?A"} into register xmm0 as a constant constant28
+		0x180720826: [!] Sets the field followingPlayer (Type System.Boolean) on local {'playerCamera2' (type PlayerCamera)} to the value stored in True
+		0x18072082D: [!] Calls static managed method System.Void WorldTimeManager::set_TimeScale(System.Single) with arguments [1]
+
+		0x180720832: Loads the global generic method reference for method T UnityEngine.Component::GetComponentInParent<MuseumAreaController>() on type UnityEngine.Component and stores the result in constant {'GetComponentInParent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180720839: Copies {'this' (function parameter, type MuseumDioramaUnlockAction)} from rdi into rcx
+		0x18072083C: [!] Calls managed method T UnityEngine.Component::GetComponentInParent<MuseumAreaController>() on instance {'this' (function parameter, type MuseumDioramaUnlockAction)} and stores the result in {'componentInParent' (type MuseumAreaController)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180720841: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180720848: Copies {'componentInParent' (type MuseumAreaController)} from rax into rbx
+		0x18072084B: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180720852: Jumps to 0x180720859 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180720854: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180720859: Compares {Unknown Global at 0x1832A9F58, first ten bytes are [128 23 238 2 240 161 14 0 234 162], or as chars "îð¡ ê¢"} and 0
+		0x180720860: Jumps to 0x180720875 if {Unknown Global at 0x1832A9F58, first ten bytes are [128 23 238 2 240 161 14 0 234 162], or as chars "îð¡ ê¢"} != 0
+
+		0x180720862: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180720869: Initializes runtime metadata value UnityEngine.Object
+		0x180720875: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18072087C: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180720883: Jumps to 0x18072088A if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180720885: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x18072088A: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x180720891: Jumps to 0x1807208A6 if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x180720893: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18072089A: Initializes runtime metadata value UnityEngine.Object
+		0x1807208A6: [!] Compares {'componentInParent' (type MuseumAreaController)} and 0
+		0x1807208A9: Jumps to 0x1807208D1 (which is an if statement's body) if componentInParent equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1807208AB: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807208B2: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1807208B9: Jumps to 0x1807208C0 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1807208BB: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1807208C0: [!] Compares  and 0
+		0x1807208C5: Jumps to 0x1807208D1 (which is an if statement's body) if  equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1807208C9: Copies {'componentInParent' (type MuseumAreaController)} from rbx into rcx
+		0x1807208CC: [!] Calls managed method System.Void MuseumAreaController::CheckGiveReward() on instance {'componentInParent' (type MuseumAreaController)}
+
+		0x1807208D1: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant47
+		0x1807208DB: [!] Returns from the function
+
+		0x1807208DC: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: MuseumDioramaUnlockAction
+	System.Void FinishCutscene()
+		FinalCamera Instance = FinalCamera.<Instance>k__BackingField
+
+		Instance.HideCinematicBars()
+		BasePlayer player = this.player
+		player.inputEnabled = True
+		UnityEngine.Vector2 zeroVector = UnityEngine.Vector2.zeroVector
+		  = .
+		HUDManager hudManager = player.hudManager
+		player.currentDirection = zeroVector
+		player.currentDirection.y = 
+		ulong local7 = 0
+
+		hudManager.EnableMainHUDInput(True, local7) //(Boolean enable, Boolean ignreRadialMenu)
+		BasePlayer player2 = this.player
+		HUDManager hudManager2 = player2.hudManager
+
+		hudManager2.SetVisible(True) //(Boolean visible)
+		BasePlayer player3 = this.player
+		PlayerCamera playerCamera = player3.playerCamera
+
+		playerCamera.ResetZoom()
+		BasePlayer player4 = this.player
+		PlayerCamera playerCamera2 = player4.playerCamera
+		playerCamera2.followingPlayer = True
+
+		WorldTimeManager.TimeScale = 1
+
+		MuseumAreaController componentInParent = base.GetComponentInParent<MuseumAreaController>()
+
+		if (componentInParent != 0)
+
+		    if ( != 0)
+
+		        componentInParent.CheckGiveReward()
+		    endif
+            
+		    return
+		    throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.StaticFieldToRegAction at (0x180720765) is corrupt (Couldn't identify the field being read (or its type).) and cannot be created as IL. Aborting here.
+
+
+Method: System.Collections.IEnumerator MuseumDioramaUnlockAction::InvokeRealtimeCoroutine(System.Action,System.Single):	Method Body (x86 ASM):
+		0x1807208F0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807208F2 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1807208F6 cmp byte ptr [18329B0A4h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514788 | None ||| N/A | 0
+		0x1807208FD mov rbx,rdx		; DEBUG: {Register}/RBX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180720900 movaps [rsp+20h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 32 | None ||| N/A | N/A
+		0x180720905 movaps xmm6,xmm2		; DEBUG: {Register}/XMM6 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180720908 jne short 000000018072091Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18072090A lea rcx,[1830D51B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493655480 | None ||| N/A | N/A
+		0x180720911 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720916 mov byte ptr [18329B0A4h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514788 | None ||| N/A | 1
+		0x18072091D mov rcx,[1830D51B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493655480 | None ||| N/A | N/A
+		0x180720924 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720929 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180720930 mov r8,rax		; DEBUG: {Register}/R8 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720933 mov dword ptr [rax+10h],0		; DEBUG: {Memory}/None {Immediate32}/None ||| RAX | 16 | None ||| N/A | 0
+		0x18072093A mov [rax+28h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RAX | 40 | None ||| N/A | N/A
+		0x18072093E je short 0000000180720997h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720940 lea r9,[rax+28h]		; DEBUG: {Register}/R9 {Memory}/None ||| RAX | 40 | None ||| N/A | N/A
+		0x180720944 shr r9,0Ch		; DEBUG: {Register}/R9 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180720948 lea r10,[1832F4840h]		; DEBUG: {Register}/R10 {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x18072094F and r9d,1FFFFFh		; DEBUG: {Register}/R9D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180720956 mov edx,r9d		; DEBUG: {Register}/EDX {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180720959 shr rdx,6		; DEBUG: {Register}/RDX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x18072095D and r9d,3Fh		; DEBUG: {Register}/R9D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180720961 prefetchw [r10+rdx*8]		; DEBUG: {Memory}/None {Register}/None ||| R10 | 0 | RDX ||| N/A | N/A
+		0x180720966 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180720970 mov rax,[r10+rdx*8]		; DEBUG: {Register}/RAX {Memory}/None ||| R10 | 0 | RDX ||| N/A | N/A
+		0x180720974 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180720977 bts rcx,r9		; DEBUG: {Register}/RCX {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x18072097B lock cmpxchg [r10+rdx*8],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| R10 | 0 | RDX ||| N/A | N/A
+		0x180720981 jne short 0000000180720970h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720983 movss dword ptr [r8+20h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| R8 | 32 | None ||| N/A | N/A
+		0x180720989 mov rax,r8		; DEBUG: {Register}/RAX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18072098C movaps xmm6,[rsp+20h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180720991 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180720995 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180720996 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180720997 movss dword ptr [rax+20h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RAX | 32 | None ||| N/A | N/A
+		0x18072099C movaps xmm6,[rsp+20h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x1807209A1 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1807209A5 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807209A6 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807209A7 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Collections.IEnumerator MuseumDioramaUnlockAction::InvokeRealtimeCoroutine(System.Action,System.Single):
+		End of function at 0x1807209A8
+		Absolute End is at 0x1807209A8
+		Identified Jump Destination addresses:
+
+		0x1807208F0: Saves the content of rbx to the stack
+		0x1807208F6: Compares {Unknown Global at 0x18329B0A4, first ten bytes are [98 208 3 0 196 174 234 2 112 208], or as chars "bÐ Ä®êpÐ"} and 0
+		0x1807208FD: Copies {'callback' (function parameter, type System.Action)} from rdx into rbx
+		0x180720905: Copies {'duration' (function parameter, type System.Single)} from xmm2 into xmm6
+		0x180720908: Jumps to 0x18072091D if {Unknown Global at 0x18329B0A4, first ten bytes are [98 208 3 0 196 174 234 2 112 208], or as chars "bÐ Ä®êpÐ"} != 0
+
+		0x18072090A: Loads the type definition for managed type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19 as a constant "<InvokeRealtimeCoroutine>d__19" in rcx
+		0x180720911: Initializes runtime metadata value MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19
+		0x18072091D: Loads the type definition for managed type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19 as a constant "<InvokeRealtimeCoroutine>d__19" in rcx
+		0x180720924: [!] Allocates an instance of type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19 and stores it as enumeratorInstance in rax.
+
+		0x180720929: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180720930: Copies {'enumeratorInstance' (type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19)} from rax into r8
+		0x180720933: [!] Sets the field <>1__state (Type System.Int32) on local {'enumeratorInstance' (type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19)} to the value stored in 0
+		0x18072093A: [!] Sets the field callback (Type System.Action) on local {'enumeratorInstance' (type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19)} to the value stored in {'callback' (function parameter, type System.Action)}
+		0x18072093E: Jumps to 0x180720997 if constant5 equals 0
+
+		0x180720940: Loads the pointer to the field callback on {'enumeratorInstance' (type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19)} into register r9
+		0x180720948: Loads string "¡
+m" into register r10 as constant {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180720956: Copies {'constant7' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r9 into rdx
+		0x180720974: Copies {'enumeratorInstance' (type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19)} from rax into rcx
+		0x180720981: Jumps to 0x180720970 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x180720983: [!] Sets the field duration (Type System.Single) on local {'enumeratorInstance' (type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19)} to the value stored in {'duration' (function parameter, type System.Single)}
+		0x180720989: Copies {'enumeratorInstance' (type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19)} from r8 into rax
+		0x18072098C: Reads unknown value in stack, offset 32 (0x20) and stores the pointer in register xmm6 as new constant constant9
+		0x180720996: [!] Returns {'enumeratorInstance' (type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19)} from the function
+
+		0x180720997: [!] Sets the field duration (Type System.Single) on local {'enumeratorInstance' (type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19)} to the value stored in 0
+		0x18072099C: Reads unknown value in stack, offset 32 (0x20) and stores the pointer in register xmm6 as new constant constant10
+		0x1807209A6: [!] Returns {'enumeratorInstance' (type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: MuseumDioramaUnlockAction
+	System.Collections.IEnumerator InvokeRealtimeCoroutine(System.Action callback, System.Single duration)
+		MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19 enumeratorInstance = new MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19()
+		enumeratorInstance.<>1__state = 0
+		enumeratorInstance.callback = callback
+		enumeratorInstance.duration = duration
+		return enumeratorInstance
+		enumeratorInstance.duration = 0
+		return enumeratorInstance
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.AllocateInstanceAction at (0x180720924) is corrupt (Cannot find the call to the constructor for instance allocation, of type MuseumDioramaUnlockAction/<InvokeRealtimeCoroutine>d__19 (Is Value: False)) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void MuseumDioramaUnlockAction::.ctor():	Method Body (x86 ASM):
+		0x1807209B0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1807209B4 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x1807209BB mov dword ptr [rcx+20h],1		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 32 | None ||| N/A | 1
+		0x1807209C2 mov dword ptr [rcx+24h],3E19999Ah		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 36 | None ||| N/A | 1041865114
+		0x1807209C9 mov dword ptr [rcx+30h],40C00000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 48 | None ||| N/A | 1086324736
+		0x1807209D0 mov dword ptr [rcx+34h],3F800000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 52 | None ||| N/A | 1065353216
+		0x1807209D7 mov dword ptr [rcx+3Ch],3F800000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 60 | None ||| N/A | 1065353216
+		0x1807209DE jne short 00000001807209F3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807209E0 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807209E7 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807209EC mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x1807209F3 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807209FA cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180720A01 jne short 0000000180720A0Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720A03 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180720A07 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180720A0C add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180720A10 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180720A11 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void MuseumDioramaUnlockAction::.ctor():
+		End of function at 0x180720A12
+		Absolute End is at 0x180720A12
+		Identified Jump Destination addresses:
+
+		0x1807209B4: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x1807209BB: [!] Sets the field cameraMovementEaseType (Type DG.Tweening.Ease) on local {'this' (function parameter, type MuseumDioramaUnlockAction)} to the value stored in 1
+		0x1807209C2: [!] Sets the field delayToFocusCameraOnDiorama (Type System.Single) on local {'this' (function parameter, type MuseumDioramaUnlockAction)} to the value stored in 0,15
+		0x1807209C9: [!] Sets the field unlockDioramaAnimationDuration (Type System.Single) on local {'this' (function parameter, type MuseumDioramaUnlockAction)} to the value stored in 6
+		0x1807209D0: [!] Sets the field delayToFocusPlayerAgain (Type System.Single) on local {'this' (function parameter, type MuseumDioramaUnlockAction)} to the value stored in 1
+		0x1807209D7: [!] Sets the field delayToEnablePlayerInput (Type System.Single) on local {'this' (function parameter, type MuseumDioramaUnlockAction)} to the value stored in 1
+		0x1807209DE: Jumps to 0x1807209F3 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x1807209E0: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807209E7: Initializes runtime metadata value UnityEngine.Object
+		0x1807209F3: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807209FA: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180720A01: Jumps to 0x180720A0C if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180720A10: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: MuseumDioramaUnlockAction
+	System.Void .ctor()
+		this.cameraMovementEaseType = 1
+		this.delayToFocusCameraOnDiorama = 0,15
+		this.unlockDioramaAnimationDuration = 6
+		this.delayToFocusPlayerAgain = 1
+		this.delayToEnablePlayerInput = 1
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4.1
+	IL_0002: conv.i8
+	IL_0003: conv.u8
+	IL_0004: stfld DG.Tweening.Ease MuseumDioramaUnlockAction::cameraMovementEaseType
+	IL_0009: ldarg.0
+	IL_000a: ldc.r4 0,15
+	IL_000f: stfld System.Single MuseumDioramaUnlockAction::delayToFocusCameraOnDiorama
+	IL_0014: ldarg.0
+	IL_0015: ldc.r4 6
+	IL_001a: stfld System.Single MuseumDioramaUnlockAction::unlockDioramaAnimationDuration
+	IL_001f: ldarg.0
+	IL_0020: ldc.r4 1
+	IL_0025: stfld System.Single MuseumDioramaUnlockAction::delayToFocusPlayerAgain
+	IL_002a: ldarg.0
+	IL_002b: ldc.r4 1
+	IL_0030: stfld System.Single MuseumDioramaUnlockAction::delayToEnablePlayerInput
+	IL_0035: ret
+	
+

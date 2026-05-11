@@ -1,0 +1,136 @@
+Type: System.Runtime.Remoting.Lifetime.Lease:
+	Base Class: 
+		System.MarshalByRefObject
+
+	Interfaces:
+		System.Runtime.Remoting.Lifetime.ILease
+
+	Nested Types:
+		System.Runtime.Remoting.Lifetime.Lease/RenewalDelegate
+
+	Field: _leaseExpireTime
+		Type: System.DateTime
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _currentState
+		Type: System.Runtime.Remoting.Lifetime.LeaseState
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _initialLeaseTime
+		Type: System.TimeSpan
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _renewOnCallTime
+		Type: System.TimeSpan
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _sponsorshipTimeout
+		Type: System.TimeSpan
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _sponsors
+		Type: System.Collections.ArrayList
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: _renewingSponsors
+		Type: System.Collections.Queue
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: _renewalDelegate
+		Type: System.Runtime.Remoting.Lifetime.Lease/RenewalDelegate
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01749B20
+		Ram Offset 0x18174ad20
+		Virtual Method Slot: 65535
+
+	Method: get_CurrentLeaseTime:
+		Accessibility: Public
+		Return Type: System.TimeSpan
+		File Offset 0x01749C80
+		Ram Offset 0x18174ae80
+		Virtual Method Slot: 6
+
+	Method: get_CurrentState:
+		Accessibility: Public
+		Return Type: System.Runtime.Remoting.Lifetime.LeaseState
+		File Offset 0x00387EA0
+		Ram Offset 0x1803890a0
+		Virtual Method Slot: 7
+
+	Method: Activate:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01749CF0
+		Ram Offset 0x18174aef0
+		Virtual Method Slot: 65535
+
+	Method: get_RenewOnCallTime:
+		Accessibility: Public
+		Return Type: System.TimeSpan
+		File Offset 0x003A09A0
+		Ram Offset 0x1803a1ba0
+		Virtual Method Slot: 8
+
+	Method: Renew:
+		Accessibility: Public
+		Return Type: System.TimeSpan
+		File Offset 0x01749D00
+		Ram Offset 0x18174af00
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: renewalTime
+			Type: System.TimeSpan
+			Default Value: 
+	Method: Unregister:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01749DE0
+		Ram Offset 0x18174afe0
+		Virtual Method Slot: 10
+
+		Parameter 0:
+			Name: obj
+			Type: System.Runtime.Remoting.Lifetime.ISponsor
+			Default Value: 
+	Method: UpdateState:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0174A000
+		Ram Offset 0x18174b200
+		Virtual Method Slot: 65535
+
+	Method: CheckNextSponsor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0174A220
+		Ram Offset 0x18174b420
+		Virtual Method Slot: 65535
+
+	Method: ProcessSponsorResponse:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0174A4F0
+		Ram Offset 0x18174b6f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: timedOut
+			Type: System.Boolean
+			Default Value: 

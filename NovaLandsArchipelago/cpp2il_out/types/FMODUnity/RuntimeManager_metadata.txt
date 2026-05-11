@@ -1,0 +1,886 @@
+Type: FMODUnity.RuntimeManager:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Nested Types:
+		FMODUnity.RuntimeManager/LoadedBank
+		FMODUnity.RuntimeManager/GuidComparer
+		FMODUnity.RuntimeManager/AttachedInstance
+		FMODUnity.RuntimeManager/<>c__DisplayClass35_0
+		FMODUnity.RuntimeManager/<>c__DisplayClass36_0
+		FMODUnity.RuntimeManager/<>c__DisplayClass37_0
+		FMODUnity.RuntimeManager/<BanksToLoad>d__55
+
+	Static Field: initException
+		Type: FMODUnity.SystemNotInitializedException
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: BankStubPrefix
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: bank stub:
+
+	Static Field: instance
+		Type: FMODUnity.RuntimeManager
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: Listeners
+		Type: System.Collections.Generic.List`1<FMODUnity.StudioListener>
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: numListeners
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: currentPlatform
+		Type: FMODUnity.Platform
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: debugCallback
+		Type: FMOD.DEBUG_CALLBACK
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: errorCallback
+		Type: FMOD.SYSTEM_CALLBACK
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: studioSystem
+		Type: FMOD.Studio.System
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: coreSystem
+		Type: FMOD.System
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: mixerHead
+		Type: FMOD.DSP
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: loadedBanks
+		Type: System.Collections.Generic.Dictionary`2<System.String,FMODUnity.RuntimeManager/LoadedBank>
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: sampleLoadRequests
+		Type: System.Collections.Generic.List`1<System.String>
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: cachedDescriptions
+		Type: System.Collections.Generic.Dictionary`2<System.Guid,FMOD.Studio.EventDescription>
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: activeEmitters
+		Type: System.Collections.Generic.List`1<FMODUnity.StudioEventEmitter>
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: attachedInstances
+		Type: System.Collections.Generic.List`1<FMODUnity.RuntimeManager/AttachedInstance>
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: listenerWarningIssued
+		Type: System.Boolean
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: isOverlayEnabled
+		Type: System.Boolean
+		Offset in Defining Type: 0x79
+		Has Default: False
+
+	Field: overlayDrawer
+		Type: FMODUnity.FMODRuntimeManagerOnGUIHelper
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: windowRect
+		Type: UnityEngine.Rect
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: lastDebugText
+		Type: System.String
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: lastDebugUpdate
+		Type: System.Single
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Method: DEBUG_CALLBACK:
+		Accessibility: Private
+		Return Type: FMOD.RESULT
+		File Offset 0x00CB5CD0
+		Ram Offset 0x180cb6ed0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: flags
+			Type: FMOD.DEBUG_FLAGS
+			Default Value: 
+		Parameter 1:
+			Name: filePtr
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 2:
+			Name: line
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: funcPtr
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 4:
+			Name: messagePtr
+			Type: System.IntPtr
+			Default Value: 
+	Method: ERROR_CALLBACK:
+		Accessibility: Private
+		Return Type: FMOD.RESULT
+		File Offset 0x00CB5E40
+		Ram Offset 0x180cb7040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: system
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: type
+			Type: FMOD.SYSTEM_CALLBACK_TYPE
+			Default Value: 
+		Parameter 2:
+			Name: commanddata1
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 3:
+			Name: commanddata2
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 4:
+			Name: userdata
+			Type: System.IntPtr
+			Default Value: 
+	Method: get_Instance:
+		Accessibility: Private
+		Return Type: FMODUnity.RuntimeManager
+		File Offset 0x00CB6200
+		Ram Offset 0x180cb7400
+		Virtual Method Slot: 65535
+
+	Method: get_StudioSystem:
+		Accessibility: Public
+		Return Type: FMOD.Studio.System
+		File Offset 0x00CB6900
+		Ram Offset 0x180cb7b00
+		Virtual Method Slot: 65535
+
+	Method: get_CoreSystem:
+		Accessibility: Public
+		Return Type: FMOD.System
+		File Offset 0x00CB6950
+		Ram Offset 0x180cb7b50
+		Virtual Method Slot: 65535
+
+	Method: CheckInitResult:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CB69A0
+		Ram Offset 0x180cb7ba0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: FMOD.RESULT
+			Default Value: 
+		Parameter 1:
+			Name: cause
+			Type: System.String
+			Default Value: 
+	Method: ReleaseStudioSystem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CB6A10
+		Ram Offset 0x180cb7c10
+		Virtual Method Slot: 65535
+
+	Method: Initialize:
+		Accessibility: Private
+		Return Type: FMOD.RESULT
+		File Offset 0x00CB6A50
+		Ram Offset 0x180cb7c50
+		Virtual Method Slot: 65535
+
+	Method: SetThreadAffinities:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CB7DD0
+		Ram Offset 0x180cb8fd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: platform
+			Type: FMODUnity.Platform
+			Default Value: 
+	Method: AddListener:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00CB8140
+		Ram Offset 0x180cb9340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: listener
+			Type: FMODUnity.StudioListener
+			Default Value: 
+	Method: RemoveListener:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00CB8740
+		Ram Offset 0x180cb9940
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: listener
+			Type: FMODUnity.StudioListener
+			Default Value: 
+	Method: Update:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CB8B00
+		Ram Offset 0x180cb9d00
+		Virtual Method Slot: 65535
+
+	Method: RegisterActiveEmitter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CB9660
+		Ram Offset 0x180cba860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: emitter
+			Type: FMODUnity.StudioEventEmitter
+			Default Value: 
+	Method: DeregisterActiveEmitter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CB97A0
+		Ram Offset 0x180cba9a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: emitter
+			Type: FMODUnity.StudioEventEmitter
+			Default Value: 
+	Method: UpdateActiveEmitter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CB9820
+		Ram Offset 0x180cbaa20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: emitter
+			Type: FMODUnity.StudioEventEmitter
+			Default Value: 
+		Parameter 1:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+	Method: AttachInstanceToGameObject:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CB9C50
+		Ram Offset 0x180cbae50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instance
+			Type: FMOD.Studio.EventInstance
+			Default Value: 
+		Parameter 1:
+			Name: transform
+			Type: UnityEngine.Transform
+			Default Value: 
+	Method: AttachInstanceToGameObject:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CB9ED0
+		Ram Offset 0x180cbb0d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instance
+			Type: FMOD.Studio.EventInstance
+			Default Value: 
+		Parameter 1:
+			Name: transform
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: rigidBody
+			Type: UnityEngine.Rigidbody
+			Default Value: 
+	Method: AttachInstanceToGameObject:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBA1D0
+		Ram Offset 0x180cbb3d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instance
+			Type: FMOD.Studio.EventInstance
+			Default Value: 
+		Parameter 1:
+			Name: transform
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: rigidBody2D
+			Type: UnityEngine.Rigidbody2D
+			Default Value: 
+	Method: DetachInstanceFromGameObject:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBA4D0
+		Ram Offset 0x180cbb6d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instance
+			Type: FMOD.Studio.EventInstance
+			Default Value: 
+	Method: ExecuteOnGUI:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBA620
+		Ram Offset 0x180cbb820
+		Virtual Method Slot: 65535
+
+	Method: Start:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CBA890
+		Ram Offset 0x180cbba90
+		Virtual Method Slot: 65535
+
+	Method: DrawDebugOverlay:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CBA930
+		Ram Offset 0x180cbbb30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowID
+			Type: System.Int32
+			Default Value: 
+	Method: OnDestroy:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CBB310
+		Ram Offset 0x180cbc510
+		Virtual Method Slot: 65535
+
+	Method: OnApplicationPause:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CBB470
+		Ram Offset 0x180cbc670
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pauseStatus
+			Type: System.Boolean
+			Default Value: 
+	Method: loadedBankRegister:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CBB640
+		Ram Offset 0x180cbc840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: loadedBank
+			Type: FMODUnity.RuntimeManager/LoadedBank
+			Default Value: 
+		Parameter 1:
+			Name: bankPath
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: bankName
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: loadSamples
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: loadResult
+			Type: FMOD.RESULT
+			Default Value: 
+	Method: ExecuteSampleLoadRequestsIfReady:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CBB790
+		Ram Offset 0x180cbc990
+		Virtual Method Slot: 65535
+
+	Method: LoadBank:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBBB90
+		Ram Offset 0x180cbcd90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bankName
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: loadSamples
+			Type: System.Boolean
+			Default Value: False
+	Method: LoadBank:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBC0D0
+		Ram Offset 0x180cbd2d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: asset
+			Type: UnityEngine.TextAsset
+			Default Value: 
+		Parameter 1:
+			Name: loadSamples
+			Type: System.Boolean
+			Default Value: False
+	Method: LoadBanks:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CBC440
+		Ram Offset 0x180cbd640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fmodSettings
+			Type: FMODUnity.Settings
+			Default Value: 
+	Method: BanksToLoad:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.IEnumerable`1<System.String>
+		File Offset 0x00CBC750
+		Ram Offset 0x180cbd950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fmodSettings
+			Type: FMODUnity.Settings
+			Default Value: 
+	Method: UnloadBank:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBC7F0
+		Ram Offset 0x180cbd9f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bankName
+			Type: System.String
+			Default Value: 
+	Method: AnyBankLoading:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00CBC9D0
+		Ram Offset 0x180cbdbd0
+		Virtual Method Slot: 65535
+
+	Method: WaitForAllLoads:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBCCC0
+		Ram Offset 0x180cbdec0
+		Virtual Method Slot: 65535
+
+	Method: PathToGUID:
+		Accessibility: Public
+		Return Type: System.Guid
+		File Offset 0x00CBCD20
+		Ram Offset 0x180cbdf20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+	Method: CreateInstance:
+		Accessibility: Public
+		Return Type: FMOD.Studio.EventInstance
+		File Offset 0x00CBCE40
+		Ram Offset 0x180cbe040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+	Method: CreateInstance:
+		Accessibility: Public
+		Return Type: FMOD.Studio.EventInstance
+		File Offset 0x00CBCEF0
+		Ram Offset 0x180cbe0f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: guid
+			Type: System.Guid
+			Default Value: 
+	Method: PlayOneShotWithParameter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBCFD0
+		Ram Offset 0x180cbe1d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: paramName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: val
+			Type: System.Single
+			Default Value: 
+		Parameter 3:
+			Name: position
+			Type: UnityEngine.Vector3
+			Default Value: 
+	Method: PlayOneShotWithParameter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBD310
+		Ram Offset 0x180cbe510
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: guid
+			Type: System.Guid
+			Default Value: 
+		Parameter 1:
+			Name: paramName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: val
+			Type: System.Single
+			Default Value: 
+		Parameter 3:
+			Name: position
+			Type: UnityEngine.Vector3
+			Default Value: 
+	Method: PlayOneShot:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBD5D0
+		Ram Offset 0x180cbe7d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: position
+			Type: UnityEngine.Vector3
+			Default Value: 
+	Method: PlayOneShot:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBD6B0
+		Ram Offset 0x180cbe8b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: guid
+			Type: System.Guid
+			Default Value: 
+		Parameter 1:
+			Name: position
+			Type: UnityEngine.Vector3
+			Default Value: 
+	Method: PlayOneShotAttached:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBD940
+		Ram Offset 0x180cbeb40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: gameObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: PlayOneShotAttached:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBDBA0
+		Ram Offset 0x180cbeda0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: guid
+			Type: System.Guid
+			Default Value: 
+		Parameter 1:
+			Name: gameObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: GetEventDescription:
+		Accessibility: Public
+		Return Type: FMOD.Studio.EventDescription
+		File Offset 0x00CBDD60
+		Ram Offset 0x180cbef60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+	Method: GetEventDescription:
+		Accessibility: Public
+		Return Type: FMOD.Studio.EventDescription
+		File Offset 0x00CBDE10
+		Ram Offset 0x180cbf010
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: guid
+			Type: System.Guid
+			Default Value: 
+	Method: SetListenerLocation:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBE1A0
+		Ram Offset 0x180cbf3a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: gameObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 1:
+			Name: rigidBody
+			Type: UnityEngine.Rigidbody
+			Default Value: 
+		Parameter 2:
+			Name: attenuationObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: SetListenerLocation:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBE220
+		Ram Offset 0x180cbf420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: listenerIndex
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: gameObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 2:
+			Name: rigidBody
+			Type: UnityEngine.Rigidbody
+			Default Value: 
+		Parameter 3:
+			Name: attenuationObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: SetListenerLocation:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBE640
+		Ram Offset 0x180cbf840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: gameObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 1:
+			Name: rigidBody2D
+			Type: UnityEngine.Rigidbody2D
+			Default Value: 
+		Parameter 2:
+			Name: attenuationObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: SetListenerLocation:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBE6C0
+		Ram Offset 0x180cbf8c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: listenerIndex
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: gameObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 2:
+			Name: rigidBody2D
+			Type: UnityEngine.Rigidbody2D
+			Default Value: 
+		Parameter 3:
+			Name: attenuationObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: SetListenerLocation:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBEAE0
+		Ram Offset 0x180cbfce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: gameObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 1:
+			Name: attenuationObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: SetListenerLocation:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBEB40
+		Ram Offset 0x180cbfd40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: listenerIndex
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: gameObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 2:
+			Name: attenuationObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: GetBus:
+		Accessibility: Public
+		Return Type: FMOD.Studio.Bus
+		File Offset 0x00CBEF50
+		Ram Offset 0x180cc0150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+	Method: GetVCA:
+		Accessibility: Public
+		Return Type: FMOD.Studio.VCA
+		File Offset 0x00CBF050
+		Ram Offset 0x180cc0250
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+	Method: PauseAllEvents:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBF150
+		Ram Offset 0x180cc0350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: paused
+			Type: System.Boolean
+			Default Value: 
+	Method: MuteAllEvents:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBF2B0
+		Ram Offset 0x180cc04b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: muted
+			Type: System.Boolean
+			Default Value: 
+	Method: get_IsInitialized:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00CBF410
+		Ram Offset 0x180cc0610
+		Virtual Method Slot: 65535
+
+	Method: get_HasBanksLoaded:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00CBF540
+		Ram Offset 0x180cc0740
+		Virtual Method Slot: 65535
+
+	Method: HasBankLoaded:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00CBF5B0
+		Ram Offset 0x180cc07b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: loadedBank
+			Type: System.String
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CBF640
+		Ram Offset 0x180cc0840
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CBFAE0
+		Ram Offset 0x180cc0ce0
+		Virtual Method Slot: 65535

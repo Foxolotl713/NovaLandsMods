@@ -1,0 +1,39 @@
+Type: PlayerMap
+
+Method: System.Void Rewired.Demos.PressStartToJoinExample_Assigner/PlayerMap::.ctor(System.Int32,System.Int32):	Method Body (x86 ASM):
+		0x18099D980 mov [rcx+10h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RCX | 16 | None ||| N/A | N/A
+		0x18099D983 mov [rcx+14h],r8d		; DEBUG: {Memory}/None {Register}/R8D ||| RCX | 20 | None ||| N/A | N/A
+		0x18099D987 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18099D988 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.PressStartToJoinExample_Assigner/PlayerMap::.ctor(System.Int32,System.Int32):
+		End of function at 0x18099D989
+		Absolute End is at 0x18099D989
+		Identified Jump Destination addresses:
+
+		0x18099D980: [!] Sets the field rewiredPlayerId (Type System.Int32) on local {'this' (function parameter, type Rewired.Demos.PressStartToJoinExample_Assigner/PlayerMap)} to the value stored in {'rewiredPlayerId' (function parameter, type System.Int32)}
+		0x18099D983: [!] Sets the field gamePlayerId (Type System.Int32) on local {'this' (function parameter, type Rewired.Demos.PressStartToJoinExample_Assigner/PlayerMap)} to the value stored in {'gamePlayerId' (function parameter, type System.Int32)}
+		0x18099D987: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.PressStartToJoinExample_Assigner/PlayerMap
+	System.Void .ctor(System.Int32 rewiredPlayerId, System.Int32 gamePlayerId)
+		this.rewiredPlayerId = rewiredPlayerId
+		this.gamePlayerId = gamePlayerId
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldarg.1
+	IL_0002: stfld System.Int32 Rewired.Demos.PressStartToJoinExample_Assigner/PlayerMap::rewiredPlayerId
+	IL_0007: ldarg.0
+	IL_0008: ldarg.2
+	IL_0009: stfld System.Int32 Rewired.Demos.PressStartToJoinExample_Assigner/PlayerMap::gamePlayerId
+	IL_000e: ret
+	
+

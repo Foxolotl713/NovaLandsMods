@@ -1,0 +1,103 @@
+Type: <>c__DisplayClass76_0
+
+Method: System.Void AdvancedFarmPlotBuilding/<>c__DisplayClass76_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void AdvancedFarmPlotBuilding/<>c__DisplayClass76_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: AdvancedFarmPlotBuilding/<>c__DisplayClass76_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean AdvancedFarmPlotBuilding/<>c__DisplayClass76_0::<LoadDependentData>b__0(BaseBuilding):	Method Body (x86 ASM):
+		0x18059CEA0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18059CEA2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18059CEA6 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18059CEA9 je short 000000018059CED8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18059CEAB mov rcx,[rcx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x18059CEAF mov ebx,[rdx+360h]		; DEBUG: {Register}/EBX {Memory}/None ||| RDX | 864 | None ||| N/A | N/A
+		0x18059CEB5 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18059CEB8 je short 000000018059CED8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18059CEBA mov rdx,[rcx]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x18059CEBD mov rax,[rdx+258h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 600 | None ||| N/A | N/A
+		0x18059CEC4 mov rdx,[rdx+260h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 608 | None ||| N/A | N/A
+		0x18059CECB call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18059CECD cmp ebx,eax		; DEBUG: {Register}/EBX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18059CECF sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18059CED2 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18059CED6 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18059CED7 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18059CED8 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18059CEDD int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean AdvancedFarmPlotBuilding/<>c__DisplayClass76_0::<LoadDependentData>b__0(BaseBuilding):
+		End of function at 0x18059CEDE
+		Absolute End is at 0x18059CEDE
+		Identified Jump Destination addresses:
+
+		0x18059CEA0: Saves the content of rbx to the stack
+		0x18059CEA6: [!] Compares {'x' (function parameter, type BaseBuilding)} and 0
+		0x18059CEA9: Jumps to 0x18059CED8 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x18059CEAB: [!] Reads field f from {'this' (function parameter, type AdvancedFarmPlotBuilding/<>c__DisplayClass76_0)} and stores in a new local {'jSONNode' (type SimpleJSON.JSONNode)}
+
+		0x18059CEAF: [!] Reads field originalInstanceId from {'x' (function parameter, type BaseBuilding)} and stores in a new local {'originalInstanceId' (type System.Int32)}
+
+		0x18059CEB5: [!] Compares {'jSONNode' (type SimpleJSON.JSONNode)} and 0
+		0x18059CEB8: Jumps to 0x18059CED8 (which throws a NRE) if jSONNode equals 0. Implicitly present in managed code, so ignored here.
+		0x18059CEBA: Loads the class pointer from jSONNode into a constant constant3 in register rdx
+		0x18059CEBD: Loads the pointer to the implementation of virtual function System.Int32 SimpleJSON.JSONNode::get_AsInt() specific to SimpleJSON.JSONNode from the class pointer in rdx, slot 18 (from memory offset 600) and stores in constant constant4
+		0x18059CEC4: Loads the pointer to the implementation of virtual function System.Int32 SimpleJSON.JSONNode::get_AsInt() specific to SimpleJSON.JSONNode from the class pointer in rdx, slot 18 (from memory offset 608) and stores in constant constant5
+		0x18059CECB: [!] Calls managed method System.Int32 SimpleJSON.JSONNode::get_AsInt() on instance {'jSONNode' (type SimpleJSON.JSONNode)} and stores the result in {'asInt' (type System.Int32)}
+
+		0x18059CECD: [!] Compares {'originalInstanceId' (type System.Int32)} and {'asInt' (type System.Int32)}
+		0x18059CECF: [!] Sets the boolean {'local5' (type System.Boolean)} in rax to true if originalInstanceId is equal to asInt, otherwise false.
+		0x18059CED7: [!] Returns {'local5' (type System.Boolean)} from the function
+
+		0x18059CED8: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: AdvancedFarmPlotBuilding/<>c__DisplayClass76_0
+	System.Boolean <LoadDependentData>b__0(BaseBuilding x)
+		SimpleJSON.JSONNode jSONNode = this.f
+		System.Int32 originalInstanceId = x.originalInstanceId
+
+		System.Int32 asInt = jSONNode.AsInt
+		System.Boolean local5 = originalInstanceId == asInt
+		return local5
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld SimpleJSON.JSONNode AdvancedFarmPlotBuilding/<>c__DisplayClass76_0::f
+	IL_0006: stloc.0
+	IL_0007: ldarg.1
+	IL_0008: ldfld System.Int32 BaseBuilding::originalInstanceId
+	IL_000d: stloc.1
+	IL_000e: ldloc.0
+	IL_000f: call System.Int32 SimpleJSON.JSONNode::get_AsInt()
+	IL_0014: stloc.2
+	IL_0015: ldloc.1
+	IL_0016: ldloc.2
+	IL_0017: ceq
+	IL_0019: ret
+	IL_001a: newobj System.Void System.NullReferenceException::.ctor()
+	IL_001f: throw
+	
+

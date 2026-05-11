@@ -1,0 +1,331 @@
+Type: Delaunay.Site:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		Delaunay.ICoord
+		System.IComparable
+
+	Nested Types:
+		Delaunay.Site/<>c
+
+	Static Field: _pool
+		Type: System.Collections.Generic.Stack`1<Delaunay.Site>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: EPSILON
+		Type: System.Single
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Field: _coord
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: color
+		Type: System.UInt32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: weight
+		Type: System.Single
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: _siteIndex
+		Type: System.UInt32
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _edges
+		Type: System.Collections.Generic.List`1<Delaunay.Edge>
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _edgeOrientations
+		Type: System.Collections.Generic.List`1<Delaunay.LR.Side>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _region
+		Type: System.Collections.Generic.List`1<UnityEngine.Vector2>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Method: Create:
+		Accessibility: Public
+		Return Type: Delaunay.Site
+		File Offset 0x00915FF0
+		Ram Offset 0x1809171f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: p
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: weight
+			Type: System.Single
+			Default Value: 
+		Parameter 3:
+			Name: color
+			Type: System.UInt32
+			Default Value: 
+	Method: SortSites:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00916130
+		Ram Offset 0x180917330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sites
+			Type: System.Collections.Generic.List`1<Delaunay.Site>
+			Default Value: 
+	Method: CompareTo:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00916180
+		Ram Offset 0x180917380
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: obj
+			Type: System.Object
+			Default Value: 
+	Method: CloseEnough:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00916270
+		Ram Offset 0x180917470
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: p0
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: p1
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: get_Coord:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x00916300
+		Ram Offset 0x180917500
+		Virtual Method Slot: 4
+
+	Method: get_edges:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.List`1<Delaunay.Edge>
+		File Offset 0x003A7D00
+		Ram Offset 0x1803a8f00
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00916320
+		Ram Offset 0x180917520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: p
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: weight
+			Type: System.Single
+			Default Value: 
+		Parameter 3:
+			Name: color
+			Type: System.UInt32
+			Default Value: 
+	Method: Init:
+		Accessibility: Private
+		Return Type: Delaunay.Site
+		File Offset 0x00916330
+		Ram Offset 0x180917530
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: p
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: weight
+			Type: System.Single
+			Default Value: 
+		Parameter 3:
+			Name: color
+			Type: System.UInt32
+			Default Value: 
+	Method: ToString:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x00916480
+		Ram Offset 0x180917680
+		Virtual Method Slot: 3
+
+	Method: Move:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00916510
+		Ram Offset 0x180917710
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: p
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00916540
+		Ram Offset 0x180917740
+		Virtual Method Slot: 65535
+
+	Method: Clear:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009165D0
+		Ram Offset 0x1809177d0
+		Virtual Method Slot: 65535
+
+	Method: AddEdge:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00916770
+		Ram Offset 0x180917970
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: edge
+			Type: Delaunay.Edge
+			Default Value: 
+	Method: NearestEdge:
+		Accessibility: Public
+		Return Type: Delaunay.Edge
+		File Offset 0x009167C0
+		Ram Offset 0x1809179c0
+		Virtual Method Slot: 65535
+
+	Method: NeighborSites:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<Delaunay.Site>
+		File Offset 0x00916960
+		Ram Offset 0x180917b60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: reorderEdges
+			Type: System.Boolean
+			Default Value: True
+	Method: NeighborSite:
+		Accessibility: Private
+		Return Type: Delaunay.Site
+		File Offset 0x00916C10
+		Ram Offset 0x180917e10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: edge
+			Type: Delaunay.Edge
+			Default Value: 
+	Method: Region:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.List`1<UnityEngine.Vector2>
+		File Offset 0x00916D40
+		Ram Offset 0x180917f40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: clippingBounds
+			Type: UnityEngine.Rect
+			Default Value: 
+	Method: ReorderEdges:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00916EB0
+		Ram Offset 0x1809180b0
+		Virtual Method Slot: 65535
+
+	Method: ClipToBounds:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.List`1<UnityEngine.Vector2>
+		File Offset 0x00916FE0
+		Ram Offset 0x1809181e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bounds
+			Type: UnityEngine.Rect
+			Default Value: 
+	Method: Connect:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00917410
+		Ram Offset 0x180918610
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: points
+			Type: System.Collections.Generic.List`1<UnityEngine.Vector2>
+			Default Value: 
+		Parameter 1:
+			Name: j
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: bounds
+			Type: UnityEngine.Rect
+			Default Value: 
+		Parameter 3:
+			Name: closingUp
+			Type: System.Boolean
+			Default Value: False
+	Method: get_x:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00917CA0
+		Ram Offset 0x180918ea0
+		Virtual Method Slot: 65535
+
+	Method: get_y:
+		Accessibility: Assembly
+		Return Type: System.Single
+		File Offset 0x00917CB0
+		Ram Offset 0x180918eb0
+		Virtual Method Slot: 65535
+
+	Method: Dist:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00917CC0
+		Ram Offset 0x180918ec0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: p
+			Type: Delaunay.ICoord
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00917D30
+		Ram Offset 0x180918f30
+		Virtual Method Slot: 65535

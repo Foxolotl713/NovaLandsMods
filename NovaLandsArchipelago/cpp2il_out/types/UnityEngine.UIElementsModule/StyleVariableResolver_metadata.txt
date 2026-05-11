@@ -1,0 +1,246 @@
+Type: UnityEngine.UIElements.StyleVariableResolver:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		UnityEngine.UIElements.StyleVariableResolver/Result
+		UnityEngine.UIElements.StyleVariableResolver/ResolveContext
+
+	Static Field: kMaxResolves
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 100
+
+	Static Field: s_SyntaxParser
+		Type: UnityEngine.UIElements.StyleSheets.Syntax.StyleSyntaxParser
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: m_Matcher
+		Type: UnityEngine.UIElements.StyleSheets.StylePropertyValueMatcher
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_ResolvedValues
+		Type: System.Collections.Generic.List`1<UnityEngine.UIElements.StyleSheets.StylePropertyValue>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_ResolvedVarStack
+		Type: System.Collections.Generic.Stack`1<System.String>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_Property
+		Type: UnityEngine.UIElements.StyleProperty
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_ContextStack
+		Type: System.Collections.Generic.Stack`1<UnityEngine.UIElements.StyleVariableResolver/ResolveContext>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_CurrentContext
+		Type: UnityEngine.UIElements.StyleVariableResolver/ResolveContext
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: <variableContext>k__BackingField
+		Type: UnityEngine.UIElements.StyleVariableContext
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Method: get_currentSheet:
+		Accessibility: Private
+		Return Type: UnityEngine.UIElements.StyleSheet
+		File Offset 0x004E1440
+		Ram Offset 0x1804e2640
+		Virtual Method Slot: 65535
+
+	Method: get_currentHandles:
+		Accessibility: Private
+		Return Type: UnityEngine.UIElements.StyleValueHandle[]
+		File Offset 0x0051A3F0
+		Ram Offset 0x18051b5f0
+		Virtual Method Slot: 65535
+
+	Method: get_resolvedValues:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<UnityEngine.UIElements.StyleSheets.StylePropertyValue>
+		File Offset 0x00379690
+		Ram Offset 0x18037a890
+		Virtual Method Slot: 65535
+
+	Method: get_variableContext:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.StyleVariableContext
+		File Offset 0x003F4770
+		Ram Offset 0x1803f5970
+		Virtual Method Slot: 65535
+
+	Method: set_variableContext:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00998D30
+		Ram Offset 0x180999f30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UIElements.StyleVariableContext
+			Default Value: 
+	Method: Init:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02759C30
+		Ram Offset 0x18275ae30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: property
+			Type: UnityEngine.UIElements.StyleProperty
+			Default Value: 
+		Parameter 1:
+			Name: sheet
+			Type: UnityEngine.UIElements.StyleSheet
+			Default Value: 
+		Parameter 2:
+			Name: handles
+			Type: UnityEngine.UIElements.StyleValueHandle[]
+			Default Value: 
+	Method: PushContext:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02759D60
+		Ram Offset 0x18275af60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sheet
+			Type: UnityEngine.UIElements.StyleSheet
+			Default Value: 
+		Parameter 1:
+			Name: handles
+			Type: UnityEngine.UIElements.StyleValueHandle[]
+			Default Value: 
+	Method: PopContext:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02759FA0
+		Ram Offset 0x18275b1a0
+		Virtual Method Slot: 65535
+
+	Method: AddValue:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0275A170
+		Ram Offset 0x18275b370
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: UnityEngine.UIElements.StyleValueHandle
+			Default Value: 
+	Method: ResolveVarFunction:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0275A240
+		Ram Offset 0x18275b440
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: ResolveVarFunction:
+		Accessibility: Private
+		Return Type: UnityEngine.UIElements.StyleVariableResolver/Result
+		File Offset 0x0275A3C0
+		Ram Offset 0x18275b5c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: argc
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: varName
+			Type: System.String
+			Default Value: 
+	Method: ValidateResolvedValues:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0275A500
+		Ram Offset 0x18275b700
+		Virtual Method Slot: 65535
+
+	Method: ResolveVariable:
+		Accessibility: Private
+		Return Type: UnityEngine.UIElements.StyleVariableResolver/Result
+		File Offset 0x0275A6D0
+		Ram Offset 0x18275b8d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: variableName
+			Type: System.String
+			Default Value: 
+	Method: ResolveFallback:
+		Accessibility: Private
+		Return Type: UnityEngine.UIElements.StyleVariableResolver/Result
+		File Offset 0x0275AB80
+		Ram Offset 0x18275bd80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: ParseVarFunction:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0275AE90
+		Ram Offset 0x18275c090
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sheet
+			Type: UnityEngine.UIElements.StyleSheet
+			Default Value: 
+		Parameter 1:
+			Name: handles
+			Type: UnityEngine.UIElements.StyleValueHandle[]
+			Default Value: 
+		Parameter 2:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: argCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: variableName
+			Type: System.String
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0275AF80
+		Ram Offset 0x18275c180
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0275B380
+		Ram Offset 0x18275c580
+		Virtual Method Slot: 65535

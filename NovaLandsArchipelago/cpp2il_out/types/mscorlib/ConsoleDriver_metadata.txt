@@ -1,0 +1,127 @@
+Type: System.ConsoleDriver:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: driver
+		Type: System.IConsoleDriver
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: is_console
+		Type: System.Boolean
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: called_isatty
+		Type: System.Boolean
+		Offset in Defining Type: 0x9
+		Has Default: False
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x018F58F0
+		Ram Offset 0x1818f6af0
+		Virtual Method Slot: 65535
+
+	Method: CreateNullConsoleDriver:
+		Accessibility: Private
+		Return Type: System.IConsoleDriver
+		File Offset 0x018F5A30
+		Ram Offset 0x1818f6c30
+		Virtual Method Slot: 65535
+
+	Method: CreateWindowsConsoleDriver:
+		Accessibility: Private
+		Return Type: System.IConsoleDriver
+		File Offset 0x018F5A60
+		Ram Offset 0x1818f6c60
+		Virtual Method Slot: 65535
+
+	Method: CreateTermInfoDriver:
+		Accessibility: Private
+		Return Type: System.IConsoleDriver
+		File Offset 0x018F5B60
+		Ram Offset 0x1818f6d60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: term
+			Type: System.String
+			Default Value: 
+	Method: ReadKey:
+		Accessibility: Public
+		Return Type: System.ConsoleKeyInfo
+		File Offset 0x018F5BC0
+		Ram Offset 0x1818f6dc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: intercept
+			Type: System.Boolean
+			Default Value: 
+	Method: get_IsConsole:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x018F5CD0
+		Ram Offset 0x1818f6ed0
+		Virtual Method Slot: 65535
+
+	Method: Isatty:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x018F5E40
+		Ram Offset 0x1818f7040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+	Method: InternalKeyAvailable:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x00380910
+		Ram Offset 0x180381b10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ms_timeout
+			Type: System.Int32
+			Default Value: 
+	Method: TtySetup:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x018F5F10
+		Ram Offset 0x1818f7110
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: keypadXmit
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: teardown
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: control_characters
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 3:
+			Name: address
+			Type: System.Int32*
+			Default Value: 
+	Method: SetEcho:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: wantEcho
+			Type: System.Boolean
+			Default Value: 

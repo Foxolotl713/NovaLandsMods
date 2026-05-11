@@ -1,0 +1,1115 @@
+Type: PlayerHouseInteriorWorldArea
+
+Method: System.Void PlayerHouseInteriorWorldArea::Start():	Method Body (x86 ASM):
+		0x1807DF5C0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF5C2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807DF5C6 mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1807DF5C9 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF5CC mov rdx,[rax+1D0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 464 | None ||| N/A | N/A
+		0x1807DF5D3 call qword ptr [rax+1C8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 456 | None ||| N/A | N/A
+		0x1807DF5D9 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF5DB mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF5DE add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807DF5E2 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF5E3 jmp near ptr 00000001807DF5F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF5E8 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PlayerHouseInteriorWorldArea::Start():
+		End of function at 0x1807DF5E9
+		Absolute End is at 0x1807DF5E9
+		Identified Jump Destination addresses:
+
+		0x1807DF5C0: Saves the content of rbx to the stack
+		0x1807DF5C6: Loads the class pointer from this into a constant constant1 in register rax
+		0x1807DF5C9: Copies {'this' (function parameter, type PlayerHouseInteriorWorldArea)} from rcx into rbx
+		0x1807DF5CC: Loads the pointer to the implementation of virtual function System.Void WorldArea::StartRegenerateCoroutine() specific to PlayerHouseInteriorWorldArea from the class pointer in rax, slot 9 (from memory offset 464) and stores in constant constant2
+		0x1807DF5D3: [!] Calls managed method System.Void WorldArea::StartRegenerateCoroutine() on instance {'this' (function parameter, type PlayerHouseInteriorWorldArea)}
+
+		0x1807DF5DB: Copies {'this' (function parameter, type PlayerHouseInteriorWorldArea)} from rbx into rcx
+		0x1807DF5E3: [!] Calls managed method System.Void PlayerHouseInteriorWorldArea::InitPrepositionedBuildings() on instance {'this' (function parameter, type PlayerHouseInteriorWorldArea)}
+
+		0x1807DF5E3: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerHouseInteriorWorldArea
+	System.Void Start()
+
+		this.StartRegenerateCoroutine()
+
+		this.InitPrepositionedBuildings()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: callvirt System.Void WorldArea::StartRegenerateCoroutine()
+	IL_0006: ldarg.0
+	IL_0007: call System.Void PlayerHouseInteriorWorldArea::InitPrepositionedBuildings()
+	IL_000c: ret
+	
+
+Method: System.Void PlayerHouseInteriorWorldArea::InitPrepositionedBuildings():	Method Body (x86 ASM):
+		0x1807DF5F0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1807DF5F5 mov [rsp+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 16 | None ||| N/A | N/A
+		0x1807DF5FA push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF5FB sub rsp,70h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 112
+		0x1807DF5FF mov rsi,rcx		; DEBUG: {Register}/RSI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF602 cmp byte ptr [18329B46Fh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515759 | None ||| N/A | 0
+		0x1807DF609 jne short 00000001807DF64Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF60B lea rcx,[1830FD818h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493820952 | None ||| N/A | N/A
+		0x1807DF612 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF617 lea rcx,[1830FD800h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493820928 | None ||| N/A | N/A
+		0x1807DF61E call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF623 lea rcx,[1830FD7F0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493820912 | None ||| N/A | N/A
+		0x1807DF62A call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF62F lea rcx,[1830FD7C8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493820872 | None ||| N/A | N/A
+		0x1807DF636 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF63B lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807DF642 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF647 mov byte ptr [18329B46Fh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515759 | None ||| N/A | 1
+		0x1807DF64E mov r9,[rsi+1D8h]		; DEBUG: {Register}/R9 {Memory}/None ||| RSI | 472 | None ||| N/A | N/A
+		0x1807DF655 test r9,r9		; DEBUG: {Register}/R9 {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x1807DF658 je near ptr 00000001807DF7F8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF65E xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1807DF661 movdqu [rsp+40h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 64 | None ||| N/A | N/A
+		0x1807DF667 mov [rsp+38h],r9		; DEBUG: {Memory}/None {Register}/R9 ||| RSP | 56 | None ||| N/A | N/A
+		0x1807DF66C cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1807DF673 je short 00000001807DF6B1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF675 lea r8,[rsp+38h]		; DEBUG: {Register}/R8 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1807DF67A shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1807DF67E and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1807DF685 mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807DF688 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1807DF68C lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x1807DF693 lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x1807DF697 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1807DF69B prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1807DF69E xchg ax,ax		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF6A0 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1807DF6A3 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF6A6 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1807DF6AA lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x1807DF6AF jne short 00000001807DF6A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF6B1 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF6B3 mov [rsp+40h],ecx		; DEBUG: {Memory}/None {Register}/ECX ||| RSP | 64 | None ||| N/A | N/A
+		0x1807DF6B7 mov eax,[r9+1Ch]		; DEBUG: {Register}/EAX {Memory}/None ||| R9 | 28 | None ||| N/A | N/A
+		0x1807DF6BB mov [rsp+44h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 68 | None ||| N/A | N/A
+		0x1807DF6BF xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF6C1 mov [rsp+48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 72 | None ||| N/A | N/A
+		0x1807DF6C6 movups xmm0,[rsp+38h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1807DF6CB movups [rsp+50h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 80 | None ||| N/A | N/A
+		0x1807DF6D0 movsd xmm1,qword ptr [rsp+48h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x1807DF6D6 movsd qword ptr [rsp+60h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 96 | None ||| N/A | N/A
+		0x1807DF6DC mov [rsp+28h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RSP | 40 | None ||| N/A | N/A
+		0x1807DF6E1 lea rax,[rsp+50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1807DF6E6 mov [rsp+30h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 48 | None ||| N/A | N/A
+		0x1807DF6EB nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x1807DF6F0 mov rdx,[1830FD800h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493820928 | None ||| N/A | N/A
+		0x1807DF6F7 lea rcx,[rsp+50h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1807DF6FC call 0000000181058730h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF701 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1807DF703 je near ptr 00000001807DF7C8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF709 mov rbx,[rsp+60h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x1807DF70E test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF711 je near ptr 00000001807DF7ECh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF717 mov rdi,[rbx+450h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 1104 | None ||| N/A | N/A
+		0x1807DF71E mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807DF725 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1807DF72C jne short 00000001807DF733h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF72E call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF733 cmp byte ptr [1832A9FABh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 0
+		0x1807DF73A jne short 00000001807DF74Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF73C lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807DF743 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF748 mov byte ptr [1832A9FABh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 1
+		0x1807DF74F mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807DF756 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1807DF75D jne short 00000001807DF764h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF75F call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF764 cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x1807DF76B jne short 00000001807DF780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF76D lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807DF774 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF779 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x1807DF780 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1807DF783 je short 00000001807DF7A5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF785 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807DF78C cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1807DF793 jne short 00000001807DF79Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF795 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF79A cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x1807DF79F jne near ptr 00000001807DF6F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF7A5 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF7A8 je short 00000001807DF7E6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF7AA mov r8,[rbx]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x1807DF7AD mov rax,[r8+248h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 584 | None ||| N/A | N/A
+		0x1807DF7B4 mov r8,[r8+250h]		; DEBUG: {Register}/R8 {Memory}/None ||| R8 | 592 | None ||| N/A | N/A
+		0x1807DF7BB mov rdx,rsi		; DEBUG: {Register}/RDX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1807DF7BE mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF7C1 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF7C3 jmp near ptr 00000001807DF6F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF7C8 jmp short 00000001807DF7D4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF7CA mov rcx,[rsp+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 40 | None ||| N/A | N/A
+		0x1807DF7CF test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF7D2 jne short 00000001807DF7F2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF7D4 lea r11,[rsp+70h]		; DEBUG: {Register}/R11 {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x1807DF7D9 mov rbx,[r11+10h]		; DEBUG: {Register}/RBX {Memory}/None ||| R11 | 16 | None ||| N/A | N/A
+		0x1807DF7DD mov rsi,[r11+18h]		; DEBUG: {Register}/RSI {Memory}/None ||| R11 | 24 | None ||| N/A | N/A
+		0x1807DF7E1 mov rsp,r11		; DEBUG: {Register}/RSP {Register}/R11 ||| None | 0 | None ||| N/A | N/A
+		0x1807DF7E4 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF7E5 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF7E6 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF7EB nop		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF7EC call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF7F1 nop		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF7F2 call 00000001802C4E80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF7F7 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PlayerHouseInteriorWorldArea::InitPrepositionedBuildings():
+		End of function at 0x1807DF7F8
+		Absolute End is at 0x1807DF7F8
+		Identified Jump Destination addresses:
+			0x1807DF7D4
+		0x1807DF5FA: Saves the content of rdi to the stack
+		0x1807DF5FF: Copies {'this' (function parameter, type PlayerHouseInteriorWorldArea)} from rcx into rsi
+		0x1807DF602: Compares {Unknown Global at 0x18329B46F, first ten bytes are [0 237 253 3 0 144 104 234 2 240], or as chars " íý hêð"} and 0
+		0x1807DF609: Jumps to 0x1807DF64E if {Unknown Global at 0x18329B46F, first ten bytes are [0 237 253 3 0 144 104 234 2 240], or as chars " íý hêð"} != 0
+
+		0x1807DF60B: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1/Enumerator::Dispose() on type System.Collections.Generic.List`1/Enumerator<BaseBuilding> and stores the result in constant {'Dispose' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1807DF612: Initializes runtime metadata value 
+		0x1807DF617: Loads the global generic method reference for method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on type System.Collections.Generic.List`1/Enumerator<BaseBuilding> and stores the result in constant {'MoveNext' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1807DF61E: Initializes runtime metadata value 
+		0x1807DF623: Loads the global generic method reference for method T System.Collections.Generic.List`1/Enumerator::get_Current() on type System.Collections.Generic.List`1/Enumerator<BaseBuilding> and stores the result in constant {'get_Current' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1807DF62A: Initializes runtime metadata value 
+		0x1807DF62F: Loads the global generic method reference for method System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1::GetEnumerator() on type System.Collections.Generic.List`1<BaseBuilding> and stores the result in constant {'GetEnumerator' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1807DF636: Initializes runtime metadata value 
+		0x1807DF63B: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807DF642: Initializes runtime metadata value UnityEngine.Object
+		0x1807DF64E: [!] Reads field playerBuildings from {'this' (function parameter, type PlayerHouseInteriorWorldArea)} and stores in a new local {'playerBuildings' (type System.Collections.Generic.List`1<BaseBuilding>)}
+
+		0x1807DF655: [!] Compares {'playerBuildings' (type System.Collections.Generic.List`1<BaseBuilding>)} and 0
+		0x1807DF658: Jumps to 0x1807DF7F8 (which throws a NRE) if playerBuildings equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DF667: Moves playerBuildings (type System.Collections.Generic.List`1<BaseBuilding>) from register r9 to the stack at offset 56 (0x38)
+		0x1807DF66C: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1807DF673: Jumps to 0x1807DF6B1 if constant9 equals 0
+
+		0x1807DF675: Loads a pointer to stack offset 0x38 into register r8 as new constant constant11
+		0x1807DF685: Copies {'constant11' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r8 into rax
+		0x1807DF68C: Loads string "¡
+m" into register rcx as constant {'constant12' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1807DF6A0: Loads the class pointer from il2cppMethodInfo into a constant constant13 in register rax
+		0x1807DF6A3: Copies {'constant13' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x1807DF6AF: Jumps to 0x1807DF6A0 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x1807DF6B1: Clears register rcx, yielding zero-local {'local3' (type System.Int32)}
+		0x1807DF6B3: Moves local3 (type System.Int32) from register rcx to the stack at offset 64 (0x40)
+		0x1807DF6B7: [!] Reads field _version from {'playerBuildings' (type System.Collections.Generic.List`1<BaseBuilding>)} and stores in a new local {'_version' (type System.Int32)}
+
+		0x1807DF6BB: Moves _version (type System.Int32) from register rax to the stack at offset 68 (0x44)
+		0x1807DF6BF: Clears register rax, yielding zero-local {'local5' (type System.Int32)}
+		0x1807DF6C1: Moves local5 (type System.Int32) from register rax to the stack at offset 72 (0x48)
+		0x1807DF6C6: Reads local {'playerBuildings' (type System.Collections.Generic.List`1<BaseBuilding>)} from stack offset 56 (0x38) into register xmm0
+		0x1807DF6CB: Moves playerBuildings (type System.Collections.Generic.List`1<BaseBuilding>) from register xmm0 to the stack at offset 80 (0x50)
+		0x1807DF6DC: Moves local3 (type System.Int32) from register rcx to the stack at offset 40 (0x28)
+		0x1807DF6E1: Loads a pointer to stack offset 0x50 into register rax as new constant constant14
+		0x1807DF6E6: Moves constant14 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register rax to the stack at offset 48 (0x30) as a new local local6
+
+		Potential Loop Start (0x1807DF6F0):
+		0x1807DF6F0: Loads the global generic method reference for method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on type System.Collections.Generic.List`1/Enumerator<BaseBuilding> and stores the result in constant {'MoveNext' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x1807DF6F7: Loads a pointer to stack offset 0x50 into register rcx as new constant constant16
+		0x1807DF6FC: [!] Calls managed method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on instance  and stores the result in {'boolean' (type System.Boolean)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x1807DF701: [!] Compares {'boolean' (type System.Boolean)} and False
+		0x1807DF703: Jumps to 0x1807DF7C8 (which is an if statement's body) if boolean equals False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1807DF709: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register rbx as new constant constant18
+		0x1807DF70E: [!] Compares {'constant18' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and 0
+		0x1807DF711: Jumps to 0x1807DF7EC (which throws a NRE) if constant18 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DF71E: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807DF725: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1807DF72C: Jumps to 0x1807DF733 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1807DF72E: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1807DF733: Compares {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} and 0
+		0x1807DF73A: Jumps to 0x1807DF74F if {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} != 0
+
+		0x1807DF73C: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807DF743: Initializes runtime metadata value UnityEngine.Object
+		0x1807DF74F: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807DF756: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1807DF75D: Jumps to 0x1807DF764 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1807DF75F: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1807DF764: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x1807DF76B: Jumps to 0x1807DF780 if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x1807DF76D: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807DF774: Initializes runtime metadata value UnityEngine.Object
+		0x1807DF780: [!] Compares  and 0
+		0x1807DF783: Jumps to 0x1807DF7A5 (which is an if statement's body) if  equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1807DF785: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807DF78C: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1807DF793: Jumps to 0x1807DF79A if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1807DF795: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1807DF79A: [!] Compares  and 0
+		0x1807DF79F: Jumps to 0x1807DF6F0 (which is an if statement's body) if  != 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1807DF7A5: [!] Compares {'constant18' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and 0
+		0x1807DF7A8: Jumps to 0x1807DF7E6 (which throws a NRE) if constant18 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DF7BB: Copies {'this' (function parameter, type PlayerHouseInteriorWorldArea)} from rsi into rdx
+		0x1807DF7BE: Copies {'constant18' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rbx into rcx
+		0x1807DF7C3: Jumps to 0x1807DF6F0 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x1807DF7C8: Jumps to 0x1807DF7D4 (which is an function-local jump destination)
+
+		0x1807DF7CA: Reads local {'local3' (type System.Int32)} from stack offset 40 (0x28) into register rcx
+		0x1807DF7CF: [!] Compares {'local3' (type System.Int32)} and 0
+		0x1807DF7D2: Jumps to 0x1807DF7F2 if {'local3' (type System.Int32)} != 0 ;  - This is probably a goto, jumping to 0x1807DF7F2 which is after end of current block @ 0x1807DF6F0 (started at 0x1807DF7A5)
+
+
+		Jump Destination (0x1807DF7D4):
+		0x1807DF7D4: Loads a pointer to stack offset 0x70 into register r11 as new constant constant39
+		0x1807DF7E1: Copies {'constant39' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r11 into rsp
+		0x1807DF7E5: [!] Returns from the function
+
+		0x1807DF7E6: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1807DF7EC: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerHouseInteriorWorldArea
+	System.Void InitPrepositionedBuildings()
+		System.Collections.Generic.List`1<BaseBuilding> playerBuildings = this.playerBuildings
+		ulong local3 = 0
+		System.Int32 _version = playerBuildings._version
+		ulong local5 = 0
+
+		System.Boolean boolean = .MoveNext()
+
+		if (boolean != False)
+
+		    if ( != 0)
+
+		        if ( == 0)
+		        endif
+                
+		    endif
+            
+
+		    if (local3 != 0)
+                goto INSN_1807DF7F2
+            endif
+		    return
+		    throw new System.NullReferenceException()
+		    throw new System.NullReferenceException()
+
+		    INSN_1807DF7F2:
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionAction at (0x1807DF6FC) is corrupt (Method is non-static but don't have an instance) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void PlayerHouseInteriorWorldArea::ActivateArea():	Method Body (x86 ASM):
+		0x1807DF800 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF802 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807DF806 cmp byte ptr [18329B470h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515760 | None ||| N/A | 0
+		0x1807DF80D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF810 jne short 00000001807DF825h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF812 lea rcx,[1830FBBA0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813664 | None ||| N/A | N/A
+		0x1807DF819 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF81E mov byte ptr [18329B470h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515760 | None ||| N/A | 1
+		0x1807DF825 cmp byte ptr [183298864h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504484 | None ||| N/A | 0
+		0x1807DF82C jne short 00000001807DF841h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF82E lea rcx,[1830FB6B0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493812400 | None ||| N/A | N/A
+		0x1807DF835 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF83A mov byte ptr [183298864h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504484 | None ||| N/A | 1
+		0x1807DF841 mov rax,[1830FB6B0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493812400 | None ||| N/A | N/A
+		0x1807DF848 mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1807DF84F mov rax,[rcx+8]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 8 | None ||| N/A | N/A
+		0x1807DF853 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF856 je short 00000001807DF8D7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF858 mov rax,[rax+0C8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RAX | 200 | None ||| N/A | N/A
+		0x1807DF85F test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF862 je short 00000001807DF8D7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF864 cmp dword ptr [rax+18h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 24 | None ||| N/A | 0
+		0x1807DF868 jbe short 00000001807DF8E3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF86A mov rcx,[rax+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x1807DF86E test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF871 je short 00000001807DF8D7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF873 cmp dword ptr [rcx+18h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 24 | None ||| N/A | 0
+		0x1807DF877 jbe short 00000001807DF8DDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF879 mov rcx,[rcx+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x1807DF87D test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF880 je short 00000001807DF8D7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF882 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807DF885 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1807DF887 call 000000018045C4E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF88C xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF88E mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF891 call 000000018079CA90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF896 cmp byte ptr [18329885Dh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504477 | None ||| N/A | 0
+		0x1807DF89D jne short 00000001807DF8B2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF89F lea rcx,[1830FB630h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493812272 | None ||| N/A | N/A
+		0x1807DF8A6 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF8AB mov byte ptr [18329885Dh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504477 | None ||| N/A | 1
+		0x1807DF8B2 mov rax,[1830FB630h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493812272 | None ||| N/A | N/A
+		0x1807DF8B9 mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1807DF8C0 mov rcx,[rcx]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1807DF8C3 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF8C6 je short 00000001807DF8D7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF8C8 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807DF8CB xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF8CD add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807DF8D1 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF8D2 jmp near ptr 00000001806E1740h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF8D7 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF8DC int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF8E3 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF8E5 call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF8EA int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PlayerHouseInteriorWorldArea::ActivateArea():
+		End of function at 0x1807DF8EB
+		Absolute End is at 0x1807DF8EB
+		Identified Jump Destination addresses:
+
+		0x1807DF800: Saves the content of rbx to the stack
+		0x1807DF806: Compares {Unknown Global at 0x18329B470, first ten bytes are [237 253 3 0 144 104 234 2 240 253], or as chars "íý hêðý"} and 0
+		0x1807DF80D: Copies {'this' (function parameter, type PlayerHouseInteriorWorldArea)} from rcx into rbx
+		0x1807DF810: Jumps to 0x1807DF825 if {Unknown Global at 0x18329B470, first ten bytes are [237 253 3 0 144 104 234 2 240 253], or as chars "íý hêðý"} != 0
+
+		0x1807DF812: Loads the global generic method reference for method T System.Collections.Generic.List`1::get_Item(System.Int32) on type System.Collections.Generic.List`1<BasePlayer> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1807DF819: Initializes runtime metadata value 
+		0x1807DF825: Compares {Unknown Global at 0x183298864, first ten bytes are [152 104 234 2 96 228 0 0 137 228], or as chars "hê`ä  ä"} and 0
+		0x1807DF82C: Jumps to 0x1807DF841 if {Unknown Global at 0x183298864, first ten bytes are [152 104 234 2 96 228 0 0 137 228], or as chars "hê`ä  ä"} != 0
+
+		0x1807DF82E: Loads the type definition for managed type WorldManager as a constant "WorldManager" in rcx
+		0x1807DF835: Initializes runtime metadata value WorldManager
+		0x1807DF841: Loads the type definition for managed type WorldManager as a constant "WorldManager" in rax
+		0x1807DF848: Loads the pointer to the static fields for WorldManager and stores it in constant8 in register rcx
+		0x1807DF84F: [!] Reads the static field WorldManager WorldManager::<Instance>k__BackingField into new local Instance
+		0x1807DF853: [!] Compares {'Instance' (type WorldManager)} and 0
+		0x1807DF856: Jumps to 0x1807DF8D7 (which throws a NRE) if Instance equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DF858: [!] Reads field players from {'Instance' (type WorldManager)} and stores in a new local {'players' (type System.Collections.Generic.List`1<BasePlayer>)}
+
+		0x1807DF85F: [!] Compares {'players' (type System.Collections.Generic.List`1<BasePlayer>)} and 0
+		0x1807DF862: Jumps to 0x1807DF8D7 (which throws a NRE) if players equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DF864: [!] Compares  and 0
+		0x1807DF868: Jumps to 0x1807DF8E3 (which is an if statement's body) if  is less than or equal to 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1807DF86A: [!] Reads field _items from {'players' (type System.Collections.Generic.List`1<BasePlayer>)} and stores in a new local {'_items' (type T[])}
+
+		0x1807DF86E: [!] Compares {'_items' (type T[])} and 0
+		0x1807DF871: Jumps to 0x1807DF8D7 (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DF873: [!] Compares {Property System.Int32 System.Array::Length() on {'_items' (type T[])}} and 0
+		0x1807DF877: Jumps to 0x1807DF8DD (which throws a NRE) if {Property System.Int32 System.Array::Length() on {'_items' (type T[])}} is less than or equal to 0. Implicitly present in managed code, so ignored here.
+		0x1807DF879: [!] Reads a value from the array {'_items' (type T[])} at index 0, into a new local {'local4' (type T)}
+
+		0x1807DF87D: [!] Compares {'local4' (type T)} and 0
+		0x1807DF880: Jumps to 0x1807DF8D7 (which throws a NRE) if local4 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DF885: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x1807DF887: [!] Calls managed method System.Void BasePlayer::SetInPlayerHouse(System.Boolean) on instance {'local4' (type T)} with arguments [True] ;  - This is an instance method, but the type of the 'this' parameter is mismatched. Expecting BasePlayer, actually T
+
+		0x1807DF88E: Copies {'this' (function parameter, type PlayerHouseInteriorWorldArea)} from rbx into rcx
+		0x1807DF891: [!] Calls managed method System.Void InteriorWorldArea::ActivateArea() on instance {'this' (function parameter, type PlayerHouseInteriorWorldArea)}
+
+		0x1807DF896: Compares {Unknown Global at 0x18329885D, first ten bytes are [227 0 0 90 228 0 0 152 104 234], or as chars "ã  Zä  hê"} and 0
+		0x1807DF89D: Jumps to 0x1807DF8B2 if {Unknown Global at 0x18329885D, first ten bytes are [227 0 0 90 228 0 0 152 104 234], or as chars "ã  Zä  hê"} != 0
+
+		0x1807DF89F: Loads the type definition for managed type HUDManager as a constant "HUDManager" in rcx
+		0x1807DF8A6: Initializes runtime metadata value HUDManager
+		0x1807DF8B2: Loads the type definition for managed type HUDManager as a constant "HUDManager" in rax
+		0x1807DF8B9: Loads the pointer to the static fields for HUDManager and stores it in constant20 in register rcx
+		0x1807DF8C0: [!] Reads the static field HUDManager HUDManager::<Instance>k__BackingField into new local Instance2
+		0x1807DF8C3: [!] Compares {'Instance2' (type HUDManager)} and 0
+		0x1807DF8C6: Jumps to 0x1807DF8D7 (which throws a NRE) if Instance2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DF8CB: Clears register rdx, yielding zero-local {'local9' (type System.Int32)}
+		0x1807DF8D2: [!] Calls managed method System.Void HUDManager::ShowOxygenAndHealthBar(System.Boolean) on instance {'Instance2' (type HUDManager)} with arguments [{'local9' (type System.Int32)}]
+
+		0x1807DF8D2: [!] Returns from the function
+
+		0x1807DF8D7: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1807DF8E3: Clears register rcx, yielding zero-local {'local11' (type System.Int32)}
+		0x1807DF8E5: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerHouseInteriorWorldArea
+	System.Void ActivateArea()
+		WorldManager Instance = WorldManager.<Instance>k__BackingField
+		System.Collections.Generic.List`1<BasePlayer> players = Instance.players
+
+		if ( > 0)
+		    T[] _items = players._items
+		    T local4 = _items[0]
+
+		    local4.SetInPlayerHouse(True) //(Boolean inHouse)
+
+		    base.ActivateArea()
+		    HUDManager Instance2 = HUDManager.<Instance>k__BackingField
+		    ulong local9 = 0
+
+		    Instance2.ShowOxygenAndHealthBar(local9) //(Boolean show)
+		    return
+		    throw new System.NullReferenceException()
+		endif
+        
+		ulong local11 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: System.Void PlayerHouseInteriorWorldArea::DeactivateArea():	Method Body (x86 ASM):
+		0x1807DF8F0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF8F2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807DF8F6 cmp byte ptr [18329B471h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515761 | None ||| N/A | 0
+		0x1807DF8FD mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF900 jne short 00000001807DF915h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF902 lea rcx,[1830FBBA0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813664 | None ||| N/A | N/A
+		0x1807DF909 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF90E mov byte ptr [18329B471h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515761 | None ||| N/A | 1
+		0x1807DF915 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF917 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF91A call 000000018079CCF0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF91F cmp byte ptr [18329885Dh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504477 | None ||| N/A | 0
+		0x1807DF926 jne short 00000001807DF93Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF928 lea rcx,[1830FB630h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493812272 | None ||| N/A | N/A
+		0x1807DF92F call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF934 mov byte ptr [18329885Dh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504477 | None ||| N/A | 1
+		0x1807DF93B mov rax,[1830FB630h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493812272 | None ||| N/A | N/A
+		0x1807DF942 mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1807DF949 mov rcx,[rcx]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1807DF94C test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF94F je short 00000001807DF9C7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF951 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807DF954 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1807DF956 call 00000001806E1740h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF95B cmp byte ptr [183298864h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504484 | None ||| N/A | 0
+		0x1807DF962 jne short 00000001807DF977h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF964 lea rcx,[1830FB6B0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493812400 | None ||| N/A | N/A
+		0x1807DF96B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF970 mov byte ptr [183298864h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504484 | None ||| N/A | 1
+		0x1807DF977 mov rax,[1830FB6B0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493812400 | None ||| N/A | N/A
+		0x1807DF97E mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1807DF985 mov rax,[rcx+8]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 8 | None ||| N/A | N/A
+		0x1807DF989 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF98C je short 00000001807DF9C7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF98E mov rax,[rax+0C8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RAX | 200 | None ||| N/A | N/A
+		0x1807DF995 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF998 je short 00000001807DF9C7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF99A cmp dword ptr [rax+18h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 24 | None ||| N/A | 0
+		0x1807DF99E jbe short 00000001807DF9D3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF9A0 mov rcx,[rax+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x1807DF9A4 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF9A7 je short 00000001807DF9C7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF9A9 cmp dword ptr [rcx+18h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 24 | None ||| N/A | 0
+		0x1807DF9AD jbe short 00000001807DF9CDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF9AF mov rcx,[rcx+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x1807DF9B3 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF9B6 je short 00000001807DF9C7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF9B8 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807DF9BB xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF9BD add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807DF9C1 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF9C2 jmp near ptr 000000018045C4E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF9C7 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF9CC int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF9D3 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF9D5 call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF9DA int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PlayerHouseInteriorWorldArea::DeactivateArea():
+		End of function at 0x1807DF9DB
+		Absolute End is at 0x1807DF9DB
+		Identified Jump Destination addresses:
+
+		0x1807DF8F0: Saves the content of rbx to the stack
+		0x1807DF8F6: Compares {Unknown Global at 0x18329B471, first ten bytes are [253 3 0 144 104 234 2 240 253 3], or as chars "ý hêðý"} and 0
+		0x1807DF8FD: Copies {'this' (function parameter, type PlayerHouseInteriorWorldArea)} from rcx into rbx
+		0x1807DF900: Jumps to 0x1807DF915 if {Unknown Global at 0x18329B471, first ten bytes are [253 3 0 144 104 234 2 240 253 3], or as chars "ý hêðý"} != 0
+
+		0x1807DF902: Loads the global generic method reference for method T System.Collections.Generic.List`1::get_Item(System.Int32) on type System.Collections.Generic.List`1<BasePlayer> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1807DF909: Initializes runtime metadata value 
+		0x1807DF917: Copies {'this' (function parameter, type PlayerHouseInteriorWorldArea)} from rbx into rcx
+		0x1807DF91A: [!] Calls managed method System.Void InteriorWorldArea::DeactivateArea() on instance {'this' (function parameter, type PlayerHouseInteriorWorldArea)}
+
+		0x1807DF91F: Compares {Unknown Global at 0x18329885D, first ten bytes are [227 0 0 90 228 0 0 152 104 234], or as chars "ã  Zä  hê"} and 0
+		0x1807DF926: Jumps to 0x1807DF93B if {Unknown Global at 0x18329885D, first ten bytes are [227 0 0 90 228 0 0 152 104 234], or as chars "ã  Zä  hê"} != 0
+
+		0x1807DF928: Loads the type definition for managed type HUDManager as a constant "HUDManager" in rcx
+		0x1807DF92F: Initializes runtime metadata value HUDManager
+		0x1807DF93B: Loads the type definition for managed type HUDManager as a constant "HUDManager" in rax
+		0x1807DF942: Loads the pointer to the static fields for HUDManager and stores it in constant8 in register rcx
+		0x1807DF949: [!] Reads the static field HUDManager HUDManager::<Instance>k__BackingField into new local Instance
+		0x1807DF94C: [!] Compares {'Instance' (type HUDManager)} and 0
+		0x1807DF94F: Jumps to 0x1807DF9C7 (which throws a NRE) if Instance equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DF954: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x1807DF956: [!] Calls managed method System.Void HUDManager::ShowOxygenAndHealthBar(System.Boolean) on instance {'Instance' (type HUDManager)} with arguments [True]
+
+		0x1807DF95B: Compares {Unknown Global at 0x183298864, first ten bytes are [152 104 234 2 96 228 0 0 137 228], or as chars "hê`ä  ä"} and 0
+		0x1807DF962: Jumps to 0x1807DF977 if {Unknown Global at 0x183298864, first ten bytes are [152 104 234 2 96 228 0 0 137 228], or as chars "hê`ä  ä"} != 0
+
+		0x1807DF964: Loads the type definition for managed type WorldManager as a constant "WorldManager" in rcx
+		0x1807DF96B: Initializes runtime metadata value WorldManager
+		0x1807DF977: Loads the type definition for managed type WorldManager as a constant "WorldManager" in rax
+		0x1807DF97E: Loads the pointer to the static fields for WorldManager and stores it in constant15 in register rcx
+		0x1807DF985: [!] Reads the static field WorldManager WorldManager::<Instance>k__BackingField into new local Instance2
+		0x1807DF989: [!] Compares {'Instance2' (type WorldManager)} and 0
+		0x1807DF98C: Jumps to 0x1807DF9C7 (which throws a NRE) if Instance2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DF98E: [!] Reads field players from {'Instance2' (type WorldManager)} and stores in a new local {'players' (type System.Collections.Generic.List`1<BasePlayer>)}
+
+		0x1807DF995: [!] Compares {'players' (type System.Collections.Generic.List`1<BasePlayer>)} and 0
+		0x1807DF998: Jumps to 0x1807DF9C7 (which throws a NRE) if players equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DF99A: [!] Compares  and 0
+		0x1807DF99E: Jumps to 0x1807DF9D3 (which is an if statement's body) if  is less than or equal to 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1807DF9A0: [!] Reads field _items from {'players' (type System.Collections.Generic.List`1<BasePlayer>)} and stores in a new local {'_items' (type T[])}
+
+		0x1807DF9A4: [!] Compares {'_items' (type T[])} and 0
+		0x1807DF9A7: Jumps to 0x1807DF9C7 (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DF9A9: [!] Compares {Property System.Int32 System.Array::Length() on {'_items' (type T[])}} and 0
+		0x1807DF9AD: Jumps to 0x1807DF9CD (which throws a NRE) if {Property System.Int32 System.Array::Length() on {'_items' (type T[])}} is less than or equal to 0. Implicitly present in managed code, so ignored here.
+		0x1807DF9AF: [!] Reads a value from the array {'_items' (type T[])} at index 0, into a new local {'local7' (type T)}
+
+		0x1807DF9B3: [!] Compares {'local7' (type T)} and 0
+		0x1807DF9B6: Jumps to 0x1807DF9C7 (which throws a NRE) if local7 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DF9BB: Clears register rdx, yielding zero-local {'local9' (type System.Int32)}
+		0x1807DF9C2: [!] Calls managed method System.Void BasePlayer::SetInPlayerHouse(System.Boolean) on instance {'local7' (type T)} with arguments [{'local9' (type System.Int32)}] ;  - This is an instance method, but the type of the 'this' parameter is mismatched. Expecting BasePlayer, actually T
+
+		0x1807DF9C2: [!] Returns from the function
+
+		0x1807DF9C7: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1807DF9D3: Clears register rcx, yielding zero-local {'local11' (type System.Int32)}
+		0x1807DF9D5: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerHouseInteriorWorldArea
+	System.Void DeactivateArea()
+
+		base.DeactivateArea()
+		HUDManager Instance = HUDManager.<Instance>k__BackingField
+
+		Instance.ShowOxygenAndHealthBar(True) //(Boolean show)
+		WorldManager Instance2 = WorldManager.<Instance>k__BackingField
+		System.Collections.Generic.List`1<BasePlayer> players = Instance2.players
+
+		if ( > 0)
+		    T[] _items = players._items
+		    T local7 = _items[0]
+		    ulong local9 = 0
+
+		    local7.SetInPlayerHouse(local9) //(Boolean inHouse)
+		    return
+		    throw new System.NullReferenceException()
+		endif
+        
+		ulong local11 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: UnityEngine.Transform PlayerHouseInteriorWorldArea::get_CustomCameraPosition():	Method Body (x86 ASM):
+		0x1807DF9E0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DF9E2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807DF9E6 cmp byte ptr [18329B472h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515762 | None ||| N/A | 0
+		0x1807DF9ED mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DF9F0 jne short 00000001807DFA11h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF9F2 lea rcx,[1831123F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493905912 | None ||| N/A | N/A
+		0x1807DF9F9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DF9FE lea rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x1807DFA05 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFA0A mov byte ptr [18329B472h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515762 | None ||| N/A | 1
+		0x1807DFA11 mov rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x1807DFA18 mov rbx,[rbx+4D0h]		; DEBUG: {Register}/RBX {Memory}/None ||| RBX | 1232 | None ||| N/A | N/A
+		0x1807DFA1F cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1807DFA26 jne short 00000001807DFA2Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFA28 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFA2D cmp byte ptr [18329B754h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516500 | None ||| N/A | 0
+		0x1807DFA34 jne short 00000001807DFA55h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFA36 lea rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x1807DFA3D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFA42 lea rcx,[1830D6210h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493659664 | None ||| N/A | N/A
+		0x1807DFA49 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFA4E mov byte ptr [18329B754h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516500 | None ||| N/A | 1
+		0x1807DFA55 mov rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x1807DFA5C cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1807DFA63 jne short 00000001807DFA6Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFA65 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFA6A mov rcx,[1830D6210h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493659664 | None ||| N/A | N/A
+		0x1807DFA71 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807DFA74 lea edx,[r8+1]		; DEBUG: {Register}/EDX {Memory}/None ||| R8 | 1 | None ||| N/A | N/A
+		0x1807DFA78 call 0000000180843C50h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFA7D test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807DFA80 je short 00000001807DFAA4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFA82 dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFA84 cmp eax,[rbx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBX | 24 | None ||| N/A | N/A
+		0x1807DFA87 jae short 00000001807DFAB0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFA89 mov rcx,[rbx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x1807DFA8D test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DFA90 je short 00000001807DFAA4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFA92 cmp eax,[rcx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1807DFA95 jae short 00000001807DFAAAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFA97 cdqe		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFA99 mov rax,[rcx+rax*8+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 32 | RAX ||| N/A | N/A
+		0x1807DFA9E add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807DFAA2 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFAA3 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFAA4 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFAA9 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFAB0 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1807DFAB2 call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFAB7 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method UnityEngine.Transform PlayerHouseInteriorWorldArea::get_CustomCameraPosition():
+		End of function at 0x1807DFAB8
+		Absolute End is at 0x1807DFAB8
+		Identified Jump Destination addresses:
+
+		0x1807DF9E0: Saves the content of rbx to the stack
+		0x1807DF9E6: Compares {Unknown Global at 0x18329B472, first ten bytes are [3 0 144 104 234 2 240 253 3 0], or as chars " hêðý "} and 0
+		0x1807DF9ED: Copies {'this' (function parameter, type PlayerHouseInteriorWorldArea)} from rcx into rbx
+		0x1807DF9F0: Jumps to 0x1807DFA11 if {Unknown Global at 0x18329B472, first ten bytes are [3 0 144 104 234 2 240 253 3 0], or as chars " hêðý "} != 0
+
+		0x1807DF9F2: Loads the global generic method reference for method T System.Collections.Generic.List`1::get_Item(System.Int32) on type System.Collections.Generic.List`1<UnityEngine.Transform> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1807DF9F9: Initializes runtime metadata value 
+		0x1807DF9FE: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x1807DFA05: Initializes runtime metadata value PlayerStatus
+		0x1807DFA11: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x1807DFA18: [!] Reads field customCameraPositions from {'this' (function parameter, type PlayerHouseInteriorWorldArea)} and stores in a new local {'customCameraPositions' (type System.Collections.Generic.List`1<UnityEngine.Transform>)}
+
+		0x1807DFA1F: Compares "{il2cpp field PlayerStatus->cctor_finished}" and 0
+		0x1807DFA26: Jumps to 0x1807DFA2D if "{il2cpp field PlayerStatus->cctor_finished}" != 0
+
+		0x1807DFA28: Calls the il2cpp cctor for the type PlayerStatus
+		0x1807DFA2D: Compares {Unknown Global at 0x18329B754, first ten bytes are [144 62 4 0 169 67 4 0 200 105], or as chars "> ©C Èi"} and 0
+		0x1807DFA34: Jumps to 0x1807DFA55 if {Unknown Global at 0x18329B754, first ten bytes are [144 62 4 0 169 67 4 0 200 105], or as chars "> ©C Èi"} != 0
+
+		0x1807DFA36: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x1807DFA3D: Initializes runtime metadata value PlayerStatus
+		0x1807DFA42: Loads the string literal "PlayerHouseLevel" as a constant "constant11" in rcx
+		0x1807DFA49: Initializes runtime metadata value PlayerHouseLevel
+		0x1807DFA55: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x1807DFA5C: Compares "{il2cpp field PlayerStatus->cctor_finished}" and 0
+		0x1807DFA63: Jumps to 0x1807DFA6A if "{il2cpp field PlayerStatus->cctor_finished}" != 0
+
+		0x1807DFA65: Calls the il2cpp cctor for the type PlayerStatus
+		0x1807DFA6A: Loads the string literal "PlayerHouseLevel" as a constant "constant15" in rcx
+		0x1807DFA74: [!] Loads the constant value 1 into the register rdx as constant constant16 using an LEA instruction
+		0x1807DFA78: [!] Calls static managed method System.Int32 PlayerStatus::GetInt(System.String,System.Int32) with arguments ["PlayerHouseLevel", 1] and stores the result in {'int' (type System.Int32)}
+
+		0x1807DFA7D: [!] Compares {'customCameraPositions' (type System.Collections.Generic.List`1<UnityEngine.Transform>)} and 0
+		0x1807DFA80: Jumps to 0x1807DFAA4 (which throws a NRE) if customCameraPositions equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DFA84: [!] Compares {'int' (type System.Int32)} against itself
+		0x1807DFA87: Jumps to 0x1807DFAB0 (which is an if statement's body) if {'int' (type System.Int32)} is greater than or equal to  ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1807DFA89: [!] Reads field _items from {'customCameraPositions' (type System.Collections.Generic.List`1<UnityEngine.Transform>)} and stores in a new local {'_items' (type T[])}
+
+		0x1807DFA8D: [!] Compares {'_items' (type T[])} and 0
+		0x1807DFA90: Jumps to 0x1807DFAA4 (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DFA92: [!] Compares {'int' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}
+		0x1807DFA95: Jumps to 0x1807DFAAA (which throws a NRE) if {'int' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}. Implicitly present in managed code, so ignored here.
+		0x1807DFA99: Copies the element in the array {'_items' (type T[])} at the index specified by {'int' (type System.Int32)} into new local {'t' (type T)}
+		0x1807DFAA3: [!] Returns {'t' (type T)} from the function
+
+		0x1807DFAA4: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1807DFAB0: Clears register rcx, yielding zero-local {'local7' (type System.Int32)}
+		0x1807DFAB2: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerHouseInteriorWorldArea
+	UnityEngine.Transform get_CustomCameraPosition()
+		System.Collections.Generic.List`1<UnityEngine.Transform> customCameraPositions = this.customCameraPositions
+		System.Int32 1 = 1
+
+		System.Int32 int = PlayerStatus.GetInt("PlayerHouseLevel", 1) //(String key, Int32 defaultValue)
+
+		if (int < )
+		    T[] _items = customCameraPositions._items
+		    T t = _items[int]
+		    return t
+		    throw new System.NullReferenceException()
+		endif
+        
+		ulong local7 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: System.Single PlayerHouseInteriorWorldArea::get_CustomCameraZoom():	Method Body (x86 ASM):
+		0x1807DFAC0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFAC2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807DFAC6 cmp byte ptr [18329B473h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515763 | None ||| N/A | 0
+		0x1807DFACD mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DFAD0 jne short 00000001807DFAF1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFAD2 lea rcx,[183106A78h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493858424 | None ||| N/A | N/A
+		0x1807DFAD9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFADE lea rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x1807DFAE5 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFAEA mov byte ptr [18329B473h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515763 | None ||| N/A | 1
+		0x1807DFAF1 mov rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x1807DFAF8 mov rbx,[rbx+4C8h]		; DEBUG: {Register}/RBX {Memory}/None ||| RBX | 1224 | None ||| N/A | N/A
+		0x1807DFAFF cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1807DFB06 jne short 00000001807DFB0Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB08 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB0D cmp byte ptr [18329B754h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516500 | None ||| N/A | 0
+		0x1807DFB14 jne short 00000001807DFB35h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB16 lea rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x1807DFB1D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB22 lea rcx,[1830D6210h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493659664 | None ||| N/A | N/A
+		0x1807DFB29 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB2E mov byte ptr [18329B754h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516500 | None ||| N/A | 1
+		0x1807DFB35 mov rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x1807DFB3C cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1807DFB43 jne short 00000001807DFB4Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB45 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB4A mov rcx,[1830D6210h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493659664 | None ||| N/A | N/A
+		0x1807DFB51 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807DFB54 lea edx,[r8+1]		; DEBUG: {Register}/EDX {Memory}/None ||| R8 | 1 | None ||| N/A | N/A
+		0x1807DFB58 call 0000000180843C50h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB5D test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807DFB60 je short 00000001807DFB85h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB62 dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFB64 cmp eax,[rbx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBX | 24 | None ||| N/A | N/A
+		0x1807DFB67 jae short 00000001807DFB91h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB69 mov rcx,[rbx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x1807DFB6D test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DFB70 je short 00000001807DFB85h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB72 cmp eax,[rcx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1807DFB75 jae short 00000001807DFB8Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB77 cdqe		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFB79 movss xmm0,dword ptr [rcx+rax*4+20h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 32 | RAX ||| N/A | N/A
+		0x1807DFB7F add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807DFB83 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFB84 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFB85 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB8A int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFB91 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1807DFB93 call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFB98 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Single PlayerHouseInteriorWorldArea::get_CustomCameraZoom():
+		End of function at 0x1807DFB99
+		Absolute End is at 0x1807DFB99
+		Identified Jump Destination addresses:
+
+		0x1807DFAC0: Saves the content of rbx to the stack
+		0x1807DFAC6: Compares {Unknown Global at 0x18329B473, first ten bytes are [0 144 104 234 2 240 253 3 0 29], or as chars " hêðý "} and 0
+		0x1807DFACD: Copies {'this' (function parameter, type PlayerHouseInteriorWorldArea)} from rcx into rbx
+		0x1807DFAD0: Jumps to 0x1807DFAF1 if {Unknown Global at 0x18329B473, first ten bytes are [0 144 104 234 2 240 253 3 0 29], or as chars " hêðý "} != 0
+
+		0x1807DFAD2: Loads the global generic method reference for method T System.Collections.Generic.List`1::get_Item(System.Int32) on type System.Collections.Generic.List`1<System.Single> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1807DFAD9: Initializes runtime metadata value 
+		0x1807DFADE: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x1807DFAE5: Initializes runtime metadata value PlayerStatus
+		0x1807DFAF1: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x1807DFAF8: [!] Reads field customCameraZooms from {'this' (function parameter, type PlayerHouseInteriorWorldArea)} and stores in a new local {'customCameraZooms' (type System.Collections.Generic.List`1<System.Single>)}
+
+		0x1807DFAFF: Compares "{il2cpp field PlayerStatus->cctor_finished}" and 0
+		0x1807DFB06: Jumps to 0x1807DFB0D if "{il2cpp field PlayerStatus->cctor_finished}" != 0
+
+		0x1807DFB08: Calls the il2cpp cctor for the type PlayerStatus
+		0x1807DFB0D: Compares {Unknown Global at 0x18329B754, first ten bytes are [144 62 4 0 169 67 4 0 200 105], or as chars "> ©C Èi"} and 0
+		0x1807DFB14: Jumps to 0x1807DFB35 if {Unknown Global at 0x18329B754, first ten bytes are [144 62 4 0 169 67 4 0 200 105], or as chars "> ©C Èi"} != 0
+
+		0x1807DFB16: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x1807DFB1D: Initializes runtime metadata value PlayerStatus
+		0x1807DFB22: Loads the string literal "PlayerHouseLevel" as a constant "constant11" in rcx
+		0x1807DFB29: Initializes runtime metadata value PlayerHouseLevel
+		0x1807DFB35: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x1807DFB3C: Compares "{il2cpp field PlayerStatus->cctor_finished}" and 0
+		0x1807DFB43: Jumps to 0x1807DFB4A if "{il2cpp field PlayerStatus->cctor_finished}" != 0
+
+		0x1807DFB45: Calls the il2cpp cctor for the type PlayerStatus
+		0x1807DFB4A: Loads the string literal "PlayerHouseLevel" as a constant "constant15" in rcx
+		0x1807DFB54: [!] Loads the constant value 1 into the register rdx as constant constant16 using an LEA instruction
+		0x1807DFB58: [!] Calls static managed method System.Int32 PlayerStatus::GetInt(System.String,System.Int32) with arguments ["PlayerHouseLevel", 1] and stores the result in {'int' (type System.Int32)}
+
+		0x1807DFB5D: [!] Compares {'customCameraZooms' (type System.Collections.Generic.List`1<System.Single>)} and 0
+		0x1807DFB60: Jumps to 0x1807DFB85 (which throws a NRE) if customCameraZooms equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DFB64: [!] Compares {'int' (type System.Int32)} against itself
+		0x1807DFB67: Jumps to 0x1807DFB91 (which is an if statement's body) if {'int' (type System.Int32)} is greater than or equal to  ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1807DFB69: [!] Reads field _items from {'customCameraZooms' (type System.Collections.Generic.List`1<System.Single>)} and stores in a new local {'_items' (type T[])}
+
+		0x1807DFB6D: [!] Compares {'_items' (type T[])} and 0
+		0x1807DFB70: Jumps to 0x1807DFB85 (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DFB72: [!] Compares {'int' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}
+		0x1807DFB75: Jumps to 0x1807DFB8B (which throws a NRE) if {'int' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}. Implicitly present in managed code, so ignored here.
+		0x1807DFB79: Copies the element in the array {'_items' (type T[])} at the index specified by {'int' (type System.Int32)} into new local {'t' (type T)}
+		0x1807DFB84: [!] Returns {'t' (type T)} from the function
+
+		0x1807DFB85: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1807DFB91: Clears register rcx, yielding zero-local {'local7' (type System.Int32)}
+		0x1807DFB93: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerHouseInteriorWorldArea
+	System.Single get_CustomCameraZoom()
+		System.Collections.Generic.List`1<System.Single> customCameraZooms = this.customCameraZooms
+		System.Int32 1 = 1
+
+		System.Int32 int = PlayerStatus.GetInt("PlayerHouseLevel", 1) //(String key, Int32 defaultValue)
+
+		if (int < )
+		    T[] _items = customCameraZooms._items
+		    T t = _items[int]
+		    return t
+		    throw new System.NullReferenceException()
+		endif
+        
+		ulong local7 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: UnityEngine.Transform PlayerHouseInteriorWorldArea::get_PlayerEntrancePosition():	Method Body (x86 ASM):
+		0x1807DFBA0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFBA2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807DFBA6 cmp byte ptr [18329B474h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515764 | None ||| N/A | 0
+		0x1807DFBAD mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DFBB0 jne short 00000001807DFBD1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFBB2 lea rcx,[1831123F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493905912 | None ||| N/A | N/A
+		0x1807DFBB9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFBBE lea rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x1807DFBC5 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFBCA mov byte ptr [18329B474h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515764 | None ||| N/A | 1
+		0x1807DFBD1 mov rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x1807DFBD8 mov rbx,[rbx+4C0h]		; DEBUG: {Register}/RBX {Memory}/None ||| RBX | 1216 | None ||| N/A | N/A
+		0x1807DFBDF cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1807DFBE6 jne short 00000001807DFBEDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFBE8 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFBED cmp byte ptr [18329B754h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516500 | None ||| N/A | 0
+		0x1807DFBF4 jne short 00000001807DFC15h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFBF6 lea rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x1807DFBFD call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFC02 lea rcx,[1830D6210h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493659664 | None ||| N/A | N/A
+		0x1807DFC09 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFC0E mov byte ptr [18329B754h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516500 | None ||| N/A | 1
+		0x1807DFC15 mov rcx,[1830FBD18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814040 | None ||| N/A | N/A
+		0x1807DFC1C cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1807DFC23 jne short 00000001807DFC2Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFC25 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFC2A mov rcx,[1830D6210h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493659664 | None ||| N/A | N/A
+		0x1807DFC31 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807DFC34 lea edx,[r8+1]		; DEBUG: {Register}/EDX {Memory}/None ||| R8 | 1 | None ||| N/A | N/A
+		0x1807DFC38 call 0000000180843C50h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFC3D test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807DFC40 je short 00000001807DFC64h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFC42 dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFC44 cmp eax,[rbx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBX | 24 | None ||| N/A | N/A
+		0x1807DFC47 jae short 00000001807DFC70h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFC49 mov rcx,[rbx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x1807DFC4D test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807DFC50 je short 00000001807DFC64h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFC52 cmp eax,[rcx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1807DFC55 jae short 00000001807DFC6Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFC57 cdqe		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFC59 mov rax,[rcx+rax*8+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 32 | RAX ||| N/A | N/A
+		0x1807DFC5E add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807DFC62 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFC63 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFC64 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFC69 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807DFC70 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1807DFC72 call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807DFC77 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method UnityEngine.Transform PlayerHouseInteriorWorldArea::get_PlayerEntrancePosition():
+		End of function at 0x1807DFC78
+		Absolute End is at 0x1807DFC78
+		Identified Jump Destination addresses:
+
+		0x1807DFBA0: Saves the content of rbx to the stack
+		0x1807DFBA6: Compares {Unknown Global at 0x18329B474, first ten bytes are [144 104 234 2 240 253 3 0 29 254], or as chars "hêðý þ"} and 0
+		0x1807DFBAD: Copies {'this' (function parameter, type PlayerHouseInteriorWorldArea)} from rcx into rbx
+		0x1807DFBB0: Jumps to 0x1807DFBD1 if {Unknown Global at 0x18329B474, first ten bytes are [144 104 234 2 240 253 3 0 29 254], or as chars "hêðý þ"} != 0
+
+		0x1807DFBB2: Loads the global generic method reference for method T System.Collections.Generic.List`1::get_Item(System.Int32) on type System.Collections.Generic.List`1<UnityEngine.Transform> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1807DFBB9: Initializes runtime metadata value 
+		0x1807DFBBE: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x1807DFBC5: Initializes runtime metadata value PlayerStatus
+		0x1807DFBD1: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x1807DFBD8: [!] Reads field playerEntrancePositionPerLevel from {'this' (function parameter, type PlayerHouseInteriorWorldArea)} and stores in a new local {'playerEntrancePositionPerLevel' (type System.Collections.Generic.List`1<UnityEngine.Transform>)}
+
+		0x1807DFBDF: Compares "{il2cpp field PlayerStatus->cctor_finished}" and 0
+		0x1807DFBE6: Jumps to 0x1807DFBED if "{il2cpp field PlayerStatus->cctor_finished}" != 0
+
+		0x1807DFBE8: Calls the il2cpp cctor for the type PlayerStatus
+		0x1807DFBED: Compares {Unknown Global at 0x18329B754, first ten bytes are [144 62 4 0 169 67 4 0 200 105], or as chars "> ©C Èi"} and 0
+		0x1807DFBF4: Jumps to 0x1807DFC15 if {Unknown Global at 0x18329B754, first ten bytes are [144 62 4 0 169 67 4 0 200 105], or as chars "> ©C Èi"} != 0
+
+		0x1807DFBF6: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x1807DFBFD: Initializes runtime metadata value PlayerStatus
+		0x1807DFC02: Loads the string literal "PlayerHouseLevel" as a constant "constant11" in rcx
+		0x1807DFC09: Initializes runtime metadata value PlayerHouseLevel
+		0x1807DFC15: Loads the type definition for managed type PlayerStatus as a constant "PlayerStatus" in rcx
+		0x1807DFC1C: Compares "{il2cpp field PlayerStatus->cctor_finished}" and 0
+		0x1807DFC23: Jumps to 0x1807DFC2A if "{il2cpp field PlayerStatus->cctor_finished}" != 0
+
+		0x1807DFC25: Calls the il2cpp cctor for the type PlayerStatus
+		0x1807DFC2A: Loads the string literal "PlayerHouseLevel" as a constant "constant15" in rcx
+		0x1807DFC34: [!] Loads the constant value 1 into the register rdx as constant constant16 using an LEA instruction
+		0x1807DFC38: [!] Calls static managed method System.Int32 PlayerStatus::GetInt(System.String,System.Int32) with arguments ["PlayerHouseLevel", 1] and stores the result in {'int' (type System.Int32)}
+
+		0x1807DFC3D: [!] Compares {'playerEntrancePositionPerLevel' (type System.Collections.Generic.List`1<UnityEngine.Transform>)} and 0
+		0x1807DFC40: Jumps to 0x1807DFC64 (which throws a NRE) if playerEntrancePositionPerLevel equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DFC44: [!] Compares {'int' (type System.Int32)} against itself
+		0x1807DFC47: Jumps to 0x1807DFC70 (which is an if statement's body) if {'int' (type System.Int32)} is greater than or equal to  ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1807DFC49: [!] Reads field _items from {'playerEntrancePositionPerLevel' (type System.Collections.Generic.List`1<UnityEngine.Transform>)} and stores in a new local {'_items' (type T[])}
+
+		0x1807DFC4D: [!] Compares {'_items' (type T[])} and 0
+		0x1807DFC50: Jumps to 0x1807DFC64 (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x1807DFC52: [!] Compares {'int' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}
+		0x1807DFC55: Jumps to 0x1807DFC6A (which throws a NRE) if {'int' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}. Implicitly present in managed code, so ignored here.
+		0x1807DFC59: Copies the element in the array {'_items' (type T[])} at the index specified by {'int' (type System.Int32)} into new local {'t' (type T)}
+		0x1807DFC63: [!] Returns {'t' (type T)} from the function
+
+		0x1807DFC64: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1807DFC70: Clears register rcx, yielding zero-local {'local7' (type System.Int32)}
+		0x1807DFC72: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerHouseInteriorWorldArea
+	UnityEngine.Transform get_PlayerEntrancePosition()
+		System.Collections.Generic.List`1<UnityEngine.Transform> playerEntrancePositionPerLevel = this.playerEntrancePositionPerLevel
+		System.Int32 1 = 1
+
+		System.Int32 int = PlayerStatus.GetInt("PlayerHouseLevel", 1) //(String key, Int32 defaultValue)
+
+		if (int < )
+		    T[] _items = playerEntrancePositionPerLevel._items
+		    T t = _items[int]
+		    return t
+		    throw new System.NullReferenceException()
+		endif
+        
+		ulong local7 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: System.Void PlayerHouseInteriorWorldArea::.ctor():	Method Body (x86 ASM):
+		0x180793750 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180793752 mov byte ptr [rcx+408h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 1032 | None ||| N/A | 1
+		0x180793759 mov word ptr [rcx+421h],101h		; DEBUG: {Memory}/None {Immediate16}/None ||| RCX | 1057 | None ||| N/A | 257
+		0x180793762 mov byte ptr [rcx+423h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 1059 | None ||| N/A | 1
+		0x180793769 mov byte ptr [rcx+430h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 1072 | None ||| N/A | 1
+		0x180793770 mov dword ptr [rcx+434h],2		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 1076 | None ||| N/A | 2
+		0x18079377A mov word ptr [rcx+438h],101h		; DEBUG: {Memory}/None {Immediate16}/None ||| RCX | 1080 | None ||| N/A | 257
+		0x180793783 jmp near ptr 00000001807DD380h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180793788 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PlayerHouseInteriorWorldArea::.ctor():
+		End of function at 0x180793789
+		Absolute End is at 0x180793789
+		Identified Jump Destination addresses:
+
+		0x180793752: [!] Sets the field canBeSaved (Type System.Boolean) on local {'this' (function parameter, type PlayerHouseInteriorWorldArea)} to the value stored in True
+		0x180793759: [!] Sets the field canSpawnAnimals (Type System.Boolean) on local {'this' (function parameter, type PlayerHouseInteriorWorldArea)} to the value stored in True
+		0x180793762: [!] Sets the field canDropItemsOnTheFloor (Type System.Boolean) on local {'this' (function parameter, type PlayerHouseInteriorWorldArea)} to the value stored in True
+		0x180793769: [!] Sets the field enablePlayerInputAfterEntering (Type System.Boolean) on local {'this' (function parameter, type PlayerHouseInteriorWorldArea)} to the value stored in True
+		0x180793770: [!] Sets the field buildingsBarType (Type BuildingCategoryBarType) on local {'this' (function parameter, type PlayerHouseInteriorWorldArea)} to the value stored in 2
+		0x18079377A: [!] Sets the field canExitFromHere (Type System.Boolean) on local {'this' (function parameter, type PlayerHouseInteriorWorldArea)} to the value stored in True
+		0x180793783: [!] Calls managed method System.Void WorldArea::.ctor() on instance {'this' (function parameter, type PlayerHouseInteriorWorldArea)}
+
+		0x180793783: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerHouseInteriorWorldArea
+	System.Void .ctor()
+		this.canBeSaved = True
+		this.canSpawnAnimals = True
+		this.canDropItemsOnTheFloor = True
+		this.enablePlayerInputAfterEntering = True
+		this.buildingsBarType = 2
+		this.canExitFromHere = True
+
+		base..ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4.1
+	IL_0002: stfld System.Boolean InteriorWorldArea::canBeSaved
+	IL_0007: ldarg.0
+	IL_0008: ldc.i4.1
+	IL_0009: stfld System.Boolean InteriorWorldArea::canSpawnAnimals
+	IL_000e: ldarg.0
+	IL_000f: ldc.i4.1
+	IL_0010: stfld System.Boolean InteriorWorldArea::canDropItemsOnTheFloor
+	IL_0015: ldarg.0
+	IL_0016: ldc.i4.1
+	IL_0017: stfld System.Boolean InteriorWorldArea::enablePlayerInputAfterEntering
+	IL_001c: ldarg.0
+	IL_001d: ldc.i4.2
+	IL_001e: conv.i8
+	IL_001f: conv.u8
+	IL_0020: stfld BuildingCategoryBarType InteriorWorldArea::buildingsBarType
+	IL_0025: ldarg.0
+	IL_0026: ldc.i4.1
+	IL_0027: stfld System.Boolean InteriorWorldArea::canExitFromHere
+	IL_002c: ldarg.0
+	IL_002d: call System.Void WorldArea::.ctor()
+	IL_0032: ret
+	
+

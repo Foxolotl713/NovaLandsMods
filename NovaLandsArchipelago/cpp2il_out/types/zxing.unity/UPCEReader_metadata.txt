@@ -1,0 +1,112 @@
+Type: ZXing.OneD.UPCEReader:
+	Base Class: 
+		ZXing.OneD.UPCEANReader
+
+	Interfaces:
+
+	Static Field: MIDDLE_END_PATTERN
+		Type: System.Int32[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: NUMSYS_AND_CHECK_DIGIT_PATTERNS
+		Type: System.Int32[][]
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Field: decodeMiddleCounters
+		Type: System.Int32[]
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x028145C0
+		Ram Offset 0x1828157c0
+		Virtual Method Slot: 65535
+
+	Method: decodeMiddle:
+		Accessibility: FamORAssem
+		Return Type: System.Int32
+		File Offset 0x02814680
+		Ram Offset 0x182815880
+		Virtual Method Slot: 14
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: startRange
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: System.Text.StringBuilder
+			Default Value: 
+	Method: decodeEnd:
+		Accessibility: Family
+		Return Type: System.Int32[]
+		File Offset 0x028149E0
+		Ram Offset 0x182815be0
+		Virtual Method Slot: 12
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: endStart
+			Type: System.Int32
+			Default Value: 
+	Method: checkChecksum:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x02814A90
+		Ram Offset 0x182815c90
+		Virtual Method Slot: 11
+
+		Parameter 0:
+			Name: s
+			Type: System.String
+			Default Value: 
+	Method: determineNumSysAndCheckDigit:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x02814B20
+		Ram Offset 0x182815d20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resultString
+			Type: System.Text.StringBuilder
+			Default Value: 
+		Parameter 1:
+			Name: lgPatternFound
+			Type: System.Int32
+			Default Value: 
+	Method: get_BarcodeFormat:
+		Accessibility: Assembly
+		Return Type: ZXing.BarcodeFormat
+		File Offset 0x02814C90
+		Ram Offset 0x182815e90
+		Virtual Method Slot: 13
+
+	Method: convertUPCEtoUPCA:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x02814CA0
+		Ram Offset 0x182815ea0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: upce
+			Type: System.String
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02815260
+		Ram Offset 0x182816460
+		Virtual Method Slot: 65535

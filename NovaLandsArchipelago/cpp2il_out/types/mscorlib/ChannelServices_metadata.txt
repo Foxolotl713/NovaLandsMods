@@ -1,0 +1,189 @@
+Type: System.Runtime.Remoting.Channels.ChannelServices:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: registeredChannels
+		Type: System.Collections.ArrayList
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: delayedClientChannels
+		Type: System.Collections.ArrayList
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: _crossContextSink
+		Type: System.Runtime.Remoting.Contexts.CrossContextChannel
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: CrossContextUrl
+		Type: System.String
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: oldStartModeTypes
+		Type: System.Collections.IList
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Method: get_CrossContextChannel:
+		Accessibility: Assembly
+		Return Type: System.Runtime.Remoting.Contexts.CrossContextChannel
+		File Offset 0x0174FB50
+		Ram Offset 0x181750d50
+		Virtual Method Slot: 65535
+
+	Method: CreateClientChannelSinkChain:
+		Accessibility: Assembly
+		Return Type: System.Runtime.Remoting.Messaging.IMessageSink
+		File Offset 0x0174FBA0
+		Ram Offset 0x181750da0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: url
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: remoteChannelData
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: objectUri
+			Type: System.String
+			Default Value: 
+	Method: CreateClientChannelSinkChain:
+		Accessibility: Assembly
+		Return Type: System.Runtime.Remoting.Messaging.IMessageSink
+		File Offset 0x01750480
+		Ram Offset 0x181751680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sender
+			Type: System.Runtime.Remoting.Channels.IChannelSender
+			Default Value: 
+		Parameter 1:
+			Name: url
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: channelDataArray
+			Type: System.Object[]
+			Default Value: 
+		Parameter 3:
+			Name: objectUri
+			Type: System.String
+			Default Value: 
+	Method: RegisterChannel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x017505C0
+		Ram Offset 0x1817517c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: chnl
+			Type: System.Runtime.Remoting.Channels.IChannel
+			Default Value: 
+	Method: RegisterChannel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01750610
+		Ram Offset 0x181751810
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: chnl
+			Type: System.Runtime.Remoting.Channels.IChannel
+			Default Value: 
+		Parameter 1:
+			Name: ensureSecurity
+			Type: System.Boolean
+			Default Value: 
+	Method: RegisterChannelConfig:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01750CE0
+		Ram Offset 0x181751ee0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: channel
+			Type: System.Runtime.Remoting.ChannelData
+			Default Value: 
+	Method: CreateProvider:
+		Accessibility: Private
+		Return Type: System.Object
+		File Offset 0x01751E40
+		Ram Offset 0x181753040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: prov
+			Type: System.Runtime.Remoting.ProviderData
+			Default Value: 
+	Method: SyncDispatchMessage:
+		Accessibility: Public
+		Return Type: System.Runtime.Remoting.Messaging.IMessage
+		File Offset 0x01752150
+		Ram Offset 0x181753350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: System.Runtime.Remoting.Messaging.IMessage
+			Default Value: 
+	Method: CheckIncomingMessage:
+		Accessibility: Private
+		Return Type: System.Runtime.Remoting.Messaging.ReturnMessage
+		File Offset 0x01752220
+		Ram Offset 0x181753420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: System.Runtime.Remoting.Messaging.IMessage
+			Default Value: 
+	Method: CheckReturnMessage:
+		Accessibility: Assembly
+		Return Type: System.Runtime.Remoting.Messaging.IMessage
+		File Offset 0x01752420
+		Ram Offset 0x181753620
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callMsg
+			Type: System.Runtime.Remoting.Messaging.IMessage
+			Default Value: 
+		Parameter 1:
+			Name: retMsg
+			Type: System.Runtime.Remoting.Messaging.IMessage
+			Default Value: 
+	Method: IsLocalCall:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callMsg
+			Type: System.Runtime.Remoting.Messaging.IMessage
+			Default Value: 
+	Method: GetCurrentChannelInfo:
+		Accessibility: Assembly
+		Return Type: System.Object[]
+		File Offset 0x017525F0
+		Ram Offset 0x1817537f0
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01752A30
+		Ram Offset 0x181753c30
+		Virtual Method Slot: 65535

@@ -1,0 +1,586 @@
+Type: UnityEngine.Rendering.Universal.ClipperBase:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: horizontal
+		Type: System.Double
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: -3,4E+38
+
+	Static Field: Skip
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: -2
+
+	Static Field: Unassigned
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: -1
+
+	Static Field: tolerance
+		Type: System.Double
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1E-20
+
+	Static Field: loRange
+		Type: System.Int64
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1073741823
+
+	Static Field: hiRange
+		Type: System.Int64
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 4611686018427387903
+
+	Field: m_MinimaList
+		Type: UnityEngine.Rendering.Universal.LocalMinima
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_CurrentLM
+		Type: UnityEngine.Rendering.Universal.LocalMinima
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_edges
+		Type: System.Collections.Generic.List`1<System.Collections.Generic.List`1<UnityEngine.Rendering.Universal.TEdge>>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_Scanbeam
+		Type: UnityEngine.Rendering.Universal.Scanbeam
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_PolyOuts
+		Type: System.Collections.Generic.List`1<UnityEngine.Rendering.Universal.OutRec>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_ActiveEdges
+		Type: UnityEngine.Rendering.Universal.TEdge
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_UseFullRange
+		Type: System.Boolean
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: m_HasOpenPaths
+		Type: System.Boolean
+		Offset in Defining Type: 0x41
+		Has Default: False
+
+	Field: <PreserveCollinear>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x42
+		Has Default: False
+
+	Method: near_zero:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0220B2C0
+		Ram Offset 0x18220c4c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: val
+			Type: System.Double
+			Default Value: 
+	Method: get_PreserveCollinear:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097D610
+		Ram Offset 0x18097e810
+		Virtual Method Slot: 65535
+
+	Method: set_PreserveCollinear:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01E905A0
+		Ram Offset 0x181e917a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: Swap:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0220B2E0
+		Ram Offset 0x18220c4e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: val1
+			Type: System.Int64
+			Default Value: 
+		Parameter 1:
+			Name: val2
+			Type: System.Int64
+			Default Value: 
+	Method: IsHorizontal:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0220B2F0
+		Ram Offset 0x18220c4f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: e
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+	Method: PointIsVertex:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0220B310
+		Ram Offset 0x18220c510
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pt
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 1:
+			Name: pp
+			Type: UnityEngine.Rendering.Universal.OutPt
+			Default Value: 
+	Method: PointOnLineSegment:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0220B360
+		Ram Offset 0x18220c560
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pt
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 1:
+			Name: linePt1
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 2:
+			Name: linePt2
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 3:
+			Name: UseFullRange
+			Type: System.Boolean
+			Default Value: 
+	Method: PointOnPolygon:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0220B5C0
+		Ram Offset 0x18220c7c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pt
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 1:
+			Name: pp
+			Type: UnityEngine.Rendering.Universal.OutPt
+			Default Value: 
+		Parameter 2:
+			Name: UseFullRange
+			Type: System.Boolean
+			Default Value: 
+	Method: SlopesEqual:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0220B860
+		Ram Offset 0x18220ca60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: e1
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+		Parameter 1:
+			Name: e2
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+		Parameter 2:
+			Name: UseFullRange
+			Type: System.Boolean
+			Default Value: 
+	Method: SlopesEqual:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0220B9D0
+		Ram Offset 0x18220cbd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pt1
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 1:
+			Name: pt2
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 2:
+			Name: pt3
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 3:
+			Name: UseFullRange
+			Type: System.Boolean
+			Default Value: 
+	Method: SlopesEqual:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0220BB60
+		Ram Offset 0x18220cd60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pt1
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 1:
+			Name: pt2
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 2:
+			Name: pt3
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 3:
+			Name: pt4
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 4:
+			Name: UseFullRange
+			Type: System.Boolean
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0220BCF0
+		Ram Offset 0x18220cef0
+		Virtual Method Slot: 65535
+
+	Method: Clear:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0220BE50
+		Ram Offset 0x18220d050
+		Virtual Method Slot: 4
+
+	Method: DisposeLocalMinimaList:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0220C130
+		Ram Offset 0x18220d330
+		Virtual Method Slot: 65535
+
+	Method: RangeTest:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0220C270
+		Ram Offset 0x18220d470
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: Pt
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 1:
+			Name: useFullRange
+			Type: System.Boolean
+			Default Value: 
+	Method: InitEdge:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0220C390
+		Ram Offset 0x18220d590
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: e
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+		Parameter 1:
+			Name: eNext
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+		Parameter 2:
+			Name: ePrev
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+		Parameter 3:
+			Name: pt
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+	Method: InitEdge2:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0220C480
+		Ram Offset 0x18220d680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: e
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+		Parameter 1:
+			Name: polyType
+			Type: UnityEngine.Rendering.Universal.PolyType
+			Default Value: 
+	Method: FindNextLocMin:
+		Accessibility: Private
+		Return Type: UnityEngine.Rendering.Universal.TEdge
+		File Offset 0x0220C5A0
+		Ram Offset 0x18220d7a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: E
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+	Method: ProcessBound:
+		Accessibility: Private
+		Return Type: UnityEngine.Rendering.Universal.TEdge
+		File Offset 0x0220C6C0
+		Ram Offset 0x18220d8c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: E
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+		Parameter 1:
+			Name: LeftBoundIsForward
+			Type: System.Boolean
+			Default Value: 
+	Method: AddPath:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0220CE40
+		Ram Offset 0x18220e040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pg
+			Type: System.Collections.Generic.List`1<UnityEngine.Rendering.Universal.IntPoint>
+			Default Value: 
+		Parameter 1:
+			Name: polyType
+			Type: UnityEngine.Rendering.Universal.PolyType
+			Default Value: 
+		Parameter 2:
+			Name: Closed
+			Type: System.Boolean
+			Default Value: 
+	Method: AddPaths:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0220E200
+		Ram Offset 0x18220f400
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ppg
+			Type: System.Collections.Generic.List`1<System.Collections.Generic.List`1<UnityEngine.Rendering.Universal.IntPoint>>
+			Default Value: 
+		Parameter 1:
+			Name: polyType
+			Type: UnityEngine.Rendering.Universal.PolyType
+			Default Value: 
+		Parameter 2:
+			Name: closed
+			Type: System.Boolean
+			Default Value: 
+	Method: Pt2IsBetweenPt1AndPt3:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0220E2E0
+		Ram Offset 0x18220f4e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pt1
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 1:
+			Name: pt2
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+		Parameter 2:
+			Name: pt3
+			Type: UnityEngine.Rendering.Universal.IntPoint
+			Default Value: 
+	Method: RemoveEdge:
+		Accessibility: Private
+		Return Type: UnityEngine.Rendering.Universal.TEdge
+		File Offset 0x0220E380
+		Ram Offset 0x18220f580
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: e
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+	Method: SetDx:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0220E4F0
+		Ram Offset 0x18220f6f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: e
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+	Method: InsertLocalMinima:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0220E560
+		Ram Offset 0x18220f760
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newLm
+			Type: UnityEngine.Rendering.Universal.LocalMinima
+			Default Value: 
+	Method: PopLocalMinima:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0220E780
+		Ram Offset 0x18220f980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: Y
+			Type: System.Int64
+			Default Value: 
+		Parameter 1:
+			Name: current
+			Type: UnityEngine.Rendering.Universal.LocalMinima
+			Default Value: 
+	Method: ReverseHorizontal:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0220E870
+		Ram Offset 0x18220fa70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: e
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+	Method: Reset:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0220E8A0
+		Ram Offset 0x18220faa0
+		Virtual Method Slot: 5
+
+	Method: GetBounds:
+		Accessibility: Public
+		Return Type: UnityEngine.Rendering.Universal.IntRect
+		File Offset 0x0220ED30
+		Ram Offset 0x18220ff30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: paths
+			Type: System.Collections.Generic.List`1<System.Collections.Generic.List`1<UnityEngine.Rendering.Universal.IntPoint>>
+			Default Value: 
+	Method: InsertScanbeam:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0220F1A0
+		Ram Offset 0x1822103a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: Y
+			Type: System.Int64
+			Default Value: 
+	Method: PopScanbeam:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0220F490
+		Ram Offset 0x182210690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: Y
+			Type: System.Int64
+			Default Value: 
+	Method: LocalMinimaPending:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0193E2F0
+		Ram Offset 0x18193f4f0
+		Virtual Method Slot: 65535
+
+	Method: CreateOutRec:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Rendering.Universal.OutRec
+		File Offset 0x0220F520
+		Ram Offset 0x182210720
+		Virtual Method Slot: 65535
+
+	Method: DisposeOutRec:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0220F750
+		Ram Offset 0x182210950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: UpdateEdgeIntoAEL:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0220F860
+		Ram Offset 0x182210a60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: e
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+	Method: SwapPositionsInAEL:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0220FC70
+		Ram Offset 0x182210e70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: edge1
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+		Parameter 1:
+			Name: edge2
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 
+	Method: DeleteFromAEL:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0220FF30
+		Ram Offset 0x182211130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: e
+			Type: UnityEngine.Rendering.Universal.TEdge
+			Default Value: 

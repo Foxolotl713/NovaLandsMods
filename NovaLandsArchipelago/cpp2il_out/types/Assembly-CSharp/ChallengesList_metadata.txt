@@ -1,0 +1,234 @@
+Type: ChallengesList:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Static Field: instance
+		Type: ChallengesList
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: engineerNPC
+		Type: BaseNPC
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: armandoNPC
+		Type: BaseNPC
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: challenges
+		Type: System.Collections.Generic.List`1<ChallengeScriptableObject>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: challengesDict
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,ChallengeScriptableObject>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: challengesPerEvaluationType
+		Type: System.Collections.Generic.Dictionary`2<ChallengeEvaluationType,System.Collections.Generic.List`1<ChallengeScriptableObject>>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Method: get_Instance:
+		Accessibility: Public
+		Return Type: ChallengesList
+		File Offset 0x0075CEA0
+		Ram Offset 0x18075e0a0
+		Virtual Method Slot: 65535
+
+	Method: set_Instance:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0075CEE0
+		Ram Offset 0x18075e0e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: ChallengesList
+			Default Value: 
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0075CF70
+		Ram Offset 0x18075e170
+		Virtual Method Slot: 65535
+
+	Method: InitDicts:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0075D140
+		Ram Offset 0x18075e340
+		Virtual Method Slot: 65535
+
+	Method: ReviewActiveChallenges:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0075D5F0
+		Ram Offset 0x18075e7f0
+		Virtual Method Slot: 65535
+
+	Method: CheckAllChallengesUnlockStatus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0075D940
+		Ram Offset 0x18075eb40
+		Virtual Method Slot: 65535
+
+	Method: GetChallenge:
+		Accessibility: Public
+		Return Type: ChallengeScriptableObject
+		File Offset 0x0075DAF0
+		Ram Offset 0x18075ecf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: challengeId
+			Type: System.Int32
+			Default Value: 
+	Method: UnlockChallenge:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0075DB60
+		Ram Offset 0x18075ed60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: challengeId
+			Type: System.Int32
+			Default Value: 
+	Method: CompleteChallenge:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0075DEB0
+		Ram Offset 0x18075f0b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: challengeId
+			Type: System.Int32
+			Default Value: 
+	Method: IsChallengeUnlocked:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0075E0E0
+		Ram Offset 0x18075f2e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: challengeId
+			Type: System.Int32
+			Default Value: 
+	Method: SetChallengeProgress:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0075E210
+		Ram Offset 0x18075f410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: challengeId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: progress
+			Type: System.Int32
+			Default Value: 
+	Method: GetChallengeProgress:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0075E330
+		Ram Offset 0x18075f530
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: challengeId
+			Type: System.Int32
+			Default Value: 
+	Method: EvaluateChallengesOnBuild:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0075E410
+		Ram Offset 0x18075f610
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: worldArea
+			Type: WorldArea
+			Default Value: 
+	Method: EvaluateChallengesOnResourceProducecd:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0075E830
+		Ram Offset 0x18075fa30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: itemTypeId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: EvaluateChallengesOnBotAssigned:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0075EAC0
+		Ram Offset 0x18075fcc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: areas
+			Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Collections.Generic.List`1<WorldArea>>
+			Default Value: 
+	Method: EvaluateChallengesOnResearchResearched:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0075F0E0
+		Ram Offset 0x1807602e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: unlockedChallenges
+			Type: System.Int32
+			Default Value: 
+	Method: EvaluateProgressDiscoveredIslands:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0075F340
+		Ram Offset 0x180760540
+		Virtual Method Slot: 65535
+
+	Method: EvaluateProgressUnlockedSkins:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0075F9C0
+		Ram Offset 0x180760bc0
+		Virtual Method Slot: 65535
+
+	Method: EvaluateProgressUnlockedUpgrades:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0075FCA0
+		Ram Offset 0x180760ea0
+		Virtual Method Slot: 65535
+
+	Method: get_Challenges:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<ChallengeScriptableObject>
+		File Offset 0x003A09A0
+		Ram Offset 0x1803a1ba0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379430
+		Ram Offset 0x18037a630
+		Virtual Method Slot: 65535

@@ -1,0 +1,401 @@
+Type: MuseumCounterBuilding:
+	Base Class: 
+		BaseBuilding
+
+	Interfaces:
+
+	Nested Types:
+		MuseumCounterBuilding/<>c__DisplayClass23_0
+		MuseumCounterBuilding/<InvokeRealtimeCoroutine>d__37
+
+	Field: counterCategory
+		Type: MuseumCounterCategory
+		Offset in Defining Type: 0x580
+		Has Default: False
+
+	Field: currentItemSprite
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x588
+		Has Default: False
+
+	Field: currentItemSpriteFill
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x590
+		Has Default: False
+
+	Field: currentResourceAmountLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x598
+		Has Default: False
+
+	Field: textMeshColorIncomplete
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x5A0
+		Has Default: False
+
+	Field: textMeshColorComplete
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x5B0
+		Has Default: False
+
+	Field: requiredResource
+		Type: BaseResourceScriptableObject
+		Offset in Defining Type: 0x5C0
+		Has Default: False
+
+	Field: requiredResourceAmount
+		Type: System.Int32
+		Offset in Defining Type: 0x5C8
+		Has Default: False
+
+	Field: depositCompleteSFX
+		Type: System.String
+		Offset in Defining Type: 0x5D0
+		Has Default: False
+
+	Field: itemPlacedFeedback
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x5D8
+		Has Default: False
+
+	Field: itemVisibilityAnimator
+		Type: UnityEngine.Animator
+		Offset in Defining Type: 0x5E0
+		Has Default: False
+
+	Field: showItemSFX
+		Type: System.String
+		Offset in Defining Type: 0x5E8
+		Has Default: False
+
+	Field: counterActiveSprite
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0x5F0
+		Has Default: False
+
+	Field: currentResourceAmount
+		Type: System.Int32
+		Offset in Defining Type: 0x5F8
+		Has Default: False
+
+	Field: onCompleteResourcesDelivery
+		Type: System.Action`1<MuseumCounterBuilding>
+		Offset in Defining Type: 0x600
+		Has Default: False
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B150D0
+		Ram Offset 0x180b162d0
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: parentArea
+			Type: WorldArea
+			Default Value: 
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x00B15470
+		Ram Offset 0x180b16670
+		Virtual Method Slot: 97
+
+		Parameter 0:
+			Name: firstSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: InitProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00B15820
+		Ram Offset 0x180b16a20
+		Virtual Method Slot: 25
+
+	Method: OnDisable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00B15860
+		Ram Offset 0x180b16a60
+		Virtual Method Slot: 65535
+
+	Method: OnEnable:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B158C0
+		Ram Offset 0x180b16ac0
+		Virtual Method Slot: 65535
+
+	Method: BecameVisibleCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B15980
+		Ram Offset 0x180b16b80
+		Virtual Method Slot: 54
+
+	Method: BecameInvisibleCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B159D0
+		Ram Offset 0x180b16bd0
+		Virtual Method Slot: 55
+
+	Method: ShowItemImmediately:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B15A20
+		Ram Offset 0x180b16c20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+	Method: ShowItem:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B15B00
+		Ram Offset 0x180b16d00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: delay
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: playSound
+			Type: System.Boolean
+			Default Value: 
+	Method: ShowPopup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B15CC0
+		Ram Offset 0x180b16ec0
+		Virtual Method Slot: 116
+
+	Method: SetOnCompleteDeliveriesCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B15F80
+		Ram Offset 0x180b17180
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: onCompleteResourcesDelivery
+			Type: System.Action`1<MuseumCounterBuilding>
+			Default Value: 
+	Method: PlayItemPlacedFeedback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B15FE0
+		Ram Offset 0x180b171e0
+		Virtual Method Slot: 65535
+
+	Method: SetItemSprite:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B16040
+		Ram Offset 0x180b17240
+		Virtual Method Slot: 65535
+
+	Method: UpdateProgress:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B16440
+		Ram Offset 0x180b17640
+		Virtual Method Slot: 65535
+
+	Method: TryToConsumeItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B165B0
+		Ram Offset 0x180b177b0
+		Virtual Method Slot: 118
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+		Parameter 1:
+			Name: sourceCharacter
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: dropToTheGround
+			Type: System.Boolean
+			Default Value: 
+	Method: CanAddItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B16850
+		Ram Offset 0x180b17a50
+		Virtual Method Slot: 120
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: isRecipe
+			Type: System.Boolean
+			Default Value: 
+	Method: CanReceiveItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B16890
+		Ram Offset 0x180b17a90
+		Virtual Method Slot: 121
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+	Method: CanInteract:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B168D0
+		Ram Offset 0x180b17ad0
+		Virtual Method Slot: 108
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: HasResource:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B16AE0
+		Ram Offset 0x180b17ce0
+		Virtual Method Slot: 133
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+	Method: GetResourceCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B16BE0
+		Ram Offset 0x180b17de0
+		Virtual Method Slot: 135
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+	Method: AddItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0059E4A0
+		Ram Offset 0x18059f6a0
+		Virtual Method Slot: 136
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: feedbackTargetPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 3:
+			Name: destroyAfterTime
+			Type: System.Single
+			Default Value: -1
+		Parameter 4:
+			Name: resourceToSpawnOnDestroy
+			Type: System.Int32
+			Default Value: -1
+	Method: ResetItem:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B16BF0
+		Ram Offset 0x180b17df0
+		Virtual Method Slot: 65535
+
+	Method: InvokeRealtimeCoroutine:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00B16C00
+		Ram Offset 0x180b17e00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: System.Action
+			Default Value: 
+		Parameter 1:
+			Name: duration
+			Type: System.Single
+			Default Value: 
+	Method: get_IsVisible:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B16CC0
+		Ram Offset 0x180b17ec0
+		Virtual Method Slot: 65535
+
+	Method: get_RequiredResource:
+		Accessibility: Public
+		Return Type: BaseResourceScriptableObject
+		File Offset 0x00AE9CB0
+		Ram Offset 0x180aeaeb0
+		Virtual Method Slot: 65535
+
+	Method: get_IsDead:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 181
+
+	Method: get_RequireResourceAmount:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00B16CD0
+		Ram Offset 0x180b17ed0
+		Virtual Method Slot: 65535
+
+	Method: get_CurrentResourceAmount:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00B16CE0
+		Ram Offset 0x180b17ee0
+		Virtual Method Slot: 65535
+
+	Method: get_IsComplete:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B16CF0
+		Ram Offset 0x180b17ef0
+		Virtual Method Slot: 65535
+
+	Method: get_CounterCategory:
+		Accessibility: Public
+		Return Type: MuseumCounterCategory
+		File Offset 0x00B05DF0
+		Ram Offset 0x180b06ff0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0059E610
+		Ram Offset 0x18059f810
+		Virtual Method Slot: 65535

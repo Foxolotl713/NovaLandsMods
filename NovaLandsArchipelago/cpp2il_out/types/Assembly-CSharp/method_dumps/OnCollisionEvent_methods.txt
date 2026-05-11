@@ -1,0 +1,354 @@
+Type: OnCollisionEvent
+
+Method: System.Void OnCollisionEvent::OnCollisionEnter(UnityEngine.Collision):	Method Body (x86 ASM):
+		0x180902550 sub rsp,38h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 56
+		0x180902554 mov rax,[rcx+28h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 40 | None ||| N/A | N/A
+		0x180902558 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090255B je short 0000000180902587h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090255D cmp dword ptr [rax+10h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 16 | None ||| N/A | 0
+		0x180902561 jbe short 0000000180902587h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180902563 mov rax,[rcx+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x180902567 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090256A je short 000000018090258Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090256C mov r8,rdx		; DEBUG: {Register}/R8 {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18090256F mov qword ptr [rsp+20h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 32 | None ||| N/A | 0
+		0x180902578 mov rdx,[rcx+28h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 40 | None ||| N/A | N/A
+		0x18090257C xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18090257F mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180902582 call 000000018248B040h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180902587 add rsp,38h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 56
+		0x18090258B ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18090258C call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180902591 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void OnCollisionEvent::OnCollisionEnter(UnityEngine.Collision):
+		End of function at 0x180902592
+		Absolute End is at 0x180902592
+		Identified Jump Destination addresses:
+
+		0x180902554: [!] Reads field onEnterCallback from {'this' (function parameter, type OnCollisionEvent)} and stores in a new local {'onEnterCallback' (type System.String)}
+
+		0x180902558: [!] Compares {'onEnterCallback' (type System.String)} and 0
+		0x18090255B: Jumps to 0x180902587 (which is an if statement's body) if onEnterCallback equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18090255D: [!] Compares {field _stringLength, read from local {'onEnterCallback' (type System.String)}} and 0
+		0x180902561: Jumps to 0x180902587 (which is an if statement's body) if {field _stringLength, read from local {'onEnterCallback' (type System.String)}} is less than or equal to 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180902563: [!] Reads field callbackTarget from {'this' (function parameter, type OnCollisionEvent)} and stores in a new local {'callbackTarget' (type UnityEngine.GameObject)}
+
+		0x180902567: [!] Compares {'callbackTarget' (type UnityEngine.GameObject)} and 0
+		0x18090256A: Jumps to 0x18090258C (which throws a NRE) if callbackTarget equals 0. Implicitly present in managed code, so ignored here.
+		0x18090256C: Copies {'collision' (function parameter, type UnityEngine.Collision)} from rdx into r8
+		0x18090256F: Moves 0 (immediate ulong value) to the stack at offset 32 as a new local local4
+		0x180902578: [!] Reads field onEnterCallback from {'this' (function parameter, type OnCollisionEvent)} and stores in a new local {'onEnterCallback2' (type System.String)}
+
+		0x18090257C: Clears register r9, yielding zero-local {'local6' (type System.Int32)}
+		0x18090257F: Copies {'callbackTarget' (type UnityEngine.GameObject)} from rax into rcx
+		0x180902582: [!] Calls managed method System.Void UnityEngine.GameObject::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions) on instance {'callbackTarget' (type UnityEngine.GameObject)} with arguments [{'onEnterCallback2' (type System.String)}, {'collision' (function parameter, type UnityEngine.Collision)}, {'local6' (type System.Int32)}]
+
+		0x18090258B: [!] Returns from the function
+
+		0x18090258C: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: OnCollisionEvent
+	System.Void OnCollisionEnter(UnityEngine.Collision collision)
+		System.String onEnterCallback = this.onEnterCallback
+
+		if (onEnterCallback != 0)
+
+		    if (onEnterCallback._stringLength > 0)
+		        UnityEngine.GameObject callbackTarget = this.callbackTarget
+		        System.String onEnterCallback2 = this.onEnterCallback
+		        ulong local6 = 0
+
+		        callbackTarget.SendMessage(onEnterCallback2, collision, local6) //(String methodName, Object value, SendMessageOptions options)
+		    endif
+            
+		    return
+		    throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.String OnCollisionEvent::onEnterCallback
+	IL_0006: stloc.0
+	IL_0007: ldloc.0
+	IL_0008: ldc.i4.0
+	IL_0009: beq.s IL_002f
+	IL_000b: ldloc.0
+	IL_000c: ldfld System.Int32 System.String::_stringLength
+	IL_0011: ldc.i4.0
+	IL_0012: ble.s IL_002f
+	IL_0014: ldarg.0
+	IL_0015: ldfld UnityEngine.GameObject OnCollisionEvent::callbackTarget
+	IL_001a: stloc.1
+	IL_001b: ldarg.0
+	IL_001c: ldfld System.String OnCollisionEvent::onEnterCallback
+	IL_0021: stloc.3
+	IL_0022: ldc.i4.0
+	IL_0023: stloc.s V_4
+	IL_0025: ldloc.1
+	IL_0026: ldloc.3
+	IL_0027: ldarg.1
+	IL_0028: ldloc.s V_4
+	IL_002a: call System.Void UnityEngine.GameObject::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
+	IL_002f: ret
+	IL_0030: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0035: throw
+	
+
+Method: System.Void OnCollisionEvent::OnCollisionStay(UnityEngine.Collision):	Method Body (x86 ASM):
+		0x1809025A0 sub rsp,38h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 56
+		0x1809025A4 mov rax,[rcx+30h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 48 | None ||| N/A | N/A
+		0x1809025A8 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809025AB je short 00000001809025D7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809025AD cmp dword ptr [rax+10h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 16 | None ||| N/A | 0
+		0x1809025B1 jbe short 00000001809025D7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809025B3 mov rax,[rcx+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x1809025B7 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809025BA je short 00000001809025DCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809025BC mov r8,rdx		; DEBUG: {Register}/R8 {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1809025BF mov qword ptr [rsp+20h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 32 | None ||| N/A | 0
+		0x1809025C8 mov rdx,[rcx+30h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 48 | None ||| N/A | N/A
+		0x1809025CC xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1809025CF mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809025D2 call 000000018248B040h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809025D7 add rsp,38h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 56
+		0x1809025DB ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809025DC call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809025E1 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void OnCollisionEvent::OnCollisionStay(UnityEngine.Collision):
+		End of function at 0x1809025E2
+		Absolute End is at 0x1809025E2
+		Identified Jump Destination addresses:
+
+		0x1809025A4: [!] Reads field onStayCallback from {'this' (function parameter, type OnCollisionEvent)} and stores in a new local {'onStayCallback' (type System.String)}
+
+		0x1809025A8: [!] Compares {'onStayCallback' (type System.String)} and 0
+		0x1809025AB: Jumps to 0x1809025D7 (which is an if statement's body) if onStayCallback equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809025AD: [!] Compares {field _stringLength, read from local {'onStayCallback' (type System.String)}} and 0
+		0x1809025B1: Jumps to 0x1809025D7 (which is an if statement's body) if {field _stringLength, read from local {'onStayCallback' (type System.String)}} is less than or equal to 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809025B3: [!] Reads field callbackTarget from {'this' (function parameter, type OnCollisionEvent)} and stores in a new local {'callbackTarget' (type UnityEngine.GameObject)}
+
+		0x1809025B7: [!] Compares {'callbackTarget' (type UnityEngine.GameObject)} and 0
+		0x1809025BA: Jumps to 0x1809025DC (which throws a NRE) if callbackTarget equals 0. Implicitly present in managed code, so ignored here.
+		0x1809025BC: Copies {'collision' (function parameter, type UnityEngine.Collision)} from rdx into r8
+		0x1809025BF: Moves 0 (immediate ulong value) to the stack at offset 32 as a new local local4
+		0x1809025C8: [!] Reads field onStayCallback from {'this' (function parameter, type OnCollisionEvent)} and stores in a new local {'onStayCallback2' (type System.String)}
+
+		0x1809025CC: Clears register r9, yielding zero-local {'local6' (type System.Int32)}
+		0x1809025CF: Copies {'callbackTarget' (type UnityEngine.GameObject)} from rax into rcx
+		0x1809025D2: [!] Calls managed method System.Void UnityEngine.GameObject::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions) on instance {'callbackTarget' (type UnityEngine.GameObject)} with arguments [{'onStayCallback2' (type System.String)}, {'collision' (function parameter, type UnityEngine.Collision)}, {'local6' (type System.Int32)}]
+
+		0x1809025DB: [!] Returns from the function
+
+		0x1809025DC: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: OnCollisionEvent
+	System.Void OnCollisionStay(UnityEngine.Collision collision)
+		System.String onStayCallback = this.onStayCallback
+
+		if (onStayCallback != 0)
+
+		    if (onStayCallback._stringLength > 0)
+		        UnityEngine.GameObject callbackTarget = this.callbackTarget
+		        System.String onStayCallback2 = this.onStayCallback
+		        ulong local6 = 0
+
+		        callbackTarget.SendMessage(onStayCallback2, collision, local6) //(String methodName, Object value, SendMessageOptions options)
+		    endif
+            
+		    return
+		    throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.String OnCollisionEvent::onStayCallback
+	IL_0006: stloc.0
+	IL_0007: ldloc.0
+	IL_0008: ldc.i4.0
+	IL_0009: beq.s IL_002f
+	IL_000b: ldloc.0
+	IL_000c: ldfld System.Int32 System.String::_stringLength
+	IL_0011: ldc.i4.0
+	IL_0012: ble.s IL_002f
+	IL_0014: ldarg.0
+	IL_0015: ldfld UnityEngine.GameObject OnCollisionEvent::callbackTarget
+	IL_001a: stloc.1
+	IL_001b: ldarg.0
+	IL_001c: ldfld System.String OnCollisionEvent::onStayCallback
+	IL_0021: stloc.3
+	IL_0022: ldc.i4.0
+	IL_0023: stloc.s V_4
+	IL_0025: ldloc.1
+	IL_0026: ldloc.3
+	IL_0027: ldarg.1
+	IL_0028: ldloc.s V_4
+	IL_002a: call System.Void UnityEngine.GameObject::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
+	IL_002f: ret
+	IL_0030: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0035: throw
+	
+
+Method: System.Void OnCollisionEvent::OnCollisionExit(UnityEngine.Collision):	Method Body (x86 ASM):
+		0x1809025F0 sub rsp,38h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 56
+		0x1809025F4 mov rax,[rcx+38h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 56 | None ||| N/A | N/A
+		0x1809025F8 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809025FB je short 0000000180902627h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809025FD cmp dword ptr [rax+10h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 16 | None ||| N/A | 0
+		0x180902601 jbe short 0000000180902627h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180902603 mov rax,[rcx+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x180902607 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18090260A je short 000000018090262Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18090260C mov r8,rdx		; DEBUG: {Register}/R8 {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18090260F mov qword ptr [rsp+20h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 32 | None ||| N/A | 0
+		0x180902618 mov rdx,[rcx+38h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 56 | None ||| N/A | N/A
+		0x18090261C xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18090261F mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180902622 call 000000018248B040h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180902627 add rsp,38h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 56
+		0x18090262B ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18090262C call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180902631 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void OnCollisionEvent::OnCollisionExit(UnityEngine.Collision):
+		End of function at 0x180902632
+		Absolute End is at 0x180902632
+		Identified Jump Destination addresses:
+
+		0x1809025F4: [!] Reads field onExitCallback from {'this' (function parameter, type OnCollisionEvent)} and stores in a new local {'onExitCallback' (type System.String)}
+
+		0x1809025F8: [!] Compares {'onExitCallback' (type System.String)} and 0
+		0x1809025FB: Jumps to 0x180902627 (which is an if statement's body) if onExitCallback equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809025FD: [!] Compares {field _stringLength, read from local {'onExitCallback' (type System.String)}} and 0
+		0x180902601: Jumps to 0x180902627 (which is an if statement's body) if {field _stringLength, read from local {'onExitCallback' (type System.String)}} is less than or equal to 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180902603: [!] Reads field callbackTarget from {'this' (function parameter, type OnCollisionEvent)} and stores in a new local {'callbackTarget' (type UnityEngine.GameObject)}
+
+		0x180902607: [!] Compares {'callbackTarget' (type UnityEngine.GameObject)} and 0
+		0x18090260A: Jumps to 0x18090262C (which throws a NRE) if callbackTarget equals 0. Implicitly present in managed code, so ignored here.
+		0x18090260C: Copies {'collision' (function parameter, type UnityEngine.Collision)} from rdx into r8
+		0x18090260F: Moves 0 (immediate ulong value) to the stack at offset 32 as a new local local4
+		0x180902618: [!] Reads field onExitCallback from {'this' (function parameter, type OnCollisionEvent)} and stores in a new local {'onExitCallback2' (type System.String)}
+
+		0x18090261C: Clears register r9, yielding zero-local {'local6' (type System.Int32)}
+		0x18090261F: Copies {'callbackTarget' (type UnityEngine.GameObject)} from rax into rcx
+		0x180902622: [!] Calls managed method System.Void UnityEngine.GameObject::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions) on instance {'callbackTarget' (type UnityEngine.GameObject)} with arguments [{'onExitCallback2' (type System.String)}, {'collision' (function parameter, type UnityEngine.Collision)}, {'local6' (type System.Int32)}]
+
+		0x18090262B: [!] Returns from the function
+
+		0x18090262C: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: OnCollisionEvent
+	System.Void OnCollisionExit(UnityEngine.Collision collision)
+		System.String onExitCallback = this.onExitCallback
+
+		if (onExitCallback != 0)
+
+		    if (onExitCallback._stringLength > 0)
+		        UnityEngine.GameObject callbackTarget = this.callbackTarget
+		        System.String onExitCallback2 = this.onExitCallback
+		        ulong local6 = 0
+
+		        callbackTarget.SendMessage(onExitCallback2, collision, local6) //(String methodName, Object value, SendMessageOptions options)
+		    endif
+            
+		    return
+		    throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.String OnCollisionEvent::onExitCallback
+	IL_0006: stloc.0
+	IL_0007: ldloc.0
+	IL_0008: ldc.i4.0
+	IL_0009: beq.s IL_002f
+	IL_000b: ldloc.0
+	IL_000c: ldfld System.Int32 System.String::_stringLength
+	IL_0011: ldc.i4.0
+	IL_0012: ble.s IL_002f
+	IL_0014: ldarg.0
+	IL_0015: ldfld UnityEngine.GameObject OnCollisionEvent::callbackTarget
+	IL_001a: stloc.1
+	IL_001b: ldarg.0
+	IL_001c: ldfld System.String OnCollisionEvent::onExitCallback
+	IL_0021: stloc.3
+	IL_0022: ldc.i4.0
+	IL_0023: stloc.s V_4
+	IL_0025: ldloc.1
+	IL_0026: ldloc.3
+	IL_0027: ldarg.1
+	IL_0028: ldloc.s V_4
+	IL_002a: call System.Void UnityEngine.GameObject::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
+	IL_002f: ret
+	IL_0030: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0035: throw
+	
+
+Method: System.Void OnCollisionEvent::.ctor():	Method Body (x86 ASM):
+		0x18037A630 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A634 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x18037A63B jne short 000000018037A650h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A63D lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A644 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A649 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x18037A650 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A657 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18037A65E jne short 000000018037A669h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A660 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A664 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A669 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A66D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18037A66E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void OnCollisionEvent::.ctor():
+		End of function at 0x18037A66F
+		Absolute End is at 0x18037A66F
+		Identified Jump Destination addresses:
+
+		0x18037A634: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x18037A63B: Jumps to 0x18037A650 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x18037A63D: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A644: Initializes runtime metadata value UnityEngine.Object
+		0x18037A650: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A657: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18037A65E: Jumps to 0x18037A669 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18037A66D: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: OnCollisionEvent
+	System.Void .ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ret
+	
+

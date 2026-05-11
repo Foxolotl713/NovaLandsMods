@@ -1,0 +1,356 @@
+Type: Microsoft.Xbox.Gdk:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Nested Types:
+		Microsoft.Xbox.Gdk/InitState
+		Microsoft.Xbox.Gdk/CacheAchievementsState
+		Microsoft.Xbox.Gdk/OnGameSaveLoadedHandler
+		Microsoft.Xbox.Gdk/OnErrorHandler
+
+	Static Field: InitializationDoneEvent
+		Type: System.Action
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: _100PercentAchievementProgress
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 100
+
+	Static Field: _GameSaveContainerName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: x_game_save_default_container
+
+	Static Field: _GameSaveBlobName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: x_game_save_default_blob
+
+	Static Field: _MaxAssociatedProductsToRetrieve
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 25
+
+	Static Field: _xboxHelpers
+		Type: Microsoft.Xbox.Gdk
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: _initState
+		Type: Microsoft.Xbox.Gdk/InitState
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: _hresultToFriendlyErrorLookup
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.String>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _lastScid
+		Type: System.String
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: signInOnStart
+		Type: System.Boolean
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: gamertag
+		Type: System.String
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _cacheAchievementsState
+		Type: Microsoft.Xbox.Gdk/CacheAchievementsState
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _unlockedAchievements
+		Type: System.Collections.Generic.HashSet`1<System.String>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: OnGameSaveLoaded
+		Type: Microsoft.Xbox.Gdk/OnGameSaveLoadedHandler
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: OnError
+		Type: Microsoft.Xbox.Gdk/OnErrorHandler
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Method: get_scid:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x009FE6F0
+		Ram Offset 0x1809ff8f0
+		Virtual Method Slot: 65535
+
+	Method: add_InitializationDoneEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009FE730
+		Ram Offset 0x1809ff930
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: remove_InitializationDoneEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009FE840
+		Ram Offset 0x1809ffa40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: get_AreAchievementsCached:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x009FE950
+		Ram Offset 0x1809ffb50
+		Virtual Method Slot: 65535
+
+	Method: get_Helpers:
+		Accessibility: Public
+		Return Type: Microsoft.Xbox.Gdk
+		File Offset 0x009FE960
+		Ram Offset 0x1809ffb60
+		Virtual Method Slot: 65535
+
+	Method: add_OnGameSaveLoaded:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009FEB70
+		Ram Offset 0x1809ffd70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: Microsoft.Xbox.Gdk/OnGameSaveLoadedHandler
+			Default Value: 
+	Method: remove_OnGameSaveLoaded:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009FEC60
+		Ram Offset 0x1809ffe60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: Microsoft.Xbox.Gdk/OnGameSaveLoadedHandler
+			Default Value: 
+	Method: add_OnError:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009FED50
+		Ram Offset 0x1809fff50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: Microsoft.Xbox.Gdk/OnErrorHandler
+			Default Value: 
+	Method: remove_OnError:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009FEE40
+		Ram Offset 0x180a00040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: Microsoft.Xbox.Gdk/OnErrorHandler
+			Default Value: 
+	Method: get_IsInitialized:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x009FEF30
+		Ram Offset 0x180a00130
+		Virtual Method Slot: 65535
+
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: _Initialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009FEF70
+		Ram Offset 0x180a00170
+		Virtual Method Slot: 65535
+
+	Method: InitializeHresultToFriendlyErrorLookup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009FF360
+		Ram Offset 0x180a00560
+		Virtual Method Slot: 65535
+
+	Method: SignIn:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: Save:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: containerName
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: blobName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: data
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 3:
+			Name: callback
+			Type: Microsoft.Xbox.XGameSaveWrapper/SaveCallback
+			Default Value: 
+	Method: LoadSaveData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: containerName
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: blobName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: callback
+			Type: Microsoft.Xbox.XGameSaveWrapper/LoadCallback
+			Default Value: 
+	Method: Delete:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: containerName
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: blobName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: callback
+			Type: Microsoft.Xbox.XGameSaveWrapper/DeleteCallback
+			Default Value: 
+	Method: CaptureScreenshot:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: UnlockAchievement:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: achievementId
+			Type: System.String
+			Default Value: 
+	Method: CacheAchievements:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009FF560
+		Ram Offset 0x180a00760
+		Virtual Method Slot: 65535
+
+	Method: GetSystemLanguage:
+		Accessibility: Public
+		Return Type: UnityEngine.SystemLanguage
+		File Offset 0x009FF5D0
+		Ram Offset 0x180a007d0
+		Virtual Method Slot: 65535
+
+	Method: IsAchievementUnlocked:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x009FF5E0
+		Ram Offset 0x180a007e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: achievementId
+			Type: System.String
+			Default Value: 
+	Method: SetRichPresence:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009FF690
+		Ram Offset 0x180a00890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: presenceId
+			Type: System.String
+			Default Value: 
+	Method: Update:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: Succeeded:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x009FF760
+		Ram Offset 0x180a00960
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hresult
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: operationFriendlyName
+			Type: System.String
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009FFAD0
+		Ram Offset 0x180a00cd0
+		Virtual Method Slot: 65535

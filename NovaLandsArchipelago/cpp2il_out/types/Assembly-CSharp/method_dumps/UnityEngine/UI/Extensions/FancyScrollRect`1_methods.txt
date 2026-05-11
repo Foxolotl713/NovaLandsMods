@@ -1,0 +1,40 @@
+Type: FancyScrollRect`1
+
+Method: System.Void UnityEngine.UI.Extensions.FancyScrollRect`1::.ctor():	Method Body (x86 ASM):
+		0x180F571A0 mov rax,[rdx+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 32 | None ||| N/A | N/A
+		0x180F571A4 mov rdx,[rax+0C0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x180F571AB mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180F571AE mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180F571B1 jmp qword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180F571B4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.FancyScrollRect`1::.ctor():
+		End of function at 0x180F571B5
+		Absolute End is at 0x180F571B5
+		Identified Jump Destination addresses:
+
+		0x180F571AB: Loads the class pointer from il2cppMethodInfo into a constant constant1 in register rax
+		0x180F571AE: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rdx
+		0x180F571B1: [!] Calls managed method UnityEngine.GameObject UnityEngine.UI.Extensions.FancyScrollView`2::get_CellPrefab() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.FancyScrollRect`1)} and stores the result in {'cellPrefab' (type UnityEngine.GameObject)} ;  - Leftover parameters detected, but first few match.
+
+		0x180F571B1: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.FancyScrollRect`1
+	System.Void .ctor()
+
+		UnityEngine.GameObject cellPrefab = base.CellPrefab
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call UnityEngine.GameObject UnityEngine.UI.Extensions.FancyScrollView`2::get_CellPrefab()
+	IL_0006: stloc.0
+	IL_0007: ret
+	
+

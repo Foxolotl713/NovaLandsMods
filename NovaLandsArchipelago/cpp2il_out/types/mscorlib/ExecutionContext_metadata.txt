@@ -1,0 +1,458 @@
+Type: System.Threading.ExecutionContext:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.IDisposable
+		System.Runtime.Serialization.ISerializable
+
+	Nested Types:
+		System.Threading.ExecutionContext/Flags
+		System.Threading.ExecutionContext/Reader
+		System.Threading.ExecutionContext/CaptureOptions
+
+	Static Field: s_dummyDefaultEC
+		Type: System.Threading.ExecutionContext
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: Default
+		Type: System.Threading.ExecutionContext
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Field: _syncContext
+		Type: System.Threading.SynchronizationContext
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: _syncContextNoFlow
+		Type: System.Threading.SynchronizationContext
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _logicalCallContext
+		Type: System.Runtime.Remoting.Messaging.LogicalCallContext
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _illogicalCallContext
+		Type: System.Runtime.Remoting.Messaging.IllogicalCallContext
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _flags
+		Type: System.Threading.ExecutionContext/Flags
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _localValues
+		Type: System.Collections.Generic.Dictionary`2<System.Threading.IAsyncLocal,System.Object>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _localChangeNotifications
+		Type: System.Collections.Generic.List`1<System.Threading.IAsyncLocal>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Method: get_isNewCapture:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0191CE90
+		Ram Offset 0x18191e090
+		Virtual Method Slot: 65535
+
+	Method: set_isNewCapture:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0191CEA0
+		Ram Offset 0x18191e0a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_isFlowSuppressed:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0191CEC0
+		Ram Offset 0x18191e0c0
+		Virtual Method Slot: 65535
+
+	Method: set_isFlowSuppressed:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0191CED0
+		Ram Offset 0x18191e0d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_IsPreAllocatedDefault:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0191CEF0
+		Ram Offset 0x18191e0f0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0191CF00
+		Ram Offset 0x18191e100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: isPreAllocatedDefault
+			Type: System.Boolean
+			Default Value: 
+	Method: SetLocalValue:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0191CF10
+		Ram Offset 0x18191e110
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: local
+			Type: System.Threading.IAsyncLocal
+			Default Value: 
+		Parameter 1:
+			Name: newValue
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: needChangeNotifications
+			Type: System.Boolean
+			Default Value: 
+	Method: OnAsyncLocalContextChanged:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0191D260
+		Ram Offset 0x18191e460
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: previous
+			Type: System.Threading.ExecutionContext
+			Default Value: 
+		Parameter 1:
+			Name: current
+			Type: System.Threading.ExecutionContext
+			Default Value: 
+	Method: get_LogicalCallContext:
+		Accessibility: Assembly
+		Return Type: System.Runtime.Remoting.Messaging.LogicalCallContext
+		File Offset 0x0191D6A0
+		Ram Offset 0x18191e8a0
+		Virtual Method Slot: 65535
+
+	Method: set_LogicalCallContext:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00395880
+		Ram Offset 0x180396a80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Runtime.Remoting.Messaging.LogicalCallContext
+			Default Value: 
+	Method: get_IllogicalCallContext:
+		Accessibility: Assembly
+		Return Type: System.Runtime.Remoting.Messaging.IllogicalCallContext
+		File Offset 0x0191D730
+		Ram Offset 0x18191e930
+		Virtual Method Slot: 65535
+
+	Method: set_IllogicalCallContext:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x003C2150
+		Ram Offset 0x1803c3350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Runtime.Remoting.Messaging.IllogicalCallContext
+			Default Value: 
+	Method: get_SynchronizationContext:
+		Accessibility: Assembly
+		Return Type: System.Threading.SynchronizationContext
+		File Offset 0x00386E40
+		Ram Offset 0x180388040
+		Virtual Method Slot: 65535
+
+	Method: set_SynchronizationContext:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00386E50
+		Ram Offset 0x180388050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Threading.SynchronizationContext
+			Default Value: 
+	Method: get_SynchronizationContextNoFlow:
+		Accessibility: Assembly
+		Return Type: System.Threading.SynchronizationContext
+		File Offset 0x00379690
+		Ram Offset 0x18037a890
+		Virtual Method Slot: 65535
+
+	Method: set_SynchronizationContextNoFlow:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00395810
+		Ram Offset 0x180396a10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Threading.SynchronizationContext
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00866150
+		Ram Offset 0x180867350
+		Virtual Method Slot: 4
+
+	Method: Run:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0191D7C0
+		Ram Offset 0x18191e9c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: executionContext
+			Type: System.Threading.ExecutionContext
+			Default Value: 
+		Parameter 1:
+			Name: callback
+			Type: System.Threading.ContextCallback
+			Default Value: 
+		Parameter 2:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: Run:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0191D8F0
+		Ram Offset 0x18191eaf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: executionContext
+			Type: System.Threading.ExecutionContext
+			Default Value: 
+		Parameter 1:
+			Name: callback
+			Type: System.Threading.ContextCallback
+			Default Value: 
+		Parameter 2:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 3:
+			Name: preserveSyncCtx
+			Type: System.Boolean
+			Default Value: 
+	Method: RunInternal:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0191D980
+		Ram Offset 0x18191eb80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: executionContext
+			Type: System.Threading.ExecutionContext
+			Default Value: 
+		Parameter 1:
+			Name: callback
+			Type: System.Threading.ContextCallback
+			Default Value: 
+		Parameter 2:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: RunInternal:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0191DA00
+		Ram Offset 0x18191ec00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: executionContext
+			Type: System.Threading.ExecutionContext
+			Default Value: 
+		Parameter 1:
+			Name: callback
+			Type: System.Threading.ContextCallback
+			Default Value: 
+		Parameter 2:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 3:
+			Name: preserveSyncCtx
+			Type: System.Boolean
+			Default Value: 
+	Method: EstablishCopyOnWriteScope:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0191DC10
+		Ram Offset 0x18191ee10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ecsw
+			Type: System.Threading.ExecutionContextSwitcher
+			Default Value: 
+	Method: EstablishCopyOnWriteScope:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0191DC80
+		Ram Offset 0x18191ee80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: currentThread
+			Type: System.Threading.Thread
+			Default Value: 
+		Parameter 1:
+			Name: knownNullWindowsIdentity
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: ecsw
+			Type: System.Threading.ExecutionContextSwitcher
+			Default Value: 
+	Method: SetExecutionContext:
+		Accessibility: Assembly
+		Return Type: System.Threading.ExecutionContextSwitcher
+		File Offset 0x0191DDC0
+		Ram Offset 0x18191efc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: executionContext
+			Type: System.Threading.ExecutionContext
+			Default Value: 
+		Parameter 1:
+			Name: preserveSyncCtx
+			Type: System.Boolean
+			Default Value: 
+	Method: CreateCopy:
+		Accessibility: Public
+		Return Type: System.Threading.ExecutionContext
+		File Offset 0x0191E0E0
+		Ram Offset 0x18191f2e0
+		Virtual Method Slot: 65535
+
+	Method: CreateMutableCopy:
+		Accessibility: Assembly
+		Return Type: System.Threading.ExecutionContext
+		File Offset 0x0191E320
+		Ram Offset 0x18191f520
+		Virtual Method Slot: 65535
+
+	Method: IsFlowSuppressed:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0191E680
+		Ram Offset 0x18191f880
+		Virtual Method Slot: 65535
+
+	Method: Capture:
+		Accessibility: Public
+		Return Type: System.Threading.ExecutionContext
+		File Offset 0x0191E710
+		Ram Offset 0x18191f910
+		Virtual Method Slot: 65535
+
+	Method: FastCapture:
+		Accessibility: Assembly
+		Return Type: System.Threading.ExecutionContext
+		File Offset 0x0191E760
+		Ram Offset 0x18191f960
+		Virtual Method Slot: 65535
+
+	Method: Capture:
+		Accessibility: Assembly
+		Return Type: System.Threading.ExecutionContext
+		File Offset 0x0191E7B0
+		Ram Offset 0x18191f9b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stackMark
+			Type: System.Threading.StackCrawlMark
+			Default Value: 
+		Parameter 1:
+			Name: options
+			Type: System.Threading.ExecutionContext/CaptureOptions
+			Default Value: 
+	Method: GetObjectData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0191EBE0
+		Ram Offset 0x18191fde0
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: info
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: context
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0191ED80
+		Ram Offset 0x18191ff80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: info
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: context
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: IsDefaultFTContext:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0191EF50
+		Ram Offset 0x181920150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ignoreSyncCtx
+			Type: System.Boolean
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0191EFC0
+		Ram Offset 0x1819201c0
+		Virtual Method Slot: 65535

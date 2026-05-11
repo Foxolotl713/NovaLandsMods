@@ -1,0 +1,209 @@
+Type: PickupManager:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Static Field: PickupRadius
+		Type: System.Single
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 2
+
+	Static Field: PickupRadiusSquared
+		Type: System.Single
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 4
+
+	Static Field: GridSize
+		Type: System.Single
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 4
+
+	Static Field: _Instance
+		Type: PickupManager
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: ListPool
+		Type: System.Collections.Generic.List`1<System.Collections.Generic.List`1<BaseResource>>
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Field: Player
+		Type: BasePlayer
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: Grid
+		Type: System.Collections.Generic.Dictionary`2<UnityEngine.Vector2Int,System.Collections.Generic.List`1<BaseResource>>
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: ItemsInPickupRange
+		Type: System.Collections.Generic.HashSet`1<BaseResource>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: ItemsOutOfPickupRange
+		Type: System.Collections.Generic.HashSet`1<BaseResource>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: ItemsToPickup
+		Type: System.Collections.Generic.Queue`1<BaseResource>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Method: get_Instance:
+		Accessibility: Public
+		Return Type: PickupManager
+		File Offset 0x00902C10
+		Ram Offset 0x180903e10
+		Virtual Method Slot: 65535
+
+	Method: GetList:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.List`1<BaseResource>
+		File Offset 0x00902E00
+		Ram Offset 0x180904000
+		Virtual Method Slot: 65535
+
+	Method: ReturnList:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00902F60
+		Ram Offset 0x180904160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: list
+			Type: System.Collections.Generic.List`1<BaseResource>
+			Default Value: 
+	Method: SetPlayer:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00395880
+		Ram Offset 0x180396a80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+	Method: AddOrUpdateObject:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00903050
+		Ram Offset 0x180904250
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: obj
+			Type: BaseResource
+			Default Value: 
+	Method: RemoveObject:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00903410
+		Ram Offset 0x180904610
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: obj
+			Type: BaseResource
+			Default Value: 
+	Method: FloorToGrid:
+		Accessibility: Private
+		Return Type: UnityEngine.Vector2Int
+		File Offset 0x00903660
+		Ram Offset 0x180904860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pos
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: RoundToGrid:
+		Accessibility: Private
+		Return Type: UnityEngine.Vector2Int
+		File Offset 0x009036B0
+		Ram Offset 0x1809048b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pos
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: Update:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00903700
+		Ram Offset 0x180904900
+		Virtual Method Slot: 65535
+
+	Method: DebugDrawCell:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00903800
+		Ram Offset 0x180904a00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cell
+			Type: UnityEngine.Vector2Int
+			Default Value: 
+	Method: FindAllItemsInPickupRange:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00903C10
+		Ram Offset 0x180904e10
+		Virtual Method Slot: 65535
+
+	Method: FindItemsInCell:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00903F30
+		Ram Offset 0x180905130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cell
+			Type: UnityEngine.Vector2Int
+			Default Value: 
+	Method: HandleOutOfRangeItems:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009042A0
+		Ram Offset 0x1809054a0
+		Virtual Method Slot: 65535
+
+	Method: CollectItemsInPickupRange:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00904490
+		Ram Offset 0x180905690
+		Virtual Method Slot: 65535
+
+	Method: ClearNearbyItemsPickupBlock:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009046F0
+		Ram Offset 0x1809058f0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009048E0
+		Ram Offset 0x180905ae0
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00904BD0
+		Ram Offset 0x180905dd0
+		Virtual Method Slot: 65535

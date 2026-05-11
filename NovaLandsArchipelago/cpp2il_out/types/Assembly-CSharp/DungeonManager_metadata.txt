@@ -1,0 +1,437 @@
+Type: DungeonManager:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Nested Types:
+		DungeonManager/<>c
+		DungeonManager/<GenerateLevelLimits>d__33
+		DungeonManager/<GenerateWorldAreas>d__26
+		DungeonManager/<GenerateWorldAsync>d__25
+		DungeonManager/<PopulateBiomes>d__34
+
+	Static Field: <Instance>k__BackingField
+		Type: DungeonManager
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: worldAreaPrefab
+		Type: WorldArea
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: worldAreaNumberOfSides
+		Type: System.Int32
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: worldAreaShapeAngle
+		Type: System.Single
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Field: outOfMapBiome
+		Type: WorldBiome
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: level
+		Type: System.Int32
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: currentDungeonDescriptor
+		Type: DungeonDescriptor
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: dungeonAreas
+		Type: System.Collections.Generic.Dictionary`2<UnityEngine.Vector2,WorldArea>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: levelLimitsAreas
+		Type: System.Collections.Generic.List`1<WorldArea>
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: player
+		Type: BasePlayer
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: previousLevel
+		Type: System.Int32
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: dungeonExit
+		Type: DungeonEntranceBuilding
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: dungeonEntrance
+		Type: DungeonEntranceBuilding
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: dungeonExitTargetProp
+		Type: BaseBuilding
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: timeScaleBeforePause
+		Type: System.Single
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: onPlayerSpawned
+		Type: System.Action
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Method: get_Instance:
+		Accessibility: Public
+		Return Type: DungeonManager
+		File Offset 0x006B0740
+		Ram Offset 0x1806b1940
+		Virtual Method Slot: 65535
+
+	Method: set_Instance:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B0780
+		Ram Offset 0x1806b1980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: DungeonManager
+			Default Value: 
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B0810
+		Ram Offset 0x1806b1a10
+		Virtual Method Slot: 65535
+
+	Method: InitProperties:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B0DE0
+		Ram Offset 0x1806b1fe0
+		Virtual Method Slot: 65535
+
+	Method: TogglePause:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x006B0F40
+		Ram Offset 0x1806b2140
+		Virtual Method Slot: 65535
+
+	Method: MoveToNextLevel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006B1030
+		Ram Offset 0x1806b2230
+		Virtual Method Slot: 65535
+
+	Method: MoveToPreviousLevel:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x006B11A0
+		Ram Offset 0x1806b23a0
+		Virtual Method Slot: 65535
+
+	Method: TriggerWorldGeneration:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B1340
+		Ram Offset 0x1806b2540
+		Virtual Method Slot: 65535
+
+	Method: GenerateWorldAsync:
+		Accessibility: Public
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x006B13E0
+		Ram Offset 0x1806b25e0
+		Virtual Method Slot: 65535
+
+	Method: GenerateWorldAreas:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x006B1470
+		Ram Offset 0x1806b2670
+		Virtual Method Slot: 65535
+
+	Method: GetAreaFreeCoordinate:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x006B1500
+		Ram Offset 0x1806b2700
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: area
+			Type: WorldArea
+			Default Value: 
+		Parameter 1:
+			Name: coordinate
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: GetAreaWithFreeNeighbors:
+		Accessibility: Private
+		Return Type: WorldArea
+		File Offset 0x006B16F0
+		Ram Offset 0x1806b28f0
+		Virtual Method Slot: 65535
+
+	Method: GetAreaNeighborPoints:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.List`1<UnityEngine.Vector2>
+		File Offset 0x006B1A70
+		Ram Offset 0x1806b2c70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: area
+			Type: WorldArea
+			Default Value: 
+	Method: IsWorldAreaCoordinateFree:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x006B1E40
+		Ram Offset 0x1806b3040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: coordinate
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: IsCoordinatesEqual:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x006B2040
+		Ram Offset 0x1806b3240
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: CreateWorldArea:
+		Accessibility: Private
+		Return Type: WorldArea
+		File Offset 0x006B20A0
+		Ram Offset 0x1806b32a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: levelParent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: blockEntitiesSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: GenerateLevelLimits:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x006B2430
+		Ram Offset 0x1806b3630
+		Virtual Method Slot: 65535
+
+	Method: PopulateBiomes:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x006B24C0
+		Ram Offset 0x1806b36c0
+		Virtual Method Slot: 65535
+
+	Method: OnDestroyExitProp:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B2550
+		Ram Offset 0x1806b3750
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: prop
+			Type: BaseBuilding
+			Default Value: 
+	Method: SpawnPlayer:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B26B0
+		Ram Offset 0x1806b38b0
+		Virtual Method Slot: 65535
+
+	Method: CreatePremadeWorldArea:
+		Accessibility: Private
+		Return Type: WorldArea
+		File Offset 0x006B3230
+		Ram Offset 0x1806b4430
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: prefab
+			Type: WorldArea
+			Default Value: 
+		Parameter 1:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+	Method: SetOnSpawnPlayerCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003ED5D0
+		Ram Offset 0x1803ee7d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: onPlayerSpawned
+			Type: System.Action
+			Default Value: 
+	Method: OnPlayerDied:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006B3370
+		Ram Offset 0x1806b4570
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+	Method: OnDeathFadeOutEnded:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B3440
+		Ram Offset 0x1806b4640
+		Virtual Method Slot: 65535
+
+	Method: CheckOnEnterLevelEvent:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B35E0
+		Ram Offset 0x1806b47e0
+		Virtual Method Slot: 65535
+
+	Method: OnCancelEnterLevelEvent:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0043DFE0
+		Ram Offset 0x18043f1e0
+		Virtual Method Slot: 65535
+
+	Method: CheckAllEnemiesDead:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006B3BB0
+		Ram Offset 0x1806b4db0
+		Virtual Method Slot: 65535
+
+	Method: DestroyExitAreaProp:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B3F10
+		Ram Offset 0x1806b5110
+		Virtual Method Slot: 65535
+
+	Method: SetEntranceVisible:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006B4050
+		Ram Offset 0x1806b5250
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: visible
+			Type: System.Boolean
+			Default Value: 
+	Method: SetExitVisible:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006B41C0
+		Ram Offset 0x1806b53c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: visible
+			Type: System.Boolean
+			Default Value: 
+	Method: SetPassagesVisible:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006B4330
+		Ram Offset 0x1806b5530
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: visible
+			Type: System.Boolean
+			Default Value: 
+	Method: LoadResearchesData:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B45F0
+		Ram Offset 0x1806b57f0
+		Virtual Method Slot: 65535
+
+	Method: LoadPlayerData:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B4B90
+		Ram Offset 0x1806b5d90
+		Virtual Method Slot: 65535
+
+	Method: get_Player:
+		Accessibility: Public
+		Return Type: BasePlayer
+		File Offset 0x0040DAA0
+		Ram Offset 0x18040eca0
+		Virtual Method Slot: 65535
+
+	Method: get_CurrentDungeonDescriptor:
+		Accessibility: Public
+		Return Type: DungeonDescriptor
+		File Offset 0x0051A3F0
+		Ram Offset 0x18051b5f0
+		Virtual Method Slot: 65535
+
+	Method: get_ShouldShowCameraBorders:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x006B4D40
+		Ram Offset 0x1806b5f40
+		Virtual Method Slot: 65535
+
+	Method: get_DungeonExit:
+		Accessibility: Public
+		Return Type: DungeonEntranceBuilding
+		File Offset 0x00530090
+		Ram Offset 0x180531290
+		Virtual Method Slot: 65535
+
+	Method: get_DungeonEntrance:
+		Accessibility: Public
+		Return Type: DungeonEntranceBuilding
+		File Offset 0x0061D420
+		Ram Offset 0x18061e620
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379430
+		Ram Offset 0x18037a630
+		Virtual Method Slot: 65535

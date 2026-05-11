@@ -1,0 +1,180 @@
+Type: System.Net.ContextAwareResult:
+	Base Class: 
+		System.Net.LazyAsyncResult
+
+	Interfaces:
+
+	Nested Types:
+		System.Net.ContextAwareResult/StateFlags
+		System.Net.ContextAwareResult/<>c
+
+	Field: _context
+		Type: System.Threading.ExecutionContext
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: _lock
+		Type: System.Object
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: _flags
+		Type: System.Net.ContextAwareResult/StateFlags
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Method: SafeCaptureIdentity:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: CleanupInternal:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01F249E0
+		Ram Offset 0x181f25be0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: myObject
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: myState
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: myCallBack
+			Type: System.AsyncCallback
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01F24A00
+		Ram Offset 0x181f25c00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: captureIdentity
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: forceCaptureContext
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: myObject
+			Type: System.Object
+			Default Value: 
+		Parameter 3:
+			Name: myState
+			Type: System.Object
+			Default Value: 
+		Parameter 4:
+			Name: myCallBack
+			Type: System.AsyncCallback
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01F24A60
+		Ram Offset 0x181f25c60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: captureIdentity
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: forceCaptureContext
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: threadSafeContextCopy
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: myObject
+			Type: System.Object
+			Default Value: 
+		Parameter 4:
+			Name: myState
+			Type: System.Object
+			Default Value: 
+		Parameter 5:
+			Name: myCallBack
+			Type: System.AsyncCallback
+			Default Value: 
+	Method: StartPostingAsyncOp:
+		Accessibility: Assembly
+		Return Type: System.Object
+		File Offset 0x01F24AD0
+		Ram Offset 0x181f25cd0
+		Virtual Method Slot: 65535
+
+	Method: StartPostingAsyncOp:
+		Accessibility: Assembly
+		Return Type: System.Object
+		File Offset 0x01F24BB0
+		Ram Offset 0x181f25db0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: lockCapture
+			Type: System.Boolean
+			Default Value: 
+	Method: FinishPostingAsyncOp:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01F24CB0
+		Ram Offset 0x181f25eb0
+		Virtual Method Slot: 65535
+
+	Method: Cleanup:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01F24CF0
+		Ram Offset 0x181f25ef0
+		Virtual Method Slot: 9
+
+	Method: CaptureOrComplete:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F24D90
+		Ram Offset 0x181f25f90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cachedContext
+			Type: System.Threading.ExecutionContext
+			Default Value: 
+		Parameter 1:
+			Name: returnContext
+			Type: System.Boolean
+			Default Value: 
+	Method: Complete:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01F25280
+		Ram Offset 0x181f26480
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: userToken
+			Type: System.IntPtr
+			Default Value: 
+	Method: CompleteCallback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F254C0
+		Ram Offset 0x181f266c0
+		Virtual Method Slot: 65535

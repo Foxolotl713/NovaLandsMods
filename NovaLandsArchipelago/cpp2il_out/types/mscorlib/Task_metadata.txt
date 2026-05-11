@@ -1,0 +1,1518 @@
+Type: System.Threading.Tasks.Task:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.Threading.IThreadPoolWorkItem
+		System.IAsyncResult
+		System.IDisposable
+
+	Nested Types:
+		System.Threading.Tasks.Task/ContingentProperties
+		System.Threading.Tasks.Task/SetOnInvokeMres
+		System.Threading.Tasks.Task/DelayPromise
+		System.Threading.Tasks.Task/<>c
+
+	Static Field: s_taskIdCounter
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: s_taskCompletionSentinel
+		Type: System.Object
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: s_asyncDebuggingEnabled
+		Type: System.Boolean
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_taskId
+		Type: System.Int32
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_action
+		Type: System.Delegate
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: s_taskCancelCallback
+		Type: System.Action`1<System.Object>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_stateObject
+		Type: System.Object
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: s_createContingentProperties
+		Type: System.Func`1<System.Threading.Tasks.Task/ContingentProperties>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_taskScheduler
+		Type: System.Threading.Tasks.TaskScheduler
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: <Factory>k__BackingField
+		Type: System.Threading.Tasks.TaskFactory
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_parent
+		Type: System.Threading.Tasks.Task
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Static Field: <CompletedTask>k__BackingField
+		Type: System.Threading.Tasks.Task
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_stateFlags
+		Type: System.Int32
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Static Field: s_IsExceptionObservedByParentPredicate
+		Type: System.Predicate`1<System.Threading.Tasks.Task>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_continuationObject
+		Type: System.Object
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Static Field: s_ecCallback
+		Type: System.Threading.ContextCallback
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Static Field: s_IsTaskContinuationNullPredicate
+		Type: System.Predicate`1<System.Object>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: m_contingentProperties
+		Type: System.Threading.Tasks.Task/ContingentProperties
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Static Field: s_currentActiveTasks
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.Threading.Tasks.Task>
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Static Field: s_activeTasksLock
+		Type: System.Object
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Static Field: t_currentTask
+		Type: System.Threading.Tasks.Task
+		Offset in Defining Type: 0xFFFFFFFF80000000
+		Has Default: False
+
+	Static Field: t_stackGuard
+		Type: System.Threading.Tasks.StackGuard
+		Offset in Defining Type: 0xFFFFFFFF80000008
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0192E700
+		Ram Offset 0x18192f900
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: canceled
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+		Parameter 2:
+			Name: ct
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0192E850
+		Ram Offset 0x18192fa50
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0192E860
+		Ram Offset 0x18192fa60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+		Parameter 2:
+			Name: promiseStyle
+			Type: System.Boolean
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0192E990
+		Ram Offset 0x18192fb90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: System.Delegate
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: parent
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 4:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+		Parameter 5:
+			Name: internalOptions
+			Type: System.Threading.Tasks.InternalTaskOptions
+			Default Value: 
+		Parameter 6:
+			Name: scheduler
+			Type: System.Threading.Tasks.TaskScheduler
+			Default Value: 
+	Method: TaskConstructorCore:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0192EA90
+		Ram Offset 0x18192fc90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: System.Delegate
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 3:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+		Parameter 4:
+			Name: internalOptions
+			Type: System.Threading.Tasks.InternalTaskOptions
+			Default Value: 
+		Parameter 5:
+			Name: scheduler
+			Type: System.Threading.Tasks.TaskScheduler
+			Default Value: 
+	Method: AssignCancellationToken:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0192EDC0
+		Ram Offset 0x18192ffc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 1:
+			Name: antecedent
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+		Parameter 2:
+			Name: continuation
+			Type: System.Threading.Tasks.TaskContinuation
+			Default Value: 
+	Method: TaskCancelCallback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0192F100
+		Ram Offset 0x181930300
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: o
+			Type: System.Object
+			Default Value: 
+	Method: TrySetCanceled:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0192F1F0
+		Ram Offset 0x1819303f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tokenToRecord
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: TrySetCanceled:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0192F200
+		Ram Offset 0x181930400
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tokenToRecord
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 1:
+			Name: cancellationException
+			Type: System.Object
+			Default Value: 
+	Method: TrySetException:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0192F340
+		Ram Offset 0x181930540
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: exceptionObject
+			Type: System.Object
+			Default Value: 
+	Method: get_Options:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.TaskCreationOptions
+		File Offset 0x0192F3B0
+		Ram Offset 0x1819305b0
+		Virtual Method Slot: 65535
+
+	Method: OptionsMethod:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.TaskCreationOptions
+		File Offset 0x00BE2600
+		Ram Offset 0x180be3800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: flags
+			Type: System.Int32
+			Default Value: 
+	Method: AtomicStateUpdate:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0192F400
+		Ram Offset 0x181930600
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newBits
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: illegalBits
+			Type: System.Int32
+			Default Value: 
+	Method: AtomicStateUpdate:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0192F490
+		Ram Offset 0x181930690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newBits
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: illegalBits
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: oldFlags
+			Type: System.Int32
+			Default Value: 
+	Method: SetNotificationForWaitCompletion:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0192F530
+		Ram Offset 0x181930730
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enabled
+			Type: System.Boolean
+			Default Value: 
+	Method: NotifyDebuggerOfWaitCompletionIfNecessary:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0192F5A0
+		Ram Offset 0x1819307a0
+		Virtual Method Slot: 65535
+
+	Method: get_IsWaitNotificationEnabledOrNotRanToCompletion:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0192F5F0
+		Ram Offset 0x1819307f0
+		Virtual Method Slot: 65535
+
+	Method: get_ShouldNotifyDebuggerOfWaitCompletion:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0192F610
+		Ram Offset 0x181930810
+		Virtual Method Slot: 11
+
+	Method: get_IsWaitNotificationEnabled:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0192F610
+		Ram Offset 0x181930810
+		Virtual Method Slot: 65535
+
+	Method: NotifyDebuggerOfWaitCompletion:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0192F630
+		Ram Offset 0x181930830
+		Virtual Method Slot: 65535
+
+	Method: MarkStarted:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0192F660
+		Ram Offset 0x181930860
+		Virtual Method Slot: 65535
+
+	Method: AddNewChild:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0192F680
+		Ram Offset 0x181930880
+		Virtual Method Slot: 65535
+
+	Method: DisregardChild:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0192F6E0
+		Ram Offset 0x1819308e0
+		Virtual Method Slot: 65535
+
+	Method: InternalStartNew:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x0192F710
+		Ram Offset 0x181930910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: creatingTask
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+		Parameter 1:
+			Name: action
+			Type: System.Delegate
+			Default Value: 
+		Parameter 2:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 4:
+			Name: scheduler
+			Type: System.Threading.Tasks.TaskScheduler
+			Default Value: 
+		Parameter 5:
+			Name: options
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+		Parameter 6:
+			Name: internalOptions
+			Type: System.Threading.Tasks.InternalTaskOptions
+			Default Value: 
+	Method: get_Id:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0192F8D0
+		Ram Offset 0x181930ad0
+		Virtual Method Slot: 65535
+
+	Method: get_InternalCurrent:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x0192F960
+		Ram Offset 0x181930b60
+		Virtual Method Slot: 65535
+
+	Method: InternalCurrentIfAttached:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x0192F9F0
+		Ram Offset 0x181930bf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+	Method: get_CurrentStackGuard:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.StackGuard
+		File Offset 0x0192FA40
+		Ram Offset 0x181930c40
+		Virtual Method Slot: 65535
+
+	Method: get_Exception:
+		Accessibility: Public
+		Return Type: System.AggregateException
+		File Offset 0x0192FBD0
+		Ram Offset 0x181930dd0
+		Virtual Method Slot: 65535
+
+	Method: get_Status:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.TaskStatus
+		File Offset 0x0192FC00
+		Ram Offset 0x181930e00
+		Virtual Method Slot: 65535
+
+	Method: get_IsCanceled:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0192FC60
+		Ram Offset 0x181930e60
+		Virtual Method Slot: 65535
+
+	Method: get_IsCancellationRequested:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0192FC80
+		Ram Offset 0x181930e80
+		Virtual Method Slot: 65535
+
+	Method: EnsureContingentPropertiesInitialized:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.Task/ContingentProperties
+		File Offset 0x0192FCC0
+		Ram Offset 0x181930ec0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: needsProtection
+			Type: System.Boolean
+			Default Value: 
+	Method: EnsureContingentPropertiesInitializedCore:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task/ContingentProperties
+		File Offset 0x0192FE00
+		Ram Offset 0x181931000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: needsProtection
+			Type: System.Boolean
+			Default Value: 
+	Method: get_CancellationToken:
+		Accessibility: Assembly
+		Return Type: System.Threading.CancellationToken
+		File Offset 0x0192FF30
+		Ram Offset 0x181931130
+		Virtual Method Slot: 65535
+
+	Method: get_IsCancellationAcknowledged:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0192FF50
+		Ram Offset 0x181931150
+		Virtual Method Slot: 65535
+
+	Method: get_IsCompleted:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0192FF70
+		Ram Offset 0x181931170
+		Virtual Method Slot: 6
+
+	Method: IsCompletedMethod:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0192FFD0
+		Ram Offset 0x1819311d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: flags
+			Type: System.Int32
+			Default Value: 
+	Method: get_IsCompletedSuccessfully:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0192FFE0
+		Ram Offset 0x1819311e0
+		Virtual Method Slot: 65535
+
+	Method: get_CreationOptions:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.TaskCreationOptions
+		File Offset 0x01930000
+		Ram Offset 0x181931200
+		Virtual Method Slot: 65535
+
+	Method: System.IAsyncResult.get_AsyncWaitHandle:
+		Accessibility: Private
+		Return Type: System.Threading.WaitHandle
+		File Offset 0x01930050
+		Ram Offset 0x181931250
+		Virtual Method Slot: 7
+
+	Method: get_AsyncState:
+		Accessibility: Public
+		Return Type: System.Object
+		File Offset 0x00395870
+		Ram Offset 0x180396a70
+		Virtual Method Slot: 8
+
+	Method: System.IAsyncResult.get_CompletedSynchronously:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 9
+
+	Method: get_ExecutingTaskScheduler:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.TaskScheduler
+		File Offset 0x003A7D00
+		Ram Offset 0x1803a8f00
+		Virtual Method Slot: 65535
+
+	Method: get_Factory:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.TaskFactory
+		File Offset 0x01930100
+		Ram Offset 0x181931300
+		Virtual Method Slot: 65535
+
+	Method: get_CompletedTask:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01930150
+		Ram Offset 0x181931350
+		Virtual Method Slot: 65535
+
+	Method: get_CompletedEvent:
+		Accessibility: Assembly
+		Return Type: System.Threading.ManualResetEventSlim
+		File Offset 0x019301A0
+		Ram Offset 0x1819313a0
+		Virtual Method Slot: 65535
+
+	Method: get_ExceptionRecorded:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x019303E0
+		Ram Offset 0x1819315e0
+		Virtual Method Slot: 65535
+
+	Method: get_IsFaulted:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01930430
+		Ram Offset 0x181931630
+		Virtual Method Slot: 65535
+
+	Method: get_CapturedContext:
+		Accessibility: Assembly
+		Return Type: System.Threading.ExecutionContext
+		File Offset 0x01930450
+		Ram Offset 0x181931650
+		Virtual Method Slot: 65535
+
+	Method: set_CapturedContext:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x019304D0
+		Ram Offset 0x1819316d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Threading.ExecutionContext
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x019305A0
+		Ram Offset 0x1819317a0
+		Virtual Method Slot: 10
+
+	Method: Dispose:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01930600
+		Ram Offset 0x181931800
+		Virtual Method Slot: 12
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: ScheduleAndStart:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01930760
+		Ram Offset 0x181931960
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: needsProtection
+			Type: System.Boolean
+			Default Value: 
+	Method: AddException:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x019308D0
+		Ram Offset 0x181931ad0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: exceptionObject
+			Type: System.Object
+			Default Value: 
+	Method: AddException:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x019308E0
+		Ram Offset 0x181931ae0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: exceptionObject
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: representsCancellation
+			Type: System.Boolean
+			Default Value: 
+	Method: GetExceptions:
+		Accessibility: Private
+		Return Type: System.AggregateException
+		File Offset 0x01930BE0
+		Ram Offset 0x181931de0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: includeTaskCanceledExceptions
+			Type: System.Boolean
+			Default Value: 
+	Method: GetExceptionDispatchInfos:
+		Accessibility: Assembly
+		Return Type: System.Collections.ObjectModel.ReadOnlyCollection`1<System.Runtime.ExceptionServices.ExceptionDispatchInfo>
+		File Offset 0x01930DA0
+		Ram Offset 0x181931fa0
+		Virtual Method Slot: 65535
+
+	Method: GetCancellationExceptionDispatchInfo:
+		Accessibility: Assembly
+		Return Type: System.Runtime.ExceptionServices.ExceptionDispatchInfo
+		File Offset 0x01931010
+		Ram Offset 0x181932210
+		Virtual Method Slot: 65535
+
+	Method: ThrowIfExceptional:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01931040
+		Ram Offset 0x181932240
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: includeTaskCanceledExceptions
+			Type: System.Boolean
+			Default Value: 
+	Method: UpdateExceptionObservedStatus:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01931090
+		Ram Offset 0x181932290
+		Virtual Method Slot: 65535
+
+	Method: get_IsExceptionObservedByParent:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x019311A0
+		Ram Offset 0x1819323a0
+		Virtual Method Slot: 65535
+
+	Method: get_IsDelegateInvoked:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x019311C0
+		Ram Offset 0x1819323c0
+		Virtual Method Slot: 65535
+
+	Method: Finish:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x019311E0
+		Ram Offset 0x1819323e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bUserDelegateExecuted
+			Type: System.Boolean
+			Default Value: 
+	Method: FinishStageTwo:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01931400
+		Ram Offset 0x181932600
+		Virtual Method Slot: 65535
+
+	Method: FinishStageThree:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01931560
+		Ram Offset 0x181932760
+		Virtual Method Slot: 65535
+
+	Method: ProcessChildCompletion:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01931650
+		Ram Offset 0x181932850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: childTask
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+	Method: AddExceptionsFromChildren:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01931910
+		Ram Offset 0x181932b10
+		Virtual Method Slot: 65535
+
+	Method: Execute:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01931CF0
+		Ram Offset 0x181932ef0
+		Virtual Method Slot: 65535
+
+	Method: System.Threading.IThreadPoolWorkItem.ExecuteWorkItem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01931D30
+		Ram Offset 0x181932f30
+		Virtual Method Slot: 4
+
+	Method: ExecuteEntry:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01931D40
+		Ram Offset 0x181932f40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bPreventDoubleExecution
+			Type: System.Boolean
+			Default Value: 
+	Method: ExecutionContextCallback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01931EC0
+		Ram Offset 0x1819330c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: obj
+			Type: System.Object
+			Default Value: 
+	Method: InnerInvoke:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01931F40
+		Ram Offset 0x181933140
+		Virtual Method Slot: 13
+
+	Method: HandleException:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01931FE0
+		Ram Offset 0x1819331e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: unhandledException
+			Type: System.Exception
+			Default Value: 
+	Method: GetAwaiter:
+		Accessibility: Public
+		Return Type: System.Runtime.CompilerServices.TaskAwaiter
+		File Offset 0x0192DDC0
+		Ram Offset 0x18192efc0
+		Virtual Method Slot: 65535
+
+	Method: ConfigureAwait:
+		Accessibility: Public
+		Return Type: System.Runtime.CompilerServices.ConfiguredTaskAwaitable
+		File Offset 0x01932110
+		Ram Offset 0x181933310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: continueOnCapturedContext
+			Type: System.Boolean
+			Default Value: 
+	Method: SetContinuationForAwait:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01932130
+		Ram Offset 0x181933330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: continuationAction
+			Type: System.Action
+			Default Value: 
+		Parameter 1:
+			Name: continueOnCapturedContext
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: flowExecutionContext
+			Type: System.Boolean
+			Default Value: 
+	Method: Yield:
+		Accessibility: Public
+		Return Type: System.Runtime.CompilerServices.YieldAwaitable
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 65535
+
+	Method: Wait:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x019323C0
+		Ram Offset 0x1819335c0
+		Virtual Method Slot: 65535
+
+	Method: Wait:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01932430
+		Ram Offset 0x181933630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: millisecondsTimeout
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: WrappedTryRunInline:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01932530
+		Ram Offset 0x181933730
+		Virtual Method Slot: 65535
+
+	Method: InternalWait:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x019325C0
+		Ram Offset 0x1819337c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: millisecondsTimeout
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: SpinThenBlockingWait:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01932A70
+		Ram Offset 0x181933c70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: millisecondsTimeout
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: SpinWait:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01932E80
+		Ram Offset 0x181934080
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: millisecondsTimeout
+			Type: System.Int32
+			Default Value: 
+	Method: InternalCancel:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01932FB0
+		Ram Offset 0x1819341b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bCancelNonExecutingOnly
+			Type: System.Boolean
+			Default Value: 
+	Method: RecordInternalCancellationRequest:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x019331A0
+		Ram Offset 0x1819343a0
+		Virtual Method Slot: 65535
+
+	Method: RecordInternalCancellationRequest:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x019331D0
+		Ram Offset 0x1819343d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tokenToRecord
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: RecordInternalCancellationRequest:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x019332B0
+		Ram Offset 0x1819344b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tokenToRecord
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 1:
+			Name: cancellationException
+			Type: System.Object
+			Default Value: 
+	Method: CancellationCleanupLogic:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x019333B0
+		Ram Offset 0x1819345b0
+		Virtual Method Slot: 65535
+
+	Method: SetCancellationAcknowledged:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01933470
+		Ram Offset 0x181934670
+		Virtual Method Slot: 65535
+
+	Method: FinishContinuations:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01933490
+		Ram Offset 0x181934690
+		Virtual Method Slot: 65535
+
+	Method: LogFinishCompletionNotification:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01933B00
+		Ram Offset 0x181934d00
+		Virtual Method Slot: 65535
+
+	Method: ContinueWith:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01933B40
+		Ram Offset 0x181934d40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: continuationAction
+			Type: System.Action`1<System.Threading.Tasks.Task>
+			Default Value: 
+	Method: ContinueWith:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01933CF0
+		Ram Offset 0x181934ef0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: continuationAction
+			Type: System.Action`1<System.Threading.Tasks.Task>
+			Default Value: 
+		Parameter 1:
+			Name: scheduler
+			Type: System.Threading.Tasks.TaskScheduler
+			Default Value: 
+		Parameter 2:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 3:
+			Name: continuationOptions
+			Type: System.Threading.Tasks.TaskContinuationOptions
+			Default Value: 
+	Method: ContinueWith:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01933EA0
+		Ram Offset 0x1819350a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: continuationAction
+			Type: System.Action`2<System.Threading.Tasks.Task, System.Object>
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 3:
+			Name: continuationOptions
+			Type: System.Threading.Tasks.TaskContinuationOptions
+			Default Value: 
+		Parameter 4:
+			Name: scheduler
+			Type: System.Threading.Tasks.TaskScheduler
+			Default Value: 
+	Method: ContinueWith:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01934050
+		Ram Offset 0x181935250
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: continuationAction
+			Type: System.Action`2<System.Threading.Tasks.Task, System.Object>
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: scheduler
+			Type: System.Threading.Tasks.TaskScheduler
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 4:
+			Name: continuationOptions
+			Type: System.Threading.Tasks.TaskContinuationOptions
+			Default Value: 
+	Method: CreationOptionsFromContinuationOptions:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01934200
+		Ram Offset 0x181935400
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: continuationOptions
+			Type: System.Threading.Tasks.TaskContinuationOptions
+			Default Value: 
+		Parameter 1:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+		Parameter 2:
+			Name: internalOptions
+			Type: System.Threading.Tasks.InternalTaskOptions
+			Default Value: 
+	Method: ContinueWithCore:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01934360
+		Ram Offset 0x181935560
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: continuationTask
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+		Parameter 1:
+			Name: scheduler
+			Type: System.Threading.Tasks.TaskScheduler
+			Default Value: 
+		Parameter 2:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 3:
+			Name: options
+			Type: System.Threading.Tasks.TaskContinuationOptions
+			Default Value: 
+	Method: AddCompletionAction:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01934610
+		Ram Offset 0x181935810
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: System.Threading.Tasks.ITaskCompletionAction
+			Default Value: 
+	Method: AddCompletionAction:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01934680
+		Ram Offset 0x181935880
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: System.Threading.Tasks.ITaskCompletionAction
+			Default Value: 
+		Parameter 1:
+			Name: addBeforeOthers
+			Type: System.Boolean
+			Default Value: 
+	Method: AddTaskContinuationComplex:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01934700
+		Ram Offset 0x181935900
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tc
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: addBeforeOthers
+			Type: System.Boolean
+			Default Value: 
+	Method: AddTaskContinuation:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01934AD0
+		Ram Offset 0x181935cd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tc
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: addBeforeOthers
+			Type: System.Boolean
+			Default Value: 
+	Method: RemoveContinuation:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01934BD0
+		Ram Offset 0x181935dd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: continuationObject
+			Type: System.Object
+			Default Value: 
+	Method: FromResult:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<TResult>
+		File Offset 0x00DA73E0
+		Ram Offset 0x180da85e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: TResult
+			Default Value: 
+	Method: FromException:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01934F40
+		Ram Offset 0x181936140
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: exception
+			Type: System.Exception
+			Default Value: 
+	Method: FromException:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<TResult>
+		File Offset 0x00DA7130
+		Ram Offset 0x180da8330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: exception
+			Type: System.Exception
+			Default Value: 
+	Method: FromCancellation:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01935070
+		Ram Offset 0x181936270
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: FromCanceled:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01935130
+		Ram Offset 0x181936330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: FromCancellation:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.Task`1<TResult>
+		File Offset 0x00DA6A10
+		Ram Offset 0x180da7c10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: FromCanceled:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<TResult>
+		File Offset 0x00DA6870
+		Ram Offset 0x180da7a70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: FromCancellation:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.Task`1<TResult>
+		File Offset 0x00DA6BF0
+		Ram Offset 0x180da7df0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: exception
+			Type: System.OperationCanceledException
+			Default Value: 
+	Method: Run:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01935180
+		Ram Offset 0x181936380
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: System.Action
+			Default Value: 
+	Method: Run:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<TResult>
+		File Offset 0x00DA7600
+		Ram Offset 0x180da8800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: function
+			Type: System.Func`1<TResult>
+			Default Value: 
+	Method: Run:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01935350
+		Ram Offset 0x181936550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: function
+			Type: System.Func`1<System.Threading.Tasks.Task>
+			Default Value: 
+	Method: Run:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x019353A0
+		Ram Offset 0x1819365a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: function
+			Type: System.Func`1<System.Threading.Tasks.Task>
+			Default Value: 
+		Parameter 1:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: Run:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<TResult>
+		File Offset 0x00DA77A0
+		Ram Offset 0x180da89a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: function
+			Type: System.Func`1<System.Threading.Tasks.Task`1<TResult>>
+			Default Value: 
+	Method: Run:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<TResult>
+		File Offset 0x00DA7950
+		Ram Offset 0x180da8b50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: function
+			Type: System.Func`1<System.Threading.Tasks.Task`1<TResult>>
+			Default Value: 
+		Parameter 1:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: Delay:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01935680
+		Ram Offset 0x181936880
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: millisecondsDelay
+			Type: System.Int32
+			Default Value: 
+	Method: Delay:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x019356D0
+		Ram Offset 0x1819368d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: millisecondsDelay
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: WhenAny:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<System.Threading.Tasks.Task>
+		File Offset 0x01935B20
+		Ram Offset 0x181936d20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tasks
+			Type: System.Threading.Tasks.Task[]
+			Default Value: 
+	Method: WhenAny:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<System.Threading.Tasks.Task>
+		File Offset 0x01935D20
+		Ram Offset 0x181936f20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tasks
+			Type: System.Collections.Generic.IEnumerable`1<System.Threading.Tasks.Task>
+			Default Value: 
+	Method: AddToActiveTasks:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01935FE0
+		Ram Offset 0x1819371e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: task
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+	Method: RemoveFromActiveTasks:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01936210
+		Ram Offset 0x181937410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: taskId
+			Type: System.Int32
+			Default Value: 
+	Method: MarkAborted:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: e
+			Type: System.Threading.ThreadAbortException
+			Default Value: 
+	Method: ExecuteWithThreadLocal:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x019363D0
+		Ram Offset 0x1819375d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: currentTaskSlot
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x019366F0
+		Ram Offset 0x1819378f0
+		Virtual Method Slot: 65535

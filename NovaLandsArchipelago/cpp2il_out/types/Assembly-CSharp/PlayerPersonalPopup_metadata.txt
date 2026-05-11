@@ -1,0 +1,1340 @@
+Type: PlayerPersonalPopup:
+	Base Class: 
+		BasePopup
+
+	Interfaces:
+
+	Nested Types:
+		PlayerPersonalPopup/<>c
+		PlayerPersonalPopup/<>c__DisplayClass137_0
+		PlayerPersonalPopup/<>c__DisplayClass154_0
+		PlayerPersonalPopup/<CheckEnableChallengesEventSensitiveScroll>d__194
+		PlayerPersonalPopup/<InvokeRealtimeCoroutine>d__108
+		PlayerPersonalPopup/<SetupIslandsTabNavigation>d__141
+		PlayerPersonalPopup/<UpdateChallengesGrid>d__193
+		PlayerPersonalPopup/<UpdateEquipmentTabNavigationDelayed>d__146
+
+	Static Field: ISLANDS_TAB
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 0
+
+	Static Field: SKILLS_TAB
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Static Field: EQUIP_TAB
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 2
+
+	Static Field: COLLECTION_TAB
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 3
+
+	Static Field: SETTINGS_TAB
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 4
+
+	Static Field: CHALLENGES_TAB
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 5
+
+	Field: defaultTab
+		Type: UnityEngine.UI.Toggle
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: tabContent
+		Type: System.Collections.Generic.List`1<TogglePerContent>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: originalToggleMinY
+		Type: System.Single
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: originalToggleMaxY
+		Type: System.Single
+		Offset in Defining Type: 0x54
+		Has Default: False
+
+	Field: navigateTabsLeftButton
+		Type: CommandActionPair
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: navigateTabsRightButton
+		Type: CommandActionPair
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: collectionTab
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: collectionTabFirstSelectable
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: collectionEquipmentParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: collectionEquipmentSlots
+		Type: System.Collections.Generic.List`1<EquipmentScreenEquipSlot>
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: collectionIslandsSelectable
+		Type: UnityEngine.UI.Selectable
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: collectionChallengesSelectable
+		Type: UnityEngine.UI.Selectable
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: collectionSkillsSelectable
+		Type: UnityEngine.UI.Selectable
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: collectionResearchesSelectable
+		Type: UnityEngine.UI.Selectable
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: islandsCountLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: challengesCountLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: skillsCountLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: researchesCountLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: badgeTemplate
+		Type: CollectionScreenBadge
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: badgesParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: relicTemplate
+		Type: CollectionScreenRelic
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: relicsParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: researchPopupPrefab
+		Type: ResearchPopup
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: skillsTab
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: skillsArea
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: skillDescriptionArea
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: skillDescriptionHighlightTextColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x108
+		Has Default: False
+
+	Field: skillPlayerHeadIconImage
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x118
+		Has Default: False
+
+	Field: skillIconImage
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x120
+		Has Default: False
+
+	Field: skillNameLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x128
+		Has Default: False
+
+	Field: skillDescriptionLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x130
+		Has Default: False
+
+	Field: skillCostLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: skillCostMask
+		Type: System.String
+		Offset in Defining Type: 0x140
+		Has Default: False
+
+	Field: skillPointsAvailableMask
+		Type: System.String
+		Offset in Defining Type: 0x148
+		Has Default: False
+
+	Field: skillUnlockButton
+		Type: CommandActionPair
+		Offset in Defining Type: 0x150
+		Has Default: False
+
+	Field: demoSkillUnlockButtonLockedFeedback
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x158
+		Has Default: False
+
+	Field: skillBackButton
+		Type: CommandActionPair
+		Offset in Defining Type: 0x160
+		Has Default: False
+
+	Field: skillUnlockSFX
+		Type: System.String
+		Offset in Defining Type: 0x168
+		Has Default: False
+
+	Field: skillDescriptionAreaUnlockedFeedback
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x170
+		Has Default: False
+
+	Field: connectionsParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x178
+		Has Default: False
+
+	Field: skillsNotificationGroup
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x180
+		Has Default: False
+
+	Field: skillsNotificationLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x188
+		Has Default: False
+
+	Field: skillsScalePerAspectRatio
+		Type: System.Collections.Generic.List`1<FloatFloatPair>
+		Offset in Defining Type: 0x190
+		Has Default: False
+
+	Field: skillsBuildingManualProgressBars
+		Type: System.Collections.Generic.List`1<UnityEngine.UI.Image>
+		Offset in Defining Type: 0x198
+		Has Default: False
+
+	Field: skillsBuildingManualRequiredSkillPointsLabels
+		Type: System.Collections.Generic.List`1<TMPro.TextMeshProUGUI>
+		Offset in Defining Type: 0x1A0
+		Has Default: False
+
+	Field: skillsSkillPointsPerBuildingManualSkill
+		Type: System.Collections.Generic.List`1<System.Int32>
+		Offset in Defining Type: 0x1A8
+		Has Default: False
+
+	Field: skillsBuildingManualSkills
+		Type: System.Collections.Generic.List`1<PlayerSkillPopupNode>
+		Offset in Defining Type: 0x1B0
+		Has Default: False
+
+	Field: islandsTab
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x1B8
+		Has Default: False
+
+	Field: islandsArea
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x1C0
+		Has Default: False
+
+	Field: islandDescriptionArea
+		Type: IslandScreenDescriptionArea
+		Offset in Defining Type: 0x1C8
+		Has Default: False
+
+	Field: islandsAreaScrollSpeed
+		Type: System.Single
+		Offset in Defining Type: 0x1D0
+		Has Default: False
+
+	Field: islandItems
+		Type: System.Collections.Generic.List`1<IslandScreenIslandItemLayerPair>
+		Offset in Defining Type: 0x1D8
+		Has Default: False
+
+	Field: equipmentTab
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x1E0
+		Has Default: False
+
+	Field: equipmentDescriptionArea
+		Type: EquipmentDescriptionArea
+		Offset in Defining Type: 0x1E8
+		Has Default: False
+
+	Field: equipmentTabFirstSelectable
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x1F0
+		Has Default: False
+
+	Field: equipmentSlots
+		Type: System.Collections.Generic.List`1<EquipmentScreenEquipSlot>
+		Offset in Defining Type: 0x1F8
+		Has Default: False
+
+	Field: settingsTab
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x200
+		Has Default: False
+
+	Field: settingsTabFirstSelectable
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x208
+		Has Default: False
+
+	Field: settingsOptionsMenuSecretTab
+		Type: UnityEngine.UI.Toggle
+		Offset in Defining Type: 0x210
+		Has Default: False
+
+	Field: settingsOptionsMenuPrefab
+		Type: OptionsMenu
+		Offset in Defining Type: 0x218
+		Has Default: False
+
+	Field: settingsExitButtonLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x220
+		Has Default: False
+
+	Field: settingsExitGameButton
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x228
+		Has Default: False
+
+	Field: settingsExitToMenuButton
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x230
+		Has Default: False
+
+	Field: settingsButtons
+		Type: System.Collections.Generic.List`1<UnityEngine.UI.Button>
+		Offset in Defining Type: 0x238
+		Has Default: False
+
+	Field: challengesTab
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x240
+		Has Default: False
+
+	Field: challengeCardsParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x248
+		Has Default: False
+
+	Field: challengeCardsEventSensitiveScrollRect
+		Type: EventSensitiveScrollRect
+		Offset in Defining Type: 0x250
+		Has Default: False
+
+	Field: challengeCardTemplate
+		Type: ChallengeScreenChallengeCard
+		Offset in Defining Type: 0x258
+		Has Default: False
+
+	Field: challengesInAppearanceOrder
+		Type: System.Collections.Generic.List`1<ChallengeScriptableObject>
+		Offset in Defining Type: 0x260
+		Has Default: False
+
+	Field: currentSkillNode
+		Type: PlayerSkillPopupNode
+		Offset in Defining Type: 0x268
+		Has Default: False
+
+	Field: currentSkillDescriptor
+		Type: PlayerSkillDescriptor
+		Offset in Defining Type: 0x270
+		Has Default: False
+
+	Field: playerSkillNodes
+		Type: System.Collections.Generic.List`1<PlayerSkillPopupNode>
+		Offset in Defining Type: 0x278
+		Has Default: False
+
+	Field: skillsAreaInitialPos
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x280
+		Has Default: False
+
+	Field: previousCursorPos
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x288
+		Has Default: False
+
+	Field: previousTimeScale
+		Type: System.Single
+		Offset in Defining Type: 0x290
+		Has Default: False
+
+	Field: enableInput
+		Type: System.Boolean
+		Offset in Defining Type: 0x294
+		Has Default: False
+
+	Field: player
+		Type: BasePlayer
+		Offset in Defining Type: 0x298
+		Has Default: False
+
+	Field: raycaster
+		Type: UnityEngine.UI.GraphicRaycaster
+		Offset in Defining Type: 0x2A0
+		Has Default: False
+
+	Field: discardedFirstOnTab
+		Type: System.Boolean
+		Offset in Defining Type: 0x2A8
+		Has Default: False
+
+	Field: currentTab
+		Type: UnityEngine.UI.Toggle
+		Offset in Defining Type: 0x2B0
+		Has Default: False
+
+	Field: newTab
+		Type: UnityEngine.UI.Toggle
+		Offset in Defining Type: 0x2B8
+		Has Default: False
+
+	Field: tabContentDict
+		Type: System.Collections.Generic.Dictionary`2<UnityEngine.UI.Toggle,UnityEngine.GameObject>
+		Offset in Defining Type: 0x2C0
+		Has Default: False
+
+	Field: islandItemsPerLayerDict
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.Collections.Generic.List`1<IslandScreenIslandItem>>
+		Offset in Defining Type: 0x2C8
+		Has Default: False
+
+	Field: islandItemsPerPosition
+		Type: System.Collections.Generic.Dictionary`2<UnityEngine.Vector2,IslandScreenIslandItem>
+		Offset in Defining Type: 0x2D0
+		Has Default: False
+
+	Field: islandsAreaInitialPos
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x2D8
+		Has Default: False
+
+	Field: islandsAreaSize
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x2E0
+		Has Default: False
+
+	Field: currentSelectedEquip
+		Type: EquipmentScreenEquipSlot
+		Offset in Defining Type: 0x2E8
+		Has Default: False
+
+	Field: badges
+		Type: System.Collections.Generic.List`1<CollectionScreenBadge>
+		Offset in Defining Type: 0x2F0
+		Has Default: False
+
+	Field: relics
+		Type: System.Collections.Generic.List`1<CollectionScreenRelic>
+		Offset in Defining Type: 0x2F8
+		Has Default: False
+
+	Field: optionsMenu
+		Type: OptionsMenu
+		Offset in Defining Type: 0x300
+		Has Default: False
+
+	Field: backToMenu
+		Type: System.Boolean
+		Offset in Defining Type: 0x308
+		Has Default: False
+
+	Field: openWishlistPage
+		Type: System.Boolean
+		Offset in Defining Type: 0x309
+		Has Default: False
+
+	Field: clickedExitGame
+		Type: System.Boolean
+		Offset in Defining Type: 0x30A
+		Has Default: False
+
+	Field: challengeCards
+		Type: System.Collections.Generic.List`1<ChallengeScreenChallengeCard>
+		Offset in Defining Type: 0x310
+		Has Default: False
+
+	Field: openIslandsTab
+		Type: System.Boolean
+		Offset in Defining Type: 0x318
+		Has Default: False
+
+	Field: openSettingsTab
+		Type: System.Boolean
+		Offset in Defining Type: 0x319
+		Has Default: False
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00654F00
+		Ram Offset 0x180656100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: openIslandsTab
+			Type: System.Boolean
+			Default Value: 
+	Method: OpenOnSettingsTab:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00655660
+		Ram Offset 0x180656860
+		Virtual Method Slot: 65535
+
+	Method: OnEnable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00655670
+		Ram Offset 0x180656870
+		Virtual Method Slot: 7
+
+	Method: OnDisable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00655770
+		Ram Offset 0x180656970
+		Virtual Method Slot: 65535
+
+	Method: Update:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00655830
+		Ram Offset 0x180656a30
+		Virtual Method Slot: 65535
+
+	Method: UpdatePopupInput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00655A80
+		Ram Offset 0x180656c80
+		Virtual Method Slot: 65535
+
+	Method: InvokeRealtimeCoroutine:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00655EA0
+		Ram Offset 0x1806570a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: System.Action
+			Default Value: 
+		Parameter 1:
+			Name: duration
+			Type: System.Single
+			Default Value: 
+	Method: OnTabToggle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00655F60
+		Ram Offset 0x180657160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: toggle
+			Type: UnityEngine.UI.Toggle
+			Default Value: 
+	Method: SetTabPosition:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00656350
+		Ram Offset 0x180657550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tab
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 1:
+			Name: active
+			Type: System.Boolean
+			Default Value: 
+	Method: SelectFirstSelectable:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00656590
+		Ram Offset 0x180657790
+		Virtual Method Slot: 65535
+
+	Method: InitToggles:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00657010
+		Ram Offset 0x180658210
+		Virtual Method Slot: 65535
+
+	Method: ResetTabDelayed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00657100
+		Ram Offset 0x180658300
+		Virtual Method Slot: 65535
+
+	Method: SelectInitialToggle:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00657150
+		Ram Offset 0x180658350
+		Virtual Method Slot: 65535
+
+	Method: InitTogglesDict:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00657410
+		Ram Offset 0x180658610
+		Virtual Method Slot: 65535
+
+	Method: CheckCanChangeToggle:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 65535
+
+	Method: EnableInput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00657650
+		Ram Offset 0x180658850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: OnClickCommon:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00657660
+		Ram Offset 0x180658860
+		Virtual Method Slot: 65535
+
+	Method: OnClickCloseButton:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006576D0
+		Ram Offset 0x1806588d0
+		Virtual Method Slot: 65535
+
+	Method: OnChangeInputSource:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006577E0
+		Ram Offset 0x1806589e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: controllerType
+			Type: Rewired.ControllerType
+			Default Value: 
+	Method: ShowSkillDescriptionArea:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00657B80
+		Ram Offset 0x180658d80
+		Virtual Method Slot: 65535
+
+	Method: UpdateSkillPointsCountNotification:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00657CA0
+		Ram Offset 0x180658ea0
+		Virtual Method Slot: 65535
+
+	Method: InitPlayerSkillsTab:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00657DF0
+		Ram Offset 0x180658ff0
+		Virtual Method Slot: 65535
+
+	Method: CalculateSkillsAreaScale:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006580C0
+		Ram Offset 0x1806592c0
+		Virtual Method Slot: 65535
+
+	Method: InitBuildingManualSkillsBar:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006583E0
+		Ram Offset 0x1806595e0
+		Virtual Method Slot: 65535
+
+	Method: GetTotalSpentSkillPoints:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x006585B0
+		Ram Offset 0x1806597b0
+		Virtual Method Slot: 65535
+
+	Method: UpdateBuildingManualSkillsBar:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006585E0
+		Ram Offset 0x1806597e0
+		Virtual Method Slot: 65535
+
+	Method: IsAllSkillsDependenciesUnlocked:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00658930
+		Ram Offset 0x180659b30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: descriptor
+			Type: PlayerSkillDescriptor
+			Default Value: 
+	Method: SetupPlayerSkillNodes:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00658A80
+		Ram Offset 0x180659c80
+		Virtual Method Slot: 65535
+
+	Method: SetCurrentSkillDescriptionArea:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00658D00
+		Ram Offset 0x180659f00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: node
+			Type: PlayerSkillPopupNode
+			Default Value: 
+		Parameter 1:
+			Name: animateUnlockedFeedback
+			Type: System.Boolean
+			Default Value: False
+		Parameter 2:
+			Name: firstTime
+			Type: System.Boolean
+			Default Value: False
+	Method: OnClickUnlockSkill:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006599B0
+		Ram Offset 0x18065abb0
+		Virtual Method Slot: 65535
+
+	Method: OnClickWishlist:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00659B20
+		Ram Offset 0x18065ad20
+		Virtual Method Slot: 65535
+
+	Method: OnClickKeepPlaying:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00659DA0
+		Ram Offset 0x18065afa0
+		Virtual Method Slot: 65535
+
+	Method: UpdatePlayerSkillsStateDemo:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: CheckUnlockAllSkillsBadge:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065A170
+		Ram Offset 0x18065b370
+		Virtual Method Slot: 65535
+
+	Method: IsCurrentSelectedPlayerSkillNode:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0065A330
+		Ram Offset 0x18065b530
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: node
+			Type: PlayerSkillPopupNode
+			Default Value: 
+	Method: GetSkillNodesPerDescriptor:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<PlayerSkillPopupNode>
+		File Offset 0x0065A460
+		Ram Offset 0x18065b660
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: descriptors
+			Type: System.Collections.Generic.List`1<PlayerSkillDescriptor>
+			Default Value: 
+	Method: UpdateSkillsTabInput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065A580
+		Ram Offset 0x18065b780
+		Virtual Method Slot: 65535
+
+	Method: InitIslandsTab:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065ADF0
+		Ram Offset 0x18065bff0
+		Virtual Method Slot: 65535
+
+	Method: SetupIslandsItems:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065AF70
+		Ram Offset 0x18065c170
+		Virtual Method Slot: 65535
+
+	Method: SetupIslandsTabNavigation:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x0065BAB0
+		Ram Offset 0x18065ccb0
+		Virtual Method Slot: 65535
+
+	Method: ShowIslandDescriptionArea:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0065BB40
+		Ram Offset 0x18065cd40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: item
+			Type: IslandScreenIslandItem
+			Default Value: 
+	Method: UpdateIslandsTabInput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065BCA0
+		Ram Offset 0x18065cea0
+		Virtual Method Slot: 65535
+
+	Method: GetItemPerPosition:
+		Accessibility: Public
+		Return Type: IslandScreenIslandItem
+		File Offset 0x0065C580
+		Ram Offset 0x18065d780
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: UpdateEquipmentTabNavigation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065C600
+		Ram Offset 0x18065d800
+		Virtual Method Slot: 65535
+
+	Method: UpdateEquipmentTabNavigationDelayed:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x0065C810
+		Ram Offset 0x18065da10
+		Virtual Method Slot: 65535
+
+	Method: GetEquipSlotInDirection:
+		Accessibility: Private
+		Return Type: UnityEngine.UI.Selectable
+		File Offset 0x0065C8A0
+		Ram Offset 0x18065daa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: origin
+			Type: EquipmentScreenEquipSlot
+			Default Value: 
+		Parameter 1:
+			Name: direction
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: UpdateEquipmentTabInput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065CED0
+		Ram Offset 0x18065e0d0
+		Virtual Method Slot: 65535
+
+	Method: OnToggleEquipmentSlot:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0065D230
+		Ram Offset 0x18065e430
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: slot
+			Type: EquipmentScreenEquipSlot
+			Default Value: 
+	Method: OnClickCollectionIslandsCard:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0065D3E0
+		Ram Offset 0x18065e5e0
+		Virtual Method Slot: 65535
+
+	Method: OnClickCollectionChallengesCard:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0065D450
+		Ram Offset 0x18065e650
+		Virtual Method Slot: 65535
+
+	Method: OnClickCollectionSkillsCard:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0065D4C0
+		Ram Offset 0x18065e6c0
+		Virtual Method Slot: 65535
+
+	Method: OnClickCollectionResearchesCard:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: OnClickCollectionEquipment:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0065D530
+		Ram Offset 0x18065e730
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: slot
+			Type: EquipmentScreenEquipSlot
+			Default Value: 
+	Method: SelectEquipFromCollectionScreenDelayed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: slot
+			Type: EquipmentScreenEquipSlot
+			Default Value: 
+	Method: InitCollectionTab:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065D6F0
+		Ram Offset 0x18065e8f0
+		Virtual Method Slot: 65535
+
+	Method: InitIslandsCollectionCard:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065D760
+		Ram Offset 0x18065e960
+		Virtual Method Slot: 65535
+
+	Method: InitChallengesCollectionCard:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065DCC0
+		Ram Offset 0x18065eec0
+		Virtual Method Slot: 65535
+
+	Method: InitSkillsCollectionCard:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065DFD0
+		Ram Offset 0x18065f1d0
+		Virtual Method Slot: 65535
+
+	Method: InitResearchesCollectionCard:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065E2F0
+		Ram Offset 0x18065f4f0
+		Virtual Method Slot: 65535
+
+	Method: InitBadgesCard:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065E610
+		Ram Offset 0x18065f810
+		Virtual Method Slot: 65535
+
+	Method: UpdateBadgesCard:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065E8F0
+		Ram Offset 0x18065faf0
+		Virtual Method Slot: 65535
+
+	Method: UpdateCollectionBadgesNavigation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065EA30
+		Ram Offset 0x18065fc30
+		Virtual Method Slot: 65535
+
+	Method: InitRelicsCard:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065EF70
+		Ram Offset 0x180660170
+		Virtual Method Slot: 65535
+
+	Method: UpdateCollectionRelicsNavigation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065F250
+		Ram Offset 0x180660450
+		Virtual Method Slot: 65535
+
+	Method: UpdateCollectionEquipmentNavigation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065F770
+		Ram Offset 0x180660970
+		Virtual Method Slot: 65535
+
+	Method: UpdateCollectionUpperCardsNavigation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0065FC80
+		Ram Offset 0x180660e80
+		Virtual Method Slot: 65535
+
+	Method: GetCollectionEquipmentIconAtRow:
+		Accessibility: Private
+		Return Type: UnityEngine.UI.Selectable
+		File Offset 0x00660560
+		Ram Offset 0x180661760
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: targetRow
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: rightmost
+			Type: System.Boolean
+			Default Value: 
+	Method: GetCollectionRelicIconAtRow:
+		Accessibility: Private
+		Return Type: UnityEngine.UI.Selectable
+		File Offset 0x006606D0
+		Ram Offset 0x1806618d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: targetRow
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: rightmost
+			Type: System.Boolean
+			Default Value: 
+	Method: GetCollectionBadgeIconAtRow:
+		Accessibility: Private
+		Return Type: UnityEngine.UI.Selectable
+		File Offset 0x00660840
+		Ram Offset 0x180661a40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: targetRow
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: rightmost
+			Type: System.Boolean
+			Default Value: 
+	Method: UpdateCollectionTabInput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006609B0
+		Ram Offset 0x180661bb0
+		Virtual Method Slot: 65535
+
+	Method: UpdateSettingsTabInput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00660C40
+		Ram Offset 0x180661e40
+		Virtual Method Slot: 65535
+
+	Method: IsCaveInterior:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00660ED0
+		Ram Offset 0x1806620d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: worldArea
+			Type: WorldArea
+			Default Value: 
+	Method: CanExitFromArea:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00661000
+		Ram Offset 0x180662200
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: area
+			Type: WorldArea
+			Default Value: 
+	Method: UpdateSettingsExitButton:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x006610B0
+		Ram Offset 0x1806622b0
+		Virtual Method Slot: 65535
+
+	Method: OnClickSettingsOptionsButton:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00661460
+		Ram Offset 0x180662660
+		Virtual Method Slot: 65535
+
+	Method: OnCloseSettingsOptionsMenu:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006616A0
+		Ram Offset 0x1806628a0
+		Virtual Method Slot: 65535
+
+	Method: OnClickSettingsExitGame:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00661C30
+		Ram Offset 0x180662e30
+		Virtual Method Slot: 65535
+
+	Method: OnClickSettingsExitToMainMenu:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00661F90
+		Ram Offset 0x180663190
+		Virtual Method Slot: 65535
+
+	Method: OnCancelExit:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006625D0
+		Ram Offset 0x1806637d0
+		Virtual Method Slot: 65535
+
+	Method: OnConfirmExitCommon:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006629A0
+		Ram Offset 0x180663ba0
+		Virtual Method Slot: 65535
+
+	Method: OnConfirmExitGame:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00662BF0
+		Ram Offset 0x180663df0
+		Virtual Method Slot: 65535
+
+	Method: OnConfirmExitAndWishlist:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00662C00
+		Ram Offset 0x180663e00
+		Virtual Method Slot: 65535
+
+	Method: OnConfirmExitToMainMenu:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00662C10
+		Ram Offset 0x180663e10
+		Virtual Method Slot: 65535
+
+	Method: OnLeaveCaveInterior:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00662C20
+		Ram Offset 0x180663e20
+		Virtual Method Slot: 65535
+
+	Method: OnLeaveDungeon:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00662E60
+		Ram Offset 0x180664060
+		Virtual Method Slot: 65535
+
+	Method: OnFinishSaving:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00663080
+		Ram Offset 0x180664280
+		Virtual Method Slot: 65535
+
+	Method: InitChallengesTab:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006631F0
+		Ram Offset 0x1806643f0
+		Virtual Method Slot: 65535
+
+	Method: SetupChallengesTabNavigation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006632F0
+		Ram Offset 0x1806644f0
+		Virtual Method Slot: 65535
+
+	Method: SelectFirstChallenge:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006636C0
+		Ram Offset 0x1806648c0
+		Virtual Method Slot: 65535
+
+	Method: SetupChallengesItems:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006637C0
+		Ram Offset 0x1806649c0
+		Virtual Method Slot: 65535
+
+	Method: TriggerChallengesGridUpdate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00663D10
+		Ram Offset 0x180664f10
+		Virtual Method Slot: 65535
+
+	Method: UpdateChallengesGrid:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00663DB0
+		Ram Offset 0x180664fb0
+		Virtual Method Slot: 65535
+
+	Method: CheckEnableChallengesEventSensitiveScroll:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00663E40
+		Ram Offset 0x180665040
+		Virtual Method Slot: 65535
+
+	Method: UpdateChallengesTabInput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00663ED0
+		Ram Offset 0x1806650d0
+		Virtual Method Slot: 65535
+
+	Method: GetPressedOpenPlayerScreenButton:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00664160
+		Ram Offset 0x180665360
+		Virtual Method Slot: 65535
+
+	Method: UpdateCloseInput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00664320
+		Ram Offset 0x180665520
+		Virtual Method Slot: 65535
+
+	Method: UpdateTabsInput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00664450
+		Ram Offset 0x180665650
+		Virtual Method Slot: 65535
+
+	Method: get_ConnectionsParent:
+		Accessibility: Public
+		Return Type: UnityEngine.Transform
+		File Offset 0x003D59C0
+		Ram Offset 0x1803d6bc0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00664720
+		Ram Offset 0x180665920
+		Virtual Method Slot: 65535

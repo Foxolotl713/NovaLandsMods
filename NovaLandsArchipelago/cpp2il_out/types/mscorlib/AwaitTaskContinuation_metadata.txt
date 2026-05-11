@@ -1,0 +1,174 @@
+Type: System.Threading.Tasks.AwaitTaskContinuation:
+	Base Class: 
+		System.Threading.Tasks.TaskContinuation
+
+	Interfaces:
+		System.Threading.IThreadPoolWorkItem
+
+	Static Field: s_invokeActionCallback
+		Type: System.Threading.ContextCallback
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: m_capturedContext
+		Type: System.Threading.ExecutionContext
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_action
+		Type: System.Action
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01938610
+		Ram Offset 0x181939810
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: System.Action
+			Default Value: 
+		Parameter 1:
+			Name: flowExecutionContext
+			Type: System.Boolean
+			Default Value: 
+	Method: CreateTask:
+		Accessibility: Family
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01938720
+		Ram Offset 0x181939920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: System.Action`1<System.Object>
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: scheduler
+			Type: System.Threading.Tasks.TaskScheduler
+			Default Value: 
+	Method: Run:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01938800
+		Ram Offset 0x181939a00
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: ignored
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+		Parameter 1:
+			Name: canInlineContinuationTask
+			Type: System.Boolean
+			Default Value: 
+	Method: get_IsValidLocationForInlining:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x019388B0
+		Ram Offset 0x181939ab0
+		Virtual Method Slot: 65535
+
+	Method: System.Threading.IThreadPoolWorkItem.ExecuteWorkItem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x019389E0
+		Ram Offset 0x181939be0
+		Virtual Method Slot: 5
+
+	Method: InvokeAction:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01938A80
+		Ram Offset 0x181939c80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: GetInvokeActionCallback:
+		Accessibility: Family
+		Return Type: System.Threading.ContextCallback
+		File Offset 0x01938AF0
+		Ram Offset 0x181939cf0
+		Virtual Method Slot: 65535
+
+	Method: RunCallback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01938BE0
+		Ram Offset 0x181939de0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: System.Threading.ContextCallback
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: currentTask
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+	Method: RunOrScheduleAction:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01938DB0
+		Ram Offset 0x181939fb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: System.Action
+			Default Value: 
+		Parameter 1:
+			Name: allowInlining
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: currentTask
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+	Method: UnsafeScheduleAction:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01938F30
+		Ram Offset 0x18193a130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: System.Action
+			Default Value: 
+	Method: ThrowAsyncIfNecessary:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01938FF0
+		Ram Offset 0x18193a1f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: exc
+			Type: System.Exception
+			Default Value: 
+	Method: MarkAborted:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: e
+			Type: System.Threading.ThreadAbortException
+			Default Value: 

@@ -1,0 +1,641 @@
+Type: UnityEngine.UIElements.UIR.Implementation.UIRStylePainter:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		UnityEngine.UIElements.IStylePainter
+
+	Nested Types:
+		UnityEngine.UIElements.UIR.Implementation.UIRStylePainter/Entry
+		UnityEngine.UIElements.UIR.Implementation.UIRStylePainter/ClosingInfo
+		UnityEngine.UIElements.UIR.Implementation.UIRStylePainter/RepeatRectUV
+
+	Field: m_Owner
+		Type: UnityEngine.UIElements.UIR.RenderChain
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_Entries
+		Type: System.Collections.Generic.List`1<UnityEngine.UIElements.UIR.Implementation.UIRStylePainter/Entry>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_Atlas
+		Type: UnityEngine.UIElements.AtlasBase
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_VectorImageManager
+		Type: UnityEngine.UIElements.UIR.VectorImageManager
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_CurrentEntry
+		Type: UnityEngine.UIElements.UIR.Implementation.UIRStylePainter/Entry
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_ClosingInfo
+		Type: UnityEngine.UIElements.UIR.Implementation.UIRStylePainter/ClosingInfo
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: m_MaskDepth
+		Type: System.Int32
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: m_StencilRef
+		Type: System.Int32
+		Offset in Defining Type: 0xBC
+		Has Default: False
+
+	Field: m_ClipRectID
+		Type: UnityEngine.UIElements.UIR.BMPAlloc
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: m_SVGBackgroundEntryIndex
+		Type: System.Int32
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: m_VertsPool
+		Type: UnityEngine.UIElements.UIR.TempAllocator`1<UnityEngine.UIElements.Vertex>
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: m_IndicesPool
+		Type: UnityEngine.UIElements.UIR.TempAllocator`1<System.UInt16>
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: m_MeshWriteDataPool
+		Type: System.Collections.Generic.List`1<UnityEngine.UIElements.MeshWriteData>
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: m_NextMeshWriteDataPoolItem
+		Type: System.Int32
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: m_RepeatRectUVList
+		Type: System.Collections.Generic.List`1<UnityEngine.UIElements.UIR.Implementation.UIRStylePainter/RepeatRectUV>[]
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: m_AllocRawVertsIndicesDelegate
+		Type: UnityEngine.UIElements.UIR.MeshBuilder/AllocMeshData/Allocator
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: m_AllocThroughDrawMeshDelegate
+		Type: UnityEngine.UIElements.UIR.MeshBuilder/AllocMeshData/Allocator
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: <meshGenerationContext>k__BackingField
+		Type: UnityEngine.UIElements.MeshGenerationContext
+		Offset in Defining Type: 0x108
+		Has Default: False
+
+	Field: <currentElement>k__BackingField
+		Type: UnityEngine.UIElements.VisualElement
+		Offset in Defining Type: 0x110
+		Has Default: False
+
+	Field: <totalVertices>k__BackingField
+		Type: System.Int32
+		Offset in Defining Type: 0x118
+		Has Default: False
+
+	Field: <totalIndices>k__BackingField
+		Type: System.Int32
+		Offset in Defining Type: 0x11C
+		Has Default: False
+
+	Field: m_TextInfo
+		Type: UnityEngine.TextCore.Text.TextInfo
+		Offset in Defining Type: 0x120
+		Has Default: False
+
+	Method: GetPooledMeshWriteData:
+		Accessibility: Private
+		Return Type: UnityEngine.UIElements.MeshWriteData
+		File Offset 0x02661660
+		Ram Offset 0x182662860
+		Virtual Method Slot: 65535
+
+	Method: AllocRawVertsIndices:
+		Accessibility: Private
+		Return Type: UnityEngine.UIElements.MeshWriteData
+		File Offset 0x02661740
+		Ram Offset 0x182662940
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: vertexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 1:
+			Name: indexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: allocatorData
+			Type: UnityEngine.UIElements.UIR.MeshBuilder/AllocMeshData
+			Default Value: 
+	Method: AllocThroughDrawMesh:
+		Accessibility: Private
+		Return Type: UnityEngine.UIElements.MeshWriteData
+		File Offset 0x02661820
+		Ram Offset 0x182662a20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: vertexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 1:
+			Name: indexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: allocatorData
+			Type: UnityEngine.UIElements.UIR.MeshBuilder/AllocMeshData
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02661850
+		Ram Offset 0x182662a50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderChain
+			Type: UnityEngine.UIElements.UIR.RenderChain
+			Default Value: 
+	Method: get_meshGenerationContext:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.MeshGenerationContext
+		File Offset 0x00808790
+		Ram Offset 0x180809990
+		Virtual Method Slot: 65535
+
+	Method: get_currentElement:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.VisualElement
+		File Offset 0x00753C20
+		Ram Offset 0x180754e20
+		Virtual Method Slot: 65535
+
+	Method: set_currentElement:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0099BC30
+		Ram Offset 0x18099ce30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+	Method: get_entries:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<UnityEngine.UIElements.UIR.Implementation.UIRStylePainter/Entry>
+		File Offset 0x0249FDD0
+		Ram Offset 0x1824a0fd0
+		Virtual Method Slot: 65535
+
+	Method: get_closingInfo:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.UIR.Implementation.UIRStylePainter/ClosingInfo
+		File Offset 0x02661F20
+		Ram Offset 0x182663120
+		Virtual Method Slot: 65535
+
+	Method: get_totalVertices:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00582EA0
+		Ram Offset 0x1805840a0
+		Virtual Method Slot: 65535
+
+	Method: set_totalVertices:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A73410
+		Ram Offset 0x180a74610
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_totalIndices:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0258B290
+		Ram Offset 0x18258c490
+		Virtual Method Slot: 65535
+
+	Method: set_totalIndices:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02661F60
+		Ram Offset 0x182663160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: Begin:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02661F70
+		Ram Offset 0x182663170
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+	Method: LandClipUnregisterMeshDrawCommand:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02662910
+		Ram Offset 0x182663b10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+	Method: LandClipRegisterMesh:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x026629E0
+		Ram Offset 0x182663be0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: vertices
+			Type: Unity.Collections.NativeSlice`1<UnityEngine.UIElements.Vertex>
+			Default Value: 
+		Parameter 1:
+			Name: indices
+			Type: Unity.Collections.NativeSlice`1<System.UInt16>
+			Default Value: 
+		Parameter 2:
+			Name: indexOffset
+			Type: System.Int32
+			Default Value: 
+	Method: DrawMesh:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.MeshWriteData
+		File Offset 0x02662A80
+		Ram Offset 0x182663c80
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: vertexCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: indexCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 3:
+			Name: material
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 4:
+			Name: flags
+			Type: UnityEngine.UIElements.MeshGenerationContext/MeshFlags
+			Default Value: 
+	Method: TryAtlasTexture:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02663070
+		Ram Offset 0x182664270
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 1:
+			Name: flags
+			Type: UnityEngine.UIElements.MeshGenerationContext/MeshFlags
+			Default Value: 
+		Parameter 2:
+			Name: outUVRegion
+			Type: UnityEngine.Rect
+			Default Value: 
+		Parameter 3:
+			Name: outIsAtlas
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: outTextureId
+			Type: UnityEngine.UIElements.TextureId
+			Default Value: 
+		Parameter 5:
+			Name: outAddFlags
+			Type: UnityEngine.UIElements.UIR.VertexFlags
+			Default Value: 
+	Method: BuildEntryFromNativeMesh:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x026632B0
+		Ram Offset 0x1826644b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: meshData
+			Type: UnityEngine.UIElements.MeshWriteDataInterface
+			Default Value: 
+		Parameter 1:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 2:
+			Name: textureId
+			Type: UnityEngine.UIElements.TextureId
+			Default Value: 
+		Parameter 3:
+			Name: isAtlas
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: material
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 5:
+			Name: flags
+			Type: UnityEngine.UIElements.MeshGenerationContext/MeshFlags
+			Default Value: 
+		Parameter 6:
+			Name: uvRegion
+			Type: UnityEngine.Rect
+			Default Value: 
+		Parameter 7:
+			Name: addFlags
+			Type: UnityEngine.UIElements.UIR.VertexFlags
+			Default Value: 
+	Method: BuildGradientEntryFromNativeMesh:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x026637C0
+		Ram Offset 0x1826649c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: meshData
+			Type: UnityEngine.UIElements.MeshWriteDataInterface
+			Default Value: 
+		Parameter 1:
+			Name: svgTextureId
+			Type: UnityEngine.UIElements.TextureId
+			Default Value: 
+	Method: BuildRawEntryFromNativeMesh:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02663C00
+		Ram Offset 0x182664e00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: meshData
+			Type: UnityEngine.UIElements.MeshWriteDataInterface
+			Default Value: 
+	Method: DrawText:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02663E30
+		Ram Offset 0x182665030
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: te
+			Type: UnityEngine.UIElements.TextElement
+			Default Value: 
+	Method: DrawTextInfo:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02663EC0
+		Ram Offset 0x1826650c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 2:
+			Name: useHints
+			Type: System.Boolean
+			Default Value: 
+	Method: DrawRectangle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x026645C0
+		Ram Offset 0x1826657c0
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: rectParams
+			Type: UnityEngine.UIElements.MeshGenerationContextUtils/RectangleParams
+			Default Value: 
+	Method: DrawBorder:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02664EF0
+		Ram Offset 0x1826660f0
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: borderParams
+			Type: UnityEngine.UIElements.MeshGenerationContextUtils/BorderParams
+			Default Value: 
+	Method: DrawImmediate:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02665040
+		Ram Offset 0x182666240
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: callback
+			Type: System.Action
+			Default Value: 
+		Parameter 1:
+			Name: cullingEnabled
+			Type: System.Boolean
+			Default Value: 
+	Method: get_visualElement:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.VisualElement
+		File Offset 0x02536080
+		Ram Offset 0x182537280
+		Virtual Method Slot: 9
+
+	Method: DrawVisualElementBackground:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x026652D0
+		Ram Offset 0x1826664d0
+		Virtual Method Slot: 65535
+
+	Method: DrawRectangleRepeat:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02666B00
+		Ram Offset 0x182667d00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rectParams
+			Type: UnityEngine.UIElements.MeshGenerationContextUtils/RectangleParams
+			Default Value: 
+		Parameter 1:
+			Name: totalRect
+			Type: UnityEngine.Rect
+			Default Value: 
+	Method: StampRectangleWithSubRect:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02668A00
+		Ram Offset 0x182669c00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rectParams
+			Type: UnityEngine.UIElements.MeshGenerationContextUtils/RectangleParams
+			Default Value: 
+		Parameter 1:
+			Name: targetRect
+			Type: UnityEngine.Rect
+			Default Value: 
+		Parameter 2:
+			Name: targetUV
+			Type: UnityEngine.Rect
+			Default Value: 
+	Method: DrawVisualElementBorder:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02668E90
+		Ram Offset 0x18266a090
+		Virtual Method Slot: 65535
+
+	Method: ApplyVisualElementClipping:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02669720
+		Ram Offset 0x18266a920
+		Virtual Method Slot: 65535
+
+	Method: AdjustSpriteWinding:
+		Accessibility: Private
+		Return Type: System.UInt16[]
+		File Offset 0x02669A60
+		Ram Offset 0x18266ac60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: vertices
+			Type: UnityEngine.Vector2[]
+			Default Value: 
+		Parameter 1:
+			Name: indices
+			Type: System.UInt16[]
+			Default Value: 
+	Method: DrawSprite:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02669E30
+		Ram Offset 0x18266b030
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rectParams
+			Type: UnityEngine.UIElements.MeshGenerationContextUtils/RectangleParams
+			Default Value: 
+	Method: DrawVectorImage:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0266A840
+		Ram Offset 0x18266ba40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rectParams
+			Type: UnityEngine.UIElements.MeshGenerationContextUtils/RectangleParams
+			Default Value: 
+	Method: MakeVectorGraphics:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0266AF50
+		Ram Offset 0x18266c150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rectParams
+			Type: UnityEngine.UIElements.MeshGenerationContextUtils/RectangleParams
+			Default Value: 
+		Parameter 1:
+			Name: isUsingGradients
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: svgTexture
+			Type: UnityEngine.UIElements.TextureId
+			Default Value: 
+		Parameter 3:
+			Name: settingIndexOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: finalVertexCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: finalIndexCount
+			Type: System.Int32
+			Default Value: 
+	Method: Reset:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0266BBB0
+		Ram Offset 0x18266cdb0
+		Virtual Method Slot: 65535
+
+	Method: ValidateMeshWriteData:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0266BCA0
+		Ram Offset 0x18266cea0
+		Virtual Method Slot: 65535
+
+	Method: GenerateStencilClipEntryForRoundedRectBackground:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0266C080
+		Ram Offset 0x18266d280
+		Virtual Method Slot: 65535
+
+	Method: GenerateStencilClipEntryForSVGBackground:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0266C970
+		Ram Offset 0x18266db70
+		Virtual Method Slot: 65535

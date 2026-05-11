@@ -1,0 +1,249 @@
+Type: ICSharpCode.SharpZipLib.Zip.ZipInputStream:
+	Base Class: 
+		ICSharpCode.SharpZipLib.Zip.Compression.Streams.InflaterInputStream
+
+	Interfaces:
+
+	Nested Types:
+		ICSharpCode.SharpZipLib.Zip.ZipInputStream/ReadDataHandler
+
+	Field: internalReader
+		Type: ICSharpCode.SharpZipLib.Zip.ZipInputStream/ReadDataHandler
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: crc
+		Type: ICSharpCode.SharpZipLib.Checksums.Crc32
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: entry
+		Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: size
+		Type: System.Int64
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: method
+		Type: System.Int32
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: flags
+		Type: System.Int32
+		Offset in Defining Type: 0x74
+		Has Default: False
+
+	Field: password
+		Type: System.String
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0163FD30
+		Ram Offset 0x181640f30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: baseInputStream
+			Type: System.IO.Stream
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0163FFD0
+		Ram Offset 0x1816411d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: baseInputStream
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 1:
+			Name: bufferSize
+			Type: System.Int32
+			Default Value: 
+	Method: get_Password:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x003933D0
+		Ram Offset 0x1803945d0
+		Virtual Method Slot: 65535
+
+	Method: set_Password:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0061D3C0
+		Ram Offset 0x18061e5c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: get_CanDecompressEntry:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01640170
+		Ram Offset 0x181641370
+		Virtual Method Slot: 65535
+
+	Method: GetNextEntry:
+		Accessibility: Public
+		Return Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+		File Offset 0x01640220
+		Ram Offset 0x181641420
+		Virtual Method Slot: 65535
+
+	Method: ReadDataDescriptor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016408E0
+		Ram Offset 0x181641ae0
+		Virtual Method Slot: 65535
+
+	Method: CompleteCloseEntry:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01640AB0
+		Ram Offset 0x181641cb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: testCrc
+			Type: System.Boolean
+			Default Value: 
+	Method: CloseEntry:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01640C10
+		Ram Offset 0x181641e10
+		Virtual Method Slot: 65535
+
+	Method: get_Available:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01640F90
+		Ram Offset 0x181642190
+		Virtual Method Slot: 37
+
+	Method: get_Length:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x01640FA0
+		Ram Offset 0x1816421a0
+		Virtual Method Slot: 11
+
+	Method: ReadByte:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01641080
+		Ram Offset 0x181642280
+		Virtual Method Slot: 33
+
+	Method: ReadingNotAvailable:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01641120
+		Ram Offset 0x181642320
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: destination
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: ReadingNotSupported:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01641170
+		Ram Offset 0x181642370
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: destination
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: InitialRead:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x016411C0
+		Ram Offset 0x1816423c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: destination
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: Read:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x016416C0
+		Ram Offset 0x1816428c0
+		Virtual Method Slot: 31
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: BodyRead:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01641870
+		Ram Offset 0x181642a70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: Close:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01641E30
+		Ram Offset 0x181643030
+		Virtual Method Slot: 18

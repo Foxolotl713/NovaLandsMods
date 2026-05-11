@@ -1,0 +1,443 @@
+Type: CylinderText
+
+Method: System.Void UnityEngine.UI.Extensions.CylinderText::Awake():	Method Body (x86 ASM):
+		0x180A3E880 mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180A3E883 mov rdx,[rax+1E0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 480 | None ||| N/A | N/A
+		0x180A3E88A jmp qword ptr [rax+1D8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 472 | None ||| N/A | N/A
+		0x180A3E891 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.CylinderText::Awake():
+		End of function at 0x180A3E892
+		Absolute End is at 0x180A3E892
+		Identified Jump Destination addresses:
+
+		0x180A3E880: Loads the class pointer from this into a constant constant1 in register rax
+		0x180A3E883: Loads the pointer to the implementation of virtual function System.Void UnityEngine.EventSystems.UIBehaviour::OnRectTransformDimensionsChange() specific to UnityEngine.UI.Extensions.CylinderText from the class pointer in rax, slot 10 (from memory offset 480) and stores in constant constant2
+		0x180A3E88A: [!] Calls managed method UnityEngine.Vector2 Rewired.IControllerTemplateThumbStick::get_value() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.CylinderText)} and stores the result in {'value' (type UnityEngine.Vector2)} ;  - Leftover parameters detected, but first few match.
+
+		0x180A3E88A: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.CylinderText
+	System.Void Awake()
+
+		UnityEngine.Vector2 value = base.value
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call UnityEngine.Vector2 Rewired.IControllerTemplateThumbStick::get_value()
+	IL_0006: stloc.0
+	IL_0007: ret
+	
+
+Method: System.Void UnityEngine.UI.Extensions.CylinderText::OnEnable():	Method Body (x86 ASM):
+		0x180A3E8A0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A3E8A2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A3E8A6 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A3E8A8 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A3E8AB call 00000001825C4520h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A3E8B0 mov rax,[rbx]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x180A3E8B3 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A3E8B6 mov rdx,[rax+1E0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 480 | None ||| N/A | N/A
+		0x180A3E8BD add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A3E8C1 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A3E8C2 jmp qword ptr [rax+1D8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 472 | None ||| N/A | N/A
+		0x180A3E8C9 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.CylinderText::OnEnable():
+		End of function at 0x180A3E8CA
+		Absolute End is at 0x180A3E8CA
+		Identified Jump Destination addresses:
+
+		0x180A3E8A0: Saves the content of rbx to the stack
+		0x180A3E8A8: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.CylinderText)} from rcx into rbx
+		0x180A3E8AB: [!] Calls managed method System.Void UnityEngine.UI.BaseMeshEffect::OnEnable() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.CylinderText)}
+
+		0x180A3E8B0: Loads the class pointer from this into a constant constant1 in register rax
+		0x180A3E8B3: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.CylinderText)} from rbx into rcx
+		0x180A3E8B6: Loads the pointer to the implementation of virtual function System.Void UnityEngine.EventSystems.UIBehaviour::OnRectTransformDimensionsChange() specific to UnityEngine.UI.Extensions.CylinderText from the class pointer in rax, slot 10 (from memory offset 480) and stores in constant constant2
+		0x180A3E8C2: [!] Calls managed method UnityEngine.Vector2 Rewired.IControllerTemplateThumbStick::get_value() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.CylinderText)} and stores the result in {'value' (type UnityEngine.Vector2)} ;  - Leftover parameters detected, but first few match.
+
+		0x180A3E8C2: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.CylinderText
+	System.Void OnEnable()
+
+		base.OnEnable()
+
+		UnityEngine.Vector2 value = base.value
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call System.Void UnityEngine.UI.BaseMeshEffect::OnEnable()
+	IL_0006: ldarg.0
+	IL_0007: call UnityEngine.Vector2 Rewired.IControllerTemplateThumbStick::get_value()
+	IL_000c: stloc.0
+	IL_000d: ret
+	
+
+Method: System.Void UnityEngine.UI.Extensions.CylinderText::ModifyMesh(UnityEngine.UI.VertexHelper):	Method Body (x86 ASM):
+		0x180A42F40 mov [rsp+18h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 24 | None ||| N/A | N/A
+		0x180A42F45 mov [rsp+20h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 32 | None ||| N/A | N/A
+		0x180A42F4A push rbp		; DEBUG: {Register}/RBP {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A42F4B lea rbp,[rsp-30h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 18446744073709551568 | None ||| N/A | N/A
+		0x180A42F50 sub rsp,130h		; DEBUG: {Register}/RSP {Immediate32to64}/None ||| None | 0 | None ||| N/A | 304
+		0x180A42F57 mov rbx,rdx		; DEBUG: {Register}/RBX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A42F5A mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A42F5D mov rdx,[rcx]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180A42F60 mov rax,[rdx+1C8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 456 | None ||| N/A | N/A
+		0x180A42F67 mov rdx,[rdx+1D0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 464 | None ||| N/A | N/A
+		0x180A42F6E call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A42F70 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A42F72 je near ptr 0000000180A43159h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A42F78 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A42F7B je near ptr 0000000180A4316Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A42F81 cmp byte ptr [1832AC0F9h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584505 | None ||| N/A | 0
+		0x180A42F88 jne short 0000000180A42F9Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A42F8A lea rcx,[18310EE20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493892128 | None ||| N/A | N/A
+		0x180A42F91 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A42F96 mov byte ptr [1832AC0F9h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584505 | None ||| N/A | 1
+		0x180A42F9D cmp qword ptr [rbx+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RBX | 16 | None ||| N/A | 0
+		0x180A42FA2 mov [rsp+140h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 320 | None ||| N/A | N/A
+		0x180A42FAA je short 0000000180A42FB5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A42FAC mov rax,[rbx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x180A42FB0 mov esi,[rax+18h]		; DEBUG: {Register}/ESI {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x180A42FB3 jmp short 0000000180A42FB7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A42FB5 xor esi,esi		; DEBUG: {Register}/ESI {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A42FB7 mov rdx,[rdi]		; DEBUG: {Register}/RDX {Memory}/None ||| RDI | 0 | None ||| N/A | N/A
+		0x180A42FBA mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A42FBD mov rax,[rdx+1C8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 456 | None ||| N/A | N/A
+		0x180A42FC4 mov rdx,[rdx+1D0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 464 | None ||| N/A | N/A
+		0x180A42FCB call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A42FCD test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A42FCF je near ptr 0000000180A43151h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A42FD5 test esi,esi		; DEBUG: {Register}/ESI {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A42FD7 je near ptr 0000000180A43151h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A42FDD mov [rsp+148h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 328 | None ||| N/A | N/A
+		0x180A42FE5 movaps [rsp+100h],xmm8		; DEBUG: {Memory}/None {Register}/XMM8 ||| RSP | 256 | None ||| N/A | N/A
+		0x180A42FEE movss xmm8,dword ptr [182E6F760h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RIP | 6491141984 | None ||| N/A | N/A
+		0x180A42FF7 xor r14d,r14d		; DEBUG: {Register}/R14D {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x180A42FFA movaps [rsp+120h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 288 | None ||| N/A | N/A
+		0x180A43002 xor esi,esi		; DEBUG: {Register}/ESI {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A43004 movaps [rsp+110h],xmm7		; DEBUG: {Memory}/None {Register}/XMM7 ||| RSP | 272 | None ||| N/A | N/A
+		0x180A4300C nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A43010 cmp byte ptr [1832AC0F9h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584505 | None ||| N/A | 0
+		0x180A43017 jne short 0000000180A4302Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43019 lea rcx,[18310EE20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493892128 | None ||| N/A | N/A
+		0x180A43020 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43025 mov byte ptr [1832AC0F9h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584505 | None ||| N/A | 1
+		0x180A4302C cmp qword ptr [rbx+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RBX | 16 | None ||| N/A | 0
+		0x180A43031 je short 0000000180A4303Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43033 mov rax,[rbx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x180A43037 mov ecx,[rax+18h]		; DEBUG: {Register}/ECX {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x180A4303A jmp short 0000000180A4303Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4303C xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180A4303E cmp esi,ecx		; DEBUG: {Register}/ESI {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180A43040 jge near ptr 0000000180A43130h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43046 xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A43049 lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4304E xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43050 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180A43053 mov r8d,r14d		; DEBUG: {Register}/R8D {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x180A43056 mov [rbp-80h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBP | 18446744073709551488 | None ||| N/A | N/A
+		0x180A4305A mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A4305D mov [rbp-78h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBP | 18446744073709551496 | None ||| N/A | N/A
+		0x180A43060 movups [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A43065 movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A4306A movups [rsp+40h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 64 | None ||| N/A | N/A
+		0x180A4306F movups [rsp+50h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 80 | None ||| N/A | N/A
+		0x180A43074 movups [rsp+60h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 96 | None ||| N/A | N/A
+		0x180A43079 movups [rsp+70h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 112 | None ||| N/A | N/A
+		0x180A4307E call 00000001825C28C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43083 movss xmm6,dword ptr [rsp+20h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180A43089 movaps xmm0,xmm6		; DEBUG: {Register}/XMM0 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A4308C divss xmm0,dword ptr [rdi+28h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDI | 40 | None ||| N/A | N/A
+		0x180A43091 call 000000018036F4B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43096 divss xmm6,dword ptr [rdi+28h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RDI | 40 | None ||| N/A | N/A
+		0x180A4309B movss xmm1,dword ptr [rdi+28h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RDI | 40 | None ||| N/A | N/A
+		0x180A430A0 movaps xmm7,xmm0		; DEBUG: {Register}/XMM7 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A430A3 xorps xmm1,xmm8		; DEBUG: {Register}/XMM1 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A430A7 movaps xmm0,xmm6		; DEBUG: {Register}/XMM0 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A430AA mulss xmm7,xmm1		; DEBUG: {Register}/XMM7 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A430AE call 0000000180371CC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A430B3 mulss xmm0,dword ptr [rdi+28h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDI | 40 | None ||| N/A | N/A
+		0x180A430B8 lea rdx,[rbp-70h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBP | 18446744073709551504 | None ||| N/A | N/A
+		0x180A430BC xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180A430BF mov eax,[rbp-78h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBP | 18446744073709551496 | None ||| N/A | N/A
+		0x180A430C2 movaps xmm1,[rsp+20h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180A430C7 mov r8d,r14d		; DEBUG: {Register}/R8D {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x180A430CA shufps xmm1,xmm1,0D2h		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A430CE mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A430D1 movss xmm1,xmm7		; DEBUG: {Register}/XMM1 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A430D5 mov [rbp-8],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBP | 18446744073709551608 | None ||| N/A | N/A
+		0x180A430D8 shufps xmm1,xmm1,0C9h		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A430DC movss xmm1,xmm0		; DEBUG: {Register}/XMM1 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A430E0 movaps xmm0,[rsp+30h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A430E5 movaps [rsp+20h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A430EA movaps [rbp-70h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551504 | None ||| N/A | N/A
+		0x180A430EE movaps xmm1,[rsp+40h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x180A430F3 movaps [rbp-50h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551536 | None ||| N/A | N/A
+		0x180A430F7 movaps xmm1,[rsp+60h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x180A430FC movaps [rbp-60h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551520 | None ||| N/A | N/A
+		0x180A43100 movaps xmm0,[rsp+50h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x180A43105 movaps [rbp-30h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551568 | None ||| N/A | N/A
+		0x180A43109 movsd xmm1,qword ptr [rbp-80h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBP | 18446744073709551488 | None ||| N/A | N/A
+		0x180A4310E movaps [rbp-40h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551552 | None ||| N/A | N/A
+		0x180A43112 movaps xmm0,[rsp+70h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x180A43117 movsd qword ptr [rbp-10h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551600 | None ||| N/A | N/A
+		0x180A4311C movaps [rbp-20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551584 | None ||| N/A | N/A
+		0x180A43120 call 00000001825C2B00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43125 inc r14d		; DEBUG: {Register}/R14D {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43128 mov esi,r14d		; DEBUG: {Register}/ESI {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x180A4312B jmp near ptr 0000000180A43010h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43130 movaps xmm7,[rsp+110h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RSP | 272 | None ||| N/A | N/A
+		0x180A43138 movaps xmm6,[rsp+120h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 288 | None ||| N/A | N/A
+		0x180A43140 mov r14,[rsp+148h]		; DEBUG: {Register}/R14 {Memory}/None ||| RSP | 328 | None ||| N/A | N/A
+		0x180A43148 movaps xmm8,[rsp+100h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RSP | 256 | None ||| N/A | N/A
+		0x180A43151 mov rsi,[rsp+140h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 320 | None ||| N/A | N/A
+		0x180A43159 lea r11,[rsp+130h]		; DEBUG: {Register}/R11 {Memory}/None ||| RSP | 304 | None ||| N/A | N/A
+		0x180A43161 mov rbx,[r11+20h]		; DEBUG: {Register}/RBX {Memory}/None ||| R11 | 32 | None ||| N/A | N/A
+		0x180A43165 mov rdi,[r11+28h]		; DEBUG: {Register}/RDI {Memory}/None ||| R11 | 40 | None ||| N/A | N/A
+		0x180A43169 mov rsp,r11		; DEBUG: {Register}/RSP {Register}/R11 ||| None | 0 | None ||| N/A | N/A
+		0x180A4316C pop rbp		; DEBUG: {Register}/RBP {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4316D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4316E call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43173 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.CylinderText::ModifyMesh(UnityEngine.UI.VertexHelper):
+		End of function at 0x180A43174
+		Absolute End is at 0x180A43174
+		Identified Jump Destination addresses:
+			0x180A42FB7
+			0x180A4303E
+		0x180A42F4A: Saves the content of rbp to the stack
+		0x180A42F4B: Loads a pointer to stack offset 0xFFFFFFD0 into register rbp as new constant constant1
+		0x180A42F57: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rdx into rbx
+		0x180A42F5A: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.CylinderText)} from rcx into rdi
+		0x180A42F5D: Loads the class pointer from this into a constant constant2 in register rdx
+		0x180A42F60: Loads the pointer to the implementation of virtual function System.Boolean UnityEngine.EventSystems.UIBehaviour::IsActive() specific to UnityEngine.UI.Extensions.CylinderText from the class pointer in rdx, slot 9 (from memory offset 456) and stores in constant constant3
+		0x180A42F67: Loads the pointer to the implementation of virtual function System.Boolean UnityEngine.EventSystems.UIBehaviour::IsActive() specific to UnityEngine.UI.Extensions.CylinderText from the class pointer in rdx, slot 9 (from memory offset 464) and stores in constant constant4
+		0x180A42F6E: [!] Calls managed method System.Boolean UnityEngine.EventSystems.UIBehaviour::IsActive() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.CylinderText)} and stores the result in {'isActive' (type System.Boolean)}
+
+		0x180A42F70: [!] Compares {'isActive' (type System.Boolean)} and False
+		0x180A42F72: Jumps to 0x180A43159 (which is an if statement's body) if isActive equals False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A42F78: [!] Compares {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and 0
+		0x180A42F7B: Jumps to 0x180A4316E (which throws a NRE) if vh equals 0. Implicitly present in managed code, so ignored here.
+		0x180A42F81: Compares {Unknown Global at 0x1832AC0F9, first ten bytes are [90 16 0 87 90 16 0 144 104 234], or as chars "Z WZ hê"} and 0
+		0x180A42F88: Jumps to 0x180A42F9D if {Unknown Global at 0x1832AC0F9, first ten bytes are [90 16 0 87 90 16 0 144 104 234], or as chars "Z WZ hê"} != 0
+
+		0x180A42F8A: Loads the global generic method reference for method System.Int32 System.Collections.Generic.List`1::get_Count() on type System.Collections.Generic.List`1<UnityEngine.Vector3> and stores the result in constant {'get_Count' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180A42F91: Initializes runtime metadata value 
+		0x180A42F9D: [!] Compares {field m_Positions, read from local {'vh' (function parameter, type UnityEngine.UI.VertexHelper)}} and 0
+		0x180A42FAA: Jumps to 0x180A42FB5 if vh.m_Positions equals 0 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180A42FAC: [!] Reads field m_Positions from {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and stores in a new local {'m_Positions' (type System.Collections.Generic.List`1<UnityEngine.Vector3>)}
+
+		0x180A42FB3: Jumps to 0x180A42FB7 (which is an function-local jump destination)
+
+		0x180A42FB5: Clears register rsi, yielding zero-local {'local5' (type System.Int32)}
+
+		End Of If-Else Block (at 0x180A42FB7) where the else started at 0x180A42FB5
+		0x180A42FB7: Loads the class pointer from this into a constant constant11 in register rdx
+		0x180A42FBA: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.CylinderText)} from rdi into rcx
+		0x180A42FBD: Loads the pointer to the implementation of virtual function System.Boolean UnityEngine.EventSystems.UIBehaviour::IsActive() specific to UnityEngine.UI.Extensions.CylinderText from the class pointer in rdx, slot 9 (from memory offset 456) and stores in constant constant12
+		0x180A42FC4: Loads the pointer to the implementation of virtual function System.Boolean UnityEngine.EventSystems.UIBehaviour::IsActive() specific to UnityEngine.UI.Extensions.CylinderText from the class pointer in rdx, slot 9 (from memory offset 464) and stores in constant constant13
+		0x180A42FCB: [!] Calls managed method System.Boolean UnityEngine.EventSystems.UIBehaviour::IsActive() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.CylinderText)} and stores the result in {'isActive2' (type System.Boolean)}
+
+		0x180A42FCD: [!] Compares {'isActive2' (type System.Boolean)} and False
+		0x180A42FCF: Jumps to 0x180A43151 if isActive2 equals False ;  - This is probably a goto, jumping to 0x180A43151 which is after end of current block @ 0x180A42FB7 (started at 0x180A42FB5)
+
+		0x180A42FD5: [!] Compares {'local5' (type System.Int32)} and 0
+		0x180A42FD7: Jumps to 0x180A43151 if local5 equals 0 ;  - This is probably a goto, jumping to 0x180A43151 which is after end of current block @ 0x180A42FB7 (started at 0x180A42FB5)
+
+		0x180A42FEE: Loads the type definition for managed field <PrivateImplementationDetails>/__StaticArrayInitTypeSize=20 <PrivateImplementationDetails>::0BE58D5E93C1A6814826A44EAF71D0C61037826DE16ACCFEA0EC7B52996D70FA as a constant "0BE58D5E93C1A6814826A44EAF71D0C61037826DE16ACCFEA0EC7B52996D70FA"
+		0x180A42FF7: Clears register r14, yielding zero-local {'local7' (type System.Int32)}
+		0x180A43002: Clears register rsi, yielding zero-local {'local8' (type System.Int32)}
+
+		Potential Loop Start (0x180A43010):
+		0x180A43010: Compares {Unknown Global at 0x1832AC0F9, first ten bytes are [90 16 0 87 90 16 0 144 104 234], or as chars "Z WZ hê"} and 0
+		0x180A43017: Jumps to 0x180A4302C if {Unknown Global at 0x1832AC0F9, first ten bytes are [90 16 0 87 90 16 0 144 104 234], or as chars "Z WZ hê"} != 0
+
+		0x180A43019: Loads the global generic method reference for method System.Int32 System.Collections.Generic.List`1::get_Count() on type System.Collections.Generic.List`1<UnityEngine.Vector3> and stores the result in constant {'get_Count' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180A43020: Initializes runtime metadata value 
+		0x180A4302C: [!] Compares {field m_Positions, read from local {'vh' (function parameter, type UnityEngine.UI.VertexHelper)}} and 0
+		0x180A43031: Jumps to 0x180A4303C if vh.m_Positions equals 0 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180A43033: [!] Reads field m_Positions from {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and stores in a new local {'m_Positions2' (type System.Collections.Generic.List`1<UnityEngine.Vector3>)}
+
+		0x180A4303A: Jumps to 0x180A4303E (which is an function-local jump destination)
+
+		0x180A4303C: Clears register rcx, yielding zero-local {'local11' (type System.Int32)}
+
+		End Of If-Else Block (at 0x180A4303E) where the else started at 0x180A4303C
+		0x180A4303E: [!] Compares {'local8' (type System.Int32)} and {'local11' (type System.Int32)}
+		0x180A43040: Jumps to 0x180A43130 if {'local8' (type System.Int32)} is greater than or equal to {'local11' (type System.Int32)} ;  - This is probably a goto, jumping to 0x180A43130 which is after end of current block @ 0x180A4303E (started at 0x180A4303C)
+
+		0x180A43046: Clears register xmm0, yielding zero-local {'local12' (type System.Int32)}
+		0x180A43049: Loads a pointer to stack offset 0x20 into register rdx as new constant constant21
+		0x180A43053: Copies {'local7' (type System.Int32)} from r14 into r8
+		0x180A4305A: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rbx into rcx
+		0x180A43060: Moves local12 (type System.Int32) from register xmm0 to the stack at offset 32 (0x20)
+		0x180A43065: Moves local12 (type System.Int32) from register xmm0 to the stack at offset 48 (0x30)
+		0x180A4306A: Moves local12 (type System.Int32) from register xmm0 to the stack at offset 64 (0x40)
+		0x180A4306F: Moves local12 (type System.Int32) from register xmm0 to the stack at offset 80 (0x50)
+		0x180A43074: Moves local12 (type System.Int32) from register xmm0 to the stack at offset 96 (0x60)
+		0x180A43079: Moves local12 (type System.Int32) from register xmm0 to the stack at offset 112 (0x70)
+		0x180A4307E: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::PopulateUIVertex(UnityEngine.UIVertex,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} with arguments [{'local12' (type System.Int32)}, {'local7' (type System.Int32)}]
+
+		0x180A43083: Reads local {'local12' (type System.Int32)} from stack offset 32 (0x20) into register xmm6
+		0x180A43089: Copies {'local12' (type System.Int32)} from xmm6 into xmm0
+		0x180A430A0: Copies {'local12' (type System.Int32)} from xmm0 into xmm7
+		0x180A430A7: Copies {'local12' (type System.Int32)} from xmm6 into xmm0
+		0x180A430B3: Multiplies {'local12' (type System.Int32)} by the field radius from {'this' (function parameter, type UnityEngine.UI.Extensions.CylinderText)}, and stores the result in new local {'local16' (type System.Single)} in register xmm0
+		0x180A430C2: Reads local {'local12' (type System.Int32)} from stack offset 32 (0x20) into register xmm1
+		0x180A430C7: Copies {'local7' (type System.Int32)} from r14 into r8
+		0x180A430CE: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rbx into rcx
+		0x180A430D1: Copies {'local12' (type System.Int32)} from xmm7 into xmm1
+		0x180A430DC: Copies {'local16' (type System.Single)} from xmm0 into xmm1
+		0x180A430E0: Reads local {'local12' (type System.Int32)} from stack offset 48 (0x30) into register xmm0
+		0x180A430E5: Moves local16 (type System.Single) from register xmm1 to the stack at offset 32 (0x20)
+		0x180A430EE: Reads local {'local12' (type System.Int32)} from stack offset 64 (0x40) into register xmm1
+		0x180A430F7: Reads local {'local12' (type System.Int32)} from stack offset 96 (0x60) into register xmm1
+		0x180A43100: Reads local {'local12' (type System.Int32)} from stack offset 80 (0x50) into register xmm0
+		0x180A43112: Reads local {'local12' (type System.Int32)} from stack offset 112 (0x70) into register xmm0
+		0x180A43120: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::SetUIVertex(UnityEngine.UIVertex,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A43125: [!] Adds 1 to the value {'local7' (type System.Int32)}, stored in r14
+		0x180A43128: Copies {'local7' (type System.Int32)} from r14 into rsi
+		0x180A4312B: Jumps to 0x180A43010 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x180A43130: Reads unknown value in stack, offset 272 (0x110) and stores the pointer in register xmm7 as new constant constant22
+		0x180A43138: Reads unknown value in stack, offset 288 (0x120) and stores the pointer in register xmm6 as new constant constant23
+		0x180A43140: Reads unknown value in stack, offset 328 (0x148) and stores the pointer in register r14 as new constant constant24
+		0x180A43148: Reads unknown value in stack, offset 256 (0x100) and stores the pointer in register xmm8 as new constant constant25
+		0x180A43151: Reads unknown value in stack, offset 320 (0x140) and stores the pointer in register rsi as new constant constant26
+		0x180A43159: Loads a pointer to stack offset 0x130 into register r11 as new constant constant27
+		0x180A43169: Copies {'constant27' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r11 into rsp
+		0x180A4316D: [!] Returns from the function
+
+		0x180A4316E: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.CylinderText
+	System.Void ModifyMesh(UnityEngine.UI.VertexHelper vh)
+
+		System.Boolean isActive = this.IsActive()
+
+		if (isActive != False)
+
+		    if (vh.m_Positions != 0)
+		        System.Collections.Generic.List`1<UnityEngine.Vector3> m_Positions = vh.m_Positions
+		    else
+		        ulong local5 = 0
+		    endif
+            
+
+		    System.Boolean isActive2 = this.IsActive()
+
+		    if (isActive2 == False)
+                goto INSN_180A43151
+            endif
+
+		    if (local5 == 0)
+                goto INSN_180A43151
+            endif
+		    ulong local7 = 0
+		    ulong local8 = 0
+
+		    if (vh.m_Positions != 0)
+		        System.Collections.Generic.List`1<UnityEngine.Vector3> m_Positions2 = vh.m_Positions
+		    else
+		        ulong local11 = 0
+		    endif
+            
+
+		    if (local8 >= local11)
+                goto INSN_180A43130
+            endif
+		    ulong local12 = 0
+
+		    vh.PopulateUIVertex(local12, local7) //(UIVertex vertex, Int32 i)
+		    System.Single local16 = local12 * this.radius
+
+		    vh.SetUIVertex()
+		    local7 += 1
+		endwhile
+        
+		goto INSN_180A4302C
+        
+
+		INSN_180A43151:
+		endif
+    
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionAction at (0x180A43120) is corrupt (Couldn't get arguments, or actual count (-1) is not equal to expected count (2)) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.Extensions.CylinderText::.ctor():	Method Body (x86 ASM):
+		0x18037A630 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A634 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x18037A63B jne short 000000018037A650h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A63D lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A644 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A649 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x18037A650 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A657 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18037A65E jne short 000000018037A669h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A660 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A664 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A669 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A66D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18037A66E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.CylinderText::.ctor():
+		End of function at 0x18037A66F
+		Absolute End is at 0x18037A66F
+		Identified Jump Destination addresses:
+
+		0x18037A634: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x18037A63B: Jumps to 0x18037A650 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x18037A63D: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A644: Initializes runtime metadata value UnityEngine.Object
+		0x18037A650: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A657: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18037A65E: Jumps to 0x18037A669 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18037A66D: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.CylinderText
+	System.Void .ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ret
+	
+

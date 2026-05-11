@@ -1,0 +1,483 @@
+Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+		UnityEngine.EventSystems.IBeginDragHandler
+		UnityEngine.EventSystems.IEventSystemHandler
+		UnityEngine.EventSystems.IEndDragHandler
+
+	Nested Types:
+		UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/StartMovementEvent
+		UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/CurrentItemChangeEvent
+		UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/FoundItemToSnapToEvent
+		UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/SnappedToItemEvent
+		UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/MoveInfo
+		UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/<LerpToContent>d__71
+		UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/<SlideAndLerp>d__70
+
+	Field: ignoreInactiveItems
+		Type: System.Boolean
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: startInfo
+		Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/MoveInfo
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Field: prevButton
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: nextButton
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: pagination
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: snappingVelocityThreshold
+		Type: System.Int32
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: jumpToItem
+		Type: System.Boolean
+		Offset in Defining Type: 0x54
+		Has Default: False
+
+	Field: lerpTime
+		Type: System.Single
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: m_StartMovementEvent
+		Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/StartMovementEvent
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: m_CurrentItemChangeEvent
+		Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/CurrentItemChangeEvent
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: m_FoundItemToSnapToEvent
+		Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/FoundItemToSnapToEvent
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: m_SnappedToItemEvent
+		Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/SnappedToItemEvent
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: scrollRect
+		Type: UnityEngine.UI.ScrollRect
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: scrollRectTransform
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: contentTransform
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: contentPositions
+		Type: System.Collections.Generic.List`1<UnityEngine.Vector3>
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: lerpTarget
+		Type: UnityEngine.Vector3
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: totalScrollableWidth
+		Type: System.Single
+		Offset in Defining Type: 0xAC
+		Has Default: False
+
+	Field: tracker
+		Type: UnityEngine.DrivenRectTransformTracker
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: mLerpTime
+		Type: System.Single
+		Offset in Defining Type: 0xB4
+		Has Default: False
+
+	Field: _closestItem
+		Type: System.Int32
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: mSliding
+		Type: System.Boolean
+		Offset in Defining Type: 0xBC
+		Has Default: False
+
+	Field: mLerping
+		Type: System.Boolean
+		Offset in Defining Type: 0xBD
+		Has Default: False
+
+	Method: get_MovementStarted:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/StartMovementEvent
+		File Offset 0x0063CCB0
+		Ram Offset 0x18063deb0
+		Virtual Method Slot: 65535
+
+	Method: set_MovementStarted:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004EB5D0
+		Ram Offset 0x1804ec7d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/StartMovementEvent
+			Default Value: 
+	Method: get_CurrentItemChanged:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/CurrentItemChangeEvent
+		File Offset 0x00530090
+		Ram Offset 0x180531290
+		Virtual Method Slot: 65535
+
+	Method: set_CurrentItemChanged:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00809650
+		Ram Offset 0x18080a850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/CurrentItemChangeEvent
+			Default Value: 
+	Method: get_ItemFoundToSnap:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/FoundItemToSnapToEvent
+		File Offset 0x0061D420
+		Ram Offset 0x18061e620
+		Virtual Method Slot: 65535
+
+	Method: set_ItemFoundToSnap:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005A8A70
+		Ram Offset 0x1805a9c70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/FoundItemToSnapToEvent
+			Default Value: 
+	Method: get_ItemSnappedTo:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/SnappedToItemEvent
+		File Offset 0x003933D0
+		Ram Offset 0x1803945d0
+		Virtual Method Slot: 65535
+
+	Method: set_ItemSnappedTo:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0061D3C0
+		Ram Offset 0x18061e5c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/SnappedToItemEvent
+			Default Value: 
+	Method: get_ContentIsHorizonalLayoutGroup:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00A58A20
+		Ram Offset 0x180a59c20
+		Virtual Method Slot: 65535
+
+	Method: get_Moving:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A58B10
+		Ram Offset 0x180a59d10
+		Virtual Method Slot: 65535
+
+	Method: get_Sliding:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A58B30
+		Ram Offset 0x180a59d30
+		Virtual Method Slot: 65535
+
+	Method: get_Lerping:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A58B40
+		Ram Offset 0x180a59d40
+		Virtual Method Slot: 65535
+
+	Method: get_ClosestItemIndex:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00A58B50
+		Ram Offset 0x180a59d50
+		Virtual Method Slot: 65535
+
+	Method: get_LerpTargetIndex:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00A58C50
+		Ram Offset 0x180a59e50
+		Virtual Method Slot: 65535
+
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A58CC0
+		Ram Offset 0x180a59ec0
+		Virtual Method Slot: 65535
+
+	Method: SetNewItems:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A59180
+		Ram Offset 0x180a5a380
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newItems
+			Type: System.Collections.Generic.List`1<UnityEngine.Transform>
+			Default Value: 
+	Method: get_IsScrollRectAvailable:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00A59710
+		Ram Offset 0x180a5a910
+		Virtual Method Slot: 65535
+
+	Method: OnDisable:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: SetupDrivenTransforms:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A598D0
+		Ram Offset 0x180a5aad0
+		Virtual Method Slot: 65535
+
+	Method: SetupSnapScroll:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A59B80
+		Ram Offset 0x180a5ad80
+		Virtual Method Slot: 65535
+
+	Method: SetupWithHorizontalLayoutGroup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A59BB0
+		Ram Offset 0x180a5adb0
+		Virtual Method Slot: 65535
+
+	Method: SetupWithCalculatedSpacing:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5A5C0
+		Ram Offset 0x180a5b7c0
+		Virtual Method Slot: 65535
+
+	Method: GoTo:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5AD10
+		Ram Offset 0x180a5bf10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: info
+			Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/MoveInfo
+			Default Value: 
+	Method: GoToChild:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5AEE0
+		Ram Offset 0x180a5c0e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: jump
+			Type: System.Boolean
+			Default Value: 
+	Method: GoToContentPos:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5B3B0
+		Ram Offset 0x180a5c5b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: jump
+			Type: System.Boolean
+			Default Value: 
+	Method: NextItem:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5B510
+		Ram Offset 0x180a5c710
+		Virtual Method Slot: 65535
+
+	Method: PreviousItem:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5B590
+		Ram Offset 0x180a5c790
+		Virtual Method Slot: 65535
+
+	Method: UpdateLayout:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5B610
+		Ram Offset 0x180a5c810
+		Virtual Method Slot: 65535
+
+	Method: UpdateLayoutAndMoveTo:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5B650
+		Ram Offset 0x180a5c850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: info
+			Type: UnityEngine.UI.Extensions.ContentScrollSnapHorizontal/MoveInfo
+			Default Value: 
+	Method: OnBeginDrag:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5B6B0
+		Ram Offset 0x180a5c8b0
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: ped
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnEndDrag:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5B730
+		Ram Offset 0x180a5c930
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: ped
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: Update:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5B7B0
+		Ram Offset 0x180a5c9b0
+		Virtual Method Slot: 65535
+
+	Method: SlideAndLerp:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00A5B860
+		Ram Offset 0x180a5ca60
+		Virtual Method Slot: 65535
+
+	Method: LerpToContent:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00A5B8F0
+		Ram Offset 0x180a5caf0
+		Virtual Method Slot: 65535
+
+	Method: StopMovement:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5B980
+		Ram Offset 0x180a5cb80
+		Virtual Method Slot: 65535
+
+	Method: ChangePaginationInfo:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5BAB0
+		Ram Offset 0x180a5ccb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: targetScreen
+			Type: System.Int32
+			Default Value: 
+	Method: DstFromTopLeftOfTransformToTopLeftOfParent:
+		Accessibility: Private
+		Return Type: UnityEngine.Vector2
+		File Offset 0x00A5BD40
+		Ram Offset 0x180a5cf40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rt
+			Type: UnityEngine.RectTransform
+			Default Value: 
+	Method: FindClosestFrom:
+		Accessibility: Private
+		Return Type: UnityEngine.Vector3
+		File Offset 0x00A5BF80
+		Ram Offset 0x180a5d180
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: start
+			Type: UnityEngine.Vector3
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5C280
+		Ram Offset 0x180a5d480
+		Virtual Method Slot: 65535
+
+	Method: <Awake>b__51_0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5B510
+		Ram Offset 0x180a5c710
+		Virtual Method Slot: 65535
+
+	Method: <Awake>b__51_1:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5B590
+		Ram Offset 0x180a5c790
+		Virtual Method Slot: 65535

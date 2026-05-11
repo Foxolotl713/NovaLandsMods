@@ -1,0 +1,50 @@
+Type: System.Threading.Tasks.CompletionActionInvoker:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.Threading.IThreadPoolWorkItem
+
+	Field: m_action
+		Type: System.Threading.Tasks.ITaskCompletionAction
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_completingTask
+		Type: System.Threading.Tasks.Task
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00387490
+		Ram Offset 0x180388690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: System.Threading.Tasks.ITaskCompletionAction
+			Default Value: 
+		Parameter 1:
+			Name: completingTask
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+	Method: System.Threading.IThreadPoolWorkItem.ExecuteWorkItem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01937330
+		Ram Offset 0x181938530
+		Virtual Method Slot: 4
+
+	Method: MarkAborted:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: e
+			Type: System.Threading.ThreadAbortException
+			Default Value: 

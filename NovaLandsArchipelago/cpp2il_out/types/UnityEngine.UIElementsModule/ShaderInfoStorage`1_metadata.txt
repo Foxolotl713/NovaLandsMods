@@ -1,0 +1,165 @@
+Type: UnityEngine.UIElements.UIR.ShaderInfoStorage`1:
+	Base Class: 
+		UnityEngine.UIElements.UIR.BaseShaderInfoStorage
+
+	Interfaces:
+
+	Field: m_InitialSize
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: m_MaxSize
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: m_Format
+		Type: UnityEngine.TextureFormat
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: m_Convert
+		Type: System.Func`2<UnityEngine.Color,T>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: m_Allocator
+		Type: UnityEngine.UIElements.UIRAtlasAllocator
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: m_Texture
+		Type: UnityEngine.Texture2D
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: m_Texels
+		Type: Unity.Collections.NativeArray`1<T>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01405D80
+		Ram Offset 0x181406f80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: format
+			Type: UnityEngine.TextureFormat
+			Default Value: 
+		Parameter 1:
+			Name: convert
+			Type: System.Func`2<UnityEngine.Color, T>
+			Default Value: 
+		Parameter 2:
+			Name: initialSize
+			Type: System.Int32
+			Default Value: 64
+		Parameter 3:
+			Name: maxSize
+			Type: System.Int32
+			Default Value: 4096
+	Method: Dispose:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01405F70
+		Ram Offset 0x181407170
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: get_texture:
+		Accessibility: Public
+		Return Type: UnityEngine.Texture2D
+		File Offset 0x004E1440
+		Ram Offset 0x1804e2640
+		Virtual Method Slot: 5
+
+	Method: AllocateRect:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x014060D0
+		Ram Offset 0x1814072d0
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: uvs
+			Type: UnityEngine.RectInt
+			Default Value: 
+	Method: SetTexel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01406270
+		Ram Offset 0x181407470
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: x
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: y
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: color
+			Type: UnityEngine.Color
+			Default Value: 
+	Method: UpdateTexture:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01406370
+		Ram Offset 0x181407570
+		Virtual Method Slot: 8
+
+	Method: CreateOrExpandTexture:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01406480
+		Ram Offset 0x181407680
+		Virtual Method Slot: 65535
+
+	Method: CpuBlit:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01406A10
+		Ram Offset 0x181407c10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: src
+			Type: Unity.Collections.NativeArray`1<T>
+			Default Value: 
+		Parameter 1:
+			Name: srcWidth
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: srcHeight
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: dst
+			Type: Unity.Collections.NativeArray`1<T>
+			Default Value: 
+		Parameter 4:
+			Name: dstWidth
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: dstHeight
+			Type: System.Int32
+			Default Value: 

@@ -1,0 +1,312 @@
+Type: BotSpeechBalloon:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Field: canvas
+		Type: UnityEngine.Canvas
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: bgRectTransform
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: expressionSprite
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: overlaySprite
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: expressionReferenceRectTransform
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: glyph
+		Type: CommandActionPair
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: expressionPairs
+		Type: System.Collections.Generic.List`1<BotExpressionPair>
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: expressionsPairsDict
+		Type: System.Collections.Generic.Dictionary`2<BotExpression,BotExpressionPair>
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: animator
+		Type: UnityEngine.Animator
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: currentExpression
+		Type: BotExpression
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: cachedExpression
+		Type: BotExpression
+		Offset in Defining Type: 0x6C
+		Has Default: False
+
+	Field: cachedSprite
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: cachedTimeToHide
+		Type: System.Single
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: showAgainOnHide
+		Type: System.Boolean
+		Offset in Defining Type: 0x7C
+		Has Default: False
+
+	Field: hiding
+		Type: System.Boolean
+		Offset in Defining Type: 0x7D
+		Has Default: False
+
+	Field: timeToHide
+		Type: System.Single
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: currentHideTime
+		Type: System.Single
+		Offset in Defining Type: 0x84
+		Has Default: False
+
+	Field: overlaySpriteGameObject
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: overlaySpriteTransform
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: cachedGameObject
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: animatorGameObject
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: hasCachedGameObject
+		Type: System.Boolean
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: onHideCallback
+		Type: System.Action
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: isParentVisible
+		Type: System.Boolean
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004D9610
+		Ram Offset 0x1804da810
+		Virtual Method Slot: 65535
+
+	Method: Init:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x004D99E0
+		Ram Offset 0x1804dabe0
+		Virtual Method Slot: 65535
+
+	Method: SetOnHideCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0049B190
+		Ram Offset 0x18049c390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: onHideCallback
+			Type: System.Action
+			Default Value: 
+	Method: SetIsParentVisible:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D9FD0
+		Ram Offset 0x1804db1d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: visible
+			Type: System.Boolean
+			Default Value: 
+	Method: Show:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004DA050
+		Ram Offset 0x1804db250
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: expression
+			Type: BotExpression
+			Default Value: 
+		Parameter 1:
+			Name: timeToHide
+			Type: System.Single
+			Default Value: -1
+		Parameter 2:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+	Method: Show:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004DA490
+		Ram Offset 0x1804db690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: expression
+			Type: BotExpression
+			Default Value: 
+		Parameter 1:
+			Name: extraSprite
+			Type: UnityEngine.Sprite
+			Default Value: 
+		Parameter 2:
+			Name: timeToHide
+			Type: System.Single
+			Default Value: -1
+		Parameter 3:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+	Method: UpdateIconRect:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004DA890
+		Ram Offset 0x1804dba90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: exp
+			Type: BotExpressionPair
+			Default Value: 
+	Method: Show:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004DAEF0
+		Ram Offset 0x1804dc0f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sprite
+			Type: UnityEngine.Sprite
+			Default Value: 
+		Parameter 1:
+			Name: timeToHide
+			Type: System.Single
+			Default Value: -1
+		Parameter 2:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+	Method: UpdateExpression:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004DB360
+		Ram Offset 0x1804dc560
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: expression
+			Type: BotExpression
+			Default Value: 
+		Parameter 1:
+			Name: extraSprite
+			Type: UnityEngine.Sprite
+			Default Value: 
+	Method: Update:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004DB3B0
+		Ram Offset 0x1804dc5b0
+		Virtual Method Slot: 65535
+
+	Method: UpdateHide:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004DB500
+		Ram Offset 0x1804dc700
+		Virtual Method Slot: 65535
+
+	Method: UpdateIconScale:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004DB5A0
+		Ram Offset 0x1804dc7a0
+		Virtual Method Slot: 65535
+
+	Method: Hide:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004DB980
+		Ram Offset 0x1804dcb80
+		Virtual Method Slot: 65535
+
+	Method: Hide:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004DBB30
+		Ram Offset 0x1804dcd30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: expression
+			Type: BotExpression
+			Default Value: 
+	Method: Deactivate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004DBB40
+		Ram Offset 0x1804dcd40
+		Virtual Method Slot: 65535
+
+	Method: EnableRenderers:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004DBD80
+		Ram Offset 0x1804dcf80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379430
+		Ram Offset 0x18037a630
+		Virtual Method Slot: 65535

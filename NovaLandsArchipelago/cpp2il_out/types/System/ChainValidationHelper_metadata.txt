@@ -1,0 +1,282 @@
+Type: Mono.Net.Security.ChainValidationHelper:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		Mono.Security.Interface.ICertificateValidator
+
+	Nested Types:
+		Mono.Net.Security.ChainValidationHelper/<>c__DisplayClass11_0
+
+	Field: owner
+		Type: System.WeakReference`1<System.Net.Security.SslStream>
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: settings
+		Type: Mono.Security.Interface.MonoTlsSettings
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: provider
+		Type: Mono.Net.Security.MobileTlsProvider
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: certValidationCallback
+		Type: System.Net.ServerCertValidationCallback
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: certSelectionCallback
+		Type: System.Net.Security.LocalCertSelectionCallback
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: tlsStream
+		Type: Mono.Net.Security.MonoTlsStream
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: request
+		Type: System.Net.HttpWebRequest
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Method: GetInternalValidator:
+		Accessibility: Assembly
+		Return Type: Mono.Net.Security.ChainValidationHelper
+		File Offset 0x01CC8CB0
+		Ram Offset 0x181cc9eb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: owner
+			Type: System.Net.Security.SslStream
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: Mono.Net.Security.MobileTlsProvider
+			Default Value: 
+		Parameter 2:
+			Name: settings
+			Type: Mono.Security.Interface.MonoTlsSettings
+			Default Value: 
+	Method: Create:
+		Accessibility: Assembly
+		Return Type: Mono.Net.Security.ChainValidationHelper
+		File Offset 0x01CC8DA0
+		Ram Offset 0x181cc9fa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: provider
+			Type: Mono.Net.Security.MobileTlsProvider
+			Default Value: 
+		Parameter 1:
+			Name: settings
+			Type: Mono.Security.Interface.MonoTlsSettings
+			Default Value: 
+		Parameter 2:
+			Name: stream
+			Type: Mono.Net.Security.MonoTlsStream
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01CC8E90
+		Ram Offset 0x181cca090
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: owner
+			Type: System.Net.Security.SslStream
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: Mono.Net.Security.MobileTlsProvider
+			Default Value: 
+		Parameter 2:
+			Name: settings
+			Type: Mono.Security.Interface.MonoTlsSettings
+			Default Value: 
+		Parameter 3:
+			Name: cloneSettings
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: stream
+			Type: Mono.Net.Security.MonoTlsStream
+			Default Value: 
+	Method: GetValidationCallback:
+		Accessibility: Private
+		Return Type: System.Net.ServerCertValidationCallback
+		File Offset 0x01CC96A0
+		Ram Offset 0x181cca8a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: settings
+			Type: Mono.Security.Interface.MonoTlsSettings
+			Default Value: 
+	Method: DefaultSelectionCallback:
+		Accessibility: Private
+		Return Type: System.Security.Cryptography.X509Certificates.X509Certificate
+		File Offset 0x01CC97D0
+		Ram Offset 0x181cca9d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: targetHost
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: localCertificates
+			Type: System.Security.Cryptography.X509Certificates.X509CertificateCollection
+			Default Value: 
+		Parameter 2:
+			Name: remoteCertificate
+			Type: System.Security.Cryptography.X509Certificates.X509Certificate
+			Default Value: 
+		Parameter 3:
+			Name: acceptableIssuers
+			Type: System.String[]
+			Default Value: 
+	Method: get_Settings:
+		Accessibility: Public
+		Return Type: Mono.Security.Interface.MonoTlsSettings
+		File Offset 0x00379690
+		Ram Offset 0x18037a890
+		Virtual Method Slot: 4
+
+	Method: SelectClientCertificate:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01CC9820
+		Ram Offset 0x181ccaa20
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: targetHost
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: localCertificates
+			Type: System.Security.Cryptography.X509Certificates.X509CertificateCollection
+			Default Value: 
+		Parameter 2:
+			Name: remoteCertificate
+			Type: System.Security.Cryptography.X509Certificates.X509Certificate
+			Default Value: 
+		Parameter 3:
+			Name: acceptableIssuers
+			Type: System.String[]
+			Default Value: 
+		Parameter 4:
+			Name: clientCertificate
+			Type: System.Security.Cryptography.X509Certificates.X509Certificate
+			Default Value: 
+	Method: ValidateCertificate:
+		Accessibility: Public
+		Return Type: Mono.Security.Interface.ValidationResult
+		File Offset 0x01CC9910
+		Ram Offset 0x181ccab10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: host
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: serverMode
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: leaf
+			Type: System.Security.Cryptography.X509Certificates.X509Certificate
+			Default Value: 
+		Parameter 3:
+			Name: chain
+			Type: System.Security.Cryptography.X509Certificates.X509Chain
+			Default Value: 
+	Method: ValidateChain:
+		Accessibility: Private
+		Return Type: Mono.Security.Interface.ValidationResult
+		File Offset 0x01CC99B0
+		Ram Offset 0x181ccabb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: host
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: server
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: leaf
+			Type: System.Security.Cryptography.X509Certificates.X509Certificate
+			Default Value: 
+		Parameter 3:
+			Name: chain
+			Type: System.Security.Cryptography.X509Certificates.X509Chain
+			Default Value: 
+		Parameter 4:
+			Name: certs
+			Type: System.Security.Cryptography.X509Certificates.X509CertificateCollection
+			Default Value: 
+		Parameter 5:
+			Name: errors
+			Type: System.Net.Security.SslPolicyErrors
+			Default Value: 
+	Method: ValidateChain:
+		Accessibility: Private
+		Return Type: Mono.Security.Interface.ValidationResult
+		File Offset 0x01CC9A90
+		Ram Offset 0x181ccac90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: host
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: server
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: leaf
+			Type: System.Security.Cryptography.X509Certificates.X509Certificate
+			Default Value: 
+		Parameter 3:
+			Name: chain
+			Type: System.Security.Cryptography.X509Certificates.X509Chain
+			Default Value: 
+		Parameter 4:
+			Name: certs
+			Type: System.Security.Cryptography.X509Certificates.X509CertificateCollection
+			Default Value: 
+		Parameter 5:
+			Name: errors
+			Type: System.Net.Security.SslPolicyErrors
+			Default Value: 
+	Method: InvokeCallback:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01CC9FB0
+		Ram Offset 0x181ccb1b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: leaf
+			Type: System.Security.Cryptography.X509Certificates.X509Certificate
+			Default Value: 
+		Parameter 1:
+			Name: chain
+			Type: System.Security.Cryptography.X509Certificates.X509Chain
+			Default Value: 
+		Parameter 2:
+			Name: errors
+			Type: System.Net.Security.SslPolicyErrors
+			Default Value: 

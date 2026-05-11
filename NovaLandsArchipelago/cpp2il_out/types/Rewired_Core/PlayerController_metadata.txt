@@ -1,0 +1,401 @@
+Type: Rewired.Components.PlayerController:
+	Base Class: 
+		Rewired.Components.ComponentWrapper`1<Rewired.PlayerController>
+
+	Interfaces:
+		Rewired.IPlayerController
+
+	Nested Types:
+		Rewired.Components.PlayerController/ButtonStateChangedHandler
+		Rewired.Components.PlayerController/AxisValueChangedHandler
+		Rewired.Components.PlayerController/EnabledStateChangedHandler
+		Rewired.Components.PlayerController/ElementWithSourceInfo
+		Rewired.Components.PlayerController/ElementInfo
+
+	Field: _rewiredInputManager
+		Type: Rewired.InputManager_Base
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _playerId
+		Type: System.Int32
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _elements
+		Type: System.Collections.Generic.List`1<Rewired.Components.PlayerController/ElementInfo>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: _onButtonStateChanged
+		Type: Rewired.Components.PlayerController/ButtonStateChangedHandler
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: _onAxisValueChanged
+		Type: Rewired.Components.PlayerController/AxisValueChangedHandler
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: _onEnabledStateChanged
+		Type: Rewired.Components.PlayerController/EnabledStateChangedHandler
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Method: get_playerId:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01A58B90
+		Ram Offset 0x181a59d90
+		Virtual Method Slot: 22
+
+	Method: set_playerId:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A58BF0
+		Ram Offset 0x181a59df0
+		Virtual Method Slot: 23
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_buttons:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.IList`1<Rewired.PlayerController/Button>
+		File Offset 0x01A58D50
+		Ram Offset 0x181a59f50
+		Virtual Method Slot: 24
+
+	Method: get_axes:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.IList`1<Rewired.PlayerController/Axis>
+		File Offset 0x01A58DC0
+		Ram Offset 0x181a59fc0
+		Virtual Method Slot: 25
+
+	Method: get_elements:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.IList`1<Rewired.PlayerController/Element>
+		File Offset 0x01A58E30
+		Ram Offset 0x181a5a030
+		Virtual Method Slot: 26
+
+	Method: get_buttonCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01A58EA0
+		Ram Offset 0x181a5a0a0
+		Virtual Method Slot: 27
+
+	Method: get_axisCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01A58F80
+		Ram Offset 0x181a5a180
+		Virtual Method Slot: 28
+
+	Method: get_elementCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01A59060
+		Ram Offset 0x181a5a260
+		Virtual Method Slot: 29
+
+	Method: add_ButtonStateChangedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A590C0
+		Ram Offset 0x181a5a2c0
+		Virtual Method Slot: 30
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`2<System.Int32, System.Boolean>
+			Default Value: 
+	Method: remove_ButtonStateChangedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A59130
+		Ram Offset 0x181a5a330
+		Virtual Method Slot: 31
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`2<System.Int32, System.Boolean>
+			Default Value: 
+	Method: add_AxisValueChangedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A591A0
+		Ram Offset 0x181a5a3a0
+		Virtual Method Slot: 32
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`2<System.Int32, System.Single>
+			Default Value: 
+	Method: remove_AxisValueChangedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A59210
+		Ram Offset 0x181a5a410
+		Virtual Method Slot: 33
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`2<System.Int32, System.Single>
+			Default Value: 
+	Method: add_EnabledStateChangedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A59280
+		Ram Offset 0x181a5a480
+		Virtual Method Slot: 34
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`1<System.Boolean>
+			Default Value: 
+	Method: remove_EnabledStateChangedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A592F0
+		Ram Offset 0x181a5a4f0
+		Virtual Method Slot: 35
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`1<System.Boolean>
+			Default Value: 
+	Method: GetButton:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01A59360
+		Ram Offset 0x181a5a560
+		Virtual Method Slot: 36
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: GetButtonDown:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01A593D0
+		Ram Offset 0x181a5a5d0
+		Virtual Method Slot: 37
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: GetButtonUp:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01A59440
+		Ram Offset 0x181a5a640
+		Virtual Method Slot: 38
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: GetAxis:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x01A594B0
+		Ram Offset 0x181a5a6b0
+		Virtual Method Slot: 39
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: GetAxisRaw:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x01A595D0
+		Ram Offset 0x181a5a7d0
+		Virtual Method Slot: 40
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: GetElement:
+		Accessibility: Public
+		Return Type: Rewired.PlayerController/Element
+		File Offset 0x01A596F0
+		Ram Offset 0x181a5a8f0
+		Virtual Method Slot: 41
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: GetElement:
+		Accessibility: Public
+		Return Type: T
+		File Offset 0x00D87F30
+		Ram Offset 0x180d89130
+		Virtual Method Slot: 42
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: OnAwake:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01A59760
+		Ram Offset 0x181a5a960
+		Virtual Method Slot: 4
+
+	Method: OnAwakeFinished:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01A59840
+		Ram Offset 0x181a5aa40
+		Virtual Method Slot: 5
+
+	Method: OnEnabled:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01A59890
+		Ram Offset 0x181a5aa90
+		Virtual Method Slot: 7
+
+	Method: OnDisabled:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01A59930
+		Ram Offset 0x181a5ab30
+		Virtual Method Slot: 8
+
+	Method: OnValidated:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01A599D0
+		Ram Offset 0x181a5abd0
+		Virtual Method Slot: 11
+
+	Method: OnReset:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01A59B90
+		Ram Offset 0x181a5ad90
+		Virtual Method Slot: 10
+
+	Method: Subscribe:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01A59E50
+		Ram Offset 0x181a5b050
+		Virtual Method Slot: 18
+
+	Method: Unsubscribe:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01A5A030
+		Ram Offset 0x181a5b230
+		Virtual Method Slot: 19
+
+	Method: GetCreateSourceArgs:
+		Accessibility: Family
+		Return Type: System.Object
+		File Offset 0x0051A3F0
+		Ram Offset 0x18051b5f0
+		Virtual Method Slot: 15
+
+	Method: CreateSource:
+		Accessibility: Family
+		Return Type: Rewired.PlayerController
+		File Offset 0x01A5A200
+		Ram Offset 0x181a5b400
+		Virtual Method Slot: 14
+
+		Parameter 0:
+			Name: args
+			Type: System.Object
+			Default Value: 
+	Method: fmfUTyUxfsvALaCjsFYziYsILqmR:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.List`1<Rewired.Components.PlayerController/ElementInfo>
+		File Offset 0x01A5A5C0
+		Ram Offset 0x181a5b7c0
+		Virtual Method Slot: 43
+
+	Method: nnOLOueCSyMkaHJmaoyhPFUEsqVe:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A5ADA0
+		Ram Offset 0x181a5bfa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: System.Boolean
+			Default Value: 
+	Method: MTpPjvyOfUdYtRiPIdwGlaGxCtem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A5AEB0
+		Ram Offset 0x181a5c0b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: System.Single
+			Default Value: 
+	Method: xxdgDZjKAXfRQRCbFmQQIdPzKMtk:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A5AFC0
+		Ram Offset 0x181a5c1c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Boolean
+			Default Value: 
+	Method: pZncGcWlGKMSiAcQssDYRNweZeGo:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A5B070
+		Ram Offset 0x181a5c270
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01A5B110
+		Ram Offset 0x181a5c310
+		Virtual Method Slot: 65535
+
+	Method: Rewired.IPlayerController.get_enabled:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01A5B3A0
+		Ram Offset 0x181a5c5a0
+		Virtual Method Slot: 20
+
+	Method: Rewired.IPlayerController.set_enabled:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A5B3F0
+		Ram Offset 0x181a5c5f0
+		Virtual Method Slot: 21
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 

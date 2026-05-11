@@ -1,0 +1,245 @@
+Type: CreatureRaceMinigameController:
+	Base Class: 
+		MuttAI.BaseGameEntity
+
+	Interfaces:
+
+	Nested Types:
+		CreatureRaceMinigameController/RaceMinigamePreCountdownState
+		CreatureRaceMinigameController/RaceMinigameCountdownState
+		CreatureRaceMinigameController/RaceMinigameRunningState
+		CreatureRaceMinigameController/RaceMinigameFinishedState
+		CreatureRaceMinigameController/<>c
+
+	Field: creaturesSpawnPositions
+		Type: System.Collections.Generic.List`1<UnityEngine.Transform>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: audioListener
+		Type: FMODUnity.StudioListener
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: timeToStartCountdown
+		Type: System.Single
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: countdownDuration
+		Type: System.Single
+		Offset in Defining Type: 0x54
+		Has Default: False
+
+	Field: delayToStopMinigameAfterPlayerCreatureFinish
+		Type: System.Single
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: delayToEnableLeaveInputAfterFinishMinigame
+		Type: System.Single
+		Offset in Defining Type: 0x5C
+		Has Default: False
+
+	Field: staminaBar
+		Type: HealthBarUI
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: instructionsString
+		Type: System.String
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: instructionsKeyColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: countdownLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: goString
+		Type: System.String
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: goLabelDuration
+		Type: System.Single
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: instructionsLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: firstPlaceIcon
+		Type: CreatureRacePositionIcon
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: secondPlaceIcon
+		Type: CreatureRacePositionIcon
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: thirdPlaceIcon
+		Type: CreatureRacePositionIcon
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: backButton
+		Type: CommandActionPair
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: playerCreatureType
+		Type: BaseEnemy
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: competitorsCreatureType
+		Type: BaseEnemy
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: player
+		Type: BasePlayer
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: playerCreature
+		Type: BaseEnemy
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: creatures
+		Type: System.Collections.Generic.List`1<BaseEnemy>
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: creaturesByPlace
+		Type: System.Collections.Generic.List`1<BaseEnemy>
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: lastInputWasController
+		Type: System.Boolean
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Method: OnEnable:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006AABB0
+		Ram Offset 0x1806abdb0
+		Virtual Method Slot: 65535
+
+	Method: UpdateInstructions:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006AB0B0
+		Ram Offset 0x1806ac2b0
+		Virtual Method Slot: 65535
+
+	Method: SpawnCreatures:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006ABD50
+		Ram Offset 0x1806acf50
+		Virtual Method Slot: 65535
+
+	Method: FocusPlayerCreature:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006AC420
+		Ram Offset 0x1806ad620
+		Virtual Method Slot: 65535
+
+	Method: StartRace:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006AC460
+		Ram Offset 0x1806ad660
+		Virtual Method Slot: 65535
+
+	Method: HideGoLabel:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006AC860
+		Ram Offset 0x1806ada60
+		Virtual Method Slot: 65535
+
+	Method: UpdateRace:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006AC910
+		Ram Offset 0x1806adb10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: UpdateRacePositions:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006ACB10
+		Ram Offset 0x1806add10
+		Virtual Method Slot: 65535
+
+	Method: UpdateRaceInput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006ACF50
+		Ram Offset 0x1806ae150
+		Virtual Method Slot: 65535
+
+	Method: OnCharacterFinished:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006AD060
+		Ram Offset 0x1806ae260
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: collider
+			Type: UnityEngine.Collider2D
+			Default Value: 
+	Method: StartFinishMinigameFlow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006AD270
+		Ram Offset 0x1806ae470
+		Virtual Method Slot: 65535
+
+	Method: ShowRanking:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006AD2C0
+		Ram Offset 0x1806ae4c0
+		Virtual Method Slot: 65535
+
+	Method: LeaveMinigame:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006AD310
+		Ram Offset 0x1806ae510
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006AD900
+		Ram Offset 0x1806aeb00
+		Virtual Method Slot: 65535
+
+	Method: <LeaveMinigame>b__36_0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006AD9D0
+		Ram Offset 0x1806aebd0
+		Virtual Method Slot: 65535

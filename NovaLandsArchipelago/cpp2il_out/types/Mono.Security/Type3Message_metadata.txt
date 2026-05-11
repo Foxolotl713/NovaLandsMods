@@ -1,0 +1,149 @@
+Type: Mono.Security.Protocol.Ntlm.Type3Message:
+	Base Class: 
+		Mono.Security.Protocol.Ntlm.MessageBase
+
+	Interfaces:
+
+	Field: _level
+		Type: Mono.Security.Protocol.Ntlm.NtlmAuthLevel
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _challenge
+		Type: System.Byte[]
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _host
+		Type: System.String
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _domain
+		Type: System.String
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _username
+		Type: System.String
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _password
+		Type: System.String
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: _type2
+		Type: Mono.Security.Protocol.Ntlm.Type2Message
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: _lm
+		Type: System.Byte[]
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: _nt
+		Type: System.Byte[]
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01685200
+		Ram Offset 0x181686400
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type2
+			Type: Mono.Security.Protocol.Ntlm.Type2Message
+			Default Value: 
+	Method: Finalize:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01685590
+		Ram Offset 0x181686790
+		Virtual Method Slot: 1
+
+	Method: set_Domain:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01685630
+		Ram Offset 0x181686830
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: set_Password:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005399C0
+		Ram Offset 0x18053abc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: set_Username:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0068B340
+		Ram Offset 0x18068c540
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: Decode:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01685730
+		Ram Offset 0x181686930
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: message
+			Type: System.Byte[]
+			Default Value: 
+	Method: DecodeString:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x01685CC0
+		Ram Offset 0x181686ec0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: len
+			Type: System.Int32
+			Default Value: 
+	Method: EncodeString:
+		Accessibility: Private
+		Return Type: System.Byte[]
+		File Offset 0x01685D30
+		Ram Offset 0x181686f30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: text
+			Type: System.String
+			Default Value: 
+	Method: GetBytes:
+		Accessibility: Public
+		Return Type: System.Byte[]
+		File Offset 0x01685DC0
+		Ram Offset 0x181686fc0
+		Virtual Method Slot: 5

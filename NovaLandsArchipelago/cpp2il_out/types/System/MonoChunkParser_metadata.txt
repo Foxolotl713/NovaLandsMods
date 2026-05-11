@@ -1,0 +1,266 @@
+Type: System.Net.MonoChunkParser:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		System.Net.MonoChunkParser/State
+		System.Net.MonoChunkParser/Chunk
+
+	Field: headers
+		Type: System.Net.WebHeaderCollection
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: chunkSize
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: chunkRead
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: totalWritten
+		Type: System.Int32
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: state
+		Type: System.Net.MonoChunkParser/State
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Field: saved
+		Type: System.Text.StringBuilder
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: sawCR
+		Type: System.Boolean
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: gotit
+		Type: System.Boolean
+		Offset in Defining Type: 0x31
+		Has Default: False
+
+	Field: trailerState
+		Type: System.Int32
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Field: chunks
+		Type: System.Collections.ArrayList
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01F716E0
+		Ram Offset 0x181f728e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: headers
+			Type: System.Net.WebHeaderCollection
+			Default Value: 
+	Method: Read:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01F71880
+		Ram Offset 0x181f72a80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: ReadFromChunks:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01F71890
+		Ram Offset 0x181f72a90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: Write:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01F71BB0
+		Ram Offset 0x181f72db0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: InternalWrite:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F71BE0
+		Ram Offset 0x181f72de0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: get_WantMore:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01F71ED0
+		Ram Offset 0x181f730d0
+		Virtual Method Slot: 65535
+
+	Method: get_DataAvailable:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01F71EF0
+		Ram Offset 0x181f730f0
+		Virtual Method Slot: 65535
+
+	Method: get_ChunkLeft:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01F72000
+		Ram Offset 0x181f73200
+		Virtual Method Slot: 65535
+
+	Method: ReadBody:
+		Accessibility: Private
+		Return Type: System.Net.MonoChunkParser/State
+		File Offset 0x01F72010
+		Ram Offset 0x181f73210
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: GetChunkSize:
+		Accessibility: Private
+		Return Type: System.Net.MonoChunkParser/State
+		File Offset 0x01F72180
+		Ram Offset 0x181f73380
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: RemoveChunkExtension:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x01F72440
+		Ram Offset 0x181f73640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: input
+			Type: System.String
+			Default Value: 
+	Method: ReadCRLF:
+		Accessibility: Private
+		Return Type: System.Net.MonoChunkParser/State
+		File Offset 0x01F72490
+		Ram Offset 0x181f73690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: ReadTrailer:
+		Accessibility: Private
+		Return Type: System.Net.MonoChunkParser/State
+		File Offset 0x01F72570
+		Ram Offset 0x181f73770
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: ThrowProtocolViolation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F72A90
+		Ram Offset 0x181f73c90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: message
+			Type: System.String
+			Default Value: 

@@ -1,0 +1,1214 @@
+Type: IndexedDictionary`2
+
+Method: System.Int32 Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::get_Count():	Method Body (x86 ASM):
+		0x18103D140 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18103D144 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x18103D148 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18103D14B je short 000000018103D155h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18103D14D mov eax,[rax+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x18103D150 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18103D154 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18103D155 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18103D15A int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Int32 Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::get_Count():
+		End of function at 0x18103D15B
+		Absolute End is at 0x18103D15B
+		Identified Jump Destination addresses:
+
+		0x18103D144: [!] Reads field list from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)}
+
+		0x18103D148: [!] Compares {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and 0
+		0x18103D14B: Jumps to 0x18103D155 (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x18103D14D: [!] Reads field _size from {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local {'_size' (type System.Int32)}
+
+		0x18103D154: [!] Returns {'_size' (type System.Int32)} from the function
+
+		0x18103D155: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2
+	System.Int32 get_Count()
+		System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>> list = this.list
+		System.Int32 _size = list._size
+		return _size
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>> Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::list
+	IL_0006: ldfld System.Int32 System.Collections.Generic.List`1::_size
+	IL_000b: ret
+	IL_000c: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0011: throw
+	
+
+Method: System.Void Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::.ctor():	Method Body (x86 ASM):
+		0x1811A5850 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1811A5855 mov [rsp+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 16 | None ||| N/A | N/A
+		0x1811A585A push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A585B sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1811A585F mov rax,[rdx+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 32 | None ||| N/A | N/A
+		0x1811A5863 mov rdi,rdx		; DEBUG: {Register}/RDI {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5866 mov rsi,rcx		; DEBUG: {Register}/RSI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5869 mov r8,[rax+0C0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x1811A5870 mov rax,[r8+8]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 8 | None ||| N/A | N/A
+		0x1811A5874 test byte ptr [rax+135h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RAX | 309 | None ||| N/A | 1
+		0x1811A587B jne short 00000001811A5885h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A587D mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5880 call 00000001802E7F40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5885 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5888 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A588D mov rcx,[rdi+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 32 | None ||| N/A | N/A
+		0x1811A5891 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5894 mov rdx,[rcx+0C0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 192 | None ||| N/A | N/A
+		0x1811A589B mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A589E mov rdx,[rdx+18h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 24 | None ||| N/A | N/A
+		0x1811A58A2 call 0000000181219840h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A58A7 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1811A58AE mov [rsi+10h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSI | 16 | None ||| N/A | N/A
+		0x1811A58B2 je short 00000001811A58F1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A58B4 lea r8,[rsi+10h]		; DEBUG: {Register}/R8 {Memory}/None ||| RSI | 16 | None ||| N/A | N/A
+		0x1811A58B8 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1811A58BC lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x1811A58C3 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1811A58CA mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1811A58CD shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1811A58D1 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1811A58D5 lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x1811A58D9 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1811A58DC nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1811A58E0 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1811A58E3 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A58E6 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1811A58EA lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x1811A58EF jne short 00000001811A58E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A58F1 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1811A58F6 mov rsi,[rsp+38h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1811A58FB add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1811A58FF pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5900 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5901 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::.ctor():
+		End of function at 0x1811A5902
+		Absolute End is at 0x1811A5902
+		Identified Jump Destination addresses:
+
+		0x1811A585A: Saves the content of rdi to the stack
+		0x1811A5863: Copies {'il2cppMethodInfo' (type )} from rdx into rdi
+		0x1811A5866: Copies {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} from rcx into rsi
+		0x1811A5874: [!] Compares  and 1
+		0x1811A587B: Jumps to 0x1811A5885 (which is an if statement's body) if  != 1 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1811A5888: [!] Allocates an instance of type  and stores it as  in rax.
+
+		0x1811A5894: [!] Reads field  from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local 
+
+		0x1811A589E: Reads the klass pointer representing the declaring type of this method (which is Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2) and stores in new constant constant2 in register rdx
+		0x1811A58A2: [!] Calls managed method  on instance {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} ;  - Failed to resolve any matching method (there are 2 at this address)
+
+		0x1811A58A7: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1811A58AE: [!] Sets the field list (Type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>) on local {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} to the value stored in 
+		0x1811A58B2: Jumps to 0x1811A58F1 if constant3 equals 0 ;  - This is probably a goto, jumping to 0x1811A58F1 which is after end of current block @ 0x1811A5885 (started at 0x1811A587D)
+
+		0x1811A58B4: Loads the pointer to the field list on {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} into register r8
+		0x1811A58BC: Loads string "¡
+m" into register rcx as constant {'constant6' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1811A58CA: Copies {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x1811A58E0: [!!] Reads value at unknown offset 0 (0x0) on a klass pointer
+		0x1811A58E3: Copies {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from rax into rcx
+		0x1811A58EF: Jumps to 0x1811A58E0 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0 ;  - This is probably a goto, jumping to 0x1811A58E0 which is after end of current block @ 0x1811A5885 (started at 0x1811A587D)
+
+		0x1811A58F1: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant7
+		0x1811A58F6: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rsi as new constant constant8
+		0x1811A5900: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2
+	System.Void .ctor()
+
+		if ( == 1)
+		endif
+        
+		  = new ()
+		  = this.
+
+		[instruction error - managed method being called is null]
+		this.list = 
+		//UNKNOWN CLASS OFFSET READ HERE
+		return
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.JumpIfNonZeroOrNonNullAction at (0x1811A587B) is corrupt (One of the arguments is null) and cannot be created as IL. Aborting here.
+
+
+Method: TValue Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::get_Item(System.Int32):	Method Body (x86 ASM):
+		0x1811A5910 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1811A5914 mov rcx,[rcx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1811A5918 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A591B je short 00000001811A5946h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A591D cmp edx,[rcx+18h]		; DEBUG: {Register}/EDX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1811A5920 jae short 00000001811A5952h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5922 mov rcx,[rcx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1811A5926 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5929 je short 00000001811A5946h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A592B cmp edx,[rcx+18h]		; DEBUG: {Register}/EDX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1811A592E jae short 00000001811A594Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5930 movsxd rax,edx		; DEBUG: {Register}/RAX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5933 mov rax,[rcx+rax*8+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 32 | RAX ||| N/A | N/A
+		0x1811A5938 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A593B je short 00000001811A5946h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A593D mov rax,[rax+18h]		; DEBUG: {Register}/RAX {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x1811A5941 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1811A5945 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5946 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A594B int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5952 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5954 call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5959 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method TValue Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::get_Item(System.Int32):
+		End of function at 0x1811A595A
+		Absolute End is at 0x1811A595A
+		Identified Jump Destination addresses:
+
+		0x1811A5914: [!] Reads field list from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)}
+
+		0x1811A5918: [!] Compares {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and 0
+		0x1811A591B: Jumps to 0x1811A5946 (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A591D: [!] Compares {'index' (function parameter, type System.Int32)} against itself
+		0x1811A5920: Jumps to 0x1811A5952 (which is an if statement's body) if {'index' (function parameter, type System.Int32)} is greater than or equal to  ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1811A5922: [!] Reads field _items from {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local {'_items' (type T[])}
+
+		0x1811A5926: [!] Compares {'_items' (type T[])} and 0
+		0x1811A5929: Jumps to 0x1811A5946 (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A592B: [!] Compares {'index' (function parameter, type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}
+		0x1811A592E: Jumps to 0x1811A594C (which throws a NRE) if {'index' (function parameter, type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}. Implicitly present in managed code, so ignored here.
+		0x1811A5930: Copies {'index' (function parameter, type System.Int32)} from rdx into rax
+		0x1811A5933: Copies the element in the array {'_items' (type T[])} at the index specified by {'index' (function parameter, type System.Int32)} into new local {'t' (type T)}
+		0x1811A5938: [!] Compares {'t' (type T)} and 0
+		0x1811A593B: Jumps to 0x1811A5946 (which throws a NRE) if t equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A593D: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rax is {'local4' (type T)}, offset is 24 (0x18)
+
+		0x1811A5945: [!] Returns {'t' (type T)} from the function
+
+		0x1811A5946: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1811A5952: Clears register rcx, yielding zero-local {'local6' (type System.Int32)}
+		0x1811A5954: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2
+	TValue get_Item(System.Int32 index)
+		System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>> list = this.list
+
+		if (index < )
+		    T[] _items = list._items
+		    T t = _items[index]
+		      = .
+		    return t
+		    throw new System.NullReferenceException()
+		endif
+        
+		ulong local6 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: TValue Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::Get(TKey):	Method Body (x86 ASM):
+		0x1811A5960 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1811A5965 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5966 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1811A596A mov rax,[r8+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 32 | None ||| N/A | N/A
+		0x1811A596E mov rdi,r8		; DEBUG: {Register}/RDI {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5971 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5974 mov r9,[rax+0C0h]		; DEBUG: {Register}/R9 {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x1811A597B mov r8,[r9+40h]		; DEBUG: {Register}/R8 {Memory}/None ||| R9 | 64 | None ||| N/A | N/A
+		0x1811A597F call 00000001800B2BA0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5984 test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5986 js short 00000001811A59BFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5988 mov rcx,[rbx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x1811A598C test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A598F je short 00000001811A5A0Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5991 cmp eax,[rcx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1811A5994 jae short 00000001811A5A02h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5996 mov rdx,[rcx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1811A599A test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1811A599D je short 00000001811A5A0Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A599F cdqe		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A59A1 cmp eax,[rdx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDX | 24 | None ||| N/A | N/A
+		0x1811A59A4 jae short 00000001811A59FCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A59A6 mov rax,[rdx+rax*8+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 32 | RAX ||| N/A | N/A
+		0x1811A59AB test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A59AE je short 00000001811A5A0Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A59B0 mov rax,[rax+18h]		; DEBUG: {Register}/RAX {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x1811A59B4 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1811A59B9 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1811A59BD pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A59BE ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A59BF lea rcx,[1830F6DE8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493793768 | None ||| N/A | N/A
+		0x1811A59C6 call 00000001802CDA00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A59CB mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A59CE call 00000001802CDD40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A59D3 lea rcx,[1830EB518h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493746456 | None ||| N/A | N/A
+		0x1811A59DA mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A59DD call 00000001802CDA00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A59E2 mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A59E5 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1811A59E8 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1811A59EB call 00000001818DC2E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A59F0 mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1811A59F3 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1811A59F6 call 00000001802CDD50h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A59FB int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5A02 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5A04 call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5A09 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method TValue Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::Get(TKey):
+		End of function at 0x1811A5A0A
+		Absolute End is at 0x1811A5A0A
+		Identified Jump Destination addresses:
+
+		0x1811A5965: Saves the content of rdi to the stack
+		0x1811A596E: Copies {'il2cppMethodInfo' (type )} from r8 into rdi
+		0x1811A5971: Copies {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} from rcx into rbx
+		0x1811A5984: [!] Compares  and 0
+		0x1811A5988: [!] Reads field list from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)}
+
+		0x1811A598C: [!] Compares {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and 0
+		0x1811A598F: Jumps to 0x1811A5A0A (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5991: [!] Compares  against itself
+		0x1811A5994: Jumps to 0x1811A5A02 (which is an if statement's body) if  is greater than or equal to  ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1811A5996: [!] Reads field _items from {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local {'_items' (type T[])}
+
+		0x1811A599A: [!] Compares {'_items' (type T[])} and 0
+		0x1811A599D: Jumps to 0x1811A5A0A (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A59A1: [!] Compares  and {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}
+		0x1811A59A4: Jumps to 0x1811A59FC (which throws a NRE) if  is greater than or equal to {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}. Implicitly present in managed code, so ignored here.
+		0x1811A59A6: Copies the element in the array {'_items' (type T[])} at the index specified by  into new local {'t' (type T)}
+		0x1811A59AB: [!] Compares {'t' (type T)} and 0
+		0x1811A59AE: Jumps to 0x1811A5A0A (which throws a NRE) if t equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A59B0: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rax is {'local4' (type T)}, offset is 24 (0x18)
+
+		0x1811A59B4: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant5
+		0x1811A59BE: [!] Returns {'t' (type T)} from the function
+
+		0x1811A59BF: Loads the type definition for managed type System.Exception as a constant "Exception" in rcx
+		0x1811A59CB: Copies {'t' (type T)} from rax into rcx
+		0x1811A59CE: [!] Allocates an instance of type  and stores it as  in rax.
+
+		0x1811A59D3: Loads the string literal "Key does not exist!" as a constant "constant7" in rcx
+		0x1811A59DA: Copies {'t' (type T)} from rax into rbx
+		0x1811A59E2: Copies {'t' (type T)} from rax into rdx
+		0x1811A59E8: Copies {'t' (type T)} from rbx into rcx
+		0x1811A59EB: [!] Calls managed method System.Void System.Exception::.ctor(System.String) on instance {'t' (type T)} ;  - parameters do not match, but there is only one function at this address. - This is an instance method, but the type of the 'this' parameter is mismatched. Expecting Exception, actually T
+
+		0x1811A59F0: Copies {'il2cppMethodInfo' (type )} from rdi into rdx
+		0x1811A59F3: Copies {'t' (type T)} from rbx into rcx
+		0x1811A5A02: Clears register rcx, yielding zero-local {'local6' (type System.Int32)}
+		0x1811A5A04: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2
+	TValue Get(TKey key)
+		System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>> list = this.list
+
+		if ( < )
+		    T[] _items = list._items
+		    T t = _items[]
+		      = .
+		    return t
+		      = new ()
+
+		    t..ctor()
+		endif
+        
+		ulong local6 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: System.Boolean Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::TryGet(TKey,TValue):	Method Body (x86 ASM):
+		0x1811A5A10 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1811A5A15 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5A16 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1811A5A1A xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5A1C mov rbx,r8		; DEBUG: {Register}/RBX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5A1F mov [r8],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R8 | 0 | None ||| N/A | N/A
+		0x1811A5A22 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5A25 mov rax,[r9+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 32 | None ||| N/A | N/A
+		0x1811A5A29 mov r8,[rax+0C0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x1811A5A30 mov r8,[r8+40h]		; DEBUG: {Register}/R8 {Memory}/None ||| R8 | 64 | None ||| N/A | N/A
+		0x1811A5A34 call 00000001800B2BA0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5A39 test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5A3B js near ptr 00000001811A5ACEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5A41 mov rcx,[rdi+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 16 | None ||| N/A | N/A
+		0x1811A5A45 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5A48 je near ptr 00000001811A5AE9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5A4E cmp eax,[rcx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1811A5A51 jae near ptr 00000001811A5AE1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5A57 mov rdx,[rcx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1811A5A5B test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5A5E je near ptr 00000001811A5AE9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5A64 cdqe		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5A66 cmp eax,[rdx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDX | 24 | None ||| N/A | N/A
+		0x1811A5A69 jae short 00000001811A5ADBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5A6B mov rax,[rdx+rax*8+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 32 | RAX ||| N/A | N/A
+		0x1811A5A70 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5A73 je short 00000001811A5AE9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5A75 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1811A5A7C mov rax,[rax+18h]		; DEBUG: {Register}/RAX {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x1811A5A80 mov [rbx],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBX | 0 | None ||| N/A | N/A
+		0x1811A5A83 je short 00000001811A5AC1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5A85 shr rbx,0Ch		; DEBUG: {Register}/RBX {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1811A5A89 lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x1811A5A90 and ebx,1FFFFFh		; DEBUG: {Register}/EBX {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1811A5A96 mov eax,ebx		; DEBUG: {Register}/EAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5A98 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1811A5A9C and ebx,3Fh		; DEBUG: {Register}/EBX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1811A5A9F lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x1811A5AA3 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1811A5AA6 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x1811A5AB0 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1811A5AB3 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5AB6 bts rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5ABA lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x1811A5ABF jne short 00000001811A5AB0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5AC1 mov al,1		; DEBUG: {Register}/AL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1811A5AC3 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1811A5AC8 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1811A5ACC pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5ACD ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5ACE mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1811A5AD3 xor al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1811A5AD5 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1811A5AD9 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5ADA ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5ADB call 00000001802CDD90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5AE0 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5AE1 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5AE3 call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5AE8 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::TryGet(TKey,TValue):
+		End of function at 0x1811A5AE9
+		Absolute End is at 0x1811A5AE9
+		Identified Jump Destination addresses:
+
+		0x1811A5A15: Saves the content of rdi to the stack
+		0x1811A5A1A: Clears register rax, yielding zero-local {'local3' (type System.Int32)}
+		0x1811A5A1C: Copies {'value' (function parameter, type TValue)} from r8 into rbx
+		0x1811A5A1F: [!] Sets the field  (Type ) on local {'value' (function parameter, type TValue)} to the value stored in {'local3' (type System.Int32)}
+		0x1811A5A22: Copies {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} from rcx into rdi
+		0x1811A5A29: [!] Reads field  from {'local3' (type System.Int32)} and stores in a new local 
+
+		0x1811A5A30: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg r8 is {'value' (function parameter, type TValue)}, offset is 64 (0x40)
+
+		0x1811A5A39: [!] Compares {'local3' (type System.Int32)} and 0
+		0x1811A5A41: [!] Reads field list from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)}
+
+		0x1811A5A45: [!] Compares {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and 0
+		0x1811A5A48: Jumps to 0x1811A5AE9 (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5A4E: [!] Compares {'local3' (type System.Int32)} against itself
+		0x1811A5A51: Jumps to 0x1811A5AE1 (which is an if statement's body) if {'local3' (type System.Int32)} is greater than or equal to  ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1811A5A57: [!] Reads field _items from {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local {'_items' (type T[])}
+
+		0x1811A5A5B: [!] Compares {'_items' (type T[])} and 0
+		0x1811A5A5E: Jumps to 0x1811A5AE9 (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5A66: [!] Compares {'local3' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}
+		0x1811A5A69: Jumps to 0x1811A5ADB (which throws a NRE) if {'local3' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}. Implicitly present in managed code, so ignored here.
+		0x1811A5A6B: Copies the element in the array {'_items' (type T[])} at the index specified by {'local3' (type System.Int32)} into new local {'t' (type T)}
+		0x1811A5A70: [!] Compares {'t' (type T)} and 0
+		0x1811A5A73: Jumps to 0x1811A5AE9 (which throws a NRE) if t equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5A75: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1811A5A7C: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rax is {'local6' (type T)}, offset is 24 (0x18)
+
+		0x1811A5A80: [!] Sets the field  (Type ) on local {'value' (function parameter, type TValue)} to the value stored in {'t' (type T)}
+		0x1811A5A83: Jumps to 0x1811A5AC1 if constant5 equals 0
+
+		0x1811A5A89: Loads string "¡
+m" into register rcx as constant {'constant7' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1811A5A96: Copies {'value' (function parameter, type TValue)} from rbx into rax
+		0x1811A5AB0: Loads the class pointer from _items into a constant constant8 in register rax
+		0x1811A5AB3: Copies {'constant8' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x1811A5ABF: Jumps to 0x1811A5AB0 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x1811A5AC1: [!] Writes the constant 0x1 into operand True (type UInt64) in register rax
+		0x1811A5AC3: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant10
+		0x1811A5ACD: [!] Returns True from the function
+
+		0x1811A5ACE: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant11
+		0x1811A5AD3: Clears register rax, yielding zero-local {'local7' (type System.Int32)}
+		0x1811A5ADA: [!] Returns {'local7' (type System.Int32)} from the function
+
+		0x1811A5ADB: [!] Constructs and throws an exception of kind System.IndexOutOfRangeException
+
+		0x1811A5AE1: Clears register rcx, yielding zero-local {'local9' (type System.Int32)}
+		0x1811A5AE3: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2
+	System.Boolean TryGet(TKey key, TValue value)
+		ulong local3 = 0
+		value. = local3
+		  = local3.
+		  = .
+		System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>> list = this.list
+
+		if (local3 < )
+		    T[] _items = list._items
+		    T t = _items[local3]
+		      = .
+		    value. = t
+		    return True
+		    ulong local7 = 0
+		    return local7
+		    throw new System.IndexOutOfRangeException()
+		endif
+        
+		ulong local9 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: System.Void Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::Add(TKey,TValue):	Method Body (x86 ASM):
+		0x1811A5AF0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1811A5AF5 mov [rsp+18h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 24 | None ||| N/A | N/A
+		0x1811A5AFA mov [rsp+20h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 32 | None ||| N/A | N/A
+		0x1811A5AFF mov [rsp+10h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RSP | 16 | None ||| N/A | N/A
+		0x1811A5B03 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5B04 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1811A5B08 mov rax,[r9+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 32 | None ||| N/A | N/A
+		0x1811A5B0C mov rbp,r8		; DEBUG: {Register}/RBP {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5B0F mov rsi,r9		; DEBUG: {Register}/RSI {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5B12 mov edi,edx		; DEBUG: {Register}/EDI {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5B14 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5B17 mov r10,[rax+0C0h]		; DEBUG: {Register}/R10 {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x1811A5B1E mov r8,[r10+50h]		; DEBUG: {Register}/R8 {Memory}/None ||| R10 | 80 | None ||| N/A | N/A
+		0x1811A5B22 call 00000001811A5DA0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5B27 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1811A5B29 jne near ptr 00000001811A5C1Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5B2F mov rax,[rsi+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSI | 32 | None ||| N/A | N/A
+		0x1811A5B33 mov rbx,[rbx+10h]		; DEBUG: {Register}/RBX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x1811A5B37 mov rcx,[rax+0C0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x1811A5B3E mov rax,[rcx+28h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 40 | None ||| N/A | N/A
+		0x1811A5B42 test byte ptr [rax+135h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RAX | 309 | None ||| N/A | 1
+		0x1811A5B49 jne short 00000001811A5B53h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5B4B mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5B4E call 00000001802E7F40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5B53 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5B56 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5B5B cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1811A5B62 mov r9,rax		; DEBUG: {Register}/R9 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5B65 mov [rax+10h],edi		; DEBUG: {Memory}/None {Register}/EDI ||| RAX | 16 | None ||| N/A | N/A
+		0x1811A5B68 mov [rax+18h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RAX | 24 | None ||| N/A | N/A
+		0x1811A5B6C je short 00000001811A5BA7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5B6E lea r8,[rax+18h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x1811A5B72 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1811A5B76 lea r10,[1832F4840h]		; DEBUG: {Register}/R10 {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x1811A5B7D and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1811A5B84 mov ecx,r8d		; DEBUG: {Register}/ECX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1811A5B87 shr rcx,6		; DEBUG: {Register}/RCX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1811A5B8B and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1811A5B8F prefetchw [r10+rcx*8]		; DEBUG: {Memory}/None {Register}/None ||| R10 | 0 | RCX ||| N/A | N/A
+		0x1811A5B94 mov rax,[r10+rcx*8]		; DEBUG: {Register}/RAX {Memory}/None ||| R10 | 0 | RCX ||| N/A | N/A
+		0x1811A5B98 mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5B9B bts rdx,r8		; DEBUG: {Register}/RDX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5B9F lock cmpxchg [r10+rcx*8],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| R10 | 0 | RCX ||| N/A | N/A
+		0x1811A5BA5 jne short 00000001811A5B94h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5BA7 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5BAA je near ptr 00000001811A5CA3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5BB0 mov rax,[rsi+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSI | 32 | None ||| N/A | N/A
+		0x1811A5BB4 mov r10,[rbx+10h]		; DEBUG: {Register}/R10 {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x1811A5BB8 mov rcx,[rax+0C0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x1811A5BBF mov rdx,[rcx+68h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 104 | None ||| N/A | N/A
+		0x1811A5BC3 inc dword ptr [rbx+1Ch]		; DEBUG: {Memory}/None {Register}/None ||| RBX | 28 | None ||| N/A | N/A
+		0x1811A5BC6 test r10,r10		; DEBUG: {Register}/R10 {Register}/R10 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5BC9 je near ptr 00000001811A5CA3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5BCF movsxd rcx,dword ptr [rbx+18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 24 | None ||| N/A | N/A
+		0x1811A5BD3 cmp ecx,[r10+18h]		; DEBUG: {Register}/ECX {Memory}/None ||| R10 | 24 | None ||| N/A | N/A
+		0x1811A5BD7 jb short 00000001811A5C08h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5BD9 mov rax,[rdx+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 32 | None ||| N/A | N/A
+		0x1811A5BDD mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5BE0 mov rdx,r9		; DEBUG: {Register}/RDX {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5BE3 mov r8,[rax+0C0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x1811A5BEA mov r8,[r8+70h]		; DEBUG: {Register}/R8 {Memory}/None ||| R8 | 112 | None ||| N/A | N/A
+		0x1811A5BEE call 000000018127CCA0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5BF3 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1811A5BF8 mov rbp,[rsp+40h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1811A5BFD mov rsi,[rsp+48h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x1811A5C02 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1811A5C06 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C07 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C08 lea eax,[rcx+1]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 1 | None ||| N/A | N/A
+		0x1811A5C0B mov rdx,rcx		; DEBUG: {Register}/RDX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C0E mov rcx,r10		; DEBUG: {Register}/RCX {Register}/R10 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C11 mov [rbx+18h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBX | 24 | None ||| N/A | N/A
+		0x1811A5C14 mov r8,r9		; DEBUG: {Register}/R8 {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C17 call 0000000180002A00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5C1C jmp short 00000001811A5BF3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5C1E mov rcx,[rsi+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSI | 32 | None ||| N/A | N/A
+		0x1811A5C22 mov edx,0Bh		; DEBUG: {Register}/EDX {Immediate32}/None ||| None | 0 | None ||| N/A | 11
+		0x1811A5C27 mov rcx,[rcx+0C0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 192 | None ||| N/A | N/A
+		0x1811A5C2E call 00000001800041A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5C33 mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C36 lea rcx,[rsp+38h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1811A5C3B call 0000000181899170h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5C40 lea rcx,[1830EB4B0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493746352 | None ||| N/A | N/A
+		0x1811A5C47 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C4A call 00000001802CDA00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5C4F lea rcx,[1830EB4C0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493746368 | None ||| N/A | N/A
+		0x1811A5C56 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C59 call 00000001802CDA00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5C5E xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C61 mov r8,rbx		; DEBUG: {Register}/R8 {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C64 mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C67 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C6A call 00000001816C9790h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5C6F lea rcx,[1830F6DE8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493793768 | None ||| N/A | N/A
+		0x1811A5C76 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C79 call 00000001802CDA00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5C7E mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C81 call 00000001802CDD40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5C86 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C89 mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C8C mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C8F mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C92 call 00000001818DC2E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5C97 mov rdx,rsi		; DEBUG: {Register}/RDX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C9A mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5C9D call 00000001802CDD50h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5CA2 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::Add(TKey,TValue):
+		End of function at 0x1811A5CA3
+		Absolute End is at 0x1811A5CA3
+		Identified Jump Destination addresses:
+
+		0x1811A5AFF: Moves key (type TKey) from register rdx to the stack at offset 16 (0x10)
+		0x1811A5B03: Saves the content of rdi to the stack
+		0x1811A5B0C: Copies {'value' (function parameter, type TValue)} from r8 into rbp
+		0x1811A5B0F: Copies {'il2cppMethodInfo' (type )} from r9 into rsi
+		0x1811A5B12: Copies {'key' (function parameter, type TKey)} from rdx into rdi
+		0x1811A5B14: Copies {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} from rcx into rbx
+		0x1811A5B22: [!] Calls managed method System.Boolean Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::ContainsKey(TKey) on instance {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} with arguments [{'key' (function parameter, type TKey)}] and stores the result in {'boolean' (type System.Boolean)}
+
+		0x1811A5B27: [!] Compares {'boolean' (type System.Boolean)} and False
+		0x1811A5B29: Jumps to 0x1811A5C1E (which is an if statement's body) if {'boolean' (type System.Boolean)} != False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1811A5B33: [!] Reads field list from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)}
+
+		0x1811A5B37: [!] Reads field  from {'boolean' (type System.Boolean)} and stores in a new local 
+
+		0x1811A5B3E: [!] Reads field  from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local 
+
+		0x1811A5B42: [!] Compares  and 1
+		0x1811A5B49: Jumps to 0x1811A5B53 (which is an if statement's body) if  != 1 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1811A5B4B: Copies {'boolean' (type System.Boolean)} from rax into rcx
+		0x1811A5B53: Copies {'boolean' (type System.Boolean)} from rax into rcx
+		0x1811A5B56: [!] Allocates an instance of type  and stores it as  in rax.
+
+		0x1811A5B5B: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1811A5B62: Copies {'boolean' (type System.Boolean)} from rax into r9
+		0x1811A5B65: [!] Sets the field  (Type ) on local {'boolean' (type System.Boolean)} to the value stored in {'key' (function parameter, type TKey)}
+		0x1811A5B68: [!] Sets the field  (Type ) on local {'boolean' (type System.Boolean)} to the value stored in {'value' (function parameter, type TValue)}
+		0x1811A5B6C: Jumps to 0x1811A5BA7 if constant3 equals 0 ;  - This is probably a goto, jumping to 0x1811A5BA7 which is after end of current block @ 0x1811A5B53 (started at 0x1811A5B4B)
+
+		0x1811A5B6E: Loads the pointer to the field  on {'boolean' (type System.Boolean)} into register r8
+		0x1811A5B76: Loads string "¡
+m" into register r10 as constant {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1811A5B84: Copies {'value' (function parameter, type TValue)} from r8 into rcx
+		0x1811A5B98: Copies {'boolean' (type System.Boolean)} from rax into rdx
+		0x1811A5BA5: Jumps to 0x1811A5B94 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0 ;  - This is probably a goto, jumping to 0x1811A5B94 which is after end of current block @ 0x1811A5B53 (started at 0x1811A5B4B)
+
+		0x1811A5BA7: [!] Compares {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and 0
+		0x1811A5BAA: Jumps to 0x1811A5CA3 (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5BB4: [!] Reads field _items from {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local {'_items' (type T[])}
+
+		0x1811A5BB8: [!] Reads field  from {'boolean' (type System.Boolean)} and stores in a new local 
+
+		0x1811A5BBF: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rcx is {'value' (function parameter, type TValue)}, offset is 104 (0x68)
+
+		0x1811A5BC6: [!] Compares {'_items' (type T[])} and 0
+		0x1811A5BC9: Jumps to 0x1811A5CA3 (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5BCF: [!] Reads field _size from {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local {'_size' (type System.Int32)}
+
+		0x1811A5BD3: [!] Compares {'_size' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}
+		0x1811A5BD9: [!] Reads field  from {'boolean' (type System.Boolean)} and stores in a new local 
+
+		0x1811A5BDD: Copies {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} from rbx into rcx
+		0x1811A5BE0: Copies {'boolean' (type System.Boolean)} from r9 into rdx
+		0x1811A5BE3: [!] Reads field  from {'boolean' (type System.Boolean)} and stores in a new local 
+
+		0x1811A5BEA: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg r8 is {'value' (function parameter, type TValue)}, offset is 112 (0x70)
+
+		0x1811A5BEE: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+		Potential Loop Start (0x1811A5BF3):
+		0x1811A5BF3: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant8
+		0x1811A5BF8: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbp as new constant constant9
+		0x1811A5BFD: Reads unknown value in stack, offset 72 (0x48) and stores the pointer in register rsi as new constant constant10
+		0x1811A5C07: [!] Returns from the function
+
+		0x1811A5C08: Loads the pointer to the field  on {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} into register rax
+		0x1811A5C0B: Copies {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} from rcx into rdx
+		0x1811A5C0E: Copies {'_items' (type T[])} from r10 into rcx
+		0x1811A5C14: Copies {'boolean' (type System.Boolean)} from r9 into r8
+		0x1811A5C1C: Jumps to 0x1811A5BF3 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x1811A5C22: [!] Writes the constant 0xB into operand 11 (type UInt64) in register rdx
+		0x1811A5C27: [!] Reads field  from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local 
+
+		0x1811A5C33: Copies {'boolean' (type System.Boolean)} from rax into rdx
+		0x1811A5C36: Loads a pointer to stack offset 0x38 into register rcx as new constant constant12
+		0x1811A5C3B: [!] Calls managed method System.String System.Int32::ToString() on instance  and stores the result in {'string' (type System.String)}
+
+		0x1811A5C40: Loads the string literal " is already in use!" as a constant "constant13" in rcx
+		0x1811A5C47: Copies {'string' (type System.String)} from rax into rdi
+		0x1811A5C4F: Loads the string literal "Key " as a constant "constant14" in rcx
+		0x1811A5C56: Copies {'string' (type System.String)} from rax into rbx
+		0x1811A5C61: Copies {'string' (type System.String)} from rbx into r8
+		0x1811A5C64: Copies {'string' (type System.String)} from rdi into rdx
+		0x1811A5C67: Copies {'string' (type System.String)} from rax into rcx
+		0x1811A5C6A: [!] Calls static managed method System.String System.String::Concat(System.String,System.String,System.String) with arguments [{'string' (type System.String)}, {'string' (type System.String)}, {'string' (type System.String)}] and stores the result in {'string2' (type System.String)}
+
+		0x1811A5C6F: Loads the type definition for managed type System.Exception as a constant "Exception" in rcx
+		0x1811A5C76: Copies {'string2' (type System.String)} from rax into rdi
+		0x1811A5C7E: Copies {'string2' (type System.String)} from rax into rcx
+		0x1811A5C81: [!] Allocates an instance of type  and stores it as  in rax.
+
+		0x1811A5C89: Copies {'string2' (type System.String)} from rdi into rdx
+		0x1811A5C8C: Copies {'string2' (type System.String)} from rax into rcx
+		0x1811A5C8F: Copies {'string2' (type System.String)} from rax into rbx
+		0x1811A5C92: [!] Calls managed method System.Void System.Exception::.ctor(System.String) on instance {'string2' (type System.String)} with arguments [{'string2' (type System.String)}] ;  - This is an instance method, but the type of the 'this' parameter is mismatched. Expecting Exception, actually System.String
+
+		0x1811A5C97: Copies {'il2cppMethodInfo' (type )} from rsi into rdx
+		0x1811A5C9A: Copies {'string2' (type System.String)} from rbx into rcx
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2
+	System.Void Add(TKey key, TValue value)
+
+		System.Boolean boolean = this.ContainsKey(key) //(TKey key)
+
+		if (boolean == False)
+		    System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>> list = this.list
+		      = boolean.
+		      = this.
+
+		    if ( == 1)
+		    endif
+            
+		      = new ()
+		    boolean. = key
+		    boolean. = value
+		    T[] _items = list._items
+		      = boolean.
+		      = .
+		    System.Int32 _size = list._size
+		      = boolean.
+		      = boolean.
+		      = .
+		    throw new System.NullReferenceException()
+		    return
+		endif
+        
+		  = this.
+
+		System.String string = .ToString()
+
+		System.String string2 = System.String.Concat(string, string, string) //(String str0, String str1, String str2)
+		  = new ()
+
+		string2..ctor(string2) //(String message)
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: System.Int32 Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::IndexOfKey(TKey):	Method Body (x86 ASM):
+		0x1811A5CB0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1811A5CB5 mov [rsp+10h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 16 | None ||| N/A | N/A
+		0x1811A5CBA mov [rsp+18h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 24 | None ||| N/A | N/A
+		0x1811A5CBF mov [rsp+20h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 32 | None ||| N/A | N/A
+		0x1811A5CC4 push r14		; DEBUG: {Register}/R14 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5CC6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1811A5CCA mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1811A5CCE mov rbp,r8		; DEBUG: {Register}/RBP {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5CD1 mov r14d,edx		; DEBUG: {Register}/R14D {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5CD4 mov rsi,rcx		; DEBUG: {Register}/RSI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5CD7 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5CDA je near ptr 00000001811A5D7Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5CE0 mov edi,[rax+18h]		; DEBUG: {Register}/EDI {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x1811A5CE3 xor ebx,ebx		; DEBUG: {Register}/EBX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5CE5 test edi,edi		; DEBUG: {Register}/EDI {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x1811A5CE7 jle short 00000001811A5D5Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5CE9 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1811A5CF0 mov rax,[rbp+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBP | 32 | None ||| N/A | N/A
+		0x1811A5CF4 mov rcx,[rax+0C0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x1811A5CFB mov rcx,[rcx+70h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 112 | None ||| N/A | N/A
+		0x1811A5CFF call 0000000180D19890h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5D04 mov rcx,[rsi+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSI | 16 | None ||| N/A | N/A
+		0x1811A5D08 mov r10,rax		; DEBUG: {Register}/R10 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D0B test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D0E je short 00000001811A5D7Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5D10 cmp ebx,[rcx+18h]		; DEBUG: {Register}/EBX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1811A5D13 jae short 00000001811A5D8Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5D15 mov rcx,[rcx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1811A5D19 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D1C je short 00000001811A5D7Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5D1E cmp ebx,[rcx+18h]		; DEBUG: {Register}/EBX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1811A5D21 jae short 00000001811A5D85h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5D23 movsxd rax,ebx		; DEBUG: {Register}/RAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D26 mov rdx,[rcx+rax*8+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 32 | RAX ||| N/A | N/A
+		0x1811A5D2B test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D2E je short 00000001811A5D7Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5D30 test r10,r10		; DEBUG: {Register}/R10 {Register}/R10 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D33 je short 00000001811A5D7Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5D35 mov r9,[r10]		; DEBUG: {Register}/R9 {Memory}/None ||| R10 | 0 | None ||| N/A | N/A
+		0x1811A5D38 mov r8d,r14d		; DEBUG: {Register}/R8D {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D3B mov edx,[rdx+10h]		; DEBUG: {Register}/EDX {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x1811A5D3E mov rcx,r10		; DEBUG: {Register}/RCX {Register}/R10 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D41 mov rax,[r9+1B8h]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 440 | None ||| N/A | N/A
+		0x1811A5D48 mov r9,[r9+1C0h]		; DEBUG: {Register}/R9 {Memory}/None ||| R9 | 448 | None ||| N/A | N/A
+		0x1811A5D4F call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D51 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D53 jne short 00000001811A5D7Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5D55 inc ebx		; DEBUG: {Register}/EBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D57 cmp ebx,edi		; DEBUG: {Register}/EBX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D59 jl short 00000001811A5CF0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5D5B mov eax,0FFFFFFFFh		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 4294967295
+		0x1811A5D60 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1811A5D65 mov rbp,[rsp+38h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1811A5D6A mov rsi,[rsp+40h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1811A5D6F mov rdi,[rsp+48h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x1811A5D74 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1811A5D78 pop r14		; DEBUG: {Register}/R14 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D7A ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D7B mov eax,ebx		; DEBUG: {Register}/EAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D7D jmp short 00000001811A5D60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5D7F call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5D84 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D8B xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5D8D call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5D92 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Int32 Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::IndexOfKey(TKey):
+		End of function at 0x1811A5D93
+		Absolute End is at 0x1811A5D93
+		Identified Jump Destination addresses:
+
+		0x1811A5CC4: Saves the content of r14 to the stack
+		0x1811A5CCA: [!] Reads field list from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)}
+
+		0x1811A5CCE: Copies {'il2cppMethodInfo' (type )} from r8 into rbp
+		0x1811A5CD1: Copies {'key' (function parameter, type TKey)} from rdx into r14
+		0x1811A5CD4: Copies {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} from rcx into rsi
+		0x1811A5CD7: [!] Compares {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and 0
+		0x1811A5CDA: Jumps to 0x1811A5D7F (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5CE0: [!] Reads field _size from {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local {'_size' (type System.Int32)}
+
+		0x1811A5CE3: Clears register rbx, yielding zero-local {'local4' (type System.Int32)}
+		0x1811A5CE5: [!] Compares {'_size' (type System.Int32)} and 0
+		0x1811A5CE7: Jumps to 0x1811A5D5B (which is an if statement's body) if {'_size' (type System.Int32)} is less than or equal to 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1811A5CF4: [!] Reads field  from {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local 
+
+		0x1811A5CFB: [!] Reads field  from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local 
+
+		0x1811A5CFF: [!] Calls managed method  on instance {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} ;  - Could not find any callable methods. Bailing out.
+
+		0x1811A5D04: [!] Reads field list from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local {'list2' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)}
+
+		0x1811A5D08: Copies {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} from rax into r10
+		0x1811A5D0B: [!] Compares {'list2' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and 0
+		0x1811A5D0E: Jumps to 0x1811A5D7F (which throws a NRE) if list2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5D10: [!] Compares {'local4' (type System.Int32)} against itself
+		0x1811A5D13: Jumps to 0x1811A5D8B if {'local4' (type System.Int32)} is greater than or equal to  ;  - This is probably a goto, jumping to 0x1811A5D8B which is after end of current block @ 0x1811A5D5B (started at 0x1811A5CE9)
+
+		0x1811A5D15: [!] Reads field _items from {'list2' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local {'_items' (type T[])}
+
+		0x1811A5D19: [!] Compares {'_items' (type T[])} and 0
+		0x1811A5D1C: Jumps to 0x1811A5D7F (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5D1E: [!] Compares {'local4' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}
+		0x1811A5D21: Jumps to 0x1811A5D85 (which throws a NRE) if {'local4' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}. Implicitly present in managed code, so ignored here.
+		0x1811A5D23: Copies {'local4' (type System.Int32)} from rbx into rax
+		0x1811A5D26: Copies the element in the array {'_items' (type T[])} at the index specified by {'local4' (type System.Int32)} into new local {'t' (type T)}
+		0x1811A5D2B: [!] Compares {'t' (type T)} and 0
+		0x1811A5D2E: Jumps to 0x1811A5D7F (which throws a NRE) if t equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5D30: [!] Compares {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and 0
+		0x1811A5D33: Jumps to 0x1811A5D7F (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5D35: Loads the class pointer from list into a constant constant7 in register r9
+		0x1811A5D38: Copies {'key' (function parameter, type TKey)} from r14 into r8
+		0x1811A5D3B: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rdx is {'local7' (type T)}, offset is 16 (0x10)
+
+		0x1811A5D3E: Copies {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} from r10 into rcx
+		0x1811A5D41: Loads the pointer to the implementation of virtual function System.Void System.Collections.Generic.List`1::RemoveAt(System.Int32) specific to System.Collections.Generic.List`1 from the class pointer in r9, slot 8 (from memory offset 440) and stores in constant constant8
+		0x1811A5D48: Loads the pointer to the implementation of virtual function System.Void System.Collections.Generic.List`1::RemoveAt(System.Int32) specific to System.Collections.Generic.List`1 from the class pointer in r9, slot 8 (from memory offset 448) and stores in constant constant9
+		0x1811A5D4F: [!] Calls managed method System.Void System.Collections.Generic.List`1::RemoveAt(System.Int32) on instance {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} ;  - Mismatched parameters detected here.
+
+		0x1811A5D51: Compares System.Collections.Generic.List`1.RemoveAt and 0
+		0x1811A5D53: Jumps to 0x1811A5D7B if System.Collections.Generic.List`1.RemoveAt != 0 ;  - This is probably a goto, jumping to 0x1811A5D7B which is after end of current block @ 0x1811A5D5B (started at 0x1811A5CE9)
+
+		0x1811A5D55: [!] Adds 1 to the value {'local4' (type System.Int32)}, stored in rbx
+		0x1811A5D57: [!] Compares {'local4' (type System.Int32)} and {'_size' (type System.Int32)}
+		0x1811A5D5B: [!] Writes the constant 0xFFFFFFFF into operand -1 (type UInt64) in register rax
+
+		Potential Loop Start (0x1811A5D60):
+		0x1811A5D60: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant12
+		0x1811A5D65: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rbp as new constant constant13
+		0x1811A5D6A: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rsi as new constant constant14
+		0x1811A5D6F: Reads unknown value in stack, offset 72 (0x48) and stores the pointer in register rdi as new constant constant15
+		0x1811A5D7A: [!] Returns -1 from the function
+
+		0x1811A5D7B: Copies {'constant12' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rbx into rax
+		0x1811A5D7D: Jumps to 0x1811A5D60 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x1811A5D7F: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1811A5D8B: Clears register rcx, yielding zero-local {'local9' (type System.Int32)}
+		0x1811A5D8D: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2
+	System.Int32 IndexOfKey(TKey key)
+		System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>> list = this.list
+		System.Int32 _size = list._size
+		ulong local4 = 0
+
+		if (_size > 0)
+		      = list.
+		      = this.
+
+		    [instruction error - managed method being called is null]
+		    System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>> list2 = this.list
+
+		    if (local4 >= )
+                goto INSN_1811A5D8B
+            endif
+		    T[] _items = list2._items
+		    T t = _items[local4]
+		      = .
+
+		    list.RemoveAt()
+		    local4 += 1
+		endif
+        
+		return -1
+		throw new System.NullReferenceException()
+
+		INSN_1811A5D8B:
+		ulong local9 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: System.Boolean Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::ContainsKey(TKey):	Method Body (x86 ASM):
+		0x1811A5DA0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1811A5DA5 mov [rsp+10h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 16 | None ||| N/A | N/A
+		0x1811A5DAA mov [rsp+18h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 24 | None ||| N/A | N/A
+		0x1811A5DAF mov [rsp+20h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 32 | None ||| N/A | N/A
+		0x1811A5DB4 push r14		; DEBUG: {Register}/R14 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5DB6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1811A5DBA mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1811A5DBE mov rbp,r8		; DEBUG: {Register}/RBP {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5DC1 mov r14d,edx		; DEBUG: {Register}/R14D {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5DC4 mov rsi,rcx		; DEBUG: {Register}/RSI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5DC7 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5DCA je near ptr 00000001811A5E6Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5DD0 mov edi,[rax+18h]		; DEBUG: {Register}/EDI {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x1811A5DD3 xor ebx,ebx		; DEBUG: {Register}/EBX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5DD5 test edi,edi		; DEBUG: {Register}/EDI {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x1811A5DD7 jle short 00000001811A5E4Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5DD9 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1811A5DE0 mov rax,[rbp+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBP | 32 | None ||| N/A | N/A
+		0x1811A5DE4 mov rcx,[rax+0C0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x1811A5DEB mov rcx,[rcx+70h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 112 | None ||| N/A | N/A
+		0x1811A5DEF call 0000000180D19890h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5DF4 mov rcx,[rsi+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSI | 16 | None ||| N/A | N/A
+		0x1811A5DF8 mov r10,rax		; DEBUG: {Register}/R10 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5DFB test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5DFE je short 00000001811A5E6Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5E00 cmp ebx,[rcx+18h]		; DEBUG: {Register}/EBX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1811A5E03 jae short 00000001811A5E78h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5E05 mov rcx,[rcx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1811A5E09 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E0C je short 00000001811A5E6Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5E0E cmp ebx,[rcx+18h]		; DEBUG: {Register}/EBX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1811A5E11 jae short 00000001811A5E72h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5E13 movsxd rax,ebx		; DEBUG: {Register}/RAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E16 mov rdx,[rcx+rax*8+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 32 | RAX ||| N/A | N/A
+		0x1811A5E1B test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E1E je short 00000001811A5E6Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5E20 test r10,r10		; DEBUG: {Register}/R10 {Register}/R10 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E23 je short 00000001811A5E6Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5E25 mov r9,[r10]		; DEBUG: {Register}/R9 {Memory}/None ||| R10 | 0 | None ||| N/A | N/A
+		0x1811A5E28 mov r8d,r14d		; DEBUG: {Register}/R8D {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E2B mov edx,[rdx+10h]		; DEBUG: {Register}/EDX {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x1811A5E2E mov rcx,r10		; DEBUG: {Register}/RCX {Register}/R10 ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E31 mov rax,[r9+1B8h]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 440 | None ||| N/A | N/A
+		0x1811A5E38 mov r9,[r9+1C0h]		; DEBUG: {Register}/R9 {Memory}/None ||| R9 | 448 | None ||| N/A | N/A
+		0x1811A5E3F call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E41 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E43 jne short 00000001811A5E68h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5E45 inc ebx		; DEBUG: {Register}/EBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E47 cmp ebx,edi		; DEBUG: {Register}/EBX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E49 jl short 00000001811A5DE0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5E4B xor al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E4D mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1811A5E52 mov rbp,[rsp+38h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1811A5E57 mov rsi,[rsp+40h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1811A5E5C mov rdi,[rsp+48h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x1811A5E61 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1811A5E65 pop r14		; DEBUG: {Register}/R14 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E67 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E68 mov al,1		; DEBUG: {Register}/AL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1811A5E6A jmp short 00000001811A5E4Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5E6C call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5E71 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E78 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E7A call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5E7F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::ContainsKey(TKey):
+		End of function at 0x1811A5E80
+		Absolute End is at 0x1811A5E80
+		Identified Jump Destination addresses:
+
+		0x1811A5DB4: Saves the content of r14 to the stack
+		0x1811A5DBA: [!] Reads field list from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)}
+
+		0x1811A5DBE: Copies {'il2cppMethodInfo' (type )} from r8 into rbp
+		0x1811A5DC1: Copies {'key' (function parameter, type TKey)} from rdx into r14
+		0x1811A5DC4: Copies {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} from rcx into rsi
+		0x1811A5DC7: [!] Compares {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and 0
+		0x1811A5DCA: Jumps to 0x1811A5E6C (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5DD0: [!] Reads field _size from {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local {'_size' (type System.Int32)}
+
+		0x1811A5DD3: Clears register rbx, yielding zero-local {'local4' (type System.Int32)}
+		0x1811A5DD5: [!] Compares {'_size' (type System.Int32)} and 0
+		0x1811A5DD7: Jumps to 0x1811A5E4B (which is an if statement's body) if {'_size' (type System.Int32)} is less than or equal to 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1811A5DE4: [!] Reads field  from {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local 
+
+		0x1811A5DEB: [!] Reads field  from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local 
+
+		0x1811A5DEF: [!] Calls managed method  on instance {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} ;  - Could not find any callable methods. Bailing out.
+
+		0x1811A5DF4: [!] Reads field list from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local {'list2' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)}
+
+		0x1811A5DF8: Copies {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} from rax into r10
+		0x1811A5DFB: [!] Compares {'list2' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and 0
+		0x1811A5DFE: Jumps to 0x1811A5E6C (which throws a NRE) if list2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5E00: [!] Compares {'local4' (type System.Int32)} against itself
+		0x1811A5E03: Jumps to 0x1811A5E78 if {'local4' (type System.Int32)} is greater than or equal to  ;  - This is probably a goto, jumping to 0x1811A5E78 which is after end of current block @ 0x1811A5E4B (started at 0x1811A5DD9)
+
+		0x1811A5E05: [!] Reads field _items from {'list2' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local {'_items' (type T[])}
+
+		0x1811A5E09: [!] Compares {'_items' (type T[])} and 0
+		0x1811A5E0C: Jumps to 0x1811A5E6C (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5E0E: [!] Compares {'local4' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}
+		0x1811A5E11: Jumps to 0x1811A5E72 (which throws a NRE) if {'local4' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}. Implicitly present in managed code, so ignored here.
+		0x1811A5E13: Copies {'local4' (type System.Int32)} from rbx into rax
+		0x1811A5E16: Copies the element in the array {'_items' (type T[])} at the index specified by {'local4' (type System.Int32)} into new local {'t' (type T)}
+		0x1811A5E1B: [!] Compares {'t' (type T)} and 0
+		0x1811A5E1E: Jumps to 0x1811A5E6C (which throws a NRE) if t equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5E20: [!] Compares {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and 0
+		0x1811A5E23: Jumps to 0x1811A5E6C (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5E25: Loads the class pointer from list into a constant constant7 in register r9
+		0x1811A5E28: Copies {'key' (function parameter, type TKey)} from r14 into r8
+		0x1811A5E2B: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rdx is {'local7' (type T)}, offset is 16 (0x10)
+
+		0x1811A5E2E: Copies {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} from r10 into rcx
+		0x1811A5E31: Loads the pointer to the implementation of virtual function System.Void System.Collections.Generic.List`1::RemoveAt(System.Int32) specific to System.Collections.Generic.List`1 from the class pointer in r9, slot 8 (from memory offset 440) and stores in constant constant8
+		0x1811A5E38: Loads the pointer to the implementation of virtual function System.Void System.Collections.Generic.List`1::RemoveAt(System.Int32) specific to System.Collections.Generic.List`1 from the class pointer in r9, slot 8 (from memory offset 448) and stores in constant constant9
+		0x1811A5E3F: [!] Calls managed method System.Void System.Collections.Generic.List`1::RemoveAt(System.Int32) on instance {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} ;  - Mismatched parameters detected here.
+
+		0x1811A5E41: Compares System.Collections.Generic.List`1.RemoveAt and 0
+		0x1811A5E43: Jumps to 0x1811A5E68 if System.Collections.Generic.List`1.RemoveAt != 0 ;  - This is probably a goto, jumping to 0x1811A5E68 which is after end of current block @ 0x1811A5E4B (started at 0x1811A5DD9)
+
+		0x1811A5E45: [!] Adds 1 to the value {'local4' (type System.Int32)}, stored in rbx
+		0x1811A5E47: [!] Compares {'local4' (type System.Int32)} and {'_size' (type System.Int32)}
+		0x1811A5E4B: Clears register rax, yielding zero-local {'local8' (type System.Int32)}
+
+		Potential Loop Start (0x1811A5E4D):
+		0x1811A5E4D: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant11
+		0x1811A5E52: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rbp as new constant constant12
+		0x1811A5E57: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rsi as new constant constant13
+		0x1811A5E5C: Reads unknown value in stack, offset 72 (0x48) and stores the pointer in register rdi as new constant constant14
+		0x1811A5E67: [!] Returns {'local8' (type System.Int32)} from the function
+
+		0x1811A5E68: [!] Writes the constant 0x1 into operand 1 (type UInt64) in register rax
+		0x1811A5E6A: Jumps to 0x1811A5E4D - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x1811A5E6C: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1811A5E78: Clears register rcx, yielding zero-local {'local10' (type System.Int32)}
+		0x1811A5E7A: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2
+	System.Boolean ContainsKey(TKey key)
+		System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>> list = this.list
+		System.Int32 _size = list._size
+		ulong local4 = 0
+
+		if (_size > 0)
+		      = list.
+		      = this.
+
+		    [instruction error - managed method being called is null]
+		    System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>> list2 = this.list
+
+		    if (local4 >= )
+                goto INSN_1811A5E78
+            endif
+		    T[] _items = list2._items
+		    T t = _items[local4]
+		      = .
+
+		    list.RemoveAt()
+		    local4 += 1
+		endif
+        
+		ulong local8 = 0
+		return local8
+		throw new System.NullReferenceException()
+
+		INSN_1811A5E78:
+		ulong local10 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: System.Void Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::Clear():	Method Body (x86 ASM):
+		0x1811A5E80 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1811A5E84 mov rcx,[rcx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1811A5E88 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E8B je short 00000001811A5EB7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5E8D mov r8d,[rcx+18h]		; DEBUG: {Register}/R8D {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1811A5E91 inc dword ptr [rcx+1Ch]		; DEBUG: {Memory}/None {Register}/None ||| RCX | 28 | None ||| N/A | N/A
+		0x1811A5E94 mov dword ptr [rcx+18h],0		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 24 | None ||| N/A | 0
+		0x1811A5E9B test r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1811A5E9E jle short 00000001811A5EB2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5EA0 mov rcx,[rcx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1811A5EA4 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1811A5EA7 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1811A5EA9 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1811A5EAD jmp near ptr 00000001818C7350h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5EB2 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1811A5EB6 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1811A5EB7 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1811A5EBC int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2::Clear():
+		End of function at 0x1811A5EBD
+		Absolute End is at 0x1811A5EBD
+		Identified Jump Destination addresses:
+
+		0x1811A5E84: [!] Reads field list from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2)} and stores in a new local {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)}
+
+		0x1811A5E88: [!] Compares {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and 0
+		0x1811A5E8B: Jumps to 0x1811A5EB7 (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x1811A5E8D: [!] Reads field _size from {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local {'_size' (type System.Int32)}
+
+		0x1811A5E94: [!] Sets the field _size (Type System.Int32) on local {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} to the value stored in 0
+		0x1811A5E9B: [!] Compares {'_size' (type System.Int32)} and 0
+		0x1811A5E9E: Jumps to 0x1811A5EB2 (which is an if statement's body) if {'_size' (type System.Int32)} is less than or equal to 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1811A5EA0: [!] Reads field _items from {'list' (type System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>>)} and stores in a new local {'_items' (type T[])}
+
+		0x1811A5EA7: Clears register rdx, yielding zero-local {'local5' (type System.Int32)}
+		0x1811A5EAD: [!] Calls static managed method System.Void System.Array::Clear(System.Array,System.Int32,System.Int32) with arguments [{'_items' (type T[])}, {'local5' (type System.Int32)}, {'_size' (type System.Int32)}]
+
+		0x1811A5EAD: [!] Returns from the function
+
+		0x1811A5EB6: [!] Returns from the function
+
+		0x1811A5EB7: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2
+	System.Void Clear()
+		System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2/Entry<TKey,TValue>> list = this.list
+		System.Int32 _size = list._size
+		list._size = 0
+
+		if (_size > 0)
+		    T[] _items = list._items
+		    ulong local5 = 0
+
+		    System.Array.Clear(_items, local5, _size) //(Array array, Int32 index, Int32 length)
+		    return
+		endif
+        
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+

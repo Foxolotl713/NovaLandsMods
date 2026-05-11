@@ -1,0 +1,105 @@
+Type: <>c__DisplayClass122_1
+
+Method: System.Void BaseProductionBuilding/<>c__DisplayClass122_1::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BaseProductionBuilding/<>c__DisplayClass122_1::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BaseProductionBuilding/<>c__DisplayClass122_1
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean BaseProductionBuilding/<>c__DisplayClass122_1::<DropUnnecessaryResources>b__1(ResourceAmountPair):	Method Body (x86 ASM):
+		0x18059CDE0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18059CDE4 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18059CDE7 je short 000000018059CE15h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18059CDE9 mov rdx,[rdx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x18059CDED test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18059CDF0 je short 000000018059CE15h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18059CDF2 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x18059CDF6 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18059CDF9 je short 000000018059CE15h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18059CDFB mov rcx,[rax+0C0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x18059CE02 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18059CE05 je short 000000018059CE15h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18059CE07 mov eax,[rcx+48h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 72 | None ||| N/A | N/A
+		0x18059CE0A cmp [rdx+18h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 24 | None ||| N/A | N/A
+		0x18059CE0D sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18059CE10 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18059CE14 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18059CE15 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18059CE1A int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean BaseProductionBuilding/<>c__DisplayClass122_1::<DropUnnecessaryResources>b__1(ResourceAmountPair):
+		End of function at 0x18059CE1B
+		Absolute End is at 0x18059CE1B
+		Identified Jump Destination addresses:
+
+		0x18059CDE4: [!] Compares {'x' (function parameter, type ResourceAmountPair)} and 0
+		0x18059CDE7: Jumps to 0x18059CE15 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x18059CDE9: [!] Reads field resource from {'x' (function parameter, type ResourceAmountPair)} and stores in a new local {'resource' (type BaseResourceScriptableObject)}
+
+		0x18059CDED: [!] Compares {'resource' (type BaseResourceScriptableObject)} and 0
+		0x18059CDF0: Jumps to 0x18059CE15 (which throws a NRE) if resource equals 0. Implicitly present in managed code, so ignored here.
+		0x18059CDF2: [!] Reads field s from {'this' (function parameter, type BaseProductionBuilding/<>c__DisplayClass122_1)} and stores in a new local {'inventorySlot' (type MuttInventory.InventorySlot)}
+
+		0x18059CDF6: [!] Compares {'inventorySlot' (type MuttInventory.InventorySlot)} and 0
+		0x18059CDF9: Jumps to 0x18059CE15 (which throws a NRE) if inventorySlot equals 0. Implicitly present in managed code, so ignored here.
+		0x18059CDFB: [!] Reads field InventoryItem from {'inventorySlot' (type MuttInventory.InventorySlot)} and stores in a new local {'inventoryItem' (type MuttInventory.InventoryItem)}
+
+		0x18059CE02: [!] Compares {'inventoryItem' (type MuttInventory.InventoryItem)} and 0
+		0x18059CE05: Jumps to 0x18059CE15 (which throws a NRE) if inventoryItem equals 0. Implicitly present in managed code, so ignored here.
+		0x18059CE07: [!] Reads field ItemTypeId from {'inventoryItem' (type MuttInventory.InventoryItem)} and stores in a new local {'itemTypeId' (type System.Int32)}
+
+		0x18059CE0A: [!] Compares {field resourceId, read from local {'resource' (type BaseResourceScriptableObject)}} and {'itemTypeId' (type System.Int32)}
+		0x18059CE0D: [!] Sets the boolean {'local6' (type System.Boolean)} in rax to true if resource.resourceId is equal to itemTypeId, otherwise false.
+		0x18059CE14: [!] Returns {'local6' (type System.Boolean)} from the function
+
+		0x18059CE15: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BaseProductionBuilding/<>c__DisplayClass122_1
+	System.Boolean <DropUnnecessaryResources>b__1(ResourceAmountPair x)
+		BaseResourceScriptableObject resource = x.resource
+		MuttInventory.InventorySlot inventorySlot = this.s
+		MuttInventory.InventoryItem inventoryItem = inventorySlot.InventoryItem
+		System.Int32 itemTypeId = inventoryItem.ItemTypeId
+		System.Boolean local6 = resource.resourceId == itemTypeId
+		return local6
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: ldfld BaseResourceScriptableObject ResourceAmountPair::resource
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld MuttInventory.InventorySlot BaseProductionBuilding/<>c__DisplayClass122_1::s
+	IL_000d: ldfld MuttInventory.InventoryItem MuttInventory.InventorySlot::InventoryItem
+	IL_0012: ldfld System.Int32 MuttInventory.InventoryItem::ItemTypeId
+	IL_0017: stloc.1
+	IL_0018: ldloc.0
+	IL_0019: ldfld System.Int32 BaseResourceScriptableObject::resourceId
+	IL_001e: ldloc.1
+	IL_001f: ceq
+	IL_0021: ret
+	IL_0022: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0027: throw
+	
+

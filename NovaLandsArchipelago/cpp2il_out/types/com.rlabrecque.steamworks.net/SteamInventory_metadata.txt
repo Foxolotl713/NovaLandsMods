@@ -1,0 +1,676 @@
+Type: Steamworks.SteamInventory:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Method: GetResultStatus:
+		Accessibility: Public
+		Return Type: Steamworks.EResult
+		File Offset 0x00B889B0
+		Ram Offset 0x180b89bb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+	Method: GetResultItems:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B88A00
+		Ram Offset 0x180b89c00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: pOutItemsArray
+			Type: Steamworks.SteamItemDetails_t[]
+			Default Value: 
+		Parameter 2:
+			Name: punOutItemsArraySize
+			Type: System.UInt32
+			Default Value: 
+	Method: GetResultItemProperty:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B88AD0
+		Ram Offset 0x180b89cd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: unItemIndex
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: pchPropertyName
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: pchValueBuffer
+			Type: System.String
+			Default Value: 
+		Parameter 4:
+			Name: punValueBufferSizeOut
+			Type: System.UInt32
+			Default Value: 
+	Method: GetResultTimestamp:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x00B88D00
+		Ram Offset 0x180b89f00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+	Method: CheckResultSteamID:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B88D50
+		Ram Offset 0x180b89f50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: steamIDExpected
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: DestroyResult:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B88DB0
+		Ram Offset 0x180b89fb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+	Method: GetAllItems:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B88E00
+		Ram Offset 0x180b8a000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+	Method: GetItemsByID:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B88E60
+		Ram Offset 0x180b8a060
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: pInstanceIDs
+			Type: Steamworks.SteamItemInstanceID_t[]
+			Default Value: 
+		Parameter 2:
+			Name: unCountInstanceIDs
+			Type: System.UInt32
+			Default Value: 
+	Method: SerializeResult:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B88EE0
+		Ram Offset 0x180b8a0e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: pOutBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: punOutBufferSize
+			Type: System.UInt32
+			Default Value: 
+	Method: DeserializeResult:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B88F60
+		Ram Offset 0x180b8a160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pOutResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: pBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: unBufferSize
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: bRESERVED_MUST_BE_FALSE
+			Type: System.Boolean
+			Default Value: False
+	Method: GenerateItems:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B88FF0
+		Ram Offset 0x180b8a1f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: pArrayItemDefs
+			Type: Steamworks.SteamItemDef_t[]
+			Default Value: 
+		Parameter 2:
+			Name: punArrayQuantity
+			Type: System.UInt32[]
+			Default Value: 
+		Parameter 3:
+			Name: unArrayLength
+			Type: System.UInt32
+			Default Value: 
+	Method: GrantPromoItems:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B89100
+		Ram Offset 0x180b8a300
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+	Method: AddPromoItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B89160
+		Ram Offset 0x180b8a360
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: itemDef
+			Type: Steamworks.SteamItemDef_t
+			Default Value: 
+	Method: AddPromoItems:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B891C0
+		Ram Offset 0x180b8a3c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: pArrayItemDefs
+			Type: Steamworks.SteamItemDef_t[]
+			Default Value: 
+		Parameter 2:
+			Name: unArrayLength
+			Type: System.UInt32
+			Default Value: 
+	Method: ConsumeItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B89240
+		Ram Offset 0x180b8a440
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: itemConsume
+			Type: Steamworks.SteamItemInstanceID_t
+			Default Value: 
+		Parameter 2:
+			Name: unQuantity
+			Type: System.UInt32
+			Default Value: 
+	Method: ExchangeItems:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B892C0
+		Ram Offset 0x180b8a4c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: pArrayGenerate
+			Type: Steamworks.SteamItemDef_t[]
+			Default Value: 
+		Parameter 2:
+			Name: punArrayGenerateQuantity
+			Type: System.UInt32[]
+			Default Value: 
+		Parameter 3:
+			Name: unArrayGenerateLength
+			Type: System.UInt32
+			Default Value: 
+		Parameter 4:
+			Name: pArrayDestroy
+			Type: Steamworks.SteamItemInstanceID_t[]
+			Default Value: 
+		Parameter 5:
+			Name: punArrayDestroyQuantity
+			Type: System.UInt32[]
+			Default Value: 
+		Parameter 6:
+			Name: unArrayDestroyLength
+			Type: System.UInt32
+			Default Value: 
+	Method: TransferItemQuantity:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B89410
+		Ram Offset 0x180b8a610
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: itemIdSource
+			Type: Steamworks.SteamItemInstanceID_t
+			Default Value: 
+		Parameter 2:
+			Name: unQuantity
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: itemIdDest
+			Type: Steamworks.SteamItemInstanceID_t
+			Default Value: 
+	Method: SendItemDropHeartbeat:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B894A0
+		Ram Offset 0x180b8a6a0
+		Virtual Method Slot: 65535
+
+	Method: TriggerItemDrop:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B894F0
+		Ram Offset 0x180b8a6f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: dropListDefinition
+			Type: Steamworks.SteamItemDef_t
+			Default Value: 
+	Method: TradeItems:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B89550
+		Ram Offset 0x180b8a750
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: steamIDTradePartner
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 2:
+			Name: pArrayGive
+			Type: Steamworks.SteamItemInstanceID_t[]
+			Default Value: 
+		Parameter 3:
+			Name: pArrayGiveQuantity
+			Type: System.UInt32[]
+			Default Value: 
+		Parameter 4:
+			Name: nArrayGiveLength
+			Type: System.UInt32
+			Default Value: 
+		Parameter 5:
+			Name: pArrayGet
+			Type: Steamworks.SteamItemInstanceID_t[]
+			Default Value: 
+		Parameter 6:
+			Name: pArrayGetQuantity
+			Type: System.UInt32[]
+			Default Value: 
+		Parameter 7:
+			Name: nArrayGetLength
+			Type: System.UInt32
+			Default Value: 
+	Method: LoadItemDefinitions:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B896C0
+		Ram Offset 0x180b8a8c0
+		Virtual Method Slot: 65535
+
+	Method: GetItemDefinitionIDs:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B89710
+		Ram Offset 0x180b8a910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pItemDefIDs
+			Type: Steamworks.SteamItemDef_t[]
+			Default Value: 
+		Parameter 1:
+			Name: punItemDefIDsArraySize
+			Type: System.UInt32
+			Default Value: 
+	Method: GetItemDefinitionProperty:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B89850
+		Ram Offset 0x180b8aa50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: iDefinition
+			Type: Steamworks.SteamItemDef_t
+			Default Value: 
+		Parameter 1:
+			Name: pchPropertyName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: pchValueBuffer
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: punValueBufferSizeOut
+			Type: System.UInt32
+			Default Value: 
+	Method: RequestEligiblePromoItemDefinitionsIDs:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00B89A70
+		Ram Offset 0x180b8ac70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamID
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: GetEligiblePromoItemDefinitionIDs:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B89B00
+		Ram Offset 0x180b8ad00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamID
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: pItemDefIDs
+			Type: Steamworks.SteamItemDef_t[]
+			Default Value: 
+		Parameter 2:
+			Name: punItemDefIDsArraySize
+			Type: System.UInt32
+			Default Value: 
+	Method: StartPurchase:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00B89BD0
+		Ram Offset 0x180b8add0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pArrayItemDefs
+			Type: Steamworks.SteamItemDef_t[]
+			Default Value: 
+		Parameter 1:
+			Name: punArrayQuantity
+			Type: System.UInt32[]
+			Default Value: 
+		Parameter 2:
+			Name: unArrayLength
+			Type: System.UInt32
+			Default Value: 
+	Method: RequestPrices:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00B89D00
+		Ram Offset 0x180b8af00
+		Virtual Method Slot: 65535
+
+	Method: GetNumItemsWithPrices:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x00B89D90
+		Ram Offset 0x180b8af90
+		Virtual Method Slot: 65535
+
+	Method: GetItemsWithPrices:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B89DE0
+		Ram Offset 0x180b8afe0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pArrayItemDefs
+			Type: Steamworks.SteamItemDef_t[]
+			Default Value: 
+		Parameter 1:
+			Name: pCurrentPrices
+			Type: System.UInt64[]
+			Default Value: 
+		Parameter 2:
+			Name: pBasePrices
+			Type: System.UInt64[]
+			Default Value: 
+		Parameter 3:
+			Name: unArrayLength
+			Type: System.UInt32
+			Default Value: 
+	Method: GetItemPrice:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8A000
+		Ram Offset 0x180b8b200
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: iDefinition
+			Type: Steamworks.SteamItemDef_t
+			Default Value: 
+		Parameter 1:
+			Name: pCurrentPrice
+			Type: System.UInt64
+			Default Value: 
+		Parameter 2:
+			Name: pBasePrice
+			Type: System.UInt64
+			Default Value: 
+	Method: StartUpdateProperties:
+		Accessibility: Public
+		Return Type: Steamworks.SteamInventoryUpdateHandle_t
+		File Offset 0x00B8A080
+		Ram Offset 0x180b8b280
+		Virtual Method Slot: 65535
+
+	Method: RemoveProperty:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8A110
+		Ram Offset 0x180b8b310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.SteamInventoryUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: nItemID
+			Type: Steamworks.SteamItemInstanceID_t
+			Default Value: 
+		Parameter 2:
+			Name: pchPropertyName
+			Type: System.String
+			Default Value: 
+	Method: SetProperty:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8A250
+		Ram Offset 0x180b8b450
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.SteamInventoryUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: nItemID
+			Type: Steamworks.SteamItemInstanceID_t
+			Default Value: 
+		Parameter 2:
+			Name: pchPropertyName
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: pchPropertyValue
+			Type: System.String
+			Default Value: 
+	Method: SetProperty:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8A420
+		Ram Offset 0x180b8b620
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.SteamInventoryUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: nItemID
+			Type: Steamworks.SteamItemInstanceID_t
+			Default Value: 
+		Parameter 2:
+			Name: pchPropertyName
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: bValue
+			Type: System.Boolean
+			Default Value: 
+	Method: SetProperty:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8A560
+		Ram Offset 0x180b8b760
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.SteamInventoryUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: nItemID
+			Type: Steamworks.SteamItemInstanceID_t
+			Default Value: 
+		Parameter 2:
+			Name: pchPropertyName
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: nValue
+			Type: System.Int64
+			Default Value: 
+	Method: SetProperty:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8A6A0
+		Ram Offset 0x180b8b8a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.SteamInventoryUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: nItemID
+			Type: Steamworks.SteamItemInstanceID_t
+			Default Value: 
+		Parameter 2:
+			Name: pchPropertyName
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: flValue
+			Type: System.Single
+			Default Value: 
+	Method: SubmitUpdateProperties:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8A800
+		Ram Offset 0x180b8ba00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Steamworks.SteamInventoryUpdateHandle_t
+			Default Value: 
+		Parameter 1:
+			Name: pResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+	Method: InspectItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8A860
+		Ram Offset 0x180b8ba60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pResultHandle
+			Type: Steamworks.SteamInventoryResult_t
+			Default Value: 
+		Parameter 1:
+			Name: pchItemToken
+			Type: System.String
+			Default Value: 

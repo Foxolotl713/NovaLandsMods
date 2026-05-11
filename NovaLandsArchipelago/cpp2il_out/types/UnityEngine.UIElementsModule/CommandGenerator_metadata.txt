@@ -1,0 +1,506 @@
+Type: UnityEngine.UIElements.UIR.Implementation.CommandGenerator:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: k_GenerateEntries
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: k_ConvertEntriesToCommandsMarker
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: k_GenerateClosingCommandsMarker
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: k_NudgeVerticesMarker
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: k_UpdateOpacityIdMarker
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: k_ComputeTransformMatrixMarker
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: s_blitMaterial_LinearToGamma
+		Type: UnityEngine.Material
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Static Field: s_blitMaterial_GammaToLinear
+		Type: UnityEngine.Material
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Static Field: s_blitMaterial_NoChange
+		Type: UnityEngine.Material
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Static Field: s_blitShader
+		Type: UnityEngine.Shader
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Method: GetVerticesTransformInfo:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02657430
+		Ram Offset 0x182658630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: transform
+			Type: UnityEngine.Matrix4x4
+			Default Value: 
+	Method: ComputeTransformMatrix:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x026575F0
+		Ram Offset 0x1826587f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: ancestor
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: UnityEngine.Matrix4x4
+			Default Value: 
+	Method: IsParentOrAncestorOf:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x02657760
+		Ram Offset 0x182658960
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: child
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+	Method: PaintElement:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.UIR.Implementation.UIRStylePainter/ClosingInfo
+		File Offset 0x026577B0
+		Ram Offset 0x1826589b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderChain
+			Type: UnityEngine.UIElements.UIR.RenderChain
+			Default Value: 
+		Parameter 1:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 2:
+			Name: stats
+			Type: UnityEngine.UIElements.UIR.ChainBuilderStats
+			Default Value: 
+	Method: InvokeGenerateVisualContent:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02659160
+		Ram Offset 0x18265a360
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: ctx
+			Type: UnityEngine.UIElements.MeshGenerationContext
+			Default Value: 
+	Method: CreateBlitShader:
+		Accessibility: Private
+		Return Type: UnityEngine.Material
+		File Offset 0x02659250
+		Ram Offset 0x18265a450
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: colorConversion
+			Type: System.Single
+			Default Value: 
+	Method: GetBlitMaterial:
+		Accessibility: Private
+		Return Type: UnityEngine.Material
+		File Offset 0x026595F0
+		Ram Offset 0x18265a7f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: mode
+			Type: UnityEngine.UIElements.VisualElement/RenderTargetMode
+			Default Value: 
+	Method: ClosePaintElement:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02659A20
+		Ram Offset 0x18265ac20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: closingInfo
+			Type: UnityEngine.UIElements.UIR.Implementation.UIRStylePainter/ClosingInfo
+			Default Value: 
+		Parameter 2:
+			Name: renderChain
+			Type: UnityEngine.UIElements.UIR.RenderChain
+			Default Value: 
+		Parameter 3:
+			Name: stats
+			Type: UnityEngine.UIElements.UIR.ChainBuilderStats
+			Default Value: 
+	Method: UpdateOrAllocate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02659C90
+		Ram Offset 0x18265ae90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: UnityEngine.UIElements.UIR.MeshHandle
+			Default Value: 
+		Parameter 1:
+			Name: vertexCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: indexCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: device
+			Type: UnityEngine.UIElements.UIR.UIRenderDevice
+			Default Value: 
+		Parameter 4:
+			Name: verts
+			Type: Unity.Collections.NativeSlice`1<UnityEngine.UIElements.Vertex>
+			Default Value: 
+		Parameter 5:
+			Name: indices
+			Type: Unity.Collections.NativeSlice`1<System.UInt16>
+			Default Value: 
+		Parameter 6:
+			Name: indexOffset
+			Type: System.UInt16
+			Default Value: 
+		Parameter 7:
+			Name: stats
+			Type: UnityEngine.UIElements.UIR.ChainBuilderStats
+			Default Value: 
+	Method: UpdateOpacityId:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02659E90
+		Ram Offset 0x18265b090
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: renderChain
+			Type: UnityEngine.UIElements.UIR.RenderChain
+			Default Value: 
+	Method: DoUpdateOpacityId:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02659F50
+		Ram Offset 0x18265b150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: renderChain
+			Type: UnityEngine.UIElements.UIR.RenderChain
+			Default Value: 
+		Parameter 2:
+			Name: mesh
+			Type: UnityEngine.UIElements.UIR.MeshHandle
+			Default Value: 
+	Method: NudgeVerticesToNewSpace:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0265A0D0
+		Ram Offset 0x18265b2d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: renderChain
+			Type: UnityEngine.UIElements.UIR.RenderChain
+			Default Value: 
+		Parameter 2:
+			Name: device
+			Type: UnityEngine.UIElements.UIR.UIRenderDevice
+			Default Value: 
+	Method: PrepareNudgeVertices:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0265A710
+		Ram Offset 0x18265b910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: device
+			Type: UnityEngine.UIElements.UIR.UIRenderDevice
+			Default Value: 
+		Parameter 2:
+			Name: mesh
+			Type: UnityEngine.UIElements.UIR.MeshHandle
+			Default Value: 
+		Parameter 3:
+			Name: src
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 4:
+			Name: dst
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 5:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: InjectMeshDrawCommand:
+		Accessibility: Private
+		Return Type: UnityEngine.UIElements.UIR.RenderChainCommand
+		File Offset 0x0265A840
+		Ram Offset 0x18265ba40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderChain
+			Type: UnityEngine.UIElements.UIR.RenderChain
+			Default Value: 
+		Parameter 1:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 2:
+			Name: cmdPrev
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+		Parameter 3:
+			Name: cmdNext
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+		Parameter 4:
+			Name: mesh
+			Type: UnityEngine.UIElements.UIR.MeshHandle
+			Default Value: 
+		Parameter 5:
+			Name: indexCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 6:
+			Name: indexOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 7:
+			Name: material
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 8:
+			Name: texture
+			Type: UnityEngine.UIElements.TextureId
+			Default Value: 
+		Parameter 9:
+			Name: stencilRef
+			Type: System.Int32
+			Default Value: 
+	Method: InjectClosingMeshDrawCommand:
+		Accessibility: Private
+		Return Type: UnityEngine.UIElements.UIR.RenderChainCommand
+		File Offset 0x0265AAD0
+		Ram Offset 0x18265bcd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderChain
+			Type: UnityEngine.UIElements.UIR.RenderChain
+			Default Value: 
+		Parameter 1:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 2:
+			Name: cmdPrev
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+		Parameter 3:
+			Name: cmdNext
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+		Parameter 4:
+			Name: mesh
+			Type: UnityEngine.UIElements.UIR.MeshHandle
+			Default Value: 
+		Parameter 5:
+			Name: indexCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 6:
+			Name: indexOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 7:
+			Name: material
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 8:
+			Name: texture
+			Type: UnityEngine.UIElements.TextureId
+			Default Value: 
+		Parameter 9:
+			Name: stencilRef
+			Type: System.Int32
+			Default Value: 
+	Method: FindCommandInsertionPoint:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0265AD60
+		Ram Offset 0x18265bf60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: prev
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+		Parameter 2:
+			Name: next
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+	Method: FindClosingCommandInsertionPoint:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0265B260
+		Ram Offset 0x18265c460
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+		Parameter 1:
+			Name: prev
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+		Parameter 2:
+			Name: next
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+	Method: InjectCommandInBetween:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0265B720
+		Ram Offset 0x18265c920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderChain
+			Type: UnityEngine.UIElements.UIR.RenderChain
+			Default Value: 
+		Parameter 1:
+			Name: cmd
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+		Parameter 2:
+			Name: prev
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+		Parameter 3:
+			Name: next
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+	Method: InjectClosingCommandInBetween:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0265BAA0
+		Ram Offset 0x18265cca0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderChain
+			Type: UnityEngine.UIElements.UIR.RenderChain
+			Default Value: 
+		Parameter 1:
+			Name: cmd
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+		Parameter 2:
+			Name: prev
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+		Parameter 3:
+			Name: next
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+	Method: ResetCommands:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0265BE50
+		Ram Offset 0x18265d050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderChain
+			Type: UnityEngine.UIElements.UIR.RenderChain
+			Default Value: 
+		Parameter 1:
+			Name: ve
+			Type: UnityEngine.UIElements.VisualElement
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0265C4B0
+		Ram Offset 0x18265d6b0
+		Virtual Method Slot: 65535

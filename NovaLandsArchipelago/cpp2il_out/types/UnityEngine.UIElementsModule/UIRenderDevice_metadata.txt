@@ -1,0 +1,807 @@
+Type: UnityEngine.UIElements.UIR.UIRenderDevice:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.IDisposable
+
+	Nested Types:
+		UnityEngine.UIElements.UIR.UIRenderDevice/AllocToUpdate
+		UnityEngine.UIElements.UIR.UIRenderDevice/AllocToFree
+		UnityEngine.UIElements.UIR.UIRenderDevice/DeviceToFree
+		UnityEngine.UIElements.UIR.UIRenderDevice/EvaluationState
+		UnityEngine.UIElements.UIR.UIRenderDevice/DrawStatistics
+		UnityEngine.UIElements.UIR.UIRenderDevice/<>c
+
+	Static Field: m_DeviceFreeQueue
+		Type: System.Collections.Generic.LinkedList`1<UnityEngine.UIElements.UIR.UIRenderDevice/DeviceToFree>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: m_ActiveDeviceCount
+		Type: System.Int32
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: m_SubscribedToNotifications
+		Type: System.Boolean
+		Offset in Defining Type: 0xC
+		Has Default: False
+
+	Static Field: m_SynchronousFree
+		Type: System.Boolean
+		Offset in Defining Type: 0xD
+		Has Default: False
+
+	Static Field: s_GradientSettingsTexID
+		Type: System.Int32
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_MockDevice
+		Type: System.Boolean
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: s_ShaderInfoTexID
+		Type: System.Int32
+		Offset in Defining Type: 0x14
+		Has Default: False
+
+	Field: m_DefaultStencilState
+		Type: System.IntPtr
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: s_TransformsPropID
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: s_ClipRectsPropID
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Static Field: s_MarkerAllocate
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_VertexDecl
+		Type: System.IntPtr
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: s_MarkerFree
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_FirstPage
+		Type: UnityEngine.UIElements.UIR.Page
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: s_MarkerAdvanceFrame
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_NextPageVertexCount
+		Type: System.UInt32
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_LargeMeshVertexCount
+		Type: System.UInt32
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Static Field: s_MarkerFence
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_IndexToVertexCountRatio
+		Type: System.Single
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_DeferredFrees
+		Type: System.Collections.Generic.List`1<System.Collections.Generic.List`1<UnityEngine.UIElements.UIR.UIRenderDevice/AllocToFree>>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Static Field: s_MarkerBeforeDraw
+		Type: Unity.Profiling.ProfilerMarker
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: m_Updates
+		Type: System.Collections.Generic.List`1<System.Collections.Generic.List`1<UnityEngine.UIElements.UIR.UIRenderDevice/AllocToUpdate>>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Static Field: s_VertexTexturingIsAvailable
+		Type: System.Nullable`1<System.Boolean>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Static Field: s_ShaderModelIs35
+		Type: System.Nullable`1<System.Boolean>
+		Offset in Defining Type: 0x4A
+		Has Default: False
+
+	Field: m_Fences
+		Type: System.UInt32[]
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Static Field: s_DefaultShaderInfoTexFloat
+		Type: UnityEngine.Texture2D
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: m_StandardMatProps
+		Type: UnityEngine.MaterialPropertyBlock
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Static Field: s_DefaultShaderInfoTexARGB8
+		Type: UnityEngine.Texture2D
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: m_FrameIndex
+		Type: System.UInt32
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: m_NextUpdateID
+		Type: System.UInt32
+		Offset in Defining Type: 0x64
+		Has Default: False
+
+	Field: m_DrawStats
+		Type: UnityEngine.UIElements.UIR.UIRenderDevice/DrawStatistics
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: m_MeshHandles
+		Type: UnityEngine.UIElements.UIR.LinkedPool`1<UnityEngine.UIElements.UIR.MeshHandle>
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: m_DrawParams
+		Type: UnityEngine.UIElements.UIR.DrawParams
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: m_TextureSlotManager
+		Type: UnityEngine.UIElements.UIR.TextureSlotManager
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: <maxVerticesPerPage>k__BackingField
+		Type: System.UInt32
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: <breakBatches>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0xAC
+		Has Default: False
+
+	Field: <disposed>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0xAD
+		Has Default: False
+
+	Method: get_maxVerticesPerPage:
+		Accessibility: Assembly
+		Return Type: System.UInt32
+		File Offset 0x009F6F60
+		Ram Offset 0x1809f8160
+		Virtual Method Slot: 65535
+
+	Method: get_breakBatches:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x02636D10
+		Ram Offset 0x182637f10
+		Virtual Method Slot: 65535
+
+	Method: set_breakBatches:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02636D20
+		Ram Offset 0x182637f20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02636D30
+		Ram Offset 0x182637f30
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x026374C0
+		Ram Offset 0x1826386c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: initialVertexCapacity
+			Type: System.UInt32
+			Default Value: 0
+		Parameter 1:
+			Name: initialIndexCapacity
+			Type: System.UInt32
+			Default Value: 0
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x026374E0
+		Ram Offset 0x1826386e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: initialVertexCapacity
+			Type: System.UInt32
+			Default Value: 
+		Parameter 1:
+			Name: initialIndexCapacity
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: mockDevice
+			Type: System.Boolean
+			Default Value: 
+	Method: get_defaultShaderInfoTexFloat:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Texture2D
+		File Offset 0x02637F50
+		Ram Offset 0x182639150
+		Virtual Method Slot: 65535
+
+	Method: get_defaultShaderInfoTexARGB8:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Texture2D
+		File Offset 0x026386C0
+		Ram Offset 0x1826398c0
+		Virtual Method Slot: 65535
+
+	Method: get_vertexTexturingIsAvailable:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x02638BD0
+		Ram Offset 0x182639dd0
+		Virtual Method Slot: 65535
+
+	Method: get_shaderModelIs35:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x02638E50
+		Ram Offset 0x18263a050
+		Virtual Method Slot: 65535
+
+	Method: InitVertexDeclaration:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x026390D0
+		Ram Offset 0x18263a2d0
+		Virtual Method Slot: 65535
+
+	Method: CompleteCreation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02639280
+		Ram Offset 0x18263a480
+		Virtual Method Slot: 65535
+
+	Method: get_fullyCreated:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x02639500
+		Ram Offset 0x18263a700
+		Virtual Method Slot: 65535
+
+	Method: get_disposed:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x02639510
+		Ram Offset 0x18263a710
+		Virtual Method Slot: 65535
+
+	Method: set_disposed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02639520
+		Ram Offset 0x18263a720
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02639530
+		Ram Offset 0x18263a730
+		Virtual Method Slot: 4
+
+	Method: Dispose:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x02639590
+		Ram Offset 0x18263a790
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: Allocate:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.UIR.MeshHandle
+		File Offset 0x02639750
+		Ram Offset 0x18263a950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: vertexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 1:
+			Name: indexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: vertexData
+			Type: Unity.Collections.NativeSlice`1<UnityEngine.UIElements.Vertex>
+			Default Value: 
+		Parameter 3:
+			Name: indexData
+			Type: Unity.Collections.NativeSlice`1<System.UInt16>
+			Default Value: 
+		Parameter 4:
+			Name: indexOffset
+			Type: System.UInt16
+			Default Value: 
+	Method: Update:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02639820
+		Ram Offset 0x18263aa20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: mesh
+			Type: UnityEngine.UIElements.UIR.MeshHandle
+			Default Value: 
+		Parameter 1:
+			Name: vertexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: vertexData
+			Type: Unity.Collections.NativeSlice`1<UnityEngine.UIElements.Vertex>
+			Default Value: 
+	Method: Update:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02639AB0
+		Ram Offset 0x18263acb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: mesh
+			Type: UnityEngine.UIElements.UIR.MeshHandle
+			Default Value: 
+		Parameter 1:
+			Name: vertexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: indexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: vertexData
+			Type: Unity.Collections.NativeSlice`1<UnityEngine.UIElements.Vertex>
+			Default Value: 
+		Parameter 4:
+			Name: indexData
+			Type: Unity.Collections.NativeSlice`1<System.UInt16>
+			Default Value: 
+		Parameter 5:
+			Name: indexOffset
+			Type: System.UInt16
+			Default Value: 
+	Method: UpdateCopyBackIndices:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02639E30
+		Ram Offset 0x18263b030
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: mesh
+			Type: UnityEngine.UIElements.UIR.MeshHandle
+			Default Value: 
+		Parameter 1:
+			Name: copyBackIndices
+			Type: System.Boolean
+			Default Value: 
+	Method: ActiveUpdatesForMeshHandle:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.List`1<UnityEngine.UIElements.UIR.UIRenderDevice/AllocToUpdate>
+		File Offset 0x02639FD0
+		Ram Offset 0x18263b1d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: mesh
+			Type: UnityEngine.UIElements.UIR.MeshHandle
+			Default Value: 
+	Method: TryAllocFromPage:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0263A060
+		Ram Offset 0x18263b260
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: page
+			Type: UnityEngine.UIElements.UIR.Page
+			Default Value: 
+		Parameter 1:
+			Name: vertexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: indexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: va
+			Type: UnityEngine.UIElements.UIR.Alloc
+			Default Value: 
+		Parameter 4:
+			Name: ia
+			Type: UnityEngine.UIElements.UIR.Alloc
+			Default Value: 
+		Parameter 5:
+			Name: shortLived
+			Type: System.Boolean
+			Default Value: 
+	Method: Allocate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0263A2A0
+		Ram Offset 0x18263b4a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: meshHandle
+			Type: UnityEngine.UIElements.UIR.MeshHandle
+			Default Value: 
+		Parameter 1:
+			Name: vertexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: indexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: vertexData
+			Type: Unity.Collections.NativeSlice`1<UnityEngine.UIElements.Vertex>
+			Default Value: 
+		Parameter 4:
+			Name: indexData
+			Type: Unity.Collections.NativeSlice`1<System.UInt16>
+			Default Value: 
+		Parameter 5:
+			Name: shortLived
+			Type: System.Boolean
+			Default Value: 
+	Method: UpdateAfterGPUUsedData:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0263AE40
+		Ram Offset 0x18263c040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: mesh
+			Type: UnityEngine.UIElements.UIR.MeshHandle
+			Default Value: 
+		Parameter 1:
+			Name: vertexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: indexCount
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: vertexData
+			Type: Unity.Collections.NativeSlice`1<UnityEngine.UIElements.Vertex>
+			Default Value: 
+		Parameter 4:
+			Name: indexData
+			Type: Unity.Collections.NativeSlice`1<System.UInt16>
+			Default Value: 
+		Parameter 5:
+			Name: indexOffset
+			Type: System.UInt16
+			Default Value: 
+		Parameter 6:
+			Name: allocToUpdate
+			Type: UnityEngine.UIElements.UIR.UIRenderDevice/AllocToUpdate
+			Default Value: 
+		Parameter 7:
+			Name: copyBackIndices
+			Type: System.Boolean
+			Default Value: 
+	Method: Free:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0263B950
+		Ram Offset 0x18263cb50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: mesh
+			Type: UnityEngine.UIElements.UIR.MeshHandle
+			Default Value: 
+	Method: OnFrameRenderingBegin:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0263C4F0
+		Ram Offset 0x18263d6f0
+		Virtual Method Slot: 65535
+
+	Method: PtrToSlice:
+		Accessibility: Assembly
+		Return Type: Unity.Collections.NativeSlice`1<T>
+		File Offset 0x00DF1900
+		Ram Offset 0x180df2b00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: p
+			Type: System.Void*
+			Default Value: 
+		Parameter 1:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: ApplyDrawCommandState:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0263C590
+		Ram Offset 0x18263d790
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+		Parameter 1:
+			Name: textureSlot
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: newMat
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 3:
+			Name: newMatDiffers
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: st
+			Type: UnityEngine.UIElements.UIR.UIRenderDevice/EvaluationState
+			Default Value: 
+	Method: ApplyBatchState:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0263C790
+		Ram Offset 0x18263d990
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: st
+			Type: UnityEngine.UIElements.UIR.UIRenderDevice/EvaluationState
+			Default Value: 
+		Parameter 1:
+			Name: allowMaterialChange
+			Type: System.Boolean
+			Default Value: 
+	Method: EvaluateChain:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0263C990
+		Ram Offset 0x18263db90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: head
+			Type: UnityEngine.UIElements.UIR.RenderChainCommand
+			Default Value: 
+		Parameter 1:
+			Name: initialMat
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 2:
+			Name: defaultMat
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 3:
+			Name: gradientSettings
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 4:
+			Name: shaderInfo
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 5:
+			Name: pixelsPerPoint
+			Type: System.Single
+			Default Value: 
+		Parameter 6:
+			Name: transforms
+			Type: Unity.Collections.NativeSlice`1<UnityEngine.UIElements.UIR.Transform3x4>
+			Default Value: 
+		Parameter 7:
+			Name: clipRects
+			Type: Unity.Collections.NativeSlice`1<UnityEngine.Vector4>
+			Default Value: 
+		Parameter 8:
+			Name: stateMatProps
+			Type: UnityEngine.MaterialPropertyBlock
+			Default Value: 
+		Parameter 9:
+			Name: allowMaterialChange
+			Type: System.Boolean
+			Default Value: 
+		Parameter 10:
+			Name: immediateException
+			Type: System.Exception
+			Default Value: 
+	Method: UpdateFenceValue:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0263D990
+		Ram Offset 0x18263eb90
+		Virtual Method Slot: 65535
+
+	Method: KickRanges:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0263DA70
+		Ram Offset 0x18263ec70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ranges
+			Type: UnityEngine.UIElements.UIR.DrawBufferRange*
+			Default Value: 
+		Parameter 1:
+			Name: rangesReady
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: rangesStart
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: rangesCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: curPage
+			Type: UnityEngine.UIElements.UIR.Page
+			Default Value: 
+	Method: DrawRanges:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00DF16D0
+		Ram Offset 0x180df28d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ib
+			Type: UnityEngine.UIElements.UIR.Utility/GPUBuffer`1<I>
+			Default Value: 
+		Parameter 1:
+			Name: vb
+			Type: UnityEngine.UIElements.UIR.Utility/GPUBuffer`1<T>
+			Default Value: 
+		Parameter 2:
+			Name: ranges
+			Type: Unity.Collections.NativeSlice`1<UnityEngine.UIElements.UIR.DrawBufferRange>
+			Default Value: 
+	Method: WaitOnCpuFence:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0263DD30
+		Ram Offset 0x18263ef30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fence
+			Type: System.UInt32
+			Default Value: 
+	Method: AdvanceFrame:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0263DE20
+		Ram Offset 0x18263f020
+		Virtual Method Slot: 65535
+
+	Method: PruneUnusedPages:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0263ED30
+		Ram Offset 0x18263ff30
+		Virtual Method Slot: 65535
+
+	Method: PrepareForGfxDeviceRecreate:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0263EFC0
+		Ram Offset 0x1826401c0
+		Virtual Method Slot: 65535
+
+	Method: WrapUpGfxDeviceRecreate:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0263F310
+		Ram Offset 0x182640510
+		Virtual Method Slot: 65535
+
+	Method: FlushAllPendingDeviceDisposes:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0263F370
+		Ram Offset 0x182640570
+		Virtual Method Slot: 65535
+
+	Method: GatherDrawStatistics:
+		Accessibility: Assembly
+		Return Type: UnityEngine.UIElements.UIR.UIRenderDevice/DrawStatistics
+		File Offset 0x0263F410
+		Ram Offset 0x182640610
+		Virtual Method Slot: 65535
+
+	Method: ProcessDeviceFreeQueue:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0263F430
+		Ram Offset 0x182640630
+		Virtual Method Slot: 65535
+
+	Method: OnEngineUpdateGlobal:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0263F9F0
+		Ram Offset 0x182640bf0
+		Virtual Method Slot: 65535
+
+	Method: OnFlushPendingResources:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0263FA30
+		Ram Offset 0x182640c30
+		Virtual Method Slot: 65535

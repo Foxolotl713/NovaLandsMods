@@ -1,0 +1,2006 @@
+Type: DelaunayHelpers
+
+Method: System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> Delaunay.DelaunayHelpers::VisibleLineSegments(System.Collections.Generic.List`1<Delaunay.Edge>):	Method Body (x86 ASM):
+		0x180911F00 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180911F02 push rbp		; DEBUG: {Register}/RBP {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180911F03 push rsi		; DEBUG: {Register}/RSI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180911F04 sub rsp,40h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 64
+		0x180911F08 cmp byte ptr [18329B8DBh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516891 | None ||| N/A | 0
+		0x180911F0F mov rsi,rcx		; DEBUG: {Register}/RSI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180911F12 jne short 0000000180911F6Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911F14 lea rcx,[1830F22B0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774512 | None ||| N/A | N/A
+		0x180911F1B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911F20 lea rcx,[1830F22B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774520 | None ||| N/A | N/A
+		0x180911F27 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911F2C lea rcx,[1830F2298h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774488 | None ||| N/A | N/A
+		0x180911F33 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911F38 lea rcx,[1830F22A8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774504 | None ||| N/A | N/A
+		0x180911F3F call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911F44 lea rcx,[1830F2288h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774472 | None ||| N/A | N/A
+		0x180911F4B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911F50 lea rcx,[1830F2290h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774480 | None ||| N/A | N/A
+		0x180911F57 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911F5C lea rcx,[1830F2280h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774464 | None ||| N/A | N/A
+		0x180911F63 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911F68 mov byte ptr [18329B8DBh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516891 | None ||| N/A | 1
+		0x180911F6F mov rcx,[1830F2280h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774464 | None ||| N/A | N/A
+		0x180911F76 mov [rsp+68h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 104 | None ||| N/A | N/A
+		0x180911F7B mov [rsp+78h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 120 | None ||| N/A | N/A
+		0x180911F80 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911F85 mov rdx,[1830F22A8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493774504 | None ||| N/A | N/A
+		0x180911F8C mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180911F8F mov rbp,rax		; DEBUG: {Register}/RBP {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180911F92 call 0000000181219840h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911F97 xor ebx,ebx		; DEBUG: {Register}/EBX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x180911F99 mov ecx,ebx		; DEBUG: {Register}/ECX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x180911F9B test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180911F9E je near ptr 0000000180912080h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911FA4 cmp ecx,[rsi+18h]		; DEBUG: {Register}/ECX {Memory}/None ||| RSI | 24 | None ||| N/A | N/A
+		0x180911FA7 jge near ptr 000000018091206Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911FAD cmp ebx,[rsi+18h]		; DEBUG: {Register}/EBX {Memory}/None ||| RSI | 24 | None ||| N/A | N/A
+		0x180911FB0 jae near ptr 000000018091208Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911FB6 mov rcx,[rsi+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSI | 16 | None ||| N/A | N/A
+		0x180911FBA test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180911FBD je near ptr 0000000180912080h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911FC3 cmp ebx,[rcx+18h]		; DEBUG: {Register}/EBX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x180911FC6 jae near ptr 0000000180912086h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911FCC movsxd rax,ebx		; DEBUG: {Register}/RAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x180911FCF mov rdi,[rcx+rax*8+20h]		; DEBUG: {Register}/RDI {Memory}/None ||| RCX | 32 | RAX ||| N/A | N/A
+		0x180911FD4 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180911FD7 je near ptr 0000000180912080h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911FDD cmp qword ptr [rdi+30h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 48 | None ||| N/A | 0
+		0x180911FE2 jbe short 0000000180912062h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911FE4 mov rdx,[rdi+30h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDI | 48 | None ||| N/A | N/A
+		0x180911FE8 lea rcx,[rsp+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180911FED xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180911FF0 call 000000018000CD40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180911FF5 mov rdx,[rdi+30h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDI | 48 | None ||| N/A | N/A
+		0x180911FF9 movsd xmm0,qword ptr [rax]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180911FFD mov r14d,[rax+8]		; DEBUG: {Register}/R14D {Memory}/None ||| RAX | 8 | None ||| N/A | N/A
+		0x180912001 movsd qword ptr [rsp+60h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 96 | None ||| N/A | N/A
+		0x180912007 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18091200A je short 0000000180912080h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091200C mov r8d,1		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 1
+		0x180912012 lea rcx,[rsp+30h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180912017 call 000000018000CD40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091201C mov rcx,[1830F22B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774520 | None ||| N/A | N/A
+		0x180912023 movsd xmm0,qword ptr [rax]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180912027 mov edi,[rax+8]		; DEBUG: {Register}/EDI {Memory}/None ||| RAX | 8 | None ||| N/A | N/A
+		0x18091202A movsd qword ptr [rsp+70h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 112 | None ||| N/A | N/A
+		0x180912030 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912035 movsd xmm0,qword ptr [rsp+60h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x18091203B movsd qword ptr [rax+10h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RAX | 16 | None ||| N/A | N/A
+		0x180912040 movsd xmm0,qword ptr [rsp+70h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x180912046 movsd qword ptr [rax+1Ch],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RAX | 28 | None ||| N/A | N/A
+		0x18091204B mov [rax+24h],edi		; DEBUG: {Memory}/None {Register}/EDI ||| RAX | 36 | None ||| N/A | N/A
+		0x18091204E mov [rax+18h],r14d		; DEBUG: {Memory}/None {Register}/R14D ||| RAX | 24 | None ||| N/A | N/A
+		0x180912052 test rbp,rbp		; DEBUG: {Register}/RBP {Register}/RBP ||| None | 0 | None ||| N/A | N/A
+		0x180912055 je short 0000000180912080h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912057 mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18091205A mov rcx,rbp		; DEBUG: {Register}/RCX {Register}/RBP ||| None | 0 | None ||| N/A | N/A
+		0x18091205D call 000000018000CE00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912062 inc ebx		; DEBUG: {Register}/EBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912064 mov ecx,ebx		; DEBUG: {Register}/ECX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x180912066 jmp near ptr 0000000180911FA4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091206B mov r14,[rsp+78h]		; DEBUG: {Register}/R14 {Memory}/None ||| RSP | 120 | None ||| N/A | N/A
+		0x180912070 mov rax,rbp		; DEBUG: {Register}/RAX {Register}/RBP ||| None | 0 | None ||| N/A | N/A
+		0x180912073 mov rdi,[rsp+68h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 104 | None ||| N/A | N/A
+		0x180912078 add rsp,40h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 64
+		0x18091207C pop rsi		; DEBUG: {Register}/RSI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091207D pop rbp		; DEBUG: {Register}/RBP {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091207E pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091207F ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912080 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912085 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091208C xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x18091208E call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912093 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Static Method System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> Delaunay.DelaunayHelpers::VisibleLineSegments(System.Collections.Generic.List`1<Delaunay.Edge>):
+		End of function at 0x180912094
+		Absolute End is at 0x180912094
+		Identified Jump Destination addresses:
+
+		0x180911F00: Saves the content of rbx to the stack
+		0x180911F02: Saves the content of rbp to the stack
+		0x180911F03: Saves the content of rsi to the stack
+		0x180911F08: Compares {Unknown Global at 0x18329B8DB, first ten bytes are [0 148 112 234 2 224 93 4 0 117], or as chars " pêà] u"} and 0
+		0x180911F0F: Copies {'edges' (function parameter, type System.Collections.Generic.List`1<Delaunay.Edge>)} from rcx into rsi
+		0x180911F12: Jumps to 0x180911F6F if {Unknown Global at 0x18329B8DB, first ten bytes are [0 148 112 234 2 224 93 4 0 117], or as chars " pêà] u"} != 0
+
+		0x180911F14: Loads the global generic method reference for method TValue System.Collections.Generic.Dictionary`2::get_Item(TKey) on type System.Collections.Generic.Dictionary`2<Delaunay.LR.Side,System.Nullable`1<UnityEngine.Vector2>> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180911F1B: Initializes runtime metadata value 
+		0x180911F20: Loads the type definition for managed type Delaunay.Geo.LineSegment as a constant "LineSegment" in rcx
+		0x180911F27: Initializes runtime metadata value Delaunay.Geo.LineSegment
+		0x180911F2C: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::Add(T) on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'Add' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180911F33: Initializes runtime metadata value 
+		0x180911F38: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::.ctor() on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180911F3F: Initializes runtime metadata value 
+		0x180911F44: Loads the global generic method reference for method System.Int32 System.Collections.Generic.List`1::get_Count() on type System.Collections.Generic.List`1<Delaunay.Edge> and stores the result in constant {'get_Count' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180911F4B: Initializes runtime metadata value 
+		0x180911F50: Loads the global generic method reference for method T System.Collections.Generic.List`1::get_Item(System.Int32) on type System.Collections.Generic.List`1<Delaunay.Edge> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180911F57: Initializes runtime metadata value 
+		0x180911F5C: Loads the type definition for managed type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> as a constant "List`1" in rcx
+		0x180911F63: Initializes runtime metadata value System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>
+		0x180911F6F: Loads the type definition for managed type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> as a constant "List`1" in rcx
+		0x180911F80: [!] Allocates an instance of type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores it as list in rax.
+
+		0x180911F85: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::.ctor() on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180911F8C: Copies {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from rax into rcx
+		0x180911F8F: Copies {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from rax into rbp
+		0x180911F92: [!] Calls managed method System.Void System.Collections.Generic.List`1::.ctor() on instance {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180911F97: Clears register rbx, yielding zero-local {'local2' (type System.Int32)}
+		0x180911F99: Copies {'local2' (type System.Int32)} from rbx into rcx
+		0x180911F9B: [!] Compares {'edges' (function parameter, type System.Collections.Generic.List`1<Delaunay.Edge>)} and 0
+		0x180911F9E: Jumps to 0x180912080 (which throws a NRE) if edges equals 0. Implicitly present in managed code, so ignored here.
+
+		Potential Loop Start (0x180911FA4):
+		0x180911FA4: [!] Compares {'local2' (type System.Int32)} against itself
+		0x180911FA7: Jumps to 0x18091206B if {'local2' (type System.Int32)} is greater than or equal to  ;  - Increasing indentation - is while loop, unimportant is False
+
+		0x180911FAD: [!] Compares {'local2' (type System.Int32)} against itself
+		0x180911FB0: Jumps to 0x18091208C if {'local2' (type System.Int32)} is greater than or equal to  ;  - This is probably a goto, jumping to 0x18091208C which is after end of current block @ 0x18091206B (started at 0x180911FA4)
+
+		0x180911FB6: [!] Reads field _items from {'edges' (function parameter, type System.Collections.Generic.List`1<Delaunay.Edge>)} and stores in a new local {'_items' (type T[])}
+
+		0x180911FBA: [!] Compares {'_items' (type T[])} and 0
+		0x180911FBD: Jumps to 0x180912080 (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x180911FC3: [!] Compares {'local2' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}
+		0x180911FC6: Jumps to 0x180912086 (which throws a NRE) if {'local2' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}. Implicitly present in managed code, so ignored here.
+		0x180911FCC: Copies {'local2' (type System.Int32)} from rbx into rax
+		0x180911FCF: Copies the element in the array {'_items' (type T[])} at the index specified by {'local2' (type System.Int32)} into new local {'t' (type T)}
+		0x180911FD4: [!] Compares {'t' (type T)} and 0
+		0x180911FD7: Jumps to 0x180912080 (which throws a NRE) if t equals 0. Implicitly present in managed code, so ignored here.
+		0x180911FDD: [!] Compares  and 0
+		0x180911FE2: Jumps to 0x180912062 (which is an if statement's body) if  is less than or equal to 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180911FE4: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rdi is {'local4' (type T)}, offset is 48 (0x30)
+
+		0x180911FE8: Loads a pointer to stack offset 0x20 into register rcx as new constant constant16
+		0x180911FF5: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rdi is {'local4' (type T)}, offset is 48 (0x30)
+
+		0x180911FFD: [!] Reads field  from {'local2' (type System.Int32)} and stores in a new local 
+
+		0x180912007: [!] Compares {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} and 0
+		0x18091200A: Jumps to 0x180912080 (which throws a NRE) if .ctor equals 0. Implicitly present in managed code, so ignored here.
+		0x18091200C: [!] Writes the constant 0x1 into operand 1 (type UInt64) in register r8
+		0x180912012: Loads a pointer to stack offset 0x30 into register rcx as new constant constant19
+		0x18091201C: Loads the type definition for managed type Delaunay.Geo.LineSegment as a constant "LineSegment" in rcx
+		0x180912027: [!] Reads field  from {'local2' (type System.Int32)} and stores in a new local 
+
+		0x180912030: [!] Allocates an instance of type Delaunay.Geo.LineSegment and stores it as lineSegment in rax.
+
+		0x18091204B: [!] Sets the field  (Type ) on local {'lineSegment' (type Delaunay.Geo.LineSegment)} to the value stored in {'t' (type T)}
+		0x18091204E: [!] Sets the field  (Type ) on local {'lineSegment' (type Delaunay.Geo.LineSegment)} to the value stored in 
+		0x180912052: [!] Compares {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} and 0
+		0x180912055: Jumps to 0x180912080 (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x180912057: Copies {'lineSegment' (type Delaunay.Geo.LineSegment)} from rax into rdx
+		0x18091205A: Copies {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from rbp into rcx
+		0x180912062: [!] Adds 1 to the value {'local2' (type System.Int32)}, stored in rbx
+		0x180912064: Copies {'local2' (type System.Int32)} from rbx into rcx
+		0x180912066: Jumps to 0x180911FA4 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x18091206B: Reads unknown value in stack, offset 120 (0x78) and stores the pointer in register r14 as new constant constant22
+		0x180912070: Copies {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from rbp into rax
+		0x180912073: Reads unknown value in stack, offset 104 (0x68) and stores the pointer in register rdi as new constant constant23
+		0x18091207F: [!] Returns {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from the function
+
+		0x180912080: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x18091208C: Clears register rcx, yielding zero-local {'local8' (type System.Int32)}
+		0x18091208E: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Delaunay.DelaunayHelpers
+	static System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> VisibleLineSegments(System.Collections.Generic.List`1<Delaunay.Edge> edges)
+		System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> list = new System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>()
+
+		list..ctor()
+		ulong local2 = 0
+
+		while (local2 < )
+
+		    if (local2 >= )
+                goto INSN_18091208C
+            endif
+		    T[] _items = edges._items
+		    T t = _items[local2]
+
+		    if ( > 0)
+		          = .
+		          = .
+		          = local2.
+		          = local2.
+		        Delaunay.Geo.LineSegment lineSegment = new Delaunay.Geo.LineSegment()
+		        lineSegment. = t
+		        lineSegment. = 
+		    endif
+            
+		    local2 += 1
+		endwhile
+        
+		return list
+		throw new System.NullReferenceException()
+
+		INSN_18091208C:
+		ulong local8 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: System.Collections.Generic.List`1<Delaunay.Edge> Delaunay.DelaunayHelpers::SelectEdgesForSitePoint(UnityEngine.Vector2,System.Collections.Generic.List`1<Delaunay.Edge>):	Method Body (x86 ASM):
+		0x1809120A0 mov [rsp+18h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 24 | None ||| N/A | N/A
+		0x1809120A5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809120A6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809120AA cmp byte ptr [18329B8DCh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516892 | None ||| N/A | 0
+		0x1809120B1 mov rdi,rdx		; DEBUG: {Register}/RDI {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1809120B4 mov [rsp+48h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RSP | 72 | None ||| N/A | N/A
+		0x1809120B9 jne short 00000001809120F2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809120BB lea rcx,[1830F2260h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774432 | None ||| N/A | N/A
+		0x1809120C2 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809120C7 lea rcx,[1830F2270h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774448 | None ||| N/A | N/A
+		0x1809120CE call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809120D3 lea rcx,[1830F2250h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774416 | None ||| N/A | N/A
+		0x1809120DA call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809120DF lea rcx,[1830F2258h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774424 | None ||| N/A | N/A
+		0x1809120E6 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809120EB mov byte ptr [18329B8DCh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516892 | None ||| N/A | 1
+		0x1809120F2 mov rcx,[1830F2258h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774424 | None ||| N/A | N/A
+		0x1809120F9 mov [rsp+38h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 56 | None ||| N/A | N/A
+		0x1809120FE call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912103 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912106 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912109 je short 000000018091216Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091210B movss xmm0,dword ptr [rsp+48h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x180912111 movss xmm1,dword ptr [rsp+4Ch]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 76 | None ||| N/A | N/A
+		0x180912117 movss dword ptr [rax+10h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RAX | 16 | None ||| N/A | N/A
+		0x18091211C movss dword ptr [rax+14h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RAX | 20 | None ||| N/A | N/A
+		0x180912121 mov rcx,[1830F2270h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774448 | None ||| N/A | N/A
+		0x180912128 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091212D mov r8,[1830F2250h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493774416 | None ||| N/A | N/A
+		0x180912134 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180912137 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18091213A mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18091213D mov rsi,rax		; DEBUG: {Register}/RSI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912140 call 0000000181180430h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912145 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180912148 je short 000000018091216Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091214A mov r8,[1830F2260h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493774432 | None ||| N/A | N/A
+		0x180912151 mov rdx,rsi		; DEBUG: {Register}/RDX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180912154 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180912157 mov rsi,[rsp+38h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x18091215C mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x180912161 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180912165 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912166 jmp near ptr 000000018127D160h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091216B call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912170 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Static Method System.Collections.Generic.List`1<Delaunay.Edge> Delaunay.DelaunayHelpers::SelectEdgesForSitePoint(UnityEngine.Vector2,System.Collections.Generic.List`1<Delaunay.Edge>):
+		End of function at 0x180912171
+		Absolute End is at 0x180912171
+		Identified Jump Destination addresses:
+
+		0x1809120A5: Saves the content of rdi to the stack
+		0x1809120AA: Compares {Unknown Global at 0x18329B8DC, first ten bytes are [148 112 234 2 224 93 4 0 117 94], or as chars "pêà] u^"} and 0
+		0x1809120B1: Copies {'edgesToTest' (function parameter, type System.Collections.Generic.List`1<Delaunay.Edge>)} from rdx into rdi
+		0x1809120B4: Moves coord (type UnityEngine.Vector2) from register rcx to the stack at offset 72 (0x48)
+		0x1809120B9: Jumps to 0x1809120F2 if {Unknown Global at 0x18329B8DC, first ten bytes are [148 112 234 2 224 93 4 0 117 94], or as chars "pêà] u^"} != 0
+
+		0x1809120BB: Loads the global generic method reference for method System.Collections.Generic.List`1<T> System.Collections.Generic.List`1::FindAll(System.Predicate`1<T>) on type System.Collections.Generic.List`1<Delaunay.Edge> and stores the result in constant {'FindAll' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809120C2: Initializes runtime metadata value 
+		0x1809120C7: Loads the type definition for managed type System.Predicate`1<Delaunay.Edge> as a constant "Predicate`1" in rcx
+		0x1809120CE: Initializes runtime metadata value System.Predicate`1<Delaunay.Edge>
+		0x1809120D3: Loads the method definition for managed method System.Boolean Delaunay.DelaunayHelpers/<>c__DisplayClass1_0::<SelectEdgesForSitePoint>b__0(Delaunay.Edge) as a constant "<SelectEdgesForSitePoint>b__0"
+		0x1809120DA: Initializes runtime metadata value System.Boolean Delaunay.DelaunayHelpers/<>c__DisplayClass1_0::<SelectEdgesForSitePoint>b__0(Delaunay.Edge)
+		0x1809120DF: Loads the type definition for managed type Delaunay.DelaunayHelpers/<>c__DisplayClass1_0 as a constant "<>c__DisplayClass1_0" in rcx
+		0x1809120E6: Initializes runtime metadata value Delaunay.DelaunayHelpers/<>c__DisplayClass1_0
+		0x1809120F2: Loads the type definition for managed type Delaunay.DelaunayHelpers/<>c__DisplayClass1_0 as a constant "<>c__DisplayClass1_0" in rcx
+		0x1809120FE: [!] Allocates an instance of type Delaunay.DelaunayHelpers/<>c__DisplayClass1_0 and stores it as enumeratorInstance in rax.
+
+		0x180912103: Copies {'enumeratorInstance' (type Delaunay.DelaunayHelpers/<>c__DisplayClass1_0)} from rax into rbx
+		0x180912106: [!] Compares {'enumeratorInstance' (type Delaunay.DelaunayHelpers/<>c__DisplayClass1_0)} and 0
+		0x180912109: Jumps to 0x18091216B (which throws a NRE) if enumeratorInstance equals 0. Implicitly present in managed code, so ignored here.
+		0x18091210B: Reads local {'coord' (function parameter, type UnityEngine.Vector2)} from stack offset 72 (0x48) into register xmm0
+		0x180912111: Reads unknown value in stack, offset 76 (0x4C) and stores the pointer in register xmm1 as new constant constant9
+		0x180912117: [!] Sets the field coord (Type UnityEngine.Vector2) on local {'enumeratorInstance' (type Delaunay.DelaunayHelpers/<>c__DisplayClass1_0)} to the value stored in {'coord' (function parameter, type UnityEngine.Vector2)}
+		0x18091211C: [!] Sets the field coord.y (Type System.Single) on local {'enumeratorInstance' (type Delaunay.DelaunayHelpers/<>c__DisplayClass1_0)} to the value stored in 0
+		0x180912121: Loads the type definition for managed type System.Predicate`1<Delaunay.Edge> as a constant "Predicate`1" in rcx
+		0x180912128: [!] Allocates an instance of type System.Predicate`1<Delaunay.Edge> and stores it as predicate in rax.
+
+		0x18091212D: Loads the method definition for managed method System.Boolean Delaunay.DelaunayHelpers/<>c__DisplayClass1_0::<SelectEdgesForSitePoint>b__0(Delaunay.Edge) as a constant "<SelectEdgesForSitePoint>b__0"
+		0x180912137: Copies {'enumeratorInstance' (type Delaunay.DelaunayHelpers/<>c__DisplayClass1_0)} from rbx into rdx
+		0x18091213A: Copies {'predicate' (type System.Predicate`1<Delaunay.Edge>)} from rax into rcx
+		0x18091213D: Copies {'predicate' (type System.Predicate`1<Delaunay.Edge>)} from rax into rsi
+		0x180912140: [!] Calls managed method  on instance {'predicate' (type System.Predicate`1<Delaunay.Edge>)} ;  - Could not find any callable methods. Bailing out.
+
+		0x180912145: [!] Compares {'edgesToTest' (function parameter, type System.Collections.Generic.List`1<Delaunay.Edge>)} and 0
+		0x180912148: Jumps to 0x18091216B (which throws a NRE) if edgesToTest equals 0. Implicitly present in managed code, so ignored here.
+		0x18091214A: Loads the global generic method reference for method System.Collections.Generic.List`1<T> System.Collections.Generic.List`1::FindAll(System.Predicate`1<T>) on type System.Collections.Generic.List`1<Delaunay.Edge> and stores the result in constant {'FindAll' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in r8
+		0x180912151: Copies {'predicate' (type System.Predicate`1<Delaunay.Edge>)} from rsi into rdx
+		0x180912154: Copies {'edgesToTest' (function parameter, type System.Collections.Generic.List`1<Delaunay.Edge>)} from rdi into rcx
+		0x180912157: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rsi as new constant constant14
+		0x18091215C: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant15
+		0x180912166: [!] Calls managed method System.Collections.Generic.List`1<T> System.Collections.Generic.List`1::FindAll(System.Predicate`1<T>) on instance {'edgesToTest' (function parameter, type System.Collections.Generic.List`1<Delaunay.Edge>)} with arguments [{'predicate' (type System.Predicate`1<Delaunay.Edge>)}] and stores the result in {'list' (type System.Collections.Generic.List`1<Delaunay.Edge>)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180912166: [!] Returns {'list' (type System.Collections.Generic.List`1<Delaunay.Edge>)} from the function
+
+		0x18091216B: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Delaunay.DelaunayHelpers
+	static System.Collections.Generic.List`1<Delaunay.Edge> SelectEdgesForSitePoint(UnityEngine.Vector2 coord, System.Collections.Generic.List`1<Delaunay.Edge> edgesToTest)
+		Delaunay.DelaunayHelpers/<>c__DisplayClass1_0 enumeratorInstance = new Delaunay.DelaunayHelpers/<>c__DisplayClass1_0()
+		enumeratorInstance.coord = coord
+		enumeratorInstance.coord.y = 0
+		System.Predicate`1<Delaunay.Edge> predicate = new System.Predicate`1<Delaunay.Edge>()
+
+		[instruction error - managed method being called is null]
+
+		System.Collections.Generic.List`1<Delaunay.Edge> list = edgesToTest.FindAll(predicate) //(Predicate`1 match)
+		return list
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.AllocateInstanceAction at (0x1809120FE) is corrupt (Managed method being called is , not a ctor.) and cannot be created as IL. Aborting here.
+
+
+Method: System.Collections.Generic.List`1<Delaunay.Edge> Delaunay.DelaunayHelpers::SelectNonIntersectingEdges(System.Collections.Generic.List`1<Delaunay.Edge>):	Method Body (x86 ASM):
+		0x180912180 mov rax,rcx		; DEBUG: {Register}/RAX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180912183 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912184 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Static Method System.Collections.Generic.List`1<Delaunay.Edge> Delaunay.DelaunayHelpers::SelectNonIntersectingEdges(System.Collections.Generic.List`1<Delaunay.Edge>):
+		End of function at 0x180912185
+		Absolute End is at 0x180912185
+		Identified Jump Destination addresses:
+
+		0x180912180: Copies {'edgesToTest' (function parameter, type System.Collections.Generic.List`1<Delaunay.Edge>)} from rcx into rax
+		0x180912183: [!] Returns {'edgesToTest' (function parameter, type System.Collections.Generic.List`1<Delaunay.Edge>)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Delaunay.DelaunayHelpers
+	static System.Collections.Generic.List`1<Delaunay.Edge> SelectNonIntersectingEdges(System.Collections.Generic.List`1<Delaunay.Edge> edgesToTest)
+		return edgesToTest
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ret
+	
+
+Method: System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> Delaunay.DelaunayHelpers::DelaunayLinesForEdges(System.Collections.Generic.List`1<Delaunay.Edge>):	Method Body (x86 ASM):
+		0x180912190 mov [rsp+10h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 16 | None ||| N/A | N/A
+		0x180912195 mov [rsp+18h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 24 | None ||| N/A | N/A
+		0x18091219A push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091219B sub rsp,60h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 96
+		0x18091219F cmp byte ptr [18329B8DDh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516893 | None ||| N/A | 0
+		0x1809121A6 mov rbp,rcx		; DEBUG: {Register}/RBP {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809121A9 jne short 00000001809121EEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809121AB lea rcx,[1830F2298h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774488 | None ||| N/A | N/A
+		0x1809121B2 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809121B7 lea rcx,[1830F22A8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774504 | None ||| N/A | N/A
+		0x1809121BE call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809121C3 lea rcx,[1830F2288h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774472 | None ||| N/A | N/A
+		0x1809121CA call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809121CF lea rcx,[1830F2290h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774480 | None ||| N/A | N/A
+		0x1809121D6 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809121DB lea rcx,[1830F2280h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774464 | None ||| N/A | N/A
+		0x1809121E2 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809121E7 mov byte ptr [18329B8DDh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516893 | None ||| N/A | 1
+		0x1809121EE mov rcx,[1830F2280h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774464 | None ||| N/A | N/A
+		0x1809121F5 mov [rsp+70h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 112 | None ||| N/A | N/A
+		0x1809121FA movaps [rsp+50h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 80 | None ||| N/A | N/A
+		0x1809121FF movaps [rsp+40h],xmm7		; DEBUG: {Memory}/None {Register}/XMM7 ||| RSP | 64 | None ||| N/A | N/A
+		0x180912204 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912209 mov rdx,[1830F22A8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493774504 | None ||| N/A | N/A
+		0x180912210 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912213 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912216 call 0000000181219840h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091221B xor ebx,ebx		; DEBUG: {Register}/EBX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x18091221D mov eax,ebx		; DEBUG: {Register}/EAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x18091221F test rbp,rbp		; DEBUG: {Register}/RBP {Register}/RBP ||| None | 0 | None ||| N/A | N/A
+		0x180912222 je near ptr 000000018091240Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912228 nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180912230 cmp eax,[rbp+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBP | 24 | None ||| N/A | N/A
+		0x180912233 jge near ptr 00000001809123E9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912239 cmp ebx,[rbp+18h]		; DEBUG: {Register}/EBX {Memory}/None ||| RBP | 24 | None ||| N/A | N/A
+		0x18091223C jae near ptr 000000018091241Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912242 mov rcx,[rbp+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBP | 16 | None ||| N/A | N/A
+		0x180912246 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180912249 je near ptr 000000018091240Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091224F cmp ebx,[rcx+18h]		; DEBUG: {Register}/EBX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x180912252 jae near ptr 0000000180912414h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912258 movsxd rax,ebx		; DEBUG: {Register}/RAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x18091225B mov rsi,[rcx+rax*8+20h]		; DEBUG: {Register}/RSI {Memory}/None ||| RCX | 32 | RAX ||| N/A | N/A
+		0x180912260 test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180912263 je near ptr 000000018091240Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912269 cmp byte ptr [18329B8E2h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516898 | None ||| N/A | 0
+		0x180912270 jne short 0000000180912291h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912272 lea rcx,[1830F22B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774520 | None ||| N/A | N/A
+		0x180912279 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091227E lea rcx,[1830F2178h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774200 | None ||| N/A | N/A
+		0x180912285 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091228A mov byte ptr [18329B8E2h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516898 | None ||| N/A | 1
+		0x180912291 cmp byte ptr [18329B8E5h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516901 | None ||| N/A | 0
+		0x180912298 jne short 00000001809122ADh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091229A lea rcx,[1830F2168h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774184 | None ||| N/A | N/A
+		0x1809122A1 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809122A6 mov byte ptr [18329B8E5h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516901 | None ||| N/A | 1
+		0x1809122AD mov rcx,[rsi+38h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSI | 56 | None ||| N/A | N/A
+		0x1809122B1 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809122B4 je near ptr 000000018091240Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809122BA mov r8,[1830F2168h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493774184 | None ||| N/A | N/A
+		0x1809122C1 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1809122C3 call 0000000180FC6080h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809122C8 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809122CB je near ptr 000000018091240Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809122D1 movss xmm0,dword ptr [rax+10h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x1809122D6 movss xmm1,dword ptr [rax+14h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RAX | 20 | None ||| N/A | N/A
+		0x1809122DB xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1809122DD cmp [18329B8E7h],al		; DEBUG: {Memory}/None {Register}/AL ||| RIP | 6495516903 | None ||| N/A | N/A
+		0x1809122E3 mov [rsp+20h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 32 | None ||| N/A | N/A
+		0x1809122E8 movss dword ptr [rsp+24h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 36 | None ||| N/A | N/A
+		0x1809122EE mov byte ptr [rsp+20h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RSP | 32 | None ||| N/A | 1
+		0x1809122F3 movss dword ptr [rsp+28h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 40 | None ||| N/A | N/A
+		0x1809122F9 jne short 000000018091230Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809122FB lea rcx,[1830F2168h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774184 | None ||| N/A | N/A
+		0x180912302 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912307 mov byte ptr [18329B8E7h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516903 | None ||| N/A | 1
+		0x18091230E mov rcx,[rsi+38h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSI | 56 | None ||| N/A | N/A
+		0x180912312 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180912315 je near ptr 000000018091240Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091231B mov r8,[1830F2168h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493774184 | None ||| N/A | N/A
+		0x180912322 mov edx,1		; DEBUG: {Register}/EDX {Immediate32}/None ||| None | 0 | None ||| N/A | 1
+		0x180912327 call 0000000180FC6080h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091232C test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18091232F je near ptr 000000018091240Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912335 movss xmm6,dword ptr [rax+10h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x18091233A movss xmm7,dword ptr [rax+14h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RAX | 20 | None ||| N/A | N/A
+		0x18091233F xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180912341 mov rcx,[1830F22B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774520 | None ||| N/A | N/A
+		0x180912348 mov [rsp+30h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 48 | None ||| N/A | N/A
+		0x18091234D mov byte ptr [rsp+30h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RSP | 48 | None ||| N/A | 1
+		0x180912352 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912357 movsd xmm0,qword ptr [rsp+20h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x18091235D mov r9,rax		; DEBUG: {Register}/R9 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912360 mov ecx,[rsp+28h]		; DEBUG: {Register}/ECX {Memory}/None ||| RSP | 40 | None ||| N/A | N/A
+		0x180912364 movsd qword ptr [rax+10h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RAX | 16 | None ||| N/A | N/A
+		0x180912369 movsd xmm0,qword ptr [rsp+30h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x18091236F shufps xmm0,xmm0,0E1h		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180912373 mov [rax+18h],ecx		; DEBUG: {Memory}/None {Register}/ECX ||| RAX | 24 | None ||| N/A | N/A
+		0x180912376 movss xmm0,xmm6		; DEBUG: {Register}/XMM0 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x18091237A shufps xmm0,xmm0,0E1h		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18091237E movsd qword ptr [rax+1Ch],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RAX | 28 | None ||| N/A | N/A
+		0x180912383 movss dword ptr [rax+24h],xmm7		; DEBUG: {Memory}/None {Register}/XMM7 ||| RAX | 36 | None ||| N/A | N/A
+		0x180912388 movsd qword ptr [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x18091238E test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180912391 je short 000000018091240Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912393 mov r8,[1830F2298h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493774488 | None ||| N/A | N/A
+		0x18091239A inc dword ptr [rdi+1Ch]		; DEBUG: {Memory}/None {Register}/None ||| RDI | 28 | None ||| N/A | N/A
+		0x18091239D mov rcx,[rdi+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 16 | None ||| N/A | N/A
+		0x1809123A1 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809123A4 je short 000000018091240Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809123A6 movsxd rdx,dword ptr [rdi+18h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDI | 24 | None ||| N/A | N/A
+		0x1809123AA cmp edx,[rcx+18h]		; DEBUG: {Register}/EDX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1809123AD jb short 00000001809123D2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809123AF mov rax,[r8+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 32 | None ||| N/A | N/A
+		0x1809123B3 mov rdx,r9		; DEBUG: {Register}/RDX {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x1809123B6 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809123B9 mov r8,[rax+0C0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x1809123C0 mov r8,[r8+70h]		; DEBUG: {Register}/R8 {Memory}/None ||| R8 | 112 | None ||| N/A | N/A
+		0x1809123C4 call 000000018127CCA0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809123C9 inc ebx		; DEBUG: {Register}/EBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809123CB mov eax,ebx		; DEBUG: {Register}/EAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x1809123CD jmp near ptr 0000000180912230h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809123D2 lea eax,[rdx+1]		; DEBUG: {Register}/EAX {Memory}/None ||| RDX | 1 | None ||| N/A | N/A
+		0x1809123D5 mov r8,r9		; DEBUG: {Register}/R8 {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x1809123D8 mov [rdi+18h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDI | 24 | None ||| N/A | N/A
+		0x1809123DB call 0000000180002A00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809123E0 inc ebx		; DEBUG: {Register}/EBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809123E2 mov eax,ebx		; DEBUG: {Register}/EAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x1809123E4 jmp near ptr 0000000180912230h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809123E9 movaps xmm7,[rsp+40h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1809123EE mov rax,rdi		; DEBUG: {Register}/RAX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809123F1 movaps xmm6,[rsp+50h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1809123F6 mov rsi,[rsp+70h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x1809123FB mov rbx,[rsp+78h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 120 | None ||| N/A | N/A
+		0x180912400 mov rbp,[rsp+80h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 128 | None ||| N/A | N/A
+		0x180912408 add rsp,60h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 96
+		0x18091240C pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091240D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091240E call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912413 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091241A xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x18091241C call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912421 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Static Method System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> Delaunay.DelaunayHelpers::DelaunayLinesForEdges(System.Collections.Generic.List`1<Delaunay.Edge>):
+		End of function at 0x180912422
+		Absolute End is at 0x180912422
+		Identified Jump Destination addresses:
+
+		0x18091219A: Saves the content of rdi to the stack
+		0x18091219F: Compares {Unknown Global at 0x18329B8DD, first ten bytes are [112 234 2 224 93 4 0 117 94 4], or as chars "pêà] u^"} and 0
+		0x1809121A6: Copies {'edges' (function parameter, type System.Collections.Generic.List`1<Delaunay.Edge>)} from rcx into rbp
+		0x1809121A9: Jumps to 0x1809121EE if {Unknown Global at 0x18329B8DD, first ten bytes are [112 234 2 224 93 4 0 117 94 4], or as chars "pêà] u^"} != 0
+
+		0x1809121AB: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::Add(T) on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'Add' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809121B2: Initializes runtime metadata value 
+		0x1809121B7: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::.ctor() on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809121BE: Initializes runtime metadata value 
+		0x1809121C3: Loads the global generic method reference for method System.Int32 System.Collections.Generic.List`1::get_Count() on type System.Collections.Generic.List`1<Delaunay.Edge> and stores the result in constant {'get_Count' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809121CA: Initializes runtime metadata value 
+		0x1809121CF: Loads the global generic method reference for method T System.Collections.Generic.List`1::get_Item(System.Int32) on type System.Collections.Generic.List`1<Delaunay.Edge> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809121D6: Initializes runtime metadata value 
+		0x1809121DB: Loads the type definition for managed type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> as a constant "List`1" in rcx
+		0x1809121E2: Initializes runtime metadata value System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>
+		0x1809121EE: Loads the type definition for managed type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> as a constant "List`1" in rcx
+		0x180912204: [!] Allocates an instance of type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores it as list in rax.
+
+		0x180912209: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::.ctor() on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180912210: Copies {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from rax into rcx
+		0x180912213: Copies {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from rax into rdi
+		0x180912216: [!] Calls managed method System.Void System.Collections.Generic.List`1::.ctor() on instance {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x18091221B: Clears register rbx, yielding zero-local {'local2' (type System.Int32)}
+		0x18091221D: Copies {'local2' (type System.Int32)} from rbx into rax
+		0x18091221F: [!] Compares {'edges' (function parameter, type System.Collections.Generic.List`1<Delaunay.Edge>)} and 0
+		0x180912222: Jumps to 0x18091240E (which throws a NRE) if edges equals 0. Implicitly present in managed code, so ignored here.
+
+		Potential Loop Start (0x180912230):
+		0x180912230: [!] Compares {'local2' (type System.Int32)} against itself
+		0x180912233: Jumps to 0x1809123E9 if {'local2' (type System.Int32)} is greater than or equal to  ;  - Increasing indentation - is while loop, unimportant is False
+
+		0x180912239: [!] Compares {'local2' (type System.Int32)} against itself
+		0x18091223C: Jumps to 0x18091241A if {'local2' (type System.Int32)} is greater than or equal to  ;  - This is probably a goto, jumping to 0x18091241A which is after end of current block @ 0x1809123D2 (started at 0x180912230)
+
+		0x180912242: [!] Reads field _items from {'edges' (function parameter, type System.Collections.Generic.List`1<Delaunay.Edge>)} and stores in a new local {'_items' (type T[])}
+
+		0x180912246: [!] Compares {'_items' (type T[])} and 0
+		0x180912249: Jumps to 0x18091240E (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x18091224F: [!] Compares {'local2' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}
+		0x180912252: Jumps to 0x180912414 (which throws a NRE) if {'local2' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}. Implicitly present in managed code, so ignored here.
+		0x180912258: Copies {'local2' (type System.Int32)} from rbx into rax
+		0x18091225B: Copies the element in the array {'_items' (type T[])} at the index specified by {'local2' (type System.Int32)} into new local {'t' (type T)}
+		0x180912260: [!] Compares {'t' (type T)} and 0
+		0x180912263: Jumps to 0x18091240E (which throws a NRE) if t equals 0. Implicitly present in managed code, so ignored here.
+		0x180912269: Compares {Unknown Global at 0x18329B8E2, first ten bytes are [4 0 117 94 4 0 204 125 234 2], or as chars " u^ Ì}ê"} and 0
+		0x180912270: Jumps to 0x180912291 if {Unknown Global at 0x18329B8E2, first ten bytes are [4 0 117 94 4 0 204 125 234 2], or as chars " u^ Ì}ê"} != 0
+
+		0x180912272: Loads the type definition for managed type Delaunay.Geo.LineSegment as a constant "LineSegment" in rcx
+		0x180912279: Initializes runtime metadata value Delaunay.Geo.LineSegment
+		0x18091227E: Loads the global generic method reference for method System.Void System.Nullable`1::.ctor(T) on type System.Nullable`1<UnityEngine.Vector2> and stores the result in constant {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180912285: Initializes runtime metadata value 
+		0x180912291: Compares {Unknown Global at 0x18329B8E5, first ten bytes are [94 4 0 204 125 234 2 128 94 4], or as chars "^ Ì}ê^"} and 0
+		0x180912298: Jumps to 0x1809122AD if {Unknown Global at 0x18329B8E5, first ten bytes are [94 4 0 204 125 234 2 128 94 4], or as chars "^ Ì}ê^"} != 0
+
+		0x18091229A: Loads the global generic method reference for method TValue System.Collections.Generic.Dictionary`2::get_Item(TKey) on type System.Collections.Generic.Dictionary`2<Delaunay.LR.Side,Delaunay.Site> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809122A1: Initializes runtime metadata value 
+		0x1809122AD: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rsi is {'local4' (type T)}, offset is 56 (0x38)
+
+		0x1809122B1: [!] Compares {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} and 0
+		0x1809122B4: Jumps to 0x18091240E (which throws a NRE) if get_Item equals 0. Implicitly present in managed code, so ignored here.
+		0x1809122BA: Loads the global generic method reference for method TValue System.Collections.Generic.Dictionary`2::get_Item(TKey) on type System.Collections.Generic.Dictionary`2<Delaunay.LR.Side,Delaunay.Site> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in r8
+		0x1809122C1: Clears register rdx, yielding zero-local {'local5' (type System.Int32)}
+		0x1809122C3: [!] Calls managed method TValue System.Collections.Generic.Dictionary`2::get_Item(TKey) on instance  with arguments [{'local5' (type System.Int32)}] and stores the result in {'item' (type Delaunay.Site)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x1809122C8: [!] Compares {'item' (type Delaunay.Site)} and 0
+		0x1809122CB: Jumps to 0x18091240E (which throws a NRE) if item equals 0. Implicitly present in managed code, so ignored here.
+		0x1809122D1: [!] Reads field _coord from {'item' (type Delaunay.Site)} and stores in a new local {'_coord' (type UnityEngine.Vector2)}
+
+		0x1809122D6: [!] Reads field _coord.y from {'item' (type Delaunay.Site)} and stores in a new local {'single' (type System.Single)}
+
+		0x1809122DB: Clears register rax, yielding zero-local {'local9' (type System.Int32)}
+		0x1809122DD: Compares {Unknown Global at 0x18329B8E7, first ten bytes are [0 204 125 234 2 128 94 4 0 21], or as chars " Ì}ê^ "} and {'local9' (type System.Int32)}
+		0x1809122E3: Moves local9 (type System.Int32) from register rax to the stack at offset 32 (0x20)
+		0x1809122E8: Moves _coord (type UnityEngine.Vector2) from register xmm0 to the stack at offset 36 (0x24)
+		0x1809122EE: Moves 1 (immediate ulong value) to the stack at offset 32 as a new local local10
+		0x1809122F3: Moves single (type System.Single) from register xmm1 to the stack at offset 40 (0x28)
+		0x1809122F9: Jumps to 0x18091230E if {Unknown Global at 0x18329B8E7, first ten bytes are [0 204 125 234 2 128 94 4 0 21], or as chars " Ì}ê^ "} != {'local9' (type System.Int32)}
+
+		0x1809122FB: Loads the global generic method reference for method TValue System.Collections.Generic.Dictionary`2::get_Item(TKey) on type System.Collections.Generic.Dictionary`2<Delaunay.LR.Side,Delaunay.Site> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180912302: Initializes runtime metadata value 
+		0x18091230E: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rsi is {'local4' (type T)}, offset is 56 (0x38)
+
+		0x180912312: [!] Compares {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} and 0
+		0x180912315: Jumps to 0x18091240E (which throws a NRE) if get_Item equals 0. Implicitly present in managed code, so ignored here.
+		0x18091231B: Loads the global generic method reference for method TValue System.Collections.Generic.Dictionary`2::get_Item(TKey) on type System.Collections.Generic.Dictionary`2<Delaunay.LR.Side,Delaunay.Site> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in r8
+		0x180912322: [!] Writes the constant 0x1 into operand 1 (type UInt64) in register rdx
+		0x180912327: [!] Calls managed method TValue System.Collections.Generic.Dictionary`2::get_Item(TKey) on instance  and stores the result in {'item2' (type Delaunay.Site)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation. - parameters do not match, but concrete method was resolved from a constant in a register.
+
+		0x18091232C: [!] Compares {'item2' (type Delaunay.Site)} and 0
+		0x18091232F: Jumps to 0x18091240E (which throws a NRE) if item2 equals 0. Implicitly present in managed code, so ignored here.
+		0x18091233A: [!] Reads field _coord.y from {'item2' (type Delaunay.Site)} and stores in a new local {'single2' (type System.Single)}
+
+		0x18091233F: Clears register rax, yielding zero-local {'local14' (type System.Int32)}
+		0x180912341: Loads the type definition for managed type Delaunay.Geo.LineSegment as a constant "LineSegment" in rcx
+		0x180912348: Moves local14 (type System.Int32) from register rax to the stack at offset 48 (0x30)
+		0x18091234D: Moves 1 (immediate ulong value) to the stack at offset 48 as a new local local15
+		0x180912352: [!] Allocates an instance of type Delaunay.Geo.LineSegment and stores it as lineSegment in rax.
+
+		0x18091235D: Copies {'lineSegment' (type Delaunay.Geo.LineSegment)} from rax into r9
+		0x180912360: Reads local {'single' (type System.Single)} from stack offset 40 (0x28) into register rcx
+		0x180912373: [!] Sets the field  (Type ) on local {'lineSegment' (type Delaunay.Geo.LineSegment)} to the value stored in {'single' (type System.Single)}
+		0x180912376: Copies {'local12' (type UnityEngine.Vector2)} from xmm6 into xmm0
+		0x180912383: [!] Sets the field  (Type ) on local {'lineSegment' (type Delaunay.Geo.LineSegment)} to the value stored in {'single2' (type System.Single)}
+		0x18091238E: [!] Compares {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} and 0
+		0x180912391: Jumps to 0x18091240E (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x180912393: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::Add(T) on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'Add' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in r8
+		0x18091239D: [!] Reads field _items from {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} and stores in a new local {'_items2' (type T[])}
+
+		0x1809123A1: [!] Compares {'_items2' (type T[])} and 0
+		0x1809123A4: Jumps to 0x18091240E (which throws a NRE) if _items2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1809123A6: [!] Reads field _size from {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} and stores in a new local {'_size' (type System.Int32)}
+
+		0x1809123AA: [!] Compares {'_size' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items2' (type T[])}}
+		0x1809123B3: Copies {'lineSegment' (type Delaunay.Geo.LineSegment)} from r9 into rdx
+		0x1809123B6: Copies {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from rdi into rcx
+		0x1809123B9: [!] Reads field  from {'lineSegment' (type Delaunay.Geo.LineSegment)} and stores in a new local 
+
+		0x1809123C4: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1809123C9: [!] Adds 1 to the value {'local2' (type System.Int32)}, stored in rbx
+		0x1809123CB: Copies {'local2' (type System.Int32)} from rbx into rax
+		0x1809123CD: Jumps to 0x180912230 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x1809123D2: Loads the pointer to the field  on {'lineSegment' (type Delaunay.Geo.LineSegment)} into register rax
+		0x1809123D5: Copies {'lineSegment' (type Delaunay.Geo.LineSegment)} from r9 into r8
+		0x1809123D8: [!] Sets the field _size (Type System.Int32) on local {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} to the value stored in {'local2' (type System.Int32)}
+		0x1809123E0: [!] Adds 1 to the value {'local2' (type System.Int32)}, stored in rbx
+		0x1809123E2: Copies {'local2' (type System.Int32)} from rbx into rax
+		0x1809123E4: Jumps to 0x180912230 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x1809123E9: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register xmm7 as new constant constant33
+		0x1809123EE: Copies {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from rdi into rax
+		0x1809123F1: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register xmm6 as new constant constant34
+		0x1809123F6: Reads unknown value in stack, offset 112 (0x70) and stores the pointer in register rsi as new constant constant35
+		0x1809123FB: Reads unknown value in stack, offset 120 (0x78) and stores the pointer in register rbx as new constant constant36
+		0x180912400: Reads unknown value in stack, offset 128 (0x80) and stores the pointer in register rbp as new constant constant37
+		0x18091240D: [!] Returns {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from the function
+
+		0x18091240E: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x18091241A: Clears register rcx, yielding zero-local {'local21' (type System.Int32)}
+		0x18091241C: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Delaunay.DelaunayHelpers
+	static System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> DelaunayLinesForEdges(System.Collections.Generic.List`1<Delaunay.Edge> edges)
+		System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> list = new System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>()
+
+		list..ctor()
+		ulong local2 = 0
+
+		while (local2 < )
+
+		    if (local2 >= )
+                goto INSN_18091241A
+            endif
+		    T[] _items = edges._items
+		    T t = _items[local2]
+		      = .
+		    ulong local5 = 0
+
+		    Delaunay.Site item = .Item
+		    UnityEngine.Vector2 _coord = item._coord
+		    System.Single single = item._coord.y
+		    ulong local9 = 0
+		      = .
+
+		    Delaunay.Site item2 = .Item
+		    System.Single single2 = item2._coord.y
+		    ulong local14 = 0
+		    Delaunay.Geo.LineSegment lineSegment = new Delaunay.Geo.LineSegment()
+		    lineSegment. = single
+		    lineSegment. = single2
+		    T[] _items2 = list._items
+		    System.Int32 _size = list._size
+		      = lineSegment.
+		    throw new System.NullReferenceException()
+		    local2 += 1
+		endwhile
+        
+		goto INSN_1809123E9
+        
+		list._size = local2
+		local2 += 1
+
+		INSN_1809123E9:
+		return list
+		throw new System.NullReferenceException()
+
+		INSN_18091241A:
+		ulong local21 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> Delaunay.DelaunayHelpers::Kruskal(System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>,Delaunay.KruskalType):	Method Body (x86 ASM):
+		0x180912430 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180912435 mov [rsp+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 16 | None ||| N/A | N/A
+		0x18091243A push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091243B push r12		; DEBUG: {Register}/R12 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091243D push r13		; DEBUG: {Register}/R13 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091243F push r14		; DEBUG: {Register}/R14 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912441 push r15		; DEBUG: {Register}/R15 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912443 sub rsp,0F0h		; DEBUG: {Register}/RSP {Immediate32to64}/None ||| None | 0 | None ||| N/A | 240
+		0x18091244A mov ebx,edx		; DEBUG: {Register}/EBX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18091244C mov r12,rcx		; DEBUG: {Register}/R12 {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18091244F cmp byte ptr [18329B8DEh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516894 | None ||| N/A | 0
+		0x180912456 jne near ptr 0000000180912583h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091245C lea rcx,[1830F2238h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774392 | None ||| N/A | N/A
+		0x180912463 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912468 lea rcx,[1830F2220h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774368 | None ||| N/A | N/A
+		0x18091246F call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912474 lea rcx,[1830F2228h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774376 | None ||| N/A | N/A
+		0x18091247B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912480 lea rcx,[1830F2210h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774352 | None ||| N/A | N/A
+		0x180912487 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091248C lea rcx,[1830F2218h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774360 | None ||| N/A | N/A
+		0x180912493 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912498 lea rcx,[1830F21F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774328 | None ||| N/A | N/A
+		0x18091249F call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809124A4 lea rcx,[1830F2200h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774336 | None ||| N/A | N/A
+		0x1809124AB call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809124B0 lea rcx,[1830F2240h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774400 | None ||| N/A | N/A
+		0x1809124B7 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809124BC lea rcx,[1830F21E0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774304 | None ||| N/A | N/A
+		0x1809124C3 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809124C8 lea rcx,[1830F21F0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774320 | None ||| N/A | N/A
+		0x1809124CF call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809124D4 lea rcx,[1830F2298h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774488 | None ||| N/A | N/A
+		0x1809124DB call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809124E0 lea rcx,[1830F21D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774288 | None ||| N/A | N/A
+		0x1809124E7 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809124EC lea rcx,[1830F22A8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774504 | None ||| N/A | N/A
+		0x1809124F3 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809124F8 lea rcx,[1830F22F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774584 | None ||| N/A | N/A
+		0x1809124FF call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912504 lea rcx,[1830F2308h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774600 | None ||| N/A | N/A
+		0x18091250B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912510 lea rcx,[1830F2280h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774464 | None ||| N/A | N/A
+		0x180912517 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091251C lea rcx,[1830F22D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774544 | None ||| N/A | N/A
+		0x180912523 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912528 lea rcx,[1830F21D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774296 | None ||| N/A | N/A
+		0x18091252F call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912534 lea rcx,[1830F21C0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774272 | None ||| N/A | N/A
+		0x18091253B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912540 lea rcx,[1830F21C8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774280 | None ||| N/A | N/A
+		0x180912547 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091254C lea rcx,[1830F21A8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774248 | None ||| N/A | N/A
+		0x180912553 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912558 lea rcx,[1830F21B0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774256 | None ||| N/A | N/A
+		0x18091255F call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912564 lea rcx,[1830F2198h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774232 | None ||| N/A | N/A
+		0x18091256B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912570 lea rcx,[1830F21A0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774240 | None ||| N/A | N/A
+		0x180912577 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091257C mov byte ptr [18329B8DEh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516894 | None ||| N/A | 1
+		0x180912583 xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180912586 xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180912588 movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x18091258D mov [rsp+40h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 64 | None ||| N/A | N/A
+		0x180912592 mov rcx,[1830F2200h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774336 | None ||| N/A | N/A
+		0x180912599 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091259E mov r13,rax		; DEBUG: {Register}/R13 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809125A1 mov rcx,[1830F2228h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774376 | None ||| N/A | N/A
+		0x1809125A8 mov rdx,[rcx+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x1809125AC mov rcx,[rdx+0C0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDX | 192 | None ||| N/A | N/A
+		0x1809125B3 mov rcx,[rcx]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1809125B6 mov rcx,[rcx+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x1809125BA mov rdx,[rcx+0C0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 192 | None ||| N/A | N/A
+		0x1809125C1 mov rcx,[rdx+18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDX | 24 | None ||| N/A | N/A
+		0x1809125C5 call 0000000180F6D3A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809125CA lea r15,[1832AE560h]		; DEBUG: {Register}/R15 {Memory}/None ||| RIP | 6495593824 | None ||| N/A | N/A
+		0x1809125D1 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809125D4 je short 0000000180912629h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809125D6 mov qword ptr [r13+30h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| R13 | 48 | None ||| N/A | 0
+		0x1809125DE cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1809125E5 je short 0000000180912629h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809125E7 lea r8,[r13+30h]		; DEBUG: {Register}/R8 {Memory}/None ||| R13 | 48 | None ||| N/A | N/A
+		0x1809125EB shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1809125EF and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1809125F6 mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1809125F9 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1809125FD lea rdx,[r15+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| R15 | 0 | RAX ||| N/A | N/A
+		0x180912601 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180912605 prefetchw [rdx+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x18091260C nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180912610 mov rax,[rdx+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x180912617 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18091261A bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18091261E lock cmpxchg [rdx+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 287456 | None ||| N/A | N/A
+		0x180912627 jne short 0000000180912610h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912629 mov rcx,[1830F2280h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774464 | None ||| N/A | N/A
+		0x180912630 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912635 mov rsi,rax		; DEBUG: {Register}/RSI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912638 mov [rsp+138h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 312 | None ||| N/A | N/A
+		0x180912640 mov rdx,[1830F22A8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493774504 | None ||| N/A | N/A
+		0x180912647 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18091264A call 0000000181219840h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091264F mov [rsp+60h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 96 | None ||| N/A | N/A
+		0x180912654 mov rax,[1830F22D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493774544 | None ||| N/A | N/A
+		0x18091265B cmp dword ptr [rax+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 224 | None ||| N/A | 0
+		0x180912662 jne short 0000000180912673h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912664 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912667 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091266C mov rax,[1830F22D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493774544 | None ||| N/A | N/A
+		0x180912673 mov rax,[rax+0B8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x18091267A mov r14,[rax]		; DEBUG: {Register}/R14 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x18091267D mov rcx,[1830F2198h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774232 | None ||| N/A | N/A
+		0x180912684 cmp ebx,1		; DEBUG: {Register}/EBX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 1
+		0x180912687 je near ptr 000000018091276Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091268D cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180912694 jne short 00000001809126A2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912696 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091269B mov rcx,[1830F2198h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774232 | None ||| N/A | N/A
+		0x1809126A2 mov rax,[rcx+0B8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 184 | None ||| N/A | N/A
+		0x1809126A9 mov rdi,[rax+10h]		; DEBUG: {Register}/RDI {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x1809126AD test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809126B0 jne near ptr 0000000180912849h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809126B6 cmp [rcx+0E0h],edi		; DEBUG: {Memory}/None {Register}/EDI ||| RCX | 224 | None ||| N/A | N/A
+		0x1809126BC jne short 00000001809126CAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809126BE call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809126C3 mov rcx,[1830F2198h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774232 | None ||| N/A | N/A
+		0x1809126CA mov rax,[rcx+0B8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 184 | None ||| N/A | N/A
+		0x1809126D1 mov rbx,[rax]		; DEBUG: {Register}/RBX {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1809126D4 mov rcx,[1830F2238h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774392 | None ||| N/A | N/A
+		0x1809126DB call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809126E0 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809126E3 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1809126E6 mov r8,[1830F21B0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493774256 | None ||| N/A | N/A
+		0x1809126ED mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809126F0 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809126F3 call 00000001809FF4F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809126F8 mov rax,[1830F2198h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493774232 | None ||| N/A | N/A
+		0x1809126FF mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180912706 mov [rcx+10h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RCX | 16 | None ||| N/A | N/A
+		0x18091270A mov rax,[1830F2198h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493774232 | None ||| N/A | N/A
+		0x180912711 mov r9,[rax+0B8h]		; DEBUG: {Register}/R9 {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180912718 add r9,10h		; DEBUG: {Register}/R9 {Immediate8to64}/None ||| None | 0 | None ||| N/A | 16
+		0x18091271C cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180912723 je near ptr 0000000180912849h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912729 shr r9,0Ch		; DEBUG: {Register}/R9 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x18091272D and r9d,1FFFFFh		; DEBUG: {Register}/R9D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180912734 mov eax,r9d		; DEBUG: {Register}/EAX {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180912737 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x18091273B lea r8,[r15+rax*8]		; DEBUG: {Register}/R8 {Memory}/None ||| R15 | 0 | RAX ||| N/A | N/A
+		0x18091273F and r9d,3Fh		; DEBUG: {Register}/R9D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180912743 prefetchw [r8+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| R8 | 287456 | None ||| N/A | N/A
+		0x18091274B nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180912750 mov rax,[r8+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 287456 | None ||| N/A | N/A
+		0x180912757 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18091275A bts rcx,r9		; DEBUG: {Register}/RCX {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x18091275E lock cmpxchg [r8+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| R8 | 287456 | None ||| N/A | N/A
+		0x180912767 jne short 0000000180912750h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912769 jmp near ptr 0000000180912849h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091276E cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180912775 jne short 0000000180912783h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912777 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091277C mov rcx,[1830F2198h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774232 | None ||| N/A | N/A
+		0x180912783 mov rax,[rcx+0B8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 184 | None ||| N/A | N/A
+		0x18091278A mov rdi,[rax+8]		; DEBUG: {Register}/RDI {Memory}/None ||| RAX | 8 | None ||| N/A | N/A
+		0x18091278E test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180912791 jne near ptr 0000000180912849h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912797 cmp [rcx+0E0h],edi		; DEBUG: {Memory}/None {Register}/EDI ||| RCX | 224 | None ||| N/A | N/A
+		0x18091279D jne short 00000001809127ABh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091279F call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809127A4 mov rcx,[1830F2198h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774232 | None ||| N/A | N/A
+		0x1809127AB mov rax,[rcx+0B8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 184 | None ||| N/A | N/A
+		0x1809127B2 mov rbx,[rax]		; DEBUG: {Register}/RBX {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1809127B5 mov rcx,[1830F2238h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774392 | None ||| N/A | N/A
+		0x1809127BC call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809127C1 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809127C4 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1809127C7 mov r8,[1830F21A8h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493774248 | None ||| N/A | N/A
+		0x1809127CE mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809127D1 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809127D4 call 00000001809FF4F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809127D9 mov rax,[1830F2198h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493774232 | None ||| N/A | N/A
+		0x1809127E0 mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1809127E7 mov [rcx+8],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RCX | 8 | None ||| N/A | N/A
+		0x1809127EB mov rax,[1830F2198h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493774232 | None ||| N/A | N/A
+		0x1809127F2 mov r9,[rax+0B8h]		; DEBUG: {Register}/R9 {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1809127F9 add r9,8		; DEBUG: {Register}/R9 {Immediate8to64}/None ||| None | 0 | None ||| N/A | 8
+		0x1809127FD cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180912804 je short 0000000180912849h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912806 shr r9,0Ch		; DEBUG: {Register}/R9 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x18091280A and r9d,1FFFFFh		; DEBUG: {Register}/R9D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180912811 mov eax,r9d		; DEBUG: {Register}/EAX {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180912814 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180912818 lea r8,[r15+rax*8]		; DEBUG: {Register}/R8 {Memory}/None ||| R15 | 0 | RAX ||| N/A | N/A
+		0x18091281C and r9d,3Fh		; DEBUG: {Register}/R9D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180912820 prefetchw [r8+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| R8 | 287456 | None ||| N/A | N/A
+		0x180912828 nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180912830 mov rax,[r8+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 287456 | None ||| N/A | N/A
+		0x180912837 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18091283A bts rcx,r9		; DEBUG: {Register}/RCX {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x18091283E lock cmpxchg [r8+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| R8 | 287456 | None ||| N/A | N/A
+		0x180912847 jne short 0000000180912830h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912849 test r12,r12		; DEBUG: {Register}/R12 {Register}/R12 ||| None | 0 | None ||| N/A | N/A
+		0x18091284C je near ptr 0000000180912CFBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912852 mov r8,[1830F21D0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493774288 | None ||| N/A | N/A
+		0x180912859 mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18091285C mov rcx,r12		; DEBUG: {Register}/RCX {Register}/R12 ||| None | 0 | None ||| N/A | N/A
+		0x18091285F call 000000018127DE60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912864 mov r15d,[r12+18h]		; DEBUG: {Register}/R15D {Memory}/None ||| R12 | 24 | None ||| N/A | N/A
+		0x180912869 dec r15d		; DEBUG: {Register}/R15D {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18091286C cmp r15d,0FFFFFFFFh		; DEBUG: {Register}/R15D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 18446744073709551615
+		0x180912870 jle near ptr 0000000180912B57h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912876 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180912880 cmp r15d,[r12+18h]		; DEBUG: {Register}/R15D {Memory}/None ||| R12 | 24 | None ||| N/A | N/A
+		0x180912885 jae near ptr 0000000180912D07h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091288B mov rsi,[r12+10h]		; DEBUG: {Register}/RSI {Memory}/None ||| R12 | 16 | None ||| N/A | N/A
+		0x180912890 test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180912893 je near ptr 0000000180912CFBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912899 movsxd rax,r15d		; DEBUG: {Register}/RAX {Register}/R15D ||| None | 0 | None ||| N/A | N/A
+		0x18091289C cmp r15d,[rsi+18h]		; DEBUG: {Register}/R15D {Memory}/None ||| RSI | 24 | None ||| N/A | N/A
+		0x1809128A0 jae near ptr 0000000180912D01h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809128A6 mov rsi,[rsi+rax*8+20h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSI | 32 | RAX ||| N/A | N/A
+		0x1809128AB test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1809128AE je near ptr 0000000180912CFBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809128B4 test r13,r13		; DEBUG: {Register}/R13 {Register}/R13 ||| None | 0 | None ||| N/A | N/A
+		0x1809128B7 je near ptr 0000000180912CFBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809128BD mov rax,[1830F2220h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493774368 | None ||| N/A | N/A
+		0x1809128C4 mov rcx,[rax+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 32 | None ||| N/A | N/A
+		0x1809128C8 mov rax,[rcx+0C0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 192 | None ||| N/A | N/A
+		0x1809128CF mov r8,[rax+0F0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 240 | None ||| N/A | N/A
+		0x1809128D6 movsd xmm0,qword ptr [rsi+10h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSI | 16 | None ||| N/A | N/A
+		0x1809128DB movsd qword ptr [rsp+70h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 112 | None ||| N/A | N/A
+		0x1809128E1 mov eax,[rsi+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RSI | 24 | None ||| N/A | N/A
+		0x1809128E4 mov [rsp+78h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 120 | None ||| N/A | N/A
+		0x1809128E8 lea rdx,[rsp+70h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x1809128ED mov rcx,r13		; DEBUG: {Register}/RCX {Register}/R13 ||| None | 0 | None ||| N/A | N/A
+		0x1809128F0 call 0000000180F5C0D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809128F5 test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1809128F7 js short 0000000180912933h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809128F9 movsd xmm0,qword ptr [rsi+10h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSI | 16 | None ||| N/A | N/A
+		0x1809128FE movsd qword ptr [rsp+80h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 128 | None ||| N/A | N/A
+		0x180912907 mov eax,[rsi+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RSI | 24 | None ||| N/A | N/A
+		0x18091290A mov [rsp+88h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 136 | None ||| N/A | N/A
+		0x180912911 lea rdx,[rsp+80h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 128 | None ||| N/A | N/A
+		0x180912919 mov rcx,r13		; DEBUG: {Register}/RCX {Register}/R13 ||| None | 0 | None ||| N/A | N/A
+		0x18091291C call 000000018000CE60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912921 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180912923 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912926 call 0000000180912D40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091292B mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18091292E jmp near ptr 00000001809129CCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912933 test r14,r14		; DEBUG: {Register}/R14 {Register}/R14 ||| None | 0 | None ||| N/A | N/A
+		0x180912936 je near ptr 0000000180912CFBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091293C cmp dword ptr [r14+18h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| R14 | 24 | None ||| N/A | 0
+		0x180912941 jle short 0000000180912954h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912943 mov rdx,[1830F21D8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493774296 | None ||| N/A | N/A
+		0x18091294A mov rcx,r14		; DEBUG: {Register}/RCX {Register}/R14 ||| None | 0 | None ||| N/A | N/A
+		0x18091294D call 0000000181424BB0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912952 jmp short 0000000180912960h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912954 mov rcx,[1830F22D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774544 | None ||| N/A | N/A
+		0x18091295B call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912960 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912963 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912966 je near ptr 0000000180912CFBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18091296C mov [rax+10h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RAX | 16 | None ||| N/A | N/A
+		0x180912970 lea rcx,[rax+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x180912974 call 000000018027F3B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912979 mov dword ptr [rdi+18h],1		; DEBUG: {Memory}/None {Immediate32}/None ||| RDI | 24 | None ||| N/A | 1
+		0x180912980 mov rax,[1830F21F8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493774328 | None ||| N/A | N/A
+		0x180912987 mov rcx,[rax+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 32 | None ||| N/A | N/A
+		0x18091298B mov rax,[rcx+0C0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 192 | None ||| N/A | N/A
+		0x180912992 mov rcx,[rax+0F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 248 | None ||| N/A | N/A
+		0x180912999 movsd xmm0,qword ptr [rsi+10h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSI | 16 | None ||| N/A | N/A
+		0x18091299E movsd qword ptr [rsp+90h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 144 | None ||| N/A | N/A
+		0x1809129A7 mov eax,[rsi+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RSI | 24 | None ||| N/A | N/A
+		0x1809129AA mov [rsp+98h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 152 | None ||| N/A | N/A
+		0x1809129B1 mov [rsp+20h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RSP | 32 | None ||| N/A | N/A
+		0x1809129B6 mov r9b,1		; DEBUG: {Register}/R9L {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1809129B9 mov r8,rdi		; DEBUG: {Register}/R8 {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809129BC lea rdx,[rsp+90h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 144 | None ||| N/A | N/A
+		0x1809129C4 mov rcx,r13		; DEBUG: {Register}/RCX {Register}/R13 ||| None | 0 | None ||| N/A | N/A
+		0x1809129C7 call 0000000180F5C570h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809129CC mov rax,[1830F2220h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493774368 | None ||| N/A | N/A
+		0x1809129D3 mov rcx,[rax+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 32 | None ||| N/A | N/A
+		0x1809129D7 mov rax,[rcx+0C0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 192 | None ||| N/A | N/A
+		0x1809129DE mov r8,[rax+0F0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 240 | None ||| N/A | N/A
+		0x1809129E5 movsd xmm0,qword ptr [rsi+1Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSI | 28 | None ||| N/A | N/A
+		0x1809129EA movsd qword ptr [rsp+0A0h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 160 | None ||| N/A | N/A
+		0x1809129F3 mov eax,[rsi+24h]		; DEBUG: {Register}/EAX {Memory}/None ||| RSI | 36 | None ||| N/A | N/A
+		0x1809129F6 mov [rsp+0A8h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 168 | None ||| N/A | N/A
+		0x1809129FD lea rdx,[rsp+0A0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 160 | None ||| N/A | N/A
+		0x180912A05 mov rcx,r13		; DEBUG: {Register}/RCX {Register}/R13 ||| None | 0 | None ||| N/A | N/A
+		0x180912A08 call 0000000180F5C0D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912A0D test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180912A0F js short 0000000180912A4Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912A11 movsd xmm0,qword ptr [rsi+1Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSI | 28 | None ||| N/A | N/A
+		0x180912A16 movsd qword ptr [rsp+0B0h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 176 | None ||| N/A | N/A
+		0x180912A1F mov eax,[rsi+24h]		; DEBUG: {Register}/EAX {Memory}/None ||| RSI | 36 | None ||| N/A | N/A
+		0x180912A22 mov [rsp+0B8h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 184 | None ||| N/A | N/A
+		0x180912A29 lea rdx,[rsp+0B0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 176 | None ||| N/A | N/A
+		0x180912A31 mov rcx,r13		; DEBUG: {Register}/RCX {Register}/R13 ||| None | 0 | None ||| N/A | N/A
+		0x180912A34 call 000000018000CE60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912A39 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180912A3B mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912A3E call 0000000180912D40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912A43 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912A46 jmp near ptr 0000000180912AE4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912A4B test r14,r14		; DEBUG: {Register}/R14 {Register}/R14 ||| None | 0 | None ||| N/A | N/A
+		0x180912A4E je near ptr 0000000180912CFBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912A54 cmp dword ptr [r14+18h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| R14 | 24 | None ||| N/A | 0
+		0x180912A59 jle short 0000000180912A6Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912A5B mov rdx,[1830F21D8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493774296 | None ||| N/A | N/A
+		0x180912A62 mov rcx,r14		; DEBUG: {Register}/RCX {Register}/R14 ||| None | 0 | None ||| N/A | N/A
+		0x180912A65 call 0000000181424BB0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912A6A jmp short 0000000180912A78h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912A6C mov rcx,[1830F22D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493774544 | None ||| N/A | N/A
+		0x180912A73 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912A78 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912A7B test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912A7E je near ptr 0000000180912CFBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912A84 mov [rax+10h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RAX | 16 | None ||| N/A | N/A
+		0x180912A88 lea rcx,[rax+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x180912A8C call 000000018027F3B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912A91 mov dword ptr [rbx+18h],1		; DEBUG: {Memory}/None {Immediate32}/None ||| RBX | 24 | None ||| N/A | 1
+		0x180912A98 mov rax,[1830F21F8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493774328 | None ||| N/A | N/A
+		0x180912A9F mov rcx,[rax+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 32 | None ||| N/A | N/A
+		0x180912AA3 mov rax,[rcx+0C0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 192 | None ||| N/A | N/A
+		0x180912AAA mov rcx,[rax+0F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 248 | None ||| N/A | N/A
+		0x180912AB1 movsd xmm0,qword ptr [rsi+1Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSI | 28 | None ||| N/A | N/A
+		0x180912AB6 movsd qword ptr [rsp+0C0h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 192 | None ||| N/A | N/A
+		0x180912ABF mov eax,[rsi+24h]		; DEBUG: {Register}/EAX {Memory}/None ||| RSI | 36 | None ||| N/A | N/A
+		0x180912AC2 mov [rsp+0C8h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 200 | None ||| N/A | N/A
+		0x180912AC9 mov [rsp+20h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RSP | 32 | None ||| N/A | N/A
+		0x180912ACE mov r9b,1		; DEBUG: {Register}/R9L {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180912AD1 mov r8,rbx		; DEBUG: {Register}/R8 {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180912AD4 lea rdx,[rsp+0C0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 192 | None ||| N/A | N/A
+		0x180912ADC mov rcx,r13		; DEBUG: {Register}/RCX {Register}/R13 ||| None | 0 | None ||| N/A | N/A
+		0x180912ADF call 0000000180F5C570h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912AE4 cmp rdi,rbx		; DEBUG: {Register}/RDI {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180912AE7 je short 0000000180912B48h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912AE9 mov rax,[rsp+138h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSP | 312 | None ||| N/A | N/A
+		0x180912AF1 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912AF4 je near ptr 0000000180912CFBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912AFA mov rdx,rsi		; DEBUG: {Register}/RDX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180912AFD mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912B00 call 000000018000CE00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912B05 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180912B08 je near ptr 0000000180912CFBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912B0E mov r10d,[rdi+18h]		; DEBUG: {Register}/R10D {Memory}/None ||| RDI | 24 | None ||| N/A | N/A
+		0x180912B12 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180912B15 je near ptr 0000000180912CFBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912B1B mov r11d,[rbx+18h]		; DEBUG: {Register}/R11D {Memory}/None ||| RBX | 24 | None ||| N/A | N/A
+		0x180912B1F cmp r10d,r11d		; DEBUG: {Register}/R10D {Register}/R11D ||| None | 0 | None ||| N/A | N/A
+		0x180912B22 jge short 0000000180912B37h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912B24 mov [rdi+10h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RDI | 16 | None ||| N/A | N/A
+		0x180912B28 lea rcx,[rdi+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 16 | None ||| N/A | N/A
+		0x180912B2C call 000000018027F3B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912B31 add [rbx+18h],r10d		; DEBUG: {Memory}/None {Register}/R10D ||| RBX | 24 | None ||| N/A | N/A
+		0x180912B35 jmp short 0000000180912B48h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912B37 mov [rbx+10h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RBX | 16 | None ||| N/A | N/A
+		0x180912B3B lea rcx,[rbx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x180912B3F call 000000018027F3B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912B44 add [rdi+18h],r11d		; DEBUG: {Memory}/None {Register}/R11D ||| RDI | 24 | None ||| N/A | N/A
+		0x180912B48 dec r15d		; DEBUG: {Register}/R15D {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912B4B cmp r15d,0FFFFFFFFh		; DEBUG: {Register}/R15D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 18446744073709551615
+		0x180912B4F jg near ptr 0000000180912880h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912B55 jmp short 0000000180912B60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912B57 test r13,r13		; DEBUG: {Register}/R13 {Register}/R13 ||| None | 0 | None ||| N/A | N/A
+		0x180912B5A je near ptr 0000000180912CFBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912B60 mov rdx,[1830F2218h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493774360 | None ||| N/A | N/A
+		0x180912B67 mov rcx,r13		; DEBUG: {Register}/RCX {Register}/R13 ||| None | 0 | None ||| N/A | N/A
+		0x180912B6A call 0000000180F5B450h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912B6F test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912B72 je near ptr 0000000180912CFBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912B78 mov r9,[rax+10h]		; DEBUG: {Register}/R9 {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x180912B7C xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180912B7F movdqu [rsp+50h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 80 | None ||| N/A | N/A
+		0x180912B85 mov [rsp+48h],r9		; DEBUG: {Memory}/None {Register}/R9 ||| RSP | 72 | None ||| N/A | N/A
+		0x180912B8A cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180912B91 je short 0000000180912BD9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912B93 lea r8,[rsp+48h]		; DEBUG: {Register}/R8 {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x180912B98 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180912B9C and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180912BA3 mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180912BA6 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180912BAA lea rcx,[1832AE560h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495593824 | None ||| N/A | N/A
+		0x180912BB1 lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x180912BB5 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180912BB9 prefetchw [rdx+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x180912BC0 mov rax,[rdx+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x180912BC7 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912BCA bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180912BCE lock cmpxchg [rdx+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 287456 | None ||| N/A | N/A
+		0x180912BD7 jne short 0000000180912BC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912BD9 test r9,r9		; DEBUG: {Register}/R9 {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x180912BDC je near ptr 0000000180912D37h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912BE2 mov eax,[r9+2Ch]		; DEBUG: {Register}/EAX {Memory}/None ||| R9 | 44 | None ||| N/A | N/A
+		0x180912BE6 mov [rsp+54h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 84 | None ||| N/A | N/A
+		0x180912BEA xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180912BEC mov [rsp+50h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 80 | None ||| N/A | N/A
+		0x180912BF0 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180912BF2 mov [rsp+58h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RSP | 88 | None ||| N/A | N/A
+		0x180912BF7 movups xmm0,[rsp+48h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x180912BFC movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180912C01 movsd xmm1,qword ptr [rsp+58h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 88 | None ||| N/A | N/A
+		0x180912C07 movsd qword ptr [rsp+40h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 64 | None ||| N/A | N/A
+		0x180912C0D mov [rsp+0D0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 208 | None ||| N/A | N/A
+		0x180912C15 lea rax,[rsp+30h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180912C1A mov [rsp+0D8h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 216 | None ||| N/A | N/A
+		0x180912C22 mov rdx,[rsp+30h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180912C27 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180912C2A je near ptr 0000000180912D2Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912C30 mov eax,[rdx+2Ch]		; DEBUG: {Register}/EAX {Memory}/None ||| RDX | 44 | None ||| N/A | N/A
+		0x180912C33 cmp [rsp+3Ch],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 60 | None ||| N/A | N/A
+		0x180912C37 jne near ptr 0000000180912D24h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912C3D mov ecx,[rsp+38h]		; DEBUG: {Register}/ECX {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180912C41 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180912C44 je near ptr 0000000180912D1Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912C4A cmp ecx,[rdx+20h]		; DEBUG: {Register}/ECX {Memory}/None ||| RDX | 32 | None ||| N/A | N/A
+		0x180912C4D jae short 0000000180912CAFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912C4F mov r8,[rdx+18h]		; DEBUG: {Register}/R8 {Memory}/None ||| RDX | 24 | None ||| N/A | N/A
+		0x180912C53 movsxd rax,ecx		; DEBUG: {Register}/RAX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180912C56 inc ecx		; DEBUG: {Register}/ECX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912C58 mov [rsp+38h],ecx		; DEBUG: {Memory}/None {Register}/ECX ||| RSP | 56 | None ||| N/A | N/A
+		0x180912C5C test r8,r8		; DEBUG: {Register}/R8 {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180912C5F je near ptr 0000000180912D1Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912C65 cmp eax,[r8+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| R8 | 24 | None ||| N/A | N/A
+		0x180912C69 jae near ptr 0000000180912D0Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912C6F inc rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912C72 shl rax,5		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 5
+		0x180912C76 cmp dword ptr [rax+r8],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 0 | R8 ||| N/A | 0
+		0x180912C7B jl short 0000000180912C41h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912C7D mov rcx,[rax+r8+18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 24 | R8 ||| N/A | N/A
+		0x180912C82 mov [rsp+40h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RSP | 64 | None ||| N/A | N/A
+		0x180912C87 lea rcx,[rsp+40h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x180912C8C call 000000018027F3B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912C91 test r14,r14		; DEBUG: {Register}/R14 {Register}/R14 ||| None | 0 | None ||| N/A | N/A
+		0x180912C94 je short 0000000180912D15h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912C96 mov r8,[1830F21C0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493774272 | None ||| N/A | N/A
+		0x180912C9D mov rdx,[rsp+40h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x180912CA2 mov rcx,r14		; DEBUG: {Register}/RCX {Register}/R14 ||| None | 0 | None ||| N/A | N/A
+		0x180912CA5 call 0000000181424C30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912CAA jmp near ptr 0000000180912C22h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912CAF mov eax,[rdx+20h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDX | 32 | None ||| N/A | N/A
+		0x180912CB2 inc eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912CB4 mov [rsp+38h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 56 | None ||| N/A | N/A
+		0x180912CB8 xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180912CBA mov [rsp+40h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 64 | None ||| N/A | N/A
+		0x180912CBF mov rsi,[rsp+138h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 312 | None ||| N/A | N/A
+		0x180912CC7 jmp short 0000000180912CDBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912CC9 mov rcx,[rsp+0D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 208 | None ||| N/A | N/A
+		0x180912CD1 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180912CD4 jne short 0000000180912D31h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912CD6 mov rsi,[rsp+60h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x180912CDB mov rax,rsi		; DEBUG: {Register}/RAX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180912CDE lea r11,[rsp+0F0h]		; DEBUG: {Register}/R11 {Memory}/None ||| RSP | 240 | None ||| N/A | N/A
+		0x180912CE6 mov rbx,[r11+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| R11 | 48 | None ||| N/A | N/A
+		0x180912CEA mov rsi,[r11+38h]		; DEBUG: {Register}/RSI {Memory}/None ||| R11 | 56 | None ||| N/A | N/A
+		0x180912CEE mov rsp,r11		; DEBUG: {Register}/RSP {Register}/R11 ||| None | 0 | None ||| N/A | N/A
+		0x180912CF1 pop r15		; DEBUG: {Register}/R15 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912CF3 pop r14		; DEBUG: {Register}/R14 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912CF5 pop r13		; DEBUG: {Register}/R13 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912CF7 pop r12		; DEBUG: {Register}/R12 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912CF9 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912CFA ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912CFB call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912D00 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912D07 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180912D09 call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912D0E nop		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912D0F call 00000001802CDD90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912D14 nop		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912D15 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912D1A call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912D1F call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912D24 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180912D26 call 00000001818C0380h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912D2B call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912D30 nop		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912D31 call 00000001802C4E80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912D36 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Static Method System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> Delaunay.DelaunayHelpers::Kruskal(System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>,Delaunay.KruskalType):
+		End of function at 0x180912D37
+		Absolute End is at 0x180912D37
+		Identified Jump Destination addresses:
+			0x180912849
+			0x1809129CC
+			0x180912960
+			0x180912AE4
+			0x180912A78
+			0x180912B48
+			0x180912B60
+			0x180912CDB
+		0x18091243A: Saves the content of rdi to the stack
+		0x18091243B: Saves the content of r12 to the stack
+		0x18091243D: Saves the content of r13 to the stack
+		0x18091243F: Saves the content of r14 to the stack
+		0x180912441: Saves the content of r15 to the stack
+		0x18091244A: [!] Implicitly reads field at offset 0 (which is value__) from struct type of type Delaunay.KruskalType and stores in new local {'local2' (type System.Int32)}
+		0x18091244C: Copies {'lineSegments' (function parameter, type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from rcx into r12
+		0x18091244F: Compares {Unknown Global at 0x18329B8DE, first ten bytes are [234 2 224 93 4 0 117 94 4 0], or as chars "êà] u^ "} and 0
+		0x180912456: Jumps to 0x180912583 if {Unknown Global at 0x18329B8DE, first ten bytes are [234 2 224 93 4 0 117 94 4 0], or as chars "êà] u^ "} != 0
+
+		0x18091245C: Loads the type definition for managed type System.Comparison`1<Delaunay.Geo.LineSegment> as a constant "Comparison`1" in rcx
+		0x180912463: Initializes runtime metadata value System.Comparison`1<Delaunay.Geo.LineSegment>
+		0x180912468: Loads the global generic method reference for method System.Boolean System.Collections.Generic.Dictionary`2::ContainsKey(TKey) on type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'ContainsKey' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18091246F: Initializes runtime metadata value 
+		0x180912474: Loads the global generic method reference for method System.Void System.Collections.Generic.Dictionary`2::.ctor() on type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18091247B: Initializes runtime metadata value 
+		0x180912480: Loads the global generic method reference for method TValue System.Collections.Generic.Dictionary`2::get_Item(TKey) on type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180912487: Initializes runtime metadata value 
+		0x18091248C: Loads the global generic method reference for method System.Collections.Generic.Dictionary`2/ValueCollection<TKey,TValue> System.Collections.Generic.Dictionary`2::get_Values() on type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'get_Values' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180912493: Initializes runtime metadata value 
+		0x180912498: Loads the global generic method reference for method System.Void System.Collections.Generic.Dictionary`2::set_Item(TKey,TValue) on type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'set_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18091249F: Initializes runtime metadata value 
+		0x1809124A4: Loads the type definition for managed type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> as a constant "Dictionary`2" in rcx
+		0x1809124AB: Initializes runtime metadata value System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>
+		0x1809124B0: Loads the global generic method reference for method System.Void System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator::Dispose() on type System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'Dispose' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809124B7: Initializes runtime metadata value 
+		0x1809124BC: Loads the global generic method reference for method System.Boolean System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator::MoveNext() on type System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'MoveNext' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809124C3: Initializes runtime metadata value 
+		0x1809124C8: Loads the global generic method reference for method TValue System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator::get_Current() on type System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'get_Current' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809124CF: Initializes runtime metadata value 
+		0x1809124D4: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::Add(T) on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'Add' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809124DB: Initializes runtime metadata value 
+		0x1809124E0: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::Sort(System.Comparison`1<T>) on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'Sort' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809124E7: Initializes runtime metadata value 
+		0x1809124EC: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::.ctor() on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809124F3: Initializes runtime metadata value 
+		0x1809124F8: Loads the global generic method reference for method System.Int32 System.Collections.Generic.List`1::get_Count() on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'get_Count' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809124FF: Initializes runtime metadata value 
+		0x180912504: Loads the global generic method reference for method T System.Collections.Generic.List`1::get_Item(System.Int32) on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18091250B: Initializes runtime metadata value 
+		0x180912510: Loads the type definition for managed type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> as a constant "List`1" in rcx
+		0x180912517: Initializes runtime metadata value System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>
+		0x18091251C: Loads the type definition for managed type Delaunay.Node as a constant "Node" in rcx
+		0x180912523: Initializes runtime metadata value Delaunay.Node
+		0x180912528: Loads the global generic method reference for method T System.Collections.Generic.Stack`1::Pop() on type System.Collections.Generic.Stack`1<Delaunay.Node> and stores the result in constant {'Pop' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18091252F: Initializes runtime metadata value 
+		0x180912534: Loads the global generic method reference for method System.Void System.Collections.Generic.Stack`1::Push(T) on type System.Collections.Generic.Stack`1<Delaunay.Node> and stores the result in constant {'Push' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18091253B: Initializes runtime metadata value 
+		0x180912540: Loads the global generic method reference for method System.Int32 System.Collections.Generic.Stack`1::get_Count() on type System.Collections.Generic.Stack`1<Delaunay.Node> and stores the result in constant {'get_Count' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180912547: Initializes runtime metadata value 
+		0x18091254C: Loads the method definition for managed method System.Int32 Delaunay.DelaunayHelpers/<>c::<Kruskal>b__4_0(Delaunay.Geo.LineSegment,Delaunay.Geo.LineSegment) as a constant "<Kruskal>b__4_0"
+		0x180912553: Initializes runtime metadata value System.Int32 Delaunay.DelaunayHelpers/<>c::<Kruskal>b__4_0(Delaunay.Geo.LineSegment,Delaunay.Geo.LineSegment)
+		0x180912558: Loads the method definition for managed method System.Int32 Delaunay.DelaunayHelpers/<>c::<Kruskal>b__4_1(Delaunay.Geo.LineSegment,Delaunay.Geo.LineSegment) as a constant "<Kruskal>b__4_1"
+		0x18091255F: Initializes runtime metadata value System.Int32 Delaunay.DelaunayHelpers/<>c::<Kruskal>b__4_1(Delaunay.Geo.LineSegment,Delaunay.Geo.LineSegment)
+		0x180912564: Loads the type definition for managed type Delaunay.DelaunayHelpers/<>c as a constant "<>c" in rcx
+		0x18091256B: Initializes runtime metadata value Delaunay.DelaunayHelpers/<>c
+		0x180912570: Loads the global generic method reference for method System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator<TKey,TValue> System.Collections.Generic.Dictionary`2/ValueCollection::GetEnumerator() on type System.Collections.Generic.Dictionary`2/ValueCollection<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'GetEnumerator' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180912577: Initializes runtime metadata value 
+		0x180912583: Clears register xmm0, yielding zero-local {'local3' (type System.Int32)}
+		0x180912586: Clears register rax, yielding zero-local {'local4' (type System.Int32)}
+		0x180912588: Moves local3 (type System.Int32) from register xmm0 to the stack at offset 48 (0x30)
+		0x18091258D: Moves local4 (type System.Int32) from register rax to the stack at offset 64 (0x40)
+		0x180912592: Loads the type definition for managed type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> as a constant "Dictionary`2" in rcx
+		0x180912599: [!] Allocates an instance of type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores it as dictionary in rax.
+
+		0x18091259E: Copies {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} from rax into r13
+		0x1809125A1: Loads the global generic method reference for method System.Void System.Collections.Generic.Dictionary`2::.ctor() on type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809125AC: [!] Reads field  from {'type' (function parameter, type Delaunay.KruskalType)} and stores in a new local 
+
+		0x1809125B3: Moves the method pointer for method System.Void System.Collections.Generic.Dictionary`2::.ctor() from rcx to rcx
+		0x1809125C1: [!] Reads field  from {'type' (function parameter, type Delaunay.KruskalType)} and stores in a new local 
+
+		0x1809125C5: [!] Calls managed method  on instance  ;  - Could not find any callable methods. Bailing out.
+
+		0x1809125CA: Reads {Unknown Global at 0x1832AE560, first ten bytes are [20 59 240 2 208 31 18 0 228 32], or as chars ";ðÐ ä "} into register r15 as a constant constant29
+		0x1809125D1: [!] Compares {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} and 0
+		0x1809125D4: Jumps to 0x180912629 (which is an if statement's body) if dictionary equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809125D6: [!] Sets the field _comparer (Type System.Collections.Generic.IEqualityComparer`1<TKey>) on local {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} to the value stored in 0
+		0x1809125DE: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1809125E5: Jumps to 0x180912629 if constant31 equals 0
+
+		0x1809125E7: Loads the pointer to the field _comparer on {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} into register r8
+		0x1809125F6: Copies {'constant33' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x180912610: [!] Reads field  from {'type' (function parameter, type Delaunay.KruskalType)} and stores in a new local 
+
+		0x180912617: Copies {'constant33' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from rax into rcx
+		0x180912627: Jumps to 0x180912610 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x180912629: Loads the type definition for managed type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> as a constant "List`1" in rcx
+		0x180912630: [!] Allocates an instance of type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores it as list in rax.
+
+		0x180912635: Copies {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from rax into rsi
+		0x180912638: Moves list (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>) from register rax to the stack at offset 312 (0x138)
+		0x180912640: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::.ctor() on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180912647: Copies {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from rax into rcx
+		0x18091264A: [!] Calls managed method System.Void System.Collections.Generic.List`1::.ctor() on instance {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x18091264F: Moves list (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>) from register rsi to the stack at offset 96 (0x60)
+		0x180912654: Loads the type definition for managed type Delaunay.Node as a constant "Node" in rax
+		0x18091265B: Compares "{il2cpp field Delaunay.Node->cctor_finished}" and 0
+		0x180912662: Jumps to 0x180912673 if "{il2cpp field Delaunay.Node->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x180912673 which is after end of current block @ 0x180912629 (started at 0x1809125D6)
+
+		0x180912664: Copies {'Node' (constant value of type Mono.Cecil.TypeReference)} from rax into rcx
+		0x180912667: Calls the il2cpp cctor for the type Delaunay.Node
+		0x18091266C: Loads the type definition for managed type Delaunay.Node as a constant "Node" in rax
+		0x180912673: Loads the pointer to the static fields for Delaunay.Node and stores it in constant40 in register rax
+		0x18091267A: [!] Reads the static field System.Collections.Generic.Stack`1<Delaunay.Node> Delaunay.Node::pool into new local pool
+		0x18091267D: Loads the type definition for managed type Delaunay.DelaunayHelpers/<>c as a constant "<>c" in rcx
+		0x180912684: [!] Compares {'local2' (type System.Int32)} and 1
+		0x180912687: Jumps to 0x18091276E if local2 equals 1 ;  - This is probably a goto, jumping to 0x18091276E which is after end of current block @ 0x180912629 (started at 0x1809125D6)
+
+		0x18091268D: Compares "{il2cpp field Delaunay.DelaunayHelpers/<>c->cctor_finished}" and 0
+		0x180912694: Jumps to 0x1809126A2 if "{il2cpp field Delaunay.DelaunayHelpers/<>c->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x1809126A2 which is after end of current block @ 0x180912629 (started at 0x1809125D6)
+
+		0x180912696: Calls the il2cpp cctor for the type Delaunay.DelaunayHelpers/<>c
+		0x18091269B: Loads the type definition for managed type Delaunay.DelaunayHelpers/<>c as a constant "<>c" in rcx
+		0x1809126A2: Loads the pointer to the static fields for Delaunay.DelaunayHelpers/<>c and stores it in constant46 in register rax
+		0x1809126A9: [!] Reads the static field System.Comparison`1<Delaunay.Geo.LineSegment> Delaunay.DelaunayHelpers/<>c::<>9__4_1 into new local <>9__4_1
+		0x1809126AD: [!] Compares {'<>9__4_1' (type System.Comparison`1<Delaunay.Geo.LineSegment>)} and 0
+		0x1809126B0: Jumps to 0x180912849 if {'<>9__4_1' (type System.Comparison`1<Delaunay.Geo.LineSegment>)} != 0 ;  - This is probably a goto, jumping to 0x180912849 which is after end of current block @ 0x180912629 (started at 0x1809125D6)
+
+		0x1809126B6: Compares "{il2cpp field Delaunay.DelaunayHelpers/<>c->cctor_finished}" and {'<>9__4_1' (type System.Comparison`1<Delaunay.Geo.LineSegment>)}
+		0x1809126BC: Jumps to 0x1809126CA if "{il2cpp field Delaunay.DelaunayHelpers/<>c->cctor_finished}" != {'<>9__4_1' (type System.Comparison`1<Delaunay.Geo.LineSegment>)} ;  - This is probably a goto, jumping to 0x1809126CA which is after end of current block @ 0x180912629 (started at 0x1809125D6)
+
+		0x1809126BE: Calls the il2cpp cctor for the type Delaunay.DelaunayHelpers/<>c
+		0x1809126C3: Loads the type definition for managed type Delaunay.DelaunayHelpers/<>c as a constant "<>c" in rcx
+		0x1809126CA: Loads the pointer to the static fields for Delaunay.DelaunayHelpers/<>c and stores it in constant50 in register rax
+		0x1809126D1: [!] Reads the static field Delaunay.DelaunayHelpers/<>c Delaunay.DelaunayHelpers/<>c::<>9 into new local <>c
+		0x1809126D4: Loads the type definition for managed type System.Comparison`1<Delaunay.Geo.LineSegment> as a constant "Comparison`1" in rcx
+		0x1809126DB: [!] Allocates an instance of type System.Comparison`1<Delaunay.Geo.LineSegment> and stores it as comparison in rax.
+
+		0x1809126E0: Copies {'comparison' (type System.Comparison`1<Delaunay.Geo.LineSegment>)} from rax into rdi
+		0x1809126E6: Loads the method definition for managed method System.Int32 Delaunay.DelaunayHelpers/<>c::<Kruskal>b__4_1(Delaunay.Geo.LineSegment,Delaunay.Geo.LineSegment) as a constant "<Kruskal>b__4_1"
+		0x1809126ED: Copies {'<>c' (type Delaunay.DelaunayHelpers/<>c)} from rbx into rdx
+		0x1809126F0: Copies {'comparison' (type System.Comparison`1<Delaunay.Geo.LineSegment>)} from rax into rcx
+		0x1809126F3: [!] Calls managed method  on instance {'comparison' (type System.Comparison`1<Delaunay.Geo.LineSegment>)} ;  - Failed to resolve any matching method (there are 2 at this address)
+
+		0x1809126F8: Loads the type definition for managed type Delaunay.DelaunayHelpers/<>c as a constant "<>c" in rax
+		0x1809126FF: Loads the pointer to the static fields for Delaunay.DelaunayHelpers/<>c and stores it in constant54 in register rcx
+		0x180912706: [!] Sets static field Delaunay.DelaunayHelpers/<>c.<>9__4_1 to {'comparison' (type System.Comparison`1<Delaunay.Geo.LineSegment>)}
+		0x18091270A: Loads the type definition for managed type Delaunay.DelaunayHelpers/<>c as a constant "<>c" in rax
+		0x180912711: Loads the pointer to the static fields for Delaunay.DelaunayHelpers/<>c and stores it in constant56 in register r9
+		0x180912718: [!] Adds 16 to the value , stored in r9
+		0x18091271C: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180912723: Jumps to 0x180912849 if constant57 equals 0 ;  - This is probably a goto, jumping to 0x180912849 which is after end of current block @ 0x180912629 (started at 0x1809125D6)
+
+		0x180912734: Copies {'constant56' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StaticFieldsPtr)} from r9 into rax
+		0x180912757: Copies {'constant56' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StaticFieldsPtr)} from rax into rcx
+		0x180912767: Jumps to 0x180912750 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0 ;  - This is probably a goto, jumping to 0x180912750 which is after end of current block @ 0x180912629 (started at 0x1809125D6)
+
+		0x180912769: Jumps to 0x180912849 (which is an function-local jump destination)
+
+		0x18091276E: Compares "{il2cpp field on {'constant56' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StaticFieldsPtr)}, offset 0xE0}" and 0
+		0x180912775: Jumps to 0x180912783 if "{il2cpp field on {'constant56' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StaticFieldsPtr)}, offset 0xE0}" != 0 ;  - This is probably a goto, jumping to 0x180912783 which is after end of current block @ 0x180912629 (started at 0x1809125D6)
+
+		0x180912777: Calls the il2cpp cctor for the type 
+		0x18091277C: Loads the type definition for managed type Delaunay.DelaunayHelpers/<>c as a constant "<>c" in rcx
+		0x180912783: Loads the pointer to the static fields for Delaunay.DelaunayHelpers/<>c and stores it in constant62 in register rax
+		0x18091278A: [!] Reads the static field System.Comparison`1<Delaunay.Geo.LineSegment> Delaunay.DelaunayHelpers/<>c::<>9__4_0 into new local <>9__4_0
+		0x18091278E: [!] Compares {'<>9__4_0' (type System.Comparison`1<Delaunay.Geo.LineSegment>)} and 0
+		0x180912791: Jumps to 0x180912849 if {'<>9__4_0' (type System.Comparison`1<Delaunay.Geo.LineSegment>)} != 0 ;  - This is probably a goto, jumping to 0x180912849 which is after end of current block @ 0x180912629 (started at 0x1809125D6)
+
+		0x180912797: Compares "{il2cpp field Delaunay.DelaunayHelpers/<>c->cctor_finished}" and {'<>9__4_0' (type System.Comparison`1<Delaunay.Geo.LineSegment>)}
+		0x18091279D: Jumps to 0x1809127AB if "{il2cpp field Delaunay.DelaunayHelpers/<>c->cctor_finished}" != {'<>9__4_0' (type System.Comparison`1<Delaunay.Geo.LineSegment>)} ;  - This is probably a goto, jumping to 0x1809127AB which is after end of current block @ 0x180912629 (started at 0x1809125D6)
+
+		0x18091279F: Calls the il2cpp cctor for the type Delaunay.DelaunayHelpers/<>c
+		0x1809127A4: Loads the type definition for managed type Delaunay.DelaunayHelpers/<>c as a constant "<>c" in rcx
+		0x1809127AB: Loads the pointer to the static fields for Delaunay.DelaunayHelpers/<>c and stores it in constant66 in register rax
+		0x1809127B2: [!] Reads the static field Delaunay.DelaunayHelpers/<>c Delaunay.DelaunayHelpers/<>c::<>9 into new local <>c2
+		0x1809127B5: Loads the type definition for managed type System.Comparison`1<Delaunay.Geo.LineSegment> as a constant "Comparison`1" in rcx
+		0x1809127BC: [!] Allocates an instance of type System.Comparison`1<Delaunay.Geo.LineSegment> and stores it as comparison2 in rax.
+
+		0x1809127C1: Copies {'comparison2' (type System.Comparison`1<Delaunay.Geo.LineSegment>)} from rax into rdi
+		0x1809127C7: Loads the method definition for managed method System.Int32 Delaunay.DelaunayHelpers/<>c::<Kruskal>b__4_0(Delaunay.Geo.LineSegment,Delaunay.Geo.LineSegment) as a constant "<Kruskal>b__4_0"
+		0x1809127CE: Copies {'<>c2' (type Delaunay.DelaunayHelpers/<>c)} from rbx into rdx
+		0x1809127D1: Copies {'comparison2' (type System.Comparison`1<Delaunay.Geo.LineSegment>)} from rax into rcx
+		0x1809127D4: [!] Calls managed method  on instance {'comparison2' (type System.Comparison`1<Delaunay.Geo.LineSegment>)} ;  - Failed to resolve any matching method (there are 2 at this address)
+
+		0x1809127D9: Loads the type definition for managed type Delaunay.DelaunayHelpers/<>c as a constant "<>c" in rax
+		0x1809127E0: Loads the pointer to the static fields for Delaunay.DelaunayHelpers/<>c and stores it in constant70 in register rcx
+		0x1809127E7: [!] Sets static field Delaunay.DelaunayHelpers/<>c.<>9__4_0 to {'comparison2' (type System.Comparison`1<Delaunay.Geo.LineSegment>)}
+		0x1809127EB: Loads the type definition for managed type Delaunay.DelaunayHelpers/<>c as a constant "<>c" in rax
+		0x1809127F2: Loads the pointer to the static fields for Delaunay.DelaunayHelpers/<>c and stores it in constant72 in register r9
+		0x1809127F9: [!] Adds 8 to the value , stored in r9
+		0x1809127FD: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180912804: Jumps to 0x180912849 if constant73 equals 0 ;  - This is probably a goto, jumping to 0x180912849 which is after end of current block @ 0x180912629 (started at 0x1809125D6)
+
+		0x180912811: Copies {'constant72' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StaticFieldsPtr)} from r9 into rax
+		0x180912837: Copies {'constant72' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StaticFieldsPtr)} from rax into rcx
+		0x180912847: Jumps to 0x180912830 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0 ;  - This is probably a goto, jumping to 0x180912830 which is after end of current block @ 0x180912629 (started at 0x1809125D6)
+
+
+		Jump Destination (0x180912849):
+		0x180912849: [!] Compares {'lineSegments' (function parameter, type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} and 0
+		0x18091284C: Jumps to 0x180912CFB (which throws a NRE) if lineSegments equals 0. Implicitly present in managed code, so ignored here.
+		0x180912852: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::Sort(System.Comparison`1<T>) on type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> and stores the result in constant {'Sort' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in r8
+		0x180912859: Copies {'comparison2' (type System.Comparison`1<Delaunay.Geo.LineSegment>)} from rdi into rdx
+		0x18091285C: Copies {'lineSegments' (function parameter, type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from r12 into rcx
+		0x18091285F: [!] Calls managed method System.Void System.Collections.Generic.List`1::Sort(System.Comparison`1<T>) on instance {'lineSegments' (function parameter, type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} with arguments [{'comparison2' (type System.Comparison`1<Delaunay.Geo.LineSegment>)}] ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180912864: [!] Reads field _size from {'lineSegments' (function parameter, type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} and stores in a new local {'_size' (type System.Int32)}
+
+		0x18091286C: [!] Compares {'_size' (type System.Int32)} and -1
+		0x180912870: Jumps to 0x180912B57 if {'_size' (type System.Int32)} is less than or equal to -1 ;  - This is probably a goto, jumping to 0x180912B57 which is after end of current block @ 0x180912629 (started at 0x1809125D6)
+
+		0x180912880: [!] Compares {'_size' (type System.Int32)} against itself
+		0x180912885: Jumps to 0x180912D07 if {'_size' (type System.Int32)} is greater than or equal to  ;  - Increasing indentation - is while loop, unimportant is False
+
+		0x18091288B: [!] Reads field _items from {'lineSegments' (function parameter, type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} and stores in a new local {'_items' (type T[])}
+
+		0x180912890: [!] Compares {'_items' (type T[])} and 0
+		0x180912893: Jumps to 0x180912CFB (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x180912899: Copies {'_size' (type System.Int32)} from r15 into rax
+		0x18091289C: [!] Compares {'_size' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}
+		0x1809128A0: Jumps to 0x180912D01 (which throws a NRE) if {'_size' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'_items' (type T[])}}. Implicitly present in managed code, so ignored here.
+		0x1809128A6: Copies the element in the array {'_items' (type T[])} at the index specified by {'_size' (type System.Int32)} into new local {'t' (type T)}
+		0x1809128AB: [!] Compares {'t' (type T)} and 0
+		0x1809128AE: Jumps to 0x180912CFB (which throws a NRE) if t equals 0. Implicitly present in managed code, so ignored here.
+		0x1809128B4: [!] Compares {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} and 0
+		0x1809128B7: Jumps to 0x180912CFB (which throws a NRE) if dictionary equals 0. Implicitly present in managed code, so ignored here.
+		0x1809128BD: Loads the global generic method reference for method System.Boolean System.Collections.Generic.Dictionary`2::ContainsKey(TKey) on type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'ContainsKey' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rax
+		0x1809128C8: [!] Reads field  from {'lineSegments' (function parameter, type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} and stores in a new local 
+
+		0x1809128E1: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rsi is {'local18' (type T)}, offset is 24 (0x18)
+
+		0x1809128E4: Moves ContainsKey (type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference) from register rax to the stack at offset 120 (0x78) as a new local local19
+		0x1809128E8: Loads a pointer to stack offset 0x70 into register rdx as new constant constant82
+		0x1809128ED: Copies {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} from r13 into rcx
+		0x1809128F0: [!] Calls managed method System.Void System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>::Sort(System.Comparison`1<T>) on instance {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x1809128F5: [!] Compares {'ContainsKey' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} and 0
+		0x180912907: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rsi is {'local18' (type T)}, offset is 24 (0x18)
+
+		0x18091290A: Moves ContainsKey (type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference) from register rax to the stack at offset 136 (0x88) as a new local local20
+		0x180912911: Loads a pointer to stack offset 0x80 into register rdx as new constant constant84
+		0x180912919: Copies {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} from r13 into rcx
+		0x180912923: Copies {'ContainsKey' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} from rax into rcx
+		0x180912926: [!] Calls static managed method Delaunay.Node Delaunay.DelaunayHelpers::Find(Delaunay.Node) and stores the result in {'node' (type Delaunay.Node)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x18091292B: Copies {'node' (type Delaunay.Node)} from rax into rdi
+		0x18091292E: Jumps to 0x1809129CC (which is an function-local jump destination)
+
+		0x180912933: [!] Compares {'pool' (type System.Collections.Generic.Stack`1<Delaunay.Node>)} and 0
+		0x180912936: Jumps to 0x180912CFB (which throws a NRE) if pool equals 0. Implicitly present in managed code, so ignored here.
+		0x18091293C: [!] Compares  and 0
+		0x180912941: Jumps to 0x180912954 if  is less than or equal to 0 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180912943: Loads the global generic method reference for method T System.Collections.Generic.Stack`1::Pop() on type System.Collections.Generic.Stack`1<Delaunay.Node> and stores the result in constant {'Pop' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x18091294A: Copies {'pool' (type System.Collections.Generic.Stack`1<Delaunay.Node>)} from r14 into rcx
+		0x18091294D: [!] Calls managed method T System.Collections.Generic.Stack`1::Pop() on instance {'pool' (type System.Collections.Generic.Stack`1<Delaunay.Node>)} and stores the result in {'node2' (type Delaunay.Node)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180912952: Jumps to 0x180912960 (which is an function-local jump destination)
+
+		0x180912954: Loads the type definition for managed type Delaunay.Node as a constant "Node" in rcx
+		0x18091295B: [!] Allocates an instance of type Delaunay.Node and stores it as node3 in rax.
+
+
+		End Of If-Else Block (at 0x180912960) where the else started at 0x180912954
+		0x180912960: Copies {'node3' (type Delaunay.Node)} from rax into rdi
+		0x180912963: [!] Compares {'node3' (type Delaunay.Node)} and 0
+		0x180912966: Jumps to 0x180912CFB (which throws a NRE) if node3 equals 0. Implicitly present in managed code, so ignored here.
+		0x18091296C: [!] Sets the field parent (Type Delaunay.Node) on local {'node3' (type Delaunay.Node)} to the value stored in {'node3' (type Delaunay.Node)}
+		0x180912970: Loads the pointer to the field parent on {'node3' (type Delaunay.Node)} into register rcx
+		0x180912979: [!] Sets the field treeSize (Type System.Int32) on local {'node3' (type Delaunay.Node)} to the value stored in 1
+		0x180912980: Loads the global generic method reference for method System.Void System.Collections.Generic.Dictionary`2::set_Item(TKey,TValue) on type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'set_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rax
+		0x1809129A7: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rsi is {'local18' (type T)}, offset is 24 (0x18)
+
+		0x1809129AA: Moves set_Item (type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference) from register rax to the stack at offset 152 (0x98) as a new local local25
+		0x1809129B1: Moves constant90 (type Cpp2IL.Core.Analysis.ResultModels.FieldPointer) from register rcx to the stack at offset 32 (0x20) as a new local local26
+		0x1809129B9: Copies {'node3' (type Delaunay.Node)} from rdi into r8
+		0x1809129BC: Loads a pointer to stack offset 0x90 into register rdx as new constant constant92
+		0x1809129C4: Copies {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} from r13 into rcx
+		0x1809129C7: [!] Calls managed method System.Boolean System.Collections.Generic.Dictionary`2::TryInsert(TKey,TValue,System.Collections.Generic.InsertionBehavior) on instance {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} and stores the result in {'boolean' (type System.Boolean)} ;  - parameters do not match, but there is only one function at this address.
+
+
+		Jump Destination (0x1809129CC):
+		0x1809129CC: Loads the global generic method reference for method System.Boolean System.Collections.Generic.Dictionary`2::ContainsKey(TKey) on type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'ContainsKey' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rax
+		0x1809129D7: [!] Reads field  from {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} and stores in a new local 
+
+		0x1809129F3: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rsi is {'local18' (type T)}, offset is 36 (0x24)
+
+		0x1809129F6: Moves ContainsKey (type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference) from register rax to the stack at offset 168 (0xA8) as a new local local29
+		0x1809129FD: Loads a pointer to stack offset 0xA0 into register rdx as new constant constant94
+		0x180912A05: Copies {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} from r13 into rcx
+		0x180912A08: [!] Calls managed method System.Int32 System.Collections.Generic.Dictionary`2::FindEntry(TKey) on instance {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} and stores the result in {'int32' (type System.Int32)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180912A0D: [!] Compares {'int32' (type System.Int32)} and 0
+		0x180912A1F: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rsi is {'local18' (type T)}, offset is 36 (0x24)
+
+		0x180912A22: Moves int32 (type System.Int32) from register rax to the stack at offset 184 (0xB8)
+		0x180912A29: Loads a pointer to stack offset 0xB0 into register rdx as new constant constant96
+		0x180912A31: Copies {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} from r13 into rcx
+		0x180912A3B: Copies {'int32' (type System.Int32)} from rax into rcx
+		0x180912A3E: [!] Calls static managed method Delaunay.Node Delaunay.DelaunayHelpers::Find(Delaunay.Node) and stores the result in {'node4' (type Delaunay.Node)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180912A43: Copies {'node4' (type Delaunay.Node)} from rax into rbx
+		0x180912A46: Jumps to 0x180912AE4 (which is an function-local jump destination)
+
+		0x180912A4B: [!] Compares {'pool' (type System.Collections.Generic.Stack`1<Delaunay.Node>)} and 0
+		0x180912A4E: Jumps to 0x180912CFB (which throws a NRE) if pool equals 0. Implicitly present in managed code, so ignored here.
+		0x180912A54: [!] Compares  and 0
+		0x180912A59: Jumps to 0x180912A6C if  is less than or equal to 0 ;  - This is probably a goto, jumping to 0x180912A6C which is after end of current block @ 0x180912960 (started at 0x180912954)
+
+		0x180912A5B: Loads the global generic method reference for method T System.Collections.Generic.Stack`1::Pop() on type System.Collections.Generic.Stack`1<Delaunay.Node> and stores the result in constant {'Pop' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180912A62: Copies {'pool' (type System.Collections.Generic.Stack`1<Delaunay.Node>)} from r14 into rcx
+		0x180912A65: [!] Calls managed method T System.Collections.Generic.Stack`1::Pop() on instance {'pool' (type System.Collections.Generic.Stack`1<Delaunay.Node>)} and stores the result in {'node5' (type Delaunay.Node)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180912A6A: Jumps to 0x180912A78 (which is an function-local jump destination)
+
+		0x180912A6C: Loads the type definition for managed type Delaunay.Node as a constant "Node" in rcx
+		0x180912A73: [!] Allocates an instance of type Delaunay.Node and stores it as node6 in rax.
+
+
+		Jump Destination (0x180912A78):
+		0x180912A78: Copies {'node6' (type Delaunay.Node)} from rax into rbx
+		0x180912A7B: [!] Compares {'node6' (type Delaunay.Node)} and 0
+		0x180912A7E: Jumps to 0x180912CFB (which throws a NRE) if node6 equals 0. Implicitly present in managed code, so ignored here.
+		0x180912A84: [!] Sets the field parent (Type Delaunay.Node) on local {'node6' (type Delaunay.Node)} to the value stored in {'node6' (type Delaunay.Node)}
+		0x180912A88: Loads the pointer to the field parent on {'node6' (type Delaunay.Node)} into register rcx
+		0x180912A91: [!] Sets the field treeSize (Type System.Int32) on local {'node6' (type Delaunay.Node)} to the value stored in 1
+		0x180912A98: Loads the global generic method reference for method System.Void System.Collections.Generic.Dictionary`2::set_Item(TKey,TValue) on type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'set_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rax
+		0x180912ABF: [!] Reads field  from  and stores in a new local  ;  - This shouldn't be a field read? Op in reg rsi is {'local18' (type T)}, offset is 36 (0x24)
+
+		0x180912AC2: Moves set_Item (type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference) from register rax to the stack at offset 200 (0xC8) as a new local local35
+		0x180912AC9: Moves constant102 (type Cpp2IL.Core.Analysis.ResultModels.FieldPointer) from register rcx to the stack at offset 32 (0x20) as a new local local36
+		0x180912AD1: Copies {'node6' (type Delaunay.Node)} from rbx into r8
+		0x180912AD4: Loads a pointer to stack offset 0xC0 into register rdx as new constant constant104
+		0x180912ADC: Copies {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} from r13 into rcx
+		0x180912ADF: [!] Calls managed method System.Boolean System.Collections.Generic.Dictionary`2::TryInsert(TKey,TValue,System.Collections.Generic.InsertionBehavior) on instance {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} and stores the result in {'boolean2' (type System.Boolean)} ;  - parameters do not match, but there is only one function at this address.
+
+
+		Jump Destination (0x180912AE4):
+		0x180912AE4: [!] Compares {'node3' (type Delaunay.Node)} and {'node6' (type Delaunay.Node)}
+		0x180912AE7: Jumps to 0x180912B48 if node3 equals node6 ;  - This is probably a goto, jumping to 0x180912B48 which is after end of current block @ 0x180912960 (started at 0x180912954)
+
+		0x180912AE9: Reads local {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from stack offset 312 (0x138) into register rax
+		0x180912AF1: [!] Compares {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} and 0
+		0x180912AF4: Jumps to 0x180912CFB (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x180912AFA: Copies {'t' (type T)} from rsi into rdx
+		0x180912AFD: Copies {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from rax into rcx
+		0x180912B05: [!] Compares {'node3' (type Delaunay.Node)} and 0
+		0x180912B08: Jumps to 0x180912CFB (which throws a NRE) if node3 equals 0. Implicitly present in managed code, so ignored here.
+		0x180912B0E: [!] Reads field treeSize from {'node3' (type Delaunay.Node)} and stores in a new local {'treeSize' (type System.Int32)}
+
+		0x180912B12: [!] Compares {'node6' (type Delaunay.Node)} and 0
+		0x180912B15: Jumps to 0x180912CFB (which throws a NRE) if node6 equals 0. Implicitly present in managed code, so ignored here.
+		0x180912B1B: [!] Reads field treeSize from {'node6' (type Delaunay.Node)} and stores in a new local {'treeSize2' (type System.Int32)}
+
+		0x180912B1F: [!] Compares {'treeSize' (type System.Int32)} and {'treeSize2' (type System.Int32)}
+		0x180912B22: Jumps to 0x180912B37 if {'treeSize' (type System.Int32)} is greater than or equal to {'treeSize2' (type System.Int32)} ;  - This is probably a goto, jumping to 0x180912B37 which is after end of current block @ 0x180912960 (started at 0x180912954)
+
+		0x180912B24: [!] Sets the field parent (Type Delaunay.Node) on local {'node3' (type Delaunay.Node)} to the value stored in {'node6' (type Delaunay.Node)}
+		0x180912B28: Loads the pointer to the field parent on {'node3' (type Delaunay.Node)} into register rcx
+		0x180912B35: Jumps to 0x180912B48 (which is an function-local jump destination)
+
+		0x180912B37: [!] Sets the field parent (Type Delaunay.Node) on local {'node6' (type Delaunay.Node)} to the value stored in {'node3' (type Delaunay.Node)}
+		0x180912B3B: Loads the pointer to the field parent on {'node6' (type Delaunay.Node)} into register rcx
+
+		Jump Destination (0x180912B48):
+		0x180912B4B: [!] Compares {'_size' (type System.Int32)} and -1
+		0x180912B55: Jumps to 0x180912B60 (which is an function-local jump destination)
+
+		0x180912B57: [!] Compares {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} and 0
+		0x180912B5A: Jumps to 0x180912CFB (which throws a NRE) if dictionary equals 0. Implicitly present in managed code, so ignored here.
+
+		Jump Destination (0x180912B60):
+		0x180912B60: Loads the global generic method reference for method System.Collections.Generic.Dictionary`2/ValueCollection<TKey,TValue> System.Collections.Generic.Dictionary`2::get_Values() on type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> and stores the result in constant {'get_Values' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180912B67: Copies {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} from r13 into rcx
+		0x180912B6A: [!] Calls managed method System.Collections.Generic.Dictionary`2/ValueCollection<TKey,TValue> System.Collections.Generic.Dictionary`2::get_Values() on instance {'dictionary' (type System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} and stores the result in {'values' (type System.Collections.Generic.Dictionary`2/ValueCollection<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180912B6F: [!] Compares {'values' (type System.Collections.Generic.Dictionary`2/ValueCollection<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} and 0
+		0x180912B72: Jumps to 0x180912CFB (which throws a NRE) if values equals 0. Implicitly present in managed code, so ignored here.
+		0x180912B78: [!] Reads field _dictionary from {'values' (type System.Collections.Generic.Dictionary`2/ValueCollection<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>)} and stores in a new local {'_dictionary' (type System.Collections.Generic.Dictionary`2<TKey,TValue>)}
+
+		0x180912B85: Moves _dictionary (type System.Collections.Generic.Dictionary`2<TKey,TValue>) from register r9 to the stack at offset 72 (0x48)
+		0x180912B8A: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180912B91: Jumps to 0x180912BD9 if constant114 equals 0 ;  - This is probably a goto, jumping to 0x180912BD9 which is after end of current block @ 0x180912960 (started at 0x180912954)
+
+		0x180912B93: Loads a pointer to stack offset 0x48 into register r8 as new constant constant116
+		0x180912BA3: Copies {'constant116' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r8 into rax
+		0x180912BAA: Reads {Unknown Global at 0x1832AE560, first ten bytes are [20 59 240 2 208 31 18 0 228 32], or as chars ";ðÐ ä "} into register rcx as a constant constant117
+		0x180912BC7: Copies {'constant116' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rax into rcx
+		0x180912BD7: Jumps to 0x180912BC0 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0 ;  - This is probably a goto, jumping to 0x180912BC0 which is after end of current block @ 0x180912960 (started at 0x180912954)
+
+		0x180912BD9: [!] Compares {'_dictionary' (type System.Collections.Generic.Dictionary`2<TKey,TValue>)} and 0
+		0x180912BDC: Jumps to 0x180912D37 (which throws a NRE) if _dictionary equals 0. Implicitly present in managed code, so ignored here.
+		0x180912BE2: [!] Reads field _version from {'_dictionary' (type System.Collections.Generic.Dictionary`2<TKey,TValue>)} and stores in a new local {'_version' (type System.Int32)}
+
+		0x180912BE6: Moves _version (type System.Int32) from register rax to the stack at offset 84 (0x54)
+		0x180912BEA: Clears register rax, yielding zero-local {'local45' (type System.Int32)}
+		0x180912BEC: Moves local45 (type System.Int32) from register rax to the stack at offset 80 (0x50)
+		0x180912BF0: Clears register rcx, yielding zero-local {'local46' (type System.Int32)}
+		0x180912BF2: Moves local46 (type System.Int32) from register rcx to the stack at offset 88 (0x58)
+		0x180912BF7: Reads local {'_dictionary' (type System.Collections.Generic.Dictionary`2<TKey,TValue>)} from stack offset 72 (0x48) into register xmm0
+		0x180912BFC: Moves _dictionary (type System.Collections.Generic.Dictionary`2<TKey,TValue>) from register xmm0 to the stack at offset 48 (0x30)
+		0x180912C0D: Moves local45 (type System.Int32) from register rax to the stack at offset 208 (0xD0)
+		0x180912C15: Loads a pointer to stack offset 0x30 into register rax as new constant constant119
+		0x180912C1A: Moves constant119 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register rax to the stack at offset 216 (0xD8) as a new local local47
+
+		Potential Loop Start (0x180912C22):
+		0x180912C22: Reads local {'_dictionary' (type System.Collections.Generic.Dictionary`2<TKey,TValue>)} from stack offset 48 (0x30) into register rdx
+		0x180912C27: [!] Compares {'_dictionary' (type System.Collections.Generic.Dictionary`2<TKey,TValue>)} and 0
+		0x180912C2A: Jumps to 0x180912D2B (which throws a NRE) if _dictionary equals 0. Implicitly present in managed code, so ignored here.
+		0x180912C30: [!] Reads field _version from {'_dictionary' (type System.Collections.Generic.Dictionary`2<TKey,TValue>)} and stores in a new local {'_version2' (type System.Int32)}
+
+		0x180912C33: [!] Compares  and {'_version2' (type System.Int32)}
+		0x180912C37: Jumps to 0x180912D24 if  != {'_version2' (type System.Int32)} ;  - This is probably a goto, jumping to 0x180912D24 which is after end of current block @ 0x180912960 (started at 0x180912954)
+
+		0x180912C3D: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rcx as new constant constant121
+		0x180912C41: [!] Compares {'_dictionary' (type System.Collections.Generic.Dictionary`2<TKey,TValue>)} and 0
+		0x180912C44: Jumps to 0x180912D1F (which throws a NRE) if _dictionary equals 0. Implicitly present in managed code, so ignored here.
+		0x180912C4A: [!] Compares {'constant121' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} against itself
+		0x180912C4D: Jumps to 0x180912CAF if {'constant121' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} is greater than or equal to  ;  - This is probably a goto, jumping to 0x180912CAF which is after end of current block @ 0x180912C7D (started at 0x180912C41)
+
+		0x180912C4F: [!] Reads field _entries from {'_dictionary' (type System.Collections.Generic.Dictionary`2<TKey,TValue>)} and stores in a new local {'_entries' (type System.Collections.Generic.Dictionary`2/Entry<TKey,TValue>[])}
+
+		0x180912C53: Copies {'constant121' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rcx into rax
+		0x180912C56: [!] Adds 1 to the value , stored in rcx
+		0x180912C58: Moves constant121 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register rcx to the stack at offset 56 (0x38) as a new local local50
+		0x180912C5C: [!] Compares {'_entries' (type System.Collections.Generic.Dictionary`2/Entry<TKey,TValue>[])} and 0
+		0x180912C5F: Jumps to 0x180912D1A (which throws a NRE) if _entries equals 0. Implicitly present in managed code, so ignored here.
+		0x180912C65: [!] Compares {'constant121' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and {Property System.Int32 System.Array::Length() on {'_entries' (type System.Collections.Generic.Dictionary`2/Entry<TKey,TValue>[])}}
+		0x180912C69: Jumps to 0x180912D0F (which throws a NRE) if {'constant121' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'_entries' (type System.Collections.Generic.Dictionary`2/Entry<TKey,TValue>[])}}. Implicitly present in managed code, so ignored here.
+		0x180912C6F: [!] Adds 1 to the value , stored in rax
+		0x180912C76: Compares "{il2cpp field on {'constant121' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}, offset 0x0}" and 0
+		0x180912C7D: [!] Reads a value from the array {'_entries' (type System.Collections.Generic.Dictionary`2/Entry<TKey,TValue>[])} at an index specified by the value in , into a new local {'local51' (type System.Collections.Generic.Dictionary`2/Entry)}
+
+		0x180912C82: Moves local51 (type System.Collections.Generic.Dictionary`2/Entry) from register rcx to the stack at offset 64 (0x40)
+		0x180912C87: Loads a pointer to stack offset 0x40 into register rcx as new constant constant126
+		0x180912C91: [!] Compares {'pool' (type System.Collections.Generic.Stack`1<Delaunay.Node>)} and 0
+		0x180912C94: Jumps to 0x180912D15 (which throws a NRE) if pool equals 0. Implicitly present in managed code, so ignored here.
+		0x180912C96: Loads the global generic method reference for method System.Void System.Collections.Generic.Stack`1::Push(T) on type System.Collections.Generic.Stack`1<Delaunay.Node> and stores the result in constant {'Push' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in r8
+		0x180912C9D: Reads local {'local51' (type System.Collections.Generic.Dictionary`2/Entry)} from stack offset 64 (0x40) into register rdx
+		0x180912CA2: Copies {'pool' (type System.Collections.Generic.Stack`1<Delaunay.Node>)} from r14 into rcx
+		0x180912CA5: [!] Calls managed method System.Void System.Collections.Generic.Stack`1::Push(T) on instance {'pool' (type System.Collections.Generic.Stack`1<Delaunay.Node>)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation. - parameters do not match, but concrete method was resolved from a constant in a register.
+
+		0x180912CAA: Jumps to 0x180912C22 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x180912CAF: [!] Reads field  from {'local51' (type System.Collections.Generic.Dictionary`2/Entry)} and stores in a new local 
+
+		0x180912CB2: [!] Adds 1 to the value , stored in rax
+		0x180912CB4: Moves constant121 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register rax to the stack at offset 56 (0x38) as a new local local52
+		0x180912CB8: Clears register rax, yielding zero-local {'local53' (type System.Int32)}
+		0x180912CBA: Moves local53 (type System.Int32) from register rax to the stack at offset 64 (0x40)
+		0x180912CBF: Reads local {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from stack offset 312 (0x138) into register rsi
+		0x180912CC7: Jumps to 0x180912CDB (which is an function-local jump destination)
+
+		0x180912CC9: Reads local {'local45' (type System.Int32)} from stack offset 208 (0xD0) into register rcx
+		0x180912CD1: [!] Compares {'local45' (type System.Int32)} and 0
+		0x180912CD4: Jumps to 0x180912D31 if {'local45' (type System.Int32)} != 0 ;  - This is probably a goto, jumping to 0x180912D31 which is after end of current block @ 0x180912C7D (started at 0x180912C41)
+
+		0x180912CD6: Reads local {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from stack offset 96 (0x60) into register rsi
+
+		Jump Destination (0x180912CDB):
+		0x180912CDB: Copies {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from rsi into rax
+		0x180912CDE: Loads a pointer to stack offset 0xF0 into register r11 as new constant constant130
+		0x180912CEE: Copies {'constant130' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r11 into rsp
+		0x180912CFA: [!] Returns {'list' (type System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>)} from the function
+
+		0x180912CFB: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x180912D07: Clears register rcx, yielding zero-local {'local55' (type System.Int32)}
+		0x180912D09: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+		0x180912D0F: [!] Constructs and throws an exception of kind System.IndexOutOfRangeException
+
+		0x180912D15: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x180912D1A: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x180912D1F: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x180912D24: Clears register rcx, yielding zero-local {'local60' (type System.Int32)}
+		0x180912D26: [!] Calls static managed method System.Void System.ThrowHelper::ThrowInvalidOperationException_InvalidOperation_EnumFailedVersion()
+
+		0x180912D2B: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Delaunay.DelaunayHelpers
+	static System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> Kruskal(System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> lineSegments, Delaunay.KruskalType type)
+		System.Int32 local2 = type.value__
+		ulong local3 = 0
+		ulong local4 = 0
+		System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> dictionary = new System.Collections.Generic.Dictionary`2<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node>()
+		  = type.
+		  = type.
+
+		[instruction error - managed method being called is null]
+
+		if (dictionary != 0)
+		    dictionary._comparer = 0
+		      = type.
+		endif
+        
+		System.Collections.Generic.List`1<Delaunay.Geo.LineSegment> list = new System.Collections.Generic.List`1<Delaunay.Geo.LineSegment>()
+
+		list..ctor()
+		System.Collections.Generic.Stack`1<Delaunay.Node> pool = Delaunay.Node.pool
+
+		if (local2 == 1)
+            goto INSN_18091276E
+        endif
+		System.Comparison`1<Delaunay.Geo.LineSegment> <>9__4_1 = Delaunay.DelaunayHelpers/<>c.<>9__4_1
+
+		if (<>9__4_1 != 0)
+            goto INSN_180912849
+        endif
+		Delaunay.DelaunayHelpers/<>c <>c = Delaunay.DelaunayHelpers/<>c.<>9
+		System.Comparison`1<Delaunay.Geo.LineSegment> comparison = new System.Comparison`1<Delaunay.Geo.LineSegment>()
+
+		[instruction error - managed method being called is null]
+		Delaunay.DelaunayHelpers/<>c.<>9__4_1 = comparison
+		 += 16
+
+		INSN_18091276E:
+		System.Comparison`1<Delaunay.Geo.LineSegment> <>9__4_0 = Delaunay.DelaunayHelpers/<>c.<>9__4_0
+
+		if (<>9__4_0 != 0)
+            goto INSN_180912849
+        endif
+		Delaunay.DelaunayHelpers/<>c <>c2 = Delaunay.DelaunayHelpers/<>c.<>9
+		System.Comparison`1<Delaunay.Geo.LineSegment> comparison2 = new System.Comparison`1<Delaunay.Geo.LineSegment>()
+
+		[instruction error - managed method being called is null]
+		Delaunay.DelaunayHelpers/<>c.<>9__4_0 = comparison2
+		 += 8
+
+		INSN_180912849:
+
+		lineSegments.Sort(comparison2) //(Comparison`1 comparison)
+		System.Int32 _size = lineSegments._size
+
+		if (_size <= -1)
+            goto INSN_180912B57
+        endif
+
+		while (_size < )
+		    T[] _items = lineSegments._items
+		    T t = _items[_size]
+		      = lineSegments.
+		      = .
+
+		    dictionary.Sort()
+		      = .
+
+		    Delaunay.Node node = Delaunay.DelaunayHelpers.Find()
+
+		    if ( > 0)
+
+		        Delaunay.Node node2 = pool.Pop()
+		    else
+		        Delaunay.Node node3 = new Delaunay.Node()
+		    endif
+            
+		    node3.parent = node3
+		    node3.treeSize = 1
+		      = .
+
+		    System.Boolean boolean = dictionary.TryInsert()
+		      = dictionary.
+		      = .
+
+		    System.Int32 int32 = dictionary.FindEntry()
+		      = .
+
+		    Delaunay.Node node4 = Delaunay.DelaunayHelpers.Find()
+
+		    if ( <= 0)
+                goto INSN_180912A6C
+            endif
+
+		    Delaunay.Node node5 = pool.Pop()
+
+		    INSN_180912A6C:
+		    Delaunay.Node node6 = new Delaunay.Node()
+		    node6.parent = node6
+		    node6.treeSize = 1
+		      = .
+
+		    System.Boolean boolean2 = dictionary.TryInsert()
+
+		    if (node3 == node6)
+                goto INSN_180912B48
+            endif
+		    System.Int32 treeSize = node3.treeSize
+		    System.Int32 treeSize2 = node6.treeSize
+
+		    if (treeSize >= treeSize2)
+                goto INSN_180912B37
+            endif
+		    node3.parent = node6
+
+		    INSN_180912B37:
+		    node6.parent = node3
+
+		    INSN_180912B48:
+		endwhile
+        
+		goto INSN_180912D07
+        
+
+		INSN_180912B57:
+
+		System.Collections.Generic.Dictionary`2/ValueCollection<System.Nullable`1<UnityEngine.Vector2>,Delaunay.Node> values = dictionary.Values
+		System.Collections.Generic.Dictionary`2<TKey,TValue> _dictionary = values._dictionary
+		System.Int32 _version = _dictionary._version
+		ulong local45 = 0
+		ulong local46 = 0
+		System.Int32 _version2 = _dictionary._version
+
+		if ( != _version2)
+            goto INSN_180912D24
+        endif
+
+		if (constant121 >= )
+            goto INSN_180912CAF
+        endif
+		System.Collections.Generic.Dictionary`2/Entry<TKey,TValue>[] _entries = _dictionary._entries
+		 += 1
+		 += 1
+		endwhile
+    
+		goto INSN_180912D1F
+    
+		System.Collections.Generic.Dictionary`2/Entry local51 = _entries[]
+
+		pool.Push()
+
+		INSN_180912CAF:
+		  = local51.
+		 += 1
+		ulong local53 = 0
+
+		if (local45 != 0)
+        goto INSN_180912D31
+    endif
+		return list
+		throw new System.NullReferenceException()
+
+		INSN_180912D07:
+		ulong local55 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+		throw new System.IndexOutOfRangeException()
+		throw new System.NullReferenceException()
+		throw new System.NullReferenceException()
+
+		INSN_180912D1F:
+		throw new System.NullReferenceException()
+
+		INSN_180912D24:
+		ulong local60 = 0
+
+		System.ThrowHelper.ThrowInvalidOperationException_InvalidOperation_EnumFailedVersion()
+		throw new System.NullReferenceException()
+
+		INSN_180912D31:
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: Delaunay.Node Delaunay.DelaunayHelpers::Find(Delaunay.Node):	Method Body (x86 ASM):
+		0x180912D40 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912D42 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180912D46 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180912D49 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180912D4C je short 0000000180912DC3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912D4E cmp [rcx+10h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RCX | 16 | None ||| N/A | N/A
+		0x180912D52 je short 0000000180912DBAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912D54 mov rcx,[rcx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x180912D58 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180912D5A call 0000000180912D40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912D5F cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180912D66 mov r8,rax		; DEBUG: {Register}/R8 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912D69 mov [rbx+10h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBX | 16 | None ||| N/A | N/A
+		0x180912D6D je short 0000000180912DB1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912D6F add rbx,10h		; DEBUG: {Register}/RBX {Immediate8to64}/None ||| None | 0 | None ||| N/A | 16
+		0x180912D73 lea rax,[1832F4840h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x180912D7A shr rbx,0Ch		; DEBUG: {Register}/RBX {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180912D7E and ebx,1FFFFFh		; DEBUG: {Register}/EBX {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180912D84 mov ecx,ebx		; DEBUG: {Register}/ECX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x180912D86 shr rcx,6		; DEBUG: {Register}/RCX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180912D8A and ebx,3Fh		; DEBUG: {Register}/EBX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180912D8D lea rdx,[rax+rcx*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 0 | RCX ||| N/A | N/A
+		0x180912D91 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180912D94 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180912D98 nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180912DA0 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180912DA3 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180912DA6 bts rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180912DAA lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x180912DAF jne short 0000000180912DA0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912DB1 mov rax,r8		; DEBUG: {Register}/RAX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180912DB4 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180912DB8 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912DB9 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912DBA mov rax,rbx		; DEBUG: {Register}/RAX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180912DBD add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180912DC1 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912DC2 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180912DC3 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180912DC8 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Static Method Delaunay.Node Delaunay.DelaunayHelpers::Find(Delaunay.Node):
+		End of function at 0x180912DC9
+		Absolute End is at 0x180912DC9
+		Identified Jump Destination addresses:
+
+		0x180912D40: Saves the content of rbx to the stack
+		0x180912D46: Copies {'node' (function parameter, type Delaunay.Node)} from rcx into rbx
+		0x180912D49: [!] Compares {'node' (function parameter, type Delaunay.Node)} and 0
+		0x180912D4C: Jumps to 0x180912DC3 (which throws a NRE) if node equals 0. Implicitly present in managed code, so ignored here.
+		0x180912D4E: [!] Compares {field parent, read from local {'node' (function parameter, type Delaunay.Node)}} and {'node' (function parameter, type Delaunay.Node)}
+		0x180912D52: Jumps to 0x180912DBA (which is an if statement's body) if node.parent equals node ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180912D54: [!] Reads field parent from {'node' (function parameter, type Delaunay.Node)} and stores in a new local {'parent' (type Delaunay.Node)}
+
+		0x180912D5A: [!] Calls static managed method Delaunay.Node Delaunay.DelaunayHelpers::Find(Delaunay.Node) with arguments [{'parent' (type Delaunay.Node)}] and stores the result in {'node' (type Delaunay.Node)}
+
+		0x180912D5F: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180912D66: Copies {'node' (type Delaunay.Node)} from rax into r8
+		0x180912D69: [!] Sets the field parent (Type Delaunay.Node) on local {'node' (function parameter, type Delaunay.Node)} to the value stored in {'node' (type Delaunay.Node)}
+		0x180912D6D: Jumps to 0x180912DB1 if constant2 equals 0
+
+		0x180912D6F: Loads the pointer to the field parent on {'node' (function parameter, type Delaunay.Node)} into register rbx
+		0x180912D73: Loads string "¡
+m" into register rax as constant {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180912D84: Copies {'constant4' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from rbx into rcx
+		0x180912DA0: Loads the class pointer from local2 into a constant constant6 in register rax
+		0x180912DA3: Copies {'constant6' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x180912DAF: Jumps to 0x180912DA0 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x180912DB1: Copies {'node' (type Delaunay.Node)} from r8 into rax
+		0x180912DB9: [!] Returns {'node' (type Delaunay.Node)} from the function
+
+		0x180912DBA: Copies {'node' (function parameter, type Delaunay.Node)} from rbx into rax
+		0x180912DC2: [!] Returns {'node' (function parameter, type Delaunay.Node)} from the function
+
+		0x180912DC3: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Delaunay.DelaunayHelpers
+	static Delaunay.Node Find(Delaunay.Node node)
+
+		if (node.parent != node)
+		    Delaunay.Node parent = node.parent
+
+		    Delaunay.Node node = Delaunay.DelaunayHelpers.Find(parent) //(Node node)
+		    node.parent = node
+		    return node
+		endif
+        
+		return node
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.RegToFieldAction at (0x180912D69) is corrupt (Local node is a function parameter but is missing its parameter definition) and cannot be created as IL. Aborting here.
+
+

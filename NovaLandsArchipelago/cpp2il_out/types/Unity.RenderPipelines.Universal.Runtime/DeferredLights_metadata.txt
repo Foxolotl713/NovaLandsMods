@@ -1,0 +1,1130 @@
+Type: UnityEngine.Rendering.Universal.Internal.DeferredLights:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		UnityEngine.Rendering.Universal.Internal.DeferredLights/ShaderConstants
+		UnityEngine.Rendering.Universal.Internal.DeferredLights/StencilDeferredPasses
+		UnityEngine.Rendering.Universal.Internal.DeferredLights/InitParams
+
+	Static Field: k_GBufferNames
+		Type: System.String[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: k_StencilDeferredPassNames
+		Type: System.String[]
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: k_InvalidLightOffset
+		Type: System.UInt16
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: <RenderingLayerMaskSize>k__BackingField
+		Type: UnityEngine.Rendering.Universal.RenderingLayerUtils/MaskSize
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: <UseDecalLayers>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x14
+		Has Default: False
+
+	Field: <UseRenderPass>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x15
+		Has Default: False
+
+	Field: <HasDepthPrepass>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x16
+		Has Default: False
+
+	Field: <HasNormalPrepass>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x17
+		Has Default: False
+
+	Static Field: k_SetupLights
+		Type: System.String
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: <HasRenderingLayerPrepass>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: <IsOverlay>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x19
+		Has Default: False
+
+	Field: m_AccurateGbufferNormals
+		Type: System.Boolean
+		Offset in Defining Type: 0x1A
+		Has Default: False
+
+	Field: <MixedLightingSetup>k__BackingField
+		Type: UnityEngine.Rendering.Universal.MixedLightingSetup
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Static Field: k_DeferredPass
+		Type: System.String
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: <UseJobSystem>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: <RenderWidth>k__BackingField
+		Type: System.Int32
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Static Field: k_DeferredStencilPass
+		Type: System.String
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: <RenderHeight>k__BackingField
+		Type: System.Int32
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: k_DeferredFogPass
+		Type: System.String
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: <GbufferAttachments>k__BackingField
+		Type: UnityEngine.Rendering.RTHandle[]
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Static Field: k_ClearStencilPartial
+		Type: System.String
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: GbufferRTHandles
+		Type: UnityEngine.Rendering.RTHandle[]
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Static Field: k_SetupLightConstants
+		Type: System.String
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: <GbufferTextureHandles>k__BackingField
+		Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle[]
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Static Field: kStencilShapeGuard
+		Type: System.Single
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: <DeferredInputAttachments>k__BackingField
+		Type: UnityEngine.Rendering.RTHandle[]
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Static Field: m_ProfilingSetupLights
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: <DeferredInputIsTransient>k__BackingField
+		Type: System.Boolean[]
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Static Field: m_ProfilingDeferredPass
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: <DepthAttachment>k__BackingField
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Static Field: m_ProfilingSetupLightConstants
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: <DepthCopyTexture>k__BackingField
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: <GbufferFormats>k__BackingField
+		Type: UnityEngine.Experimental.Rendering.GraphicsFormat[]
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: <DepthAttachmentHandle>k__BackingField
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: m_stencilVisLights
+		Type: Unity.Collections.NativeArray`1<System.UInt16>
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: m_stencilVisLightOffsets
+		Type: Unity.Collections.NativeArray`1<System.UInt16>
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: m_AdditionalLightsShadowCasterPass
+		Type: UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: m_SphereMesh
+		Type: UnityEngine.Mesh
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: m_HemisphereMesh
+		Type: UnityEngine.Mesh
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: m_FullscreenMesh
+		Type: UnityEngine.Mesh
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: m_StencilDeferredMaterial
+		Type: UnityEngine.Material
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: m_StencilDeferredPasses
+		Type: System.Int32[]
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: m_ScreenToWorld
+		Type: UnityEngine.Matrix4x4[]
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: m_ProfilingSamplerDeferredStencilPass
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: m_ProfilingSamplerDeferredFogPass
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: m_ProfilingSamplerClearStencilPartialPass
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: m_LightCookieManager
+		Type: UnityEngine.Rendering.Universal.LightCookieManager
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Method: get_GBufferAlbedoIndex:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x00380910
+		Ram Offset 0x180381b10
+		Virtual Method Slot: 65535
+
+	Method: get_GBufferSpecularMetallicIndex:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x00789EC0
+		Ram Offset 0x18078b0c0
+		Virtual Method Slot: 65535
+
+	Method: get_GBufferNormalSmoothnessIndex:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x00DFE9E0
+		Ram Offset 0x180dffbe0
+		Virtual Method Slot: 65535
+
+	Method: get_GBufferLightingIndex:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x00C26070
+		Ram Offset 0x180c27270
+		Virtual Method Slot: 65535
+
+	Method: get_GbufferDepthIndex:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x022EF620
+		Ram Offset 0x1822f0820
+		Virtual Method Slot: 65535
+
+	Method: get_GBufferRenderingLayers:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x022EF640
+		Ram Offset 0x1822f0840
+		Virtual Method Slot: 65535
+
+	Method: get_GBufferShadowMask:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x022EF670
+		Ram Offset 0x1822f0870
+		Virtual Method Slot: 65535
+
+	Method: get_GBufferSliceCount:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x022EF6C0
+		Ram Offset 0x1822f08c0
+		Virtual Method Slot: 65535
+
+	Method: GetGBufferFormat:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.GraphicsFormat
+		File Offset 0x022EF710
+		Ram Offset 0x1822f0910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: get_UseShadowMask:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x022EF8A0
+		Ram Offset 0x1822f0aa0
+		Virtual Method Slot: 65535
+
+	Method: get_UseRenderingLayers:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x022EF8B0
+		Ram Offset 0x1822f0ab0
+		Virtual Method Slot: 65535
+
+	Method: get_RenderingLayerMaskSize:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Rendering.Universal.RenderingLayerUtils/MaskSize
+		File Offset 0x00397E40
+		Ram Offset 0x180399040
+		Virtual Method Slot: 65535
+
+	Method: set_RenderingLayerMaskSize:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00379470
+		Ram Offset 0x18037a670
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Rendering.Universal.RenderingLayerUtils/MaskSize
+			Default Value: 
+	Method: get_UseDecalLayers:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0099B2A0
+		Ram Offset 0x18099c4a0
+		Virtual Method Slot: 65535
+
+	Method: set_UseDecalLayers:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x017E5300
+		Ram Offset 0x1817e6500
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_UseLightLayers:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x022EF920
+		Ram Offset 0x1822f0b20
+		Virtual Method Slot: 65535
+
+	Method: get_UseRenderPass:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0099B2B0
+		Ram Offset 0x18099c4b0
+		Virtual Method Slot: 65535
+
+	Method: set_UseRenderPass:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01815E50
+		Ram Offset 0x181817050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_HasDepthPrepass:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01FCB780
+		Ram Offset 0x181fcc980
+		Virtual Method Slot: 65535
+
+	Method: set_HasDepthPrepass:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x022EF980
+		Ram Offset 0x1822f0b80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_HasNormalPrepass:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x022EF990
+		Ram Offset 0x1822f0b90
+		Virtual Method Slot: 65535
+
+	Method: set_HasNormalPrepass:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x022EF9A0
+		Ram Offset 0x1822f0ba0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_HasRenderingLayerPrepass:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00960420
+		Ram Offset 0x180961620
+		Virtual Method Slot: 65535
+
+	Method: set_HasRenderingLayerPrepass:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00960430
+		Ram Offset 0x180961630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_IsOverlay:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0162BD60
+		Ram Offset 0x18162cf60
+		Virtual Method Slot: 65535
+
+	Method: set_IsOverlay:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01B68670
+		Ram Offset 0x181b69870
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_AccurateGbufferNormals:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01B68680
+		Ram Offset 0x181b69880
+		Virtual Method Slot: 65535
+
+	Method: set_AccurateGbufferNormals:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x022EF9B0
+		Ram Offset 0x1822f0bb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_MixedLightingSetup:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Rendering.Universal.MixedLightingSetup
+		File Offset 0x00387E90
+		Ram Offset 0x180389090
+		Virtual Method Slot: 65535
+
+	Method: set_MixedLightingSetup:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00960440
+		Ram Offset 0x180961640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Rendering.Universal.MixedLightingSetup
+			Default Value: 
+	Method: get_UseJobSystem:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x007DBFB0
+		Ram Offset 0x1807dd1b0
+		Virtual Method Slot: 65535
+
+	Method: set_UseJobSystem:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00832C20
+		Ram Offset 0x180833e20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_RenderWidth:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x0085FBC0
+		Ram Offset 0x180860dc0
+		Virtual Method Slot: 65535
+
+	Method: set_RenderWidth:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x009C5670
+		Ram Offset 0x1809c6870
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_RenderHeight:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x0077D120
+		Ram Offset 0x18077e320
+		Virtual Method Slot: 65535
+
+	Method: set_RenderHeight:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x009C58D0
+		Ram Offset 0x1809c6ad0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_GbufferAttachments:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Rendering.RTHandle[]
+		File Offset 0x003A09A0
+		Ram Offset 0x1803a1ba0
+		Virtual Method Slot: 65535
+
+	Method: set_GbufferAttachments:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x003A09B0
+		Ram Offset 0x1803a1bb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Rendering.RTHandle[]
+			Default Value: 
+	Method: get_GbufferTextureHandles:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle[]
+		File Offset 0x0051A3F0
+		Ram Offset 0x18051b5f0
+		Virtual Method Slot: 65535
+
+	Method: set_GbufferTextureHandles:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x005399C0
+		Ram Offset 0x18053abc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle[]
+			Default Value: 
+	Method: get_DeferredInputAttachments:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Rendering.RTHandle[]
+		File Offset 0x003F4770
+		Ram Offset 0x1803f5970
+		Virtual Method Slot: 65535
+
+	Method: set_DeferredInputAttachments:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00998D30
+		Ram Offset 0x180999f30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Rendering.RTHandle[]
+			Default Value: 
+	Method: get_DeferredInputIsTransient:
+		Accessibility: Assembly
+		Return Type: System.Boolean[]
+		File Offset 0x003C6290
+		Ram Offset 0x1803c7490
+		Virtual Method Slot: 65535
+
+	Method: set_DeferredInputIsTransient:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x003C62A0
+		Ram Offset 0x1803c74a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean[]
+			Default Value: 
+	Method: get_DepthAttachment:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Rendering.RTHandle
+		File Offset 0x0040DAA0
+		Ram Offset 0x18040eca0
+		Virtual Method Slot: 65535
+
+	Method: set_DepthAttachment:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00906550
+		Ram Offset 0x180907750
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+	Method: get_DepthCopyTexture:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Rendering.RTHandle
+		File Offset 0x0063CCB0
+		Ram Offset 0x18063deb0
+		Virtual Method Slot: 65535
+
+	Method: set_DepthCopyTexture:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x004EB5D0
+		Ram Offset 0x1804ec7d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+	Method: get_GbufferFormats:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.GraphicsFormat[]
+		File Offset 0x00530090
+		Ram Offset 0x180531290
+		Virtual Method Slot: 65535
+
+	Method: set_GbufferFormats:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00809650
+		Ram Offset 0x18080a850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Experimental.Rendering.GraphicsFormat[]
+			Default Value: 
+	Method: get_DepthAttachmentHandle:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Rendering.RTHandle
+		File Offset 0x0061D420
+		Ram Offset 0x18061e620
+		Virtual Method Slot: 65535
+
+	Method: set_DepthAttachmentHandle:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x005A8A70
+		Ram Offset 0x1805a9c70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x022EFA30
+		Ram Offset 0x1822f0c30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: initParams
+			Type: UnityEngine.Rendering.Universal.Internal.DeferredLights/InitParams
+			Default Value: 
+		Parameter 1:
+			Name: useNativeRenderPass
+			Type: System.Boolean
+			Default Value: False
+	Method: SetupLights:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x022F0010
+		Ram Offset 0x1822f1210
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: ResolveMixedLightingMode:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x022F0710
+		Ram Offset 0x1822f1910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: DisableFramebufferFetchInput:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x022F0960
+		Ram Offset 0x1822f1b60
+		Virtual Method Slot: 65535
+
+	Method: ReleaseGbufferResources:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x022F0970
+		Ram Offset 0x1822f1b70
+		Virtual Method Slot: 65535
+
+	Method: CreateGbufferResources:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x022F0A70
+		Ram Offset 0x1822f1c70
+		Virtual Method Slot: 65535
+
+	Method: UpdateDeferredInputAttachments:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x022F1000
+		Ram Offset 0x1822f2200
+		Virtual Method Slot: 65535
+
+	Method: IsRuntimeSupportedThisFrame:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x022F11C0
+		Ram Offset 0x1822f23c0
+		Virtual Method Slot: 65535
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x022F12C0
+		Ram Offset 0x1822f24c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+		Parameter 1:
+			Name: additionalLightsShadowCasterPass
+			Type: UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass
+			Default Value: 
+		Parameter 2:
+			Name: hasDepthPrepass
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: hasNormalPrepass
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: hasRenderingLayerPrepass
+			Type: System.Boolean
+			Default Value: 
+		Parameter 5:
+			Name: depthCopyTexture
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 6:
+			Name: depthAttachment
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 7:
+			Name: colorAttachment
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+	Method: Setup:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x009F1BF0
+		Ram Offset 0x1809f2df0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: additionalLightsShadowCasterPass
+			Type: UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass
+			Default Value: 
+	Method: OnCameraCleanup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x022F17F0
+		Ram Offset 0x1822f29f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+	Method: OverwriteStencil:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Rendering.StencilState
+		File Offset 0x022F18B0
+		Ram Offset 0x1822f2ab0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: s
+			Type: UnityEngine.Rendering.StencilState
+			Default Value: 
+		Parameter 1:
+			Name: stencilWriteMask
+			Type: System.Int32
+			Default Value: 
+	Method: OverwriteStencil:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Rendering.RenderStateBlock
+		File Offset 0x022F1A20
+		Ram Offset 0x1822f2c20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: block
+			Type: UnityEngine.Rendering.RenderStateBlock
+			Default Value: 
+		Parameter 1:
+			Name: stencilWriteMask
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: stencilRef
+			Type: System.Int32
+			Default Value: 
+	Method: ClearStencilPartial:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x022F1C60
+		Ram Offset 0x1822f2e60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+	Method: ExecuteDeferredPass:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x022F1EB0
+		Ram Offset 0x1822f30b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: SetupShaderLightConstants:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022F2130
+		Ram Offset 0x1822f3330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: SetupMainLightConstants:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022F2140
+		Ram Offset 0x1822f3340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: lightData
+			Type: UnityEngine.Rendering.Universal.LightData
+			Default Value: 
+	Method: SetupMatrixConstants:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022F23D0
+		Ram Offset 0x1822f35d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: PrecomputeLights:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022F2B40
+		Ram Offset 0x1822f3d40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stencilVisLights
+			Type: Unity.Collections.NativeArray`1<System.UInt16>
+			Default Value: 
+		Parameter 1:
+			Name: stencilVisLightOffsets
+			Type: Unity.Collections.NativeArray`1<System.UInt16>
+			Default Value: 
+		Parameter 2:
+			Name: visibleLights
+			Type: Unity.Collections.NativeArray`1<UnityEngine.Rendering.VisibleLight>
+			Default Value: 
+		Parameter 3:
+			Name: hasAdditionalLights
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: view
+			Type: UnityEngine.Matrix4x4
+			Default Value: 
+		Parameter 5:
+			Name: isOrthographic
+			Type: System.Boolean
+			Default Value: 
+		Parameter 6:
+			Name: zNear
+			Type: System.Single
+			Default Value: 
+	Method: HasStencilLightsOfType:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x022F3060
+		Ram Offset 0x1822f4260
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: UnityEngine.LightType
+			Default Value: 
+	Method: RenderStencilLights:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022F30D0
+		Ram Offset 0x1822f42d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 2:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: RenderStencilDirectionalLights:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022F33C0
+		Ram Offset 0x1822f45c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+		Parameter 2:
+			Name: visibleLights
+			Type: Unity.Collections.NativeArray`1<UnityEngine.Rendering.VisibleLight>
+			Default Value: 
+		Parameter 3:
+			Name: mainLightIndex
+			Type: System.Int32
+			Default Value: 
+	Method: RenderStencilPointLights:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022F3C40
+		Ram Offset 0x1822f4e40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+		Parameter 2:
+			Name: visibleLights
+			Type: Unity.Collections.NativeArray`1<UnityEngine.Rendering.VisibleLight>
+			Default Value: 
+	Method: RenderStencilSpotLights:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022F45D0
+		Ram Offset 0x1822f57d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+		Parameter 2:
+			Name: visibleLights
+			Type: Unity.Collections.NativeArray`1<UnityEngine.Rendering.VisibleLight>
+			Default Value: 
+	Method: RenderSSAOBeforeShading:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022F51C0
+		Ram Offset 0x1822f63c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: RenderFog:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022F53B0
+		Ram Offset 0x1822f65b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 2:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: InitStencilDeferredMaterial:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022F5660
+		Ram Offset 0x1822f6860
+		Virtual Method Slot: 65535
+
+	Method: CreateSphereMesh:
+		Accessibility: Private
+		Return Type: UnityEngine.Mesh
+		File Offset 0x022F6030
+		Ram Offset 0x1822f7230
+		Virtual Method Slot: 65535
+
+	Method: CreateHemisphereMesh:
+		Accessibility: Private
+		Return Type: UnityEngine.Mesh
+		File Offset 0x022F6A60
+		Ram Offset 0x1822f7c60
+		Virtual Method Slot: 65535
+
+	Method: CreateFullscreenMesh:
+		Accessibility: Private
+		Return Type: UnityEngine.Mesh
+		File Offset 0x022F7480
+		Ram Offset 0x1822f8680
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022F76B0
+		Ram Offset 0x1822f88b0
+		Virtual Method Slot: 65535

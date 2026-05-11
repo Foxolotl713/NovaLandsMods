@@ -1,0 +1,154 @@
+Type: System.Security.Cryptography.SHA1Internal:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Field: _H
+		Type: System.UInt32[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: count
+		Type: System.UInt64
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _ProcessingBuffer
+		Type: System.Byte[]
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _ProcessingBufferCount
+		Type: System.Int32
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: buff
+		Type: System.UInt32[]
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01725A10
+		Ram Offset 0x181726c10
+		Virtual Method Slot: 65535
+
+	Method: HashCore:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01725B80
+		Ram Offset 0x181726d80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rgb
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: ibStart
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: cbSize
+			Type: System.Int32
+			Default Value: 
+	Method: HashFinal:
+		Accessibility: Public
+		Return Type: System.Byte[]
+		File Offset 0x01725CD0
+		Ram Offset 0x181726ed0
+		Virtual Method Slot: 65535
+
+	Method: Initialize:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01725DC0
+		Ram Offset 0x181726fc0
+		Virtual Method Slot: 65535
+
+	Method: ProcessBlock:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01725E50
+		Ram Offset 0x181727050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.UInt32
+			Default Value: 
+	Method: InitialiseBuff:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01726540
+		Ram Offset 0x181727740
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buff
+			Type: System.UInt32[]
+			Default Value: 
+		Parameter 1:
+			Name: input
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: inputOffset
+			Type: System.UInt32
+			Default Value: 
+	Method: FillBuff:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01726CC0
+		Ram Offset 0x181727ec0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buff
+			Type: System.UInt32[]
+			Default Value: 
+	Method: ProcessFinalBlock:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x017270A0
+		Ram Offset 0x1817282a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 
+	Method: AddLength:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x017272E0
+		Ram Offset 0x1817284e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: length
+			Type: System.UInt64
+			Default Value: 
+		Parameter 1:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: position
+			Type: System.Int32
+			Default Value: 

@@ -1,0 +1,457 @@
+Type: SinusoidalBullet
+
+Method: System.Void SinusoidalBullet::Awake():	Method Body (x86 ASM):
+		0x1803EB1D0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB1D2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1803EB1D6 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB1D8 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB1DB call 0000000180B4D7F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB1E0 mov dword ptr [rbx+118h],0		; DEBUG: {Memory}/None {Immediate32}/None ||| RBX | 280 | None ||| N/A | 0
+		0x1803EB1EA add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1803EB1EE pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB1EF ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SinusoidalBullet::Awake():
+		End of function at 0x1803EB1F0
+		Absolute End is at 0x1803EB1F0
+		Identified Jump Destination addresses:
+
+		0x1803EB1D0: Saves the content of rbx to the stack
+		0x1803EB1D8: Copies {'this' (function parameter, type SinusoidalBullet)} from rcx into rbx
+		0x1803EB1DB: [!] Calls managed method System.Void BaseBullet::Awake() on instance {'this' (function parameter, type SinusoidalBullet)}
+
+		0x1803EB1E0: [!] Sets the field currentSinusTime (Type System.Single) on local {'this' (function parameter, type SinusoidalBullet)} to the value stored in 0
+		0x1803EB1EF: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SinusoidalBullet
+	System.Void Awake()
+
+		base.Awake()
+		this.currentSinusTime = 0
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call System.Void BaseBullet::Awake()
+	IL_0006: ldarg.0
+	IL_0007: ldc.r4 0
+	IL_000c: stfld System.Single SinusoidalBullet::currentSinusTime
+	IL_0011: ret
+	
+
+Method: System.Void SinusoidalBullet::Setup(BaseCharacter,UnityEngine.Vector2,System.Single,System.Single,System.Single,System.Boolean,WorldArea,UnityEngine.Color):	Method Body (x86 ASM):
+		0x1803EB1F0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB1F2 sub rsp,60h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 96
+		0x1803EB1F6 mov rax,[rsp+0B0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSP | 176 | None ||| N/A | N/A
+		0x1803EB1FE mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB201 movss xmm1,dword ptr [rsp+90h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 144 | None ||| N/A | N/A
+		0x1803EB20A mov qword ptr [rsp+48h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 72 | None ||| N/A | 0
+		0x1803EB213 movups xmm0,[rax]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1803EB216 lea rax,[rsp+50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1803EB21B mov [rsp+40h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 64 | None ||| N/A | N/A
+		0x1803EB220 mov rax,[rsp+0A8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSP | 168 | None ||| N/A | N/A
+		0x1803EB228 mov [rsp+38h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 56 | None ||| N/A | N/A
+		0x1803EB22D movzx eax,byte ptr [rsp+0A0h]		; DEBUG: {Register}/EAX {Memory}/None ||| RSP | 160 | None ||| N/A | N/A
+		0x1803EB235 mov [rsp+30h],al		; DEBUG: {Memory}/None {Register}/AL ||| RSP | 48 | None ||| N/A | N/A
+		0x1803EB239 movaps [rsp+50h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 80 | None ||| N/A | N/A
+		0x1803EB23E movss xmm0,dword ptr [rsp+98h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 152 | None ||| N/A | N/A
+		0x1803EB247 movss dword ptr [rsp+28h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 40 | None ||| N/A | N/A
+		0x1803EB24D movss dword ptr [rsp+20h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 32 | None ||| N/A | N/A
+		0x1803EB253 call 0000000180B4C810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB258 movss xmm1,dword ptr [rbx+0B8h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBX | 184 | None ||| N/A | N/A
+		0x1803EB260 movss xmm0,dword ptr [rbx+0B4h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 180 | None ||| N/A | N/A
+		0x1803EB268 xorps xmm1,[182E6F760h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RIP | 6491141984 | None ||| N/A | N/A
+		0x1803EB26F movss dword ptr [rbx+11Ch],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 284 | None ||| N/A | N/A
+		0x1803EB277 movss dword ptr [rbx+120h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 288 | None ||| N/A | N/A
+		0x1803EB27F mov dword ptr [rbx+118h],0		; DEBUG: {Memory}/None {Immediate32}/None ||| RBX | 280 | None ||| N/A | 0
+		0x1803EB289 add rsp,60h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 96
+		0x1803EB28D pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB28E ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB28F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SinusoidalBullet::Setup(BaseCharacter,UnityEngine.Vector2,System.Single,System.Single,System.Single,System.Boolean,WorldArea,UnityEngine.Color):
+		End of function at 0x1803EB290
+		Absolute End is at 0x1803EB290
+		Identified Jump Destination addresses:
+
+		0x1803EB1F0: Saves the content of rbx to the stack
+		0x1803EB1F6: Reads unknown value in stack, offset 176 (0xB0) and stores the pointer in register rax as new constant constant1
+		0x1803EB1FE: Copies {'this' (function parameter, type SinusoidalBullet)} from rcx into rbx
+		0x1803EB201: Reads unknown value in stack, offset 144 (0x90) and stores the pointer in register xmm1 as new constant constant2
+		0x1803EB20A: Moves 0 (immediate ulong value) to the stack at offset 72 as a new local local9
+		0x1803EB216: Loads a pointer to stack offset 0x50 into register rax as new constant constant3
+		0x1803EB21B: Moves constant3 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register rax to the stack at offset 64 (0x40) as a new local local10
+		0x1803EB220: Reads unknown value in stack, offset 168 (0xA8) and stores the pointer in register rax as new constant constant4
+		0x1803EB228: Moves constant4 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register rax to the stack at offset 56 (0x38) as a new local local11
+		0x1803EB22D: Reads unknown value in stack, offset 160 (0xA0) and stores the pointer in register rax as new constant constant5
+		0x1803EB235: Moves constant5 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register rax to the stack at offset 48 (0x30) as a new local local12
+		0x1803EB23E: Reads unknown value in stack, offset 152 (0x98) and stores the pointer in register xmm0 as new constant constant6
+		0x1803EB247: Moves constant6 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm0 to the stack at offset 40 (0x28) as a new local local13
+		0x1803EB24D: Moves constant2 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm1 to the stack at offset 32 (0x20) as a new local local14
+		0x1803EB253: [!] Calls managed method System.Void BaseBullet::Setup(BaseCharacter,UnityEngine.Vector2,System.Single,System.Single,System.Single,System.Boolean,WorldArea,UnityEngine.Color) on instance {'this' (function parameter, type SinusoidalBullet)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x1803EB258: [!] Reads field direction.y from {'this' (function parameter, type SinusoidalBullet)} and stores in a new local {'single' (type System.Single)}
+
+		0x1803EB260: [!] Reads field direction from {'this' (function parameter, type SinusoidalBullet)} and stores in a new local {'direction' (type UnityEngine.Vector2)}
+
+		0x1803EB26F: [!] Sets the field orthoDirection (Type UnityEngine.Vector2) on local {'this' (function parameter, type SinusoidalBullet)} to the value stored in {'single' (type System.Single)}
+		0x1803EB277: [!] Sets the field orthoDirection.y (Type System.Single) on local {'this' (function parameter, type SinusoidalBullet)} to the value stored in {'direction' (type UnityEngine.Vector2)}
+		0x1803EB27F: [!] Sets the field currentSinusTime (Type System.Single) on local {'this' (function parameter, type SinusoidalBullet)} to the value stored in 0
+		0x1803EB28E: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SinusoidalBullet
+	System.Void Setup(BaseCharacter owner, UnityEngine.Vector2 direction, System.Single attack, System.Single attackProp, System.Single range, System.Boolean adjustLocalPosition, WorldArea parentArea, UnityEngine.Color customDamageColor)
+
+		base.Setup()
+		System.Single single = this.direction.y
+		UnityEngine.Vector2 direction = this.direction
+		this.orthoDirection = single
+		this.orthoDirection.y = direction
+		this.currentSinusTime = 0
+		return
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionAction at (0x1803EB253) is corrupt (Couldn't get arguments, or actual count (-1) is not equal to expected count (8)) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void SinusoidalBullet::Update():	Method Body (x86 ASM):
+		0x1803EB290 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB292 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1803EB296 mov rax,[1832AA1D8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576536 | None ||| N/A | N/A
+		0x1803EB29D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB2A0 movaps [rsp+20h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 32 | None ||| N/A | N/A
+		0x1803EB2A5 movss xmm6,dword ptr [rcx+118h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RCX | 280 | None ||| N/A | N/A
+		0x1803EB2AD test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB2B0 jne short 00000001803EB2CAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB2B2 lea rcx,[18297B938h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485948728 | None ||| N/A | N/A
+		0x1803EB2B9 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB2BE test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB2C1 je short 00000001803EB2F6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB2C3 mov [1832AA1D8h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576536 | None ||| N/A | N/A
+		0x1803EB2CA call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB2CC cmp byte ptr [rbx+9Ch],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 156 | None ||| N/A | 0
+		0x1803EB2D3 addss xmm0,xmm6		; DEBUG: {Register}/XMM0 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x1803EB2D7 movss dword ptr [rbx+118h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 280 | None ||| N/A | N/A
+		0x1803EB2DF jne short 00000001803EB2EBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB2E1 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB2E3 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB2E6 call 0000000180B4DE40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB2EB movaps xmm6,[rsp+20h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x1803EB2F0 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1803EB2F4 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB2F5 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB2F6 lea rcx,[18297B938h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485948728 | None ||| N/A | N/A
+		0x1803EB2FD call 0000000180323A80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB302 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB305 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB307 call 0000000180321970h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB30C int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SinusoidalBullet::Update():
+		End of function at 0x1803EB30D
+		Absolute End is at 0x1803EB30D
+		Identified Jump Destination addresses:
+
+		0x1803EB290: Saves the content of rbx to the stack
+		0x1803EB296: Loads string "" into register rax as constant UnityEngine.Time.get_deltaTime
+		0x1803EB29D: Copies {'this' (function parameter, type SinusoidalBullet)} from rcx into rbx
+		0x1803EB2AD: Compares UnityEngine.Time.get_deltaTime and 0
+		0x1803EB2B0: Jumps to 0x1803EB2CA if UnityEngine.Time.get_deltaTime != 0
+
+		0x1803EB2B2: Loads string "UnityEngine.Time::get_deltaTime()" into register rcx as constant {'constant3' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1803EB2B9: Looks up unity ICall by name "UnityEngine.Time::get_deltaTime()" which resolves to System.Single UnityEngine.Time::get_deltaTime()
+		0x1803EB2BE: Compares UnityEngine.Time.get_deltaTime and 0
+		0x1803EB2C1: Jumps to 0x1803EB2F6 if UnityEngine.Time.get_deltaTime equals 0
+
+		0x1803EB2CA: [!] Calls static managed method System.Single UnityEngine.Time::get_deltaTime() and stores the result in {'deltaTime' (type System.Single)}
+
+		0x1803EB2CC: [!] Compares  and 0
+		0x1803EB2D7: [!] Sets the field currentSinusTime (Type System.Single) on local {'this' (function parameter, type SinusoidalBullet)} to the value stored in {'deltaTime' (type System.Single)}
+		0x1803EB2DF: Jumps to 0x1803EB2EB (which is an if statement's body) if  != 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1803EB2E3: Copies {'this' (function parameter, type SinusoidalBullet)} from rbx into rcx
+		0x1803EB2E6: [!] Calls managed method System.Void BaseBullet::UpdateLifeTime() on instance {'this' (function parameter, type SinusoidalBullet)}
+
+		0x1803EB2EB: Reads unknown value in stack, offset 32 (0x20) and stores the pointer in register xmm6 as new constant constant6
+		0x1803EB2F5: [!] Returns from the function
+
+		0x1803EB2F6: Loads string "UnityEngine.Time::get_deltaTime()" into register rcx as constant {'constant7' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1803EB2FD: [!] Constructs and throws an exception of kind System.MissingMethodException
+
+		0x1803EB302: Copies {'local4' (type System.MissingMethodException)} from rax into rcx
+		0x1803EB307: [!] Throws {'local4' (type System.MissingMethodException)}
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SinusoidalBullet
+	System.Void Update()
+
+		System.Single deltaTime = UnityEngine.Time.deltaTime
+		this.currentSinusTime = deltaTime
+
+		if ( == 0)
+
+		    base.UpdateLifeTime()
+		endif
+        
+		return
+		throw new System.MissingMethodException()
+		throw local4
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.JumpIfNonZeroOrNonNullAction at (0x1803EB2DF) is corrupt (One of the arguments is null) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void SinusoidalBullet::FixedUpdate():	Method Body (x86 ASM):
+		0x1803EB310 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB312 sub rsp,60h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 96
+		0x1803EB316 mov rax,[1832AA1F8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576568 | None ||| N/A | N/A
+		0x1803EB31D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB320 movaps [rsp+50h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 80 | None ||| N/A | N/A
+		0x1803EB325 movss xmm6,dword ptr [rcx+118h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RCX | 280 | None ||| N/A | N/A
+		0x1803EB32D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB330 jne short 00000001803EB34Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB332 lea rcx,[18297B9D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485948888 | None ||| N/A | N/A
+		0x1803EB339 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB33E test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB341 je near ptr 00000001803EB465h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB347 mov [1832AA1F8h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576568 | None ||| N/A | N/A
+		0x1803EB34E movaps [rsp+40h],xmm7		; DEBUG: {Memory}/None {Register}/XMM7 ||| RSP | 64 | None ||| N/A | N/A
+		0x1803EB353 movaps [rsp+30h],xmm8		; DEBUG: {Memory}/None {Register}/XMM8 ||| RSP | 48 | None ||| N/A | N/A
+		0x1803EB359 movaps [rsp+20h],xmm9		; DEBUG: {Memory}/None {Register}/XMM9 ||| RSP | 32 | None ||| N/A | N/A
+		0x1803EB35F call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB361 movss xmm8,dword ptr [rbx+0B4h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RBX | 180 | None ||| N/A | N/A
+		0x1803EB36A addss xmm0,xmm6		; DEBUG: {Register}/XMM0 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x1803EB36E movss xmm9,dword ptr [rbx+0B8h]		; DEBUG: {Register}/XMM9 {Memory}/None ||| RBX | 184 | None ||| N/A | N/A
+		0x1803EB377 movss xmm6,dword ptr [rbx+11Ch]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RBX | 284 | None ||| N/A | N/A
+		0x1803EB37F movss xmm7,dword ptr [rbx+120h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RBX | 288 | None ||| N/A | N/A
+		0x1803EB387 movss dword ptr [rbx+118h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 280 | None ||| N/A | N/A
+		0x1803EB38F mulss xmm0,dword ptr [rbx+110h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 272 | None ||| N/A | N/A
+		0x1803EB397 call 0000000180371CC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB39C mulss xmm6,xmm0		; DEBUG: {Register}/XMM6 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1803EB3A0 mulss xmm7,xmm0		; DEBUG: {Register}/XMM7 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1803EB3A4 movss xmm0,dword ptr [rbx+114h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 276 | None ||| N/A | N/A
+		0x1803EB3AC mulss xmm6,xmm0		; DEBUG: {Register}/XMM6 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1803EB3B0 mulss xmm7,xmm0		; DEBUG: {Register}/XMM7 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1803EB3B4 addss xmm8,xmm6		; DEBUG: {Register}/XMM8 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x1803EB3B9 addss xmm9,xmm7		; DEBUG: {Register}/XMM9 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x1803EB3BE movaps xmm0,xmm8		; DEBUG: {Register}/XMM0 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x1803EB3C2 lea rcx,[rsp+70h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x1803EB3C7 unpcklps xmm0,xmm9		; DEBUG: {Register}/XMM0 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x1803EB3CB movsd qword ptr [rsp+70h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 112 | None ||| N/A | N/A
+		0x1803EB3D1 call 00000001803C7890h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB3D6 mov [rsp+70h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 112 | None ||| N/A | N/A
+		0x1803EB3DB movss xmm2,dword ptr [rsp+70h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x1803EB3E1 movss xmm0,dword ptr [rsp+74h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 116 | None ||| N/A | N/A
+		0x1803EB3E7 mulss xmm2,dword ptr [rbx+24h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RBX | 36 | None ||| N/A | N/A
+		0x1803EB3EC mulss xmm0,dword ptr [rbx+24h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 36 | None ||| N/A | N/A
+		0x1803EB3F1 movss dword ptr [rsp+70h],xmm2		; DEBUG: {Memory}/None {Register}/XMM2 ||| RSP | 112 | None ||| N/A | N/A
+		0x1803EB3F7 movss dword ptr [rsp+74h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 116 | None ||| N/A | N/A
+		0x1803EB3FD mov rbx,[rbx+0E8h]		; DEBUG: {Register}/RBX {Memory}/None ||| RBX | 232 | None ||| N/A | N/A
+		0x1803EB404 movaps xmm9,[rsp+20h]		; DEBUG: {Register}/XMM9 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x1803EB40A movaps xmm8,[rsp+30h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1803EB410 movaps xmm7,[rsp+40h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1803EB415 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB418 je short 00000001803EB45Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB41A mov rax,[1832AB918h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495582488 | None ||| N/A | N/A
+		0x1803EB421 movsd xmm0,qword ptr [rsp+70h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x1803EB427 movsd qword ptr [rsp+70h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 112 | None ||| N/A | N/A
+		0x1803EB42D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB430 jne short 00000001803EB44Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB432 lea rcx,[18298A5B0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6486009264 | None ||| N/A | N/A
+		0x1803EB439 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB43E test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB441 je short 00000001803EB47Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB443 mov [1832AB918h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495582488 | None ||| N/A | N/A
+		0x1803EB44A lea rdx,[rsp+70h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x1803EB44F mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1803EB452 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB454 movaps xmm6,[rsp+50h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1803EB459 add rsp,60h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 96
+		0x1803EB45D pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB45E ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB45F call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB464 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SinusoidalBullet::FixedUpdate():
+		End of function at 0x1803EB465
+		Absolute End is at 0x1803EB465
+		Identified Jump Destination addresses:
+
+		0x1803EB310: Saves the content of rbx to the stack
+		0x1803EB316: Loads string "È;õçÃ" into register rax as constant UnityEngine.Time.get_fixedDeltaTime
+		0x1803EB31D: Copies {'this' (function parameter, type SinusoidalBullet)} from rcx into rbx
+		0x1803EB32D: Compares UnityEngine.Time.get_fixedDeltaTime and 0
+		0x1803EB330: Jumps to 0x1803EB34E if UnityEngine.Time.get_fixedDeltaTime != 0
+
+		0x1803EB332: Loads string "UnityEngine.Time::get_fixedDeltaTime()" into register rcx as constant {'constant3' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1803EB339: Looks up unity ICall by name "UnityEngine.Time::get_fixedDeltaTime()" which resolves to System.Single UnityEngine.Time::get_fixedDeltaTime()
+		0x1803EB33E: Compares UnityEngine.Time.get_fixedDeltaTime and 0
+		0x1803EB341: Jumps to 0x1803EB465 if UnityEngine.Time.get_fixedDeltaTime equals 0
+
+		0x1803EB35F: [!] Calls static managed method System.Single UnityEngine.Time::get_fixedDeltaTime() and stores the result in {'fixedDeltaTime' (type System.Single)}
+
+		0x1803EB387: [!] Sets the field currentSinusTime (Type System.Single) on local {'this' (function parameter, type SinusoidalBullet)} to the value stored in {'fixedDeltaTime' (type System.Single)}
+		0x1803EB38F: Multiplies {'fixedDeltaTime' (type System.Single)} by the field frequency from {'this' (function parameter, type SinusoidalBullet)}, and stores the result in new local {'local7' (type System.Single)} in register xmm0
+		0x1803EB3BE: Copies {'local3' (type UnityEngine.Vector2)} from xmm8 into xmm0
+		0x1803EB3C2: Loads a pointer to stack offset 0x70 into register rcx as new constant constant5
+		0x1803EB3D6: Moves UnityEngine.Time.get_fixedDeltaTime (type Mono.Cecil.MethodDefinition) from register rax to the stack at offset 112 (0x70) as a new local local9
+		0x1803EB3DB: Reads local {'local9' (type )} from stack offset 112 (0x70) into register xmm2
+		0x1803EB3E1: Reads unknown value in stack, offset 116 (0x74) and stores the pointer in register xmm0 as new constant constant6
+		0x1803EB3E7: Multiplies {'local9' (type )} by the field speed from {'this' (function parameter, type SinusoidalBullet)}, and stores the result in new local {'local10' (type System.Single)} in register xmm2
+		0x1803EB3EC: Multiplies  by the field speed from {'this' (function parameter, type SinusoidalBullet)}, and stores the result in new local {'local11' (type System.Single)} in register xmm0
+		0x1803EB3F1: Moves local10 (type System.Single) from register xmm2 to the stack at offset 112 (0x70)
+		0x1803EB3F7: Moves local11 (type System.Single) from register xmm0 to the stack at offset 116 (0x74)
+		0x1803EB3FD: [!] Reads field rigidbody from {'this' (function parameter, type SinusoidalBullet)} and stores in a new local {'rigidbody' (type UnityEngine.Rigidbody2D)}
+
+		0x1803EB404: Reads unknown value in stack, offset 32 (0x20) and stores the pointer in register xmm9 as new constant constant7
+		0x1803EB40A: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register xmm8 as new constant constant8
+		0x1803EB410: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register xmm7 as new constant constant9
+		0x1803EB415: [!] Compares {'rigidbody' (type UnityEngine.Rigidbody2D)} and 0
+		0x1803EB418: Jumps to 0x1803EB45F (which throws a NRE) if rigidbody equals 0. Implicitly present in managed code, so ignored here.
+		0x1803EB41A: Loads string "" into register rax as constant UnityEngine.Rigidbody2D.set_velocity
+		0x1803EB42D: Compares UnityEngine.Rigidbody2D.set_velocity and 0
+		0x1803EB430: Jumps to 0x1803EB44A if UnityEngine.Rigidbody2D.set_velocity != 0
+
+		0x1803EB432: Loads string "UnityEngine.Rigidbody2D::set_velocity_Injected(UnityEngine.Vector2&)" into register rcx as constant {'constant13' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1803EB439: Looks up unity ICall by name "UnityEngine.Rigidbody2D::set_velocity_Injected(UnityEngine.Vector2&)" which resolves to System.Void UnityEngine.Rigidbody2D::set_velocity(UnityEngine.Vector2)
+		0x1803EB43E: Compares UnityEngine.Rigidbody2D.set_velocity and 0
+		0x1803EB441: Jumps to 0x1803EB47C if UnityEngine.Rigidbody2D.set_velocity equals 0
+
+		0x1803EB44A: Loads a pointer to stack offset 0x70 into register rdx as new constant constant15
+		0x1803EB44F: Copies {'rigidbody' (type UnityEngine.Rigidbody2D)} from rbx into rcx
+		0x1803EB452: [!] Calls managed method System.Void UnityEngine.Rigidbody2D::set_velocity(UnityEngine.Vector2) on instance {'rigidbody' (type UnityEngine.Rigidbody2D)} ;  - Mismatched parameters detected here.
+
+		0x1803EB454: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register xmm6 as new constant constant16
+		0x1803EB45E: [!] Returns from the function
+
+		0x1803EB45F: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SinusoidalBullet
+	System.Void FixedUpdate()
+
+		System.Single fixedDeltaTime = UnityEngine.Time.fixedDeltaTime
+		this.currentSinusTime = fixedDeltaTime
+		System.Single local7 = fixedDeltaTime * this.frequency
+		System.Single local10 = local9 * this.speed
+		System.Single local11 =  * this.speed
+		UnityEngine.Rigidbody2D rigidbody = this.rigidbody
+
+		rigidbody.set_velocity()
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.MultiplyRegByFieldAction at (0x1803EB38F) is corrupt (Operand we were multiplying by is null or local made was stripped) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void SinusoidalBullet::.ctor():	Method Body (x86 ASM):
+		0x1803EB4A0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1803EB4A4 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x1803EB4AB mov byte ptr [rcx+28h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 40 | None ||| N/A | 1
+		0x1803EB4AF mov byte ptr [rcx+30h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 48 | None ||| N/A | 1
+		0x1803EB4B3 mov dword ptr [rcx+34h],3F800000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 52 | None ||| N/A | 1065353216
+		0x1803EB4BA mov dword ptr [rcx+38h],3E19999Ah		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 56 | None ||| N/A | 1041865114
+		0x1803EB4C1 mov byte ptr [rcx+50h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 80 | None ||| N/A | 1
+		0x1803EB4C5 mov dword ptr [rcx+70h],0FFFFFFFFh		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 112 | None ||| N/A | 4294967295
+		0x1803EB4CC mov byte ptr [rcx+75h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 117 | None ||| N/A | 1
+		0x1803EB4D0 jne short 00000001803EB4E5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB4D2 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1803EB4D9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB4DE mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x1803EB4E5 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1803EB4EC cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1803EB4F3 jne short 00000001803EB4FEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB4F5 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1803EB4F9 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803EB4FE add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1803EB502 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803EB503 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SinusoidalBullet::.ctor():
+		End of function at 0x1803EB504
+		Absolute End is at 0x1803EB504
+		Identified Jump Destination addresses:
+
+		0x1803EB4A4: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x1803EB4AB: [!] Sets the field rotateToTargetDirection (Type System.Boolean) on local {'this' (function parameter, type SinusoidalBullet)} to the value stored in True
+		0x1803EB4AF: [!] Sets the field cancelableKnockback (Type System.Boolean) on local {'this' (function parameter, type SinusoidalBullet)} to the value stored in True
+		0x1803EB4B3: [!] Sets the field knockbackForce (Type System.Single) on local {'this' (function parameter, type SinusoidalBullet)} to the value stored in 1
+		0x1803EB4BA: [!] Sets the field knockbackDuration (Type System.Single) on local {'this' (function parameter, type SinusoidalBullet)} to the value stored in 0,15
+		0x1803EB4C1: [!] Sets the field destroyOnCollide (Type System.Boolean) on local {'this' (function parameter, type SinusoidalBullet)} to the value stored in True
+		0x1803EB4C5: [!] Sets the field bulletGroup (Type System.Int32) on local {'this' (function parameter, type SinusoidalBullet)} to the value stored in 4294967295
+		0x1803EB4CC: [!] Sets the field useEmitters (Type System.Boolean) on local {'this' (function parameter, type SinusoidalBullet)} to the value stored in True
+		0x1803EB4D0: Jumps to 0x1803EB4E5 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x1803EB4D2: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1803EB4D9: Initializes runtime metadata value UnityEngine.Object
+		0x1803EB4E5: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1803EB4EC: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1803EB4F3: Jumps to 0x1803EB4FE if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1803EB502: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SinusoidalBullet
+	System.Void .ctor()
+		this.rotateToTargetDirection = True
+		this.cancelableKnockback = True
+		this.knockbackForce = 1
+		this.knockbackDuration = 0,15
+		this.destroyOnCollide = True
+		this.bulletGroup = 4294967295
+		this.useEmitters = True
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4.1
+	IL_0002: stfld System.Boolean BaseBullet::rotateToTargetDirection
+	IL_0007: ldarg.0
+	IL_0008: ldc.i4.1
+	IL_0009: stfld System.Boolean BaseBullet::cancelableKnockback
+	IL_000e: ldarg.0
+	IL_000f: ldc.r4 1
+	IL_0014: stfld System.Single BaseBullet::knockbackForce
+	IL_0019: ldarg.0
+	IL_001a: ldc.r4 0,15
+	IL_001f: stfld System.Single BaseBullet::knockbackDuration
+	IL_0024: ldarg.0
+	IL_0025: ldc.i4.1
+	IL_0026: stfld System.Boolean BaseBullet::destroyOnCollide
+	IL_002b: ldarg.0
+	IL_002c: ldc.i8 4294967295
+	IL_0035: conv.u8
+	IL_0036: stfld System.Int32 BaseBullet::bulletGroup
+	IL_003b: ldarg.0
+	IL_003c: ldc.i4.1
+	IL_003d: stfld System.Boolean BaseBullet::useEmitters
+	IL_0042: ret
+	
+

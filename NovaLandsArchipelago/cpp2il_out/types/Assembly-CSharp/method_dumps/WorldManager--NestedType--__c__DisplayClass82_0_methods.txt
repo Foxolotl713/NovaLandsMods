@@ -1,0 +1,99 @@
+Type: <>c__DisplayClass82_0
+
+Method: System.Void WorldManager/<>c__DisplayClass82_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void WorldManager/<>c__DisplayClass82_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: WorldManager/<>c__DisplayClass82_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean WorldManager/<>c__DisplayClass82_0::<GetSpecialWorldArea>b__0(WorldArea):	Method Body (x86 ASM):
+		0x18070C260 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18070C262 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18070C266 mov rax,rdx		; DEBUG: {Register}/RAX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18070C269 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18070C26C test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18070C26F je short 000000018070C294h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18070C271 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18070C273 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18070C276 call 000000018248F3C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18070C27B test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18070C27E je short 000000018070C294h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18070C280 mov rdx,[rbx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x18070C284 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18070C287 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18070C28A add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18070C28E pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18070C28F jmp near ptr 00000001816CE7C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18070C294 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18070C299 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean WorldManager/<>c__DisplayClass82_0::<GetSpecialWorldArea>b__0(WorldArea):
+		End of function at 0x18070C29A
+		Absolute End is at 0x18070C29A
+		Identified Jump Destination addresses:
+
+		0x18070C260: Saves the content of rbx to the stack
+		0x18070C266: Copies {'x' (function parameter, type WorldArea)} from rdx into rax
+		0x18070C269: Copies {'this' (function parameter, type WorldManager/<>c__DisplayClass82_0)} from rcx into rbx
+		0x18070C26C: [!] Compares {'x' (function parameter, type WorldArea)} and 0
+		0x18070C26F: Jumps to 0x18070C294 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x18070C273: Copies {'x' (function parameter, type WorldArea)} from rax into rcx
+		0x18070C276: [!] Calls managed method System.String UnityEngine.Object::get_name() on instance {'x' (function parameter, type WorldArea)} and stores the result in {'name' (type System.String)}
+
+		0x18070C27B: [!] Compares {'name' (type System.String)} and 0
+		0x18070C27E: Jumps to 0x18070C294 (which throws a NRE) if name equals 0. Implicitly present in managed code, so ignored here.
+		0x18070C280: [!] Reads field name from {'this' (function parameter, type WorldManager/<>c__DisplayClass82_0)} and stores in a new local {'name2' (type System.String)}
+
+		0x18070C287: Copies {'name' (type System.String)} from rax into rcx
+		0x18070C28F: [!] Calls managed method System.Boolean System.String::Contains(System.String) on instance {'name' (type System.String)} with arguments [{'name2' (type System.String)}] and stores the result in {'boolean' (type System.Boolean)}
+
+		0x18070C28F: [!] Returns {'boolean' (type System.Boolean)} from the function
+
+		0x18070C294: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: WorldManager/<>c__DisplayClass82_0
+	System.Boolean <GetSpecialWorldArea>b__0(WorldArea x)
+
+		System.String name = x.name
+		System.String name2 = this.name
+
+		System.Boolean boolean = name.Contains(name2) //(String value)
+		return boolean
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: call System.String UnityEngine.Object::get_name()
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld System.String WorldManager/<>c__DisplayClass82_0::name
+	IL_000d: stloc.1
+	IL_000e: ldloc.0
+	IL_000f: ldloc.1
+	IL_0010: call System.Boolean System.String::Contains(System.String)
+	IL_0015: ret
+	IL_0016: newobj System.Void System.NullReferenceException::.ctor()
+	IL_001b: throw
+	
+

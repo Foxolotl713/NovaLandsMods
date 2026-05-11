@@ -1,0 +1,174 @@
+Type: DialogueDescriptorScriptableObject:
+	Base Class: 
+		UnityEngine.ScriptableObject
+
+	Interfaces:
+
+	Field: mandatoryDialogue
+		Type: System.Boolean
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: requiredParameters
+		Type: System.Collections.Generic.List`1<System.String>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: requiredTechs
+		Type: System.Collections.Generic.List`1<ResearchDescriptor>
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: requiredItems
+		Type: System.Collections.Generic.List`1<ResourceAmountPair>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: dialogueToActiveOutcome
+		Type: System.Int32
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: refToDialogueWithRequestedItems
+		Type: DialogueDescriptorScriptableObject
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: unlockedParameters
+		Type: System.Collections.Generic.List`1<StringBoolPair>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: updatedIntegerParameters
+		Type: System.Collections.Generic.List`1<StringIntegerPair>
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: unlockedTechsGameObject
+		Type: System.Collections.Generic.List`1<UnityEngine.GameObject>
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: unlockedTechsScriptableObject
+		Type: System.Collections.Generic.List`1<UnityEngine.ScriptableObject>
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: prizesToSpawn
+		Type: System.Collections.Generic.List`1<ResourceAmountPair>
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: uniqueItemsToSpawn
+		Type: System.Collections.Generic.List`1<UniqueItem>
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: actionToExecute
+		Type: System.String
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: revertDialoguesAfterOutcome
+		Type: System.Int32
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: dialogues
+		Type: System.Collections.Generic.List`1<DialogueGroup>
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: questNameString
+		Type: System.String
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: isQuestRequisition
+		Type: System.Boolean
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: isQuestReward
+		Type: System.Boolean
+		Offset in Defining Type: 0x99
+		Has Default: False
+
+	Field: suppressQuestFeedback
+		Type: System.Boolean
+		Offset in Defining Type: 0x9A
+		Has Default: False
+
+	Field: addRequestsAsMilestone
+		Type: System.Boolean
+		Offset in Defining Type: 0x9B
+		Has Default: False
+
+	Field: removeQuestMilestone
+		Type: System.Boolean
+		Offset in Defining Type: 0x9C
+		Has Default: False
+
+	Field: temporaryTextFeedback
+		Type: AnimatedTemporaryText
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Method: IsRequirementsToShowMet:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00857A20
+		Ram Offset 0x180858c20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: playerItems
+			Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+			Default Value: 
+	Method: ConsumePlayerItems:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00857F40
+		Ram Offset 0x180859140
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+	Method: ActivateOutcomes:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x008585D0
+		Ram Offset 0x1808597d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+		Parameter 1:
+			Name: spawnPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 2:
+			Name: worldArea
+			Type: WorldArea
+			Default Value: 
+		Parameter 3:
+			Name: consumeResources
+			Type: System.Boolean
+			Default Value: True
+	Method: WereOutcomesAplied:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00859820
+		Ram Offset 0x18085aa20
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x008598A0
+		Ram Offset 0x18085aaa0
+		Virtual Method Slot: 65535

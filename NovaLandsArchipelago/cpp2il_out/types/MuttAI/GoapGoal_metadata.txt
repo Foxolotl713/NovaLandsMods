@@ -1,0 +1,178 @@
+Type: MuttAI.GOAP.GoapGoal:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		MuttAI.GOAP.GoapGoal/GoapGoalState
+
+	Field: goalType
+		Type: MuttAI.GOAP.GoalType
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: owner
+		Type: MuttAI.BaseGameEntity
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: status
+		Type: MuttAI.GOAP.GoapGoal/GoapGoalState
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: goalHierarchyStringCurrentLevel
+		Type: System.Int32
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01955540
+		Ram Offset 0x181956740
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: owner
+			Type: MuttAI.BaseGameEntity
+			Default Value: 
+		Parameter 1:
+			Name: goalType
+			Type: MuttAI.GOAP.GoalType
+			Default Value: 
+	Method: ActivateIfInactive:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x019555B0
+		Ram Offset 0x1819567b0
+		Virtual Method Slot: 65535
+
+	Method: ReactivateIfFailed:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x019555D0
+		Ram Offset 0x1819567d0
+		Virtual Method Slot: 65535
+
+	Method: Activate:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x007F37C0
+		Ram Offset 0x1807f49c0
+		Virtual Method Slot: 4
+
+	Method: Process:
+		Accessibility: Public
+		Return Type: MuttAI.GOAP.GoapGoal/GoapGoalState
+		File Offset 0x00387EA0
+		Ram Offset 0x1803890a0
+		Virtual Method Slot: 5
+
+	Method: ProcessInFixedUpdate:
+		Accessibility: Public
+		Return Type: MuttAI.GOAP.GoapGoal/GoapGoalState
+		File Offset 0x00387EA0
+		Ram Offset 0x1803890a0
+		Virtual Method Slot: 6
+
+	Method: Terminate:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 7
+
+	Method: HandleMessage:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: telegram
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: AddSubgoal:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x019555E0
+		Ram Offset 0x1819567e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: g
+			Type: MuttAI.GOAP.GoapGoal
+			Default Value: 
+	Method: QueueSubgoal:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01955630
+		Ram Offset 0x181956830
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: g
+			Type: MuttAI.GOAP.GoapGoalComposite
+			Default Value: 
+	Method: GetGoalsHierarchy:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01955680
+		Ram Offset 0x181956880
+		Virtual Method Slot: 10
+
+	Method: GetGoalHierarchyString:
+		Accessibility: Family
+		Return Type: System.String
+		File Offset 0x019556F0
+		Ram Offset 0x1819568f0
+		Virtual Method Slot: 11
+
+		Parameter 0:
+			Name: goal
+			Type: MuttAI.GOAP.GoapGoal
+			Default Value: 
+	Method: IsComplete:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01955980
+		Ram Offset 0x181956b80
+		Virtual Method Slot: 65535
+
+	Method: IsActive:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A2A180
+		Ram Offset 0x180a2b380
+		Virtual Method Slot: 65535
+
+	Method: IsInactive:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01955990
+		Ram Offset 0x181956b90
+		Virtual Method Slot: 65535
+
+	Method: HasFailed:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x019559A0
+		Ram Offset 0x181956ba0
+		Virtual Method Slot: 65535
+
+	Method: GetGoalType:
+		Accessibility: Public
+		Return Type: MuttAI.GOAP.GoalType
+		File Offset 0x00397E40
+		Ram Offset 0x180399040
+		Virtual Method Slot: 65535
+
+	Method: GetSubGoals:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<MuttAI.GOAP.GoapGoalComposite>
+		File Offset 0x019559B0
+		Ram Offset 0x181956bb0
+		Virtual Method Slot: 12

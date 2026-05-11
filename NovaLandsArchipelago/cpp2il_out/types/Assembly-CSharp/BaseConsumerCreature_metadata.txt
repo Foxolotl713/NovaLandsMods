@@ -1,0 +1,576 @@
+Type: BaseConsumerCreature:
+	Base Class: 
+		BaseEnemy
+
+	Interfaces:
+
+	Nested Types:
+		BaseConsumerCreature/<>c__DisplayClass34_0
+		BaseConsumerCreature/<>c__DisplayClass42_0
+		BaseConsumerCreature/<>c__DisplayClass42_1
+		BaseConsumerCreature/<>c__DisplayClass42_2
+		BaseConsumerCreature/<>c__DisplayClass62_0
+		BaseConsumerCreature/<ProduceOutputResourceCoroutine>d__52
+
+	Field: eatResourceSFX
+		Type: System.String
+		Offset in Defining Type: 0x580
+		Has Default: False
+
+	Field: produceResourceSFX
+		Type: System.String
+		Offset in Defining Type: 0x588
+		Has Default: False
+
+	Field: isHunter
+		Type: System.Boolean
+		Offset in Defining Type: 0x590
+		Has Default: False
+
+	Field: isCannibal
+		Type: System.Boolean
+		Offset in Defining Type: 0x591
+		Has Default: False
+
+	Field: hasEatingAnimation
+		Type: System.Boolean
+		Offset in Defining Type: 0x592
+		Has Default: False
+
+	Field: checkTargetResourceMask
+		Type: UnityEngine.LayerMask
+		Offset in Defining Type: 0x594
+		Has Default: False
+
+	Field: targetResourceType
+		Type: BaseResourceScriptableObject
+		Offset in Defining Type: 0x598
+		Has Default: False
+
+	Field: timeToEatResourceFromGround
+		Type: System.Single
+		Offset in Defining Type: 0x5A0
+		Has Default: False
+
+	Field: eatAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0x5A4
+		Has Default: False
+
+	Field: eatResourcePriorityDistanceWeight
+		Type: System.Single
+		Offset in Defining Type: 0x5A8
+		Has Default: False
+
+	Field: feederPriorityDistanceWeight
+		Type: System.Single
+		Offset in Defining Type: 0x5AC
+		Has Default: False
+
+	Field: timeToGetHungry
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x5B0
+		Has Default: False
+
+	Field: intervalToLookForFood
+		Type: System.Single
+		Offset in Defining Type: 0x5B8
+		Has Default: False
+
+	Field: numberOfFoodToEatWhenHungry
+		Type: System.Int32
+		Offset in Defining Type: 0x5BC
+		Has Default: False
+
+	Field: foodHealthRecoveryAmount
+		Type: System.Int32
+		Offset in Defining Type: 0x5C0
+		Has Default: False
+
+	Field: targetResourcesTypesForOutput
+		Type: System.Collections.Generic.List`1<BaseRecipe>
+		Offset in Defining Type: 0x5C8
+		Has Default: False
+
+	Field: timeToOutputResourceAfterEating
+		Type: System.Single
+		Offset in Defining Type: 0x5D0
+		Has Default: False
+
+	Field: transformInsteadOfProduce
+		Type: System.Boolean
+		Offset in Defining Type: 0x5D4
+		Has Default: False
+
+	Field: transformingParticles
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x5D8
+		Has Default: False
+
+	Field: creatureToTransformInto
+		Type: BaseCharacter
+		Offset in Defining Type: 0x5E0
+		Has Default: False
+
+	Field: timeToTransformAfterVisible
+		Type: System.Single
+		Offset in Defining Type: 0x5E8
+		Has Default: False
+
+	Field: targetResourceId
+		Type: System.String
+		Offset in Defining Type: 0x5F0
+		Has Default: False
+
+	Field: targetResource
+		Type: BaseResource
+		Offset in Defining Type: 0x5F8
+		Has Default: False
+
+	Field: currentTimeToEatResourceFromGround
+		Type: System.Single
+		Offset in Defining Type: 0x600
+		Has Default: False
+
+	Field: currentHungerTime
+		Type: System.Single
+		Offset in Defining Type: 0x604
+		Has Default: False
+
+	Field: currentHungerTimeToGetHungry
+		Type: System.Single
+		Offset in Defining Type: 0x608
+		Has Default: False
+
+	Field: currentLookForFoodTime
+		Type: System.Single
+		Offset in Defining Type: 0x60C
+		Has Default: False
+
+	Field: currentNumberOfEatenResources
+		Type: System.Single
+		Offset in Defining Type: 0x610
+		Has Default: False
+
+	Field: currentEatAnimationTime
+		Type: System.Single
+		Offset in Defining Type: 0x614
+		Has Default: False
+
+	Field: numberOfEatenResources
+		Type: System.Collections.Generic.List`1<System.Int32>
+		Offset in Defining Type: 0x618
+		Has Default: False
+
+	Field: outputResource
+		Type: ResourceAmountPair
+		Offset in Defining Type: 0x620
+		Has Default: False
+
+	Field: producingOutputResource
+		Type: System.Boolean
+		Offset in Defining Type: 0x628
+		Has Default: False
+
+	Method: InitProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004149E0
+		Ram Offset 0x180415be0
+		Virtual Method Slot: 26
+
+	Method: SpawnCapturedOrb:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00414BA0
+		Ram Offset 0x180415da0
+		Virtual Method Slot: 163
+
+	Method: LoadDependentData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00414D90
+		Ram Offset 0x180415f90
+		Virtual Method Slot: 21
+
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x00415110
+		Ram Offset 0x180416310
+		Virtual Method Slot: 40
+
+		Parameter 0:
+			Name: firstSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: UpdateHunger:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00415230
+		Ram Offset 0x180416430
+		Virtual Method Slot: 229
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: SearchForFood:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00415260
+		Ram Offset 0x180416460
+		Virtual Method Slot: 230
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: findTargetResource
+			Type: System.Boolean
+			Default Value: 
+	Method: IsHungry:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00415370
+		Ram Offset 0x180416570
+		Virtual Method Slot: 231
+
+	Method: RecoverHealth:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00415390
+		Ram Offset 0x180416590
+		Virtual Method Slot: 65535
+
+	Method: ResetHunger:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004153D0
+		Ram Offset 0x1804165d0
+		Virtual Method Slot: 65535
+
+	Method: SetupCollector:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00415420
+		Ram Offset 0x180416620
+		Virtual Method Slot: 65535
+
+	Method: FindTargetResource:
+		Accessibility: Family
+		Return Type: UnityEngine.GameObject
+		File Offset 0x00415440
+		Ram Offset 0x180416640
+		Virtual Method Slot: 232
+
+	Method: ResetTarget:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004171D0
+		Ram Offset 0x1804183d0
+		Virtual Method Slot: 65
+
+	Method: SetTarget:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004172F0
+		Ram Offset 0x1804184f0
+		Virtual Method Slot: 233
+
+		Parameter 0:
+			Name: resource
+			Type: BaseResource
+			Default Value: 
+	Method: SetTarget:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00417410
+		Ram Offset 0x180418610
+		Virtual Method Slot: 67
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: SetTarget:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00417530
+		Ram Offset 0x180418730
+		Virtual Method Slot: 68
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+	Method: OnDetectMenace:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00417650
+		Ram Offset 0x180418850
+		Virtual Method Slot: 198
+
+		Parameter 0:
+			Name: collider
+			Type: UnityEngine.Collider2D
+			Default Value: 
+	Method: Collect:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004113F0
+		Ram Offset 0x1804125f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resource
+			Type: BaseResource
+			Default Value: 
+	Method: Collect:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00417A00
+		Ram Offset 0x180418c00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+	Method: CollectResource:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00417AC0
+		Ram Offset 0x180418cc0
+		Virtual Method Slot: 46
+
+		Parameter 0:
+			Name: resource
+			Type: BaseResource
+			Default Value: 
+	Method: StartProducingOutputResource:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00418200
+		Ram Offset 0x180419400
+		Virtual Method Slot: 234
+
+	Method: ProduceOutputResourceCoroutine:
+		Accessibility: Family
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00418330
+		Ram Offset 0x180419530
+		Virtual Method Slot: 65535
+
+	Method: ProduceOutputResourceImmediately:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004183C0
+		Ram Offset 0x1804195c0
+		Virtual Method Slot: 65535
+
+	Method: ProduceOutputResource:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00418430
+		Ram Offset 0x180419630
+		Virtual Method Slot: 235
+
+	Method: CancelResourceProduction:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00418900
+		Ram Offset 0x180419b00
+		Virtual Method Slot: 236
+
+	Method: BecameVisibleCallback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00418A50
+		Ram Offset 0x180419c50
+		Virtual Method Slot: 17
+
+	Method: UpdateIdle:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00418AD0
+		Ram Offset 0x180419cd0
+		Virtual Method Slot: 80
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: UpdateWandering:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00418CF0
+		Ram Offset 0x180419ef0
+		Virtual Method Slot: 86
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: UpdateChasing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00418FA0
+		Ram Offset 0x18041a1a0
+		Virtual Method Slot: 107
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: ShouldLeaveCombatState:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0041A6B0
+		Ram Offset 0x18041b8b0
+		Virtual Method Slot: 197
+
+	Method: EnterAttacking:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0041AB70
+		Ram Offset 0x18041bd70
+		Virtual Method Slot: 115
+
+	Method: CanCollectFromFeeder:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0041ABA0
+		Ram Offset 0x18041bda0
+		Virtual Method Slot: 237
+
+	Method: ExitAttacking:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0041AE40
+		Ram Offset 0x18041c040
+		Virtual Method Slot: 118
+
+	Method: PlayConsumeResourceAnimation:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0041AFB0
+		Ram Offset 0x18041c1b0
+		Virtual Method Slot: 65535
+
+	Method: EnterCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0041B1B0
+		Ram Offset 0x18041c3b0
+		Virtual Method Slot: 47
+
+	Method: UpdateCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0041B270
+		Ram Offset 0x18041c470
+		Virtual Method Slot: 48
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003B1720
+		Ram Offset 0x1803b2920
+		Virtual Method Slot: 49
+
+	Method: ExitFleeing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0041B540
+		Ram Offset 0x18041c740
+		Virtual Method Slot: 140
+
+	Method: EnterDead:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0041B690
+		Ram Offset 0x18041c890
+		Virtual Method Slot: 132
+
+	Method: IsBuildingCollectTarget:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0041B6C0
+		Ram Offset 0x18041c8c0
+		Virtual Method Slot: 65535
+
+	Method: IsTargetResourceValid:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0041B850
+		Ram Offset 0x18041ca50
+		Virtual Method Slot: 65535
+
+	Method: get_CurrentTarget:
+		Accessibility: Public
+		Return Type: UnityEngine.GameObject
+		File Offset 0x0041B9F0
+		Ram Offset 0x18041cbf0
+		Virtual Method Slot: 186
+
+	Method: get_ChaseSpeed:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0041BBB0
+		Ram Offset 0x18041cdb0
+		Virtual Method Slot: 226
+
+	Method: get_IsHunter:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0041BEA0
+		Ram Offset 0x18041d0a0
+		Virtual Method Slot: 65535
+
+	Method: get_IsCannibal:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0041BEB0
+		Ram Offset 0x18041d0b0
+		Virtual Method Slot: 65535
+
+	Method: get_TargetResourceType:
+		Accessibility: Public
+		Return Type: BaseResourceScriptableObject
+		File Offset 0x0041BEC0
+		Ram Offset 0x18041d0c0
+		Virtual Method Slot: 65535
+
+	Method: get_TargetResourcesTypesForOutput:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<BaseRecipe>
+		File Offset 0x0041BED0
+		Ram Offset 0x18041d0d0
+		Virtual Method Slot: 65535
+
+	Method: get_CreatureToTransformInto:
+		Accessibility: Public
+		Return Type: BaseCharacter
+		File Offset 0x003B3050
+		Ram Offset 0x1803b4250
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0041BEE0
+		Ram Offset 0x18041d0e0
+		Virtual Method Slot: 65535
+
+	Method: <PlayConsumeResourceAnimation>b__64_0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0041BF70
+		Ram Offset 0x18041d170
+		Virtual Method Slot: 65535

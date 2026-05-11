@@ -1,0 +1,174 @@
+﻿using Archipelago.MultiClient.Net;
+using Archipelago.MultiClient.Net.Enums;
+using MelonLoader;
+using UnityEngine;
+
+[assembly: MelonInfo(typeof(NovaLandsArchipelago.Core), "NovaLandsArchipelago", "0.1.0", "Gott", null)]
+[assembly: MelonGame("BEHEMUTT", "Nova Lands")]
+
+namespace NovaLandsArchipelago
+{
+    public class Core : MelonMod
+    {
+        private MelonPreferences_Category ConnectionData;
+        private MelonPreferences_Entry<string> Server;
+        private MelonPreferences_Entry<string> PlayerName;
+        private MelonPreferences_Entry<string> Password;
+        public static bool connected = false;
+        public Dictionary<string, int> LocationIDs = new Dictionary<string, int>{
+            {"Test Location", 1},
+            {"Test Location Locked", 2}
+        };
+        private bool firstResearchLocationChecked = false;
+        public override void OnInitializeMelon()
+        {
+            LoggerInstance.Msg("Initialized.");
+            MelonEvents.OnGUI.Subscribe(DrawMenu, 100); // The higher the value, the lower the priority.
+            ConnectionData = MelonPreferences.CreateCategory("ConnectionData");
+            Server = ConnectionData.CreateEntry("Server", "archipelago.gg:40000");
+            PlayerName = ConnectionData.CreateEntry("PlayerName", "Player1");
+            Password = ConnectionData.CreateEntry("Password", "");
+        }
+        public ArchipelagoSession archipelagoSession;
+        private enum FocusField { None, Server, Name, Password }
+        private FocusField focused = FocusField.None;
+
+        private void DrawMenu()
+        {
+            // Allow drawing UI even when connected so we can provide a test button for research purchase.
+            // Layout values
+            int x = 10;
+            int y = 10;
+            int width = 300;
+            int height = 22;
+            int labelWidth = 60;
+            int spacing = 28;
+
+            // Handle keyboard input when a field is focused
+            Event e = Event.current;
+            if (e.type == EventType.KeyDown && focused != FocusField.None)
+            {
+                if (e.keyCode == KeyCode.Backspace)
+                {
+                    switch (focused)
+                    {
+                        case FocusField.Server:
+                            if (Server.Value.Length > 0) Server.Value = Server.Value.Substring(0, Server.Value.Length - 1);
+                            break;
+                        case FocusField.Name:
+                            if (PlayerName.Value.Length > 0) PlayerName.Value = PlayerName.Value.Substring(0, PlayerName.Value.Length - 1);
+                            break;
+                        case FocusField.Password:
+                            if (Password.Value.Length > 0) Password.Value = Password.Value.Substring(0, Password.Value.Length - 1);
+                            break;
+                    }
+                }
+                else if (e.keyCode == KeyCode.Return || e.keyCode == KeyCode.KeypadEnter)
+                {
+                    // finish editing on enter
+                    focused = FocusField.None;
+                }
+                else
+                {
+                    char c = e.character;
+                    if (!char.IsControl(c))
+                    {
+                        switch (focused)
+                        {
+                            case FocusField.Server:
+                                Server.Value += c;
+                                break;
+                            case FocusField.Name:
+                                PlayerName.Value += c;
+                                break;
+                            case FocusField.Password:
+                                Password.Value += c;
+                                break;
+                        }
+                    }
+                }
+            }
+
+            if (!connected)
+            {
+                // Background box covering all fields
+                GUI.Box(new Rect(x - 6, y - 8, width + 16, height * 3 + spacing * 2 + 16), "");
+
+                // Server
+                GUI.Label(new Rect(x, y, labelWidth, height), "Server:");
+                string serverDisplay = Server.Value;
+                if (focused == FocusField.Server) serverDisplay += "|";
+                if (GUI.Button(new Rect(x + labelWidth, y, width - labelWidth, height), serverDisplay))
+                    focused = FocusField.Server;
+                y += spacing;
+
+                // Name
+                GUI.Label(new Rect(x, y, labelWidth, height), "Name:");
+                string nameDisplay = PlayerName.Value;
+                if (focused == FocusField.Name) nameDisplay += "|";
+                if (GUI.Button(new Rect(x + labelWidth, y, width - labelWidth, height), nameDisplay))
+                    focused = FocusField.Name;
+                y += spacing;
+
+                // Password (masked)
+                GUI.Label(new Rect(x, y, labelWidth, height), "Password:");
+                string masked = new string('*', Password.Value.Length);
+                if (focused == FocusField.Password) masked += "|";
+                if (GUI.Button(new Rect(x + labelWidth, y, width - labelWidth, height), masked))
+                    focused = FocusField.Password;
+                y += spacing;
+
+                // Connect button
+                if (GUI.Button(new Rect(x, y, 120, height), "Connect"))
+                {
+                    var session = ArchipelagoSessionFactory.CreateSession(Server.Value);
+                    var version = Version.Parse("0.6.7");
+                    LoginResult result;
+                    // Call TryConnectAndLogin with an empty string[] for the fifth parameter and the password as the sixth
+                    result = session.TryConnectAndLogin("Nova Lands", PlayerName.Value, ItemsHandlingFlags.AllItems, version, new string[0], Password.Value);
+                    if (result.Successful)
+                    {
+                        LoggerInstance.Msg("Successfully connected to Archipelago server!");
+                        connected = true;
+                        // keep a reference to the session (stored as object so we can reflectively call send methods)
+                        archipelagoSession = session;
+                    }
+                    else
+                    {
+                        LoggerInstance.Error($"Failed to connect: {result}");
+                    }
+                }
+            }
+
+            // If connected, allow testing the research purchase trigger
+            if (connected)
+            {
+                int simY = 10 + spacing * 3;
+                if (GUI.Button(new Rect(x, simY, 200, height), "Simulate Buy: First Research"))
+                {
+                    OnResearchPurchased();
+                }
+            }
+        }
+
+        // Call this when the player buys a research upgrade. It will check the "Test Location" the first time it is called.
+        public void OnResearchPurchased()
+        {
+            if (firstResearchLocationChecked)
+                return;
+
+            firstResearchLocationChecked = true;
+
+            if (archipelagoSession == null)
+            {
+                LoggerInstance.Msg("Not connected to an Archipelago session - cannot send location check.");
+                return;
+            }
+            CheckLocation("Test Location");
+        }
+        public void CheckLocation(string location)
+        {
+            archipelagoSession.Locations.CompleteLocationChecks(LocationIDs[location]);
+        }
+    }
+}

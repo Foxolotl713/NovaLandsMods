@@ -1,0 +1,635 @@
+Type: ICSharpCode.SharpZipLib.BZip2.BZip2InputStream:
+	Base Class: 
+		System.IO.Stream
+
+	Interfaces:
+
+	Static Field: START_BLOCK_STATE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Static Field: RAND_PART_A_STATE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 2
+
+	Static Field: RAND_PART_B_STATE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 3
+
+	Static Field: RAND_PART_C_STATE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 4
+
+	Static Field: NO_RAND_PART_A_STATE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 5
+
+	Static Field: NO_RAND_PART_B_STATE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 6
+
+	Static Field: NO_RAND_PART_C_STATE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 7
+
+	Field: last
+		Type: System.Int32
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: origPtr
+		Type: System.Int32
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Field: blockSize100k
+		Type: System.Int32
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: blockRandomised
+		Type: System.Boolean
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Field: bsBuff
+		Type: System.Int32
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: bsLive
+		Type: System.Int32
+		Offset in Defining Type: 0x3C
+		Has Default: False
+
+	Field: mCrc
+		Type: ICSharpCode.SharpZipLib.Checksums.IChecksum
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: inUse
+		Type: System.Boolean[]
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: nInUse
+		Type: System.Int32
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: seqToUnseq
+		Type: System.Byte[]
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: unseqToSeq
+		Type: System.Byte[]
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: selector
+		Type: System.Byte[]
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: selectorMtf
+		Type: System.Byte[]
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: tt
+		Type: System.Int32[]
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: ll8
+		Type: System.Byte[]
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: unzftab
+		Type: System.Int32[]
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: limit
+		Type: System.Int32[][]
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: baseArray
+		Type: System.Int32[][]
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: perm
+		Type: System.Int32[][]
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: minLens
+		Type: System.Int32[]
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: baseStream
+		Type: System.IO.Stream
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: streamEnd
+		Type: System.Boolean
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: currentChar
+		Type: System.Int32
+		Offset in Defining Type: 0xBC
+		Has Default: False
+
+	Field: currentState
+		Type: System.Int32
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: storedBlockCRC
+		Type: System.Int32
+		Offset in Defining Type: 0xC4
+		Has Default: False
+
+	Field: storedCombinedCRC
+		Type: System.Int32
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: computedBlockCRC
+		Type: System.Int32
+		Offset in Defining Type: 0xCC
+		Has Default: False
+
+	Field: computedCombinedCRC
+		Type: System.UInt32
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: count
+		Type: System.Int32
+		Offset in Defining Type: 0xD4
+		Has Default: False
+
+	Field: chPrev
+		Type: System.Int32
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: ch2
+		Type: System.Int32
+		Offset in Defining Type: 0xDC
+		Has Default: False
+
+	Field: tPos
+		Type: System.Int32
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: rNToGo
+		Type: System.Int32
+		Offset in Defining Type: 0xE4
+		Has Default: False
+
+	Field: rTPos
+		Type: System.Int32
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: i2
+		Type: System.Int32
+		Offset in Defining Type: 0xEC
+		Has Default: False
+
+	Field: j2
+		Type: System.Int32
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: z
+		Type: System.Byte
+		Offset in Defining Type: 0xF4
+		Has Default: False
+
+	Field: isStreamOwner
+		Type: System.Boolean
+		Offset in Defining Type: 0xF5
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x015FF190
+		Ram Offset 0x181600390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stream
+			Type: System.IO.Stream
+			Default Value: 
+	Method: get_IsStreamOwner:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x015FF8D0
+		Ram Offset 0x181600ad0
+		Virtual Method Slot: 65535
+
+	Method: set_IsStreamOwner:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x015FF8E0
+		Ram Offset 0x181600ae0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_CanRead:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x015FF8F0
+		Ram Offset 0x181600af0
+		Virtual Method Slot: 7
+
+	Method: get_CanSeek:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x015FF920
+		Ram Offset 0x181600b20
+		Virtual Method Slot: 8
+
+	Method: get_CanWrite:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 10
+
+	Method: get_Length:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x015FF950
+		Ram Offset 0x181600b50
+		Virtual Method Slot: 11
+
+	Method: get_Position:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x015FF980
+		Ram Offset 0x181600b80
+		Virtual Method Slot: 12
+
+	Method: set_Position:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x015FF9B0
+		Ram Offset 0x181600bb0
+		Virtual Method Slot: 13
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: Flush:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x015FFA00
+		Ram Offset 0x181600c00
+		Virtual Method Slot: 20
+
+	Method: Seek:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x015FFA30
+		Ram Offset 0x181600c30
+		Virtual Method Slot: 29
+
+		Parameter 0:
+			Name: offset
+			Type: System.Int64
+			Default Value: 
+		Parameter 1:
+			Name: origin
+			Type: System.IO.SeekOrigin
+			Default Value: 
+	Method: SetLength:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x015FFA80
+		Ram Offset 0x181600c80
+		Virtual Method Slot: 30
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: Write:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x015FFAD0
+		Ram Offset 0x181600cd0
+		Virtual Method Slot: 34
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: WriteByte:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x015FFB20
+		Ram Offset 0x181600d20
+		Virtual Method Slot: 36
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: Read:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x015FFB70
+		Ram Offset 0x181600d70
+		Virtual Method Slot: 31
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: Close:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x015FFC50
+		Ram Offset 0x181600e50
+		Virtual Method Slot: 18
+
+	Method: ReadByte:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x015FFC80
+		Ram Offset 0x181600e80
+		Virtual Method Slot: 33
+
+	Method: MakeMaps:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x015FFF90
+		Ram Offset 0x181601190
+		Virtual Method Slot: 65535
+
+	Method: Initialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01600010
+		Ram Offset 0x181601210
+		Virtual Method Slot: 65535
+
+	Method: InitBlock:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01600220
+		Ram Offset 0x181601420
+		Virtual Method Slot: 65535
+
+	Method: EndBlock:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016004A0
+		Ram Offset 0x1816016a0
+		Virtual Method Slot: 65535
+
+	Method: Complete:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01600520
+		Ram Offset 0x181601720
+		Virtual Method Slot: 65535
+
+	Method: BsSetStream:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01600560
+		Ram Offset 0x181601760
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stream
+			Type: System.IO.Stream
+			Default Value: 
+	Method: FillBuffer:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016005C0
+		Ram Offset 0x1816017c0
+		Virtual Method Slot: 65535
+
+	Method: BsR:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01600630
+		Ram Offset 0x181601830
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: n
+			Type: System.Int32
+			Default Value: 
+	Method: BsGetUChar:
+		Accessibility: Private
+		Return Type: System.Char
+		File Offset 0x01600680
+		Ram Offset 0x181601880
+		Virtual Method Slot: 65535
+
+	Method: BsGetIntVS:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01600630
+		Ram Offset 0x181601830
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: numBits
+			Type: System.Int32
+			Default Value: 
+	Method: BsGetInt32:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x016006C0
+		Ram Offset 0x1816018c0
+		Virtual Method Slot: 65535
+
+	Method: RecvDecodingTables:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016007C0
+		Ram Offset 0x1816019c0
+		Virtual Method Slot: 65535
+
+	Method: GetAndMoveToFrontDecode:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01600E80
+		Ram Offset 0x181602080
+		Virtual Method Slot: 65535
+
+	Method: SetupBlock:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01601690
+		Ram Offset 0x181602890
+		Virtual Method Slot: 65535
+
+	Method: SetupRandPartA:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01601820
+		Ram Offset 0x181602a20
+		Virtual Method Slot: 65535
+
+	Method: SetupNoRandPartA:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016019C0
+		Ram Offset 0x181602bc0
+		Virtual Method Slot: 65535
+
+	Method: SetupRandPartB:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01601AB0
+		Ram Offset 0x181602cb0
+		Virtual Method Slot: 65535
+
+	Method: SetupRandPartC:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01601C50
+		Ram Offset 0x181602e50
+		Virtual Method Slot: 65535
+
+	Method: SetupNoRandPartB:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01601CF0
+		Ram Offset 0x181602ef0
+		Virtual Method Slot: 65535
+
+	Method: SetupNoRandPartC:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01601DB0
+		Ram Offset 0x181602fb0
+		Virtual Method Slot: 65535
+
+	Method: SetDecompressStructureSizes:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01601E50
+		Ram Offset 0x181603050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newSize100k
+			Type: System.Int32
+			Default Value: 
+	Method: CompressedStreamEOF:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01601F40
+		Ram Offset 0x181603140
+		Virtual Method Slot: 65535
+
+	Method: BlockOverrun:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01601F90
+		Ram Offset 0x181603190
+		Virtual Method Slot: 65535
+
+	Method: BadBlockHeader:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01601FE0
+		Ram Offset 0x1816031e0
+		Virtual Method Slot: 65535
+
+	Method: CrcError:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01602030
+		Ram Offset 0x181603230
+		Virtual Method Slot: 65535
+
+	Method: HbCreateDecodeTables:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01602080
+		Ram Offset 0x181603280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: limit
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 1:
+			Name: baseArray
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 2:
+			Name: perm
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 3:
+			Name: length
+			Type: System.Char[]
+			Default Value: 
+		Parameter 4:
+			Name: minLen
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: maxLen
+			Type: System.Int32
+			Default Value: 
+		Parameter 6:
+			Name: alphaSize
+			Type: System.Int32
+			Default Value: 

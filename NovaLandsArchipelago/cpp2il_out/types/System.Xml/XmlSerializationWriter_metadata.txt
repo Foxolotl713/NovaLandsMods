@@ -1,0 +1,867 @@
+Type: System.Xml.Serialization.XmlSerializationWriter:
+	Base Class: 
+		System.Xml.Serialization.XmlSerializationGeneratedCode
+
+	Interfaces:
+
+	Nested Types:
+		System.Xml.Serialization.XmlSerializationWriter/WriteCallbackInfo
+
+	Field: idGenerator
+		Type: System.Runtime.Serialization.ObjectIDGenerator
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: qnameCount
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: topLevelElement
+		Type: System.Boolean
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: namespaces
+		Type: System.Collections.ArrayList
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: writer
+		Type: System.Xml.XmlWriter
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: referencedElements
+		Type: System.Collections.Queue
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: callbacks
+		Type: System.Collections.Hashtable
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: serializedObjects
+		Type: System.Collections.Hashtable
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E12400
+		Ram Offset 0x181e13600
+		Virtual Method Slot: 65535
+
+	Method: Initialize:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01E124B0
+		Ram Offset 0x181e136b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: writer
+			Type: System.Xml.XmlWriter
+			Default Value: 
+		Parameter 1:
+			Name: nss
+			Type: System.Xml.Serialization.XmlSerializerNamespaces
+			Default Value: 
+	Method: get_Writer:
+		Accessibility: Family
+		Return Type: System.Xml.XmlWriter
+		File Offset 0x003A7D00
+		Ram Offset 0x1803a8f00
+		Virtual Method Slot: 65535
+
+	Method: AddWriteCallback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E127B0
+		Ram Offset 0x181e139b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+		Parameter 1:
+			Name: typeName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: typeNs
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: callback
+			Type: System.Xml.Serialization.XmlSerializationWriteCallback
+			Default Value: 
+	Method: CreateUnknownAnyElementException:
+		Accessibility: Family
+		Return Type: System.Exception
+		File Offset 0x01E12A20
+		Ram Offset 0x181e13c20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+	Method: CreateUnknownTypeException:
+		Accessibility: Family
+		Return Type: System.Exception
+		File Offset 0x01E12AE0
+		Ram Offset 0x181e13ce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: o
+			Type: System.Object
+			Default Value: 
+	Method: CreateUnknownTypeException:
+		Accessibility: Family
+		Return Type: System.Exception
+		File Offset 0x01E12BB0
+		Ram Offset 0x181e13db0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+	Method: FromXmlQualifiedName:
+		Accessibility: Family
+		Return Type: System.String
+		File Offset 0x01E12C60
+		Ram Offset 0x181e13e60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: xmlQualifiedName
+			Type: System.Xml.XmlQualifiedName
+			Default Value: 
+	Method: GetId:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x01E12DA0
+		Ram Offset 0x181e13fa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: o
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: addToReferencesList
+			Type: System.Boolean
+			Default Value: 
+	Method: AlreadyQueued:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01E12F30
+		Ram Offset 0x181e14130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ob
+			Type: System.Object
+			Default Value: 
+	Method: GetNamespacePrefix:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x01E12F70
+		Ram Offset 0x181e14170
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ns
+			Type: System.String
+			Default Value: 
+	Method: GetQualifiedName:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x01E13110
+		Ram Offset 0x181e14310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+	Method: InitCallbacks:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 4
+
+	Method: TopLevelElement:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E13380
+		Ram Offset 0x181e14580
+		Virtual Method Slot: 65535
+
+	Method: WriteAttribute:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E13390
+		Ram Offset 0x181e14590
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: localName
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: WriteAttribute:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E13410
+		Ram Offset 0x181e14610
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: prefix
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: localName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: WriteXmlNode:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01E13490
+		Ram Offset 0x181e14690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: node
+			Type: System.Xml.XmlNode
+			Default Value: 
+	Method: WriteElementEncoded:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E13560
+		Ram Offset 0x181e14760
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: node
+			Type: System.Xml.XmlNode
+			Default Value: 
+		Parameter 1:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: isNullable
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: any
+			Type: System.Boolean
+			Default Value: 
+	Method: WriteElementLiteral:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E13690
+		Ram Offset 0x181e14890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: node
+			Type: System.Xml.XmlNode
+			Default Value: 
+		Parameter 1:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: isNullable
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: any
+			Type: System.Boolean
+			Default Value: 
+	Method: WriteElementQualifiedName:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E137C0
+		Ram Offset 0x181e149c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: localName
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: value
+			Type: System.Xml.XmlQualifiedName
+			Default Value: 
+	Method: WriteElementQualifiedName:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E137E0
+		Ram Offset 0x181e149e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: localName
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: value
+			Type: System.Xml.XmlQualifiedName
+			Default Value: 
+		Parameter 3:
+			Name: xsiType
+			Type: System.Xml.XmlQualifiedName
+			Default Value: 
+	Method: WriteElementString:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E13940
+		Ram Offset 0x181e14b40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: localName
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: WriteElementString:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E13960
+		Ram Offset 0x181e14b60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: localName
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: xsiType
+			Type: System.Xml.XmlQualifiedName
+			Default Value: 
+	Method: WriteEndElement:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E13B20
+		Ram Offset 0x181e14d20
+		Virtual Method Slot: 65535
+
+	Method: WriteEndElement:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E13B50
+		Ram Offset 0x181e14d50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: o
+			Type: System.Object
+			Default Value: 
+	Method: WriteNamespaceDeclarations:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E13BA0
+		Ram Offset 0x181e14da0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: xmlns
+			Type: System.Xml.Serialization.XmlSerializerNamespaces
+			Default Value: 
+	Method: WriteNullableQualifiedNameEncoded:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E13F80
+		Ram Offset 0x181e15180
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: value
+			Type: System.Xml.XmlQualifiedName
+			Default Value: 
+		Parameter 3:
+			Name: xsiType
+			Type: System.Xml.XmlQualifiedName
+			Default Value: 
+	Method: WriteNullableQualifiedNameLiteral:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E14050
+		Ram Offset 0x181e15250
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: value
+			Type: System.Xml.XmlQualifiedName
+			Default Value: 
+	Method: WriteNullableStringEncoded:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E14120
+		Ram Offset 0x181e15320
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: xsiType
+			Type: System.Xml.XmlQualifiedName
+			Default Value: 
+	Method: WriteNullableStringLiteral:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E14140
+		Ram Offset 0x181e15340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: WriteNullTagEncoded:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E14170
+		Ram Offset 0x181e15370
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+	Method: WriteNullTagLiteral:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E14280
+		Ram Offset 0x181e15480
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+	Method: WritePotentiallyReferencingElement:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E14390
+		Ram Offset 0x181e15590
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: n
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: o
+			Type: System.Object
+			Default Value: 
+		Parameter 3:
+			Name: ambientType
+			Type: System.Type
+			Default Value: 
+		Parameter 4:
+			Name: suppressReference
+			Type: System.Boolean
+			Default Value: 
+		Parameter 5:
+			Name: isNullable
+			Type: System.Boolean
+			Default Value: 
+	Method: WriteReferencedElements:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E14820
+		Ram Offset 0x181e15a20
+		Virtual Method Slot: 65535
+
+	Method: IsPrimitiveArray:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01E14AD0
+		Ram Offset 0x181e15cd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: td
+			Type: System.Xml.Serialization.TypeData
+			Default Value: 
+	Method: WriteArray:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01E14BC0
+		Ram Offset 0x181e15dc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: o
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: td
+			Type: System.Xml.Serialization.TypeData
+			Default Value: 
+	Method: WriteReferencingElement:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E14FA0
+		Ram Offset 0x181e161a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: n
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: o
+			Type: System.Object
+			Default Value: 
+		Parameter 3:
+			Name: isNullable
+			Type: System.Boolean
+			Default Value: 
+	Method: CheckReferenceQueue:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01E15150
+		Ram Offset 0x181e16350
+		Virtual Method Slot: 65535
+
+	Method: WriteSerializable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E15220
+		Ram Offset 0x181e16420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: serializable
+			Type: System.Xml.Serialization.IXmlSerializable
+			Default Value: 
+		Parameter 1:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: isNullable
+			Type: System.Boolean
+			Default Value: 
+	Method: WriteSerializable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E152F0
+		Ram Offset 0x181e164f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: serializable
+			Type: System.Xml.Serialization.IXmlSerializable
+			Default Value: 
+		Parameter 1:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: isNullable
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: wrapped
+			Type: System.Boolean
+			Default Value: 
+	Method: WriteStartDocument:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E153E0
+		Ram Offset 0x181e165e0
+		Virtual Method Slot: 65535
+
+	Method: WriteStartElement:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E15440
+		Ram Offset 0x181e16640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+	Method: WriteStartElement:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E15470
+		Ram Offset 0x181e16670
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: writePrefixed
+			Type: System.Boolean
+			Default Value: 
+	Method: WriteStartElement:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E154A0
+		Ram Offset 0x181e166a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: o
+			Type: System.Object
+			Default Value: 
+	Method: WriteStartElement:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E154D0
+		Ram Offset 0x181e166d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: o
+			Type: System.Object
+			Default Value: 
+		Parameter 3:
+			Name: writePrefixed
+			Type: System.Boolean
+			Default Value: 
+	Method: WriteStartElement:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01E15500
+		Ram Offset 0x181e16700
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: o
+			Type: System.Object
+			Default Value: 
+		Parameter 3:
+			Name: writePrefixed
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: namespaces
+			Type: System.Collections.ICollection
+			Default Value: 
+	Method: WriteTypedPrimitive:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E15BA0
+		Ram Offset 0x181e16da0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: o
+			Type: System.Object
+			Default Value: 
+		Parameter 3:
+			Name: xsiType
+			Type: System.Boolean
+			Default Value: 
+	Method: WriteValue:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E15EF0
+		Ram Offset 0x181e170f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: WriteXmlAttribute:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E15F30
+		Ram Offset 0x181e17130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: node
+			Type: System.Xml.XmlNode
+			Default Value: 
+		Parameter 1:
+			Name: container
+			Type: System.Object
+			Default Value: 
+	Method: WriteXsiType:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01E16430
+		Ram Offset 0x181e17630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 

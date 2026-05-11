@@ -1,0 +1,87 @@
+Type: <>c__DisplayClass110_0
+
+Method: System.Void BaseProductionBuilding/<>c__DisplayClass110_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void BaseProductionBuilding/<>c__DisplayClass110_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BaseProductionBuilding/<>c__DisplayClass110_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean BaseProductionBuilding/<>c__DisplayClass110_0::<GetRecipeIngredientsAvailableSpace>b__1(ResourceAmountPair):	Method Body (x86 ASM):
+		0x18059CDB0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18059CDB4 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18059CDB7 je short 000000018059CDD0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18059CDB9 mov rdx,[rdx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x18059CDBD test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18059CDC0 je short 000000018059CDD0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18059CDC2 mov eax,[rcx+10h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x18059CDC5 cmp [rdx+18h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 24 | None ||| N/A | N/A
+		0x18059CDC8 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18059CDCB add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18059CDCF ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18059CDD0 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18059CDD5 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean BaseProductionBuilding/<>c__DisplayClass110_0::<GetRecipeIngredientsAvailableSpace>b__1(ResourceAmountPair):
+		End of function at 0x18059CDD6
+		Absolute End is at 0x18059CDD6
+		Identified Jump Destination addresses:
+
+		0x18059CDB4: [!] Compares {'x' (function parameter, type ResourceAmountPair)} and 0
+		0x18059CDB7: Jumps to 0x18059CDD0 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x18059CDB9: [!] Reads field resource from {'x' (function parameter, type ResourceAmountPair)} and stores in a new local {'resource' (type BaseResourceScriptableObject)}
+
+		0x18059CDBD: [!] Compares {'resource' (type BaseResourceScriptableObject)} and 0
+		0x18059CDC0: Jumps to 0x18059CDD0 (which throws a NRE) if resource equals 0. Implicitly present in managed code, so ignored here.
+		0x18059CDC2: [!] Reads field res from {'this' (function parameter, type BaseProductionBuilding/<>c__DisplayClass110_0)} and stores in a new local {'int32' (type System.Int32)}
+
+		0x18059CDC5: [!] Compares {field resourceId, read from local {'resource' (type BaseResourceScriptableObject)}} and {'int32' (type System.Int32)}
+		0x18059CDC8: [!] Sets the boolean {'local4' (type System.Boolean)} in rax to true if resource.resourceId is equal to int32, otherwise false.
+		0x18059CDCF: [!] Returns {'local4' (type System.Boolean)} from the function
+
+		0x18059CDD0: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: BaseProductionBuilding/<>c__DisplayClass110_0
+	System.Boolean <GetRecipeIngredientsAvailableSpace>b__1(ResourceAmountPair x)
+		BaseResourceScriptableObject resource = x.resource
+		System.Int32 int32 = this.res
+		System.Boolean local4 = resource.resourceId == int32
+		return local4
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: ldfld BaseResourceScriptableObject ResourceAmountPair::resource
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld System.Int32 BaseProductionBuilding/<>c__DisplayClass110_0::res
+	IL_000d: stloc.1
+	IL_000e: ldloc.0
+	IL_000f: ldfld System.Int32 BaseResourceScriptableObject::resourceId
+	IL_0014: ldloc.1
+	IL_0015: ceq
+	IL_0017: ret
+	IL_0018: newobj System.Void System.NullReferenceException::.ctor()
+	IL_001d: throw
+	
+

@@ -1,0 +1,220 @@
+Type: Rewired.HID.Drivers.HIDDeviceDriver:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		Rewired.Drivers.Interfaces.IControllerDriver
+		System.IDisposable
+
+	Nested Types:
+		Rewired.HID.Drivers.HIDDeviceDriver/DriverType
+		Rewired.HID.Drivers.HIDDeviceDriver/GetHidFeatureData
+		Rewired.HID.Drivers.HIDDeviceDriver/InitArgs
+
+	Field: axes
+		Type: Rewired.HID.HIDAxis[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: buttons
+		Type: Rewired.HID.HIDButton[]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: hats
+		Type: Rewired.HID.HIDHat[]
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: accelerometers
+		Type: Rewired.HID.HIDAccelerometer[]
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: gyroscopes
+		Type: Rewired.HID.HIDGyroscope[]
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: touchpads
+		Type: Rewired.HID.HIDTouchpad[]
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: vibrationMotors
+		Type: Rewired.HID.HIDVibrationMotor[]
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: lights
+		Type: Rewired.HID.HIDLight[]
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: kALXsnPMYOnvHXtneETKqvezYIdA
+		Type: System.Boolean
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Method: get_AxisCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0083A080
+		Ram Offset 0x18083b280
+		Virtual Method Slot: 4
+
+	Method: get_ButtonCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0083A300
+		Ram Offset 0x18083b500
+		Virtual Method Slot: 5
+
+	Method: get_HatCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x019C6D50
+		Ram Offset 0x1819c7f50
+		Virtual Method Slot: 6
+
+	Method: get_AccelerometerCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x011A2860
+		Ram Offset 0x1811a3a60
+		Virtual Method Slot: 7
+
+	Method: get_GyroscopeCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x019C6D70
+		Ram Offset 0x1819c7f70
+		Virtual Method Slot: 8
+
+	Method: get_TouchpadCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x019C6D90
+		Ram Offset 0x1819c7f90
+		Virtual Method Slot: 9
+
+	Method: get_LightCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x019C6DB0
+		Ram Offset 0x1819c7fb0
+		Virtual Method Slot: 10
+
+	Method: get_VibrationMotorCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x019C6DD0
+		Ram Offset 0x1819c7fd0
+		Virtual Method Slot: 11
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: Update:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 13
+
+		Parameter 0:
+			Name: updateLoop
+			Type: Rewired.UpdateLoopType
+			Default Value: 
+	Method: ParseInputReport:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 14
+
+		Parameter 0:
+			Name: inputReportPtr
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: inputReportLength
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: timestamp
+			Type: System.Double
+			Default Value: 
+	Method: CreateControllerExtension:
+		Accessibility: Public
+		Return Type: Rewired.Controller/Extension
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 15
+
+	Method: GetDriver:
+		Accessibility: Public
+		Return Type: Rewired.HID.Drivers.HIDDeviceDriver
+		File Offset 0x019C6DF0
+		Ram Offset 0x1819c7ff0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: driverId
+			Type: Rewired.HID.Drivers.HIDDeviceDriver/DriverType
+			Default Value: 
+		Parameter 1:
+			Name: hidDriverInitArgs
+			Type: Rewired.HID.Drivers.HIDDeviceDriver/InitArgs
+			Default Value: 
+	Method: FindDriverId:
+		Accessibility: Public
+		Return Type: Rewired.HID.Drivers.HIDDeviceDriver/DriverType
+		File Offset 0x019C6F20
+		Ram Offset 0x1819c8120
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: vendorId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: productId
+			Type: System.Int32
+			Default Value: 
+	Method: get_disposed:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00E835B0
+		Ram Offset 0x180e847b0
+		Virtual Method Slot: 65535
+
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x019C70E0
+		Ram Offset 0x1819c82e0
+		Virtual Method Slot: 12
+
+	Method: Finalize:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x019C7140
+		Ram Offset 0x1819c8340
+		Virtual Method Slot: 1
+
+	Method: Dispose:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x019C7190
+		Ram Offset 0x1819c8390
+		Virtual Method Slot: 16
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 

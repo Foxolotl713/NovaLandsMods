@@ -1,0 +1,133 @@
+Type: Mono.Security.X509.X509Chain:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Field: roots
+		Type: Mono.Security.X509.X509CertificateCollection
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: certs
+		Type: Mono.Security.X509.X509CertificateCollection
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _root
+		Type: Mono.Security.X509.X509Certificate
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _chain
+		Type: Mono.Security.X509.X509CertificateCollection
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _status
+		Type: Mono.Security.X509.X509ChainStatusFlags
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0167ABF0
+		Ram Offset 0x18167bdf0
+		Virtual Method Slot: 65535
+
+	Method: get_TrustAnchors:
+		Accessibility: Public
+		Return Type: Mono.Security.X509.X509CertificateCollection
+		File Offset 0x0167AC90
+		Ram Offset 0x18167be90
+		Virtual Method Slot: 65535
+
+	Method: LoadCertificates:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0167AE10
+		Ram Offset 0x18167c010
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: collection
+			Type: Mono.Security.X509.X509CertificateCollection
+			Default Value: 
+	Method: Build:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0167AE30
+		Ram Offset 0x18167c030
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: leaf
+			Type: Mono.Security.X509.X509Certificate
+			Default Value: 
+	Method: Reset:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0167B2F0
+		Ram Offset 0x18167c4f0
+		Virtual Method Slot: 65535
+
+	Method: IsValid:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0167B400
+		Ram Offset 0x18167c600
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cert
+			Type: Mono.Security.X509.X509Certificate
+			Default Value: 
+	Method: FindCertificateParent:
+		Accessibility: Private
+		Return Type: Mono.Security.X509.X509Certificate
+		File Offset 0x0167B570
+		Ram Offset 0x18167c770
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: child
+			Type: Mono.Security.X509.X509Certificate
+			Default Value: 
+	Method: FindCertificateRoot:
+		Accessibility: Private
+		Return Type: Mono.Security.X509.X509Certificate
+		File Offset 0x0167B710
+		Ram Offset 0x18167c910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: potentialRoot
+			Type: Mono.Security.X509.X509Certificate
+			Default Value: 
+	Method: IsTrusted:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0167B940
+		Ram Offset 0x18167cb40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: potentialTrusted
+			Type: Mono.Security.X509.X509Certificate
+			Default Value: 
+	Method: IsParent:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0167B980
+		Ram Offset 0x18167cb80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: child
+			Type: Mono.Security.X509.X509Certificate
+			Default Value: 
+		Parameter 1:
+			Name: parent
+			Type: Mono.Security.X509.X509Certificate
+			Default Value: 

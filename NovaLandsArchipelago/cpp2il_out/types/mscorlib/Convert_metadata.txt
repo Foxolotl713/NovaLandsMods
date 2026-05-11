@@ -1,0 +1,2772 @@
+Type: System.Convert:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: s_decodingMap
+		Type: System.SByte[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: ConvertTypes
+		Type: System.Type[]
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: EnumType
+		Type: System.Type
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: base64Table
+		Type: System.Char[]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: DBNull
+		Type: System.Object
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Method: TryDecodeFromUtf16:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0181B9A0
+		Ram Offset 0x18181cba0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: utf16
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: bytes
+			Type: System.Span`1<System.Byte>
+			Default Value: 
+		Parameter 2:
+			Name: consumed
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: written
+			Type: System.Int32
+			Default Value: 
+	Method: Decode:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0181BD00
+		Ram Offset 0x18181cf00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: encodedChars
+			Type: System.Char
+			Default Value: 
+		Parameter 1:
+			Name: decodingMap
+			Type: System.SByte
+			Default Value: 
+	Method: WriteThreeLowOrderBytes:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0181BD60
+		Ram Offset 0x18181cf60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: destination
+			Type: System.Byte
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: GetTypeCode:
+		Accessibility: Public
+		Return Type: System.TypeCode
+		File Offset 0x0181BD80
+		Ram Offset 0x18181cf80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+	Method: ChangeType:
+		Accessibility: Public
+		Return Type: System.Object
+		File Offset 0x0181BDF0
+		Ram Offset 0x18181cff0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: typeCode
+			Type: System.TypeCode
+			Default Value: 
+		Parameter 2:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: DefaultToType:
+		Accessibility: Assembly
+		Return Type: System.Object
+		File Offset 0x0181C2F0
+		Ram Offset 0x18181d4f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.IConvertible
+			Default Value: 
+		Parameter 1:
+			Name: targetType
+			Type: System.Type
+			Default Value: 
+		Parameter 2:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ChangeType:
+		Accessibility: Public
+		Return Type: System.Object
+		File Offset 0x0181CD20
+		Ram Offset 0x18181df20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: conversionType
+			Type: System.Type
+			Default Value: 
+	Method: ChangeType:
+		Accessibility: Public
+		Return Type: System.Object
+		File Offset 0x0181CDF0
+		Ram Offset 0x18181dff0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: conversionType
+			Type: System.Type
+			Default Value: 
+		Parameter 2:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ThrowCharOverflowException:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0181D720
+		Ram Offset 0x18181e920
+		Virtual Method Slot: 65535
+
+	Method: ThrowByteOverflowException:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0181D770
+		Ram Offset 0x18181e970
+		Virtual Method Slot: 65535
+
+	Method: ThrowSByteOverflowException:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0181D7C0
+		Ram Offset 0x18181e9c0
+		Virtual Method Slot: 65535
+
+	Method: ThrowInt16OverflowException:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0181D810
+		Ram Offset 0x18181ea10
+		Virtual Method Slot: 65535
+
+	Method: ThrowUInt16OverflowException:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0181D860
+		Ram Offset 0x18181ea60
+		Virtual Method Slot: 65535
+
+	Method: ThrowInt32OverflowException:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0181D8B0
+		Ram Offset 0x18181eab0
+		Virtual Method Slot: 65535
+
+	Method: ThrowUInt32OverflowException:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0181D900
+		Ram Offset 0x18181eb00
+		Virtual Method Slot: 65535
+
+	Method: ThrowInt64OverflowException:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0181D950
+		Ram Offset 0x18181eb50
+		Virtual Method Slot: 65535
+
+	Method: ThrowUInt64OverflowException:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0181D9A0
+		Ram Offset 0x18181eba0
+		Virtual Method Slot: 65535
+
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181D9F0
+		Ram Offset 0x18181ebf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181DA90
+		Ram Offset 0x18181ec90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181DB40
+		Ram Offset 0x18181ed40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.SByte
+			Default Value: 
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181DB40
+		Ram Offset 0x18181ed40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181DB50
+		Ram Offset 0x18181ed50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int16
+			Default Value: 
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181DB50
+		Ram Offset 0x18181ed50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt16
+			Default Value: 
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181DB60
+		Ram Offset 0x18181ed60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181DB60
+		Ram Offset 0x18181ed60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt32
+			Default Value: 
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181DB70
+		Ram Offset 0x18181ed70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181DB70
+		Ram Offset 0x18181ed70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt64
+			Default Value: 
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181DB80
+		Ram Offset 0x18181ed80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181DBE0
+		Ram Offset 0x18181ede0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181DBF0
+		Ram Offset 0x18181edf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Double
+			Default Value: 
+	Method: ToBoolean:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0181DC10
+		Ram Offset 0x18181ee10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Decimal
+			Default Value: 
+	Method: ToChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x0181DD60
+		Ram Offset 0x18181ef60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x0181DE10
+		Ram Offset 0x18181f010
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.SByte
+			Default Value: 
+	Method: ToChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x00D2FAF0
+		Ram Offset 0x180d30cf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: ToChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x0181DE60
+		Ram Offset 0x18181f060
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int16
+			Default Value: 
+	Method: ToChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x00BE2600
+		Ram Offset 0x180be3800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt16
+			Default Value: 
+	Method: ToChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x0181DEB0
+		Ram Offset 0x18181f0b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x0181DF00
+		Ram Offset 0x18181f100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt32
+			Default Value: 
+	Method: ToChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x0181DF50
+		Ram Offset 0x18181f150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: ToChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x0181DFA0
+		Ram Offset 0x18181f1a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt64
+			Default Value: 
+	Method: ToChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x0181DFF0
+		Ram Offset 0x18181f1f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: ToChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x0181E0E0
+		Ram Offset 0x18181f2e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181E190
+		Ram Offset 0x18181f390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181DB40
+		Ram Offset 0x18181ed40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181E240
+		Ram Offset 0x18181f440
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Char
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181E290
+		Ram Offset 0x18181f490
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181E2E0
+		Ram Offset 0x18181f4e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int16
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181E340
+		Ram Offset 0x18181f540
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt16
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181E390
+		Ram Offset 0x18181f590
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181E3E0
+		Ram Offset 0x18181f5e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt32
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181E430
+		Ram Offset 0x18181f630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181E490
+		Ram Offset 0x18181f690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt64
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181E4E0
+		Ram Offset 0x18181f6e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181E540
+		Ram Offset 0x18181f740
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Double
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181E5E0
+		Ram Offset 0x18181f7e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Decimal
+			Default Value: 
+	Method: ToSByte:
+		Accessibility: Public
+		Return Type: System.SByte
+		File Offset 0x0181E6F0
+		Ram Offset 0x18181f8f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181E780
+		Ram Offset 0x18181f980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181DB40
+		Ram Offset 0x18181ed40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181E830
+		Ram Offset 0x18181fa30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Char
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181E880
+		Ram Offset 0x18181fa80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.SByte
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181E8D0
+		Ram Offset 0x18181fad0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int16
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181E920
+		Ram Offset 0x18181fb20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt16
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181E970
+		Ram Offset 0x18181fb70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181E9C0
+		Ram Offset 0x18181fbc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt32
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181EA10
+		Ram Offset 0x18181fc10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181EA60
+		Ram Offset 0x18181fc60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt64
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181EAB0
+		Ram Offset 0x18181fcb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181EB10
+		Ram Offset 0x18181fd10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Double
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181EBB0
+		Ram Offset 0x18181fdb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Decimal
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181ECC0
+		Ram Offset 0x18181fec0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x0181EDC0
+		Ram Offset 0x18181ffc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x0181EE50
+		Ram Offset 0x181820050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x0181EF00
+		Ram Offset 0x181820100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x0181EF10
+		Ram Offset 0x181820110
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Char
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x0181EF60
+		Ram Offset 0x181820160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.SByte
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x00D2FAF0
+		Ram Offset 0x180d30cf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x0181EF70
+		Ram Offset 0x181820170
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt16
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x0181EFC0
+		Ram Offset 0x1818201c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x0181F010
+		Ram Offset 0x181820210
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt32
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x0181F060
+		Ram Offset 0x181820260
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x0181F0C0
+		Ram Offset 0x1818202c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt64
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x0181F110
+		Ram Offset 0x181820310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x0181F170
+		Ram Offset 0x181820370
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Double
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x0181F210
+		Ram Offset 0x181820410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Decimal
+			Default Value: 
+	Method: ToInt16:
+		Accessibility: Public
+		Return Type: System.Int16
+		File Offset 0x0181F320
+		Ram Offset 0x181820520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x0181F3B0
+		Ram Offset 0x1818205b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x0181EF00
+		Ram Offset 0x181820100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x00BE2600
+		Ram Offset 0x180be3800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Char
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x0181F460
+		Ram Offset 0x181820660
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.SByte
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x00D2FAF0
+		Ram Offset 0x180d30cf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x0181F4B0
+		Ram Offset 0x1818206b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int16
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x0181F500
+		Ram Offset 0x181820700
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x0181F550
+		Ram Offset 0x181820750
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt32
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x0181F5A0
+		Ram Offset 0x1818207a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x0181F5F0
+		Ram Offset 0x1818207f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt64
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x0181F640
+		Ram Offset 0x181820840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x0181F6A0
+		Ram Offset 0x1818208a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Double
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x0181F740
+		Ram Offset 0x181820940
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Decimal
+			Default Value: 
+	Method: ToUInt16:
+		Accessibility: Public
+		Return Type: System.UInt16
+		File Offset 0x0181F850
+		Ram Offset 0x181820a50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0181F8E0
+		Ram Offset 0x181820ae0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0181F980
+		Ram Offset 0x181820b80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0181EF00
+		Ram Offset 0x181820100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00BE2600
+		Ram Offset 0x180be3800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Char
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00D2FAF0
+		Ram Offset 0x180d30cf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0181FA30
+		Ram Offset 0x181820c30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int16
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00BE2600
+		Ram Offset 0x180be3800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt16
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0181FA40
+		Ram Offset 0x181820c40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt32
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00BE23C0
+		Ram Offset 0x180be35c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0181FA90
+		Ram Offset 0x181820c90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0181FAF0
+		Ram Offset 0x181820cf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt64
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0181FB40
+		Ram Offset 0x181820d40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0181FBA0
+		Ram Offset 0x181820da0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Double
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0181FC80
+		Ram Offset 0x181820e80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Decimal
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0181FD90
+		Ram Offset 0x181820f90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0181FE30
+		Ram Offset 0x181821030
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x0181FE50
+		Ram Offset 0x181821050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x0181FEF0
+		Ram Offset 0x1818210f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x0181EF00
+		Ram Offset 0x181820100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x00BE2600
+		Ram Offset 0x180be3800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Char
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x0181FFA0
+		Ram Offset 0x1818211a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.SByte
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x00D2FAF0
+		Ram Offset 0x180d30cf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x0181FFF0
+		Ram Offset 0x1818211f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int16
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x00BE2600
+		Ram Offset 0x180be3800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt16
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x01820040
+		Ram Offset 0x181821240
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x01820090
+		Ram Offset 0x181821290
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x018200E0
+		Ram Offset 0x1818212e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt64
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x01820130
+		Ram Offset 0x181821330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x01820190
+		Ram Offset 0x181821390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Double
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x01820250
+		Ram Offset 0x181821450
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Decimal
+			Default Value: 
+	Method: ToUInt32:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x01820470
+		Ram Offset 0x181821670
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x01820540
+		Ram Offset 0x181821740
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x018205E0
+		Ram Offset 0x1818217e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x01820690
+		Ram Offset 0x181821890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x00BE2600
+		Ram Offset 0x180be3800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Char
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x018206A0
+		Ram Offset 0x1818218a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.SByte
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x00D2FAF0
+		Ram Offset 0x180d30cf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x018206B0
+		Ram Offset 0x1818218b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int16
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x00BE2600
+		Ram Offset 0x180be3800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt16
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x018206C0
+		Ram Offset 0x1818218c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x00BE23C0
+		Ram Offset 0x180be35c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt32
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x018206D0
+		Ram Offset 0x1818218d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt64
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x01820730
+		Ram Offset 0x181821930
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x01820790
+		Ram Offset 0x181821990
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Double
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x01820820
+		Ram Offset 0x181821a20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Decimal
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x01820930
+		Ram Offset 0x181821b30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: ToInt64:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x018209D0
+		Ram Offset 0x181821bd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x018209F0
+		Ram Offset 0x181821bf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x01820A90
+		Ram Offset 0x181821c90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x0181EF00
+		Ram Offset 0x181820100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x00BE2600
+		Ram Offset 0x180be3800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Char
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x01820B40
+		Ram Offset 0x181821d40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.SByte
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x00D2FAF0
+		Ram Offset 0x180d30cf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x01820B90
+		Ram Offset 0x181821d90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int16
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x00BE2600
+		Ram Offset 0x180be3800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt16
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x01820BE0
+		Ram Offset 0x181821de0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x00BE23C0
+		Ram Offset 0x180be35c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt32
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x01820C30
+		Ram Offset 0x181821e30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x01820C80
+		Ram Offset 0x181821e80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x01820CE0
+		Ram Offset 0x181821ee0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Double
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x01820DA0
+		Ram Offset 0x181821fa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Decimal
+			Default Value: 
+	Method: ToUInt64:
+		Accessibility: Public
+		Return Type: System.UInt64
+		File Offset 0x01820FC0
+		Ram Offset 0x1818221c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToSingle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x01821090
+		Ram Offset 0x181822290
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToSingle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x01821140
+		Ram Offset 0x181822340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.SByte
+			Default Value: 
+	Method: ToSingle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x01821150
+		Ram Offset 0x181822350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: ToSingle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x01821160
+		Ram Offset 0x181822360
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int16
+			Default Value: 
+	Method: ToSingle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x01821170
+		Ram Offset 0x181822370
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt16
+			Default Value: 
+	Method: ToSingle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x01821180
+		Ram Offset 0x181822380
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToSingle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x01821190
+		Ram Offset 0x181822390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt32
+			Default Value: 
+	Method: ToSingle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x018211A0
+		Ram Offset 0x1818223a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: ToSingle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x018211B0
+		Ram Offset 0x1818223b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt64
+			Default Value: 
+	Method: ToSingle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x018211E0
+		Ram Offset 0x1818223e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Double
+			Default Value: 
+	Method: ToSingle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x018211F0
+		Ram Offset 0x1818223f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Decimal
+			Default Value: 
+	Method: ToSingle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x01821250
+		Ram Offset 0x181822450
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToSingle:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x01821270
+		Ram Offset 0x181822470
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ToDouble:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x01821280
+		Ram Offset 0x181822480
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToDouble:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x01821330
+		Ram Offset 0x181822530
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.SByte
+			Default Value: 
+	Method: ToDouble:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x01821340
+		Ram Offset 0x181822540
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: ToDouble:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x01821350
+		Ram Offset 0x181822550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int16
+			Default Value: 
+	Method: ToDouble:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x01821360
+		Ram Offset 0x181822560
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt16
+			Default Value: 
+	Method: ToDouble:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x01821370
+		Ram Offset 0x181822570
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToDouble:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x01821380
+		Ram Offset 0x181822580
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt32
+			Default Value: 
+	Method: ToDouble:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x01821390
+		Ram Offset 0x181822590
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: ToDouble:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x018213A0
+		Ram Offset 0x1818225a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt64
+			Default Value: 
+	Method: ToDouble:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x018213D0
+		Ram Offset 0x1818225d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: ToDouble:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x018213E0
+		Ram Offset 0x1818225e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Decimal
+			Default Value: 
+	Method: ToDouble:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x018214A0
+		Ram Offset 0x1818226a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToDouble:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x018214C0
+		Ram Offset 0x1818226c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x018214D0
+		Ram Offset 0x1818226d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x018215E0
+		Ram Offset 0x1818227e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.SByte
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x01821670
+		Ram Offset 0x181822870
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x018216E0
+		Ram Offset 0x1818228e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int16
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x01821770
+		Ram Offset 0x181822970
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt16
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x018217E0
+		Ram Offset 0x1818229e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x01821860
+		Ram Offset 0x181822a60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt32
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x018218D0
+		Ram Offset 0x181822ad0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x01821960
+		Ram Offset 0x181822b60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt64
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x018219D0
+		Ram Offset 0x181822bd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x01821AA0
+		Ram Offset 0x181822ca0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Double
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x01821B70
+		Ram Offset 0x181822d70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x00A0DE90
+		Ram Offset 0x180a0f090
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Decimal
+			Default Value: 
+	Method: ToDecimal:
+		Accessibility: Public
+		Return Type: System.Decimal
+		File Offset 0x01821CB0
+		Ram Offset 0x181822eb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ToDateTime:
+		Accessibility: Public
+		Return Type: System.DateTime
+		File Offset 0x01821D20
+		Ram Offset 0x181822f20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToString:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01821F30
+		Ram Offset 0x181823130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToString:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01822030
+		Ram Offset 0x181823230
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Char
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToString:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01822090
+		Ram Offset 0x181823290
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: ToString:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01822120
+		Ram Offset 0x181823320
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: provider
+			Type: System.IFormatProvider
+			Default Value: 
+	Method: ToByte:
+		Accessibility: Public
+		Return Type: System.Byte
+		File Offset 0x01822140
+		Ram Offset 0x181823340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: fromBase
+			Type: System.Int32
+			Default Value: 
+	Method: ToInt32:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01822260
+		Ram Offset 0x181823460
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: fromBase
+			Type: System.Int32
+			Default Value: 
+	Method: ToString:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01822350
+		Ram Offset 0x181823550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+		Parameter 1:
+			Name: toBase
+			Type: System.Int32
+			Default Value: 
+	Method: ToString:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x018223E0
+		Ram Offset 0x1818235e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: toBase
+			Type: System.Int32
+			Default Value: 
+	Method: ToString:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01822470
+		Ram Offset 0x181823670
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+		Parameter 1:
+			Name: toBase
+			Type: System.Int32
+			Default Value: 
+	Method: ToBase64String:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01822500
+		Ram Offset 0x181823700
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inArray
+			Type: System.Byte[]
+			Default Value: 
+	Method: ToBase64String:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x018225D0
+		Ram Offset 0x1818237d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inArray
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+	Method: ToBase64String:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01822650
+		Ram Offset 0x181823850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inArray
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: options
+			Type: System.Base64FormattingOptions
+			Default Value: 
+	Method: ToBase64String:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x018228A0
+		Ram Offset 0x181823aa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bytes
+			Type: System.ReadOnlySpan`1<System.Byte>
+			Default Value: 
+		Parameter 1:
+			Name: options
+			Type: System.Base64FormattingOptions
+			Default Value: 0
+	Method: ToBase64CharArray:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01822A40
+		Ram Offset 0x181823c40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inArray
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offsetIn
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: outArray
+			Type: System.Char[]
+			Default Value: 
+		Parameter 4:
+			Name: offsetOut
+			Type: System.Int32
+			Default Value: 
+	Method: ToBase64CharArray:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01822AD0
+		Ram Offset 0x181823cd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inArray
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offsetIn
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: outArray
+			Type: System.Char[]
+			Default Value: 
+		Parameter 4:
+			Name: offsetOut
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: options
+			Type: System.Base64FormattingOptions
+			Default Value: 
+	Method: ConvertToBase64Array:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01822F10
+		Ram Offset 0x181824110
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: outChars
+			Type: System.Char*
+			Default Value: 
+		Parameter 1:
+			Name: inData
+			Type: System.Byte*
+			Default Value: 
+		Parameter 2:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: insertLineBreaks
+			Type: System.Boolean
+			Default Value: 
+	Method: ToBase64_CalculateAndValidateOutputLength:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01823290
+		Ram Offset 0x181824490
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputLength
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: insertLineBreaks
+			Type: System.Boolean
+			Default Value: 
+	Method: FromBase64String:
+		Accessibility: Public
+		Return Type: System.Byte[]
+		File Offset 0x01823380
+		Ram Offset 0x181824580
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: s
+			Type: System.String
+			Default Value: 
+	Method: TryFromBase64Chars:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01823430
+		Ram Offset 0x181824630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: chars
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: bytes
+			Type: System.Span`1<System.Byte>
+			Default Value: 
+		Parameter 2:
+			Name: bytesWritten
+			Type: System.Int32
+			Default Value: 
+	Method: CopyToTempBufferWithoutWhiteSpace:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01823A50
+		Ram Offset 0x181824c50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: chars
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: tempBuffer
+			Type: System.Span`1<System.Char>
+			Default Value: 
+		Parameter 2:
+			Name: consumed
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: charsWritten
+			Type: System.Int32
+			Default Value: 
+	Method: IsSpace:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01823B70
+		Ram Offset 0x181824d70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: c
+			Type: System.Char
+			Default Value: 
+	Method: FromBase64CharPtr:
+		Accessibility: Private
+		Return Type: System.Byte[]
+		File Offset 0x01823BA0
+		Ram Offset 0x181824da0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputPtr
+			Type: System.Char*
+			Default Value: 
+		Parameter 1:
+			Name: inputLength
+			Type: System.Int32
+			Default Value: 
+	Method: FromBase64_ComputeResultLength:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01823DF0
+		Ram Offset 0x181824ff0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputPtr
+			Type: System.Char*
+			Default Value: 
+		Parameter 1:
+			Name: inputLength
+			Type: System.Int32
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01823EB0
+		Ram Offset 0x1818250b0
+		Virtual Method Slot: 65535

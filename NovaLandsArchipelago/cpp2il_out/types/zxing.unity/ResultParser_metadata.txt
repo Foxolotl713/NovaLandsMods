@@ -1,0 +1,252 @@
+Type: ZXing.Client.Result.ResultParser:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: PARSERS
+		Type: ZXing.Client.Result.ResultParser[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: DIGITS
+		Type: System.Text.RegularExpressions.Regex
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: AMPERSAND
+		Type: System.Text.RegularExpressions.Regex
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: EQUALS
+		Type: System.Text.RegularExpressions.Regex
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: parse:
+		Accessibility: Public
+		Return Type: ZXing.Client.Result.ParsedResult
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: theResult
+			Type: ZXing.Result
+			Default Value: 
+	Method: parseResult:
+		Accessibility: Public
+		Return Type: ZXing.Client.Result.ParsedResult
+		File Offset 0x027A6660
+		Ram Offset 0x1827a7860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: theResult
+			Type: ZXing.Result
+			Default Value: 
+	Method: maybeAppend:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x027A6850
+		Ram Offset 0x1827a7a50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.Text.StringBuilder
+			Default Value: 
+	Method: maybeAppend:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x027A68E0
+		Ram Offset 0x1827a7ae0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String[]
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.Text.StringBuilder
+			Default Value: 
+	Method: maybeWrap:
+		Accessibility: Family
+		Return Type: System.String[]
+		File Offset 0x027A69A0
+		Ram Offset 0x1827a7ba0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value_Renamed
+			Type: System.String
+			Default Value: 
+	Method: unescapeBackslash:
+		Accessibility: Family
+		Return Type: System.String
+		File Offset 0x027A6A20
+		Ram Offset 0x1827a7c20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: escaped
+			Type: System.String
+			Default Value: 
+	Method: parseHexDigit:
+		Accessibility: Family
+		Return Type: System.Int32
+		File Offset 0x027A6B80
+		Ram Offset 0x1827a7d80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: c
+			Type: System.Char
+			Default Value: 
+	Method: isStringOfDigits:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x027A6BC0
+		Ram Offset 0x1827a7dc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+	Method: isSubstringOfDigits:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x027A6C90
+		Ram Offset 0x1827a7e90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+	Method: parseNameValuePairs:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.IDictionary`2<System.String, System.String>
+		File Offset 0x027A6D90
+		Ram Offset 0x1827a7f90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: uri
+			Type: System.String
+			Default Value: 
+	Method: appendKeyValue:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027A7020
+		Ram Offset 0x1827a8220
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: keyValue
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.Collections.Generic.IDictionary`2<System.String, System.String>
+			Default Value: 
+	Method: matchPrefixedField:
+		Accessibility: Assembly
+		Return Type: System.String[]
+		File Offset 0x027A7240
+		Ram Offset 0x1827a8440
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: prefix
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: rawText
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: endChar
+			Type: System.Char
+			Default Value: 
+		Parameter 3:
+			Name: trim
+			Type: System.Boolean
+			Default Value: 
+	Method: matchSinglePrefixedField:
+		Accessibility: Assembly
+		Return Type: System.String
+		File Offset 0x027A7460
+		Ram Offset 0x1827a8660
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: prefix
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: rawText
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: endChar
+			Type: System.Char
+			Default Value: 
+		Parameter 3:
+			Name: trim
+			Type: System.Boolean
+			Default Value: 
+	Method: urlDecode:
+		Accessibility: Family
+		Return Type: System.String
+		File Offset 0x027A7510
+		Ram Offset 0x1827a8710
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: escaped
+			Type: System.String
+			Default Value: 
+	Method: findFirstEscape:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x027A77F0
+		Ram Offset 0x1827a89f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: escapedArray
+			Type: System.Char[]
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027A7840
+		Ram Offset 0x1827a8a40
+		Virtual Method Slot: 65535

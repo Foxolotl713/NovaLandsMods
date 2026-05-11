@@ -1,0 +1,987 @@
+Type: UnityEngine.Rendering.Universal.PostProcessPass:
+	Base Class: 
+		UnityEngine.Rendering.Universal.ScriptableRenderPass
+
+	Interfaces:
+
+	Nested Types:
+		UnityEngine.Rendering.Universal.PostProcessPass/MaterialLibrary
+		UnityEngine.Rendering.Universal.PostProcessPass/ShaderConstants
+		UnityEngine.Rendering.Universal.PostProcessPass/<>c
+		UnityEngine.Rendering.Universal.PostProcessPass/<>c__DisplayClass68_0
+
+	Static Field: k_MaxPyramidSize
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 16
+
+	Static Field: m_ProfilingRenderPostProcessing
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: k_RenderFinalPostProcessingTag
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: Render Final PostProcessing Pass
+
+	Static Field: k_RenderPostProcessingTag
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: Render PostProcessing Effects
+
+	Static Field: m_ProfilingRenderFinalPostProcessing
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: k_ShaderPropertyId_ViewProjM
+		Type: System.Int32
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: k_ShaderPropertyId_PrevViewProjM
+		Type: System.Int32
+		Offset in Defining Type: 0x14
+		Has Default: False
+
+	Static Field: k_ShaderPropertyId_ViewProjMStereo
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: k_ShaderPropertyId_PrevViewProjMStereo
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: m_Descriptor
+		Type: UnityEngine.RenderTextureDescriptor
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: m_Source
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x118
+		Has Default: False
+
+	Field: m_Destination
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x120
+		Has Default: False
+
+	Field: m_Depth
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x128
+		Has Default: False
+
+	Field: m_InternalLut
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x130
+		Has Default: False
+
+	Field: m_MotionVectors
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: m_CameraTargetHandle
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x140
+		Has Default: False
+
+	Field: m_FullCoCTexture
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x148
+		Has Default: False
+
+	Field: m_HalfCoCTexture
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x150
+		Has Default: False
+
+	Field: m_PingTexture
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x158
+		Has Default: False
+
+	Field: m_PongTexture
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x160
+		Has Default: False
+
+	Field: m_BloomMipDown
+		Type: UnityEngine.Rendering.RTHandle[]
+		Offset in Defining Type: 0x168
+		Has Default: False
+
+	Field: m_BloomMipUp
+		Type: UnityEngine.Rendering.RTHandle[]
+		Offset in Defining Type: 0x170
+		Has Default: False
+
+	Field: m_BlendTexture
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x178
+		Has Default: False
+
+	Field: m_EdgeColorTexture
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x180
+		Has Default: False
+
+	Field: m_EdgeStencilTexture
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x188
+		Has Default: False
+
+	Field: m_TempTarget
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x190
+		Has Default: False
+
+	Field: m_TempTarget2
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x198
+		Has Default: False
+
+	Field: m_Materials
+		Type: UnityEngine.Rendering.Universal.PostProcessPass/MaterialLibrary
+		Offset in Defining Type: 0x1A0
+		Has Default: False
+
+	Field: m_Data
+		Type: UnityEngine.Rendering.Universal.PostProcessData
+		Offset in Defining Type: 0x1A8
+		Has Default: False
+
+	Field: m_DepthOfField
+		Type: UnityEngine.Rendering.Universal.DepthOfField
+		Offset in Defining Type: 0x1B0
+		Has Default: False
+
+	Field: m_MotionBlur
+		Type: UnityEngine.Rendering.Universal.MotionBlur
+		Offset in Defining Type: 0x1B8
+		Has Default: False
+
+	Field: m_PaniniProjection
+		Type: UnityEngine.Rendering.Universal.PaniniProjection
+		Offset in Defining Type: 0x1C0
+		Has Default: False
+
+	Field: m_Bloom
+		Type: UnityEngine.Rendering.Universal.Bloom
+		Offset in Defining Type: 0x1C8
+		Has Default: False
+
+	Field: m_LensDistortion
+		Type: UnityEngine.Rendering.Universal.LensDistortion
+		Offset in Defining Type: 0x1D0
+		Has Default: False
+
+	Field: m_ChromaticAberration
+		Type: UnityEngine.Rendering.Universal.ChromaticAberration
+		Offset in Defining Type: 0x1D8
+		Has Default: False
+
+	Field: m_Vignette
+		Type: UnityEngine.Rendering.Universal.Vignette
+		Offset in Defining Type: 0x1E0
+		Has Default: False
+
+	Field: m_ColorLookup
+		Type: UnityEngine.Rendering.Universal.ColorLookup
+		Offset in Defining Type: 0x1E8
+		Has Default: False
+
+	Field: m_ColorAdjustments
+		Type: UnityEngine.Rendering.Universal.ColorAdjustments
+		Offset in Defining Type: 0x1F0
+		Has Default: False
+
+	Field: m_Tonemapping
+		Type: UnityEngine.Rendering.Universal.Tonemapping
+		Offset in Defining Type: 0x1F8
+		Has Default: False
+
+	Field: m_FilmGrain
+		Type: UnityEngine.Rendering.Universal.FilmGrain
+		Offset in Defining Type: 0x200
+		Has Default: False
+
+	Field: m_DefaultHDRFormat
+		Type: UnityEngine.Experimental.Rendering.GraphicsFormat
+		Offset in Defining Type: 0x208
+		Has Default: False
+
+	Field: m_UseRGBM
+		Type: System.Boolean
+		Offset in Defining Type: 0x20C
+		Has Default: False
+
+	Field: m_SMAAEdgeFormat
+		Type: UnityEngine.Experimental.Rendering.GraphicsFormat
+		Offset in Defining Type: 0x210
+		Has Default: False
+
+	Field: m_GaussianCoCFormat
+		Type: UnityEngine.Experimental.Rendering.GraphicsFormat
+		Offset in Defining Type: 0x214
+		Has Default: False
+
+	Field: m_DitheringTextureIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x218
+		Has Default: False
+
+	Field: m_MRT2
+		Type: UnityEngine.Rendering.RenderTargetIdentifier[]
+		Offset in Defining Type: 0x220
+		Has Default: False
+
+	Field: m_BokehKernel
+		Type: UnityEngine.Vector4[]
+		Offset in Defining Type: 0x228
+		Has Default: False
+
+	Field: m_BokehHash
+		Type: System.Int32
+		Offset in Defining Type: 0x230
+		Has Default: False
+
+	Field: m_BokehMaxRadius
+		Type: System.Single
+		Offset in Defining Type: 0x234
+		Has Default: False
+
+	Field: m_BokehRCPAspect
+		Type: System.Single
+		Offset in Defining Type: 0x238
+		Has Default: False
+
+	Field: m_IsFinalPass
+		Type: System.Boolean
+		Offset in Defining Type: 0x23C
+		Has Default: False
+
+	Field: m_HasFinalPass
+		Type: System.Boolean
+		Offset in Defining Type: 0x23D
+		Has Default: False
+
+	Field: m_EnableSRGBConversionIfNeeded
+		Type: System.Boolean
+		Offset in Defining Type: 0x23E
+		Has Default: False
+
+	Field: m_UseFastSRGBLinearConversion
+		Type: System.Boolean
+		Offset in Defining Type: 0x23F
+		Has Default: False
+
+	Field: m_ResolveToScreen
+		Type: System.Boolean
+		Offset in Defining Type: 0x240
+		Has Default: False
+
+	Field: m_UseSwapBuffer
+		Type: System.Boolean
+		Offset in Defining Type: 0x241
+		Has Default: False
+
+	Field: m_ScalingSetupTarget
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x248
+		Has Default: False
+
+	Field: m_UpscaledTarget
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x250
+		Has Default: False
+
+	Field: m_BlitMaterial
+		Type: UnityEngine.Material
+		Offset in Defining Type: 0x258
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x022963F0
+		Ram Offset 0x1822975f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: evt
+			Type: UnityEngine.Rendering.Universal.RenderPassEvent
+			Default Value: 
+		Parameter 1:
+			Name: data
+			Type: UnityEngine.Rendering.Universal.PostProcessData
+			Default Value: 
+		Parameter 2:
+			Name: postProcessParams
+			Type: UnityEngine.Rendering.Universal.PostProcessParams
+			Default Value: 
+	Method: Cleanup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02297240
+		Ram Offset 0x182298440
+		Virtual Method Slot: 65535
+
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02297330
+		Ram Offset 0x182298530
+		Virtual Method Slot: 65535
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x022974D0
+		Ram Offset 0x1822986d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: baseDescriptor
+			Type: UnityEngine.RenderTextureDescriptor
+			Default Value: 
+		Parameter 1:
+			Name: source
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 2:
+			Name: resolveToScreen
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: depth
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 4:
+			Name: internalLut
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 5:
+			Name: motionVectors
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 6:
+			Name: hasFinalPass
+			Type: System.Boolean
+			Default Value: 
+		Parameter 7:
+			Name: enableSRGBConversion
+			Type: System.Boolean
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02297790
+		Ram Offset 0x182298990
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: baseDescriptor
+			Type: UnityEngine.RenderTextureDescriptor
+			Default Value: 
+		Parameter 1:
+			Name: source
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 2:
+			Name: destination
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 3:
+			Name: depth
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 4:
+			Name: internalLut
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 5:
+			Name: hasFinalPass
+			Type: System.Boolean
+			Default Value: 
+		Parameter 6:
+			Name: enableSRGBConversion
+			Type: System.Boolean
+			Default Value: 
+	Method: SetupFinalPass:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02297980
+		Ram Offset 0x182298b80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: source
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 1:
+			Name: useSwapBuffer
+			Type: System.Boolean
+			Default Value: False
+	Method: OnCameraSetup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02297AC0
+		Ram Offset 0x182298cc0
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: CanRunOnTile:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 65535
+
+	Method: Execute:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02297AD0
+		Ram Offset 0x182298cd0
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: GetCompatibleDescriptor:
+		Accessibility: Private
+		Return Type: UnityEngine.RenderTextureDescriptor
+		File Offset 0x022980F0
+		Ram Offset 0x1822992f0
+		Virtual Method Slot: 65535
+
+	Method: GetCompatibleDescriptor:
+		Accessibility: Private
+		Return Type: UnityEngine.RenderTextureDescriptor
+		File Offset 0x02298160
+		Ram Offset 0x182299360
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: format
+			Type: UnityEngine.Experimental.Rendering.GraphicsFormat
+			Default Value: 
+		Parameter 3:
+			Name: depthBufferBits
+			Type: UnityEngine.Rendering.DepthBits
+			Default Value: 0
+	Method: GetCompatibleDescriptor:
+		Accessibility: Assembly
+		Return Type: UnityEngine.RenderTextureDescriptor
+		File Offset 0x02298290
+		Ram Offset 0x182299490
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: desc
+			Type: UnityEngine.RenderTextureDescriptor
+			Default Value: 
+		Parameter 1:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: format
+			Type: UnityEngine.Experimental.Rendering.GraphicsFormat
+			Default Value: 
+		Parameter 4:
+			Name: depthBufferBits
+			Type: UnityEngine.Rendering.DepthBits
+			Default Value: 0
+	Method: RequireSRGBConversionBlitToBackBuffer:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x02298320
+		Ram Offset 0x182299520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cameraData
+			Type: UnityEngine.Rendering.Universal.CameraData
+			Default Value: 
+	Method: Render:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02298350
+		Ram Offset 0x182299550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: DoSubpixelMorphologicalAntialiasing:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02299D10
+		Ram Offset 0x18229af10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cameraData
+			Type: UnityEngine.Rendering.Universal.CameraData
+			Default Value: 
+		Parameter 1:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 2:
+			Name: source
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 3:
+			Name: destination
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+	Method: DoDepthOfField:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229A670
+		Ram Offset 0x18229b870
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+		Parameter 1:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 2:
+			Name: source
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 3:
+			Name: destination
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 4:
+			Name: pixelRect
+			Type: UnityEngine.Rect
+			Default Value: 
+	Method: DoGaussianDepthOfField:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229A7A0
+		Ram Offset 0x18229b9a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+		Parameter 1:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 2:
+			Name: source
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 3:
+			Name: destination
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 4:
+			Name: pixelRect
+			Type: UnityEngine.Rect
+			Default Value: 
+	Method: PrepareBokehKernel:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229B330
+		Ram Offset 0x18229c530
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: maxRadius
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: rcpAspect
+			Type: System.Single
+			Default Value: 
+	Method: GetMaxBokehRadiusInPixels:
+		Accessibility: Private
+		Return Type: System.Single
+		File Offset 0x0229B730
+		Ram Offset 0x18229c930
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: viewportHeight
+			Type: System.Single
+			Default Value: 
+	Method: DoBokehDepthOfField:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229B750
+		Ram Offset 0x18229c950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: source
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 2:
+			Name: destination
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 3:
+			Name: pixelRect
+			Type: UnityEngine.Rect
+			Default Value: 
+	Method: GetLensFlareLightAttenuation:
+		Accessibility: Private
+		Return Type: System.Single
+		File Offset 0x0229C0D0
+		Ram Offset 0x18229d2d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: light
+			Type: UnityEngine.Light
+			Default Value: 
+		Parameter 1:
+			Name: cam
+			Type: UnityEngine.Camera
+			Default Value: 
+		Parameter 2:
+			Name: wo
+			Type: UnityEngine.Vector3
+			Default Value: 
+	Method: DoLensFlareDatadriven:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229C430
+		Ram Offset 0x18229d630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+		Parameter 1:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 2:
+			Name: source
+			Type: UnityEngine.Rendering.RenderTargetIdentifier
+			Default Value: 
+		Parameter 3:
+			Name: usePanini
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: paniniDistance
+			Type: System.Single
+			Default Value: 
+		Parameter 5:
+			Name: paniniCropToFit
+			Type: System.Single
+			Default Value: 
+	Method: UpdateMotionBlurMatrices:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0229CB90
+		Ram Offset 0x18229dd90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: material
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 1:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+		Parameter 2:
+			Name: xr
+			Type: UnityEngine.Experimental.Rendering.XRPass
+			Default Value: 
+	Method: DoMotionBlur:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229CF30
+		Ram Offset 0x18229e130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: source
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 2:
+			Name: destination
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 3:
+			Name: cameraData
+			Type: UnityEngine.Rendering.Universal.CameraData
+			Default Value: 
+	Method: DoPaniniProjection:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229D170
+		Ram Offset 0x18229e370
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+		Parameter 1:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 2:
+			Name: source
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 3:
+			Name: destination
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+	Method: CalcViewExtents:
+		Accessibility: Private
+		Return Type: UnityEngine.Vector2
+		File Offset 0x0229D500
+		Ram Offset 0x18229e700
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+	Method: CalcCropExtents:
+		Accessibility: Private
+		Return Type: UnityEngine.Vector2
+		File Offset 0x0229D5B0
+		Ram Offset 0x18229e7b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+		Parameter 1:
+			Name: d
+			Type: System.Single
+			Default Value: 
+	Method: SetupBloom:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229D650
+		Ram Offset 0x18229e850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: source
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 2:
+			Name: uberMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: SetupLensDistortion:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229E770
+		Ram Offset 0x18229f970
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: material
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 1:
+			Name: isSceneView
+			Type: System.Boolean
+			Default Value: 
+	Method: SetupChromaticAberration:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229EC90
+		Ram Offset 0x18229fe90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: material
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: SetupVignette:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229EE20
+		Ram Offset 0x1822a0020
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: material
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 1:
+			Name: xrPass
+			Type: UnityEngine.Experimental.Rendering.XRPass
+			Default Value: 
+	Method: SetupColorGrading:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229F2A0
+		Ram Offset 0x1822a04a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+		Parameter 2:
+			Name: material
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: SetupGrain:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229F910
+		Ram Offset 0x1822a0b10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cameraData
+			Type: UnityEngine.Rendering.Universal.CameraData
+			Default Value: 
+		Parameter 1:
+			Name: material
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: SetupDithering:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229FAE0
+		Ram Offset 0x1822a0ce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cameraData
+			Type: UnityEngine.Rendering.Universal.CameraData
+			Default Value: 
+		Parameter 1:
+			Name: material
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: RenderFinalPass:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0229FB90
+		Ram Offset 0x1822a0d90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022A0860
+		Ram Offset 0x1822a1a60
+		Virtual Method Slot: 65535
+
+	Method: <Render>g__GetSource|68_0:
+		Accessibility: Private
+		Return Type: UnityEngine.Rendering.RTHandle
+		File Offset 0x021A48F0
+		Ram Offset 0x1821a5af0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: UnityEngine.Rendering.Universal.PostProcessPass/<>c__DisplayClass68_0
+			Default Value: 
+	Method: <Render>g__GetDestination|68_1:
+		Accessibility: Private
+		Return Type: UnityEngine.Rendering.RTHandle
+		File Offset 0x022A0B70
+		Ram Offset 0x1822a1d70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: UnityEngine.Rendering.Universal.PostProcessPass/<>c__DisplayClass68_0
+			Default Value: 
+	Method: <Render>g__Swap|68_2:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022A0DF0
+		Ram Offset 0x1822a1ff0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: r
+			Type: UnityEngine.Rendering.Universal.ScriptableRenderer
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: UnityEngine.Rendering.Universal.PostProcessPass/<>c__DisplayClass68_0
+			Default Value: 

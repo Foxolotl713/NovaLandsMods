@@ -1,0 +1,998 @@
+Type: UnityEngine.UIElements.BaseVerticalCollectionView:
+	Base Class: 
+		UnityEngine.UIElements.BindableElement
+
+	Interfaces:
+		UnityEngine.ISerializationCallbackReceiver
+
+	Nested Types:
+		UnityEngine.UIElements.BaseVerticalCollectionView/UxmlTraits
+		UnityEngine.UIElements.BaseVerticalCollectionView/<>c__DisplayClass162_0
+
+	Static Field: k_EmptyItems
+		Type: System.Collections.Generic.List`1<UnityEngine.UIElements.ReusableCollectionItem>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: s_DefaultItemHeight
+		Type: System.Int32
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: s_ItemHeightProperty
+		Type: UnityEngine.UIElements.CustomStyleProperty`1<System.Int32>
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: ussClassName
+		Type: System.String
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: borderUssClassName
+		Type: System.String
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: itemUssClassName
+		Type: System.String
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: dragHoverBarUssClassName
+		Type: System.String
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Static Field: itemDragHoverUssClassName
+		Type: System.String
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Static Field: itemSelectedVariantUssClassName
+		Type: System.String
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Static Field: itemAlternativeBackgroundUssClassName
+		Type: System.String
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Static Field: listScrollViewUssClassName
+		Type: System.String
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Static Field: backgroundFillUssClassName
+		Type: System.String
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: itemsChosen
+		Type: System.Action`1<System.Collections.Generic.IEnumerable`1<System.Object>>
+		Offset in Defining Type: 0x3D8
+		Has Default: False
+
+	Field: selectionChanged
+		Type: System.Action`1<System.Collections.Generic.IEnumerable`1<System.Object>>
+		Offset in Defining Type: 0x3E0
+		Has Default: False
+
+	Field: selectedIndicesChanged
+		Type: System.Action`1<System.Collections.Generic.IEnumerable`1<System.Int32>>
+		Offset in Defining Type: 0x3E8
+		Has Default: False
+
+	Field: itemIndexChanged
+		Type: System.Action`2<System.Int32,System.Int32>
+		Offset in Defining Type: 0x3F0
+		Has Default: False
+
+	Field: itemsSourceChanged
+		Type: System.Action
+		Offset in Defining Type: 0x3F8
+		Has Default: False
+
+	Field: selectionNotChanged
+		Type: System.Action
+		Offset in Defining Type: 0x400
+		Has Default: False
+
+	Field: m_SelectionType
+		Type: UnityEngine.UIElements.SelectionType
+		Offset in Defining Type: 0x408
+		Has Default: False
+
+	Field: m_HorizontalScrollingEnabled
+		Type: System.Boolean
+		Offset in Defining Type: 0x40C
+		Has Default: False
+
+	Field: m_ShowAlternatingRowBackgrounds
+		Type: UnityEngine.UIElements.AlternatingRowBackground
+		Offset in Defining Type: 0x410
+		Has Default: False
+
+	Field: m_FixedItemHeight
+		Type: System.Single
+		Offset in Defining Type: 0x414
+		Has Default: False
+
+	Field: m_ItemHeightIsInline
+		Type: System.Boolean
+		Offset in Defining Type: 0x418
+		Has Default: False
+
+	Field: m_VirtualizationMethod
+		Type: UnityEngine.UIElements.CollectionVirtualizationMethod
+		Offset in Defining Type: 0x41C
+		Has Default: False
+
+	Field: m_ScrollView
+		Type: UnityEngine.UIElements.ScrollView
+		Offset in Defining Type: 0x420
+		Has Default: False
+
+	Field: m_ViewController
+		Type: UnityEngine.UIElements.CollectionViewController
+		Offset in Defining Type: 0x428
+		Has Default: False
+
+	Field: m_VirtualizationController
+		Type: UnityEngine.UIElements.CollectionVirtualizationController
+		Offset in Defining Type: 0x430
+		Has Default: False
+
+	Field: m_NavigationManipulator
+		Type: UnityEngine.UIElements.KeyboardNavigationManipulator
+		Offset in Defining Type: 0x438
+		Has Default: False
+
+	Field: serializedVirtualizationData
+		Type: UnityEngine.UIElements.SerializedVirtualizationData
+		Offset in Defining Type: 0x440
+		Has Default: False
+
+	Field: m_SelectedIds
+		Type: System.Collections.Generic.List`1<System.Int32>
+		Offset in Defining Type: 0x448
+		Has Default: False
+
+	Field: m_SelectedIndices
+		Type: System.Collections.Generic.List`1<System.Int32>
+		Offset in Defining Type: 0x450
+		Has Default: False
+
+	Field: m_SelectedItems
+		Type: System.Collections.Generic.List`1<System.Object>
+		Offset in Defining Type: 0x458
+		Has Default: False
+
+	Field: m_LastHeight
+		Type: System.Single
+		Offset in Defining Type: 0x460
+		Has Default: False
+
+	Field: m_IsRangeSelectionDirectionUp
+		Type: System.Boolean
+		Offset in Defining Type: 0x464
+		Has Default: False
+
+	Field: m_Dragger
+		Type: UnityEngine.UIElements.ListViewDragger
+		Offset in Defining Type: 0x468
+		Has Default: False
+
+	Field: m_ItemIndexChangedCallback
+		Type: System.Action`2<System.Int32,System.Int32>
+		Offset in Defining Type: 0x470
+		Has Default: False
+
+	Field: m_ItemsSourceChangedCallback
+		Type: System.Action
+		Offset in Defining Type: 0x478
+		Has Default: False
+
+	Field: m_TouchDownPosition
+		Type: UnityEngine.Vector3
+		Offset in Defining Type: 0x480
+		Has Default: False
+
+	Method: get_itemsSource:
+		Accessibility: Public
+		Return Type: System.Collections.IList
+		File Offset 0x025F9A90
+		Ram Offset 0x1825fac90
+		Virtual Method Slot: 65535
+
+	Method: set_itemsSource:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025F9AC0
+		Ram Offset 0x1825facc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Collections.IList
+			Default Value: 
+	Method: get_sourceIncludesArraySize:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 104
+
+	Method: get_contentContainer:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.VisualElement
+		File Offset 0x00380910
+		Ram Offset 0x180381b10
+		Virtual Method Slot: 99
+
+	Method: get_selectionType:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.SelectionType
+		File Offset 0x025F9B40
+		Ram Offset 0x1825fad40
+		Virtual Method Slot: 65535
+
+	Method: set_selectionType:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025F9B50
+		Ram Offset 0x1825fad50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UIElements.SelectionType
+			Default Value: 
+	Method: get_selectedIndex:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x025F9BF0
+		Ram Offset 0x1825fadf0
+		Virtual Method Slot: 65535
+
+	Method: set_selectedIndex:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025F9C60
+		Ram Offset 0x1825fae60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_selectedIndices:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.IEnumerable`1<System.Int32>
+		File Offset 0x0040E100
+		Ram Offset 0x18040f300
+		Virtual Method Slot: 65535
+
+	Method: get_activeItems:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.IEnumerable`1<UnityEngine.UIElements.ReusableCollectionItem>
+		File Offset 0x025F9C70
+		Ram Offset 0x1825fae70
+		Virtual Method Slot: 65535
+
+	Method: get_scrollView:
+		Accessibility: Assembly
+		Return Type: UnityEngine.UIElements.ScrollView
+		File Offset 0x025F9CF0
+		Ram Offset 0x1825faef0
+		Virtual Method Slot: 65535
+
+	Method: get_dragger:
+		Accessibility: Assembly
+		Return Type: UnityEngine.UIElements.ListViewDragger
+		File Offset 0x00EC9AB0
+		Ram Offset 0x180ecacb0
+		Virtual Method Slot: 65535
+
+	Method: get_virtualizationController:
+		Accessibility: Assembly
+		Return Type: UnityEngine.UIElements.CollectionVirtualizationController
+		File Offset 0x025F9D00
+		Ram Offset 0x1825faf00
+		Virtual Method Slot: 65535
+
+	Method: get_viewController:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.CollectionViewController
+		File Offset 0x025F9D40
+		Ram Offset 0x1825faf40
+		Virtual Method Slot: 65535
+
+	Method: ResolveItemHeight:
+		Accessibility: Assembly
+		Return Type: System.Single
+		File Offset 0x025F9D50
+		Ram Offset 0x1825faf50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: height
+			Type: System.Single
+			Default Value: -1
+	Method: set_showBorder:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025F9DF0
+		Ram Offset 0x1825faff0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_reorderable:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x025F9E90
+		Ram Offset 0x1825fb090
+		Virtual Method Slot: 65535
+
+	Method: set_reorderable:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025F9F20
+		Ram Offset 0x1825fb120
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: set_horizontalScrollingEnabled:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025F9FE0
+		Ram Offset 0x1825fb1e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_showAlternatingRowBackgrounds:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.AlternatingRowBackground
+		File Offset 0x025FA050
+		Ram Offset 0x1825fb250
+		Virtual Method Slot: 65535
+
+	Method: set_showAlternatingRowBackgrounds:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FA060
+		Ram Offset 0x1825fb260
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UIElements.AlternatingRowBackground
+			Default Value: 
+	Method: get_virtualizationMethod:
+		Accessibility: Public
+		Return Type: UnityEngine.UIElements.CollectionVirtualizationMethod
+		File Offset 0x00D442F0
+		Ram Offset 0x180d454f0
+		Virtual Method Slot: 65535
+
+	Method: set_virtualizationMethod:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FA080
+		Ram Offset 0x1825fb280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UIElements.CollectionVirtualizationMethod
+			Default Value: 
+	Method: get_fixedItemHeight:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x025FA0C0
+		Ram Offset 0x1825fb2c0
+		Virtual Method Slot: 65535
+
+	Method: set_fixedItemHeight:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FA0D0
+		Ram Offset 0x1825fb2d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_lastHeight:
+		Accessibility: Assembly
+		Return Type: System.Single
+		File Offset 0x025FA1D0
+		Ram Offset 0x1825fb3d0
+		Virtual Method Slot: 65535
+
+	Method: CreateVirtualizationController:
+		Accessibility: FamANDAssem
+		Return Type: System.Void
+		File Offset 0x025FA1E0
+		Ram Offset 0x1825fb3e0
+		Virtual Method Slot: 105
+
+	Method: GetOrCreateVirtualizationController:
+		Accessibility: Assembly
+		Return Type: UnityEngine.UIElements.CollectionVirtualizationController
+		File Offset 0x025F9D00
+		Ram Offset 0x1825faf00
+		Virtual Method Slot: 65535
+
+	Method: CreateVirtualizationController:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00D3C520
+		Ram Offset 0x180d3d720
+		Virtual Method Slot: 65535
+
+	Method: GetOrCreateViewController:
+		Accessibility: Assembly
+		Return Type: UnityEngine.UIElements.CollectionViewController
+		File Offset 0x025FA220
+		Ram Offset 0x1825fb420
+		Virtual Method Slot: 65535
+
+	Method: CreateViewController:
+		Accessibility: Family
+		Return Type: UnityEngine.UIElements.CollectionViewController
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 106
+
+	Method: SetViewController:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FA280
+		Ram Offset 0x1825fb480
+		Virtual Method Slot: 107
+
+		Parameter 0:
+			Name: controller
+			Type: UnityEngine.UIElements.CollectionViewController
+			Default Value: 
+	Method: CreateDragger:
+		Accessibility: Assembly
+		Return Type: UnityEngine.UIElements.ListViewDragger
+		File Offset 0x025FA670
+		Ram Offset 0x1825fb870
+		Virtual Method Slot: 108
+
+	Method: InitializeDragAndDropController:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x025FA6D0
+		Ram Offset 0x1825fb8d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enableReordering
+			Type: System.Boolean
+			Default Value: 
+	Method: CreateDragAndDropController:
+		Accessibility: Assembly
+		Return Type: UnityEngine.UIElements.ICollectionDragAndDropController
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 109
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FA930
+		Ram Offset 0x1825fbb30
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FB1B0
+		Ram Offset 0x1825fc3b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: itemsSource
+			Type: System.Collections.IList
+			Default Value: 
+		Parameter 1:
+			Name: itemHeight
+			Type: System.Single
+			Default Value: -1
+	Method: HasValidDataAndBindings:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x025FB2A0
+		Ram Offset 0x1825fc4a0
+		Virtual Method Slot: 110
+
+	Method: OnItemIndexChanged:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FB2E0
+		Ram Offset 0x1825fc4e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: srcIndex
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: dstIndex
+			Type: System.Int32
+			Default Value: 
+	Method: OnItemsSourceChanged:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FB310
+		Ram Offset 0x1825fc510
+		Virtual Method Slot: 65535
+
+	Method: RefreshItems:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FB330
+		Ram Offset 0x1825fc530
+		Virtual Method Slot: 65535
+
+	Method: Rebuild:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FB4D0
+		Ram Offset 0x1825fc6d0
+		Virtual Method Slot: 65535
+
+	Method: RefreshSelection:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FB670
+		Ram Offset 0x1825fc870
+		Virtual Method Slot: 65535
+
+	Method: PostRefresh:
+		Accessibility: FamANDAssem
+		Return Type: System.Void
+		File Offset 0x025FB8B0
+		Ram Offset 0x1825fcab0
+		Virtual Method Slot: 111
+
+	Method: ScrollToItem:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FB970
+		Ram Offset 0x1825fcb70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: OnScroll:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FB9F0
+		Ram Offset 0x1825fcbf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: Resize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FBA70
+		Ram Offset 0x1825fcc70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: size
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: OnAttachToPanel:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FBB20
+		Ram Offset 0x1825fcd20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: evt
+			Type: UnityEngine.UIElements.AttachToPanelEvent
+			Default Value: 
+	Method: OnDetachFromPanel:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FBF20
+		Ram Offset 0x1825fd120
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: evt
+			Type: UnityEngine.UIElements.DetachFromPanelEvent
+			Default Value: 
+	Method: Apply:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x025FC1F0
+		Ram Offset 0x1825fd3f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: op
+			Type: UnityEngine.UIElements.KeyboardNavigationOperation
+			Default Value: 
+		Parameter 1:
+			Name: shiftKey
+			Type: System.Boolean
+			Default Value: 
+	Method: Apply:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FC5F0
+		Ram Offset 0x1825fd7f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: op
+			Type: UnityEngine.UIElements.KeyboardNavigationOperation
+			Default Value: 
+		Parameter 1:
+			Name: sourceEvent
+			Type: UnityEngine.UIElements.EventBase
+			Default Value: 
+	Method: OnPointerMove:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FC6F0
+		Ram Offset 0x1825fd8f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: evt
+			Type: UnityEngine.UIElements.PointerMoveEvent
+			Default Value: 
+	Method: OnPointerDown:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FC780
+		Ram Offset 0x1825fd980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: evt
+			Type: UnityEngine.UIElements.PointerDownEvent
+			Default Value: 
+	Method: OnPointerCancel:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FC8E0
+		Ram Offset 0x1825fdae0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: evt
+			Type: UnityEngine.UIElements.PointerCancelEvent
+			Default Value: 
+	Method: OnPointerUp:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FC950
+		Ram Offset 0x1825fdb50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: evt
+			Type: UnityEngine.UIElements.PointerUpEvent
+			Default Value: 
+	Method: ProcessPointerDown:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FCAB0
+		Ram Offset 0x1825fdcb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: evt
+			Type: UnityEngine.UIElements.IPointerEvent
+			Default Value: 
+	Method: ProcessPointerUp:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FCCD0
+		Ram Offset 0x1825fded0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: evt
+			Type: UnityEngine.UIElements.IPointerEvent
+			Default Value: 
+	Method: DoSelect:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FD040
+		Ram Offset 0x1825fe240
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: localPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: clickCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: actionKey
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: shiftKey
+			Type: System.Boolean
+			Default Value: 
+	Method: DoRangeSelection:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x025FD390
+		Ram Offset 0x1825fe590
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rangeSelectionFinalIndex
+			Type: System.Int32
+			Default Value: 
+	Method: ProcessSingleClick:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025F9C60
+		Ram Offset 0x1825fae60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: clickedIndex
+			Type: System.Int32
+			Default Value: 
+	Method: SelectAll:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x025FD510
+		Ram Offset 0x1825fe710
+		Virtual Method Slot: 65535
+
+	Method: AddToSelection:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FD840
+		Ram Offset 0x1825fea40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: AddToSelection:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x025FD8B0
+		Ram Offset 0x1825feab0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: indexes
+			Type: System.Collections.Generic.IList`1<System.Int32>
+			Default Value: 
+	Method: AddToSelectionWithoutValidation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FDB20
+		Ram Offset 0x1825fed20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: RemoveFromSelection:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FDF10
+		Ram Offset 0x1825ff110
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: RemoveFromSelectionWithoutValidation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FDF70
+		Ram Offset 0x1825ff170
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: SetSelection:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FE2A0
+		Ram Offset 0x1825ff4a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: SetSelection:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FE330
+		Ram Offset 0x1825ff530
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: indices
+			Type: System.Collections.Generic.IEnumerable`1<System.Int32>
+			Default Value: 
+	Method: SetSelectionWithoutNotify:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FE340
+		Ram Offset 0x1825ff540
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: indices
+			Type: System.Collections.Generic.IEnumerable`1<System.Int32>
+			Default Value: 
+	Method: SetSelectionInternal:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x025FE350
+		Ram Offset 0x1825ff550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: indices
+			Type: System.Collections.Generic.IEnumerable`1<System.Int32>
+			Default Value: 
+		Parameter 1:
+			Name: sendNotification
+			Type: System.Boolean
+			Default Value: 
+	Method: MatchesExistingSelection:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x025FE590
+		Ram Offset 0x1825ff790
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: indices
+			Type: System.Collections.Generic.IEnumerable`1<System.Int32>
+			Default Value: 
+	Method: NotifyOfSelectionChange:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FE810
+		Ram Offset 0x1825ffa10
+		Virtual Method Slot: 65535
+
+	Method: ClearSelection:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025FE880
+		Ram Offset 0x1825ffa80
+		Virtual Method Slot: 65535
+
+	Method: ClearSelectionWithoutValidation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FE900
+		Ram Offset 0x1825ffb00
+		Virtual Method Slot: 65535
+
+	Method: OnViewDataReady:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x025FEB40
+		Ram Offset 0x1825ffd40
+		Virtual Method Slot: 96
+
+	Method: ExecuteDefaultAction:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x025FEB70
+		Ram Offset 0x1825ffd70
+		Virtual Method Slot: 12
+
+		Parameter 0:
+			Name: evt
+			Type: UnityEngine.UIElements.EventBase
+			Default Value: 
+	Method: OnSizeChanged:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FEFD0
+		Ram Offset 0x1826001d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: evt
+			Type: UnityEngine.UIElements.GeometryChangedEvent
+			Default Value: 
+	Method: OnCustomStyleResolved:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FF070
+		Ram Offset 0x182600270
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: e
+			Type: UnityEngine.UIElements.CustomStyleResolvedEvent
+			Default Value: 
+	Method: UnityEngine.ISerializationCallbackReceiver.OnBeforeSerialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 102
+
+	Method: UnityEngine.ISerializationCallbackReceiver.OnAfterDeserialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025F8B80
+		Ram Offset 0x1825f9d80
+		Virtual Method Slot: 103
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FF230
+		Ram Offset 0x182600430
+		Virtual Method Slot: 65535
+
+	Method: <.ctor>b__139_0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FF910
+		Ram Offset 0x182600b10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: v
+			Type: System.Single
+			Default Value: 
+	Method: <Apply>g__HandleSelectionAndScroll|162_0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025FF990
+		Ram Offset 0x182600b90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: UnityEngine.UIElements.BaseVerticalCollectionView/<>c__DisplayClass162_0
+			Default Value: 

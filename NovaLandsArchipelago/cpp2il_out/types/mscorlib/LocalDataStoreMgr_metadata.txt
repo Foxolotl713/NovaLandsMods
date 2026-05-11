@@ -1,0 +1,128 @@
+Type: System.LocalDataStoreMgr:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Field: m_SlotInfoTable
+		Type: System.Boolean[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_FirstAvailableSlot
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_ManagedLocalDataStores
+		Type: System.Collections.Generic.List`1<System.LocalDataStore>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_KeyToSlotMap
+		Type: System.Collections.Generic.Dictionary`2<System.String,System.LocalDataStoreSlot>
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_CookieGenerator
+		Type: System.Int64
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Method: CreateLocalDataStore:
+		Accessibility: Public
+		Return Type: System.LocalDataStoreHolder
+		File Offset 0x018C94D0
+		Ram Offset 0x1818ca6d0
+		Virtual Method Slot: 65535
+
+	Method: DeleteLocalDataStore:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x018C9830
+		Ram Offset 0x1818caa30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: store
+			Type: System.LocalDataStore
+			Default Value: 
+	Method: AllocateDataSlot:
+		Accessibility: Public
+		Return Type: System.LocalDataStoreSlot
+		File Offset 0x018C99A0
+		Ram Offset 0x1818caba0
+		Virtual Method Slot: 65535
+
+	Method: AllocateNamedDataSlot:
+		Accessibility: Public
+		Return Type: System.LocalDataStoreSlot
+		File Offset 0x018C9E70
+		Ram Offset 0x1818cb070
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: GetNamedDataSlot:
+		Accessibility: Public
+		Return Type: System.LocalDataStoreSlot
+		File Offset 0x018CA050
+		Ram Offset 0x1818cb250
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: FreeNamedDataSlot:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x018CA340
+		Ram Offset 0x1818cb540
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: FreeDataSlot:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x018CA4B0
+		Ram Offset 0x1818cb6b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: slot
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: cookie
+			Type: System.Int64
+			Default Value: 
+	Method: ValidateSlot:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x018CA710
+		Ram Offset 0x1818cb910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: slot
+			Type: System.LocalDataStoreSlot
+			Default Value: 
+	Method: GetSlotTableLength:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x0103BF40
+		Ram Offset 0x18103d140
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x018CA790
+		Ram Offset 0x1818cb990
+		Virtual Method Slot: 65535

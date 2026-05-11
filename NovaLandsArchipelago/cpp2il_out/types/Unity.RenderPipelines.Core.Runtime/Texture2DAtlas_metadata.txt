@@ -1,0 +1,674 @@
+Type: UnityEngine.Rendering.Texture2DAtlas:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		UnityEngine.Rendering.Texture2DAtlas/BlitType
+
+	Static Field: kGPUTexInvalid
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 0
+
+	Static Field: kGPUTexValidMip0
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Static Field: kGPUTexValidMipAll
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 2
+
+	Static Field: fullScaleOffset
+		Type: UnityEngine.Vector4
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: m_AtlasTexture
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: s_MaxMipLevelPadding
+		Type: System.Int32
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_Width
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_Height
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: m_Format
+		Type: UnityEngine.Experimental.Rendering.GraphicsFormat
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_UseMipMaps
+		Type: System.Boolean
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Field: m_IsAtlasTextureOwner
+		Type: System.Boolean
+		Offset in Defining Type: 0x25
+		Has Default: False
+
+	Field: m_AtlasAllocator
+		Type: UnityEngine.Rendering.AtlasAllocator
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_AllocationCache
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.ValueTuple`2<UnityEngine.Vector4,UnityEngine.Vector2Int>>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_IsGPUTextureUpToDate
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.Int32>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_TextureHashes
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.Int32>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Method: get_maxMipLevelPadding:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x021B9B00
+		Ram Offset 0x1821bad00
+		Virtual Method Slot: 65535
+
+	Method: get_AtlasTexture:
+		Accessibility: Public
+		Return Type: UnityEngine.Rendering.RTHandle
+		File Offset 0x00386E40
+		Ram Offset 0x180388040
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021B9B50
+		Ram Offset 0x1821bad50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: format
+			Type: UnityEngine.Experimental.Rendering.GraphicsFormat
+			Default Value: 
+		Parameter 3:
+			Name: filterMode
+			Type: UnityEngine.FilterMode
+			Default Value: 0
+		Parameter 4:
+			Name: powerOfTwoPadding
+			Type: System.Boolean
+			Default Value: False
+		Parameter 5:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 6:
+			Name: useMipMap
+			Type: System.Boolean
+			Default Value: True
+	Method: Release:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021BA0D0
+		Ram Offset 0x1821bb2d0
+		Virtual Method Slot: 65535
+
+	Method: ResetAllocator:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021BA190
+		Ram Offset 0x1821bb390
+		Virtual Method Slot: 65535
+
+	Method: ClearTarget:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021BA2A0
+		Ram Offset 0x1821bb4a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+	Method: GetTextureMipmapCount:
+		Accessibility: FamANDAssem
+		Return Type: System.Int32
+		File Offset 0x021BA4C0
+		Ram Offset 0x1821bb6c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+	Method: Is2D:
+		Accessibility: FamANDAssem
+		Return Type: System.Boolean
+		File Offset 0x021BA500
+		Ram Offset 0x1821bb700
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+	Method: IsSingleChannelBlit:
+		Accessibility: FamANDAssem
+		Return Type: System.Boolean
+		File Offset 0x021BA5C0
+		Ram Offset 0x1821bb7c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: source
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 1:
+			Name: destination
+			Type: UnityEngine.Texture
+			Default Value: 
+	Method: Blit2DTexture:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x021BAA90
+		Ram Offset 0x1821bbc90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: scaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 2:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 3:
+			Name: sourceScaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 4:
+			Name: blitMips
+			Type: System.Boolean
+			Default Value: 
+		Parameter 5:
+			Name: blitType
+			Type: UnityEngine.Rendering.Texture2DAtlas/BlitType
+			Default Value: 
+	Method: MarkGPUTextureValid:
+		Accessibility: FamANDAssem
+		Return Type: System.Void
+		File Offset 0x021BAD50
+		Ram Offset 0x1821bbf50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instanceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: mipAreValid
+			Type: System.Boolean
+			Default Value: False
+	Method: MarkGPUTextureInvalid:
+		Accessibility: FamANDAssem
+		Return Type: System.Void
+		File Offset 0x021BADD0
+		Ram Offset 0x1821bbfd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instanceId
+			Type: System.Int32
+			Default Value: 
+	Method: BlitTexture:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021BAE40
+		Ram Offset 0x1821bc040
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: scaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 2:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 3:
+			Name: sourceScaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 4:
+			Name: blitMips
+			Type: System.Boolean
+			Default Value: True
+		Parameter 5:
+			Name: overrideInstanceID
+			Type: System.Int32
+			Default Value: -1
+	Method: BlitOctahedralTexture:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021BAFD0
+		Ram Offset 0x1821bc1d0
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: scaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 2:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 3:
+			Name: sourceScaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 4:
+			Name: blitMips
+			Type: System.Boolean
+			Default Value: True
+		Parameter 5:
+			Name: overrideInstanceID
+			Type: System.Int32
+			Default Value: -1
+	Method: BlitCubeTexture2D:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x021BB030
+		Ram Offset 0x1821bc230
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: scaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 2:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 3:
+			Name: blitMips
+			Type: System.Boolean
+			Default Value: True
+		Parameter 4:
+			Name: overrideInstanceID
+			Type: System.Int32
+			Default Value: -1
+	Method: AllocateTexture:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x021BB1C0
+		Ram Offset 0x1821bc3c0
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: scaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 2:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 3:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: overrideInstanceID
+			Type: System.Int32
+			Default Value: -1
+	Method: AllocateTextureWithoutBlit:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x021BB3E0
+		Ram Offset 0x1821bc5e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 1:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: scaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+	Method: AllocateTextureWithoutBlit:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x021BB450
+		Ram Offset 0x1821bc650
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: instanceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: scaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+	Method: GetTextureHash:
+		Accessibility: FamANDAssem
+		Return Type: System.Int32
+		File Offset 0x021BB6A0
+		Ram Offset 0x1821bc8a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: textureA
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 1:
+			Name: textureB
+			Type: UnityEngine.Texture
+			Default Value: 
+	Method: GetTextureID:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x021BB710
+		Ram Offset 0x1821bc910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+	Method: GetTextureID:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x021BB730
+		Ram Offset 0x1821bc930
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: textureA
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 1:
+			Name: textureB
+			Type: UnityEngine.Texture
+			Default Value: 
+	Method: IsCached:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x021BB780
+		Ram Offset 0x1821bc980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: scaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 1:
+			Name: textureA
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 2:
+			Name: textureB
+			Type: UnityEngine.Texture
+			Default Value: 
+	Method: IsCached:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x021BB7F0
+		Ram Offset 0x1821bc9f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: scaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 1:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+	Method: IsCached:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x021BB830
+		Ram Offset 0x1821bca30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: scaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 1:
+			Name: id
+			Type: System.Int32
+			Default Value: 
+	Method: GetCachedTextureSize:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Vector2Int
+		File Offset 0x021BB8F0
+		Ram Offset 0x1821bcaf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: id
+			Type: System.Int32
+			Default Value: 
+	Method: NeedsUpdate:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x021BB9A0
+		Ram Offset 0x1821bcba0
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 1:
+			Name: needMips
+			Type: System.Boolean
+			Default Value: False
+	Method: NeedsUpdate:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x021BBDA0
+		Ram Offset 0x1821bcfa0
+		Virtual Method Slot: 10
+
+		Parameter 0:
+			Name: textureA
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 1:
+			Name: textureB
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 2:
+			Name: needMips
+			Type: System.Boolean
+			Default Value: False
+	Method: AddTexture:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x021BC530
+		Ram Offset 0x1821bd730
+		Virtual Method Slot: 11
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: scaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 2:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+	Method: UpdateTexture:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x021BC610
+		Ram Offset 0x1821bd810
+		Virtual Method Slot: 12
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: oldTexture
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 2:
+			Name: newTexture
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 3:
+			Name: scaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 4:
+			Name: sourceScaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 5:
+			Name: updateIfNeeded
+			Type: System.Boolean
+			Default Value: True
+		Parameter 6:
+			Name: blitMips
+			Type: System.Boolean
+			Default Value: True
+	Method: UpdateTexture:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x021BC7F0
+		Ram Offset 0x1821bd9f0
+		Virtual Method Slot: 13
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: texture
+			Type: UnityEngine.Texture
+			Default Value: 
+		Parameter 2:
+			Name: scaleOffset
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 3:
+			Name: updateIfNeeded
+			Type: System.Boolean
+			Default Value: True
+		Parameter 4:
+			Name: blitMips
+			Type: System.Boolean
+			Default Value: True
+	Method: EnsureTextureSlot:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x021BC8C0
+		Ram Offset 0x1821bdac0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: isUploadNeeded
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: scaleBias
+			Type: UnityEngine.Vector4
+			Default Value: 
+		Parameter 2:
+			Name: key
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x021BCAD0
+		Ram Offset 0x1821bdcd0
+		Virtual Method Slot: 65535

@@ -1,0 +1,114 @@
+Type: MuttAI.Steering.Flock:
+	Base Class: 
+		MuttAI.Steering.SteeringBehavior
+
+	Interfaces:
+
+	Field: neighbourRadius
+		Type: System.Single
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: alignmentWeight
+		Type: System.Single
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Field: cohesionWeigth
+		Type: System.Single
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: seperationWeight
+		Type: System.Single
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Field: separationDecayCoefficient
+		Type: System.Single
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: neighbouringAgents
+		Type: System.Collections.Generic.List`1<MuttAI.Steering.SteeringEntity>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: currentPosition
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0194FE20
+		Ram Offset 0x181951020
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: agent
+			Type: MuttAI.Steering.SteeringEntity
+			Default Value: 
+		Parameter 1:
+			Name: weight
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: neighbourRadius
+			Type: System.Single
+			Default Value: 
+		Parameter 3:
+			Name: alignmentWeight
+			Type: System.Single
+			Default Value: 
+		Parameter 4:
+			Name: cohesionWeigth
+			Type: System.Single
+			Default Value: 
+		Parameter 5:
+			Name: seperationWeight
+			Type: System.Single
+			Default Value: 
+		Parameter 6:
+			Name: separationDecayCoefficient
+			Type: System.Single
+			Default Value: 
+	Method: GetVelocity:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x0194FFB0
+		Ram Offset 0x1819511b0
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: direction
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: Alignment:
+		Accessibility: Private
+		Return Type: UnityEngine.Vector2
+		File Offset 0x01950160
+		Ram Offset 0x181951360
+		Virtual Method Slot: 65535
+
+	Method: Cohesion:
+		Accessibility: Private
+		Return Type: UnityEngine.Vector2
+		File Offset 0x01950390
+		Ram Offset 0x181951590
+		Virtual Method Slot: 65535
+
+	Method: Separation:
+		Accessibility: Private
+		Return Type: UnityEngine.Vector2
+		File Offset 0x01950680
+		Ram Offset 0x181951880
+		Virtual Method Slot: 65535
+
+	Method: UpdateNeighbouringAgents:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01950AC0
+		Ram Offset 0x181951cc0
+		Virtual Method Slot: 65535

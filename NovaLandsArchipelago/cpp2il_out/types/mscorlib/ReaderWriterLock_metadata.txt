@@ -1,0 +1,100 @@
+Type: System.Threading.ReaderWriterLock:
+	Base Class: 
+		System.Runtime.ConstrainedExecution.CriticalFinalizerObject
+
+	Interfaces:
+
+	Field: seq_num
+		Type: System.Int32
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: state
+		Type: System.Int32
+		Offset in Defining Type: 0x14
+		Has Default: False
+
+	Field: readers
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: writer_lock_owner
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: writer_queue
+		Type: System.Threading.LockQueue
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: reader_locks
+		Type: System.Collections.Hashtable
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x019296D0
+		Ram Offset 0x18192a8d0
+		Virtual Method Slot: 65535
+
+	Method: Finalize:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01922670
+		Ram Offset 0x181923870
+		Virtual Method Slot: 1
+
+	Method: AcquireWriterLock:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01929880
+		Ram Offset 0x18192aa80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: millisecondsTimeout
+			Type: System.Int32
+			Default Value: 
+	Method: AcquireWriterLock:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01929890
+		Ram Offset 0x18192aa90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: millisecondsTimeout
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: initialLockCount
+			Type: System.Int32
+			Default Value: 
+	Method: ReleaseWriterLock:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01929B30
+		Ram Offset 0x18192ad30
+		Virtual Method Slot: 65535
+
+	Method: ReleaseWriterLock:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01929D30
+		Ram Offset 0x18192af30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: releaseCount
+			Type: System.Int32
+			Default Value: 
+	Method: HasWriterLock:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01929D90
+		Ram Offset 0x18192af90
+		Virtual Method Slot: 65535

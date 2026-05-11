@@ -1,0 +1,479 @@
+Type: ReadCallback
+
+Method: System.Void UnityEngine.UI.ReadCallback::.ctor(System.Object,System.IntPtr):	Method Body (x86 ASM):
+		0x180A070B0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A070B4 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180A070BB mov r11,rdx		; DEBUG: {Register}/R11 {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A070BE mov rax,[r8+8]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 8 | None ||| N/A | N/A
+		0x180A070C2 mov r9,rcx		; DEBUG: {Register}/R9 {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A070C5 mov [rcx+10h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RCX | 16 | None ||| N/A | N/A
+		0x180A070C9 mov [rcx+28h],r8		; DEBUG: {Memory}/None {Register}/R8 ||| RCX | 40 | None ||| N/A | N/A
+		0x180A070CD mov [rcx+20h],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| RCX | 32 | None ||| N/A | N/A
+		0x180A070D1 je short 0000000180A07111h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A070D3 lea r10,[rcx+20h]		; DEBUG: {Register}/R10 {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x180A070D7 shr r10,0Ch		; DEBUG: {Register}/R10 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180A070DB lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x180A070E2 and r10d,1FFFFFh		; DEBUG: {Register}/R10D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180A070E9 mov eax,r10d		; DEBUG: {Register}/EAX {Register}/R10D ||| None | 0 | None ||| N/A | N/A
+		0x180A070EC shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180A070F0 and r10d,3Fh		; DEBUG: {Register}/R10D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180A070F4 lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x180A070F8 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180A070FB nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180A07100 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180A07103 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A07106 bts rcx,r10		; DEBUG: {Register}/RCX {Register}/R10 ||| None | 0 | None ||| N/A | N/A
+		0x180A0710A lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x180A0710F jne short 0000000180A07100h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A07111 movzx ecx,byte ptr [r8+52h]		; DEBUG: {Register}/ECX {Memory}/None ||| R8 | 82 | None ||| N/A | N/A
+		0x180A07116 mov [r9+40h],r9		; DEBUG: {Memory}/None {Register}/R9 ||| R9 | 64 | None ||| N/A | N/A
+		0x180A0711A movzx eax,byte ptr [r8+4Ch]		; DEBUG: {Register}/EAX {Memory}/None ||| R8 | 76 | None ||| N/A | N/A
+		0x180A0711F shr al,4		; DEBUG: {Register}/AL {Immediate8}/None ||| None | 0 | None ||| N/A | 4
+		0x180A07122 test al,1		; DEBUG: {Register}/AL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180A07124 je short 0000000180A0714Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A07126 cmp cl,2		; DEBUG: {Register}/CL {Immediate8}/None ||| None | 0 | None ||| N/A | 2
+		0x180A07129 jne near ptr 0000000180A0722Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0712F lea rax,[180010890h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6442518672 | None ||| N/A | N/A
+		0x180A07136 mov [r9+18h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R9 | 24 | None ||| N/A | N/A
+		0x180A0713A lea rax,[1800107E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6442518496 | None ||| N/A | N/A
+		0x180A07141 mov [r9+38h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R9 | 56 | None ||| N/A | N/A
+		0x180A07145 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A07149 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A0714A cmp cl,1		; DEBUG: {Register}/CL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180A0714D jne near ptr 0000000180A07227h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A07153 cmp byte ptr [r9+70h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| R9 | 112 | None ||| N/A | 0
+		0x180A07158 je near ptr 0000000180A0720Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0715E test byte ptr [r8+53h],2		; DEBUG: {Memory}/None {Immediate8}/None ||| R8 | 83 | None ||| N/A | 2
+		0x180A07163 je short 0000000180A071BDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A07165 test [r8+53h],cl		; DEBUG: {Memory}/None {Register}/CL ||| R8 | 83 | None ||| N/A | N/A
+		0x180A07169 jne short 0000000180A071BDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0716B mov rax,[r8+40h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 64 | None ||| N/A | N/A
+		0x180A0716F cmp qword ptr [rax+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RAX | 16 | None ||| N/A | 0
+		0x180A07174 je short 0000000180A071BDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A07176 mov rax,[r8+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 32 | None ||| N/A | N/A
+		0x180A0717A test byte ptr [rax+118h],20h		; DEBUG: {Memory}/None {Immediate8}/None ||| RAX | 280 | None ||| N/A | 32
+		0x180A07181 jne short 0000000180A07193h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A07183 cmp byte ptr [rax+2Ah],13h		; DEBUG: {Memory}/None {Immediate8}/None ||| RAX | 42 | None ||| N/A | 19
+		0x180A07187 je short 0000000180A07193h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A07189 cmp byte ptr [rax+2Ah],1Eh		; DEBUG: {Memory}/None {Immediate8}/None ||| RAX | 42 | None ||| N/A | 30
+		0x180A0718D je short 0000000180A07193h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0718F xor cl,cl		; DEBUG: {Register}/CL {Register}/CL ||| None | 0 | None ||| N/A | N/A
+		0x180A07191 jmp short 0000000180A07195h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A07193 mov cl,1		; DEBUG: {Register}/CL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180A07195 test cl,cl		; DEBUG: {Register}/CL {Register}/CL ||| None | 0 | None ||| N/A | N/A
+		0x180A07197 lea rax,[180010940h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6442518848 | None ||| N/A | N/A
+		0x180A0719E lea rdx,[180010920h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6442518816 | None ||| N/A | N/A
+		0x180A071A5 cmove rax,rdx		; DEBUG: {Register}/RAX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A071A9 mov [r9+18h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R9 | 24 | None ||| N/A | N/A
+		0x180A071AD lea rax,[1800107E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6442518496 | None ||| N/A | N/A
+		0x180A071B4 mov [r9+38h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R9 | 56 | None ||| N/A | N/A
+		0x180A071B8 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A071BC ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A071BD mov rax,[r8+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 32 | None ||| N/A | N/A
+		0x180A071C1 test byte ptr [rax+118h],20h		; DEBUG: {Memory}/None {Immediate8}/None ||| RAX | 280 | None ||| N/A | 32
+		0x180A071C8 jne short 0000000180A071F1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A071CA cmp byte ptr [rax+2Ah],13h		; DEBUG: {Memory}/None {Immediate8}/None ||| RAX | 42 | None ||| N/A | 19
+		0x180A071CE je short 0000000180A071F1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A071D0 cmp byte ptr [rax+2Ah],1Eh		; DEBUG: {Memory}/None {Immediate8}/None ||| RAX | 42 | None ||| N/A | 30
+		0x180A071D4 je short 0000000180A071F1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A071D6 lea rax,[1800108B0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6442518704 | None ||| N/A | N/A
+		0x180A071DD mov [r9+18h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R9 | 24 | None ||| N/A | N/A
+		0x180A071E1 lea rax,[1800107E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6442518496 | None ||| N/A | N/A
+		0x180A071E8 mov [r9+38h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R9 | 56 | None ||| N/A | N/A
+		0x180A071EC add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A071F0 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A071F1 lea rax,[1800108F0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6442518768 | None ||| N/A | N/A
+		0x180A071F8 mov [r9+18h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R9 | 24 | None ||| N/A | N/A
+		0x180A071FC lea rax,[1800107E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6442518496 | None ||| N/A | N/A
+		0x180A07203 mov [r9+38h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R9 | 56 | None ||| N/A | N/A
+		0x180A07207 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A0720B ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A0720C lea rax,[180010860h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6442518624 | None ||| N/A | N/A
+		0x180A07213 mov [r9+18h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R9 | 24 | None ||| N/A | N/A
+		0x180A07217 lea rax,[1800107E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6442518496 | None ||| N/A | N/A
+		0x180A0721E mov [r9+38h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R9 | 56 | None ||| N/A | N/A
+		0x180A07222 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A07226 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A07227 test r11,r11		; DEBUG: {Register}/R11 {Register}/R11 ||| None | 0 | None ||| N/A | N/A
+		0x180A0722A je short 0000000180A0724Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0722C mov rax,[r9+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 32 | None ||| N/A | N/A
+		0x180A07230 mov [r9+40h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R9 | 64 | None ||| N/A | N/A
+		0x180A07234 mov rax,[r9+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 16 | None ||| N/A | N/A
+		0x180A07238 mov [r9+18h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R9 | 24 | None ||| N/A | N/A
+		0x180A0723C lea rax,[1800107E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6442518496 | None ||| N/A | N/A
+		0x180A07243 mov [r9+38h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R9 | 56 | None ||| N/A | N/A
+		0x180A07247 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A0724B ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A0724C lea rdx,[182899490h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6485021840 | None ||| N/A | N/A
+		0x180A07253 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180A07255 call 00000001802CDDA0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0725A mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A0725D xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A0725F call 00000001802CDD50h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A07264 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ReadCallback::.ctor(System.Object,System.IntPtr):
+		End of function at 0x180A07265
+		Absolute End is at 0x180A07265
+		Identified Jump Destination addresses:
+			0x180A07195
+		0x180A070B4: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180A070BB: Copies {'object' (function parameter, type System.Object)} from rdx into r11
+		0x180A070BE: [!] Reads field  from {'method' (function parameter, type System.IntPtr)} and stores in a new local 
+
+		0x180A070C2: Copies {'this' (function parameter, type UnityEngine.UI.ReadCallback)} from rcx into r9
+		0x180A070C5: [!] Sets the field method_ptr (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in 
+		0x180A070C9: [!] Sets the field method (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'method' (function parameter, type System.IntPtr)}
+		0x180A070CD: [!] Sets the field m_target (Type System.Object) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'object' (function parameter, type System.Object)}
+		0x180A070D1: Jumps to 0x180A07111 if constant1 equals 0
+
+		0x180A070D3: Loads the pointer to the field m_target on {'this' (function parameter, type UnityEngine.UI.ReadCallback)} into register r10
+		0x180A070DB: Loads string "¡
+m" into register rcx as constant {'constant4' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A070E9: Copies {'constant3' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r10 into rax
+		0x180A07100: Loads the class pointer from object into a constant constant5 in register rax
+		0x180A07103: Copies {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x180A0710F: Jumps to 0x180A07100 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x180A07111: [!] Reads field  from {'method' (function parameter, type System.IntPtr)} and stores in a new local 
+
+		0x180A07116: [!] Sets the field method_code (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'this' (function parameter, type UnityEngine.UI.ReadCallback)}
+		0x180A0711A: [!] Reads field  from {'method' (function parameter, type System.IntPtr)} and stores in a new local 
+
+		0x180A07122: [!] Compares {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} and 1
+		0x180A07124: Jumps to 0x180A0714A (which is an if statement's body) if constant5 equals 1 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A07126: [!] Compares {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} and 2
+		0x180A07129: Jumps to 0x180A0722C (which is an if statement's body) if {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} != 2 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A0712F: Loads string "AÀLÒLÙMÁÐIÊIÿcÌÌÌÌÌÌÌÌÌÌÌHì(EØLÒHÒt%HIÊE·IPAÓMÉNÈ@" into register rax as constant {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A07136: [!] Sets the field invoke_impl (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A0713A: Loads string "H\$Hl$Ht$H|$ AVHì HAx3ÛAèLòHøHpHöt,@" into register rax as constant {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A07141: [!] Sets the field extra_arg (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A07149: [!] Returns from the function
+
+		0x180A0714A: [!] Compares {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} and 1
+		0x180A0714D: Jumps to 0x180A07227 (which is an if statement's body) if {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} != 1 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A07153: [!] Compares  and 0
+		0x180A07158: Jumps to 0x180A0720C (which is an if statement's body) if  equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A0715E: [!] Compares  and 2
+		0x180A07163: Jumps to 0x180A071BD (which is an if statement's body) if  equals 2 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A07165: [!] Compares  and {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}
+		0x180A07169: Jumps to 0x180A071BD (which is an if statement's body) if  != {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A0716B: [!] Reads field  from {'method' (function parameter, type System.IntPtr)} and stores in a new local 
+
+		0x180A0716F: Compares "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x10}" and 0
+		0x180A07174: Jumps to 0x180A071BD if "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x10}" equals 0
+
+		0x180A07176: [!] Reads field  from {'method' (function parameter, type System.IntPtr)} and stores in a new local 
+
+		0x180A0717A: Compares "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x118}" and 32
+		0x180A07181: Jumps to 0x180A07193 if "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x118}" != 32
+
+		0x180A07183: Compares "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x2A}" and 19
+		0x180A07187: Jumps to 0x180A07193 if "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x2A}" equals 19
+
+		0x180A07189: Compares "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x2A}" and 30
+		0x180A0718D: Jumps to 0x180A07193 if "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x2A}" equals 30
+
+		0x180A07191: Jumps to 0x180A07195 (which is an function-local jump destination)
+
+		0x180A07193: [!] Writes the constant 0x1 into operand 1 (type UInt64) in register rcx
+
+		Jump Destination (0x180A07195):
+		0x180A07195: [!] Compares 1 and 0
+		0x180A07197: Loads string "Hì(HÒtIÉHÄ(é" into register rax as constant {'constant23' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A0719E: Loads string "Hì(HÒtIÉHÄ(é" into register rdx as constant {'constant24' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A071A5: [!] Copies {'constant24' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} from rdx into rax based on previous comparison
+		0x180A071A9: [!] Sets the field invoke_impl (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'constant24' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A071AD: Loads string "H\$Hl$Ht$H|$ AVHì HAx3ÛAèLòHøHpHöt,@" into register rax as constant {'constant25' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A071B4: [!] Sets the field extra_arg (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'constant25' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A071BC: [!] Returns from the function
+
+		0x180A071BD: [!] Reads field  from {'method' (function parameter, type System.IntPtr)} and stores in a new local 
+
+		0x180A071C1: Compares "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x118}" and 32
+		0x180A071C8: Jumps to 0x180A071F1 if "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x118}" != 32 ;  - This is probably a goto, jumping to 0x180A071F1 which is after end of current block @ 0x180A071BD (started at 0x180A0716B)
+
+		0x180A071CA: Compares "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x2A}" and 19
+		0x180A071CE: Jumps to 0x180A071F1 if "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x2A}" equals 19 ;  - This is probably a goto, jumping to 0x180A071F1 which is after end of current block @ 0x180A071BD (started at 0x180A0716B)
+
+		0x180A071D0: Compares "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x2A}" and 30
+		0x180A071D4: Jumps to 0x180A071F1 if "{il2cpp field on {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x2A}" equals 30 ;  - This is probably a goto, jumping to 0x180A071F1 which is after end of current block @ 0x180A071BD (started at 0x180A0716B)
+
+		0x180A071D6: Loads string "Hì(EØLÒHÒt%HIÊE·IPAÓMÉNÈ@" into register rax as constant {'constant32' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A071DD: [!] Sets the field invoke_impl (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'constant32' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A071E1: Loads string "H\$Hl$Ht$H|$ AVHì HAx3ÛAèLòHøHpHöt,@" into register rax as constant {'constant33' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A071E8: [!] Sets the field extra_arg (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'constant33' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A071F0: [!] Returns from the function
+
+		0x180A071F1: Loads string "Hì(IÁHÒt·HPEÈLÂHP HÄ(é]1ÿÿèhÔ+" into register rax as constant {'constant34' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A071F8: [!] Sets the field invoke_impl (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'constant34' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A071FC: Loads string "H\$Hl$Ht$H|$ AVHì HAx3ÛAèLòHøHpHöt,@" into register rax as constant {'constant35' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A07203: [!] Sets the field extra_arg (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'constant35' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A0720B: [!] Returns from the function
+
+		0x180A0720C: Loads string "Hì(EÐHÂLÙHÒtMÁAÒHÈHÄ(IÿcèøÔ+" into register rax as constant {'constant36' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A07213: [!] Sets the field invoke_impl (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'constant36' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A07217: Loads string "H\$Hl$Ht$H|$ AVHì HAx3ÛAèLòHøHpHöt,@" into register rax as constant {'constant37' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A0721E: [!] Sets the field extra_arg (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'constant37' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A07226: [!] Returns from the function
+
+		0x180A07227: [!] Compares {'object' (function parameter, type System.Object)} and 0
+		0x180A0722A: Jumps to 0x180A0724C if object equals 0 ;  - This is probably a goto, jumping to 0x180A0724C which is after end of current block @ 0x180A071BD (started at 0x180A0716B)
+
+		0x180A0722C: [!] Reads field m_target from {'this' (function parameter, type UnityEngine.UI.ReadCallback)} and stores in a new local {'m_target' (type System.Object)}
+
+		0x180A07230: [!] Sets the field method_code (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'m_target' (type System.Object)}
+		0x180A07234: [!] Reads field method_ptr from {'this' (function parameter, type UnityEngine.UI.ReadCallback)} and stores in a new local {'method_ptr' (type System.IntPtr)}
+
+		0x180A07238: [!] Sets the field invoke_impl (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'method_ptr' (type System.IntPtr)}
+		0x180A0723C: Loads string "H\$Hl$Ht$H|$ AVHì HAx3ÛAèLòHøHpHöt,@" into register rax as constant {'constant39' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A07243: [!] Sets the field extra_arg (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ReadCallback)} to the value stored in {'constant39' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A0724B: [!] Returns from the function
+
+		0x180A0724C: Loads string "Delegate to an instance method cannot have null 'this'." into register rdx as constant {'constant40' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A07255: [!] Constructs and throws an exception of kind System.ArgumentException
+
+		0x180A0725A: Copies {'local7' (type System.ArgumentException)} from rax into rcx
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ReadCallback
+	System.Void .ctor(System.Object object, System.IntPtr method)
+		  = method.
+		this.method_ptr = 
+		this.method = method
+		this.m_target = object
+		  = method.
+		this.method_code = this
+		  = method.
+
+		if (constant5 != 1)
+
+		    if (constant5 == 2)
+		        this.invoke_impl = constant8
+		        this.extra_arg = constant9
+		        return
+		    endif
+            
+
+		    if (constant5 == 1)
+
+		        if ( != 0)
+
+		            if ( != 2)
+
+		                if ( == constant5)
+		                      = method.
+		                      = method.
+		                    this.invoke_impl = constant24
+		                    this.extra_arg = constant25
+		                    return
+		                endif
+                        
+		                  = method.
+		                this.invoke_impl = constant32
+		                this.extra_arg = constant33
+		                return
+		                this.invoke_impl = constant34
+		                this.extra_arg = constant35
+		                return
+		            endif
+                    
+		            this.invoke_impl = constant36
+		            this.extra_arg = constant37
+		            return
+		        endif
+                
+
+		        if (object == 0)
+                    goto INSN_180A0724C
+                endif
+		    endif
+            
+		    System.Object m_target = this.m_target
+		    this.method_code = m_target
+		    System.IntPtr method_ptr = this.method_ptr
+		    this.invoke_impl = method_ptr
+		    this.extra_arg = constant39
+		    return
+
+		    INSN_180A0724C:
+		    throw new System.ArgumentException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.FieldToLocalAction at (0x180A070BE) is corrupt (No further info) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.ReadCallback::Invoke(UnityEngine.UI.Console,System.Int32):	Method Body (x86 ASM):
+		0x180A00FF0 mov r9,[rcx+28h]		; DEBUG: {Register}/R9 {Memory}/None ||| RCX | 40 | None ||| N/A | N/A
+		0x180A00FF4 mov rax,rcx		; DEBUG: {Register}/RAX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A00FF7 mov rcx,[rcx+40h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 64 | None ||| N/A | N/A
+		0x180A00FFB jmp qword ptr [rax+18h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x180A00FFF int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ReadCallback::Invoke(UnityEngine.UI.Console,System.Int32):
+		End of function at 0x180A01000
+		Absolute End is at 0x180A01000
+		Identified Jump Destination addresses:
+
+		0x180A00FF4: Copies {'this' (function parameter, type UnityEngine.UI.ReadCallback)} from rcx into rax
+		0x180A00FF7: [!] Reads field method_code from {'this' (function parameter, type UnityEngine.UI.ReadCallback)} and stores in a new local {'method_code' (type System.IntPtr)}
+
+		0x180A00FFB: [!] Calls managed method System.Boolean System.Xml.Schema.SchemaBuilder::IsContentParsed() on instance {'method_code' (type System.IntPtr)} and stores the result in {'isContentParsed' (type System.Boolean)} ;  - Leftover parameters detected, but first few match.
+
+		0x180A00FFB: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ReadCallback
+	System.Void Invoke(UnityEngine.UI.Console console, System.Int32 val)
+		System.IntPtr method_code = this.method_code
+
+		System.Boolean isContentParsed = method_code.IsContentParsed()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.IntPtr System.Delegate::method_code
+	IL_0006: call System.Boolean System.Xml.Schema.SchemaBuilder::IsContentParsed()
+	IL_000b: stloc.0
+	IL_000c: ret
+	
+
+Method: System.IAsyncResult UnityEngine.UI.ReadCallback::BeginInvoke(UnityEngine.UI.Console,System.Int32,System.AsyncCallback,System.Object):	Method Body (x86 ASM):
+		0x180A07270 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180A07275 mov [rsp+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 16 | None ||| N/A | N/A
+		0x180A0727A mov [rsp+18h],r8d		; DEBUG: {Memory}/None {Register}/R8D ||| RSP | 24 | None ||| N/A | N/A
+		0x180A0727F push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A07280 sub rsp,40h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 64
+		0x180A07284 cmp byte ptr [18329BEFAh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518458 | None ||| N/A | 0
+		0x180A0728B mov rbx,r9		; DEBUG: {Register}/RBX {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x180A0728E mov rdi,rdx		; DEBUG: {Register}/RDI {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A07291 mov rsi,rcx		; DEBUG: {Register}/RSI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A07294 jne short 0000000180A072A9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A07296 lea rcx,[1830F66D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493791952 | None ||| N/A | N/A
+		0x180A0729D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A072A2 mov byte ptr [18329BEFAh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518458 | None ||| N/A | 1
+		0x180A072A9 mov rcx,[1830F66D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493791952 | None ||| N/A | N/A
+		0x180A072B0 lea rdx,[rsp+60h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x180A072B5 mov qword ptr [rsp+30h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 48 | None ||| N/A | 0
+		0x180A072BE mov [rsp+20h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 32 | None ||| N/A | N/A
+		0x180A072C3 call 00000001802EE5C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A072C8 mov r9,[rsp+70h]		; DEBUG: {Register}/R9 {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x180A072CD lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180A072D2 mov r8,rbx		; DEBUG: {Register}/R8 {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A072D5 mov [rsp+28h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 40 | None ||| N/A | N/A
+		0x180A072DA mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A072DD call 00000001802CD850h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A072E2 mov rbx,[rsp+50h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x180A072E7 mov rsi,[rsp+58h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 88 | None ||| N/A | N/A
+		0x180A072EC add rsp,40h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 64
+		0x180A072F0 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A072F1 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A072F2 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.IAsyncResult UnityEngine.UI.ReadCallback::BeginInvoke(UnityEngine.UI.Console,System.Int32,System.AsyncCallback,System.Object):
+		End of function at 0x180A072F3
+		Absolute End is at 0x180A072F3
+		Identified Jump Destination addresses:
+
+		0x180A0727A: Moves val (type System.Int32) from register r8 to the stack at offset 24 (0x18)
+		0x180A0727F: Saves the content of rdi to the stack
+		0x180A07284: Compares {Unknown Global at 0x18329BEFA, first ten bytes are [4 0 169 176 4 0 248 133 239 2], or as chars " ©° øï"} and 0
+		0x180A0728B: Copies {'callback' (function parameter, type System.AsyncCallback)} from r9 into rbx
+		0x180A0728E: Copies {'console' (function parameter, type UnityEngine.UI.Console)} from rdx into rdi
+		0x180A07291: Copies {'this' (function parameter, type UnityEngine.UI.ReadCallback)} from rcx into rsi
+		0x180A07294: Jumps to 0x180A072A9 if {Unknown Global at 0x18329BEFA, first ten bytes are [4 0 169 176 4 0 248 133 239 2], or as chars " ©° øï"} != 0
+
+		0x180A07296: Loads the type definition for managed type System.Int32 as a constant "Int32" in rcx
+		0x180A0729D: Initializes runtime metadata value System.Int32
+		0x180A072A9: Loads the type definition for managed type System.Int32 as a constant "Int32" in rcx
+		0x180A072B0: Loads a pointer to stack offset 0x60 into register rdx as new constant constant5
+		0x180A072B5: Moves 0 (immediate ulong value) to the stack at offset 48 as a new local local5
+		0x180A072BE: Moves console (type UnityEngine.UI.Console) from register rdi to the stack at offset 32 (0x20)
+		0x180A072C3: Boxes a cpp primitive value  to managed type System.Int32 and stores the result in new local  in register rax.
+		0x180A072C8: Reads unknown value in stack, offset 112 (0x70) and stores the pointer in register r9 as new constant constant6
+		0x180A072CD: Loads a pointer to stack offset 0x20 into register rdx as new constant constant7
+		0x180A072D2: Copies {'callback' (function parameter, type System.AsyncCallback)} from rbx into r8
+		0x180A072D5: Moves Int32 (type Mono.Cecil.TypeReference) from register rax to the stack at offset 40 (0x28) as a new local local6
+		0x180A072DA: Copies {'this' (function parameter, type UnityEngine.UI.ReadCallback)} from rsi into rcx
+		0x180A072E2: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register rbx as new constant constant8
+		0x180A072E7: Reads unknown value in stack, offset 88 (0x58) and stores the pointer in register rsi as new constant constant9
+		0x180A072F1: [!] Returns {'Int32' (constant value of type Mono.Cecil.TypeReference)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ReadCallback
+	System.IAsyncResult BeginInvoke(UnityEngine.UI.Console console, System.Int32 val, System.AsyncCallback callback, System.Object object)
+		return Int32
+
+
+Generated IL:
+	IL_0000: ldtoken System.Int32
+	IL_0005: ret
+	
+
+Method: System.Void UnityEngine.UI.ReadCallback::EndInvoke(System.IAsyncResult):	Method Body (x86 ASM):
+		0x1803A1DE0 sub rsp,38h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 56
+		0x1803A1DE4 mov rcx,rdx		; DEBUG: {Register}/RCX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1803A1DE7 lea r8,[rsp+58h]		; DEBUG: {Register}/R8 {Memory}/None ||| RSP | 88 | None ||| N/A | N/A
+		0x1803A1DEC lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x1803A1DF1 call 000000018031FAE0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803A1DF6 mov rcx,[rsp+58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 88 | None ||| N/A | N/A
+		0x1803A1DFB test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1803A1DFE jne short 00000001803A1E05h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803A1E00 add rsp,38h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 56
+		0x1803A1E04 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803A1E05 call 000000018029A580h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803A1E0A int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ReadCallback::EndInvoke(System.IAsyncResult):
+		End of function at 0x1803A1E0B
+		Absolute End is at 0x1803A1E0B
+		Identified Jump Destination addresses:
+
+		0x1803A1DE4: Copies {'result' (function parameter, type System.IAsyncResult)} from rdx into rcx
+		0x1803A1DE7: Loads a pointer to stack offset 0x58 into register r8 as new constant constant1
+		0x1803A1DEC: Loads a pointer to stack offset 0x20 into register rdx as new constant constant2
+		0x1803A1DF6: Reads unknown value in stack, offset 88 (0x58) and stores the pointer in register rcx as new constant constant3
+		0x1803A1DFB: [!] Compares {'constant3' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and 0
+		0x1803A1DFE: Jumps to 0x1803A1E05 (which is an if statement's body) if {'constant3' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} != 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1803A1E04: [!] Returns from the function
+
+		0x1803A1E05: [!] Throws {'constant3' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ReadCallback
+	System.Void EndInvoke(System.IAsyncResult result)
+
+		if (constant3 == 0)
+		    return
+		endif
+        
+		throw constant3
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.JumpIfNonZeroOrNonNullAction at (0x1803A1DFE) is corrupt (ConstantDefinition: Don't know how to get IL to load a Cpp2IL.Core.Analysis.ResultModels.StackPointer) and cannot be created as IL. Aborting here.
+
+

@@ -1,0 +1,271 @@
+Type: UnityEngine.Rendering.RenderPipelineManager:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: s_CurrentPipelineAsset
+		Type: UnityEngine.Rendering.RenderPipelineAsset
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: s_Cameras
+		Type: System.Collections.Generic.List`1<UnityEngine.Camera>
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: s_CurrentPipelineType
+		Type: System.String
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: s_CurrentPipeline
+		Type: UnityEngine.Rendering.RenderPipeline
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: beginContextRendering
+		Type: System.Action`2<UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: endContextRendering
+		Type: System.Action`2<UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>>
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: beginFrameRendering
+		Type: System.Action`2<UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Static Field: beginCameraRendering
+		Type: System.Action`2<UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Static Field: endFrameRendering
+		Type: System.Action`2<UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera[]>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Static Field: endCameraRendering
+		Type: System.Action`2<UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Static Field: activeRenderPipelineTypeChanged
+		Type: System.Action
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Static Field: activeRenderPipelineAssetChanged
+		Type: System.Action`2<UnityEngine.Rendering.RenderPipelineAsset,UnityEngine.Rendering.RenderPipelineAsset>
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Method: get_currentPipeline:
+		Accessibility: Public
+		Return Type: UnityEngine.Rendering.RenderPipeline
+		File Offset 0x024B8610
+		Ram Offset 0x1824b9810
+		Virtual Method Slot: 65535
+
+	Method: set_currentPipeline:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x024B8660
+		Ram Offset 0x1824b9860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Rendering.RenderPipeline
+			Default Value: 
+	Method: add_beginCameraRendering:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024B87E0
+		Ram Offset 0x1824b99e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`2<UnityEngine.Rendering.ScriptableRenderContext, UnityEngine.Camera>
+			Default Value: 
+	Method: remove_beginCameraRendering:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024B8950
+		Ram Offset 0x1824b9b50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`2<UnityEngine.Rendering.ScriptableRenderContext, UnityEngine.Camera>
+			Default Value: 
+	Method: add_endCameraRendering:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024B8AC0
+		Ram Offset 0x1824b9cc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`2<UnityEngine.Rendering.ScriptableRenderContext, UnityEngine.Camera>
+			Default Value: 
+	Method: remove_endCameraRendering:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024B8C30
+		Ram Offset 0x1824b9e30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`2<UnityEngine.Rendering.ScriptableRenderContext, UnityEngine.Camera>
+			Default Value: 
+	Method: BeginContextRendering:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x024B8DA0
+		Ram Offset 0x1824b9fa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: cameras
+			Type: System.Collections.Generic.List`1<UnityEngine.Camera>
+			Default Value: 
+	Method: BeginCameraRendering:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x024B8E90
+		Ram Offset 0x1824ba090
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+	Method: EndContextRendering:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x024B8F10
+		Ram Offset 0x1824ba110
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: cameras
+			Type: System.Collections.Generic.List`1<UnityEngine.Camera>
+			Default Value: 
+	Method: EndCameraRendering:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x024B9000
+		Ram Offset 0x1824ba200
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+	Method: OnActiveRenderPipelineTypeChanged:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x024B9080
+		Ram Offset 0x1824ba280
+		Virtual Method Slot: 65535
+
+	Method: OnActiveRenderPipelineAssetChanged:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x024B90F0
+		Ram Offset 0x1824ba2f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: from
+			Type: UnityEngine.ScriptableObject
+			Default Value: 
+		Parameter 1:
+			Name: to
+			Type: UnityEngine.ScriptableObject
+			Default Value: 
+	Method: HandleRenderPipelineChange:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x024B9200
+		Ram Offset 0x1824ba400
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pipelineAsset
+			Type: UnityEngine.Rendering.RenderPipelineAsset
+			Default Value: 
+	Method: CleanupRenderPipeline:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x024B92D0
+		Ram Offset 0x1824ba4d0
+		Virtual Method Slot: 65535
+
+	Method: GetCurrentPipelineAssetType:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x024B94D0
+		Ram Offset 0x1824ba6d0
+		Virtual Method Slot: 65535
+
+	Method: DoRenderLoop_Internal:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x024B9520
+		Ram Offset 0x1824ba720
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pipe
+			Type: UnityEngine.Rendering.RenderPipelineAsset
+			Default Value: 
+		Parameter 1:
+			Name: loopPtr
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 2:
+			Name: renderRequest
+			Type: UnityEngine.Object
+			Default Value: 
+	Method: PrepareRenderPipeline:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x024B9960
+		Ram Offset 0x1824bab60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pipelineAsset
+			Type: UnityEngine.Rendering.RenderPipelineAsset
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x024B9BA0
+		Ram Offset 0x1824bada0
+		Virtual Method Slot: 65535

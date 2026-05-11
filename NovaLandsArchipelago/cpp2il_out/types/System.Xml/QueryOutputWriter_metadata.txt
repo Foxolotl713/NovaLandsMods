@@ -1,0 +1,439 @@
+Type: System.Xml.QueryOutputWriter:
+	Base Class: 
+		System.Xml.XmlRawWriter
+
+	Interfaces:
+
+	Field: wrapped
+		Type: System.Xml.XmlRawWriter
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: inCDataSection
+		Type: System.Boolean
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: lookupCDataElems
+		Type: System.Collections.Generic.Dictionary`2<System.Xml.XmlQualifiedName,System.Int32>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: bitsCData
+		Type: System.Xml.BitStack
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: qnameCData
+		Type: System.Xml.XmlQualifiedName
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: outputDocType
+		Type: System.Boolean
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: checkWellFormedDoc
+		Type: System.Boolean
+		Offset in Defining Type: 0x49
+		Has Default: False
+
+	Field: hasDocElem
+		Type: System.Boolean
+		Offset in Defining Type: 0x4A
+		Has Default: False
+
+	Field: inAttr
+		Type: System.Boolean
+		Offset in Defining Type: 0x4B
+		Has Default: False
+
+	Field: systemId
+		Type: System.String
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: publicId
+		Type: System.String
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: depth
+		Type: System.Int32
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEE710
+		Ram Offset 0x181cef910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: writer
+			Type: System.Xml.XmlRawWriter
+			Default Value: 
+		Parameter 1:
+			Name: settings
+			Type: System.Xml.XmlWriterSettings
+			Default Value: 
+	Method: set_NamespaceResolver:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01CEEBC0
+		Ram Offset 0x181cefdc0
+		Virtual Method Slot: 39
+
+		Parameter 0:
+			Name: value
+			Type: System.Xml.IXmlNamespaceResolver
+			Default Value: 
+	Method: WriteXmlDeclaration:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01CEEC40
+		Ram Offset 0x181cefe40
+		Virtual Method Slot: 40
+
+		Parameter 0:
+			Name: standalone
+			Type: System.Xml.XmlStandalone
+			Default Value: 
+	Method: WriteXmlDeclaration:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01CEEC70
+		Ram Offset 0x181cefe70
+		Virtual Method Slot: 41
+
+		Parameter 0:
+			Name: xmldecl
+			Type: System.String
+			Default Value: 
+	Method: WriteDocType:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEECA0
+		Ram Offset 0x181cefea0
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: pubid
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: sysid
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: subset
+			Type: System.String
+			Default Value: 
+	Method: WriteStartElement:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEECE0
+		Ram Offset 0x181cefee0
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: prefix
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: localName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: ns
+			Type: System.String
+			Default Value: 
+	Method: WriteEndElement:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01CEEED0
+		Ram Offset 0x181cf00d0
+		Virtual Method Slot: 44
+
+		Parameter 0:
+			Name: prefix
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: localName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: ns
+			Type: System.String
+			Default Value: 
+	Method: WriteFullEndElement:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01CEEF60
+		Ram Offset 0x181cf0160
+		Virtual Method Slot: 45
+
+		Parameter 0:
+			Name: prefix
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: localName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: ns
+			Type: System.String
+			Default Value: 
+	Method: StartElementContent:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01CEEFF0
+		Ram Offset 0x181cf01f0
+		Virtual Method Slot: 42
+
+	Method: WriteStartAttribute:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF020
+		Ram Offset 0x181cf0220
+		Virtual Method Slot: 10
+
+		Parameter 0:
+			Name: prefix
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: localName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: ns
+			Type: System.String
+			Default Value: 
+	Method: WriteEndAttribute:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF060
+		Ram Offset 0x181cf0260
+		Virtual Method Slot: 11
+
+	Method: WriteNamespaceDeclaration:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01CEF090
+		Ram Offset 0x181cf0290
+		Virtual Method Slot: 46
+
+		Parameter 0:
+			Name: prefix
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ns
+			Type: System.String
+			Default Value: 
+	Method: get_SupportsNamespaceDeclarationInChunks:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01CEF0C0
+		Ram Offset 0x181cf02c0
+		Virtual Method Slot: 47
+
+	Method: WriteStartNamespaceDeclaration:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01CEF0F0
+		Ram Offset 0x181cf02f0
+		Virtual Method Slot: 48
+
+		Parameter 0:
+			Name: prefix
+			Type: System.String
+			Default Value: 
+	Method: WriteEndNamespaceDeclaration:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01CEF120
+		Ram Offset 0x181cf0320
+		Virtual Method Slot: 49
+
+	Method: WriteCData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF150
+		Ram Offset 0x181cf0350
+		Virtual Method Slot: 12
+
+		Parameter 0:
+			Name: text
+			Type: System.String
+			Default Value: 
+	Method: WriteComment:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF180
+		Ram Offset 0x181cf0380
+		Virtual Method Slot: 13
+
+		Parameter 0:
+			Name: text
+			Type: System.String
+			Default Value: 
+	Method: WriteProcessingInstruction:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF1B0
+		Ram Offset 0x181cf03b0
+		Virtual Method Slot: 14
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: text
+			Type: System.String
+			Default Value: 
+	Method: WriteWhitespace:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF1E0
+		Ram Offset 0x181cf03e0
+		Virtual Method Slot: 17
+
+		Parameter 0:
+			Name: ws
+			Type: System.String
+			Default Value: 
+	Method: WriteString:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF250
+		Ram Offset 0x181cf0450
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: text
+			Type: System.String
+			Default Value: 
+	Method: WriteChars:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF2C0
+		Ram Offset 0x181cf04c0
+		Virtual Method Slot: 20
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Char[]
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: WriteEntityRef:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF380
+		Ram Offset 0x181cf0580
+		Virtual Method Slot: 15
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: WriteCharEntity:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF3B0
+		Ram Offset 0x181cf05b0
+		Virtual Method Slot: 16
+
+		Parameter 0:
+			Name: ch
+			Type: System.Char
+			Default Value: 
+	Method: WriteSurrogateCharEntity:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF3E0
+		Ram Offset 0x181cf05e0
+		Virtual Method Slot: 19
+
+		Parameter 0:
+			Name: lowChar
+			Type: System.Char
+			Default Value: 
+		Parameter 1:
+			Name: highChar
+			Type: System.Char
+			Default Value: 
+	Method: WriteRaw:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF410
+		Ram Offset 0x181cf0610
+		Virtual Method Slot: 21
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Char[]
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: WriteRaw:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF4D0
+		Ram Offset 0x181cf06d0
+		Virtual Method Slot: 22
+
+		Parameter 0:
+			Name: data
+			Type: System.String
+			Default Value: 
+	Method: Close:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF540
+		Ram Offset 0x181cf0740
+		Virtual Method Slot: 26
+
+	Method: Flush:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CEF5F0
+		Ram Offset 0x181cf07f0
+		Virtual Method Slot: 27
+
+	Method: StartCDataSection:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01CEF620
+		Ram Offset 0x181cf0820
+		Virtual Method Slot: 65535
+
+	Method: EndCDataSection:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01941100
+		Ram Offset 0x181942300
+		Virtual Method Slot: 65535

@@ -1,0 +1,429 @@
+Type: Steamworks.SteamUser:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Method: GetHSteamUser:
+		Accessibility: Public
+		Return Type: Steamworks.HSteamUser
+		File Offset 0x00BA1D50
+		Ram Offset 0x180ba2f50
+		Virtual Method Slot: 65535
+
+	Method: BLoggedOn:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA1E00
+		Ram Offset 0x180ba3000
+		Virtual Method Slot: 65535
+
+	Method: GetSteamID:
+		Accessibility: Public
+		Return Type: Steamworks.CSteamID
+		File Offset 0x00BA1EB0
+		Ram Offset 0x180ba30b0
+		Virtual Method Slot: 65535
+
+	Method: InitiateGameConnection_DEPRECATED:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00BA1F50
+		Ram Offset 0x180ba3150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pAuthBlob
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: cbMaxAuthBlob
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: steamIDGameServer
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 3:
+			Name: unIPServer
+			Type: System.UInt32
+			Default Value: 
+		Parameter 4:
+			Name: usPortServer
+			Type: System.UInt16
+			Default Value: 
+		Parameter 5:
+			Name: bSecure
+			Type: System.Boolean
+			Default Value: 
+	Method: TerminateGameConnection_DEPRECATED:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00BA2070
+		Ram Offset 0x180ba3270
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: unIPServer
+			Type: System.UInt32
+			Default Value: 
+		Parameter 1:
+			Name: usPortServer
+			Type: System.UInt16
+			Default Value: 
+	Method: TrackAppUsageEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00BA2140
+		Ram Offset 0x180ba3340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: gameID
+			Type: Steamworks.CGameID
+			Default Value: 
+		Parameter 1:
+			Name: eAppUsageEvent
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: pchExtraInfo
+			Type: System.String
+			Default Value: 
+	Method: GetUserDataFolder:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA2320
+		Ram Offset 0x180ba3520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pchBuffer
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: cubBuffer
+			Type: System.Int32
+			Default Value: 
+	Method: StartVoiceRecording:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00BA24F0
+		Ram Offset 0x180ba36f0
+		Virtual Method Slot: 65535
+
+	Method: StopVoiceRecording:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00BA2560
+		Ram Offset 0x180ba3760
+		Virtual Method Slot: 65535
+
+	Method: GetAvailableVoice:
+		Accessibility: Public
+		Return Type: Steamworks.EVoiceResult
+		File Offset 0x00BA25D0
+		Ram Offset 0x180ba37d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pcbCompressed
+			Type: System.UInt32
+			Default Value: 
+	Method: GetVoice:
+		Accessibility: Public
+		Return Type: Steamworks.EVoiceResult
+		File Offset 0x00BA2690
+		Ram Offset 0x180ba3890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bWantCompressed
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: pDestBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: cbDestBufferSize
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: nBytesWritten
+			Type: System.UInt32
+			Default Value: 
+	Method: DecompressVoice:
+		Accessibility: Public
+		Return Type: Steamworks.EVoiceResult
+		File Offset 0x00BA27B0
+		Ram Offset 0x180ba39b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pCompressed
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: cbCompressed
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: pDestBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 3:
+			Name: cbDestBufferSize
+			Type: System.UInt32
+			Default Value: 
+		Parameter 4:
+			Name: nBytesWritten
+			Type: System.UInt32
+			Default Value: 
+		Parameter 5:
+			Name: nDesiredSampleRate
+			Type: System.UInt32
+			Default Value: 
+	Method: GetVoiceOptimalSampleRate:
+		Accessibility: Public
+		Return Type: System.UInt32
+		File Offset 0x00BA28E0
+		Ram Offset 0x180ba3ae0
+		Virtual Method Slot: 65535
+
+	Method: GetAuthSessionTicket:
+		Accessibility: Public
+		Return Type: Steamworks.HAuthTicket
+		File Offset 0x00BA2990
+		Ram Offset 0x180ba3b90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pTicket
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: cbMaxTicket
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: pcbTicket
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: pSteamNetworkingIdentity
+			Type: Steamworks.SteamNetworkingIdentity
+			Default Value: 
+	Method: GetAuthTicketForWebApi:
+		Accessibility: Public
+		Return Type: Steamworks.HAuthTicket
+		File Offset 0x00BA2B70
+		Ram Offset 0x180ba3d70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pchIdentity
+			Type: System.String
+			Default Value: 
+	Method: BeginAuthSession:
+		Accessibility: Public
+		Return Type: Steamworks.EBeginAuthSessionResult
+		File Offset 0x00BA2D80
+		Ram Offset 0x180ba3f80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pAuthTicket
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: cbAuthTicket
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: steamID
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: EndAuthSession:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00BA2E70
+		Ram Offset 0x180ba4070
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamID
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: CancelAuthTicket:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00BA2F30
+		Ram Offset 0x180ba4130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hAuthTicket
+			Type: Steamworks.HAuthTicket
+			Default Value: 
+	Method: UserHasLicenseForApp:
+		Accessibility: Public
+		Return Type: Steamworks.EUserHasLicenseForAppResult
+		File Offset 0x00BA2FF0
+		Ram Offset 0x180ba41f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamID
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: appID
+			Type: Steamworks.AppId_t
+			Default Value: 
+	Method: BIsBehindNAT:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA30C0
+		Ram Offset 0x180ba42c0
+		Virtual Method Slot: 65535
+
+	Method: AdvertiseGame:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00BA3170
+		Ram Offset 0x180ba4370
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDGameServer
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: unIPServer
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: usPortServer
+			Type: System.UInt16
+			Default Value: 
+	Method: RequestEncryptedAppTicket:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA3250
+		Ram Offset 0x180ba4450
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pDataToInclude
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: cbDataToInclude
+			Type: System.Int32
+			Default Value: 
+	Method: GetEncryptedAppTicket:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA3360
+		Ram Offset 0x180ba4560
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pTicket
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: cbMaxTicket
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: pcbTicket
+			Type: System.UInt32
+			Default Value: 
+	Method: GetGameBadgeLevel:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00BA3450
+		Ram Offset 0x180ba4650
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nSeries
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: bFoil
+			Type: System.Boolean
+			Default Value: 
+	Method: GetPlayerSteamLevel:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00BA3520
+		Ram Offset 0x180ba4720
+		Virtual Method Slot: 65535
+
+	Method: RequestStoreAuthURL:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA35D0
+		Ram Offset 0x180ba47d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pchRedirectURL
+			Type: System.String
+			Default Value: 
+	Method: BIsPhoneVerified:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA37E0
+		Ram Offset 0x180ba49e0
+		Virtual Method Slot: 65535
+
+	Method: BIsTwoFactorEnabled:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA3890
+		Ram Offset 0x180ba4a90
+		Virtual Method Slot: 65535
+
+	Method: BIsPhoneIdentifying:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA3940
+		Ram Offset 0x180ba4b40
+		Virtual Method Slot: 65535
+
+	Method: BIsPhoneRequiringVerification:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA39F0
+		Ram Offset 0x180ba4bf0
+		Virtual Method Slot: 65535
+
+	Method: GetMarketEligibility:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA3AA0
+		Ram Offset 0x180ba4ca0
+		Virtual Method Slot: 65535
+
+	Method: GetDurationControl:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00BA3B90
+		Ram Offset 0x180ba4d90
+		Virtual Method Slot: 65535
+
+	Method: BSetDurationControlOnlineState:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00BA3C80
+		Ram Offset 0x180ba4e80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eNewState
+			Type: Steamworks.EDurationControlOnlineState
+			Default Value: 

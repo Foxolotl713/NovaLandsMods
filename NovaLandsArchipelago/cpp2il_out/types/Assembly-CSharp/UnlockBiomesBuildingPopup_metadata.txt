@@ -1,0 +1,205 @@
+Type: UnlockBiomesBuildingPopup:
+	Base Class: 
+		BuildingPopup
+
+	Interfaces:
+
+	Field: ingredientsArea
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: ingredientPrefab
+		Type: ResourceAmountPairHUD
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: inputInventory
+		Type: MuttInventory.InventoryWindow
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: unlockBiomeButton
+		Type: UnityEngine.UI.Button
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: biomeUnlockingBuilding
+		Type: BiomesUnlockingBuilding
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: timeToCheckResourcesAvailability
+		Type: System.Single
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: currentTime
+		Type: System.Single
+		Offset in Defining Type: 0xC4
+		Has Default: False
+
+	Field: ingredients
+		Type: System.Collections.Generic.List`1<ResourceAmountPairHUD>
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: inventoryManager
+		Type: MuttInventory.InventoryManager
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: inventoriesParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: inputInventoryOriginalPosition
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006A91E0
+		Ram Offset 0x1806aa3e0
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+		Parameter 1:
+			Name: player
+			Type: BaseCharacter
+			Default Value: 
+	Method: InitInventory:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006A93B0
+		Ram Offset 0x1806aa5b0
+		Virtual Method Slot: 65535
+
+	Method: OnDisable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x006A97F0
+		Ram Offset 0x1806aa9f0
+		Virtual Method Slot: 10
+
+	Method: UpdateValues:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006A9AE0
+		Ram Offset 0x1806aace0
+		Virtual Method Slot: 11
+
+	Method: CheckResourcesAvailable:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006A9BE0
+		Ram Offset 0x1806aade0
+		Virtual Method Slot: 65535
+
+	Method: HasResourcesOnInputInventory:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x006A9EE0
+		Ram Offset 0x1806ab0e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resources
+			Type: ResourceAmountPairList
+			Default Value: 
+	Method: UpdateIngredientsAvailabilityFeedback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: UpdateIngredients:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: CanAddItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x006AA080
+		Ram Offset 0x1806ab280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: windowType
+			Type: MuttInventory.InventoryWindowType
+			Default Value: -1
+	Method: AddItemToInventory:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x006AA220
+		Ram Offset 0x1806ab420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: itemType
+			Type: MuttInventory.InventoryItemType
+			Default Value: 
+		Parameter 1:
+			Name: remainingItems
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: windowType
+			Type: MuttInventory.InventoryWindowType
+			Default Value: -1
+	Method: ConsumeResource:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006AA3A0
+		Ram Offset 0x1806ab5a0
+		Virtual Method Slot: 12
+
+		Parameter 0:
+			Name: resourceAmount
+			Type: ResourceAmountPair
+			Default Value: 
+	Method: UpdateInventoriesPositions:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006AA530
+		Ram Offset 0x1806ab730
+		Virtual Method Slot: 65535
+
+	Method: Update:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x006AA650
+		Ram Offset 0x1806ab850
+		Virtual Method Slot: 14
+
+	Method: OnClickUnlockButton:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0053A300
+		Ram Offset 0x18053b500
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006AA770
+		Ram Offset 0x1806ab970
+		Virtual Method Slot: 65535

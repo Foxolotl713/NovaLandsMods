@@ -1,0 +1,288 @@
+Type: System.Net.ServicePointScheduler:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		System.Net.ServicePointScheduler/ConnectionGroup
+		System.Net.ServicePointScheduler/AsyncManualResetEvent
+		System.Net.ServicePointScheduler/<RunScheduler>d__32
+		System.Net.ServicePointScheduler/<WaitAsync>d__46
+
+	Static Field: nextId
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: <ServicePoint>k__BackingField
+		Type: System.Net.ServicePoint
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: running
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: maxIdleTime
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: schedulerEvent
+		Type: System.Net.ServicePointScheduler/AsyncManualResetEvent
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: defaultGroup
+		Type: System.Net.ServicePointScheduler/ConnectionGroup
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: groups
+		Type: System.Collections.Generic.Dictionary`2<System.String,System.Net.ServicePointScheduler/ConnectionGroup>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: operations
+		Type: System.Collections.Generic.LinkedList`1<System.ValueTuple`2<System.Net.ServicePointScheduler/ConnectionGroup,System.Net.WebOperation>>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: idleConnections
+		Type: System.Collections.Generic.LinkedList`1<System.ValueTuple`3<System.Net.ServicePointScheduler/ConnectionGroup,System.Net.WebConnection,System.Threading.Tasks.Task>>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: currentConnections
+		Type: System.Int32
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: connectionLimit
+		Type: System.Int32
+		Offset in Defining Type: 0x4C
+		Has Default: False
+
+	Field: idleSince
+		Type: System.DateTime
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: ID
+		Type: System.Int32
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Method: get_ServicePoint:
+		Accessibility: Private
+		Return Type: System.Net.ServicePoint
+		File Offset 0x00386E40
+		Ram Offset 0x180388040
+		Virtual Method Slot: 65535
+
+	Method: set_ServicePoint:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00386E50
+		Ram Offset 0x180388050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Net.ServicePoint
+			Default Value: 
+	Method: get_MaxIdleTime:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00387E90
+		Ram Offset 0x180389090
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01F76720
+		Ram Offset 0x181f77920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: servicePoint
+			Type: System.Net.ServicePoint
+			Default Value: 
+		Parameter 1:
+			Name: connectionLimit
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: maxIdleTime
+			Type: System.Int32
+			Default Value: 
+	Method: Run:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01F76AC0
+		Ram Offset 0x181f77cc0
+		Virtual Method Slot: 65535
+
+	Method: RunScheduler:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01F76BC0
+		Ram Offset 0x181f77dc0
+		Virtual Method Slot: 65535
+
+	Method: Cleanup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F76D50
+		Ram Offset 0x181f77f50
+		Virtual Method Slot: 65535
+
+	Method: RunSchedulerIteration:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F76F60
+		Ram Offset 0x181f78160
+		Virtual Method Slot: 65535
+
+	Method: OperationCompleted:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F77150
+		Ram Offset 0x181f78350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: group
+			Type: System.Net.ServicePointScheduler/ConnectionGroup
+			Default Value: 
+		Parameter 1:
+			Name: operation
+			Type: System.Net.WebOperation
+			Default Value: 
+	Method: CloseIdleConnection:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F77400
+		Ram Offset 0x181f78600
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: group
+			Type: System.Net.ServicePointScheduler/ConnectionGroup
+			Default Value: 
+		Parameter 1:
+			Name: connection
+			Type: System.Net.WebConnection
+			Default Value: 
+	Method: SchedulerIteration:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F77450
+		Ram Offset 0x181f78650
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: group
+			Type: System.Net.ServicePointScheduler/ConnectionGroup
+			Default Value: 
+	Method: RemoveOperation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F77660
+		Ram Offset 0x181f78860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: operation
+			Type: System.Net.WebOperation
+			Default Value: 
+	Method: RemoveIdleConnection:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F77740
+		Ram Offset 0x181f78940
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: connection
+			Type: System.Net.WebConnection
+			Default Value: 
+	Method: FinalCleanup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F77820
+		Ram Offset 0x181f78a20
+		Virtual Method Slot: 65535
+
+	Method: SendRequest:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01F77B70
+		Ram Offset 0x181f78d70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: operation
+			Type: System.Net.WebOperation
+			Default Value: 
+		Parameter 1:
+			Name: groupName
+			Type: System.String
+			Default Value: 
+	Method: GetConnectionGroup:
+		Accessibility: Private
+		Return Type: System.Net.ServicePointScheduler/ConnectionGroup
+		File Offset 0x01F77DF0
+		Ram Offset 0x181f78ff0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: OnConnectionCreated:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F78150
+		Ram Offset 0x181f79350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: connection
+			Type: System.Net.WebConnection
+			Default Value: 
+	Method: OnConnectionClosed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F78160
+		Ram Offset 0x181f79360
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: connection
+			Type: System.Net.WebConnection
+			Default Value: 
+	Method: WaitAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<System.Boolean>
+		File Offset 0x01F78190
+		Ram Offset 0x181f79390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: workerTask
+			Type: System.Threading.Tasks.Task
+			Default Value: 
+		Parameter 1:
+			Name: millisecondTimeout
+			Type: System.Int32
+			Default Value: 
+	Method: <Run>b__31_0:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01F76BC0
+		Ram Offset 0x181f77dc0
+		Virtual Method Slot: 65535

@@ -1,0 +1,94 @@
+Type: <>c__DisplayClass45_4
+
+Method: System.Void WorldBiome/<>c__DisplayClass45_4::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void WorldBiome/<>c__DisplayClass45_4::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: WorldBiome/<>c__DisplayClass45_4
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean WorldBiome/<>c__DisplayClass45_4::<GetPossibleProps>b__4(BaseBuilding):	Method Body (x86 ASM):
+		0x1807F2860 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1807F2864 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1807F2867 je short 00000001807F288Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807F2869 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1807F286D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807F2870 je short 00000001807F288Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807F2872 mov rcx,[rax+508h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 1288 | None ||| N/A | N/A
+		0x1807F2879 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807F287C je short 00000001807F288Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807F287E mov eax,[rcx+40h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 64 | None ||| N/A | N/A
+		0x1807F2881 cmp [rdx+40h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 64 | None ||| N/A | N/A
+		0x1807F2884 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807F2887 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1807F288B ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807F288C call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807F2891 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean WorldBiome/<>c__DisplayClass45_4::<GetPossibleProps>b__4(BaseBuilding):
+		End of function at 0x1807F2892
+		Absolute End is at 0x1807F2892
+		Identified Jump Destination addresses:
+
+		0x1807F2864: [!] Compares {'x' (function parameter, type BaseBuilding)} and 0
+		0x1807F2867: Jumps to 0x1807F288C (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x1807F2869: [!] Reads field e from {'this' (function parameter, type WorldBiome/<>c__DisplayClass45_4)} and stores in a new local {'baseEnemy' (type BaseEnemy)}
+
+		0x1807F286D: [!] Compares {'baseEnemy' (type BaseEnemy)} and 0
+		0x1807F2870: Jumps to 0x1807F288C (which throws a NRE) if baseEnemy equals 0. Implicitly present in managed code, so ignored here.
+		0x1807F2872: [!] Reads field deadBodyProp from {'baseEnemy' (type BaseEnemy)} and stores in a new local {'deadBodyProp' (type BaseBuilding)}
+
+		0x1807F2879: [!] Compares {'deadBodyProp' (type BaseBuilding)} and 0
+		0x1807F287C: Jumps to 0x1807F288C (which throws a NRE) if deadBodyProp equals 0. Implicitly present in managed code, so ignored here.
+		0x1807F287E: [!] Reads field buildingId from {'deadBodyProp' (type BaseBuilding)} and stores in a new local {'buildingId' (type System.Int32)}
+
+		0x1807F2881: [!] Compares {field buildingId, read from local {'x' (function parameter, type BaseBuilding)}} and {'buildingId' (type System.Int32)}
+		0x1807F2884: [!] Sets the boolean {'local5' (type System.Boolean)} in rax to true if x.buildingId is equal to buildingId, otherwise false.
+		0x1807F288B: [!] Returns {'local5' (type System.Boolean)} from the function
+
+		0x1807F288C: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: WorldBiome/<>c__DisplayClass45_4
+	System.Boolean <GetPossibleProps>b__4(BaseBuilding x)
+		BaseEnemy baseEnemy = this.e
+		BaseBuilding deadBodyProp = baseEnemy.deadBodyProp
+		System.Int32 buildingId = deadBodyProp.buildingId
+		System.Boolean local5 = x.buildingId == buildingId
+		return local5
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld BaseEnemy WorldBiome/<>c__DisplayClass45_4::e
+	IL_0006: ldfld BaseBuilding BaseEnemy::deadBodyProp
+	IL_000b: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0010: stloc.0
+	IL_0011: ldarg.1
+	IL_0012: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0017: ldloc.0
+	IL_0018: ceq
+	IL_001a: ret
+	IL_001b: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0020: throw
+	
+

@@ -1,0 +1,82 @@
+Type: System.Security.Cryptography.MACTripleDES:
+	Base Class: 
+		System.Security.Cryptography.KeyedHashAlgorithm
+
+	Interfaces:
+
+	Field: m_encryptor
+		Type: System.Security.Cryptography.ICryptoTransform
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _cs
+		Type: System.Security.Cryptography.CryptoStream
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _ts
+		Type: System.Security.Cryptography.TailStream
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: m_bytesPerBlock
+		Type: System.Int32
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: des
+		Type: System.Security.Cryptography.TripleDES
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x017077D0
+		Ram Offset 0x1817089d0
+		Virtual Method Slot: 65535
+
+	Method: Initialize:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009C3D00
+		Ram Offset 0x1809c4f00
+		Virtual Method Slot: 18
+
+	Method: HashCore:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01707A30
+		Ram Offset 0x181708c30
+		Virtual Method Slot: 16
+
+		Parameter 0:
+			Name: rgbData
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: ibStart
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: cbSize
+			Type: System.Int32
+			Default Value: 
+	Method: HashFinal:
+		Accessibility: Family
+		Return Type: System.Byte[]
+		File Offset 0x01707CD0
+		Ram Offset 0x181708ed0
+		Virtual Method Slot: 17
+
+	Method: Dispose:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01707F90
+		Ram Offset 0x181709190
+		Virtual Method Slot: 12
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 

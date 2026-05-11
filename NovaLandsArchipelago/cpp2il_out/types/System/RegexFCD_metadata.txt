@@ -1,0 +1,187 @@
+Type: System.Text.RegularExpressions.RegexFCD:
+	Base Class: 
+		System.ValueType
+
+	Interfaces:
+
+	Field: _fcStack
+		Type: System.Collections.Generic.List`1<System.Text.RegularExpressions.RegexFC>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _intStack
+		Type: System.Collections.Generic.ValueListBuilder`1<System.Int32>
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Field: _skipAllChildren
+		Type: System.Boolean
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _skipchild
+		Type: System.Boolean
+		Offset in Defining Type: 0x29
+		Has Default: False
+
+	Field: _failed
+		Type: System.Boolean
+		Offset in Defining Type: 0x2A
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01EF70F0
+		Ram Offset 0x181ef82f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: intStack
+			Type: System.Span`1<System.Int32>
+			Default Value: 
+	Method: FirstChars:
+		Accessibility: Public
+		Return Type: System.Nullable`1<System.Text.RegularExpressions.RegexPrefix>
+		File Offset 0x01EF7210
+		Ram Offset 0x181ef8410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: System.Text.RegularExpressions.RegexTree
+			Default Value: 
+	Method: Prefix:
+		Accessibility: Public
+		Return Type: System.Text.RegularExpressions.RegexPrefix
+		File Offset 0x01EF7810
+		Ram Offset 0x181ef8a10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tree
+			Type: System.Text.RegularExpressions.RegexTree
+			Default Value: 
+	Method: Anchors:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01EF7C40
+		Ram Offset 0x181ef8e40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tree
+			Type: System.Text.RegularExpressions.RegexTree
+			Default Value: 
+	Method: AnchorFromType:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01EF7EC0
+		Ram Offset 0x181ef90c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Int32
+			Default Value: 
+	Method: PushInt:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01EF7F40
+		Ram Offset 0x181ef9140
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: i
+			Type: System.Int32
+			Default Value: 
+	Method: IntIsEmpty:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01EF7F80
+		Ram Offset 0x181ef9180
+		Virtual Method Slot: 65535
+
+	Method: PopInt:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01EF7FC0
+		Ram Offset 0x181ef91c0
+		Virtual Method Slot: 65535
+
+	Method: PushFC:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01EF8010
+		Ram Offset 0x181ef9210
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fc
+			Type: System.Text.RegularExpressions.RegexFC
+			Default Value: 
+	Method: FCIsEmpty:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01EF80B0
+		Ram Offset 0x181ef92b0
+		Virtual Method Slot: 65535
+
+	Method: PopFC:
+		Accessibility: Private
+		Return Type: System.Text.RegularExpressions.RegexFC
+		File Offset 0x01EF80F0
+		Ram Offset 0x181ef92f0
+		Virtual Method Slot: 65535
+
+	Method: TopFC:
+		Accessibility: Private
+		Return Type: System.Text.RegularExpressions.RegexFC
+		File Offset 0x01EF8160
+		Ram Offset 0x181ef9360
+		Virtual Method Slot: 65535
+
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01EF81E0
+		Ram Offset 0x181ef93e0
+		Virtual Method Slot: 65535
+
+	Method: RegexFCFromRegexTree:
+		Accessibility: Private
+		Return Type: System.Text.RegularExpressions.RegexFC
+		File Offset 0x01EF8220
+		Ram Offset 0x181ef9420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tree
+			Type: System.Text.RegularExpressions.RegexTree
+			Default Value: 
+	Method: SkipChild:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01A5F660
+		Ram Offset 0x181a60860
+		Virtual Method Slot: 65535
+
+	Method: CalculateFC:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01EF8440
+		Ram Offset 0x181ef9640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: NodeType
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: node
+			Type: System.Text.RegularExpressions.RegexNode
+			Default Value: 
+		Parameter 2:
+			Name: CurIndex
+			Type: System.Int32
+			Default Value: 

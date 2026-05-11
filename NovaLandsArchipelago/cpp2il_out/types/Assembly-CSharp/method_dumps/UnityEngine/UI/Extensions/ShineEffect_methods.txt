@@ -1,0 +1,972 @@
+Type: ShineEffect
+
+Method: System.Single UnityEngine.UI.Extensions.ShineEffect::get_Yoffset():	Method Body (x86 ASM):
+		0x1809727F0 movss xmm0,dword ptr [rcx+0E0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 224 | None ||| N/A | N/A
+		0x1809727F8 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809727F9 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Single UnityEngine.UI.Extensions.ShineEffect::get_Yoffset():
+		End of function at 0x1809727FA
+		Absolute End is at 0x1809727FA
+		Identified Jump Destination addresses:
+
+		0x1809727F0: [!] Reads field yoffset from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} and stores in a new local {'yoffset' (type System.Single)}
+
+		0x1809727F8: [!] Returns {'yoffset' (type System.Single)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.ShineEffect
+	System.Single get_Yoffset()
+		System.Single yoffset = this.yoffset
+		return yoffset
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Single UnityEngine.UI.Extensions.ShineEffect::yoffset
+	IL_0006: ret
+	
+
+Method: System.Void UnityEngine.UI.Extensions.ShineEffect::set_Yoffset(System.Single):	Method Body (x86 ASM):
+		0x180A4D680 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4D682 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180A4D686 mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180A4D689 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A4D68C movaps [rsp+20h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4D691 movaps xmm6,xmm1		; DEBUG: {Register}/XMM6 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D694 mov rdx,[rax+300h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 768 | None ||| N/A | N/A
+		0x180A4D69B call qword ptr [rax+2F8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 760 | None ||| N/A | N/A
+		0x180A4D6A1 movss dword ptr [rbx+0E0h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RBX | 224 | None ||| N/A | N/A
+		0x180A4D6A9 movaps xmm6,[rsp+20h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4D6AE add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180A4D6B2 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4D6B3 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4D6B4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.ShineEffect::set_Yoffset(System.Single):
+		End of function at 0x180A4D6B5
+		Absolute End is at 0x180A4D6B5
+		Identified Jump Destination addresses:
+
+		0x180A4D680: Saves the content of rbx to the stack
+		0x180A4D686: Loads the class pointer from this into a constant constant1 in register rax
+		0x180A4D689: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} from rcx into rbx
+		0x180A4D691: Copies {'value' (function parameter, type System.Single)} from xmm1 into xmm6
+		0x180A4D694: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::SetVerticesDirty() specific to UnityEngine.UI.Extensions.ShineEffect from the class pointer in rax, slot 28 (from memory offset 768) and stores in constant constant2
+		0x180A4D69B: [!] Calls managed method System.Void UnityEngine.UI.Graphic::SetVerticesDirty() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}
+
+		0x180A4D6A1: [!] Sets the field yoffset (Type System.Single) on local {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} to the value stored in {'value' (function parameter, type System.Single)}
+		0x180A4D6A9: Reads unknown value in stack, offset 32 (0x20) and stores the pointer in register xmm6 as new constant constant3
+		0x180A4D6B3: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.ShineEffect
+	System.Void set_Yoffset(System.Single value)
+
+		this.SetVerticesDirty()
+		this.yoffset = value
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: callvirt System.Void UnityEngine.UI.Graphic::SetVerticesDirty()
+	IL_0006: ldarg.0
+	IL_0007: ldarg.1
+	IL_0008: stfld System.Single UnityEngine.UI.Extensions.ShineEffect::yoffset
+	IL_000d: ret
+	
+
+Method: System.Single UnityEngine.UI.Extensions.ShineEffect::get_Width():	Method Body (x86 ASM):
+		0x180972810 movss xmm0,dword ptr [rcx+0E4h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 228 | None ||| N/A | N/A
+		0x180972818 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180972819 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Single UnityEngine.UI.Extensions.ShineEffect::get_Width():
+		End of function at 0x18097281A
+		Absolute End is at 0x18097281A
+		Identified Jump Destination addresses:
+
+		0x180972810: [!] Reads field width from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} and stores in a new local {'width' (type System.Single)}
+
+		0x180972818: [!] Returns {'width' (type System.Single)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.ShineEffect
+	System.Single get_Width()
+		System.Single width = this.width
+		return width
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Single UnityEngine.UI.Extensions.ShineEffect::width
+	IL_0006: ret
+	
+
+Method: System.Void UnityEngine.UI.Extensions.ShineEffect::set_Width(System.Single):	Method Body (x86 ASM):
+		0x180A4D6C0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4D6C2 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180A4D6C6 mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180A4D6C9 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A4D6CC movaps [rsp+20h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4D6D1 movaps xmm6,xmm1		; DEBUG: {Register}/XMM6 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D6D4 mov rdx,[rax+2E0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 736 | None ||| N/A | N/A
+		0x180A4D6DB call qword ptr [rax+2D8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 728 | None ||| N/A | N/A
+		0x180A4D6E1 movss dword ptr [rbx+0E4h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RBX | 228 | None ||| N/A | N/A
+		0x180A4D6E9 movaps xmm6,[rsp+20h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4D6EE add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180A4D6F2 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4D6F3 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4D6F4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.ShineEffect::set_Width(System.Single):
+		End of function at 0x180A4D6F5
+		Absolute End is at 0x180A4D6F5
+		Identified Jump Destination addresses:
+
+		0x180A4D6C0: Saves the content of rbx to the stack
+		0x180A4D6C6: Loads the class pointer from this into a constant constant1 in register rax
+		0x180A4D6C9: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} from rcx into rbx
+		0x180A4D6D1: Copies {'value' (function parameter, type System.Single)} from xmm1 into xmm6
+		0x180A4D6D4: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::SetAllDirty() specific to UnityEngine.UI.Extensions.ShineEffect from the class pointer in rax, slot 26 (from memory offset 736) and stores in constant constant2
+		0x180A4D6DB: [!] Calls managed method System.Void UnityEngine.UI.Graphic::SetAllDirty() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}
+
+		0x180A4D6E1: [!] Sets the field width (Type System.Single) on local {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} to the value stored in {'value' (function parameter, type System.Single)}
+		0x180A4D6E9: Reads unknown value in stack, offset 32 (0x20) and stores the pointer in register xmm6 as new constant constant3
+		0x180A4D6F3: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.ShineEffect
+	System.Void set_Width(System.Single value)
+
+		this.SetAllDirty()
+		this.width = value
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: callvirt System.Void UnityEngine.UI.Graphic::SetAllDirty()
+	IL_0006: ldarg.0
+	IL_0007: ldarg.1
+	IL_0008: stfld System.Single UnityEngine.UI.Extensions.ShineEffect::width
+	IL_000d: ret
+	
+
+Method: System.Void UnityEngine.UI.Extensions.ShineEffect::OnPopulateMesh(UnityEngine.UI.VertexHelper):	Method Body (x86 ASM):
+		0x180A4D700 mov rax,rsp		; DEBUG: {Register}/RAX {Register}/RSP ||| None | 0 | None ||| N/A | N/A
+		0x180A4D703 push rbp		; DEBUG: {Register}/RBP {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4D704 push rsi		; DEBUG: {Register}/RSI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4D705 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4D706 lea rbp,[rax-5Fh]		; DEBUG: {Register}/RBP {Memory}/None ||| RAX | 18446744073709551521 | None ||| N/A | N/A
+		0x180A4D70A sub rsp,0D0h		; DEBUG: {Register}/RSP {Immediate32to64}/None ||| None | 0 | None ||| N/A | 208
+		0x180A4D711 movaps [rax-28h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RAX | 18446744073709551576 | None ||| N/A | N/A
+		0x180A4D715 mov rsi,rdx		; DEBUG: {Register}/RSI {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A4D718 movaps [rax-38h],xmm7		; DEBUG: {Memory}/None {Register}/XMM7 ||| RAX | 18446744073709551560 | None ||| N/A | N/A
+		0x180A4D71C mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A4D71F movaps [rax-48h],xmm8		; DEBUG: {Memory}/None {Register}/XMM8 ||| RAX | 18446744073709551544 | None ||| N/A | N/A
+		0x180A4D724 mov rdx,rcx		; DEBUG: {Register}/RDX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A4D727 movaps [rax-58h],xmm9		; DEBUG: {Memory}/None {Register}/XMM9 ||| RAX | 18446744073709551528 | None ||| N/A | N/A
+		0x180A4D72C lea rcx,[rbp-49h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D730 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A4D733 movaps [rax-68h],xmm10		; DEBUG: {Memory}/None {Register}/XMM10 ||| RAX | 18446744073709551512 | None ||| N/A | N/A
+		0x180A4D738 call 000000018257C860h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4D73D movups xmm7,[rax]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A4D740 mov r8,[rdi]		; DEBUG: {Register}/R8 {Memory}/None ||| RDI | 0 | None ||| N/A | N/A
+		0x180A4D743 lea rcx,[rbp-49h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D747 movaps xmm10,xmm7		; DEBUG: {Register}/XMM10 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D74B movaps xmm6,xmm7		; DEBUG: {Register}/XMM6 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D74E shufps xmm10,xmm7,0FFh		; DEBUG: {Register}/XMM10 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D753 movaps xmm9,xmm7		; DEBUG: {Register}/XMM9 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D757 shufps xmm6,xmm7,55h		; DEBUG: {Register}/XMM6 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D75B mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A4D75E mov rax,[r8+298h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 664 | None ||| N/A | N/A
+		0x180A4D765 addss xmm10,xmm6		; DEBUG: {Register}/XMM10 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D76A mov r8,[r8+2A0h]		; DEBUG: {Register}/R8 {Memory}/None ||| R8 | 672 | None ||| N/A | N/A
+		0x180A4D771 shufps xmm9,xmm7,0AAh		; DEBUG: {Register}/XMM9 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D776 addss xmm9,xmm7		; DEBUG: {Register}/XMM9 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D77B movaps xmm8,xmm10		; DEBUG: {Register}/XMM8 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D77F subss xmm8,xmm6		; DEBUG: {Register}/XMM8 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D784 addss xmm8,xmm8		; DEBUG: {Register}/XMM8 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D789 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4D78B lea rcx,[rbp-59h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4D78F movups xmm0,[rax]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A4D792 movaps [rbp-59h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4D796 call 0000000180398E60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4D79B mov [rbp+67h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBP | 103 | None ||| N/A | N/A
+		0x180A4D79E test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4D7A1 je near ptr 0000000180A4DC06h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4D7A7 mov [rsp+0F8h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 248 | None ||| N/A | N/A
+		0x180A4D7AF xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A4D7B1 mov [rsp+100h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 256 | None ||| N/A | N/A
+		0x180A4D7B9 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4D7BC movaps [rsp+70h],xmm11		; DEBUG: {Memory}/None {Register}/XMM11 ||| RSP | 112 | None ||| N/A | N/A
+		0x180A4D7C2 movaps [rsp+60h],xmm12		; DEBUG: {Memory}/None {Register}/XMM12 ||| RSP | 96 | None ||| N/A | N/A
+		0x180A4D7C8 movaps [rsp+50h],xmm13		; DEBUG: {Memory}/None {Register}/XMM13 ||| RSP | 80 | None ||| N/A | N/A
+		0x180A4D7CE call 00000001825C2730h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4D7D3 movss xmm12,dword ptr [182E6EABCh]		; DEBUG: {Register}/XMM12 {Memory}/None ||| RIP | 6491138748 | None ||| N/A | N/A
+		0x180A4D7DC movaps xmm0,xmm8		; DEBUG: {Register}/XMM0 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D7E0 mulss xmm0,dword ptr [rdi+0E0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDI | 224 | None ||| N/A | N/A
+		0x180A4D7E8 movaps xmm2,xmm6		; DEBUG: {Register}/XMM2 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D7EB mov byte ptr [rbp+6Ah],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBP | 106 | None ||| N/A | 0
+		0x180A4D7EF mulss xmm2,dword ptr [rdi+0E4h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 228 | None ||| N/A | N/A
+		0x180A4D7F7 movaps xmm1,xmm7		; DEBUG: {Register}/XMM1 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D7FA subss xmm1,xmm12		; DEBUG: {Register}/XMM1 {Register}/XMM12 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D7FF xorps xmm11,xmm11		; DEBUG: {Register}/XMM11 {Register}/XMM11 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D803 addss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D807 xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D80A mov r8d,[rbp+67h]		; DEBUG: {Register}/R8D {Memory}/None ||| RBP | 103 | None ||| N/A | N/A
+		0x180A4D80E lea r9,[rbp-49h]		; DEBUG: {Register}/R9 {Memory}/None ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D812 unpcklps xmm1,xmm2		; DEBUG: {Register}/XMM1 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D815 lea rdx,[rbp-59h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4D819 xor r14d,r14d		; DEBUG: {Register}/R14D {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x180A4D81C movsd qword ptr [rbp-59h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4D821 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4D824 mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4D829 movss dword ptr [rbp-51h],xmm11		; DEBUG: {Memory}/None {Register}/XMM11 ||| RBP | 18446744073709551535 | None ||| N/A | N/A
+		0x180A4D82F movdqa [rbp-49h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D834 call 00000001825C38E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4D839 movaps xmm0,xmm8		; DEBUG: {Register}/XMM0 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D83D movaps xmm2,xmm6		; DEBUG: {Register}/XMM2 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D840 mulss xmm0,dword ptr [rdi+0E0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDI | 224 | None ||| N/A | N/A
+		0x180A4D848 movaps xmm1,xmm9		; DEBUG: {Register}/XMM1 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D84C mulss xmm2,dword ptr [rdi+0E4h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 228 | None ||| N/A | N/A
+		0x180A4D854 addss xmm1,xmm12		; DEBUG: {Register}/XMM1 {Register}/XMM12 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D859 addss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D85D movaps xmm0,[182E6EE10h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491139600 | None ||| N/A | N/A
+		0x180A4D864 mov r8d,[rbp+67h]		; DEBUG: {Register}/R8D {Memory}/None ||| RBP | 103 | None ||| N/A | N/A
+		0x180A4D868 lea r9,[rbp-49h]		; DEBUG: {Register}/R9 {Memory}/None ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D86C unpcklps xmm1,xmm2		; DEBUG: {Register}/XMM1 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D86F lea rdx,[rbp-59h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4D873 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4D876 movsd qword ptr [rbp-59h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4D87B movss dword ptr [rbp-51h],xmm11		; DEBUG: {Memory}/None {Register}/XMM11 ||| RBP | 18446744073709551535 | None ||| N/A | N/A
+		0x180A4D881 movdqa [rbp-49h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D886 mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4D88B call 00000001825C38E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4D890 mov r8,[rdi]		; DEBUG: {Register}/R8 {Memory}/None ||| RDI | 0 | None ||| N/A | N/A
+		0x180A4D893 lea rcx,[rbp-49h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D897 mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A4D89A mov rax,[r8+298h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 664 | None ||| N/A | N/A
+		0x180A4D8A1 mov r8,[r8+2A0h]		; DEBUG: {Register}/R8 {Memory}/None ||| R8 | 672 | None ||| N/A | N/A
+		0x180A4D8A8 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4D8AA movss xmm13,dword ptr [182E6E4A0h]		; DEBUG: {Register}/XMM13 {Memory}/None ||| RIP | 6491137184 | None ||| N/A | N/A
+		0x180A4D8B3 movaps xmm2,xmm6		; DEBUG: {Register}/XMM2 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D8B6 mulss xmm2,xmm13		; DEBUG: {Register}/XMM2 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D8BB movaps xmm1,xmm7		; DEBUG: {Register}/XMM1 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D8BE movss xmm0,dword ptr [rax+0Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 12 | None ||| N/A | N/A
+		0x180A4D8C3 subss xmm1,xmm12		; DEBUG: {Register}/XMM1 {Register}/XMM12 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D8C8 mulss xmm0,dword ptr [182E6EB6Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491138924 | None ||| N/A | N/A
+		0x180A4D8D0 mulss xmm2,dword ptr [rdi+0E4h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 228 | None ||| N/A | N/A
+		0x180A4D8D8 cvttss2si eax,xmm0		; DEBUG: {Register}/EAX {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D8DC movaps xmm0,xmm8		; DEBUG: {Register}/XMM0 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D8E0 mulss xmm0,dword ptr [rdi+0E0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDI | 224 | None ||| N/A | N/A
+		0x180A4D8E8 mov [rbp+6Ah],al		; DEBUG: {Memory}/None {Register}/AL ||| RBP | 106 | None ||| N/A | N/A
+		0x180A4D8EB addss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D8EF movaps xmm0,[182E6EE60h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491139680 | None ||| N/A | N/A
+		0x180A4D8F6 mov r8d,[rbp+67h]		; DEBUG: {Register}/R8D {Memory}/None ||| RBP | 103 | None ||| N/A | N/A
+		0x180A4D8FA lea r9,[rbp-49h]		; DEBUG: {Register}/R9 {Memory}/None ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D8FE unpcklps xmm1,xmm2		; DEBUG: {Register}/XMM1 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D901 lea rdx,[rbp-59h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4D905 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4D908 movsd qword ptr [rbp-59h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4D90D movss dword ptr [rbp-51h],xmm11		; DEBUG: {Memory}/None {Register}/XMM11 ||| RBP | 18446744073709551535 | None ||| N/A | N/A
+		0x180A4D913 movdqa [rbp-49h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D918 mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4D91D call 00000001825C38E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4D922 mulss xmm6,xmm13		; DEBUG: {Register}/XMM6 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D927 movaps xmm0,xmm8		; DEBUG: {Register}/XMM0 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D92B mulss xmm0,dword ptr [rdi+0E0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDI | 224 | None ||| N/A | N/A
+		0x180A4D933 movaps xmm1,xmm9		; DEBUG: {Register}/XMM1 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D937 mulss xmm6,dword ptr [rdi+0E4h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RDI | 228 | None ||| N/A | N/A
+		0x180A4D93F addss xmm1,xmm12		; DEBUG: {Register}/XMM1 {Register}/XMM12 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D944 addss xmm6,xmm0		; DEBUG: {Register}/XMM6 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D948 movaps xmm0,[182E6EE70h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491139696 | None ||| N/A | N/A
+		0x180A4D94F mov r8d,[rbp+67h]		; DEBUG: {Register}/R8D {Memory}/None ||| RBP | 103 | None ||| N/A | N/A
+		0x180A4D953 lea r9,[rbp-49h]		; DEBUG: {Register}/R9 {Memory}/None ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D957 unpcklps xmm1,xmm6		; DEBUG: {Register}/XMM1 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D95A lea rdx,[rbp-59h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4D95E mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4D961 movsd qword ptr [rbp-59h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4D966 movss dword ptr [rbp-51h],xmm11		; DEBUG: {Memory}/None {Register}/XMM11 ||| RBP | 18446744073709551535 | None ||| N/A | N/A
+		0x180A4D96C movdqa [rbp-49h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D971 mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4D976 call 00000001825C38E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4D97B mov r8,[rdi]		; DEBUG: {Register}/R8 {Memory}/None ||| RDI | 0 | None ||| N/A | N/A
+		0x180A4D97E lea rcx,[rbp-49h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D982 mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A4D985 mov rax,[r8+298h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 664 | None ||| N/A | N/A
+		0x180A4D98C mov r8,[r8+2A0h]		; DEBUG: {Register}/R8 {Memory}/None ||| R8 | 672 | None ||| N/A | N/A
+		0x180A4D993 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4D995 movaps xmm2,xmm10		; DEBUG: {Register}/XMM2 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D999 movaps xmm1,xmm7		; DEBUG: {Register}/XMM1 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D99C mulss xmm2,xmm13		; DEBUG: {Register}/XMM2 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D9A1 subss xmm1,xmm12		; DEBUG: {Register}/XMM1 {Register}/XMM12 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D9A6 movss xmm0,dword ptr [rax+0Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 12 | None ||| N/A | N/A
+		0x180A4D9AB mulss xmm0,dword ptr [182E6EB6Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491138924 | None ||| N/A | N/A
+		0x180A4D9B3 mulss xmm2,dword ptr [rdi+0E4h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 228 | None ||| N/A | N/A
+		0x180A4D9BB cvttss2si eax,xmm0		; DEBUG: {Register}/EAX {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D9BF movaps xmm0,xmm8		; DEBUG: {Register}/XMM0 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D9C3 mulss xmm0,dword ptr [rdi+0E0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDI | 224 | None ||| N/A | N/A
+		0x180A4D9CB mov [rbp+6Ah],al		; DEBUG: {Memory}/None {Register}/AL ||| RBP | 106 | None ||| N/A | N/A
+		0x180A4D9CE addss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D9D2 movaps xmm0,[182E6EE60h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491139680 | None ||| N/A | N/A
+		0x180A4D9D9 mov r8d,[rbp+67h]		; DEBUG: {Register}/R8D {Memory}/None ||| RBP | 103 | None ||| N/A | N/A
+		0x180A4D9DD lea r9,[rbp-49h]		; DEBUG: {Register}/R9 {Memory}/None ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D9E1 unpcklps xmm1,xmm2		; DEBUG: {Register}/XMM1 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A4D9E4 lea rdx,[rbp-59h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4D9E8 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4D9EB movsd qword ptr [rbp-59h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4D9F0 movss dword ptr [rbp-51h],xmm11		; DEBUG: {Memory}/None {Register}/XMM11 ||| RBP | 18446744073709551535 | None ||| N/A | N/A
+		0x180A4D9F6 movdqa [rbp-49h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4D9FB mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4DA00 call 00000001825C38E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DA05 movaps xmm0,xmm8		; DEBUG: {Register}/XMM0 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DA09 movaps xmm2,xmm10		; DEBUG: {Register}/XMM2 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DA0D mulss xmm0,dword ptr [rdi+0E0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDI | 224 | None ||| N/A | N/A
+		0x180A4DA15 movaps xmm1,xmm9		; DEBUG: {Register}/XMM1 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DA19 mulss xmm2,xmm13		; DEBUG: {Register}/XMM2 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DA1E addss xmm1,xmm12		; DEBUG: {Register}/XMM1 {Register}/XMM12 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DA23 mulss xmm2,dword ptr [rdi+0E4h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 228 | None ||| N/A | N/A
+		0x180A4DA2B addss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DA2F movaps xmm0,[182E6EE70h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491139696 | None ||| N/A | N/A
+		0x180A4DA36 mov r8d,[rbp+67h]		; DEBUG: {Register}/R8D {Memory}/None ||| RBP | 103 | None ||| N/A | N/A
+		0x180A4DA3A lea r9,[rbp-49h]		; DEBUG: {Register}/R9 {Memory}/None ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4DA3E unpcklps xmm1,xmm2		; DEBUG: {Register}/XMM1 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DA41 lea rdx,[rbp-59h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4DA45 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DA48 movsd qword ptr [rbp-59h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4DA4D movss dword ptr [rbp-51h],xmm11		; DEBUG: {Memory}/None {Register}/XMM11 ||| RBP | 18446744073709551535 | None ||| N/A | N/A
+		0x180A4DA53 movdqa [rbp-49h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4DA58 mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4DA5D call 00000001825C38E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DA62 mov rax,[rdi]		; DEBUG: {Register}/RAX {Memory}/None ||| RDI | 0 | None ||| N/A | N/A
+		0x180A4DA65 lea rcx,[rbp-49h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4DA69 mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DA6C mov r8,[rax+2A0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 672 | None ||| N/A | N/A
+		0x180A4DA73 call qword ptr [rax+298h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 664 | None ||| N/A | N/A
+		0x180A4DA79 movaps xmm0,xmm8		; DEBUG: {Register}/XMM0 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DA7D mov [rbp+6Ah],r14b		; DEBUG: {Memory}/None {Register}/R14L ||| RBP | 106 | None ||| N/A | N/A
+		0x180A4DA81 mulss xmm0,dword ptr [rdi+0E0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDI | 224 | None ||| N/A | N/A
+		0x180A4DA89 subss xmm7,xmm12		; DEBUG: {Register}/XMM7 {Register}/XMM12 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DA8E movaps xmm2,xmm10		; DEBUG: {Register}/XMM2 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DA92 mulss xmm2,dword ptr [rdi+0E4h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 228 | None ||| N/A | N/A
+		0x180A4DA9A addss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DA9E movaps xmm0,[182E6EE60h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491139680 | None ||| N/A | N/A
+		0x180A4DAA5 mov r8d,[rbp+67h]		; DEBUG: {Register}/R8D {Memory}/None ||| RBP | 103 | None ||| N/A | N/A
+		0x180A4DAA9 lea r9,[rbp-49h]		; DEBUG: {Register}/R9 {Memory}/None ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4DAAD movaps xmm1,xmm7		; DEBUG: {Register}/XMM1 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DAB0 movss dword ptr [rbp-51h],xmm11		; DEBUG: {Memory}/None {Register}/XMM11 ||| RBP | 18446744073709551535 | None ||| N/A | N/A
+		0x180A4DAB6 unpcklps xmm1,xmm2		; DEBUG: {Register}/XMM1 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DAB9 lea rdx,[rbp-59h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4DABD mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DAC0 movsd qword ptr [rbp-59h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4DAC5 movdqa [rbp-49h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4DACA mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4DACF call 00000001825C38E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DAD4 mulss xmm10,dword ptr [rdi+0E4h]		; DEBUG: {Register}/XMM10 {Memory}/None ||| RDI | 228 | None ||| N/A | N/A
+		0x180A4DADD addss xmm9,xmm12		; DEBUG: {Register}/XMM9 {Register}/XMM12 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DAE2 mulss xmm8,dword ptr [rdi+0E0h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RDI | 224 | None ||| N/A | N/A
+		0x180A4DAEB movaps xmm0,[182E6EE70h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491139696 | None ||| N/A | N/A
+		0x180A4DAF2 addss xmm10,xmm8		; DEBUG: {Register}/XMM10 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DAF7 mov r8d,[rbp+67h]		; DEBUG: {Register}/R8D {Memory}/None ||| RBP | 103 | None ||| N/A | N/A
+		0x180A4DAFB lea r9,[rbp-49h]		; DEBUG: {Register}/R9 {Memory}/None ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4DAFF movaps xmm1,xmm9		; DEBUG: {Register}/XMM1 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DB03 movss dword ptr [rbp-51h],xmm11		; DEBUG: {Memory}/None {Register}/XMM11 ||| RBP | 18446744073709551535 | None ||| N/A | N/A
+		0x180A4DB09 unpcklps xmm1,xmm10		; DEBUG: {Register}/XMM1 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DB0D lea rdx,[rbp-59h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4DB11 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DB14 movsd qword ptr [rbp-59h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551527 | None ||| N/A | N/A
+		0x180A4DB19 movdqa [rbp-49h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551543 | None ||| N/A | N/A
+		0x180A4DB1E mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4DB23 call 00000001825C38E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DB28 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A4DB2A mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4DB2F lea r9d,[r14+2]		; DEBUG: {Register}/R9D {Memory}/None ||| R14 | 2 | None ||| N/A | N/A
+		0x180A4DB33 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DB36 lea r8d,[r14+1]		; DEBUG: {Register}/R8D {Memory}/None ||| R14 | 1 | None ||| N/A | N/A
+		0x180A4DB3A call 00000001825C3B80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DB3F lea edx,[r14+2]		; DEBUG: {Register}/EDX {Memory}/None ||| R14 | 2 | None ||| N/A | N/A
+		0x180A4DB43 mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4DB48 lea r9d,[r14+1]		; DEBUG: {Register}/R9D {Memory}/None ||| R14 | 1 | None ||| N/A | N/A
+		0x180A4DB4C mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DB4F lea r8d,[r14+3]		; DEBUG: {Register}/R8D {Memory}/None ||| R14 | 3 | None ||| N/A | N/A
+		0x180A4DB53 call 00000001825C3B80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DB58 lea edx,[r14+2]		; DEBUG: {Register}/EDX {Memory}/None ||| R14 | 2 | None ||| N/A | N/A
+		0x180A4DB5C mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4DB61 lea r9d,[r14+4]		; DEBUG: {Register}/R9D {Memory}/None ||| R14 | 4 | None ||| N/A | N/A
+		0x180A4DB65 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DB68 lea r8d,[r14+3]		; DEBUG: {Register}/R8D {Memory}/None ||| R14 | 3 | None ||| N/A | N/A
+		0x180A4DB6C call 00000001825C3B80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DB71 lea edx,[r14+4]		; DEBUG: {Register}/EDX {Memory}/None ||| R14 | 4 | None ||| N/A | N/A
+		0x180A4DB75 mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4DB7A lea r9d,[r14+3]		; DEBUG: {Register}/R9D {Memory}/None ||| R14 | 3 | None ||| N/A | N/A
+		0x180A4DB7E mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DB81 lea r8d,[r14+5]		; DEBUG: {Register}/R8D {Memory}/None ||| R14 | 5 | None ||| N/A | N/A
+		0x180A4DB85 call 00000001825C3B80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DB8A lea edx,[r14+4]		; DEBUG: {Register}/EDX {Memory}/None ||| R14 | 4 | None ||| N/A | N/A
+		0x180A4DB8E mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4DB93 lea r9d,[r14+6]		; DEBUG: {Register}/R9D {Memory}/None ||| R14 | 6 | None ||| N/A | N/A
+		0x180A4DB97 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DB9A lea r8d,[r14+5]		; DEBUG: {Register}/R8D {Memory}/None ||| R14 | 5 | None ||| N/A | N/A
+		0x180A4DB9E call 00000001825C3B80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DBA3 lea edx,[r14+6]		; DEBUG: {Register}/EDX {Memory}/None ||| R14 | 6 | None ||| N/A | N/A
+		0x180A4DBA7 mov [rsp+20h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4DBAC lea r9d,[r14+5]		; DEBUG: {Register}/R9D {Memory}/None ||| R14 | 5 | None ||| N/A | N/A
+		0x180A4DBB0 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DBB3 lea r8d,[r14+7]		; DEBUG: {Register}/R8D {Memory}/None ||| R14 | 7 | None ||| N/A | N/A
+		0x180A4DBB7 call 00000001825C3B80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DBBC movaps xmm13,[rsp+50h]		; DEBUG: {Register}/XMM13 {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x180A4DBC2 lea r11,[rsp+0D0h]		; DEBUG: {Register}/R11 {Memory}/None ||| RSP | 208 | None ||| N/A | N/A
+		0x180A4DBCA movaps xmm6,[r11-10h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| R11 | 18446744073709551600 | None ||| N/A | N/A
+		0x180A4DBCF movaps xmm7,[r11-20h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| R11 | 18446744073709551584 | None ||| N/A | N/A
+		0x180A4DBD4 movaps xmm8,[r11-30h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| R11 | 18446744073709551568 | None ||| N/A | N/A
+		0x180A4DBD9 movaps xmm9,[r11-40h]		; DEBUG: {Register}/XMM9 {Memory}/None ||| R11 | 18446744073709551552 | None ||| N/A | N/A
+		0x180A4DBDE movaps xmm10,[r11-50h]		; DEBUG: {Register}/XMM10 {Memory}/None ||| R11 | 18446744073709551536 | None ||| N/A | N/A
+		0x180A4DBE3 movaps xmm12,[rsp+60h]		; DEBUG: {Register}/XMM12 {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x180A4DBE9 movaps xmm11,[rsp+70h]		; DEBUG: {Register}/XMM11 {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x180A4DBEF mov r14,[rsp+100h]		; DEBUG: {Register}/R14 {Memory}/None ||| RSP | 256 | None ||| N/A | N/A
+		0x180A4DBF7 mov rbx,[rsp+0F8h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 248 | None ||| N/A | N/A
+		0x180A4DBFF mov rsp,r11		; DEBUG: {Register}/RSP {Register}/R11 ||| None | 0 | None ||| N/A | N/A
+		0x180A4DC02 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4DC03 pop rsi		; DEBUG: {Register}/RSI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4DC04 pop rbp		; DEBUG: {Register}/RBP {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4DC05 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4DC06 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DC0B int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.ShineEffect::OnPopulateMesh(UnityEngine.UI.VertexHelper):
+		End of function at 0x180A4DC0C
+		Absolute End is at 0x180A4DC0C
+		Identified Jump Destination addresses:
+
+		0x180A4D703: Saves the content of rbp to the stack
+		0x180A4D704: Saves the content of rsi to the stack
+		0x180A4D705: Saves the content of rdi to the stack
+		0x180A4D715: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rdx into rsi
+		0x180A4D71C: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} from rcx into rdi
+		0x180A4D724: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} from rcx into rdx
+		0x180A4D738: [!] Calls managed method UnityEngine.Rect UnityEngine.UI.Graphic::GetPixelAdjustedRect() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} and stores the result in {'pixelAdjustedRect' (type UnityEngine.Rect)}
+
+		0x180A4D73D: Loads the class pointer from pixelAdjustedRect into a constant constant1 in register xmm7
+		0x180A4D740: Loads the class pointer from this into a constant constant2 in register r8
+		0x180A4D747: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm7 into xmm10
+		0x180A4D74B: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm7 into xmm6
+		0x180A4D753: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm7 into xmm9
+		0x180A4D75B: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} from rdi into rdx
+		0x180A4D75E: Loads the pointer to the implementation of virtual function UnityEngine.Color UnityEngine.UI.Graphic::get_color() specific to UnityEngine.UI.Extensions.ShineEffect from the class pointer in r8, slot 22 (from memory offset 664) and stores in constant constant3
+		0x180A4D76A: Loads the pointer to the implementation of virtual function UnityEngine.Color UnityEngine.UI.Graphic::get_color() specific to UnityEngine.UI.Extensions.ShineEffect from the class pointer in r8, slot 22 (from memory offset 672) and stores in constant constant4
+		0x180A4D77B: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm10 into xmm8
+		0x180A4D789: [!] Calls managed method UnityEngine.Color UnityEngine.UI.Graphic::get_color() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} and stores the result in {'color' (type UnityEngine.Color)}
+
+		0x180A4D78F: Loads the class pointer from color into a constant constant5 in register xmm0
+		0x180A4D79E: [!] Compares {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and 0
+		0x180A4D7A1: Jumps to 0x180A4DC06 (which throws a NRE) if vh equals 0. Implicitly present in managed code, so ignored here.
+		0x180A4D7B9: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4D7CE: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::Clear() on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)}
+
+		0x180A4D7D3: Reads {Unknown Global at 0x182E6EABC, first ten bytes are [0 0 72 66 224 46 101 66 225 46], or as chars "  HBà.eBá."} into register xmm12 as a constant constant7
+		0x180A4D7DC: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm8 into xmm0
+		0x180A4D7E0: Multiplies  by the field yoffset from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local6' (type System.Single)} in register xmm0
+		0x180A4D7E8: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm6 into xmm2
+		0x180A4D7EF: Multiplies  by the field width from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local7' (type System.Single)} in register xmm2
+		0x180A4D7F7: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm7 into xmm1
+		0x180A4D819: Clears register r14, yielding zero-local {'local10' (type System.Int32)}
+		0x180A4D821: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4D824: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4D834: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddVert(UnityEngine.Vector3,UnityEngine.Color32,UnityEngine.Vector4) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A4D839: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm8 into xmm0
+		0x180A4D83D: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm6 into xmm2
+		0x180A4D840: Multiplies  by the field yoffset from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local11' (type System.Single)} in register xmm0
+		0x180A4D848: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm9 into xmm1
+		0x180A4D84C: Multiplies  by the field width from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local12' (type System.Single)} in register xmm2
+		0x180A4D85D: Reads {Unknown Global at 0x182E6EE10, first ten bytes are [0 0 128 63 0 0 0 0 0 0], or as chars "  ?      "} into register xmm0 as a constant constant8
+		0x180A4D873: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4D886: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4D88B: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddVert(UnityEngine.Vector3,UnityEngine.Color32,UnityEngine.Vector4) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A4D890: Loads the class pointer from this into a constant constant9 in register r8
+		0x180A4D897: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} from rdi into rdx
+		0x180A4D89A: Loads the pointer to the implementation of virtual function UnityEngine.Color UnityEngine.UI.Graphic::get_color() specific to UnityEngine.UI.Extensions.ShineEffect from the class pointer in r8, slot 22 (from memory offset 664) and stores in constant constant10
+		0x180A4D8A1: Loads the pointer to the implementation of virtual function UnityEngine.Color UnityEngine.UI.Graphic::get_color() specific to UnityEngine.UI.Extensions.ShineEffect from the class pointer in r8, slot 22 (from memory offset 672) and stores in constant constant11
+		0x180A4D8A8: [!] Calls managed method UnityEngine.Color UnityEngine.UI.Graphic::get_color() on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and stores the result in {'color2' (type UnityEngine.Color)}
+
+		0x180A4D8AA: Reads {Unknown Global at 0x182E6E4A0, first ten bytes are [0 0 128 62 184 30 133 62 146 10], or as chars "  >¸>
+"} into register xmm13 as a constant constant12
+		0x180A4D8B3: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm6 into xmm2
+		0x180A4D8BB: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm7 into xmm1
+		0x180A4D8BE: [!] Reads field a from {'color2' (type UnityEngine.Color)} and stores in a new local {'single' (type System.Single)}
+
+		0x180A4D8C8: Multiplies {'single' (type System.Single)} by the constant value at 0x182E6EB6C in the binary, which is 255, and stores the result in new local {'local15' (type System.Single)} in register xmm0
+		0x180A4D8D0: Multiplies  by the field width from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local16' (type System.Single)} in register xmm2
+		0x180A4D8DC: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm8 into xmm0
+		0x180A4D8E0: Multiplies  by the field yoffset from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local17' (type System.Single)} in register xmm0
+		0x180A4D8EF: Reads {Unknown Global at 0x182E6EE60, first ten bytes are [0 0 0 0 0 0 128 63 0 0], or as chars "      ?  "} into register xmm0 as a constant constant13
+		0x180A4D905: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4D918: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4D91D: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddVert(UnityEngine.Vector3,UnityEngine.Color32,UnityEngine.Vector4) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A4D927: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm8 into xmm0
+		0x180A4D92B: Multiplies  by the field yoffset from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local18' (type System.Single)} in register xmm0
+		0x180A4D933: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm9 into xmm1
+		0x180A4D937: Multiplies  by the field width from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local19' (type System.Single)} in register xmm6
+		0x180A4D948: Reads {Unknown Global at 0x182E6EE70, first ten bytes are [0 0 128 63 0 0 128 63 0 0], or as chars "  ?  ?  "} into register xmm0 as a constant constant14
+		0x180A4D95E: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4D971: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4D976: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddVert(UnityEngine.Vector3,UnityEngine.Color32,UnityEngine.Vector4) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A4D97B: Loads the class pointer from this into a constant constant15 in register r8
+		0x180A4D982: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} from rdi into rdx
+		0x180A4D985: Loads the pointer to the implementation of virtual function UnityEngine.Color UnityEngine.UI.Graphic::get_color() specific to UnityEngine.UI.Extensions.ShineEffect from the class pointer in r8, slot 22 (from memory offset 664) and stores in constant constant16
+		0x180A4D98C: Loads the pointer to the implementation of virtual function UnityEngine.Color UnityEngine.UI.Graphic::get_color() specific to UnityEngine.UI.Extensions.ShineEffect from the class pointer in r8, slot 22 (from memory offset 672) and stores in constant constant17
+		0x180A4D993: [!] Calls managed method UnityEngine.Color UnityEngine.UI.Graphic::get_color() on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and stores the result in {'color3' (type UnityEngine.Color)}
+
+		0x180A4D995: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm10 into xmm2
+		0x180A4D999: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm7 into xmm1
+		0x180A4D9A6: [!] Reads field a from {'color3' (type UnityEngine.Color)} and stores in a new local {'single2' (type System.Single)}
+
+		0x180A4D9AB: Multiplies {'single2' (type System.Single)} by the constant value at 0x182E6EB6C in the binary, which is 255, and stores the result in new local {'local22' (type System.Single)} in register xmm0
+		0x180A4D9B3: Multiplies  by the field width from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local23' (type System.Single)} in register xmm2
+		0x180A4D9BF: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm8 into xmm0
+		0x180A4D9C3: Multiplies  by the field yoffset from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local24' (type System.Single)} in register xmm0
+		0x180A4D9D2: Reads {Unknown Global at 0x182E6EE60, first ten bytes are [0 0 0 0 0 0 128 63 0 0], or as chars "      ?  "} into register xmm0 as a constant constant18
+		0x180A4D9E8: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4D9FB: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4DA00: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddVert(UnityEngine.Vector3,UnityEngine.Color32,UnityEngine.Vector4) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A4DA05: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm8 into xmm0
+		0x180A4DA09: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm10 into xmm2
+		0x180A4DA0D: Multiplies  by the field yoffset from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local25' (type System.Single)} in register xmm0
+		0x180A4DA15: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm9 into xmm1
+		0x180A4DA23: Multiplies  by the field width from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local26' (type System.Single)} in register xmm2
+		0x180A4DA2F: Reads {Unknown Global at 0x182E6EE70, first ten bytes are [0 0 128 63 0 0 128 63 0 0], or as chars "  ?  ?  "} into register xmm0 as a constant constant19
+		0x180A4DA45: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4DA58: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4DA5D: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddVert(UnityEngine.Vector3,UnityEngine.Color32,UnityEngine.Vector4) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A4DA62: Loads the class pointer from this into a constant constant20 in register rax
+		0x180A4DA69: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} from rdi into rdx
+		0x180A4DA6C: Loads the pointer to the implementation of virtual function UnityEngine.Color UnityEngine.UI.Graphic::get_color() specific to UnityEngine.UI.Extensions.ShineEffect from the class pointer in rax, slot 22 (from memory offset 672) and stores in constant constant21
+		0x180A4DA73: [!] Calls managed method UnityEngine.Color UnityEngine.UI.Graphic::get_color() on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and stores the result in {'color4' (type UnityEngine.Color)}
+
+		0x180A4DA79: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm8 into xmm0
+		0x180A4DA81: Multiplies  by the field yoffset from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local28' (type System.Single)} in register xmm0
+		0x180A4DA8E: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm10 into xmm2
+		0x180A4DA92: Multiplies  by the field width from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local29' (type System.Single)} in register xmm2
+		0x180A4DA9E: Reads {Unknown Global at 0x182E6EE60, first ten bytes are [0 0 0 0 0 0 128 63 0 0], or as chars "      ?  "} into register xmm0 as a constant constant22
+		0x180A4DAAD: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm7 into xmm1
+		0x180A4DABD: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4DACA: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4DACF: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddVert(UnityEngine.Vector3,UnityEngine.Color32,UnityEngine.Vector4) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A4DAD4: Multiplies  by the field width from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local30' (type System.Single)} in register xmm10
+		0x180A4DAE2: Multiplies  by the field yoffset from {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}, and stores the result in new local {'local31' (type System.Single)} in register xmm8
+		0x180A4DAEB: Reads {Unknown Global at 0x182E6EE70, first ten bytes are [0 0 128 63 0 0 128 63 0 0], or as chars "  ?  ?  "} into register xmm0 as a constant constant23
+		0x180A4DAFF: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm9 into xmm1
+		0x180A4DB11: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4DB1E: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4DB23: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddVert(UnityEngine.Vector3,UnityEngine.Color32,UnityEngine.Vector4) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A4DB28: Clears register rdx, yielding zero-local {'local32' (type System.Int32)}
+		0x180A4DB2A: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4DB2F: [!] Loads the constant value 2 into the register r9 as constant constant24 using an LEA instruction
+		0x180A4DB33: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4DB36: [!] Loads the constant value 1 into the register r8 as constant constant25 using an LEA instruction
+		0x180A4DB3A: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddTriangle(System.Int32,System.Int32,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} with arguments [{'local32' (type System.Int32)}, 1, 2]
+
+		0x180A4DB3F: [!] Loads the constant value 2 into the register rdx as constant constant26 using an LEA instruction
+		0x180A4DB43: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4DB48: [!] Loads the constant value 1 into the register r9 as constant constant27 using an LEA instruction
+		0x180A4DB4C: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4DB4F: [!] Loads the constant value 3 into the register r8 as constant constant28 using an LEA instruction
+		0x180A4DB53: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddTriangle(System.Int32,System.Int32,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} with arguments [2, 3, 1]
+
+		0x180A4DB58: [!] Loads the constant value 2 into the register rdx as constant constant29 using an LEA instruction
+		0x180A4DB5C: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4DB61: [!] Loads the constant value 4 into the register r9 as constant constant30 using an LEA instruction
+		0x180A4DB65: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4DB68: [!] Loads the constant value 3 into the register r8 as constant constant31 using an LEA instruction
+		0x180A4DB6C: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddTriangle(System.Int32,System.Int32,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} with arguments [2, 3, 4]
+
+		0x180A4DB71: [!] Loads the constant value 4 into the register rdx as constant constant32 using an LEA instruction
+		0x180A4DB75: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4DB7A: [!] Loads the constant value 3 into the register r9 as constant constant33 using an LEA instruction
+		0x180A4DB7E: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4DB81: [!] Loads the constant value 5 into the register r8 as constant constant34 using an LEA instruction
+		0x180A4DB85: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddTriangle(System.Int32,System.Int32,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} with arguments [4, 5, 3]
+
+		0x180A4DB8A: [!] Loads the constant value 4 into the register rdx as constant constant35 using an LEA instruction
+		0x180A4DB8E: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4DB93: [!] Loads the constant value 6 into the register r9 as constant constant36 using an LEA instruction
+		0x180A4DB97: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4DB9A: [!] Loads the constant value 5 into the register r8 as constant constant37 using an LEA instruction
+		0x180A4DB9E: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddTriangle(System.Int32,System.Int32,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} with arguments [4, 5, 6]
+
+		0x180A4DBA3: [!] Loads the constant value 6 into the register rdx as constant constant38 using an LEA instruction
+		0x180A4DBA7: Moves local10 (type System.Int32) from register r14 to the stack at offset 32 (0x20)
+		0x180A4DBAC: [!] Loads the constant value 5 into the register r9 as constant constant39 using an LEA instruction
+		0x180A4DBB0: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rsi into rcx
+		0x180A4DBB3: [!] Loads the constant value 7 into the register r8 as constant constant40 using an LEA instruction
+		0x180A4DBB7: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddTriangle(System.Int32,System.Int32,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} with arguments [6, 7, 5]
+
+		0x180A4DBBC: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register xmm13 as new constant constant41
+		0x180A4DBC2: Loads a pointer to stack offset 0xD0 into register r11 as new constant constant42
+		0x180A4DBE3: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register xmm12 as new constant constant43
+		0x180A4DBE9: Reads unknown value in stack, offset 112 (0x70) and stores the pointer in register xmm11 as new constant constant44
+		0x180A4DBEF: Reads unknown value in stack, offset 256 (0x100) and stores the pointer in register r14 as new constant constant45
+		0x180A4DBF7: Reads unknown value in stack, offset 248 (0xF8) and stores the pointer in register rbx as new constant constant46
+		0x180A4DBFF: Copies {'constant42' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r11 into rsp
+		0x180A4DC05: [!] Returns from the function
+
+		0x180A4DC06: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.ShineEffect
+	System.Void OnPopulateMesh(UnityEngine.UI.VertexHelper vh)
+
+		UnityEngine.Rect pixelAdjustedRect = base.GetPixelAdjustedRect()
+
+		UnityEngine.Color color = this.color
+
+		vh.Clear()
+		System.Single local6 =  * this.yoffset
+		System.Single local7 =  * this.width
+		ulong local10 = 0
+
+		vh.AddVert()
+		System.Single local11 =  * this.yoffset
+		System.Single local12 =  * this.width
+
+		vh.AddVert()
+
+		UnityEngine.Color color2 = vh.color
+		System.Single single = color2.a
+		System.Single local15 = single * 255
+		System.Single local16 =  * this.width
+		System.Single local17 =  * this.yoffset
+
+		vh.AddVert()
+		System.Single local18 =  * this.yoffset
+		System.Single local19 =  * this.width
+
+		vh.AddVert()
+
+		UnityEngine.Color color3 = vh.color
+		System.Single single2 = color3.a
+		System.Single local22 = single2 * 255
+		System.Single local23 =  * this.width
+		System.Single local24 =  * this.yoffset
+
+		vh.AddVert()
+		System.Single local25 =  * this.yoffset
+		System.Single local26 =  * this.width
+
+		vh.AddVert()
+
+		UnityEngine.Color color4 = vh.color
+		System.Single local28 =  * this.yoffset
+		System.Single local29 =  * this.width
+
+		vh.AddVert()
+		System.Single local30 =  * this.width
+		System.Single local31 =  * this.yoffset
+
+		vh.AddVert()
+		ulong local32 = 0
+		System.Int32 2 = 2
+		System.Int32 1 = 1
+
+		vh.AddTriangle(local32, 1, 2) //(Int32 idx0, Int32 idx1, Int32 idx2)
+		System.Int32 2 = 2
+		System.Int32 1 = 1
+		System.Int32 3 = 3
+
+		vh.AddTriangle(2, 3, 1) //(Int32 idx0, Int32 idx1, Int32 idx2)
+		System.Int32 2 = 2
+		System.Int32 4 = 4
+		System.Int32 3 = 3
+
+		vh.AddTriangle(2, 3, 4) //(Int32 idx0, Int32 idx1, Int32 idx2)
+		System.Int32 4 = 4
+		System.Int32 3 = 3
+		System.Int32 5 = 5
+
+		vh.AddTriangle(4, 5, 3) //(Int32 idx0, Int32 idx1, Int32 idx2)
+		System.Int32 4 = 4
+		System.Int32 6 = 6
+		System.Int32 5 = 5
+
+		vh.AddTriangle(4, 5, 6) //(Int32 idx0, Int32 idx1, Int32 idx2)
+		System.Int32 6 = 6
+		System.Int32 5 = 5
+		System.Int32 7 = 7
+
+		vh.AddTriangle(6, 7, 5) //(Int32 idx0, Int32 idx1, Int32 idx2)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.MultiplyRegByFieldAction at (0x180A4D7E0) is corrupt (Operand we were multiplying by is null or local made was stripped) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.Extensions.ShineEffect::Triangulate(UnityEngine.UI.VertexHelper):	Method Body (x86 ASM):
+		0x180A4DC10 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4DC12 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180A4DC16 cmp byte ptr [18329C03Fh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518783 | None ||| N/A | 0
+		0x180A4DC1D mov rdi,rdx		; DEBUG: {Register}/RDI {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A4DC20 jne short 0000000180A4DC41h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DC22 lea rcx,[1830F67E8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792232 | None ||| N/A | N/A
+		0x180A4DC29 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DC2E lea rcx,[1830F66D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493791952 | None ||| N/A | N/A
+		0x180A4DC35 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DC3A mov byte ptr [18329C03Fh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518783 | None ||| N/A | 1
+		0x180A4DC41 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DC44 je near ptr 0000000180A4DD2Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DC4A cmp byte ptr [1832AC0F9h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584505 | None ||| N/A | 0
+		0x180A4DC51 mov [rsp+40h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 64 | None ||| N/A | N/A
+		0x180A4DC56 mov [rsp+50h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 80 | None ||| N/A | N/A
+		0x180A4DC5B mov [rsp+58h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 88 | None ||| N/A | N/A
+		0x180A4DC60 jne short 0000000180A4DC75h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DC62 lea rcx,[18310EE20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493892128 | None ||| N/A | N/A
+		0x180A4DC69 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DC6E mov byte ptr [1832AC0F9h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584505 | None ||| N/A | 1
+		0x180A4DC75 xor ebp,ebp		; DEBUG: {Register}/EBP {Register}/EBP ||| None | 0 | None ||| N/A | N/A
+		0x180A4DC77 cmp [rdi+10h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RDI | 16 | None ||| N/A | N/A
+		0x180A4DC7B je short 0000000180A4DC86h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DC7D mov rax,[rdi+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDI | 16 | None ||| N/A | N/A
+		0x180A4DC81 mov ecx,[rax+18h]		; DEBUG: {Register}/ECX {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x180A4DC84 jmp short 0000000180A4DC88h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DC86 mov ecx,ebp		; DEBUG: {Register}/ECX {Register}/EBP ||| None | 0 | None ||| N/A | N/A
+		0x180A4DC88 lea ebx,[rcx-2]		; DEBUG: {Register}/EBX {Memory}/None ||| RCX | 18446744073709551614 | None ||| N/A | N/A
+		0x180A4DC8B mov rcx,[1830F66D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493791952 | None ||| N/A | N/A
+		0x180A4DC92 lea rdx,[rsp+48h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x180A4DC97 mov [rsp+48h],ebx		; DEBUG: {Memory}/None {Register}/EBX ||| RSP | 72 | None ||| N/A | N/A
+		0x180A4DC9B call 00000001802EE5C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DCA0 mov rcx,[1830F67E8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792232 | None ||| N/A | N/A
+		0x180A4DCA7 mov rsi,rax		; DEBUG: {Register}/RSI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A4DCAA cmp [rcx+0E0h],ebp		; DEBUG: {Memory}/None {Register}/EBP ||| RCX | 224 | None ||| N/A | N/A
+		0x180A4DCB0 jne short 0000000180A4DCB7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DCB2 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DCB7 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A4DCB9 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DCBC call 0000000182451750h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DCC1 mov eax,ebx		; DEBUG: {Register}/EAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x180A4DCC3 cdq		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4DCC4 sub eax,edx		; DEBUG: {Register}/EAX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A4DCC6 sar eax,1		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180A4DCC8 lea esi,[rax+1]		; DEBUG: {Register}/ESI {Memory}/None ||| RAX | 1 | None ||| N/A | N/A
+		0x180A4DCCB test esi,esi		; DEBUG: {Register}/ESI {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DCCD js short 0000000180A4DD18h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DCCF mov ebx,1		; DEBUG: {Register}/EBX {Immediate32}/None ||| None | 0 | None ||| N/A | 1
+		0x180A4DCD4 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A4DCD8 nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180A4DCE0 lea r9d,[rbx+1]		; DEBUG: {Register}/R9D {Memory}/None ||| RBX | 1 | None ||| N/A | N/A
+		0x180A4DCE4 mov [rsp+20h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4DCE9 lea edx,[rbx-1]		; DEBUG: {Register}/EDX {Memory}/None ||| RBX | 18446744073709551615 | None ||| N/A | N/A
+		0x180A4DCEC mov r8d,ebx		; DEBUG: {Register}/R8D {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x180A4DCEF mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DCF2 call 00000001825C3B80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DCF7 lea r8d,[rbx+2]		; DEBUG: {Register}/R8D {Memory}/None ||| RBX | 2 | None ||| N/A | N/A
+		0x180A4DCFB mov [rsp+20h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4DD00 lea edx,[rbx+1]		; DEBUG: {Register}/EDX {Memory}/None ||| RBX | 1 | None ||| N/A | N/A
+		0x180A4DD03 mov r9d,ebx		; DEBUG: {Register}/R9D {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x180A4DD06 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DD09 call 00000001825C3B80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DD0E add ebx,2		; DEBUG: {Register}/EBX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 2
+		0x180A4DD11 lea eax,[rbx-1]		; DEBUG: {Register}/EAX {Memory}/None ||| RBX | 18446744073709551615 | None ||| N/A | N/A
+		0x180A4DD14 cmp eax,esi		; DEBUG: {Register}/EAX {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A4DD16 jle short 0000000180A4DCE0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DD18 mov rbp,[rsp+50h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x180A4DD1D mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x180A4DD22 mov rsi,[rsp+58h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 88 | None ||| N/A | N/A
+		0x180A4DD27 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180A4DD2B pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4DD2C ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4DD2D call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DD32 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.ShineEffect::Triangulate(UnityEngine.UI.VertexHelper):
+		End of function at 0x180A4DD33
+		Absolute End is at 0x180A4DD33
+		Identified Jump Destination addresses:
+			0x180A4DC88
+		0x180A4DC10: Saves the content of rdi to the stack
+		0x180A4DC16: Compares {Unknown Global at 0x18329C03F, first ten bytes are [0 94 202 4 0 160 104 234 2 96], or as chars " ^Ê  hê`"} and 0
+		0x180A4DC1D: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rdx into rdi
+		0x180A4DC20: Jumps to 0x180A4DC41 if {Unknown Global at 0x18329C03F, first ten bytes are [0 94 202 4 0 160 104 234 2 96], or as chars " ^Ê  hê`"} != 0
+
+		0x180A4DC22: Loads the type definition for managed type UnityEngine.Debug as a constant "Debug" in rcx
+		0x180A4DC29: Initializes runtime metadata value UnityEngine.Debug
+		0x180A4DC2E: Loads the type definition for managed type System.Int32 as a constant "Int32" in rcx
+		0x180A4DC35: Initializes runtime metadata value System.Int32
+		0x180A4DC41: [!] Compares {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and 0
+		0x180A4DC44: Jumps to 0x180A4DD2D (which throws a NRE) if vh equals 0. Implicitly present in managed code, so ignored here.
+		0x180A4DC4A: Compares {Unknown Global at 0x1832AC0F9, first ten bytes are [90 16 0 87 90 16 0 144 104 234], or as chars "Z WZ hê"} and 0
+		0x180A4DC60: Jumps to 0x180A4DC75 if {Unknown Global at 0x1832AC0F9, first ten bytes are [90 16 0 87 90 16 0 144 104 234], or as chars "Z WZ hê"} != 0
+
+		0x180A4DC62: Loads the global generic method reference for method System.Int32 System.Collections.Generic.List`1::get_Count() on type System.Collections.Generic.List`1<UnityEngine.Vector3> and stores the result in constant {'get_Count' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180A4DC69: Initializes runtime metadata value 
+		0x180A4DC75: Clears register rbp, yielding zero-local {'local2' (type System.Int32)}
+		0x180A4DC77: [!] Compares {field m_Positions, read from local {'vh' (function parameter, type UnityEngine.UI.VertexHelper)}} and {'local2' (type System.Int32)}
+		0x180A4DC7B: Jumps to 0x180A4DC86 if vh.m_Positions equals local2 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180A4DC7D: [!] Reads field m_Positions from {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and stores in a new local {'m_Positions' (type System.Collections.Generic.List`1<UnityEngine.Vector3>)}
+
+		0x180A4DC84: Jumps to 0x180A4DC88 (which is an function-local jump destination)
+
+		0x180A4DC86: Copies {'local2' (type System.Int32)} from rbp into rcx
+
+		End Of If-Else Block (at 0x180A4DC88) where the else started at 0x180A4DC86
+		0x180A4DC88: [!] Loads the constant value 4294967294 into the register rbx as constant constant9 using an LEA instruction
+		0x180A4DC8B: Loads the type definition for managed type System.Int32 as a constant "Int32" in rcx
+		0x180A4DC92: Loads a pointer to stack offset 0x48 into register rdx as new constant constant11
+		0x180A4DC97: Moves -2 (type System.Int32) from register rbx to the stack at offset 72 (0x48) as a new local local5
+		0x180A4DC9B: Boxes a cpp primitive value {'local5' (type System.Int32)} to managed type System.Int32 and stores the result in new local local6 in register rax.
+		0x180A4DCA0: Loads the type definition for managed type UnityEngine.Debug as a constant "Debug" in rcx
+		0x180A4DCA7: Copies {'local6' (type System.Int32)} from rax into rsi
+		0x180A4DCAA: Compares "{il2cpp field UnityEngine.Debug->cctor_finished}" and {'local2' (type System.Int32)}
+		0x180A4DCB0: Jumps to 0x180A4DCB7 if "{il2cpp field UnityEngine.Debug->cctor_finished}" != {'local2' (type System.Int32)} ;  - This is probably a goto, jumping to 0x180A4DCB7 which is after end of current block @ 0x180A4DC88 (started at 0x180A4DC86)
+
+		0x180A4DCB2: Calls the il2cpp cctor for the type UnityEngine.Debug
+		0x180A4DCB7: Clears register rdx, yielding zero-local {'local7' (type System.Int32)}
+		0x180A4DCB9: Copies {'local6' (type System.Int32)} from rsi into rcx
+		0x180A4DCBC: [!] Calls static managed method System.Void UnityEngine.Debug::Log(System.Object) with arguments [{'local6' (type System.Int32)}]
+
+		0x180A4DCC1: Copies -2 from rbx into rax
+		0x180A4DCC4: [!] Subtracts {'local7' (type System.Int32)} from  and stores the result in 
+		0x180A4DCCB: [!] Compares {'local6' (type System.Int32)} and 0
+		0x180A4DCCF: [!] Writes the constant 0x1 into operand {'local8' (type System.UInt32)} (type UInt64) in register rbx
+		0x180A4DCE0: Adds 1 to local8 and stores the result in local9
+		0x180A4DCE4: Moves local2 (type System.Int32) from register rbp to the stack at offset 32 (0x20)
+		0x180A4DCE9: Subtracts 1 from local8 and stores the result in local10
+		0x180A4DCEC: Copies {'local8' (type System.UInt32)} from rbx into r8
+		0x180A4DCEF: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rdi into rcx
+		0x180A4DCF2: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddTriangle(System.Int32,System.Int32,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} with arguments [{'local10' (type System.UInt32)}, {'local8' (type System.UInt32)}, {'local9' (type System.UInt32)}]
+
+		0x180A4DCF7: Loads the pointer to the field  on {'local8' (type System.UInt32)} into register r8
+		0x180A4DCFB: Moves local2 (type System.Int32) from register rbp to the stack at offset 32 (0x20)
+		0x180A4DD00: Adds 1 to local8 and stores the result in local11
+		0x180A4DD03: Copies {'local8' (type System.UInt32)} from rbx into r9
+		0x180A4DD06: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rdi into rcx
+		0x180A4DD09: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::AddTriangle(System.Int32,System.Int32,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} with arguments [{'local11' (type System.UInt32)}, {'local8' (type System.UInt32)}, {'local8' (type System.UInt32)}]
+
+		0x180A4DD0E: [!] Adds 2 to the value {'local8' (type System.UInt32)}, stored in rbx
+		0x180A4DD11: Subtracts 1 from local8 and stores the result in local12
+		0x180A4DD14: [!] Compares {'local12' (type System.UInt32)} and {'local6' (type System.Int32)}
+		0x180A4DD16: Jumps to 0x180A4DCE0 if {'local12' (type System.UInt32)} is less than or equal to {'local6' (type System.Int32)} ;  - This is probably a goto, jumping to 0x180A4DCE0 which is after end of current block @ 0x180A4DC88 (started at 0x180A4DC86)
+
+		0x180A4DD18: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register rbp as new constant constant15
+		0x180A4DD1D: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant16
+		0x180A4DD22: Reads unknown value in stack, offset 88 (0x58) and stores the pointer in register rsi as new constant constant17
+		0x180A4DD2C: [!] Returns from the function
+
+		0x180A4DD2D: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.ShineEffect
+	System.Void Triangulate(UnityEngine.UI.VertexHelper vh)
+		ulong local2 = 0
+
+		if (vh.m_Positions != local2)
+		    System.Collections.Generic.List`1<UnityEngine.Vector3> m_Positions = vh.m_Positions
+		else
+		endif
+        
+		System.Int32 -2 = 4294967294
+		ulong local7 = 0
+
+		UnityEngine.Debug.Log(local6) //(Object message)
+		 -= local7
+		System.Int64 local8 = 1
+		System.UInt32 local9 = local8 + 1
+		System.UInt32 local10 = local8 - 1
+
+		vh.AddTriangle(local10, local8, local9) //(Int32 idx0, Int32 idx1, Int32 idx2)
+		System.UInt32 local11 = local8 + 1
+
+		vh.AddTriangle(local11, local8, local8) //(Int32 idx0, Int32 idx1, Int32 idx2)
+		local8 += 2
+		System.UInt32 local12 = local8 - 1
+
+		if (local12 <= local6)
+            goto INSN_180A4DCE0
+        endif
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.SubtractRegFromRegAction at (0x180A4DCC4) is corrupt (Missing an argument) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.Extensions.ShineEffect::.ctor():	Method Body (x86 ASM):
+		0x180A4DD40 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A4DD42 mov dword ptr [rcx+0E0h],0BF800000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 224 | None ||| N/A | 3212836864
+		0x180A4DD4C mov dword ptr [rcx+0E4h],3F800000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 228 | None ||| N/A | 1065353216
+		0x180A4DD56 jmp near ptr 00000001825A5250h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4DD5B int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.ShineEffect::.ctor():
+		End of function at 0x180A4DD5C
+		Absolute End is at 0x180A4DD5C
+		Identified Jump Destination addresses:
+
+		0x180A4DD42: [!] Sets the field yoffset (Type System.Single) on local {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} to the value stored in -1
+		0x180A4DD4C: [!] Sets the field width (Type System.Single) on local {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)} to the value stored in 1
+		0x180A4DD56: [!] Calls managed method System.Void UnityEngine.UI.MaskableGraphic::.ctor() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.ShineEffect)}
+
+		0x180A4DD56: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.ShineEffect
+	System.Void .ctor()
+		this.yoffset = -1
+		this.width = 1
+
+		base..ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.r4 -1
+	IL_0006: stfld System.Single UnityEngine.UI.Extensions.ShineEffect::yoffset
+	IL_000b: ldarg.0
+	IL_000c: ldc.r4 1
+	IL_0011: stfld System.Single UnityEngine.UI.Extensions.ShineEffect::width
+	IL_0016: ldarg.0
+	IL_0017: call System.Void UnityEngine.UI.MaskableGraphic::.ctor()
+	IL_001c: ret
+	
+

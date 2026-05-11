@@ -1,0 +1,292 @@
+Type: System.IO.Compression.DeflateStreamNative:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		System.IO.Compression.DeflateStreamNative/UnmanagedReadOrWrite
+		System.IO.Compression.DeflateStreamNative/SafeDeflateStreamHandle
+
+	Field: feeder
+		Type: System.IO.Compression.DeflateStreamNative/UnmanagedReadOrWrite
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: base_stream
+		Type: System.IO.Stream
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: z_stream
+		Type: System.IO.Compression.DeflateStreamNative/SafeDeflateStreamHandle
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: data
+		Type: System.Runtime.InteropServices.GCHandle
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: disposed
+		Type: System.Boolean
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: io_buffer
+		Type: System.Byte[]
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: last_error
+		Type: System.Exception
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: Create:
+		Accessibility: Public
+		Return Type: System.IO.Compression.DeflateStreamNative
+		File Offset 0x01FB5B20
+		Ram Offset 0x181fb6d20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: compressedStream
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 1:
+			Name: mode
+			Type: System.IO.Compression.CompressionMode
+			Default Value: 
+		Parameter 2:
+			Name: gzip
+			Type: System.Boolean
+			Default Value: 
+	Method: Finalize:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01FB5DC0
+		Ram Offset 0x181fb6fc0
+		Virtual Method Slot: 1
+
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01FB5E10
+		Ram Offset 0x181fb7010
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: Flush:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01FB5FB0
+		Ram Offset 0x181fb71b0
+		Virtual Method Slot: 65535
+
+	Method: ReadZStream:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01FB6090
+		Ram Offset 0x181fb7290
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+	Method: WriteZStream:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01FB6150
+		Ram Offset 0x181fb7350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+	Method: UnmanagedRead:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01FB6210
+		Ram Offset 0x181fb7410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: data
+			Type: System.IntPtr
+			Default Value: 
+	Method: UnmanagedRead:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01FB6300
+		Ram Offset 0x181fb7500
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+	Method: UnmanagedWrite:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01FB64A0
+		Ram Offset 0x181fb76a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: data
+			Type: System.IntPtr
+			Default Value: 
+	Method: UnmanagedWrite:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01FB6590
+		Ram Offset 0x181fb7790
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+	Method: CheckResult:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01FB6700
+		Ram Offset 0x181fb7900
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: where
+			Type: System.String
+			Default Value: 
+	Method: CreateZStream:
+		Accessibility: Private
+		Return Type: System.IO.Compression.DeflateStreamNative/SafeDeflateStreamHandle
+		File Offset 0x01FB6840
+		Ram Offset 0x181fb7a40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: compress
+			Type: System.IO.Compression.CompressionMode
+			Default Value: 
+		Parameter 1:
+			Name: gzip
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: feeder
+			Type: System.IO.Compression.DeflateStreamNative/UnmanagedReadOrWrite
+			Default Value: 
+		Parameter 3:
+			Name: data
+			Type: System.IntPtr
+			Default Value: 
+	Method: CloseZStream:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01FB68F0
+		Ram Offset 0x181fb7af0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stream
+			Type: System.IntPtr
+			Default Value: 
+	Method: Flush:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01FB6900
+		Ram Offset 0x181fb7b00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stream
+			Type: System.IO.Compression.DeflateStreamNative/SafeDeflateStreamHandle
+			Default Value: 
+	Method: ReadZStream:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01FB69A0
+		Ram Offset 0x181fb7ba0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stream
+			Type: System.IO.Compression.DeflateStreamNative/SafeDeflateStreamHandle
+			Default Value: 
+		Parameter 1:
+			Name: buffer
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 2:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+	Method: WriteZStream:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01FB6A20
+		Ram Offset 0x181fb7c20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stream
+			Type: System.IO.Compression.DeflateStreamNative/SafeDeflateStreamHandle
+			Default Value: 
+		Parameter 1:
+			Name: buffer
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 2:
+			Name: length
+			Type: System.Int32
+			Default Value: 

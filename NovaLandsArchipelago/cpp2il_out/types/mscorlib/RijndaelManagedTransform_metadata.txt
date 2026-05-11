@@ -1,0 +1,459 @@
+Type: System.Security.Cryptography.RijndaelManagedTransform:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.Security.Cryptography.ICryptoTransform
+		System.IDisposable
+
+	Static Field: s_Sbox
+		Type: System.Byte[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: s_Rcon
+		Type: System.Int32[]
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Field: m_cipherMode
+		Type: System.Security.Cryptography.CipherMode
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: s_T
+		Type: System.Int32[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_paddingValue
+		Type: System.Security.Cryptography.PaddingMode
+		Offset in Defining Type: 0x14
+		Has Default: False
+
+	Field: m_transformMode
+		Type: System.Security.Cryptography.RijndaelManagedTransformMode
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: s_TF
+		Type: System.Int32[]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_blockSizeBits
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: m_blockSizeBytes
+		Type: System.Int32
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: s_iT
+		Type: System.Int32[]
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_inputBlockSize
+		Type: System.Int32
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Static Field: s_iTF
+		Type: System.Int32[]
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_outputBlockSize
+		Type: System.Int32
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_encryptKeyExpansion
+		Type: System.Int32[]
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_decryptKeyExpansion
+		Type: System.Int32[]
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_Nr
+		Type: System.Int32
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: m_Nb
+		Type: System.Int32
+		Offset in Defining Type: 0x44
+		Has Default: False
+
+	Field: m_Nk
+		Type: System.Int32
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: m_encryptindex
+		Type: System.Int32[]
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: m_decryptindex
+		Type: System.Int32[]
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: m_IV
+		Type: System.Int32[]
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: m_lastBlockBuffer
+		Type: System.Int32[]
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: m_depadBuffer
+		Type: System.Byte[]
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: m_shiftRegister
+		Type: System.Byte[]
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01709DA0
+		Ram Offset 0x18170afa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rgbKey
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: mode
+			Type: System.Security.Cryptography.CipherMode
+			Default Value: 
+		Parameter 2:
+			Name: rgbIV
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 3:
+			Name: blockSize
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: feedbackSize
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: PaddingValue
+			Type: System.Security.Cryptography.PaddingMode
+			Default Value: 
+		Parameter 6:
+			Name: transformMode
+			Type: System.Security.Cryptography.RijndaelManagedTransformMode
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0170A660
+		Ram Offset 0x18170b860
+		Virtual Method Slot: 9
+
+	Method: Dispose:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0170A670
+		Ram Offset 0x18170b870
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: get_InputBlockSize:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0085FBC0
+		Ram Offset 0x180860dc0
+		Virtual Method Slot: 4
+
+	Method: get_OutputBlockSize:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0077D120
+		Ram Offset 0x18077e320
+		Virtual Method Slot: 5
+
+	Method: get_CanTransformMultipleBlocks:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 6
+
+	Method: TransformBlock:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0170A930
+		Ram Offset 0x18170bb30
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: outputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 4:
+			Name: outputOffset
+			Type: System.Int32
+			Default Value: 
+	Method: TransformFinalBlock:
+		Accessibility: Public
+		Return Type: System.Byte[]
+		File Offset 0x0170AE00
+		Ram Offset 0x18170c000
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 
+	Method: Reset:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0170B240
+		Ram Offset 0x18170c440
+		Virtual Method Slot: 65535
+
+	Method: EncryptData:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0170B3C0
+		Ram Offset 0x18170c5c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: outputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 4:
+			Name: outputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: paddingMode
+			Type: System.Security.Cryptography.PaddingMode
+			Default Value: 
+		Parameter 6:
+			Name: fLast
+			Type: System.Boolean
+			Default Value: 
+	Method: DecryptData:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0170C180
+		Ram Offset 0x18170d380
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: outputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 4:
+			Name: outputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: paddingMode
+			Type: System.Security.Cryptography.PaddingMode
+			Default Value: 
+		Parameter 6:
+			Name: fLast
+			Type: System.Boolean
+			Default Value: 
+	Method: Enc:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0170D0B0
+		Ram Offset 0x18170e2b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: encryptindex
+			Type: System.Int32*
+			Default Value: 
+		Parameter 1:
+			Name: encryptKeyExpansion
+			Type: System.Int32*
+			Default Value: 
+		Parameter 2:
+			Name: T
+			Type: System.Int32*
+			Default Value: 
+		Parameter 3:
+			Name: TF
+			Type: System.Int32*
+			Default Value: 
+		Parameter 4:
+			Name: work
+			Type: System.Int32*
+			Default Value: 
+		Parameter 5:
+			Name: temp
+			Type: System.Int32*
+			Default Value: 
+	Method: Dec:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0170D2C0
+		Ram Offset 0x18170e4c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: decryptindex
+			Type: System.Int32*
+			Default Value: 
+		Parameter 1:
+			Name: decryptKeyExpansion
+			Type: System.Int32*
+			Default Value: 
+		Parameter 2:
+			Name: iT
+			Type: System.Int32*
+			Default Value: 
+		Parameter 3:
+			Name: iTF
+			Type: System.Int32*
+			Default Value: 
+		Parameter 4:
+			Name: work
+			Type: System.Int32*
+			Default Value: 
+		Parameter 5:
+			Name: temp
+			Type: System.Int32*
+			Default Value: 
+	Method: GenerateKeyExpansion:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0170D4F0
+		Ram Offset 0x18170e6f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rgbKey
+			Type: System.Byte[]
+			Default Value: 
+	Method: rot1:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0170DB50
+		Ram Offset 0x18170ed50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: val
+			Type: System.Int32
+			Default Value: 
+	Method: rot2:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0170DB60
+		Ram Offset 0x18170ed60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: val
+			Type: System.Int32
+			Default Value: 
+	Method: rot3:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0170DB70
+		Ram Offset 0x18170ed70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: val
+			Type: System.Int32
+			Default Value: 
+	Method: SubWord:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0170DB80
+		Ram Offset 0x18170ed80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: System.Int32
+			Default Value: 
+	Method: MulX:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0170DC60
+		Ram Offset 0x18170ee60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x
+			Type: System.Int32
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0170DC90
+		Ram Offset 0x18170ee90
+		Virtual Method Slot: 65535

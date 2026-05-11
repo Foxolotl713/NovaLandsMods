@@ -1,0 +1,166 @@
+Type: MuttAI.FSM.StateMachine:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Field: owner
+		Type: MuttAI.BaseGameEntity
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: mCurrentState
+		Type: MuttAI.FSM.State
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: mPreviousState
+		Type: MuttAI.FSM.State
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: mGlobalState
+		Type: MuttAI.FSM.State
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01959370
+		Ram Offset 0x18195a570
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: owner
+			Type: MuttAI.BaseGameEntity
+			Default Value: 
+	Method: get_CurrentState:
+		Accessibility: Public
+		Return Type: MuttAI.FSM.State
+		File Offset 0x00379690
+		Ram Offset 0x18037a890
+		Virtual Method Slot: 65535
+
+	Method: set_CurrentState:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00395810
+		Ram Offset 0x180396a10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: MuttAI.FSM.State
+			Default Value: 
+	Method: get_GlobalState:
+		Accessibility: Public
+		Return Type: MuttAI.FSM.State
+		File Offset 0x003A7D00
+		Ram Offset 0x1803a8f00
+		Virtual Method Slot: 65535
+
+	Method: set_GlobalState:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003C2150
+		Ram Offset 0x1803c3350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: MuttAI.FSM.State
+			Default Value: 
+	Method: get_PreviousState:
+		Accessibility: Public
+		Return Type: MuttAI.FSM.State
+		File Offset 0x00395870
+		Ram Offset 0x180396a70
+		Virtual Method Slot: 65535
+
+	Method: set_PreviousState:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00395880
+		Ram Offset 0x180396a80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: MuttAI.FSM.State
+			Default Value: 
+	Method: Update:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x019594C0
+		Ram Offset 0x18195a6c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdate:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01959520
+		Ram Offset 0x18195a720
+		Virtual Method Slot: 65535
+
+	Method: HandleMessage:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01959580
+		Ram Offset 0x18195a780
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: ChangeState:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01959600
+		Ram Offset 0x18195a800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newState
+			Type: MuttAI.FSM.State
+			Default Value: 
+	Method: RevertToPreviousState:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01959760
+		Ram Offset 0x18195a960
+		Virtual Method Slot: 65535
+
+	Method: IsInState:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01959770
+		Ram Offset 0x18195a970
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: state
+			Type: System.Type
+			Default Value: 
+	Method: WasInState:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x019597F0
+		Ram Offset 0x18195a9f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: state
+			Type: MuttAI.FSM.State
+			Default Value: 
+	Method: GetNameOfCurrentState:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x01959890
+		Ram Offset 0x18195aa90
+		Virtual Method Slot: 65535

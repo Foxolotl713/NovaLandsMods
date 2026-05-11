@@ -1,0 +1,330 @@
+Type: DaVikingCode.RectanglePacking.RectanglePacker:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		DaVikingCode.RectanglePacking.RectanglePacker/<>c
+
+	Static Field: VERSION
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: mWidth
+		Type: System.Int32
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: mHeight
+		Type: System.Int32
+		Offset in Defining Type: 0x14
+		Has Default: False
+
+	Field: mPadding
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: mPackedWidth
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: mPackedHeight
+		Type: System.Int32
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: mInsertList
+		Type: System.Collections.Generic.List`1<DaVikingCode.RectanglePacking.SortableSize>
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: mInsertedRectangles
+		Type: System.Collections.Generic.List`1<DaVikingCode.RectanglePacking.IntegerRectangle>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: mFreeAreas
+		Type: System.Collections.Generic.List`1<DaVikingCode.RectanglePacking.IntegerRectangle>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: mNewFreeAreas
+		Type: System.Collections.Generic.List`1<DaVikingCode.RectanglePacking.IntegerRectangle>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: mOutsideRectangle
+		Type: DaVikingCode.RectanglePacking.IntegerRectangle
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: mSortableSizeStack
+		Type: System.Collections.Generic.List`1<DaVikingCode.RectanglePacking.SortableSize>
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: mRectangleStack
+		Type: System.Collections.Generic.List`1<DaVikingCode.RectanglePacking.IntegerRectangle>
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Method: get_rectangleCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00387E50
+		Ram Offset 0x180389050
+		Virtual Method Slot: 65535
+
+	Method: get_packedWidth:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00387E90
+		Ram Offset 0x180389090
+		Virtual Method Slot: 65535
+
+	Method: get_packedHeight:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00387EA0
+		Ram Offset 0x1803890a0
+		Virtual Method Slot: 65535
+
+	Method: get_padding:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00387EB0
+		Ram Offset 0x1803890b0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00387EC0
+		Ram Offset 0x1803890c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: padding
+			Type: System.Int32
+			Default Value: 0
+	Method: reset:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00388280
+		Ram Offset 0x180389480
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: padding
+			Type: System.Int32
+			Default Value: 0
+	Method: getRectangle:
+		Accessibility: Public
+		Return Type: DaVikingCode.RectanglePacking.IntegerRectangle
+		File Offset 0x003885A0
+		Ram Offset 0x1803897a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: rectangle
+			Type: DaVikingCode.RectanglePacking.IntegerRectangle
+			Default Value: 
+	Method: getRectangleId:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00388640
+		Ram Offset 0x180389840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: insertRectangle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003886C0
+		Ram Offset 0x1803898c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: id
+			Type: System.Int32
+			Default Value: 
+	Method: packRectangles:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00388790
+		Ram Offset 0x180389990
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sort
+			Type: System.Boolean
+			Default Value: True
+	Method: filterSelfSubAreas:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00388AC0
+		Ram Offset 0x180389cc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: areas
+			Type: System.Collections.Generic.List`1<DaVikingCode.RectanglePacking.IntegerRectangle>
+			Default Value: 
+	Method: generateNewFreeAreas:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00388C10
+		Ram Offset 0x180389e10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: target
+			Type: DaVikingCode.RectanglePacking.IntegerRectangle
+			Default Value: 
+		Parameter 1:
+			Name: areas
+			Type: System.Collections.Generic.List`1<DaVikingCode.RectanglePacking.IntegerRectangle>
+			Default Value: 
+		Parameter 2:
+			Name: results
+			Type: System.Collections.Generic.List`1<DaVikingCode.RectanglePacking.IntegerRectangle>
+			Default Value: 
+	Method: generateDividedAreas:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00389090
+		Ram Offset 0x18038a290
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: divider
+			Type: DaVikingCode.RectanglePacking.IntegerRectangle
+			Default Value: 
+		Parameter 1:
+			Name: area
+			Type: DaVikingCode.RectanglePacking.IntegerRectangle
+			Default Value: 
+		Parameter 2:
+			Name: results
+			Type: System.Collections.Generic.List`1<DaVikingCode.RectanglePacking.IntegerRectangle>
+			Default Value: 
+	Method: getFreeAreaIndex:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x00389250
+		Ram Offset 0x18038a450
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+	Method: allocateRectangle:
+		Accessibility: Private
+		Return Type: DaVikingCode.RectanglePacking.IntegerRectangle
+		File Offset 0x003893C0
+		Ram Offset 0x18038a5c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: y
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+	Method: freeRectangle:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00389480
+		Ram Offset 0x18038a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rectangle
+			Type: DaVikingCode.RectanglePacking.IntegerRectangle
+			Default Value: 
+	Method: allocateSize:
+		Accessibility: Private
+		Return Type: DaVikingCode.RectanglePacking.SortableSize
+		File Offset 0x003894D0
+		Ram Offset 0x18038a6d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: id
+			Type: System.Int32
+			Default Value: 
+	Method: freeSize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00389570
+		Ram Offset 0x18038a770
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: size
+			Type: DaVikingCode.RectanglePacking.SortableSize
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x003895C0
+		Ram Offset 0x18038a7c0
+		Virtual Method Slot: 65535

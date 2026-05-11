@@ -1,0 +1,65 @@
+Type: Mono.Btls.MonoBtlsX509LookupMonoCollection:
+	Base Class: 
+		Mono.Btls.MonoBtlsX509LookupMono
+
+	Interfaces:
+
+	Field: hashes
+		Type: System.Int64[]
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: certificates
+		Type: Mono.Btls.MonoBtlsX509[]
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: collection
+		Type: System.Security.Cryptography.X509Certificates.X509CertificateCollection
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: trust
+		Type: Mono.Btls.MonoBtlsX509TrustKind
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01ECDBD0
+		Ram Offset 0x181ecedd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: collection
+			Type: System.Security.Cryptography.X509Certificates.X509CertificateCollection
+			Default Value: 
+		Parameter 1:
+			Name: trust
+			Type: Mono.Btls.MonoBtlsX509TrustKind
+			Default Value: 
+	Method: Initialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01ECDC60
+		Ram Offset 0x181ecee60
+		Virtual Method Slot: 65535
+
+	Method: OnGetBySubject:
+		Accessibility: Family
+		Return Type: Mono.Btls.MonoBtlsX509
+		File Offset 0x01ECE090
+		Ram Offset 0x181ecf290
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: name
+			Type: Mono.Btls.MonoBtlsX509Name
+			Default Value: 
+	Method: Close:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01ECE150
+		Ram Offset 0x181ecf350
+		Virtual Method Slot: 5

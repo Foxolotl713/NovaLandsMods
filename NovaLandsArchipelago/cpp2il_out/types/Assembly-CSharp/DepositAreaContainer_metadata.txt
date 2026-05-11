@@ -1,0 +1,459 @@
+Type: DepositAreaContainer:
+	Base Class: 
+		BaseContainer
+
+	Interfaces:
+
+	Nested Types:
+		DepositAreaContainer/<InitFeedbackItemsZOrderDelayed>d__31
+		DepositAreaContainer/<ResetItemFeedbackScale>d__41
+		DepositAreaContainer/<ResetSpriteOrderDelayed>d__34
+		DepositAreaContainer/<UpdateDependentDroneBases>d__37
+
+	Static Field: HOLD_TO_MOVE_COMMAND_INDEX
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Field: backSprite
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x5F0
+		Has Default: False
+
+	Field: frontSprite
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x5F8
+		Has Default: False
+
+	Field: itemsStacksAnchors
+		Type: System.Collections.Generic.List`1<UnityEngine.Transform>
+		Offset in Defining Type: 0x600
+		Has Default: False
+
+	Field: distanceBetweenItems
+		Type: System.Single
+		Offset in Defining Type: 0x608
+		Has Default: False
+
+	Field: numberOfItemsPerStackItem
+		Type: System.Collections.Generic.List`1<IntIntPair>
+		Offset in Defining Type: 0x610
+		Has Default: False
+
+	Field: stackItemTemplate
+		Type: StorageItemTemplate
+		Offset in Defining Type: 0x618
+		Has Default: False
+
+	Field: placeItemFeedbackScale
+		Type: UnityEngine.Vector3
+		Offset in Defining Type: 0x620
+		Has Default: False
+
+	Field: placeItemFeedbackScaleDuration
+		Type: System.Single
+		Offset in Defining Type: 0x62C
+		Has Default: False
+
+	Field: placeItemFeedbackScaleVibrato
+		Type: System.Int32
+		Offset in Defining Type: 0x630
+		Has Default: False
+
+	Field: placeItemFeedbackScaleElasticity
+		Type: System.Single
+		Offset in Defining Type: 0x634
+		Has Default: False
+
+	Field: placeItemFeedbackScaleEaseType
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0x638
+		Has Default: False
+
+	Field: itemsFeedbacks
+		Type: System.Collections.Generic.List`1<System.Collections.Generic.List`1<StorageItemTemplate>>
+		Offset in Defining Type: 0x640
+		Has Default: False
+
+	Field: previousInteractedSlot
+		Type: System.Int32
+		Offset in Defining Type: 0x648
+		Has Default: False
+
+	Field: tweeners
+		Type: DG.Tweening.Tweener[]
+		Offset in Defining Type: 0x650
+		Has Default: False
+
+	Field: <UpdateDronesManager>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x658
+		Has Default: False
+
+	Method: InitProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00ACAA90
+		Ram Offset 0x180acbc90
+		Virtual Method Slot: 25
+
+	Method: Start:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACAB50
+		Ram Offset 0x180acbd50
+		Virtual Method Slot: 5
+
+	Method: InitInteractionFeedbacks:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00ACAB80
+		Ram Offset 0x180acbd80
+		Virtual Method Slot: 100
+
+	Method: UpdateInteractionLabels:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00ACB310
+		Ram Offset 0x180acc510
+		Virtual Method Slot: 102
+
+	Method: OnDestroy:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00ACB530
+		Ram Offset 0x180acc730
+		Virtual Method Slot: 8
+
+	Method: ShowMovingFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACB600
+		Ram Offset 0x180acc800
+		Virtual Method Slot: 178
+
+	Method: HideMovingFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACB8A0
+		Ram Offset 0x180accaa0
+		Virtual Method Slot: 179
+
+	Method: OnChangeInventory:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACBB40
+		Ram Offset 0x180accd40
+		Virtual Method Slot: 188
+
+	Method: AddItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00ACBC50
+		Ram Offset 0x180acce50
+		Virtual Method Slot: 136
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: feedbackTargetPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 3:
+			Name: destroyAfterTime
+			Type: System.Single
+			Default Value: -1
+		Parameter 4:
+			Name: resourceToSpawnOnDestroy
+			Type: System.Int32
+			Default Value: -1
+	Method: AddItemToInventory:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00ACBF60
+		Ram Offset 0x180acd160
+		Virtual Method Slot: 193
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: feedbackTargetPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 3:
+			Name: destroyAfterTime
+			Type: System.Single
+			Default Value: -1
+		Parameter 4:
+			Name: resourceToSpawnOnDestroy
+			Type: System.Int32
+			Default Value: -1
+	Method: OnAddItem:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 200
+
+	Method: RemoveContent:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x00ACC1C0
+		Ram Offset 0x180acd3c0
+		Virtual Method Slot: 137
+
+		Parameter 0:
+			Name: resource
+			Type: BaseResourceScriptableObject
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+	Method: GetInventoryItems:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+		File Offset 0x00ACC520
+		Ram Offset 0x180acd720
+		Virtual Method Slot: 65535
+
+	Method: GetInventorySlots:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<MuttInventory.InventorySlot>
+		File Offset 0x00ACC5C0
+		Ram Offset 0x180acd7c0
+		Virtual Method Slot: 65535
+
+	Method: InitFeedbackItems:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00ACC660
+		Ram Offset 0x180acd860
+		Virtual Method Slot: 201
+
+	Method: InitFeedbackItemsZOrder:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00ACCD70
+		Ram Offset 0x180acdf70
+		Virtual Method Slot: 202
+
+	Method: InitFeedbackItemsZOrderDelayed:
+		Accessibility: Family
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00ACCE10
+		Ram Offset 0x180ace010
+		Virtual Method Slot: 65535
+
+	Method: ResetSpriteOrder:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACCEA0
+		Ram Offset 0x180ace0a0
+		Virtual Method Slot: 51
+
+	Method: Reposition:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACD100
+		Ram Offset 0x180ace300
+		Virtual Method Slot: 49
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector3
+			Default Value: 
+	Method: ResetSpriteOrderDelayed:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00ACD350
+		Ram Offset 0x180ace550
+		Virtual Method Slot: 65535
+
+	Method: OnDismantleForceReset:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00ACD3E0
+		Ram Offset 0x180ace5e0
+		Virtual Method Slot: 94
+
+	Method: UpdateContentOverlay:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACD400
+		Ram Offset 0x180ace600
+		Virtual Method Slot: 189
+
+	Method: UpdateDependentDroneBases:
+		Accessibility: Family
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00ACD460
+		Ram Offset 0x180ace660
+		Virtual Method Slot: 65535
+
+	Method: UpdateItemsFeedbacks:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACD4F0
+		Ram Offset 0x180ace6f0
+		Virtual Method Slot: 65535
+
+	Method: SetItemAtSlot:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACD790
+		Ram Offset 0x180ace990
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: slot
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: itemId
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: itemAmount
+			Type: System.Int32
+			Default Value: 
+	Method: PlayInventoryStackChangedFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACDC50
+		Ram Offset 0x180acee50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: slot
+			Type: System.Int32
+			Default Value: 
+	Method: ResetItemFeedbackScale:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00ACE050
+		Ram Offset 0x180acf250
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: slot
+			Type: System.Int32
+			Default Value: 
+	Method: GetMaxActiveIndex:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x00ACE110
+		Ram Offset 0x180acf310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: slot
+			Type: System.Int32
+			Default Value: 
+	Method: TryToConsumeItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00ACE300
+		Ram Offset 0x180acf500
+		Virtual Method Slot: 118
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+		Parameter 1:
+			Name: sourceCharacter
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: dropToTheGround
+			Type: System.Boolean
+			Default Value: 
+	Method: EnterIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACE750
+		Ram Offset 0x180acf950
+		Virtual Method Slot: 160
+
+	Method: UpdateIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACE790
+		Ram Offset 0x180acf990
+		Virtual Method Slot: 161
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: UpdateLogistics:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACE820
+		Ram Offset 0x180acfa20
+		Virtual Method Slot: 142
+
+		Parameter 0:
+			Name: checkCurrentResources
+			Type: System.Boolean
+			Default Value: False
+	Method: HasResourceInOutput:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00ACF240
+		Ram Offset 0x180ad0440
+		Virtual Method Slot: 134
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+	Method: TryToTransferResourceToMagnetoid:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00ACF270
+		Ram Offset 0x180ad0470
+		Virtual Method Slot: 158
+
+		Parameter 0:
+			Name: magnetoid
+			Type: Magnetoid
+			Default Value: 
+	Method: get_UpdateDronesManager:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00ACF430
+		Ram Offset 0x180ad0630
+		Virtual Method Slot: 65535
+
+	Method: set_UpdateDronesManager:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACF440
+		Ram Offset 0x180ad0640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACF450
+		Ram Offset 0x180ad0650
+		Virtual Method Slot: 65535

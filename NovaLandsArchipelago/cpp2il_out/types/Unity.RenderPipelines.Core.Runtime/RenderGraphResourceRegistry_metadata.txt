@@ -1,0 +1,716 @@
+Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry/ResourceCallback
+		UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry/RenderGraphResourcesData
+
+	Static Field: kSharedResourceLifetime
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 30
+
+	Static Field: m_CurrentRegistry
+		Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: kInitialRendererListCount
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 256
+
+	Field: m_RenderGraphResources
+		Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry/RenderGraphResourcesData[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_RendererListResources
+		Type: UnityEngine.Rendering.DynamicArray`1<UnityEngine.Experimental.Rendering.RenderGraphModule.RendererListResource>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_RenderGraphDebug
+		Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphDebugParams
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_ResourceLogger
+		Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphLogger
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_FrameInformationLogger
+		Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphLogger
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_CurrentFrameIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_ExecutionCount
+		Type: System.Int32
+		Offset in Defining Type: 0x3C
+		Has Default: False
+
+	Field: m_CurrentBackbuffer
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: m_ActiveRendererLists
+		Type: System.Collections.Generic.List`1<UnityEngine.Rendering.RendererList>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Method: get_current:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry
+		File Offset 0x02159F30
+		Ram Offset 0x18215b130
+		Virtual Method Slot: 65535
+
+	Method: set_current:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02159F70
+		Ram Offset 0x18215b170
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceRegistry
+			Default Value: 
+	Method: GetTexture:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Rendering.RTHandle
+		File Offset 0x0215A000
+		Ram Offset 0x18215b200
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle
+			Default Value: 
+	Method: TextureNeedsFallback:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0215A0F0
+		Ram Offset 0x18215b2f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle
+			Default Value: 
+	Method: GetRendererList:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Rendering.RendererList
+		File Offset 0x0215A160
+		Ram Offset 0x18215b360
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RendererListHandle
+			Default Value: 
+	Method: GetComputeBuffer:
+		Accessibility: Assembly
+		Return Type: UnityEngine.ComputeBuffer
+		File Offset 0x0215A260
+		Ram Offset 0x18215b460
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ComputeBufferHandle
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0215A3E0
+		Ram Offset 0x18215b5e0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215A680
+		Ram Offset 0x18215b880
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderGraphDebug
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphDebugParams
+			Default Value: 
+		Parameter 1:
+			Name: frameInformationLogger
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphLogger
+			Default Value: 
+	Method: BeginRenderGraph:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215AE00
+		Ram Offset 0x18215c000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: executionCount
+			Type: System.Int32
+			Default Value: 
+	Method: BeginExecute:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215AF70
+		Ram Offset 0x18215c170
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: currentFrameIndex
+			Type: System.Int32
+			Default Value: 
+	Method: EndExecute:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215B100
+		Ram Offset 0x18215c300
+		Virtual Method Slot: 65535
+
+	Method: CheckHandleValidity:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0215B110
+		Ram Offset 0x18215c310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: res
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ResourceHandle
+			Default Value: 
+	Method: CheckHandleValidity:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0215B120
+		Ram Offset 0x18215c320
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceType
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: IncrementWriteCount:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215B240
+		Ram Offset 0x18215c440
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: res
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ResourceHandle
+			Default Value: 
+	Method: GetRenderGraphResourceName:
+		Accessibility: Assembly
+		Return Type: System.String
+		File Offset 0x0215B2F0
+		Ram Offset 0x18215c4f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: res
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ResourceHandle
+			Default Value: 
+	Method: GetRenderGraphResourceName:
+		Accessibility: Assembly
+		Return Type: System.String
+		File Offset 0x0215B3A0
+		Ram Offset 0x18215c5a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceType
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: IsRenderGraphResourceImported:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0215B450
+		Ram Offset 0x18215c650
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: res
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ResourceHandle
+			Default Value: 
+	Method: IsRenderGraphResourceShared:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0215B4F0
+		Ram Offset 0x18215c6f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceType
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: IsGraphicsResourceCreated:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0215B550
+		Ram Offset 0x18215c750
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: res
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ResourceHandle
+			Default Value: 
+	Method: IsRendererListCreated:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0215B600
+		Ram Offset 0x18215c800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: res
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RendererListHandle
+			Default Value: 
+	Method: IsRenderGraphResourceImported:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x0215B680
+		Ram Offset 0x18215c880
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceType
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: GetRenderGraphResourceTransientIndex:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x0215B720
+		Ram Offset 0x18215c920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: res
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ResourceHandle
+			Default Value: 
+	Method: ImportTexture:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle
+		File Offset 0x0215B7C0
+		Ram Offset 0x18215c9c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rt
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+	Method: CreateSharedTexture:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle
+		File Offset 0x0215B910
+		Ram Offset 0x18215cb10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: desc
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureDesc
+			Default Value: 
+		Parameter 1:
+			Name: explicitRelease
+			Type: System.Boolean
+			Default Value: 
+	Method: RefreshSharedTextureDesc:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215BBF0
+		Ram Offset 0x18215cdf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: texture
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle
+			Default Value: 
+		Parameter 1:
+			Name: desc
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureDesc
+			Default Value: 
+	Method: ReleaseSharedTexture:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215BDF0
+		Ram Offset 0x18215cff0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: texture
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle
+			Default Value: 
+	Method: ImportBackbuffer:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle
+		File Offset 0x0215BF30
+		Ram Offset 0x18215d130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rt
+			Type: UnityEngine.Rendering.RenderTargetIdentifier
+			Default Value: 
+	Method: CreateTexture:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle
+		File Offset 0x0215C1E0
+		Ram Offset 0x18215d3e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: desc
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureDesc
+			Default Value: 
+		Parameter 1:
+			Name: transientPassIndex
+			Type: System.Int32
+			Default Value: -1
+	Method: GetResourceCount:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x0215C3B0
+		Ram Offset 0x18215d5b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphResourceType
+			Default Value: 
+	Method: GetTextureResourceCount:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x0215C420
+		Ram Offset 0x18215d620
+		Virtual Method Slot: 65535
+
+	Method: GetTextureResource:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureResource
+		File Offset 0x0215C480
+		Ram Offset 0x18215d680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ResourceHandle
+			Default Value: 
+	Method: GetTextureResourceDesc:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureDesc
+		File Offset 0x0215C5C0
+		Ram Offset 0x18215d7c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ResourceHandle
+			Default Value: 
+	Method: CreateRendererList:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RendererListHandle
+		File Offset 0x0215C740
+		Ram Offset 0x18215d940
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: desc
+			Type: UnityEngine.Rendering.RendererUtils.RendererListDesc
+			Default Value: 
+	Method: ImportComputeBuffer:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ComputeBufferHandle
+		File Offset 0x0215C880
+		Ram Offset 0x18215da80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: computeBuffer
+			Type: UnityEngine.ComputeBuffer
+			Default Value: 
+	Method: CreateComputeBuffer:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ComputeBufferHandle
+		File Offset 0x0215C9D0
+		Ram Offset 0x18215dbd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: desc
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ComputeBufferDesc
+			Default Value: 
+		Parameter 1:
+			Name: transientPassIndex
+			Type: System.Int32
+			Default Value: -1
+	Method: GetComputeBufferResourceDesc:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ComputeBufferDesc
+		File Offset 0x0215CB30
+		Ram Offset 0x18215dd30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ResourceHandle
+			Default Value: 
+	Method: GetComputeBufferResourceCount:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x0215CC70
+		Ram Offset 0x18215de70
+		Virtual Method Slot: 65535
+
+	Method: GetComputeBufferResource:
+		Accessibility: Private
+		Return Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ComputeBufferResource
+		File Offset 0x0215CCD0
+		Ram Offset 0x18215ded0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ResourceHandle
+			Default Value: 
+	Method: UpdateSharedResourceLastFrameIndex:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215CE10
+		Ram Offset 0x18215e010
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: ManageSharedRenderGraphResources:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0215CEA0
+		Ram Offset 0x18215e0a0
+		Virtual Method Slot: 65535
+
+	Method: CreatePooledResource:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215D020
+		Ram Offset 0x18215e220
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rgContext
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext
+			Default Value: 
+		Parameter 1:
+			Name: type
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: CreatePooledResource:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215D150
+		Ram Offset 0x18215e350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rgContext
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext
+			Default Value: 
+		Parameter 1:
+			Name: handle
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ResourceHandle
+			Default Value: 
+	Method: CreateTextureCallback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0215D170
+		Ram Offset 0x18215e370
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rgContext
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext
+			Default Value: 
+		Parameter 1:
+			Name: res
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.IRenderGraphResource
+			Default Value: 
+	Method: ReleasePooledResource:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215D3A0
+		Ram Offset 0x18215e5a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rgContext
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext
+			Default Value: 
+		Parameter 1:
+			Name: type
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: ReleasePooledResource:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215D4D0
+		Ram Offset 0x18215e6d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rgContext
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext
+			Default Value: 
+		Parameter 1:
+			Name: handle
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ResourceHandle
+			Default Value: 
+	Method: ReleaseTextureCallback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0215D4F0
+		Ram Offset 0x18215e6f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rgContext
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraphContext
+			Default Value: 
+		Parameter 1:
+			Name: res
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.IRenderGraphResource
+			Default Value: 
+	Method: ValidateTextureDesc:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: desc
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureDesc
+			Default Value: 
+	Method: ValidateRendererListDesc:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: desc
+			Type: UnityEngine.Rendering.RendererUtils.RendererListDesc
+			Default Value: 
+	Method: ValidateComputeBufferDesc:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: desc
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.ComputeBufferDesc
+			Default Value: 
+	Method: CreateRendererLists:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215D6A0
+		Ram Offset 0x18215e8a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rendererLists
+			Type: System.Collections.Generic.List`1<UnityEngine.Experimental.Rendering.RenderGraphModule.RendererListHandle>
+			Default Value: 
+		Parameter 1:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 2:
+			Name: manualDispatch
+			Type: System.Boolean
+			Default Value: False
+	Method: Clear:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215DA70
+		Ram Offset 0x18215ec70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: onException
+			Type: System.Boolean
+			Default Value: 
+	Method: PurgeUnusedGraphicsResources:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215DCC0
+		Ram Offset 0x18215eec0
+		Virtual Method Slot: 65535
+
+	Method: Cleanup:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215DD30
+		Ram Offset 0x18215ef30
+		Virtual Method Slot: 65535
+
+	Method: FlushLogs:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0215DEC0
+		Ram Offset 0x18215f0c0
+		Virtual Method Slot: 65535
+
+	Method: LogResources:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0215DF30
+		Ram Offset 0x18215f130
+		Virtual Method Slot: 65535

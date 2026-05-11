@@ -1,0 +1,306 @@
+Type: EntitiesSpawner:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Static Field: <Instance>k__BackingField
+		Type: EntitiesSpawner
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: spawnHordes
+		Type: System.Boolean
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: hordeEnemyMinDistanceToAntenna
+		Type: System.Single
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Field: hordeEnemyMaxDistanceToAntenna
+		Type: System.Single
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: hordeDailySpawns
+		Type: System.Collections.Generic.List`1<DailySpawn>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: spawnWorldEnemies
+		Type: System.Boolean
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: worldEnemiesRespawnInterval
+		Type: System.Single
+		Offset in Defining Type: 0x3C
+		Has Default: False
+
+	Field: worldEnemiesSpawnValuesList
+		Type: System.Collections.Generic.List`1<EnemiesSpawnValues>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: executeWorldEnemiesAttacks
+		Type: System.Boolean
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: firstEnemiesAttackInterval
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x4C
+		Has Default: False
+
+	Field: minMaxIntervalToSendWorldEnemiesAttack
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x54
+		Has Default: False
+
+	Field: minMaxNumberOfWorldEnemiesOnAttack
+		Type: UnityEngine.Vector2Int
+		Offset in Defining Type: 0x5C
+		Has Default: False
+
+	Field: minMaxNumberOfMinesGuards
+		Type: UnityEngine.Vector2Int
+		Offset in Defining Type: 0x64
+		Has Default: False
+
+	Field: minMaxDistanceToSpawnMinesGuards
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x6C
+		Has Default: False
+
+	Field: minMaxWanderMovementOnGuardMine
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x74
+		Has Default: False
+
+	Field: hordeCurrentDailySpawn
+		Type: DailySpawn
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: radiusDiff
+		Type: System.Single
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: currentEnemies
+		Type: System.Collections.Generic.List`1<BaseEnemy>
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: enemiesSpawnValuesDict
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,EnemiesSpawnValues>
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: currentWorldEnemiesCount
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.Int32>
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: timeFromPreviousRespawn
+		Type: System.Single
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: shouldRespawnEnemies
+		Type: System.Boolean
+		Offset in Defining Type: 0xAC
+		Has Default: False
+
+	Field: currentIntervalToExecuteWorldEnemyAttack
+		Type: System.Single
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: timeToExecuteWorldEnemyAttack
+		Type: System.Single
+		Offset in Defining Type: 0xB4
+		Has Default: False
+
+	Field: numberOfEnemiesToSend
+		Type: System.Int32
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: guardsPerMine
+		Type: System.Collections.Generic.Dictionary`2<BaseBuilding,System.Collections.Generic.List`1<BaseEnemy>>
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B87F0
+		Ram Offset 0x1806b99f0
+		Virtual Method Slot: 65535
+
+	Method: Start:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: InitProperties:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B8B10
+		Ram Offset 0x1806b9d10
+		Virtual Method Slot: 65535
+
+	Method: Update:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B8C60
+		Ram Offset 0x1806b9e60
+		Virtual Method Slot: 65535
+
+	Method: InitHordesProperties:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B8DE0
+		Ram Offset 0x1806b9fe0
+		Virtual Method Slot: 65535
+
+	Method: UpdateHordeSpawner:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B8F20
+		Ram Offset 0x1806ba120
+		Virtual Method Slot: 65535
+
+	Method: SpawnHordeEnemy:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enemyPrefab
+			Type: BaseEnemy
+			Default Value: 
+	Method: TryToMoveToNextDailySpawn:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B8FE0
+		Ram Offset 0x1806ba1e0
+		Virtual Method Slot: 65535
+
+	Method: GetEnemyRandomPosition:
+		Accessibility: Private
+		Return Type: UnityEngine.Vector2
+		File Offset 0x006B91A0
+		Ram Offset 0x1806ba3a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: referencePosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: distanceRange
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: InitEnemiesSpawnProperties:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006B9840
+		Ram Offset 0x1806baa40
+		Virtual Method Slot: 65535
+
+	Method: SpawnInitialEnemies:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: RespawnWorldEnemies:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: RespawnMinesEnemies:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: OnEnemyDied:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006B9D00
+		Ram Offset 0x1806baf00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enemy
+			Type: BaseEnemy
+			Default Value: 
+	Method: UpdateEnemiesRespawner:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006BA020
+		Ram Offset 0x1806bb220
+		Virtual Method Slot: 65535
+
+	Method: UpdateWorldEnemiesAttacks:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006BA100
+		Ram Offset 0x1806bb300
+		Virtual Method Slot: 65535
+
+	Method: SendRandomEnemiesToAttack:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: GetNextRandomAttackProperties:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006BA170
+		Ram Offset 0x1806bb370
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: interval
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: get_Instance:
+		Accessibility: Public
+		Return Type: EntitiesSpawner
+		File Offset 0x006BA210
+		Ram Offset 0x1806bb410
+		Virtual Method Slot: 65535
+
+	Method: set_Instance:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006BA250
+		Ram Offset 0x1806bb450
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: EntitiesSpawner
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379430
+		Ram Offset 0x18037a630
+		Virtual Method Slot: 65535

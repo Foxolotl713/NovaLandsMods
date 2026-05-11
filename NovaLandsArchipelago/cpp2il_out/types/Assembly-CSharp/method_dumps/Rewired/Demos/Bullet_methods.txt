@@ -1,0 +1,313 @@
+Type: Bullet
+
+Method: System.Void Rewired.Demos.Bullet::Start():	Method Body (x86 ASM):
+		0x1809D3090 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D3092 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D3096 movss xmm1,dword ptr [rcx+20h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x1809D309B xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1809D309E comiss xmm1,xmm0		; DEBUG: {Register}/XMM1 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1809D30A1 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809D30A4 jbe short 00000001809D30DAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D30A6 mov rax,[1832AA1D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576528 | None ||| N/A | N/A
+		0x1809D30AD test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D30B0 jne short 00000001809D30CAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D30B2 lea rcx,[18297B380h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485947264 | None ||| N/A | N/A
+		0x1809D30B9 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D30BE test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D30C1 je short 00000001809D30E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D30C3 mov [1832AA1D0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576528 | None ||| N/A | N/A
+		0x1809D30CA call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D30CC addss xmm0,dword ptr [rbx+20h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x1809D30D1 mov byte ptr [rbx+24h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 36 | None ||| N/A | 1
+		0x1809D30D5 movss dword ptr [rbx+28h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 40 | None ||| N/A | N/A
+		0x1809D30DA add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D30DE pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D30DF ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D30E0 lea rcx,[18297B380h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485947264 | None ||| N/A | N/A
+		0x1809D30E7 call 0000000180323A80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D30EC mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D30EF xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1809D30F1 call 0000000180321970h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D30F6 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.Bullet::Start():
+		End of function at 0x1809D30F7
+		Absolute End is at 0x1809D30F7
+		Identified Jump Destination addresses:
+
+		0x1809D3090: Saves the content of rbx to the stack
+		0x1809D3096: [!] Reads field lifeTime from {'this' (function parameter, type Rewired.Demos.Bullet)} and stores in a new local {'lifeTime' (type System.Single)}
+
+		0x1809D309B: Clears register xmm0, yielding zero-local {'local2' (type System.Int32)}
+		0x1809D309E: [!] Compares {'lifeTime' (type System.Single)} and {'local2' (type System.Int32)}
+		0x1809D30A1: Copies {'this' (function parameter, type Rewired.Demos.Bullet)} from rcx into rbx
+		0x1809D30A4: Jumps to 0x1809D30DA (which is an if statement's body) if {'lifeTime' (type System.Single)} is less than or equal to {'local2' (type System.Int32)} ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809D30A6: Loads string "ýÀ" into register rax as constant UnityEngine.Time.get_time
+		0x1809D30AD: Compares UnityEngine.Time.get_time and 0
+		0x1809D30B0: Jumps to 0x1809D30CA if UnityEngine.Time.get_time != 0
+
+		0x1809D30B2: Loads string "UnityEngine.Time::get_time()" into register rcx as constant {'constant3' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D30B9: Looks up unity ICall by name "UnityEngine.Time::get_time()" which resolves to System.Single UnityEngine.Time::get_time()
+		0x1809D30BE: Compares UnityEngine.Time.get_time and 0
+		0x1809D30C1: Jumps to 0x1809D30E0 if UnityEngine.Time.get_time equals 0 ;  - This is probably a goto, jumping to 0x1809D30E0 which is after end of current block @ 0x1809D30DA (started at 0x1809D30A6)
+
+		0x1809D30CA: [!] Calls static managed method System.Single UnityEngine.Time::get_time() and stores the result in {'time' (type System.Single)}
+
+		0x1809D30D1: [!] Sets the field die (Type System.Boolean) on local {'this' (function parameter, type Rewired.Demos.Bullet)} to the value stored in True
+		0x1809D30D5: [!] Sets the field deathTime (Type System.Single) on local {'this' (function parameter, type Rewired.Demos.Bullet)} to the value stored in {'time' (type System.Single)}
+		0x1809D30DF: [!] Returns from the function
+
+		0x1809D30E0: Loads string "UnityEngine.Time::get_time()" into register rcx as constant {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D30E7: [!] Constructs and throws an exception of kind System.MissingMethodException
+
+		0x1809D30EC: Copies {'local4' (type System.MissingMethodException)} from rax into rcx
+		0x1809D30F1: [!] Throws {'local4' (type System.MissingMethodException)}
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.Bullet
+	System.Void Start()
+		System.Single lifeTime = this.lifeTime
+		ulong local2 = 0
+
+		if (lifeTime > local2)
+
+		    System.Single time = UnityEngine.Time.time
+		    this.die = True
+		    this.deathTime = time
+		endif
+        
+		return
+		throw new System.MissingMethodException()
+		throw local4
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Single Rewired.Demos.Bullet::lifeTime
+	IL_0006: stloc.0
+	IL_0007: ldc.i4.0
+	IL_0008: stloc.1
+	IL_0009: ldloc.0
+	IL_000a: ldloc.1
+	IL_000b: ble.s IL_0021
+	IL_000d: call System.Single UnityEngine.Time::get_time()
+	IL_0012: stloc.2
+	IL_0013: ldarg.0
+	IL_0014: ldc.i4.1
+	IL_0015: stfld System.Boolean Rewired.Demos.Bullet::die
+	IL_001a: ldarg.0
+	IL_001b: ldloc.2
+	IL_001c: stfld System.Single Rewired.Demos.Bullet::deathTime
+	IL_0021: ret
+	IL_0022: newobj System.Void System.MissingMethodException::.ctor()
+	IL_0027: throw
+	IL_0028: ldloc.3
+	IL_0029: throw
+	
+
+Method: System.Void Rewired.Demos.Bullet::Update():	Method Body (x86 ASM):
+		0x1809D3100 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D3102 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D3106 cmp byte ptr [18329BDF1h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518193 | None ||| N/A | 0
+		0x1809D310D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809D3110 jne short 00000001809D3125h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D3112 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809D3119 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D311E mov byte ptr [18329BDF1h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518193 | None ||| N/A | 1
+		0x1809D3125 cmp byte ptr [rbx+24h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 36 | None ||| N/A | 0
+		0x1809D3129 je short 00000001809D31A7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D312B mov rax,[1832AA1D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576528 | None ||| N/A | N/A
+		0x1809D3132 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D3135 jne short 00000001809D314Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D3137 lea rcx,[18297B380h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485947264 | None ||| N/A | N/A
+		0x1809D313E call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D3143 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D3146 je short 00000001809D31ADh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D3148 mov [1832AA1D0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576528 | None ||| N/A | N/A
+		0x1809D314F call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D3151 comiss xmm0,dword ptr [rbx+28h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1809D3155 jb short 00000001809D31A7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D3157 mov rax,[1832A9D50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575376 | None ||| N/A | N/A
+		0x1809D315E test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D3161 jne short 00000001809D317Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D3163 lea rcx,[182979720h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485940000 | None ||| N/A | N/A
+		0x1809D316A call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D316F test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D3172 je short 00000001809D31C4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D3174 mov [1832A9D50h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575376 | None ||| N/A | N/A
+		0x1809D317B mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D317E call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D3180 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809D3187 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D318A cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1809D3191 jne short 00000001809D3198h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D3193 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D3198 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1809D319A mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D319D add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D31A1 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D31A2 jmp near ptr 000000018248FF20h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D31A7 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D31AB pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D31AC ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D31AD lea rcx,[18297B380h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485947264 | None ||| N/A | N/A
+		0x1809D31B4 call 0000000180323A80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D31B9 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D31BC xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1809D31BE call 0000000180321970h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D31C3 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.Bullet::Update():
+		End of function at 0x1809D31C4
+		Absolute End is at 0x1809D31C4
+		Identified Jump Destination addresses:
+
+		0x1809D3100: Saves the content of rbx to the stack
+		0x1809D3106: Compares {Unknown Global at 0x18329BDF1, first ten bytes are [162 4 0 210 162 4 0 188 114 239], or as chars "¢ Ò¢ ¼rï"} and 0
+		0x1809D310D: Copies {'this' (function parameter, type Rewired.Demos.Bullet)} from rcx into rbx
+		0x1809D3110: Jumps to 0x1809D3125 if {Unknown Global at 0x18329BDF1, first ten bytes are [162 4 0 210 162 4 0 188 114 239], or as chars "¢ Ò¢ ¼rï"} != 0
+
+		0x1809D3112: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809D3119: Initializes runtime metadata value UnityEngine.Object
+		0x1809D3125: [!] Compares {field die, read from local {'this' (function parameter, type Rewired.Demos.Bullet)}} and False
+		0x1809D3129: Jumps to 0x1809D31A7 (which is an if statement's body) if this.die equals False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809D312B: Loads string "ýÀ" into register rax as constant UnityEngine.Time.get_time
+		0x1809D3132: Compares UnityEngine.Time.get_time and 0
+		0x1809D3135: Jumps to 0x1809D314F if UnityEngine.Time.get_time != 0
+
+		0x1809D3137: Loads string "UnityEngine.Time::get_time()" into register rcx as constant {'constant7' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D313E: Looks up unity ICall by name "UnityEngine.Time::get_time()" which resolves to System.Single UnityEngine.Time::get_time()
+		0x1809D3143: Compares UnityEngine.Time.get_time and 0
+		0x1809D3146: Jumps to 0x1809D31AD if UnityEngine.Time.get_time equals 0 ;  - This is probably a goto, jumping to 0x1809D31AD which is after end of current block @ 0x1809D31A7 (started at 0x1809D312B)
+
+		0x1809D314F: [!] Calls static managed method System.Single UnityEngine.Time::get_time() and stores the result in {'time' (type System.Single)}
+
+		0x1809D3151: [!] Compares {'time' (type System.Single)} and {field deathTime, read from local {'this' (function parameter, type Rewired.Demos.Bullet)}}
+		0x1809D3157: Loads string "G" into register rax as constant UnityEngine.Component.get_gameObject
+		0x1809D315E: Compares UnityEngine.Component.get_gameObject and 0
+		0x1809D3161: Jumps to 0x1809D317B if UnityEngine.Component.get_gameObject != 0
+
+		0x1809D3163: Loads string "UnityEngine.Component::get_gameObject()" into register rcx as constant {'constant11' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D316A: Looks up unity ICall by name "UnityEngine.Component::get_gameObject()" which resolves to UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+		0x1809D316F: Compares UnityEngine.Component.get_gameObject and 0
+		0x1809D3172: Jumps to 0x1809D31C4 if UnityEngine.Component.get_gameObject equals 0 ;  - This is probably a goto, jumping to 0x1809D31C4 which is after end of current block @ 0x1809D31A7 (started at 0x1809D312B)
+
+		0x1809D317B: Copies {'this' (function parameter, type Rewired.Demos.Bullet)} from rbx into rcx
+		0x1809D317E: [!] Calls managed method UnityEngine.GameObject UnityEngine.Component::get_gameObject() on instance {'this' (function parameter, type Rewired.Demos.Bullet)} and stores the result in {'gameObject' (type UnityEngine.GameObject)}
+
+		0x1809D3180: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809D3187: Copies {'gameObject' (type UnityEngine.GameObject)} from rax into rbx
+		0x1809D318A: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1809D3191: Jumps to 0x1809D3198 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1809D3193: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1809D319A: Copies {'gameObject' (type UnityEngine.GameObject)} from rbx into rcx
+		0x1809D31A2: [!] Calls static managed method System.Void UnityEngine.Object::Destroy(UnityEngine.Object) with arguments [{'gameObject' (type UnityEngine.GameObject)}]
+
+		0x1809D31A2: [!] Returns from the function
+
+		0x1809D31AC: [!] Returns from the function
+
+		0x1809D31AD: Loads string "UnityEngine.Time::get_time()" into register rcx as constant {'constant16' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D31B4: [!] Constructs and throws an exception of kind System.MissingMethodException
+
+		0x1809D31B9: Copies {'local4' (type System.MissingMethodException)} from rax into rcx
+		0x1809D31BE: [!] Throws {'local4' (type System.MissingMethodException)}
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.Bullet
+	System.Void Update()
+
+		if (this.die != False)
+
+		    System.Single time = UnityEngine.Time.time
+
+		    UnityEngine.GameObject gameObject = this.gameObject
+
+		    UnityEngine.Object.Destroy(gameObject) //(Object obj)
+		    return
+		endif
+        
+		return
+		throw new System.MissingMethodException()
+		throw local4
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Boolean Rewired.Demos.Bullet::die
+	IL_0006: ldc.i4.0
+	IL_0007: beq.s IL_001b
+	IL_0009: call System.Single UnityEngine.Time::get_time()
+	IL_000e: stloc.0
+	IL_000f: ldarg.0
+	IL_0010: call UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+	IL_0015: call System.Void UnityEngine.Object::Destroy(UnityEngine.Object)
+	IL_001a: ret
+	IL_001b: ret
+	IL_001c: newobj System.Void System.MissingMethodException::.ctor()
+	IL_0021: throw
+	IL_0022: ldloc.1
+	IL_0023: throw
+	
+
+Method: System.Void Rewired.Demos.Bullet::.ctor():	Method Body (x86 ASM):
+		0x1809D31E0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809D31E4 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x1809D31EB mov dword ptr [rcx+20h],40400000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 32 | None ||| N/A | 1077936128
+		0x1809D31F2 jne short 00000001809D3207h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D31F4 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809D31FB call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D3200 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x1809D3207 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809D320E cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1809D3215 jne short 00000001809D3220h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D3217 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809D321B jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D3220 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809D3224 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D3225 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.Bullet::.ctor():
+		End of function at 0x1809D3226
+		Absolute End is at 0x1809D3226
+		Identified Jump Destination addresses:
+
+		0x1809D31E4: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x1809D31EB: [!] Sets the field lifeTime (Type System.Single) on local {'this' (function parameter, type Rewired.Demos.Bullet)} to the value stored in 3
+		0x1809D31F2: Jumps to 0x1809D3207 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x1809D31F4: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809D31FB: Initializes runtime metadata value UnityEngine.Object
+		0x1809D3207: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809D320E: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1809D3215: Jumps to 0x1809D3220 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1809D3224: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.Bullet
+	System.Void .ctor()
+		this.lifeTime = 3
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.r4 3
+	IL_0006: stfld System.Single Rewired.Demos.Bullet::lifeTime
+	IL_000b: ret
+	
+

@@ -1,0 +1,303 @@
+Type: SteamScript:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Nested Types:
+		SteamScript/Achievement_t
+
+	Static Field: <Instance>k__BackingField
+		Type: SteamScript
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: FILE_NAME
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: data.dat
+
+	Field: gameId
+		Type: System.Int32
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: gameIdDemo
+		Type: System.Int32
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Field: m_UGCHandle
+		Type: Steamworks.UGCHandle_t
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_FileData
+		Type: System.String
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_FileReadAsyncHandle
+		Type: Steamworks.SteamAPICall_t
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_FileSize
+		Type: System.Int32
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: m_FileCount
+		Type: System.Int32
+		Offset in Defining Type: 0x44
+		Has Default: False
+
+	Field: gameOverlayActivated
+		Type: Steamworks.Callback`1<Steamworks.GameOverlayActivated_t>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: OnRemoteStorageFileWriteAsyncCompleteCallResult
+		Type: Steamworks.CallResult`1<Steamworks.RemoteStorageFileWriteAsyncComplete_t>
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: OnRemoteStorageFileReadAsyncCompleteCallResult
+		Type: Steamworks.CallResult`1<Steamworks.RemoteStorageFileReadAsyncComplete_t>
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: achievements
+		Type: System.Collections.Generic.List`1<SteamScript/Achievement_t>
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: m_UserAchievementStored
+		Type: Steamworks.Callback`1<Steamworks.UserAchievementStored_t>
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: m_UserStatsReceived
+		Type: Steamworks.Callback`1<Steamworks.UserStatsReceived_t>
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: m_UserStatsStored
+		Type: Steamworks.Callback`1<Steamworks.UserStatsStored_t>
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: storeStats
+		Type: System.Boolean
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: requestedStats
+		Type: System.Boolean
+		Offset in Defining Type: 0x81
+		Has Default: False
+
+	Field: statsValid
+		Type: System.Boolean
+		Offset in Defining Type: 0x82
+		Has Default: False
+
+	Method: get_Instance:
+		Accessibility: Public
+		Return Type: SteamScript
+		File Offset 0x00863DE0
+		Ram Offset 0x180864fe0
+		Virtual Method Slot: 65535
+
+	Method: set_Instance:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00863E20
+		Ram Offset 0x180865020
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: SteamScript
+			Default Value: 
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00863EB0
+		Ram Offset 0x1808650b0
+		Virtual Method Slot: 65535
+
+	Method: OnEnable:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00864490
+		Ram Offset 0x180865690
+		Virtual Method Slot: 65535
+
+	Method: UpdateSaveState:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x008651C0
+		Ram Offset 0x1808663c0
+		Virtual Method Slot: 65535
+
+	Method: Update:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00865360
+		Ram Offset 0x180866560
+		Virtual Method Slot: 65535
+
+	Method: GetFileNameAndSize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00865480
+		Ram Offset 0x180866680
+		Virtual Method Slot: 65535
+
+	Method: ReadCloudData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x008656D0
+		Ram Offset 0x1808668d0
+		Virtual Method Slot: 65535
+
+	Method: WriteCloudData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00865800
+		Ram Offset 0x180866a00
+		Virtual Method Slot: 65535
+
+	Method: RemoveCloudData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x008659D0
+		Ram Offset 0x180866bd0
+		Virtual Method Slot: 65535
+
+	Method: OnRemoteStorageFileWriteAsyncComplete:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pCallback
+			Type: Steamworks.RemoteStorageFileWriteAsyncComplete_t
+			Default Value: 
+		Parameter 1:
+			Name: bIOFailure
+			Type: System.Boolean
+			Default Value: 
+	Method: OnRemoteStorageFileReadAsyncComplete:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00865A30
+		Ram Offset 0x180866c30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pCallback
+			Type: Steamworks.RemoteStorageFileReadAsyncComplete_t
+			Default Value: 
+		Parameter 1:
+			Name: bIOFailure
+			Type: System.Boolean
+			Default Value: 
+	Method: OnGameOverlayActivated:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pCallback
+			Type: Steamworks.GameOverlayActivated_t
+			Default Value: 
+	Method: SetRichPresence:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00865CD0
+		Ram Offset 0x180866ed0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: System.String
+			Default Value: 
+	Method: GetAchievementName:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x00865D20
+		Ram Offset 0x180866f20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ach
+			Type: Achievement
+			Default Value: 
+	Method: OnUserStatsReceived:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00865EB0
+		Ram Offset 0x1808670b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pCallback
+			Type: Steamworks.UserStatsReceived_t
+			Default Value: 
+	Method: OnUserStatsStored:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x008660F0
+		Ram Offset 0x1808672f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pCallback
+			Type: Steamworks.UserStatsStored_t
+			Default Value: 
+	Method: OnAchievementStored:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00866150
+		Ram Offset 0x180867350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pCallback
+			Type: Steamworks.UserAchievementStored_t
+			Default Value: 
+	Method: UnlockAchievement:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00866160
+		Ram Offset 0x180867360
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: achievement
+			Type: Achievement
+			Default Value: 
+	Method: UnlockAchievement:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00866210
+		Ram Offset 0x180867410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: achievement
+			Type: SteamScript/Achievement_t
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379430
+		Ram Offset 0x18037a630
+		Virtual Method Slot: 65535

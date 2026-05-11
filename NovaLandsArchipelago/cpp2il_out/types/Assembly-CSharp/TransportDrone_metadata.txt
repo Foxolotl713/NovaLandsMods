@@ -1,0 +1,833 @@
+Type: TransportDrone:
+	Base Class: 
+		BaseCharacter
+
+	Interfaces:
+
+	Field: statusFeedback
+		Type: BotSpeechBalloon
+		Offset in Defining Type: 0x500
+		Has Default: False
+
+	Field: statusFeedbackAutoHideDuration
+		Type: System.Single
+		Offset in Defining Type: 0x508
+		Has Default: False
+
+	Field: collectItemsSFX
+		Type: System.String
+		Offset in Defining Type: 0x510
+		Has Default: False
+
+	Field: depositItemsSFX
+		Type: System.String
+		Offset in Defining Type: 0x518
+		Has Default: False
+
+	Field: jetpackParticles
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x520
+		Has Default: False
+
+	Field: carriedItemsAnchors
+		Type: System.Collections.Generic.List`1<UnityEngine.Transform>
+		Offset in Defining Type: 0x528
+		Has Default: False
+
+	Field: carriedItemsSprites
+		Type: System.Collections.Generic.List`1<UnityEngine.SpriteRenderer>
+		Offset in Defining Type: 0x530
+		Has Default: False
+
+	Field: numberOfItemsPerStackItem
+		Type: System.Collections.Generic.List`1<IntIntPair>
+		Offset in Defining Type: 0x538
+		Has Default: False
+
+	Field: radiusToCheckCurrentArea
+		Type: System.Single
+		Offset in Defining Type: 0x540
+		Has Default: False
+
+	Field: localPositionOnAct
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x544
+		Has Default: False
+
+	Field: speedMovingDownOnAct
+		Type: System.Single
+		Offset in Defining Type: 0x54C
+		Has Default: False
+
+	Field: speedMovingUpOnAct
+		Type: System.Single
+		Offset in Defining Type: 0x550
+		Has Default: False
+
+	Field: timeWaitingOnAct
+		Type: System.Single
+		Offset in Defining Type: 0x554
+		Has Default: False
+
+	Field: actionEaseType
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0x558
+		Has Default: False
+
+	Field: distanceToFromTargetWhenWaiting
+		Type: System.Single
+		Offset in Defining Type: 0x55C
+		Has Default: False
+
+	Field: waitingMovementSpeed
+		Type: System.Single
+		Offset in Defining Type: 0x560
+		Has Default: False
+
+	Field: originalSpriteLayerId
+		Type: System.Int32
+		Offset in Defining Type: 0x564
+		Has Default: False
+
+	Field: droneBase
+		Type: DroneBase
+		Offset in Defining Type: 0x568
+		Has Default: False
+
+	Field: currentTargetContainerIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x570
+		Has Default: False
+
+	Field: currentTargetContainer
+		Type: DepositAreaContainer
+		Offset in Defining Type: 0x578
+		Has Default: False
+
+	Field: reservedContainer
+		Type: DepositAreaContainer
+		Offset in Defining Type: 0x580
+		Has Default: False
+
+	Field: targetIsFull
+		Type: System.Boolean
+		Offset in Defining Type: 0x588
+		Has Default: False
+
+	Field: carriedResources
+		Type: System.Collections.Generic.List`1<System.Int32>
+		Offset in Defining Type: 0x590
+		Has Default: False
+
+	Field: carriedResourcesAmount
+		Type: System.Collections.Generic.List`1<System.Int32>
+		Offset in Defining Type: 0x598
+		Has Default: False
+
+	Field: carriedResourcesExtraData
+		Type: System.Collections.Generic.List`1<System.Collections.Generic.List`1<SimpleJSON.JSONNode>>
+		Offset in Defining Type: 0x5A0
+		Has Default: False
+
+	Field: actTween
+		Type: DG.Tweening.Tween
+		Offset in Defining Type: 0x5A8
+		Has Default: False
+
+	Field: currentActTime
+		Type: System.Single
+		Offset in Defining Type: 0x5B0
+		Has Default: False
+
+	Field: waitMovementAngle
+		Type: System.Single
+		Offset in Defining Type: 0x5B4
+		Has Default: False
+
+	Field: waitMovementDirection
+		Type: System.Single
+		Offset in Defining Type: 0x5B8
+		Has Default: False
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CB170
+		Ram Offset 0x1804cc370
+		Virtual Method Slot: 20
+
+		Parameter 0:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: homeArea
+			Type: WorldArea
+			Default Value: 
+		Parameter 2:
+			Name: onDie
+			Type: System.Action`1<BaseCharacter>
+			Default Value: 
+	Method: LoadDependentData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CB230
+		Ram Offset 0x1804cc430
+		Virtual Method Slot: 21
+
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x004CB7E0
+		Ram Offset 0x1804cc9e0
+		Virtual Method Slot: 40
+
+		Parameter 0:
+			Name: firstSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: GetStateFromStateName:
+		Accessibility: Family
+		Return Type: MuttAI.FSM.State
+		File Offset 0x004CBD20
+		Ram Offset 0x1804ccf20
+		Virtual Method Slot: 23
+
+		Parameter 0:
+			Name: stateName
+			Type: System.String
+			Default Value: 
+	Method: Start:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CC060
+		Ram Offset 0x1804cd260
+		Virtual Method Slot: 5
+
+	Method: OnDestroy:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004CC0B0
+		Ram Offset 0x1804cd2b0
+		Virtual Method Slot: 8
+
+	Method: InitProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004CC0D0
+		Ram Offset 0x1804cd2d0
+		Virtual Method Slot: 26
+
+	Method: EnableCharacterCollider:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 33
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: EnableColliders:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 34
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+	Method: GetTimeFromTweenSpeed:
+		Accessibility: Family
+		Return Type: System.Single
+		File Offset 0x004CC4D0
+		Ram Offset 0x1804cd6d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: origin
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: destination
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 2:
+			Name: speed
+			Type: System.Single
+			Default Value: 
+	Method: IsDeliveryTarget:
+		Accessibility: Private
+		Return Type: DepositAreaContainer
+		File Offset 0x004CC510
+		Ram Offset 0x1804cd710
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: target
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: GetNextTargetDeliveryContainer:
+		Accessibility: Family
+		Return Type: DepositAreaContainer
+		File Offset 0x004CC6D0
+		Ram Offset 0x1804cd8d0
+		Virtual Method Slot: 65535
+
+	Method: TryToStartWorking:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CCD00
+		Ram Offset 0x1804cdf00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: container
+			Type: DepositAreaContainer
+			Default Value: 
+	Method: OnRemoveTargetContainer:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CD0B0
+		Ram Offset 0x1804ce2b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: container
+			Type: BaseContainer
+			Default Value: 
+	Method: BackToBase:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CD230
+		Ram Offset 0x1804ce430
+		Virtual Method Slot: 65535
+
+	Method: SetDroneBase:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CD2F0
+		Ram Offset 0x1804ce4f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: droneBase
+			Type: DroneBase
+			Default Value: 
+	Method: SetRider:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 94
+
+		Parameter 0:
+			Name: rider
+			Type: BaseCharacter
+			Default Value: 
+	Method: HasTargetWithAvailableSpace:
+		Accessibility: Private
+		Return Type: DepositAreaContainer
+		File Offset 0x004CD350
+		Ram Offset 0x1804ce550
+		Virtual Method Slot: 65535
+
+	Method: ShowExpression:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CD420
+		Ram Offset 0x1804ce620
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: expression
+			Type: BotExpression
+			Default Value: 
+		Parameter 1:
+			Name: timeToHide
+			Type: System.Single
+			Default Value: -1
+	Method: ShowExpression:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CD450
+		Ram Offset 0x1804ce650
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sprite
+			Type: UnityEngine.Sprite
+			Default Value: 
+	Method: ShowExpression:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CD490
+		Ram Offset 0x1804ce690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: expression
+			Type: BotExpression
+			Default Value: 
+		Parameter 1:
+			Name: resourceSprite
+			Type: UnityEngine.Sprite
+			Default Value: 
+		Parameter 2:
+			Name: timeToHide
+			Type: System.Single
+			Default Value: -1
+	Method: HideExpression:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CD4C0
+		Ram Offset 0x1804ce6c0
+		Virtual Method Slot: 65535
+
+	Method: HideExpression:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CD4F0
+		Ram Offset 0x1804ce6f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: expression
+			Type: BotExpression
+			Default Value: 
+	Method: UpdateExpression:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CD520
+		Ram Offset 0x1804ce720
+		Virtual Method Slot: 65535
+
+	Method: UpdateTransportedItemsVisuals:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004CD660
+		Ram Offset 0x1804ce860
+		Virtual Method Slot: 65535
+
+	Method: HowManyCanAdd:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x004CDA60
+		Ram Offset 0x1804cec60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+	Method: HowManyCanFitPerSlot:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x004CDBA0
+		Ram Offset 0x1804ceda0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: slot
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+	Method: AddItems:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x004CDCC0
+		Ram Offset 0x1804ceec0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+	Method: CollectItems:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004CDF00
+		Ram Offset 0x1804cf100
+		Virtual Method Slot: 65535
+
+	Method: DeliverItems:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004CE2C0
+		Ram Offset 0x1804cf4c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: targetContainer
+			Type: DepositAreaContainer
+			Default Value: 
+	Method: DropInventory:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004CE4F0
+		Ram Offset 0x1804cf6f0
+		Virtual Method Slot: 65535
+
+	Method: IsInventoryFull:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x004CF070
+		Ram Offset 0x1804d0270
+		Virtual Method Slot: 65535
+
+	Method: IsInventoryEmpty:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x004CF100
+		Ram Offset 0x1804d0300
+		Virtual Method Slot: 65535
+
+	Method: Despawn:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CF170
+		Ram Offset 0x1804d0370
+		Virtual Method Slot: 65535
+
+	Method: EnterDead:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CF1C0
+		Ram Offset 0x1804d03c0
+		Virtual Method Slot: 132
+
+	Method: EnterIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CF210
+		Ram Offset 0x1804d0410
+		Virtual Method Slot: 79
+
+	Method: UpdateIdle:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004CF510
+		Ram Offset 0x1804d0710
+		Virtual Method Slot: 80
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CF560
+		Ram Offset 0x1804d0760
+		Virtual Method Slot: 81
+
+	Method: ExitIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CF8F0
+		Ram Offset 0x1804d0af0
+		Virtual Method Slot: 82
+
+	Method: OnMessageIdle:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004CFAD0
+		Ram Offset 0x1804d0cd0
+		Virtual Method Slot: 83
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: EnterChasing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CFDC0
+		Ram Offset 0x1804d0fc0
+		Virtual Method Slot: 106
+
+	Method: UpdateChasing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004CFEA0
+		Ram Offset 0x1804d10a0
+		Virtual Method Slot: 107
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateChasing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D0E60
+		Ram Offset 0x1804d2060
+		Virtual Method Slot: 108
+
+	Method: OnMessageChasing:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004D1010
+		Ram Offset 0x1804d2210
+		Virtual Method Slot: 110
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: OnArriveAtDroneBase:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x004D10E0
+		Ram Offset 0x1804d22e0
+		Virtual Method Slot: 65535
+
+	Method: EnterDroneDepositing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D1520
+		Ram Offset 0x1804d2720
+		Virtual Method Slot: 65535
+
+	Method: UpdateDroneDepositing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D1640
+		Ram Offset 0x1804d2840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateDroneDepositing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003B1720
+		Ram Offset 0x1803b2920
+		Virtual Method Slot: 65535
+
+	Method: ExitDroneDepositing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: OnMessageDroneDepositing:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004D1720
+		Ram Offset 0x1804d2920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: EnterDroneCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D17A0
+		Ram Offset 0x1804d29a0
+		Virtual Method Slot: 65535
+
+	Method: UpdateDroneCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D1B00
+		Ram Offset 0x1804d2d00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateDroneCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003B1720
+		Ram Offset 0x1803b2920
+		Virtual Method Slot: 65535
+
+	Method: ExitDroneCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: OnMessageDroneCollecting:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004D1CC0
+		Ram Offset 0x1804d2ec0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: EnterDroneMovingDown:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D1D60
+		Ram Offset 0x1804d2f60
+		Virtual Method Slot: 65535
+
+	Method: UpdateDroneMovingDown:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D23D0
+		Ram Offset 0x1804d35d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateDroneMovingDown:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003B1720
+		Ram Offset 0x1803b2920
+		Virtual Method Slot: 65535
+
+	Method: ExitDroneMovingDown:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: OnMessageDroneMovingDown:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004D2650
+		Ram Offset 0x1804d3850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: EnterDroneMovingUp:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D2710
+		Ram Offset 0x1804d3910
+		Virtual Method Slot: 65535
+
+	Method: UpdateDroneMovingUp:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateDroneMovingUp:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003B1720
+		Ram Offset 0x1803b2920
+		Virtual Method Slot: 65535
+
+	Method: ExitDroneMovingUp:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D2BC0
+		Ram Offset 0x1804d3dc0
+		Virtual Method Slot: 65535
+
+	Method: OnMessageDroneMovingUp:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004D2CE0
+		Ram Offset 0x1804d3ee0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: EnterWaiting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D2D60
+		Ram Offset 0x1804d3f60
+		Virtual Method Slot: 126
+
+	Method: UpdateWaiting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D2E30
+		Ram Offset 0x1804d4030
+		Virtual Method Slot: 127
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateWaiting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D2F70
+		Ram Offset 0x1804d4170
+		Virtual Method Slot: 128
+
+	Method: OnMessageWaiting:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004D3300
+		Ram Offset 0x1804d4500
+		Virtual Method Slot: 130
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: get_CurrentTargetContainer:
+		Accessibility: Public
+		Return Type: DepositAreaContainer
+		File Offset 0x004D3470
+		Ram Offset 0x1804d4670
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004D3480
+		Ram Offset 0x1804d4680
+		Virtual Method Slot: 65535
+
+	Method: <EnterDroneMovingDown>b__84_0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004D34F0
+		Ram Offset 0x1804d46f0
+		Virtual Method Slot: 65535
+
+	Method: <EnterDroneMovingUp>b__89_0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004D3650
+		Ram Offset 0x1804d4850
+		Virtual Method Slot: 65535

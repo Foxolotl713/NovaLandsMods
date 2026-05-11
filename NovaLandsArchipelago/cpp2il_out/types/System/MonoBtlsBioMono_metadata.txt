@@ -1,0 +1,218 @@
+Type: Mono.Btls.MonoBtlsBioMono:
+	Base Class: 
+		Mono.Btls.MonoBtlsBio
+
+	Interfaces:
+
+	Nested Types:
+		Mono.Btls.MonoBtlsBioMono/ControlCommand
+		Mono.Btls.MonoBtlsBioMono/BioReadFunc
+		Mono.Btls.MonoBtlsBioMono/BioWriteFunc
+		Mono.Btls.MonoBtlsBioMono/BioControlFunc
+
+	Field: handle
+		Type: System.Runtime.InteropServices.GCHandle
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: instance
+		Type: System.IntPtr
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: readFunc
+		Type: Mono.Btls.MonoBtlsBioMono/BioReadFunc
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: writeFunc
+		Type: Mono.Btls.MonoBtlsBioMono/BioWriteFunc
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: controlFunc
+		Type: Mono.Btls.MonoBtlsBioMono/BioControlFunc
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: readFuncPtr
+		Type: System.IntPtr
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: writeFuncPtr
+		Type: System.IntPtr
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: controlFuncPtr
+		Type: System.IntPtr
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: backend
+		Type: Mono.Btls.IMonoBtlsBioMono
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CD5070
+		Ram Offset 0x181cd6270
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: backend
+			Type: Mono.Btls.IMonoBtlsBioMono
+			Default Value: 
+	Method: mono_btls_bio_mono_new:
+		Accessibility: Private
+		Return Type: System.IntPtr
+		File Offset 0x01CD5700
+		Ram Offset 0x181cd6900
+		Virtual Method Slot: 65535
+
+	Method: mono_btls_bio_mono_initialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01CD5770
+		Ram Offset 0x181cd6970
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: instance
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 2:
+			Name: readFunc
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 3:
+			Name: writeFunc
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 4:
+			Name: controlFunc
+			Type: System.IntPtr
+			Default Value: 
+	Method: Control:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x01CD5820
+		Ram Offset 0x181cd6a20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: command
+			Type: Mono.Btls.MonoBtlsBioMono/ControlCommand
+			Default Value: 
+		Parameter 1:
+			Name: arg
+			Type: System.Int64
+			Default Value: 
+	Method: OnRead:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01CD58C0
+		Ram Offset 0x181cd6ac0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: dataLength
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: wantMore
+			Type: System.Int32
+			Default Value: 
+	Method: OnRead:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01CD5A40
+		Ram Offset 0x181cd6c40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instance
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: data
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 2:
+			Name: dataLength
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: wantMore
+			Type: System.Int32
+			Default Value: 
+	Method: OnWrite:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01CD5CC0
+		Ram Offset 0x181cd6ec0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: dataLength
+			Type: System.Int32
+			Default Value: 
+	Method: OnWrite:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01CD5E10
+		Ram Offset 0x181cd7010
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instance
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: data
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 2:
+			Name: dataLength
+			Type: System.Int32
+			Default Value: 
+	Method: Control:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x01CD6060
+		Ram Offset 0x181cd7260
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instance
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: command
+			Type: Mono.Btls.MonoBtlsBioMono/ControlCommand
+			Default Value: 
+		Parameter 2:
+			Name: arg
+			Type: System.Int64
+			Default Value: 
+	Method: Close:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01CD6200
+		Ram Offset 0x181cd7400
+		Virtual Method Slot: 5

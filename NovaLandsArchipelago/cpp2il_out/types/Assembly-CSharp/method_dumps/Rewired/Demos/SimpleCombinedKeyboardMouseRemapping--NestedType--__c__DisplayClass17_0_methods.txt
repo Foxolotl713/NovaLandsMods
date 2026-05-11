@@ -1,0 +1,92 @@
+Type: <>c__DisplayClass17_0
+
+Method: System.Void Rewired.Demos.SimpleCombinedKeyboardMouseRemapping/<>c__DisplayClass17_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.SimpleCombinedKeyboardMouseRemapping/<>c__DisplayClass17_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.SimpleCombinedKeyboardMouseRemapping/<>c__DisplayClass17_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Void Rewired.Demos.SimpleCombinedKeyboardMouseRemapping/<>c__DisplayClass17_0::<RedrawUI>b__0():	Method Body (x86 ASM):
+		0x1809D52E0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809D52E4 mov rax,[rcx+18h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1809D52E8 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D52EB je short 00000001809D5303h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D52ED mov r8d,[rcx+14h]		; DEBUG: {Register}/R8D {Memory}/None ||| RCX | 20 | None ||| N/A | N/A
+		0x1809D52F1 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1809D52F4 mov edx,[rcx+10h]		; DEBUG: {Register}/EDX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1809D52F7 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D52FA add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809D52FE jmp near ptr 00000001809D4A60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D5303 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D5308 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.SimpleCombinedKeyboardMouseRemapping/<>c__DisplayClass17_0::<RedrawUI>b__0():
+		End of function at 0x1809D5309
+		Absolute End is at 0x1809D5309
+		Identified Jump Destination addresses:
+
+		0x1809D52E4: [!] Reads field <>4__this from {'this' (function parameter, type Rewired.Demos.SimpleCombinedKeyboardMouseRemapping/<>c__DisplayClass17_0)} and stores in a new local {'<>4__this' (type Rewired.Demos.SimpleCombinedKeyboardMouseRemapping)}
+
+		0x1809D52E8: [!] Compares {'<>4__this' (type Rewired.Demos.SimpleCombinedKeyboardMouseRemapping)} and 0
+		0x1809D52EB: Jumps to 0x1809D5303 (which throws a NRE) if <>4__this equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D52ED: [!] Reads field actionElementMapId from {'this' (function parameter, type Rewired.Demos.SimpleCombinedKeyboardMouseRemapping/<>c__DisplayClass17_0)} and stores in a new local {'actionElementMapId' (type System.Int32)}
+
+		0x1809D52F4: [!] Reads field index from {'this' (function parameter, type Rewired.Demos.SimpleCombinedKeyboardMouseRemapping/<>c__DisplayClass17_0)} and stores in a new local {'index' (type System.Int32)}
+
+		0x1809D52F7: Copies {'<>4__this' (type Rewired.Demos.SimpleCombinedKeyboardMouseRemapping)} from rax into rcx
+		0x1809D52FE: [!] Calls managed method System.Void Rewired.Demos.SimpleCombinedKeyboardMouseRemapping::OnInputFieldClicked(System.Int32,System.Int32) on instance {'<>4__this' (type Rewired.Demos.SimpleCombinedKeyboardMouseRemapping)} with arguments [{'index' (type System.Int32)}, {'actionElementMapId' (type System.Int32)}]
+
+		0x1809D52FE: [!] Returns from the function
+
+		0x1809D5303: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.SimpleCombinedKeyboardMouseRemapping/<>c__DisplayClass17_0
+	System.Void <RedrawUI>b__0()
+		Rewired.Demos.SimpleCombinedKeyboardMouseRemapping <>4__this = this.<>4__this
+		System.Int32 actionElementMapId = this.actionElementMapId
+		System.Int32 index = this.index
+
+		<>4__this.OnInputFieldClicked(index, actionElementMapId) //(Int32 index, Int32 actionElementMapToReplaceId)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld Rewired.Demos.SimpleCombinedKeyboardMouseRemapping Rewired.Demos.SimpleCombinedKeyboardMouseRemapping/<>c__DisplayClass17_0::<>4__this
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld System.Int32 Rewired.Demos.SimpleCombinedKeyboardMouseRemapping/<>c__DisplayClass17_0::actionElementMapId
+	IL_000d: stloc.1
+	IL_000e: ldarg.0
+	IL_000f: ldfld System.Int32 Rewired.Demos.SimpleCombinedKeyboardMouseRemapping/<>c__DisplayClass17_0::index
+	IL_0014: stloc.2
+	IL_0015: ldloc.0
+	IL_0016: ldloc.2
+	IL_0017: ldloc.1
+	IL_0018: call System.Void Rewired.Demos.SimpleCombinedKeyboardMouseRemapping::OnInputFieldClicked(System.Int32,System.Int32)
+	IL_001d: ret
+	IL_001e: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0023: throw
+	
+

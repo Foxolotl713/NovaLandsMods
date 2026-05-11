@@ -1,0 +1,351 @@
+Type: ZXing.QrCode.Internal.MatrixUtil:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: POSITION_DETECTION_PATTERN
+		Type: System.Int32[][]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: VERSION_INFO_POLY
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 7973
+
+	Static Field: TYPE_INFO_POLY
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1335
+
+	Static Field: TYPE_INFO_MASK_PATTERN
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 21522
+
+	Static Field: POSITION_ADJUSTMENT_PATTERN
+		Type: System.Int32[][]
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: POSITION_ADJUSTMENT_PATTERN_COORDINATE_TABLE
+		Type: System.Int32[][]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: TYPE_INFO_COORDINATES
+		Type: System.Int32[][]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Method: clearMatrix:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02843A00
+		Ram Offset 0x182844c00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: buildMatrix:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02843A70
+		Ram Offset 0x182844c70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dataBits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: ecLevel
+			Type: ZXing.QrCode.Internal.ErrorCorrectionLevel
+			Default Value: 
+		Parameter 2:
+			Name: version
+			Type: ZXing.QrCode.Internal.Version
+			Default Value: 
+		Parameter 3:
+			Name: maskPattern
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: embedBasicPatterns:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02843C90
+		Ram Offset 0x182844e90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: version
+			Type: ZXing.QrCode.Internal.Version
+			Default Value: 
+		Parameter 1:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: embedTypeInfo:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02843F00
+		Ram Offset 0x182845100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ecLevel
+			Type: ZXing.QrCode.Internal.ErrorCorrectionLevel
+			Default Value: 
+		Parameter 1:
+			Name: maskPattern
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: maybeEmbedVersionInfo:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x028440E0
+		Ram Offset 0x1828452e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: version
+			Type: ZXing.QrCode.Internal.Version
+			Default Value: 
+		Parameter 1:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: embedDataBits:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02844230
+		Ram Offset 0x182845430
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dataBits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: maskPattern
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: findMSBSet:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x02844570
+		Ram Offset 0x182845770
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value_Renamed
+			Type: System.Int32
+			Default Value: 
+	Method: calculateBCHCode:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x02844580
+		Ram Offset 0x182845780
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: poly
+			Type: System.Int32
+			Default Value: 
+	Method: makeTypeInfoBits:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02844650
+		Ram Offset 0x182845850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ecLevel
+			Type: ZXing.QrCode.Internal.ErrorCorrectionLevel
+			Default Value: 
+		Parameter 1:
+			Name: maskPattern
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: bits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+	Method: makeVersionInfoBits:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02844A80
+		Ram Offset 0x182845c80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: version
+			Type: ZXing.QrCode.Internal.Version
+			Default Value: 
+		Parameter 1:
+			Name: bits
+			Type: ZXing.Common.BitArray
+			Default Value: 
+	Method: isEmpty:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x02844CA0
+		Ram Offset 0x182845ea0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: embedTimingPatterns:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02844CB0
+		Ram Offset 0x182845eb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: embedDarkDotAtLeftBottomCorner:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02844E40
+		Ram Offset 0x182846040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: embedHorizontalSeparationPattern:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02844EE0
+		Ram Offset 0x1828460e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: xStart
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: yStart
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: embedVerticalSeparationPattern:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02845010
+		Ram Offset 0x182846210
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: xStart
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: yStart
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: embedPositionAdjustmentPattern:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02845140
+		Ram Offset 0x182846340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: xStart
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: yStart
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: embedPositionDetectionPattern:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02845230
+		Ram Offset 0x182846430
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: xStart
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: yStart
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: embedPositionDetectionPatternsAndSeparators:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02845320
+		Ram Offset 0x182846520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: maybeEmbedPositionAdjustmentPatterns:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02845680
+		Ram Offset 0x182846880
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: version
+			Type: ZXing.QrCode.Internal.Version
+			Default Value: 
+		Parameter 1:
+			Name: matrix
+			Type: ZXing.QrCode.Internal.ByteMatrix
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02845900
+		Ram Offset 0x182846b00
+		Virtual Method Slot: 65535

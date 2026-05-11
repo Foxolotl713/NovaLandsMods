@@ -1,0 +1,184 @@
+Type: BaseGroundEffect:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Field: delayToEnableEffect
+		Type: System.Single
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: applyEffectInterval
+		Type: System.Single
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Field: lifeTime
+		Type: System.Single
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: timeToDestroyOnLifeTimeEnded
+		Type: System.Single
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Field: affectFlyingCharacters
+		Type: System.Boolean
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: idleSound
+		Type: System.String
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: collider
+		Type: UnityEngine.Collider2D
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: affectedCharacters
+		Type: System.Collections.Generic.List`1<BaseCharacter>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: effectTimes
+		Type: System.Collections.Generic.List`1<System.Single>
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: currentLifeTime
+		Type: System.Single
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: emittersManager
+		Type: FMODEmittersManager
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: currentSFX
+		Type: FMODUnity.StudioEventEmitter
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004E14C0
+		Ram Offset 0x1804e26c0
+		Virtual Method Slot: 65535
+
+	Method: PlaySFX:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004E1830
+		Ram Offset 0x1804e2a30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sfx
+			Type: System.String
+			Default Value: 
+	Method: EnableCollider:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004E1900
+		Ram Offset 0x1804e2b00
+		Virtual Method Slot: 65535
+
+	Method: OnTriggerEnter2D:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004E1960
+		Ram Offset 0x1804e2b60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: collision
+			Type: UnityEngine.Collider2D
+			Default Value: 
+	Method: OnTriggerExit2D:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004E1AC0
+		Ram Offset 0x1804e2cc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: collision
+			Type: UnityEngine.Collider2D
+			Default Value: 
+	Method: RemoveCharacter:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004E1CB0
+		Ram Offset 0x1804e2eb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: RemoveCharacter:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004E1DD0
+		Ram Offset 0x1804e2fd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: OnLifetimeEnded:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004E1E90
+		Ram Offset 0x1804e3090
+		Virtual Method Slot: 4
+
+	Method: ApplyEffect:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004E1F30
+		Ram Offset 0x1804e3130
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: CanApplyEffect:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x004E2000
+		Ram Offset 0x1804e3200
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: Update:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004E2160
+		Ram Offset 0x1804e3360
+		Virtual Method Slot: 65535
+
+	Method: KillNow:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004E2520
+		Ram Offset 0x1804e3720
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004E25A0
+		Ram Offset 0x1804e37a0
+		Virtual Method Slot: 65535

@@ -1,0 +1,81 @@
+Type: <>c__DisplayClass458_0
+
+Method: System.Void Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass458_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass458_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass458_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass458_0::<ShowSwapButton>b__0(Rewired.ElementAssignmentConflictInfo):	Method Body (x86 ASM):
+		0x1809A5910 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809A5914 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1809A5918 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809A591B je short 00000001809A592Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809A591D mov eax,[rax+64h]		; DEBUG: {Register}/EAX {Memory}/None ||| RAX | 100 | None ||| N/A | N/A
+		0x1809A5920 cmp [rdx+14h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 20 | None ||| N/A | N/A
+		0x1809A5923 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809A5926 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809A592A ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809A592B call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809A5930 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass458_0::<ShowSwapButton>b__0(Rewired.ElementAssignmentConflictInfo):
+		End of function at 0x1809A5931
+		Absolute End is at 0x1809A5931
+		Identified Jump Destination addresses:
+
+		0x1809A5914: [!] Reads field aem from {'this' (function parameter, type Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass458_0)} and stores in a new local {'actionElementMap' (type Rewired.ActionElementMap)}
+
+		0x1809A5918: [!] Compares {'actionElementMap' (type Rewired.ActionElementMap)} and 0
+		0x1809A591B: Jumps to 0x1809A592B (which throws a NRE) if actionElementMap equals 0. Implicitly present in managed code, so ignored here.
+		0x1809A591D: [!] Reads field oFUAyzlkDBdPoonWGgEIgJYWTzJOA from {'actionElementMap' (type Rewired.ActionElementMap)} and stores in a new local {'oFUAyzlkDBdPoonWGgEIgJYWTzJOA' (type System.Int32)}
+
+		0x1809A5920: [!] Compares {field bKJUqoUVBfkgMAIRQVWiABOyRVtk, read from local {'x' (function parameter, type Rewired.ElementAssignmentConflictInfo)}} and {'oFUAyzlkDBdPoonWGgEIgJYWTzJOA' (type System.Int32)}
+		0x1809A5923: [!] Sets the boolean {'local4' (type System.Boolean)} in rax to true if x.bKJUqoUVBfkgMAIRQVWiABOyRVtk is equal to oFUAyzlkDBdPoonWGgEIgJYWTzJOA, otherwise false.
+		0x1809A592A: [!] Returns {'local4' (type System.Boolean)} from the function
+
+		0x1809A592B: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass458_0
+	System.Boolean <ShowSwapButton>b__0(Rewired.ElementAssignmentConflictInfo x)
+		Rewired.ActionElementMap actionElementMap = this.aem
+		System.Int32 oFUAyzlkDBdPoonWGgEIgJYWTzJOA = actionElementMap.oFUAyzlkDBdPoonWGgEIgJYWTzJOA
+		System.Boolean local4 = x.bKJUqoUVBfkgMAIRQVWiABOyRVtk == oFUAyzlkDBdPoonWGgEIgJYWTzJOA
+		return local4
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld Rewired.ActionElementMap Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass458_0::aem
+	IL_0006: ldfld System.Int32 Rewired.ActionElementMap::oFUAyzlkDBdPoonWGgEIgJYWTzJOA
+	IL_000b: stloc.0
+	IL_000c: ldarg.1
+	IL_000d: ldfld System.Int32 Rewired.ElementAssignmentConflictInfo::bKJUqoUVBfkgMAIRQVWiABOyRVtk
+	IL_0012: ldloc.0
+	IL_0013: ceq
+	IL_0015: ret
+	IL_0016: newobj System.Void System.NullReferenceException::.ctor()
+	IL_001b: throw
+	
+

@@ -1,0 +1,408 @@
+Type: Steamworks.SteamNetworking:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Method: SendP2PPacket:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B92FF0
+		Ram Offset 0x180b941f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDRemote
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: pubData
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: cubData
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: eP2PSendType
+			Type: Steamworks.EP2PSend
+			Default Value: 
+		Parameter 4:
+			Name: nChannel
+			Type: System.Int32
+			Default Value: 0
+	Method: IsP2PPacketAvailable:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B93080
+		Ram Offset 0x180b94280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pcubMsgSize
+			Type: System.UInt32
+			Default Value: 
+		Parameter 1:
+			Name: nChannel
+			Type: System.Int32
+			Default Value: 0
+	Method: ReadP2PPacket:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B930E0
+		Ram Offset 0x180b942e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pubDest
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: cubDest
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: pcubMsgSize
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: psteamIDRemote
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 4:
+			Name: nChannel
+			Type: System.Int32
+			Default Value: 0
+	Method: AcceptP2PSessionWithUser:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B93170
+		Ram Offset 0x180b94370
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDRemote
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: CloseP2PSessionWithUser:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B931C0
+		Ram Offset 0x180b943c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDRemote
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: CloseP2PChannelWithUser:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B93210
+		Ram Offset 0x180b94410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDRemote
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: nChannel
+			Type: System.Int32
+			Default Value: 
+	Method: GetP2PSessionState:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B93270
+		Ram Offset 0x180b94470
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDRemote
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: pConnectionState
+			Type: Steamworks.P2PSessionState_t
+			Default Value: 
+	Method: AllowP2PPacketRelay:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B932D0
+		Ram Offset 0x180b944d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bAllow
+			Type: System.Boolean
+			Default Value: 
+	Method: CreateListenSocket:
+		Accessibility: Public
+		Return Type: Steamworks.SNetListenSocket_t
+		File Offset 0x00B93320
+		Ram Offset 0x180b94520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nVirtualP2PPort
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: nIP
+			Type: Steamworks.SteamIPAddress_t
+			Default Value: 
+		Parameter 2:
+			Name: nPort
+			Type: System.UInt16
+			Default Value: 
+		Parameter 3:
+			Name: bAllowUseOfPacketRelay
+			Type: System.Boolean
+			Default Value: 
+	Method: CreateP2PConnectionSocket:
+		Accessibility: Public
+		Return Type: Steamworks.SNetSocket_t
+		File Offset 0x00B933C0
+		Ram Offset 0x180b945c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDTarget
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: nVirtualPort
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: nTimeoutSec
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: bAllowUseOfPacketRelay
+			Type: System.Boolean
+			Default Value: 
+	Method: CreateConnectionSocket:
+		Accessibility: Public
+		Return Type: Steamworks.SNetSocket_t
+		File Offset 0x00B93450
+		Ram Offset 0x180b94650
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nIP
+			Type: Steamworks.SteamIPAddress_t
+			Default Value: 
+		Parameter 1:
+			Name: nPort
+			Type: System.UInt16
+			Default Value: 
+		Parameter 2:
+			Name: nTimeoutSec
+			Type: System.Int32
+			Default Value: 
+	Method: DestroySocket:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B934E0
+		Ram Offset 0x180b946e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hSocket
+			Type: Steamworks.SNetSocket_t
+			Default Value: 
+		Parameter 1:
+			Name: bNotifyRemoteEnd
+			Type: System.Boolean
+			Default Value: 
+	Method: DestroyListenSocket:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B93540
+		Ram Offset 0x180b94740
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hSocket
+			Type: Steamworks.SNetListenSocket_t
+			Default Value: 
+		Parameter 1:
+			Name: bNotifyRemoteEnd
+			Type: System.Boolean
+			Default Value: 
+	Method: SendDataOnSocket:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B935A0
+		Ram Offset 0x180b947a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hSocket
+			Type: Steamworks.SNetSocket_t
+			Default Value: 
+		Parameter 1:
+			Name: pubData
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: cubData
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: bReliable
+			Type: System.Boolean
+			Default Value: 
+	Method: IsDataAvailableOnSocket:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B93630
+		Ram Offset 0x180b94830
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hSocket
+			Type: Steamworks.SNetSocket_t
+			Default Value: 
+		Parameter 1:
+			Name: pcubMsgSize
+			Type: System.UInt32
+			Default Value: 
+	Method: RetrieveDataFromSocket:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B93690
+		Ram Offset 0x180b94890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hSocket
+			Type: Steamworks.SNetSocket_t
+			Default Value: 
+		Parameter 1:
+			Name: pubDest
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: cubDest
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: pcubMsgSize
+			Type: System.UInt32
+			Default Value: 
+	Method: IsDataAvailable:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B93720
+		Ram Offset 0x180b94920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hListenSocket
+			Type: Steamworks.SNetListenSocket_t
+			Default Value: 
+		Parameter 1:
+			Name: pcubMsgSize
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: phSocket
+			Type: Steamworks.SNetSocket_t
+			Default Value: 
+	Method: RetrieveData:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B937A0
+		Ram Offset 0x180b949a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hListenSocket
+			Type: Steamworks.SNetListenSocket_t
+			Default Value: 
+		Parameter 1:
+			Name: pubDest
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: cubDest
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: pcubMsgSize
+			Type: System.UInt32
+			Default Value: 
+		Parameter 4:
+			Name: phSocket
+			Type: Steamworks.SNetSocket_t
+			Default Value: 
+	Method: GetSocketInfo:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B93830
+		Ram Offset 0x180b94a30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hSocket
+			Type: Steamworks.SNetSocket_t
+			Default Value: 
+		Parameter 1:
+			Name: pSteamIDRemote
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 2:
+			Name: peSocketStatus
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: punIPRemote
+			Type: Steamworks.SteamIPAddress_t
+			Default Value: 
+		Parameter 4:
+			Name: punPortRemote
+			Type: System.UInt16
+			Default Value: 
+	Method: GetListenSocketInfo:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B938C0
+		Ram Offset 0x180b94ac0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hListenSocket
+			Type: Steamworks.SNetListenSocket_t
+			Default Value: 
+		Parameter 1:
+			Name: pnIP
+			Type: Steamworks.SteamIPAddress_t
+			Default Value: 
+		Parameter 2:
+			Name: pnPort
+			Type: System.UInt16
+			Default Value: 
+	Method: GetSocketConnectionType:
+		Accessibility: Public
+		Return Type: Steamworks.ESNetSocketConnectionType
+		File Offset 0x00B93940
+		Ram Offset 0x180b94b40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hSocket
+			Type: Steamworks.SNetSocket_t
+			Default Value: 
+	Method: GetMaxPacketSize:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B93990
+		Ram Offset 0x180b94b90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hSocket
+			Type: Steamworks.SNetSocket_t
+			Default Value: 

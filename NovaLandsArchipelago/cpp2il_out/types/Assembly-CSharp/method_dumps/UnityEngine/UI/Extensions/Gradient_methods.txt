@@ -1,0 +1,2206 @@
+Type: Gradient
+
+Method: UnityEngine.UI.Extensions.GradientMode UnityEngine.UI.Extensions.Gradient::get_GradientMode():	Method Body (x86 ASM):
+		0x18077E320 mov eax,[rcx+28h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 40 | None ||| N/A | N/A
+		0x18077E323 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18077E324 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method UnityEngine.UI.Extensions.GradientMode UnityEngine.UI.Extensions.Gradient::get_GradientMode():
+		End of function at 0x18077E325
+		Absolute End is at 0x18077E325
+		Identified Jump Destination addresses:
+
+		0x18077E320: [!] Reads field _gradientMode from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_gradientMode' (type UnityEngine.UI.Extensions.GradientMode)}
+
+		0x18077E323: [!] Returns {'_gradientMode' (type UnityEngine.UI.Extensions.GradientMode)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	UnityEngine.UI.Extensions.GradientMode get_GradientMode()
+		UnityEngine.UI.Extensions.GradientMode _gradientMode = this._gradientMode
+		return _gradientMode
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld UnityEngine.UI.Extensions.GradientMode UnityEngine.UI.Extensions.Gradient::_gradientMode
+	IL_0006: ret
+	
+
+Method: System.Void UnityEngine.UI.Extensions.Gradient::set_GradientMode(UnityEngine.UI.Extensions.GradientMode):	Method Body (x86 ASM):
+		0x180A43180 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A43184 mov [rcx+28h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RCX | 40 | None ||| N/A | N/A
+		0x180A43187 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A43189 call 00000001825C4400h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4318E test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43191 je short 0000000180A431ABh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43193 mov r8,[rax]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A43196 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43199 mov rdx,[r8+300h]		; DEBUG: {Register}/RDX {Memory}/None ||| R8 | 768 | None ||| N/A | N/A
+		0x180A431A0 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A431A4 jmp qword ptr [r8+2F8h]		; DEBUG: {Memory}/None {Register}/None ||| R8 | 760 | None ||| N/A | N/A
+		0x180A431AB call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A431B0 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.Gradient::set_GradientMode(UnityEngine.UI.Extensions.GradientMode):
+		End of function at 0x180A431B1
+		Absolute End is at 0x180A431B1
+		Identified Jump Destination addresses:
+
+		0x180A43184: [!] Sets the field _gradientMode (Type UnityEngine.UI.Extensions.GradientMode) on local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} to the value stored in {'value' (function parameter, type UnityEngine.UI.Extensions.GradientMode)}
+		0x180A43189: [!] Calls managed method UnityEngine.UI.Graphic UnityEngine.UI.BaseMeshEffect::get_graphic() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores the result in {'graphic' (type UnityEngine.UI.Graphic)}
+
+		0x180A4318E: [!] Compares {'graphic' (type UnityEngine.UI.Graphic)} and 0
+		0x180A43191: Jumps to 0x180A431AB (which throws a NRE) if graphic equals 0. Implicitly present in managed code, so ignored here.
+		0x180A43193: Loads the class pointer from graphic into a constant constant2 in register r8
+		0x180A43196: Copies {'graphic' (type UnityEngine.UI.Graphic)} from rax into rcx
+		0x180A43199: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::SetVerticesDirty() specific to UnityEngine.UI.Graphic from the class pointer in r8, slot 28 (from memory offset 768) and stores in constant constant3
+		0x180A431A4: [!] Calls managed method System.Xml.XmlNameTable System.Xml.IDtdParserAdapter::get_NameTable() on instance {'graphic' (type UnityEngine.UI.Graphic)} and stores the result in {'nameTable' (type System.Xml.XmlNameTable)} ;  - Leftover parameters detected, but first few match.
+
+		0x180A431A4: [!] Returns from the function
+
+		0x180A431AB: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	System.Void set_GradientMode(UnityEngine.UI.Extensions.GradientMode value)
+		this._gradientMode = value
+
+		UnityEngine.UI.Graphic graphic = base.graphic
+
+		System.Xml.XmlNameTable nameTable = graphic.NameTable
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldarg.1
+	IL_0002: stfld UnityEngine.UI.Extensions.GradientMode UnityEngine.UI.Extensions.Gradient::_gradientMode
+	IL_0007: ldarg.0
+	IL_0008: call UnityEngine.UI.Graphic UnityEngine.UI.BaseMeshEffect::get_graphic()
+	IL_000d: call System.Xml.XmlNameTable System.Xml.IDtdParserAdapter::get_NameTable()
+	IL_0012: stloc.0
+	IL_0013: ret
+	IL_0014: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0019: throw
+	
+
+Method: UnityEngine.UI.Extensions.GradientDir UnityEngine.UI.Extensions.Gradient::get_GradientDir():	Method Body (x86 ASM):
+		0x180478D00 mov eax,[rcx+2Ch]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 44 | None ||| N/A | N/A
+		0x180478D03 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180478D04 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method UnityEngine.UI.Extensions.GradientDir UnityEngine.UI.Extensions.Gradient::get_GradientDir():
+		End of function at 0x180478D05
+		Absolute End is at 0x180478D05
+		Identified Jump Destination addresses:
+
+		0x180478D00: [!] Reads field _gradientDir from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_gradientDir' (type UnityEngine.UI.Extensions.GradientDir)}
+
+		0x180478D03: [!] Returns {'_gradientDir' (type UnityEngine.UI.Extensions.GradientDir)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	UnityEngine.UI.Extensions.GradientDir get_GradientDir()
+		UnityEngine.UI.Extensions.GradientDir _gradientDir = this._gradientDir
+		return _gradientDir
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld UnityEngine.UI.Extensions.GradientDir UnityEngine.UI.Extensions.Gradient::_gradientDir
+	IL_0006: ret
+	
+
+Method: System.Void UnityEngine.UI.Extensions.Gradient::set_GradientDir(UnityEngine.UI.Extensions.GradientDir):	Method Body (x86 ASM):
+		0x180A431C0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A431C4 mov [rcx+2Ch],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RCX | 44 | None ||| N/A | N/A
+		0x180A431C7 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A431C9 call 00000001825C4400h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A431CE test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A431D1 je short 0000000180A431EBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A431D3 mov r8,[rax]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A431D6 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A431D9 mov rdx,[r8+300h]		; DEBUG: {Register}/RDX {Memory}/None ||| R8 | 768 | None ||| N/A | N/A
+		0x180A431E0 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A431E4 jmp qword ptr [r8+2F8h]		; DEBUG: {Memory}/None {Register}/None ||| R8 | 760 | None ||| N/A | N/A
+		0x180A431EB call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A431F0 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.Gradient::set_GradientDir(UnityEngine.UI.Extensions.GradientDir):
+		End of function at 0x180A431F1
+		Absolute End is at 0x180A431F1
+		Identified Jump Destination addresses:
+
+		0x180A431C4: [!] Sets the field _gradientDir (Type UnityEngine.UI.Extensions.GradientDir) on local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} to the value stored in {'value' (function parameter, type UnityEngine.UI.Extensions.GradientDir)}
+		0x180A431C9: [!] Calls managed method UnityEngine.UI.Graphic UnityEngine.UI.BaseMeshEffect::get_graphic() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores the result in {'graphic' (type UnityEngine.UI.Graphic)}
+
+		0x180A431CE: [!] Compares {'graphic' (type UnityEngine.UI.Graphic)} and 0
+		0x180A431D1: Jumps to 0x180A431EB (which throws a NRE) if graphic equals 0. Implicitly present in managed code, so ignored here.
+		0x180A431D3: Loads the class pointer from graphic into a constant constant2 in register r8
+		0x180A431D6: Copies {'graphic' (type UnityEngine.UI.Graphic)} from rax into rcx
+		0x180A431D9: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::SetVerticesDirty() specific to UnityEngine.UI.Graphic from the class pointer in r8, slot 28 (from memory offset 768) and stores in constant constant3
+		0x180A431E4: [!] Calls managed method System.Xml.XmlNameTable System.Xml.IDtdParserAdapter::get_NameTable() on instance {'graphic' (type UnityEngine.UI.Graphic)} and stores the result in {'nameTable' (type System.Xml.XmlNameTable)} ;  - Leftover parameters detected, but first few match.
+
+		0x180A431E4: [!] Returns from the function
+
+		0x180A431EB: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	System.Void set_GradientDir(UnityEngine.UI.Extensions.GradientDir value)
+		this._gradientDir = value
+
+		UnityEngine.UI.Graphic graphic = base.graphic
+
+		System.Xml.XmlNameTable nameTable = graphic.NameTable
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldarg.1
+	IL_0002: stfld UnityEngine.UI.Extensions.GradientDir UnityEngine.UI.Extensions.Gradient::_gradientDir
+	IL_0007: ldarg.0
+	IL_0008: call UnityEngine.UI.Graphic UnityEngine.UI.BaseMeshEffect::get_graphic()
+	IL_000d: call System.Xml.XmlNameTable System.Xml.IDtdParserAdapter::get_NameTable()
+	IL_0012: stloc.0
+	IL_0013: ret
+	IL_0014: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0019: throw
+	
+
+Method: System.Boolean UnityEngine.UI.Extensions.Gradient::get_OverwriteAllColor():	Method Body (x86 ASM):
+		0x1803C3500 movzx eax,byte ptr [rcx+30h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 48 | None ||| N/A | N/A
+		0x1803C3504 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803C3505 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean UnityEngine.UI.Extensions.Gradient::get_OverwriteAllColor():
+		End of function at 0x1803C3506
+		Absolute End is at 0x1803C3506
+		Identified Jump Destination addresses:
+
+		0x1803C3500: [!] Reads field _overwriteAllColor from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_overwriteAllColor' (type System.Boolean)}
+
+		0x1803C3504: [!] Returns {'_overwriteAllColor' (type System.Boolean)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	System.Boolean get_OverwriteAllColor()
+		System.Boolean _overwriteAllColor = this._overwriteAllColor
+		return _overwriteAllColor
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Boolean UnityEngine.UI.Extensions.Gradient::_overwriteAllColor
+	IL_0006: ret
+	
+
+Method: System.Void UnityEngine.UI.Extensions.Gradient::set_OverwriteAllColor(System.Boolean):	Method Body (x86 ASM):
+		0x180A43200 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A43204 mov [rcx+30h],dl		; DEBUG: {Memory}/None {Register}/DL ||| RCX | 48 | None ||| N/A | N/A
+		0x180A43207 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A43209 call 00000001825C4400h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4320E test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43211 je short 0000000180A4322Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43213 mov r8,[rax]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A43216 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43219 mov rdx,[r8+300h]		; DEBUG: {Register}/RDX {Memory}/None ||| R8 | 768 | None ||| N/A | N/A
+		0x180A43220 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A43224 jmp qword ptr [r8+2F8h]		; DEBUG: {Memory}/None {Register}/None ||| R8 | 760 | None ||| N/A | N/A
+		0x180A4322B call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43230 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.Gradient::set_OverwriteAllColor(System.Boolean):
+		End of function at 0x180A43231
+		Absolute End is at 0x180A43231
+		Identified Jump Destination addresses:
+
+		0x180A43204: [!] Sets the field _overwriteAllColor (Type System.Boolean) on local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} to the value stored in {'value' (function parameter, type System.Boolean)}
+		0x180A43209: [!] Calls managed method UnityEngine.UI.Graphic UnityEngine.UI.BaseMeshEffect::get_graphic() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores the result in {'graphic' (type UnityEngine.UI.Graphic)}
+
+		0x180A4320E: [!] Compares {'graphic' (type UnityEngine.UI.Graphic)} and 0
+		0x180A43211: Jumps to 0x180A4322B (which throws a NRE) if graphic equals 0. Implicitly present in managed code, so ignored here.
+		0x180A43213: Loads the class pointer from graphic into a constant constant2 in register r8
+		0x180A43216: Copies {'graphic' (type UnityEngine.UI.Graphic)} from rax into rcx
+		0x180A43219: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::SetVerticesDirty() specific to UnityEngine.UI.Graphic from the class pointer in r8, slot 28 (from memory offset 768) and stores in constant constant3
+		0x180A43224: [!] Calls managed method System.Xml.XmlNameTable System.Xml.IDtdParserAdapter::get_NameTable() on instance {'graphic' (type UnityEngine.UI.Graphic)} and stores the result in {'nameTable' (type System.Xml.XmlNameTable)} ;  - Leftover parameters detected, but first few match.
+
+		0x180A43224: [!] Returns from the function
+
+		0x180A4322B: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	System.Void set_OverwriteAllColor(System.Boolean value)
+		this._overwriteAllColor = value
+
+		UnityEngine.UI.Graphic graphic = base.graphic
+
+		System.Xml.XmlNameTable nameTable = graphic.NameTable
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldarg.1
+	IL_0002: stfld System.Boolean UnityEngine.UI.Extensions.Gradient::_overwriteAllColor
+	IL_0007: ldarg.0
+	IL_0008: call UnityEngine.UI.Graphic UnityEngine.UI.BaseMeshEffect::get_graphic()
+	IL_000d: call System.Xml.XmlNameTable System.Xml.IDtdParserAdapter::get_NameTable()
+	IL_0012: stloc.0
+	IL_0013: ret
+	IL_0014: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0019: throw
+	
+
+Method: UnityEngine.Color UnityEngine.UI.Extensions.Gradient::get_Vertex1():	Method Body (x86 ASM):
+		0x180A43240 movups xmm0,[rdx+34h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 52 | None ||| N/A | N/A
+		0x180A43244 mov rax,rcx		; DEBUG: {Register}/RAX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A43247 movups [rcx],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RCX | 0 | None ||| N/A | N/A
+		0x180A4324A ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4324B int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method UnityEngine.Color UnityEngine.UI.Extensions.Gradient::get_Vertex1():
+		End of function at 0x180A4324C
+		Absolute End is at 0x180A4324C
+		Identified Jump Destination addresses:
+
+		0x180A43244: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} from rcx into rax
+		0x180A43247: [!] Sets the field  (Type ) on local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} to the value stored in 
+		0x180A4324A: [!] Returns {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	UnityEngine.Color get_Vertex1()
+		this. = 
+		return this
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.RegToFieldAction at (0x180A43247) is corrupt (Instance or field is null) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.Extensions.Gradient::set_Vertex1(UnityEngine.Color):	Method Body (x86 ASM):
+		0x180A43250 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A43254 movups xmm0,[rdx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180A43257 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A43259 movups [rcx+34h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RCX | 52 | None ||| N/A | N/A
+		0x180A4325D call 00000001825C4400h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43262 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43265 je short 0000000180A4327Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43267 mov r8,[rax]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A4326A mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A4326D mov rdx,[r8+2E0h]		; DEBUG: {Register}/RDX {Memory}/None ||| R8 | 736 | None ||| N/A | N/A
+		0x180A43274 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A43278 jmp qword ptr [r8+2D8h]		; DEBUG: {Memory}/None {Register}/None ||| R8 | 728 | None ||| N/A | N/A
+		0x180A4327F call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43284 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.Gradient::set_Vertex1(UnityEngine.Color):
+		End of function at 0x180A43285
+		Absolute End is at 0x180A43285
+		Identified Jump Destination addresses:
+
+		0x180A43254: Loads the class pointer from value into a constant constant1 in register xmm0
+		0x180A43259: [!] Sets the field _vertex1 (Type UnityEngine.Color) on local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} to the value stored in {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}
+		0x180A4325D: [!] Calls managed method UnityEngine.UI.Graphic UnityEngine.UI.BaseMeshEffect::get_graphic() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores the result in {'graphic' (type UnityEngine.UI.Graphic)}
+
+		0x180A43262: [!] Compares {'graphic' (type UnityEngine.UI.Graphic)} and 0
+		0x180A43265: Jumps to 0x180A4327F (which throws a NRE) if graphic equals 0. Implicitly present in managed code, so ignored here.
+		0x180A43267: Loads the class pointer from graphic into a constant constant3 in register r8
+		0x180A4326A: Copies {'graphic' (type UnityEngine.UI.Graphic)} from rax into rcx
+		0x180A4326D: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::SetAllDirty() specific to UnityEngine.UI.Graphic from the class pointer in r8, slot 26 (from memory offset 736) and stores in constant constant4
+		0x180A43278: [!] Calls managed method System.Xml.XmlNameTable System.Xml.IDtdParserAdapter::get_NameTable() on instance {'graphic' (type UnityEngine.UI.Graphic)} and stores the result in {'nameTable' (type System.Xml.XmlNameTable)} ;  - Leftover parameters detected, but first few match.
+
+		0x180A43278: [!] Returns from the function
+
+		0x180A4327F: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	System.Void set_Vertex1(UnityEngine.Color value)
+		this._vertex1 = constant1
+
+		UnityEngine.UI.Graphic graphic = base.graphic
+
+		System.Xml.XmlNameTable nameTable = graphic.NameTable
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.RegToFieldAction at (0x180A43259) is corrupt (ConstantDefinition: Don't know how to get IL to load a Cpp2IL.Core.Analysis.Il2CppClassIdentifier) and cannot be created as IL. Aborting here.
+
+
+Method: UnityEngine.Color UnityEngine.UI.Extensions.Gradient::get_Vertex2():	Method Body (x86 ASM):
+		0x180A43290 movups xmm0,[rdx+44h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 68 | None ||| N/A | N/A
+		0x180A43294 mov rax,rcx		; DEBUG: {Register}/RAX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A43297 movups [rcx],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RCX | 0 | None ||| N/A | N/A
+		0x180A4329A ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4329B int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method UnityEngine.Color UnityEngine.UI.Extensions.Gradient::get_Vertex2():
+		End of function at 0x180A4329C
+		Absolute End is at 0x180A4329C
+		Identified Jump Destination addresses:
+
+		0x180A43294: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} from rcx into rax
+		0x180A43297: [!] Sets the field  (Type ) on local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} to the value stored in 
+		0x180A4329A: [!] Returns {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	UnityEngine.Color get_Vertex2()
+		this. = 
+		return this
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.RegToFieldAction at (0x180A43297) is corrupt (Instance or field is null) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.Extensions.Gradient::set_Vertex2(UnityEngine.Color):	Method Body (x86 ASM):
+		0x180A432A0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A432A4 movups xmm0,[rdx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180A432A7 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A432A9 movups [rcx+44h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RCX | 68 | None ||| N/A | N/A
+		0x180A432AD call 00000001825C4400h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A432B2 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A432B5 je short 0000000180A432CFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A432B7 mov r8,[rax]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A432BA mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A432BD mov rdx,[r8+2E0h]		; DEBUG: {Register}/RDX {Memory}/None ||| R8 | 736 | None ||| N/A | N/A
+		0x180A432C4 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A432C8 jmp qword ptr [r8+2D8h]		; DEBUG: {Memory}/None {Register}/None ||| R8 | 728 | None ||| N/A | N/A
+		0x180A432CF call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A432D4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.Gradient::set_Vertex2(UnityEngine.Color):
+		End of function at 0x180A432D5
+		Absolute End is at 0x180A432D5
+		Identified Jump Destination addresses:
+
+		0x180A432A4: Loads the class pointer from value into a constant constant1 in register xmm0
+		0x180A432A9: [!] Sets the field _vertex2 (Type UnityEngine.Color) on local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} to the value stored in {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}
+		0x180A432AD: [!] Calls managed method UnityEngine.UI.Graphic UnityEngine.UI.BaseMeshEffect::get_graphic() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores the result in {'graphic' (type UnityEngine.UI.Graphic)}
+
+		0x180A432B2: [!] Compares {'graphic' (type UnityEngine.UI.Graphic)} and 0
+		0x180A432B5: Jumps to 0x180A432CF (which throws a NRE) if graphic equals 0. Implicitly present in managed code, so ignored here.
+		0x180A432B7: Loads the class pointer from graphic into a constant constant3 in register r8
+		0x180A432BA: Copies {'graphic' (type UnityEngine.UI.Graphic)} from rax into rcx
+		0x180A432BD: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::SetAllDirty() specific to UnityEngine.UI.Graphic from the class pointer in r8, slot 26 (from memory offset 736) and stores in constant constant4
+		0x180A432C8: [!] Calls managed method System.Xml.XmlNameTable System.Xml.IDtdParserAdapter::get_NameTable() on instance {'graphic' (type UnityEngine.UI.Graphic)} and stores the result in {'nameTable' (type System.Xml.XmlNameTable)} ;  - Leftover parameters detected, but first few match.
+
+		0x180A432C8: [!] Returns from the function
+
+		0x180A432CF: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	System.Void set_Vertex2(UnityEngine.Color value)
+		this._vertex2 = constant1
+
+		UnityEngine.UI.Graphic graphic = base.graphic
+
+		System.Xml.XmlNameTable nameTable = graphic.NameTable
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.RegToFieldAction at (0x180A432A9) is corrupt (ConstantDefinition: Don't know how to get IL to load a Cpp2IL.Core.Analysis.Il2CppClassIdentifier) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.Extensions.Gradient::Awake():	Method Body (x86 ASM):
+		0x180A432E0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A432E2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A432E6 cmp byte ptr [18329C022h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518754 | None ||| N/A | 0
+		0x180A432ED mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A432F0 jne short 0000000180A43305h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A432F2 lea rcx,[18310A2D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493872848 | None ||| N/A | N/A
+		0x180A432F9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A432FE mov byte ptr [18329C022h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518754 | None ||| N/A | 1
+		0x180A43305 mov rdx,[18310A2D0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493872848 | None ||| N/A | N/A
+		0x180A4330C mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A4330F call 0000000180D40810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43314 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180A4331B mov [rbx+58h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBX | 88 | None ||| N/A | N/A
+		0x180A4331F je short 0000000180A43361h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43321 lea r8,[rbx+58h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x180A43325 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180A43329 lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x180A43330 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180A43337 mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A4333A shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180A4333E and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180A43342 lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x180A43346 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180A43349 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A43350 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180A43353 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43356 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180A4335A lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x180A4335F jne short 0000000180A43350h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43361 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A43365 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43366 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43367 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.Gradient::Awake():
+		End of function at 0x180A43368
+		Absolute End is at 0x180A43368
+		Identified Jump Destination addresses:
+
+		0x180A432E0: Saves the content of rbx to the stack
+		0x180A432E6: Compares {Unknown Global at 0x18329C022, first ten bytes are [234 2 224 195 4 0 50 197 4 0], or as chars "êàÃ 2Å "} and 0
+		0x180A432ED: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} from rcx into rbx
+		0x180A432F0: Jumps to 0x180A43305 if {Unknown Global at 0x18329C022, first ten bytes are [234 2 224 195 4 0 50 197 4 0], or as chars "êàÃ 2Å "} != 0
+
+		0x180A432F2: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.UI.Graphic>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180A432F9: Initializes runtime metadata value 
+		0x180A43305: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.UI.Graphic>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180A4330C: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} from rbx into rcx
+		0x180A4330F: [!] Calls managed method T UnityEngine.Component::GetComponent<UnityEngine.UI.Graphic>() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores the result in {'component' (type UnityEngine.UI.Graphic)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180A43314: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180A4331B: [!] Sets the field targetGraphic (Type UnityEngine.UI.Graphic) on local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} to the value stored in {'component' (type UnityEngine.UI.Graphic)}
+		0x180A4331F: Jumps to 0x180A43361 if constant5 equals 0
+
+		0x180A43321: Loads the pointer to the field targetGraphic on {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} into register r8
+		0x180A43329: Loads string "¡
+m" into register rcx as constant {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A43337: Copies {'constant7' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x180A43350: Moves the method pointer for method T UnityEngine.Component::GetComponent<UnityEngine.UI.Graphic>() from rdx to rax
+		0x180A43353: Copies {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} from rax into rcx
+		0x180A4335F: Jumps to 0x180A43350 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x180A43366: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	System.Void Awake()
+
+		UnityEngine.UI.Graphic component = base.GetComponent<UnityEngine.UI.Graphic>()
+		this.targetGraphic = component
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call T UnityEngine.Component::GetComponent<UnityEngine.UI.Graphic>()
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldloc.0
+	IL_0009: stfld UnityEngine.UI.Graphic UnityEngine.UI.Extensions.Gradient::targetGraphic
+	IL_000e: ret
+	
+
+Method: System.Void UnityEngine.UI.Extensions.Gradient::ModifyMesh(UnityEngine.UI.VertexHelper):	Method Body (x86 ASM):
+		0x180A43370 push rbp		; DEBUG: {Register}/RBP {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43372 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43373 push r15		; DEBUG: {Register}/R15 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43375 lea rbp,[rsp-0D0h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 18446744073709551408 | None ||| N/A | N/A
+		0x180A4337D sub rsp,1D0h		; DEBUG: {Register}/RSP {Immediate32to64}/None ||| None | 0 | None ||| N/A | 464
+		0x180A43384 cmp byte ptr [18329C023h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518755 | None ||| N/A | 0
+		0x180A4338B mov r15,rdx		; DEBUG: {Register}/R15 {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A4338E mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A43391 jne short 0000000180A433CAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43393 lea rcx,[18310E2F0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493889264 | None ||| N/A | N/A
+		0x180A4339A call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4339F lea rcx,[18310E2E0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493889248 | None ||| N/A | N/A
+		0x180A433A6 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A433AB lea rcx,[18310E2B0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493889200 | None ||| N/A | N/A
+		0x180A433B2 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A433B7 lea rcx,[18310E300h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493889280 | None ||| N/A | N/A
+		0x180A433BE call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A433C3 mov byte ptr [18329C023h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518755 | None ||| N/A | 1
+		0x180A433CA mov [rsp+1F0h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 496 | None ||| N/A | N/A
+		0x180A433D2 mov [rsp+1F8h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 504 | None ||| N/A | N/A
+		0x180A433DA mov [rsp+200h],r12		; DEBUG: {Memory}/None {Register}/R12 ||| RSP | 512 | None ||| N/A | N/A
+		0x180A433E2 mov [rsp+208h],r14		; DEBUG: {Memory}/None {Register}/R14 ||| RSP | 520 | None ||| N/A | N/A
+		0x180A433EA movaps [rsp+1C0h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 448 | None ||| N/A | N/A
+		0x180A433F2 movaps [rsp+1B0h],xmm7		; DEBUG: {Memory}/None {Register}/XMM7 ||| RSP | 432 | None ||| N/A | N/A
+		0x180A433FA movaps [rsp+1A0h],xmm8		; DEBUG: {Memory}/None {Register}/XMM8 ||| RSP | 416 | None ||| N/A | N/A
+		0x180A43403 movaps [rsp+190h],xmm9		; DEBUG: {Memory}/None {Register}/XMM9 ||| RSP | 400 | None ||| N/A | N/A
+		0x180A4340C movaps [rsp+180h],xmm10		; DEBUG: {Memory}/None {Register}/XMM10 ||| RSP | 384 | None ||| N/A | N/A
+		0x180A43415 movaps [rsp+170h],xmm11		; DEBUG: {Memory}/None {Register}/XMM11 ||| RSP | 368 | None ||| N/A | N/A
+		0x180A4341E movaps [rsp+160h],xmm12		; DEBUG: {Memory}/None {Register}/XMM12 ||| RSP | 352 | None ||| N/A | N/A
+		0x180A43427 movaps [rsp+150h],xmm13		; DEBUG: {Memory}/None {Register}/XMM13 ||| RSP | 336 | None ||| N/A | N/A
+		0x180A43430 movaps [rsp+140h],xmm14		; DEBUG: {Memory}/None {Register}/XMM14 ||| RSP | 320 | None ||| N/A | N/A
+		0x180A43439 movaps [rsp+130h],xmm15		; DEBUG: {Memory}/None {Register}/XMM15 ||| RSP | 304 | None ||| N/A | N/A
+		0x180A43442 test r15,r15		; DEBUG: {Register}/R15 {Register}/R15 ||| None | 0 | None ||| N/A | N/A
+		0x180A43445 je near ptr 0000000180A43F96h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4344B cmp byte ptr [1832AC0F9h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584505 | None ||| N/A | 0
+		0x180A43452 jne short 0000000180A43467h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43454 lea rcx,[18310EE20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493892128 | None ||| N/A | N/A
+		0x180A4345B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43460 mov byte ptr [1832AC0F9h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584505 | None ||| N/A | 1
+		0x180A43467 xor esi,esi		; DEBUG: {Register}/ESI {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A43469 cmp [r15+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| R15 | 16 | None ||| N/A | N/A
+		0x180A4346D je short 0000000180A43479h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4346F mov rax,[r15+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| R15 | 16 | None ||| N/A | N/A
+		0x180A43473 mov r12d,[rax+18h]		; DEBUG: {Register}/R12D {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x180A43477 jmp short 0000000180A4347Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43479 mov r12d,esi		; DEBUG: {Register}/R12D {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A4347C mov rdx,[rbx]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x180A4347F mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A43482 mov rax,[rdx+1C8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 456 | None ||| N/A | N/A
+		0x180A43489 mov rdx,[rdx+1D0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 464 | None ||| N/A | N/A
+		0x180A43490 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43492 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A43494 je near ptr 0000000180A43AFEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4349A test r12d,r12d		; DEBUG: {Register}/R12D {Register}/R12D ||| None | 0 | None ||| N/A | N/A
+		0x180A4349D je near ptr 0000000180A43AFEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A434A3 mov rcx,[18310E300h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493889280 | None ||| N/A | N/A
+		0x180A434AA call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A434AF mov rdx,[18310E2F0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493889264 | None ||| N/A | N/A
+		0x180A434B6 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A434B9 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A434BC call 0000000180002D30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A434C1 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A434C4 mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A434C7 mov rcx,r15		; DEBUG: {Register}/RCX {Register}/R15 ||| None | 0 | None ||| N/A | N/A
+		0x180A434CA call 00000001825C4260h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A434CF xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A434D2 xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A434D4 movups [rbp-50h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551536 | None ||| N/A | N/A
+		0x180A434D8 mov [rbp+10h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBP | 16 | None ||| N/A | N/A
+		0x180A434DC movups [rbp-40h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551552 | None ||| N/A | N/A
+		0x180A434E0 mov [rbp+18h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBP | 24 | None ||| N/A | N/A
+		0x180A434E3 movups [rbp-30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551568 | None ||| N/A | N/A
+		0x180A434E7 movups [rbp-20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551584 | None ||| N/A | N/A
+		0x180A434EB movups [rbp-10h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551600 | None ||| N/A | N/A
+		0x180A434EF movups [rbp],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 0 | None ||| N/A | N/A
+		0x180A434F3 cmp [rbx+28h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBX | 40 | None ||| N/A | N/A
+		0x180A434F6 je near ptr 0000000180A43B82h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A434FC test r12d,r12d		; DEBUG: {Register}/R12D {Register}/R12D ||| None | 0 | None ||| N/A | N/A
+		0x180A434FF jle near ptr 0000000180A43AFEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43505 movss xmm11,dword ptr [182E6F730h]		; DEBUG: {Register}/XMM11 {Memory}/None ||| RIP | 6491141936 | None ||| N/A | N/A
+		0x180A4350E movss xmm7,dword ptr [182E6EB6Ch]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RIP | 6491138924 | None ||| N/A | N/A
+		0x180A43516 movss xmm12,dword ptr [182E6E384h]		; DEBUG: {Register}/XMM12 {Memory}/None ||| RIP | 6491136900 | None ||| N/A | N/A
+		0x180A4351F movss xmm13,dword ptr [182E6E524h]		; DEBUG: {Register}/XMM13 {Memory}/None ||| RIP | 6491137316 | None ||| N/A | N/A
+		0x180A43528 nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180A43530 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180A43533 lea rdx,[rbp-50h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBP | 18446744073709551536 | None ||| N/A | N/A
+		0x180A43537 mov r8d,esi		; DEBUG: {Register}/R8D {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A4353A mov rcx,r15		; DEBUG: {Register}/RCX {Register}/R15 ||| None | 0 | None ||| N/A | N/A
+		0x180A4353D call 00000001825C28C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43542 cmp byte ptr [rbx+30h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 48 | None ||| N/A | 0
+		0x180A43546 mov edi,[rbp-28h]		; DEBUG: {Register}/EDI {Memory}/None ||| RBP | 18446744073709551576 | None ||| N/A | N/A
+		0x180A43549 movzx r14d,dil		; DEBUG: {Register}/R14D {Register}/DIL ||| None | 0 | None ||| N/A | N/A
+		0x180A4354D jne near ptr 0000000180A4361Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43553 mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A43555 movd xmm10,r14d		; DEBUG: {Register}/XMM10 {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x180A4355A shr eax,8		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 8
+		0x180A4355D movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A43560 cvtdq2ps xmm10,xmm10		; DEBUG: {Register}/XMM10 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A43564 movd xmm9,eax		; DEBUG: {Register}/XMM9 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43569 mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A4356B shr eax,10h		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 16
+		0x180A4356E movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A43571 cvtdq2ps xmm9,xmm9		; DEBUG: {Register}/XMM9 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A43575 movd xmm8,eax		; DEBUG: {Register}/XMM8 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A4357A mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A4357C shr eax,18h		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 24
+		0x180A4357F cvtdq2ps xmm8,xmm8		; DEBUG: {Register}/XMM8 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A43583 movd xmm6,eax		; DEBUG: {Register}/XMM6 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43587 cvtdq2ps xmm6,xmm6		; DEBUG: {Register}/XMM6 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A4358A divss xmm10,xmm7		; DEBUG: {Register}/XMM10 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4358F divss xmm6,xmm7		; DEBUG: {Register}/XMM6 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43593 divss xmm9,xmm7		; DEBUG: {Register}/XMM9 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43598 divss xmm8,xmm7		; DEBUG: {Register}/XMM8 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4359D mov rdx,[rbx+58h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x180A435A1 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A435A4 je near ptr 0000000180A43F96h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A435AA mov r8,[rdx]		; DEBUG: {Register}/R8 {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180A435AD lea rcx,[rbp+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBP | 32 | None ||| N/A | N/A
+		0x180A435B1 mov rax,[r8+298h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 664 | None ||| N/A | N/A
+		0x180A435B8 mov r8,[r8+2A0h]		; DEBUG: {Register}/R8 {Memory}/None ||| R8 | 672 | None ||| N/A | N/A
+		0x180A435BF call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A435C1 movups xmm0,[rax]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A435C4 subss xmm10,xmm0		; DEBUG: {Register}/XMM10 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A435C9 movaps [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A435CE andps xmm10,xmm11		; DEBUG: {Register}/XMM10 {Register}/XMM11 ||| None | 0 | None ||| N/A | N/A
+		0x180A435D2 comiss xmm12,xmm10		; DEBUG: {Register}/XMM12 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A435D6 jbe near ptr 0000000180A43AF3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A435DC subss xmm9,dword ptr [rsp+24h]		; DEBUG: {Register}/XMM9 {Memory}/None ||| RSP | 36 | None ||| N/A | N/A
+		0x180A435E3 andps xmm9,xmm11		; DEBUG: {Register}/XMM9 {Register}/XMM11 ||| None | 0 | None ||| N/A | N/A
+		0x180A435E7 comiss xmm12,xmm9		; DEBUG: {Register}/XMM12 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A435EB jbe near ptr 0000000180A43AF3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A435F1 subss xmm8,dword ptr [rsp+28h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RSP | 40 | None ||| N/A | N/A
+		0x180A435F8 andps xmm8,xmm11		; DEBUG: {Register}/XMM8 {Register}/XMM11 ||| None | 0 | None ||| N/A | N/A
+		0x180A435FC comiss xmm12,xmm8		; DEBUG: {Register}/XMM12 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A43600 jbe near ptr 0000000180A43AF3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43606 subss xmm6,dword ptr [rsp+2Ch]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 44 | None ||| N/A | N/A
+		0x180A4360C andps xmm6,xmm11		; DEBUG: {Register}/XMM6 {Register}/XMM11 ||| None | 0 | None ||| N/A | N/A
+		0x180A43610 comiss xmm12,xmm6		; DEBUG: {Register}/XMM12 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A43614 jbe near ptr 0000000180A43AF3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4361A mov ecx,[rbx+2Ch]		; DEBUG: {Register}/ECX {Memory}/None ||| RBX | 44 | None ||| N/A | N/A
+		0x180A4361D test ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180A4361F je near ptr 0000000180A439D8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43625 sub ecx,1		; DEBUG: {Register}/ECX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 1
+		0x180A43628 je near ptr 0000000180A43918h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4362E sub ecx,1		; DEBUG: {Register}/ECX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 1
+		0x180A43631 je near ptr 0000000180A437AAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43637 cmp ecx,1		; DEBUG: {Register}/ECX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 1
+		0x180A4363A jne near ptr 0000000180A43A9Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43640 mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A43642 movd xmm6,r14d		; DEBUG: {Register}/XMM6 {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x180A43647 shr eax,8		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 8
+		0x180A4364A movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A4364D cvtdq2ps xmm6,xmm6		; DEBUG: {Register}/XMM6 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A43650 movd xmm8,eax		; DEBUG: {Register}/XMM8 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43655 mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A43657 shr eax,10h		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 16
+		0x180A4365A movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A4365D shr edi,18h		; DEBUG: {Register}/EDI {Immediate8}/None ||| None | 0 | None ||| N/A | 24
+		0x180A43660 cvtdq2ps xmm8,xmm8		; DEBUG: {Register}/XMM8 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A43664 movd xmm9,eax		; DEBUG: {Register}/XMM9 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43669 movd xmm10,edi		; DEBUG: {Register}/XMM10 {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A4366E cvtdq2ps xmm9,xmm9		; DEBUG: {Register}/XMM9 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A43672 cvtdq2ps xmm10,xmm10		; DEBUG: {Register}/XMM10 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A43676 divss xmm9,xmm7		; DEBUG: {Register}/XMM9 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4367B divss xmm10,xmm7		; DEBUG: {Register}/XMM10 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43680 divss xmm6,xmm7		; DEBUG: {Register}/XMM6 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43684 divss xmm8,xmm7		; DEBUG: {Register}/XMM8 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43689 lea eax,[rsi-1]		; DEBUG: {Register}/EAX {Memory}/None ||| RSI | 18446744073709551615 | None ||| N/A | N/A
+		0x180A4368C and eax,80000003h		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 2147483651
+		0x180A43691 jge short 0000000180A4369Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43693 dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43695 or eax,0FFFFFFFCh		; DEBUG: {Register}/EAX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 18446744073709551612
+		0x180A43698 inc eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4369A test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A4369C jne short 0000000180A436ACh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4369E movups xmm0,[rbx+34h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 52 | None ||| N/A | N/A
+		0x180A436A2 movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A436A7 jmp near ptr 0000000180A43760h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A436AC lea eax,[rsi-3]		; DEBUG: {Register}/EAX {Memory}/None ||| RSI | 18446744073709551613 | None ||| N/A | N/A
+		0x180A436AF and eax,80000003h		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 2147483651
+		0x180A436B4 jge short 0000000180A436BDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A436B6 dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A436B8 or eax,0FFFFFFFCh		; DEBUG: {Register}/EAX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 18446744073709551612
+		0x180A436BB inc eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A436BD test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A436BF jne short 0000000180A436CFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A436C1 movups xmm0,[rbx+44h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 68 | None ||| N/A | N/A
+		0x180A436C5 movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A436CA jmp near ptr 0000000180A43760h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A436CF movups xmm5,[rbx+34h]		; DEBUG: {Register}/XMM5 {Memory}/None ||| RBX | 52 | None ||| N/A | N/A
+		0x180A436D3 movups xmm3,[rbx+44h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RBX | 68 | None ||| N/A | N/A
+		0x180A436D7 movaps xmm2,xmm5		; DEBUG: {Register}/XMM2 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A436DA movaps xmm4,xmm5		; DEBUG: {Register}/XMM4 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A436DD shufps xmm2,xmm5,55h		; DEBUG: {Register}/XMM2 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A436E1 subss xmm4,xmm3		; DEBUG: {Register}/XMM4 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A436E5 movaps xmm1,xmm5		; DEBUG: {Register}/XMM1 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A436E8 movaps xmm0,xmm3		; DEBUG: {Register}/XMM0 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A436EB shufps xmm1,xmm5,0AAh		; DEBUG: {Register}/XMM1 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A436EF shufps xmm0,xmm3,55h		; DEBUG: {Register}/XMM0 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A436F3 subss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A436F7 shufps xmm5,xmm5,0FFh		; DEBUG: {Register}/XMM5 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A436FB mulss xmm4,xmm13		; DEBUG: {Register}/XMM4 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A43700 mulss xmm2,xmm13		; DEBUG: {Register}/XMM2 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A43705 addss xmm4,xmm3		; DEBUG: {Register}/XMM4 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43709 addss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A4370D movaps xmm0,xmm3		; DEBUG: {Register}/XMM0 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43710 shufps xmm0,xmm3,0AAh		; DEBUG: {Register}/XMM0 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43714 shufps xmm3,xmm3,0FFh		; DEBUG: {Register}/XMM3 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43718 subss xmm1,xmm0		; DEBUG: {Register}/XMM1 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A4371C subss xmm5,xmm3		; DEBUG: {Register}/XMM5 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43720 mulss xmm1,xmm13		; DEBUG: {Register}/XMM1 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A43725 mulss xmm5,xmm13		; DEBUG: {Register}/XMM5 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A4372A addss xmm1,xmm0		; DEBUG: {Register}/XMM1 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A4372E addss xmm5,xmm3		; DEBUG: {Register}/XMM5 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43732 shufps xmm4,xmm4,0E1h		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A43736 movss xmm4,xmm2		; DEBUG: {Register}/XMM4 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A4373A shufps xmm4,xmm4,0C6h		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A4373E movss xmm4,xmm1		; DEBUG: {Register}/XMM4 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43742 shufps xmm4,xmm4,27h		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A43746 movss xmm4,xmm5		; DEBUG: {Register}/XMM4 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A4374A shufps xmm4,xmm4,39h		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A4374E movups [rsp+20h],xmm4		; DEBUG: {Memory}/None {Register}/XMM4 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A43753 movups [rsp+30h],xmm4		; DEBUG: {Memory}/None {Register}/XMM4 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A43758 nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180A43760 mulss xmm6,dword ptr [rsp+30h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A43766 mulss xmm8,dword ptr [rsp+34h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RSP | 52 | None ||| N/A | N/A
+		0x180A4376D mulss xmm9,dword ptr [rsp+38h]		; DEBUG: {Register}/XMM9 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180A43774 mulss xmm10,dword ptr [rsp+3Ch]		; DEBUG: {Register}/XMM10 {Memory}/None ||| RSP | 60 | None ||| N/A | N/A
+		0x180A4377B shufps xmm6,xmm6,0E1h		; DEBUG: {Register}/XMM6 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A4377F movss xmm6,xmm8		; DEBUG: {Register}/XMM6 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A43784 shufps xmm6,xmm6,0C6h		; DEBUG: {Register}/XMM6 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A43788 movss xmm6,xmm9		; DEBUG: {Register}/XMM6 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A4378D shufps xmm6,xmm6,27h		; DEBUG: {Register}/XMM6 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A43791 movss xmm6,xmm10		; DEBUG: {Register}/XMM6 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A43796 shufps xmm6,xmm6,39h		; DEBUG: {Register}/XMM6 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A4379A movups [rsp+20h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4379F movdqa [rsp+20h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A437A5 jmp near ptr 0000000180A43A8Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A437AA mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A437AC movd xmm6,r14d		; DEBUG: {Register}/XMM6 {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x180A437B1 shr eax,8		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 8
+		0x180A437B4 movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A437B7 cvtdq2ps xmm6,xmm6		; DEBUG: {Register}/XMM6 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A437BA movd xmm8,eax		; DEBUG: {Register}/XMM8 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A437BF mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A437C1 shr eax,10h		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 16
+		0x180A437C4 movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A437C7 shr edi,18h		; DEBUG: {Register}/EDI {Immediate8}/None ||| None | 0 | None ||| N/A | 24
+		0x180A437CA cvtdq2ps xmm8,xmm8		; DEBUG: {Register}/XMM8 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A437CE movd xmm9,eax		; DEBUG: {Register}/XMM9 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A437D3 movd xmm10,edi		; DEBUG: {Register}/XMM10 {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A437D8 cvtdq2ps xmm9,xmm9		; DEBUG: {Register}/XMM9 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A437DC cvtdq2ps xmm10,xmm10		; DEBUG: {Register}/XMM10 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A437E0 divss xmm9,xmm7		; DEBUG: {Register}/XMM9 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A437E5 divss xmm10,xmm7		; DEBUG: {Register}/XMM10 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A437EA divss xmm6,xmm7		; DEBUG: {Register}/XMM6 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A437EE divss xmm8,xmm7		; DEBUG: {Register}/XMM8 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A437F3 mov eax,esi		; DEBUG: {Register}/EAX {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A437F5 and eax,80000003h		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 2147483651
+		0x180A437FA jge short 0000000180A43803h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A437FC dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A437FE or eax,0FFFFFFFCh		; DEBUG: {Register}/EAX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 18446744073709551612
+		0x180A43801 inc eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43803 test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43805 jne short 0000000180A43815h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43807 movups xmm0,[rbx+34h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 52 | None ||| N/A | N/A
+		0x180A4380B movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A43810 jmp near ptr 0000000180A438C1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43815 lea eax,[rsi-2]		; DEBUG: {Register}/EAX {Memory}/None ||| RSI | 18446744073709551614 | None ||| N/A | N/A
+		0x180A43818 and eax,80000003h		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 2147483651
+		0x180A4381D jge short 0000000180A43826h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4381F dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43821 or eax,0FFFFFFFCh		; DEBUG: {Register}/EAX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 18446744073709551612
+		0x180A43824 inc eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43826 test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43828 jne short 0000000180A43838h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4382A movups xmm0,[rbx+44h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 68 | None ||| N/A | N/A
+		0x180A4382E movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A43833 jmp near ptr 0000000180A438C1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43838 movups xmm5,[rbx+34h]		; DEBUG: {Register}/XMM5 {Memory}/None ||| RBX | 52 | None ||| N/A | N/A
+		0x180A4383C movups xmm3,[rbx+44h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RBX | 68 | None ||| N/A | N/A
+		0x180A43840 movaps xmm2,xmm5		; DEBUG: {Register}/XMM2 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A43843 movaps xmm4,xmm5		; DEBUG: {Register}/XMM4 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A43846 shufps xmm2,xmm5,55h		; DEBUG: {Register}/XMM2 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A4384A subss xmm4,xmm3		; DEBUG: {Register}/XMM4 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A4384E movaps xmm1,xmm5		; DEBUG: {Register}/XMM1 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A43851 movaps xmm0,xmm3		; DEBUG: {Register}/XMM0 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43854 shufps xmm1,xmm5,0AAh		; DEBUG: {Register}/XMM1 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A43858 shufps xmm0,xmm3,55h		; DEBUG: {Register}/XMM0 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A4385C subss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A43860 shufps xmm5,xmm5,0FFh		; DEBUG: {Register}/XMM5 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A43864 mulss xmm4,xmm13		; DEBUG: {Register}/XMM4 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A43869 mulss xmm2,xmm13		; DEBUG: {Register}/XMM2 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A4386E addss xmm4,xmm3		; DEBUG: {Register}/XMM4 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43872 addss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A43876 movaps xmm0,xmm3		; DEBUG: {Register}/XMM0 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43879 shufps xmm0,xmm3,0AAh		; DEBUG: {Register}/XMM0 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A4387D shufps xmm3,xmm3,0FFh		; DEBUG: {Register}/XMM3 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43881 subss xmm1,xmm0		; DEBUG: {Register}/XMM1 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A43885 subss xmm5,xmm3		; DEBUG: {Register}/XMM5 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43889 mulss xmm1,xmm13		; DEBUG: {Register}/XMM1 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A4388E mulss xmm5,xmm13		; DEBUG: {Register}/XMM5 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A43893 addss xmm1,xmm0		; DEBUG: {Register}/XMM1 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A43897 addss xmm5,xmm3		; DEBUG: {Register}/XMM5 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A4389B shufps xmm4,xmm4,0E1h		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A4389F movss xmm4,xmm2		; DEBUG: {Register}/XMM4 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A438A3 shufps xmm4,xmm4,0C6h		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A438A7 movss xmm4,xmm1		; DEBUG: {Register}/XMM4 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A438AB shufps xmm4,xmm4,27h		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A438AF movss xmm4,xmm5		; DEBUG: {Register}/XMM4 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A438B3 shufps xmm4,xmm4,39h		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A438B7 movups [rsp+20h],xmm4		; DEBUG: {Memory}/None {Register}/XMM4 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A438BC movups [rsp+30h],xmm4		; DEBUG: {Memory}/None {Register}/XMM4 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A438C1 movss xmm3,dword ptr [rsp+30h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A438C7 movss xmm0,dword ptr [rsp+34h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 52 | None ||| N/A | N/A
+		0x180A438CD movss xmm1,dword ptr [rsp+38h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180A438D3 movss xmm2,dword ptr [rsp+3Ch]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RSP | 60 | None ||| N/A | N/A
+		0x180A438D9 mulss xmm3,xmm6		; DEBUG: {Register}/XMM3 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A438DD mulss xmm0,xmm8		; DEBUG: {Register}/XMM0 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A438E2 mulss xmm1,xmm9		; DEBUG: {Register}/XMM1 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A438E7 mulss xmm2,xmm10		; DEBUG: {Register}/XMM2 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A438EC shufps xmm3,xmm3,0E1h		; DEBUG: {Register}/XMM3 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A438F0 movss xmm3,xmm0		; DEBUG: {Register}/XMM3 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A438F4 shufps xmm3,xmm3,0C6h		; DEBUG: {Register}/XMM3 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A438F8 movss xmm3,xmm1		; DEBUG: {Register}/XMM3 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A438FC shufps xmm3,xmm3,27h		; DEBUG: {Register}/XMM3 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43900 movss xmm3,xmm2		; DEBUG: {Register}/XMM3 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A43904 shufps xmm3,xmm3,39h		; DEBUG: {Register}/XMM3 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43908 movups [rsp+20h],xmm3		; DEBUG: {Memory}/None {Register}/XMM3 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A4390D movdqa [rsp+20h],xmm3		; DEBUG: {Memory}/None {Register}/XMM3 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A43913 jmp near ptr 0000000180A43A8Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43918 mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A4391A movd xmm4,r14d		; DEBUG: {Register}/XMM4 {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x180A4391F shr eax,8		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 8
+		0x180A43922 movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A43925 cvtdq2ps xmm4,xmm4		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A43928 movd xmm1,eax		; DEBUG: {Register}/XMM1 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A4392C mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A4392E shr eax,10h		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 16
+		0x180A43931 movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A43934 shr edi,18h		; DEBUG: {Register}/EDI {Immediate8}/None ||| None | 0 | None ||| N/A | 24
+		0x180A43937 cvtdq2ps xmm1,xmm1		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A4393A movd xmm2,eax		; DEBUG: {Register}/XMM2 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A4393E movd xmm3,edi		; DEBUG: {Register}/XMM3 {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A43942 cvtdq2ps xmm2,xmm2		; DEBUG: {Register}/XMM2 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A43945 cvtdq2ps xmm3,xmm3		; DEBUG: {Register}/XMM3 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43948 divss xmm2,xmm7		; DEBUG: {Register}/XMM2 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A4394C divss xmm3,xmm7		; DEBUG: {Register}/XMM3 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43950 divss xmm4,xmm7		; DEBUG: {Register}/XMM4 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43954 divss xmm1,xmm7		; DEBUG: {Register}/XMM1 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43958 mov eax,esi		; DEBUG: {Register}/EAX {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A4395A and eax,80000003h		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 2147483651
+		0x180A4395F jge short 0000000180A43968h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43961 dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43963 or eax,0FFFFFFFCh		; DEBUG: {Register}/EAX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 18446744073709551612
+		0x180A43966 inc eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43968 test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A4396A je short 0000000180A43987h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4396C lea eax,[rsi-3]		; DEBUG: {Register}/EAX {Memory}/None ||| RSI | 18446744073709551613 | None ||| N/A | N/A
+		0x180A4396F and eax,80000003h		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 2147483651
+		0x180A43974 jge short 0000000180A4397Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43976 dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43978 or eax,0FFFFFFFCh		; DEBUG: {Register}/EAX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 18446744073709551612
+		0x180A4397B inc eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4397D test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A4397F je short 0000000180A43987h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43981 movups xmm0,[rbx+44h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 68 | None ||| N/A | N/A
+		0x180A43985 jmp short 0000000180A4398Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43987 movups xmm0,[rbx+34h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 52 | None ||| N/A | N/A
+		0x180A4398B movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A43990 movss xmm0,dword ptr [rsp+30h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A43996 mulss xmm1,dword ptr [rsp+34h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 52 | None ||| N/A | N/A
+		0x180A4399C mulss xmm2,dword ptr [rsp+38h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180A439A2 mulss xmm3,dword ptr [rsp+3Ch]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RSP | 60 | None ||| N/A | N/A
+		0x180A439A8 mulss xmm0,xmm4		; DEBUG: {Register}/XMM0 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A439AC shufps xmm0,xmm0,0E1h		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A439B0 movss xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A439B4 shufps xmm0,xmm0,0C6h		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A439B8 movss xmm0,xmm2		; DEBUG: {Register}/XMM0 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A439BC shufps xmm0,xmm0,27h		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A439C0 movss xmm0,xmm3		; DEBUG: {Register}/XMM0 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A439C4 shufps xmm0,xmm0,39h		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A439C8 movups [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A439CD movdqa [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A439D3 jmp near ptr 0000000180A43A8Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A439D8 mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A439DA movd xmm1,r14d		; DEBUG: {Register}/XMM1 {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x180A439DF shr eax,8		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 8
+		0x180A439E2 movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A439E5 cvtdq2ps xmm1,xmm1		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A439E8 movd xmm2,eax		; DEBUG: {Register}/XMM2 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A439EC mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A439EE shr eax,10h		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 16
+		0x180A439F1 movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A439F4 shr edi,18h		; DEBUG: {Register}/EDI {Immediate8}/None ||| None | 0 | None ||| N/A | 24
+		0x180A439F7 cvtdq2ps xmm2,xmm2		; DEBUG: {Register}/XMM2 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A439FA movd xmm3,eax		; DEBUG: {Register}/XMM3 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A439FE movd xmm4,edi		; DEBUG: {Register}/XMM4 {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A43A02 cvtdq2ps xmm3,xmm3		; DEBUG: {Register}/XMM3 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43A05 cvtdq2ps xmm4,xmm4		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A43A08 divss xmm3,xmm7		; DEBUG: {Register}/XMM3 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43A0C divss xmm4,xmm7		; DEBUG: {Register}/XMM4 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43A10 divss xmm1,xmm7		; DEBUG: {Register}/XMM1 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43A14 divss xmm2,xmm7		; DEBUG: {Register}/XMM2 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43A18 mov eax,esi		; DEBUG: {Register}/EAX {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A43A1A and eax,80000003h		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 2147483651
+		0x180A43A1F jge short 0000000180A43A28h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43A21 dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43A23 or eax,0FFFFFFFCh		; DEBUG: {Register}/EAX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 18446744073709551612
+		0x180A43A26 inc eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43A28 test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43A2A je short 0000000180A43A47h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43A2C lea eax,[rsi-1]		; DEBUG: {Register}/EAX {Memory}/None ||| RSI | 18446744073709551615 | None ||| N/A | N/A
+		0x180A43A2F and eax,80000003h		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 2147483651
+		0x180A43A34 jge short 0000000180A43A3Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43A36 dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43A38 or eax,0FFFFFFFCh		; DEBUG: {Register}/EAX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 18446744073709551612
+		0x180A43A3B inc eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43A3D test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43A3F je short 0000000180A43A47h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43A41 movups xmm0,[rbx+44h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 68 | None ||| N/A | N/A
+		0x180A43A45 jmp short 0000000180A43A4Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43A47 movups xmm0,[rbx+34h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 52 | None ||| N/A | N/A
+		0x180A43A4B movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A43A50 mulss xmm1,dword ptr [rsp+30h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A43A56 mulss xmm2,dword ptr [rsp+34h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RSP | 52 | None ||| N/A | N/A
+		0x180A43A5C mulss xmm3,dword ptr [rsp+38h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180A43A62 mulss xmm4,dword ptr [rsp+3Ch]		; DEBUG: {Register}/XMM4 {Memory}/None ||| RSP | 60 | None ||| N/A | N/A
+		0x180A43A68 shufps xmm1,xmm1,0E1h		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43A6C movss xmm1,xmm2		; DEBUG: {Register}/XMM1 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A43A70 shufps xmm1,xmm1,0C6h		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43A74 movss xmm1,xmm3		; DEBUG: {Register}/XMM1 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43A78 shufps xmm1,xmm1,27h		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43A7C movss xmm1,xmm4		; DEBUG: {Register}/XMM1 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A43A80 shufps xmm1,xmm1,39h		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43A84 movups [rsp+20h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A43A89 movdqa [rsp+20h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A43A8F lea rcx,[rsp+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180A43A94 call 0000000180398E60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43A99 mov [rbp-28h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBP | 18446744073709551576 | None ||| N/A | N/A
+		0x180A43A9C movaps xmm0,[rbp-50h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBP | 18446744073709551536 | None ||| N/A | N/A
+		0x180A43AA0 lea rdx,[rsp+40h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x180A43AA5 movaps xmm1,[rbp-40h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBP | 18446744073709551552 | None ||| N/A | N/A
+		0x180A43AA9 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180A43AAC mov eax,[rbp+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBP | 24 | None ||| N/A | N/A
+		0x180A43AAF mov r8d,esi		; DEBUG: {Register}/R8D {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A43AB2 movaps [rsp+40h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 64 | None ||| N/A | N/A
+		0x180A43AB7 mov rcx,r15		; DEBUG: {Register}/RCX {Register}/R15 ||| None | 0 | None ||| N/A | N/A
+		0x180A43ABA movaps xmm0,[rbp-30h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBP | 18446744073709551568 | None ||| N/A | N/A
+		0x180A43ABE movaps [rsp+60h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 96 | None ||| N/A | N/A
+		0x180A43AC3 movaps xmm0,[rbp-10h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBP | 18446744073709551600 | None ||| N/A | N/A
+		0x180A43AC7 movaps [rsp+50h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 80 | None ||| N/A | N/A
+		0x180A43ACC movaps xmm1,[rbp-20h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBP | 18446744073709551584 | None ||| N/A | N/A
+		0x180A43AD0 movaps [rbp-80h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551488 | None ||| N/A | N/A
+		0x180A43AD4 movsd xmm0,qword ptr [rbp+10h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBP | 16 | None ||| N/A | N/A
+		0x180A43AD9 movaps [rsp+70h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 112 | None ||| N/A | N/A
+		0x180A43ADE movaps xmm1,[rbp]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBP | 0 | None ||| N/A | N/A
+		0x180A43AE2 movsd qword ptr [rbp-60h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551520 | None ||| N/A | N/A
+		0x180A43AE7 movaps [rbp-70h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551504 | None ||| N/A | N/A
+		0x180A43AEB mov [rbp-58h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBP | 18446744073709551528 | None ||| N/A | N/A
+		0x180A43AEE call 00000001825C2B00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43AF3 inc esi		; DEBUG: {Register}/ESI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43AF5 cmp esi,r12d		; DEBUG: {Register}/ESI {Register}/R12D ||| None | 0 | None ||| N/A | N/A
+		0x180A43AF8 jl near ptr 0000000180A43530h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43AFE movaps xmm15,[rsp+130h]		; DEBUG: {Register}/XMM15 {Memory}/None ||| RSP | 304 | None ||| N/A | N/A
+		0x180A43B07 movaps xmm14,[rsp+140h]		; DEBUG: {Register}/XMM14 {Memory}/None ||| RSP | 320 | None ||| N/A | N/A
+		0x180A43B10 movaps xmm13,[rsp+150h]		; DEBUG: {Register}/XMM13 {Memory}/None ||| RSP | 336 | None ||| N/A | N/A
+		0x180A43B19 movaps xmm12,[rsp+160h]		; DEBUG: {Register}/XMM12 {Memory}/None ||| RSP | 352 | None ||| N/A | N/A
+		0x180A43B22 movaps xmm11,[rsp+170h]		; DEBUG: {Register}/XMM11 {Memory}/None ||| RSP | 368 | None ||| N/A | N/A
+		0x180A43B2B movaps xmm10,[rsp+180h]		; DEBUG: {Register}/XMM10 {Memory}/None ||| RSP | 384 | None ||| N/A | N/A
+		0x180A43B34 movaps xmm9,[rsp+190h]		; DEBUG: {Register}/XMM9 {Memory}/None ||| RSP | 400 | None ||| N/A | N/A
+		0x180A43B3D movaps xmm8,[rsp+1A0h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RSP | 416 | None ||| N/A | N/A
+		0x180A43B46 movaps xmm7,[rsp+1B0h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RSP | 432 | None ||| N/A | N/A
+		0x180A43B4E movaps xmm6,[rsp+1C0h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 448 | None ||| N/A | N/A
+		0x180A43B56 mov r14,[rsp+208h]		; DEBUG: {Register}/R14 {Memory}/None ||| RSP | 520 | None ||| N/A | N/A
+		0x180A43B5E mov r12,[rsp+200h]		; DEBUG: {Register}/R12 {Memory}/None ||| RSP | 512 | None ||| N/A | N/A
+		0x180A43B66 mov rdi,[rsp+1F8h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 504 | None ||| N/A | N/A
+		0x180A43B6E mov rsi,[rsp+1F0h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 496 | None ||| N/A | N/A
+		0x180A43B76 add rsp,1D0h		; DEBUG: {Register}/RSP {Immediate32to64}/None ||| None | 0 | None ||| N/A | 464
+		0x180A43B7D pop r15		; DEBUG: {Register}/R15 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43B7F pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43B80 pop rbp		; DEBUG: {Register}/RBP {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43B81 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43B82 cmp dword ptr [rbx+2Ch],2		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RBX | 44 | None ||| N/A | 2
+		0x180A43B86 je short 0000000180A43B8Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43B88 cmp dword ptr [rbx+2Ch],3		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RBX | 44 | None ||| N/A | 3
+		0x180A43B8C jne short 0000000180A43B91h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43B8E mov [rbx+2Ch],esi		; DEBUG: {Memory}/None {Register}/ESI ||| RBX | 44 | None ||| N/A | N/A
+		0x180A43B91 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A43B94 je near ptr 0000000180A43F96h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43B9A movsxd rcx,dword ptr [rdi+18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 24 | None ||| N/A | N/A
+		0x180A43B9E cmp [rbx+2Ch],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBX | 44 | None ||| N/A | N/A
+		0x180A43BA1 lea eax,[rcx-1]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 18446744073709551615 | None ||| N/A | N/A
+		0x180A43BA4 jne short 0000000180A43BD9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43BA6 cmp eax,[rdi+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDI | 24 | None ||| N/A | N/A
+		0x180A43BA9 jae near ptr 0000000180A43FA2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43BAF mov rdx,[rdi+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDI | 16 | None ||| N/A | N/A
+		0x180A43BB3 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A43BB6 je near ptr 0000000180A43F96h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43BBC lea eax,[rcx-1]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 18446744073709551615 | None ||| N/A | N/A
+		0x180A43BBF cmp eax,[rdx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDX | 24 | None ||| N/A | N/A
+		0x180A43BC2 jae near ptr 0000000180A43F9Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43BC8 imul rcx,6Ch		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A43BCC movups xmm13,[rcx+rdx-4Ch]		; DEBUG: {Register}/XMM13 {Memory}/None ||| RCX | 18446744073709551540 | RDX ||| N/A | N/A
+		0x180A43BD2 shufps xmm13,xmm13,55h		; DEBUG: {Register}/XMM13 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A43BD7 jmp short 0000000180A43C05h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43BD9 cmp eax,[rdi+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDI | 24 | None ||| N/A | N/A
+		0x180A43BDC jae near ptr 0000000180A43FA2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43BE2 mov rdx,[rdi+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDI | 16 | None ||| N/A | N/A
+		0x180A43BE6 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A43BE9 je near ptr 0000000180A43F96h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43BEF lea eax,[rcx-1]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 18446744073709551615 | None ||| N/A | N/A
+		0x180A43BF2 cmp eax,[rdx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDX | 24 | None ||| N/A | N/A
+		0x180A43BF5 jae near ptr 0000000180A43F9Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43BFB imul rcx,6Ch		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A43BFF movups xmm13,[rcx+rdx-4Ch]		; DEBUG: {Register}/XMM13 {Memory}/None ||| RCX | 18446744073709551540 | RDX ||| N/A | N/A
+		0x180A43C05 movups xmm0,[rcx+rdx-3Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 18446744073709551556 | RDX ||| N/A | N/A
+		0x180A43C0A mov eax,[rcx+rdx+1Ch]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 28 | RDX ||| N/A | N/A
+		0x180A43C0E movups xmm1,[rcx+rdx-2Ch]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 18446744073709551572 | RDX ||| N/A | N/A
+		0x180A43C13 mov [rbp-58h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBP | 18446744073709551528 | None ||| N/A | N/A
+		0x180A43C16 movaps [rsp+50h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 80 | None ||| N/A | N/A
+		0x180A43C1B movups xmm0,[rcx+rdx-1Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 18446744073709551588 | RDX ||| N/A | N/A
+		0x180A43C20 movaps [rsp+60h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 96 | None ||| N/A | N/A
+		0x180A43C25 movups xmm1,[rcx+rdx-0Ch]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 18446744073709551604 | RDX ||| N/A | N/A
+		0x180A43C2A movaps [rsp+70h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 112 | None ||| N/A | N/A
+		0x180A43C2F movups xmm0,[rcx+rdx+4]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 4 | RDX ||| N/A | N/A
+		0x180A43C34 movaps [rbp-80h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551488 | None ||| N/A | N/A
+		0x180A43C38 movsd xmm1,qword ptr [rcx+rdx+14h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 20 | RDX ||| N/A | N/A
+		0x180A43C3E movaps [rbp-70h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551504 | None ||| N/A | N/A
+		0x180A43C42 movsd qword ptr [rbp-60h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551520 | None ||| N/A | N/A
+		0x180A43C47 mov eax,[rdi+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDI | 24 | None ||| N/A | N/A
+		0x180A43C4A cmp [rbx+2Ch],esi		; DEBUG: {Memory}/None {Register}/ESI ||| RBX | 44 | None ||| N/A | N/A
+		0x180A43C4D jne short 0000000180A43C79h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43C4F test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43C51 je near ptr 0000000180A43FA2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43C57 mov rax,[rdi+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDI | 16 | None ||| N/A | N/A
+		0x180A43C5B test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43C5E je near ptr 0000000180A43F96h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43C64 cmp [rax+18h],esi		; DEBUG: {Memory}/None {Register}/ESI ||| RAX | 24 | None ||| N/A | N/A
+		0x180A43C67 jbe near ptr 0000000180A43F9Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43C6D movups xmm11,[rax+20h]		; DEBUG: {Register}/XMM11 {Memory}/None ||| RAX | 32 | None ||| N/A | N/A
+		0x180A43C72 shufps xmm11,xmm11,55h		; DEBUG: {Register}/XMM11 {Register}/XMM11 ||| None | 0 | None ||| N/A | N/A
+		0x180A43C77 jmp short 0000000180A43C9Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43C79 test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43C7B je near ptr 0000000180A43FA2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43C81 mov rax,[rdi+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDI | 16 | None ||| N/A | N/A
+		0x180A43C85 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43C88 je near ptr 0000000180A43F96h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43C8E cmp [rax+18h],esi		; DEBUG: {Memory}/None {Register}/ESI ||| RAX | 24 | None ||| N/A | N/A
+		0x180A43C91 jbe near ptr 0000000180A43F9Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43C97 movups xmm11,[rax+20h]		; DEBUG: {Register}/XMM11 {Memory}/None ||| RAX | 32 | None ||| N/A | N/A
+		0x180A43C9C movups xmm0,[rax+30h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 48 | None ||| N/A | N/A
+		0x180A43CA0 movups xmm1,[rax+40h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RAX | 64 | None ||| N/A | N/A
+		0x180A43CA4 movaps [rsp+50h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 80 | None ||| N/A | N/A
+		0x180A43CA9 movups xmm0,[rax+50h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 80 | None ||| N/A | N/A
+		0x180A43CAD movaps [rsp+60h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 96 | None ||| N/A | N/A
+		0x180A43CB2 movups xmm1,[rax+60h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RAX | 96 | None ||| N/A | N/A
+		0x180A43CB6 movaps [rsp+70h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 112 | None ||| N/A | N/A
+		0x180A43CBB movups xmm0,[rax+70h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 112 | None ||| N/A | N/A
+		0x180A43CBF movaps [rbp-80h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551488 | None ||| N/A | N/A
+		0x180A43CC3 movsd xmm1,qword ptr [rax+80h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RAX | 128 | None ||| N/A | N/A
+		0x180A43CCB mov eax,[rax+88h]		; DEBUG: {Register}/EAX {Memory}/None ||| RAX | 136 | None ||| N/A | N/A
+		0x180A43CD1 movaps [rbp-70h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551504 | None ||| N/A | N/A
+		0x180A43CD5 mov [rbp-58h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBP | 18446744073709551528 | None ||| N/A | N/A
+		0x180A43CD8 movsd qword ptr [rbp-60h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551520 | None ||| N/A | N/A
+		0x180A43CDD subss xmm11,xmm13		; DEBUG: {Register}/XMM11 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A43CE2 test r12d,r12d		; DEBUG: {Register}/R12D {Register}/R12D ||| None | 0 | None ||| N/A | N/A
+		0x180A43CE5 jle near ptr 0000000180A43AFEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43CEB movss xmm7,dword ptr [182E6EB6Ch]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RIP | 6491138924 | None ||| N/A | N/A
+		0x180A43CF3 xorps xmm14,xmm14		; DEBUG: {Register}/XMM14 {Register}/XMM14 ||| None | 0 | None ||| N/A | N/A
+		0x180A43CF7 movss xmm15,dword ptr [182E6E338h]		; DEBUG: {Register}/XMM15 {Memory}/None ||| RIP | 6491136824 | None ||| N/A | N/A
+		0x180A43D00 movss xmm12,dword ptr [182E6E600h]		; DEBUG: {Register}/XMM12 {Memory}/None ||| RIP | 6491137536 | None ||| N/A | N/A
+		0x180A43D09 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A43D10 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180A43D13 lea rdx,[rbp-50h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBP | 18446744073709551536 | None ||| N/A | N/A
+		0x180A43D17 mov r8d,esi		; DEBUG: {Register}/R8D {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A43D1A mov rcx,r15		; DEBUG: {Register}/RCX {Register}/R15 ||| None | 0 | None ||| N/A | N/A
+		0x180A43D1D call 00000001825C28C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43D22 cmp byte ptr [rbx+30h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 48 | None ||| N/A | 0
+		0x180A43D26 mov edi,[rbp-28h]		; DEBUG: {Register}/EDI {Memory}/None ||| RBP | 18446744073709551576 | None ||| N/A | N/A
+		0x180A43D29 movzx r14d,dil		; DEBUG: {Register}/R14D {Register}/DIL ||| None | 0 | None ||| N/A | N/A
+		0x180A43D2D jne near ptr 0000000180A43DF5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43D33 mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A43D35 movd xmm8,r14d		; DEBUG: {Register}/XMM8 {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x180A43D3A shr eax,8		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 8
+		0x180A43D3D movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A43D40 cvtdq2ps xmm8,xmm8		; DEBUG: {Register}/XMM8 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A43D44 movd xmm6,eax		; DEBUG: {Register}/XMM6 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43D48 mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A43D4A shr eax,10h		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 16
+		0x180A43D4D movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A43D50 cvtdq2ps xmm6,xmm6		; DEBUG: {Register}/XMM6 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A43D53 movd xmm9,eax		; DEBUG: {Register}/XMM9 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43D58 mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A43D5A shr eax,18h		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 24
+		0x180A43D5D cvtdq2ps xmm9,xmm9		; DEBUG: {Register}/XMM9 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A43D61 movd xmm10,eax		; DEBUG: {Register}/XMM10 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43D66 cvtdq2ps xmm10,xmm10		; DEBUG: {Register}/XMM10 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A43D6A divss xmm8,xmm7		; DEBUG: {Register}/XMM8 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43D6F divss xmm10,xmm7		; DEBUG: {Register}/XMM10 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43D74 divss xmm6,xmm7		; DEBUG: {Register}/XMM6 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43D78 divss xmm9,xmm7		; DEBUG: {Register}/XMM9 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43D7D mov rdx,[rbx+58h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x180A43D81 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A43D84 je near ptr 0000000180A43F96h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43D8A mov r8,[rdx]		; DEBUG: {Register}/R8 {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180A43D8D lea rcx,[rbp+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBP | 32 | None ||| N/A | N/A
+		0x180A43D91 mov rax,[r8+298h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 664 | None ||| N/A | N/A
+		0x180A43D98 mov r8,[r8+2A0h]		; DEBUG: {Register}/R8 {Memory}/None ||| R8 | 672 | None ||| N/A | N/A
+		0x180A43D9F call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43DA1 movups xmm1,[rax]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A43DA4 movaps xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DA7 subss xmm8,xmm1		; DEBUG: {Register}/XMM8 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DAC shufps xmm0,xmm1,55h		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DB0 subss xmm6,xmm0		; DEBUG: {Register}/XMM6 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DB4 movaps xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DB7 shufps xmm0,xmm1,0AAh		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DBB shufps xmm1,xmm1,0FFh		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DBF subss xmm9,xmm0		; DEBUG: {Register}/XMM9 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DC4 subss xmm10,xmm1		; DEBUG: {Register}/XMM10 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DC9 mulss xmm6,xmm6		; DEBUG: {Register}/XMM6 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DCD mulss xmm8,xmm8		; DEBUG: {Register}/XMM8 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DD2 mulss xmm9,xmm9		; DEBUG: {Register}/XMM9 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DD7 addss xmm6,xmm8		; DEBUG: {Register}/XMM6 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DDC mulss xmm10,xmm10		; DEBUG: {Register}/XMM10 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DE1 addss xmm6,xmm9		; DEBUG: {Register}/XMM6 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DE6 addss xmm6,xmm10		; DEBUG: {Register}/XMM6 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DEB comiss xmm15,xmm6		; DEBUG: {Register}/XMM15 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A43DEF jbe near ptr 0000000180A43F86h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43DF5 mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A43DF7 movd xmm6,r14d		; DEBUG: {Register}/XMM6 {Register}/R14D ||| None | 0 | None ||| N/A | N/A
+		0x180A43DFC shr eax,8		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 8
+		0x180A43DFF movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A43E02 cvtdq2ps xmm6,xmm6		; DEBUG: {Register}/XMM6 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E05 movd xmm8,eax		; DEBUG: {Register}/XMM8 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43E0A mov eax,edi		; DEBUG: {Register}/EAX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A43E0C shr eax,10h		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 16
+		0x180A43E0F movzx eax,al		; DEBUG: {Register}/EAX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A43E12 shr edi,18h		; DEBUG: {Register}/EDI {Immediate8}/None ||| None | 0 | None ||| N/A | 24
+		0x180A43E15 cvtdq2ps xmm8,xmm8		; DEBUG: {Register}/XMM8 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E19 movd xmm9,eax		; DEBUG: {Register}/XMM9 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180A43E1E movd xmm10,edi		; DEBUG: {Register}/XMM10 {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A43E23 cvtdq2ps xmm9,xmm9		; DEBUG: {Register}/XMM9 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E27 cvtdq2ps xmm10,xmm10		; DEBUG: {Register}/XMM10 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E2B divss xmm9,xmm7		; DEBUG: {Register}/XMM9 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E30 divss xmm10,xmm7		; DEBUG: {Register}/XMM10 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E35 divss xmm6,xmm7		; DEBUG: {Register}/XMM6 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E39 divss xmm8,xmm7		; DEBUG: {Register}/XMM8 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E3E cmp dword ptr [rbx+2Ch],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RBX | 44 | None ||| N/A | 0
+		0x180A43E42 movups xmm0,[rbx+34h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 52 | None ||| N/A | N/A
+		0x180A43E46 movups xmm1,[rbx+44h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBX | 68 | None ||| N/A | N/A
+		0x180A43E4A movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A43E4F movups [rsp+20h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A43E54 jne short 0000000180A43E5Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43E56 movss xmm5,dword ptr [rbp-4Ch]		; DEBUG: {Register}/XMM5 {Memory}/None ||| RBP | 18446744073709551540 | None ||| N/A | N/A
+		0x180A43E5B jmp short 0000000180A43E70h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43E5D movss xmm5,dword ptr [rbp-50h]		; DEBUG: {Register}/XMM5 {Memory}/None ||| RBP | 18446744073709551536 | None ||| N/A | N/A
+		0x180A43E62 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A43E66 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180A43E70 subss xmm5,xmm13		; DEBUG: {Register}/XMM5 {Register}/XMM13 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E75 divss xmm5,xmm11		; DEBUG: {Register}/XMM5 {Register}/XMM11 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E7A comiss xmm14,xmm5		; DEBUG: {Register}/XMM14 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E7E ja short 0000000180A43E8Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43E80 comiss xmm5,xmm12		; DEBUG: {Register}/XMM5 {Register}/XMM12 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E84 jbe short 0000000180A43E90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43E86 movaps xmm5,xmm12		; DEBUG: {Register}/XMM5 {Register}/XMM12 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E8A jmp short 0000000180A43E90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43E8C movaps xmm5,xmm14		; DEBUG: {Register}/XMM5 {Register}/XMM14 ||| None | 0 | None ||| N/A | N/A
+		0x180A43E90 movss xmm4,dword ptr [rsp+30h]		; DEBUG: {Register}/XMM4 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A43E96 subss xmm4,dword ptr [rsp+20h]		; DEBUG: {Register}/XMM4 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180A43E9C movss xmm3,dword ptr [rsp+34h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RSP | 52 | None ||| N/A | N/A
+		0x180A43EA2 subss xmm3,dword ptr [rsp+24h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RSP | 36 | None ||| N/A | N/A
+		0x180A43EA8 movss xmm2,dword ptr [rsp+38h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180A43EAE subss xmm2,dword ptr [rsp+28h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RSP | 40 | None ||| N/A | N/A
+		0x180A43EB4 movss xmm1,dword ptr [rsp+3Ch]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 60 | None ||| N/A | N/A
+		0x180A43EBA subss xmm1,dword ptr [rsp+2Ch]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 44 | None ||| N/A | N/A
+		0x180A43EC0 mulss xmm4,xmm5		; DEBUG: {Register}/XMM4 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A43EC4 mulss xmm3,xmm5		; DEBUG: {Register}/XMM3 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A43EC8 addss xmm4,dword ptr [rsp+20h]		; DEBUG: {Register}/XMM4 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180A43ECE mulss xmm2,xmm5		; DEBUG: {Register}/XMM2 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A43ED2 addss xmm3,dword ptr [rsp+24h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RSP | 36 | None ||| N/A | N/A
+		0x180A43ED8 mulss xmm1,xmm5		; DEBUG: {Register}/XMM1 {Register}/XMM5 ||| None | 0 | None ||| N/A | N/A
+		0x180A43EDC addss xmm2,dword ptr [rsp+28h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RSP | 40 | None ||| N/A | N/A
+		0x180A43EE2 addss xmm1,dword ptr [rsp+2Ch]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 44 | None ||| N/A | N/A
+		0x180A43EE8 mulss xmm4,xmm6		; DEBUG: {Register}/XMM4 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180A43EEC mulss xmm3,xmm8		; DEBUG: {Register}/XMM3 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180A43EF1 mulss xmm2,xmm9		; DEBUG: {Register}/XMM2 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x180A43EF6 mulss xmm1,xmm10		; DEBUG: {Register}/XMM1 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x180A43EFB shufps xmm4,xmm4,0E1h		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A43EFF lea rcx,[rsp+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180A43F04 movss xmm4,xmm3		; DEBUG: {Register}/XMM4 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A43F08 shufps xmm4,xmm4,0C6h		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A43F0C movss xmm4,xmm2		; DEBUG: {Register}/XMM4 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A43F10 shufps xmm4,xmm4,27h		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A43F14 movss xmm4,xmm1		; DEBUG: {Register}/XMM4 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43F18 shufps xmm4,xmm4,39h		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x180A43F1C movups [rsp+20h],xmm4		; DEBUG: {Memory}/None {Register}/XMM4 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A43F21 movdqa [rsp+20h],xmm4		; DEBUG: {Memory}/None {Register}/XMM4 ||| RSP | 32 | None ||| N/A | N/A
+		0x180A43F27 call 0000000180398E60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43F2C movaps xmm0,[rbp-50h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBP | 18446744073709551536 | None ||| N/A | N/A
+		0x180A43F30 lea rdx,[rsp+40h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x180A43F35 movaps xmm1,[rbp-40h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBP | 18446744073709551552 | None ||| N/A | N/A
+		0x180A43F39 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180A43F3C movaps [rsp+40h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 64 | None ||| N/A | N/A
+		0x180A43F41 mov r8d,esi		; DEBUG: {Register}/R8D {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A43F44 mov [rbp-28h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBP | 18446744073709551576 | None ||| N/A | N/A
+		0x180A43F47 mov rcx,r15		; DEBUG: {Register}/RCX {Register}/R15 ||| None | 0 | None ||| N/A | N/A
+		0x180A43F4A movaps xmm0,[rbp-30h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBP | 18446744073709551568 | None ||| N/A | N/A
+		0x180A43F4E mov eax,[rbp+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBP | 24 | None ||| N/A | N/A
+		0x180A43F51 movaps [rsp+60h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 96 | None ||| N/A | N/A
+		0x180A43F56 movaps xmm0,[rbp-10h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBP | 18446744073709551600 | None ||| N/A | N/A
+		0x180A43F5A movaps [rsp+50h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 80 | None ||| N/A | N/A
+		0x180A43F5F movaps xmm1,[rbp-20h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBP | 18446744073709551584 | None ||| N/A | N/A
+		0x180A43F63 movaps [rbp-80h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551488 | None ||| N/A | N/A
+		0x180A43F67 movsd xmm0,qword ptr [rbp+10h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBP | 16 | None ||| N/A | N/A
+		0x180A43F6C movaps [rsp+70h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 112 | None ||| N/A | N/A
+		0x180A43F71 movaps xmm1,[rbp]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBP | 0 | None ||| N/A | N/A
+		0x180A43F75 movsd qword ptr [rbp-60h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBP | 18446744073709551520 | None ||| N/A | N/A
+		0x180A43F7A movaps [rbp-70h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBP | 18446744073709551504 | None ||| N/A | N/A
+		0x180A43F7E mov [rbp-58h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBP | 18446744073709551528 | None ||| N/A | N/A
+		0x180A43F81 call 00000001825C2B00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43F86 inc esi		; DEBUG: {Register}/ESI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43F88 cmp esi,r12d		; DEBUG: {Register}/ESI {Register}/R12D ||| None | 0 | None ||| N/A | N/A
+		0x180A43F8B jl near ptr 0000000180A43D10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43F91 jmp near ptr 0000000180A43AFEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43F96 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43F9B int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A43FA2 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180A43FA4 call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43FA9 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.Gradient::ModifyMesh(UnityEngine.UI.VertexHelper):
+		End of function at 0x180A43FAA
+		Absolute End is at 0x180A43FAA
+		Identified Jump Destination addresses:
+			0x180A4347C
+			0x180A43760
+			0x180A43A8F
+			0x180A438C1
+			0x180A4398B
+			0x180A43A4B
+			0x180A43C05
+			0x180A43C9C
+			0x180A43E70
+			0x180A43E90
+		0x180A43370: Saves the content of rbp to the stack
+		0x180A43372: Saves the content of rbx to the stack
+		0x180A43373: Saves the content of r15 to the stack
+		0x180A43375: Loads a pointer to stack offset 0xFFFFFF30 into register rbp as new constant constant1
+		0x180A43384: Compares {Unknown Global at 0x18329C023, first ten bytes are [2 224 195 4 0 50 197 4 0 160], or as chars "àÃ 2Å  "} and 0
+		0x180A4338B: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from rdx into r15
+		0x180A4338E: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} from rcx into rbx
+		0x180A43391: Jumps to 0x180A433CA if {Unknown Global at 0x18329C023, first ten bytes are [2 224 195 4 0 50 197 4 0 160], or as chars "àÃ 2Å  "} != 0
+
+		0x180A43393: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::.ctor() on type System.Collections.Generic.List`1<UnityEngine.UIVertex> and stores the result in constant {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180A4339A: Initializes runtime metadata value 
+		0x180A4339F: Loads the global generic method reference for method System.Int32 System.Collections.Generic.List`1::get_Count() on type System.Collections.Generic.List`1<UnityEngine.UIVertex> and stores the result in constant {'get_Count' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180A433A6: Initializes runtime metadata value 
+		0x180A433AB: Loads the global generic method reference for method T System.Collections.Generic.List`1::get_Item(System.Int32) on type System.Collections.Generic.List`1<UnityEngine.UIVertex> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180A433B2: Initializes runtime metadata value 
+		0x180A433B7: Loads the type definition for managed type System.Collections.Generic.List`1<UnityEngine.UIVertex> as a constant "List`1" in rcx
+		0x180A433BE: Initializes runtime metadata value System.Collections.Generic.List`1<UnityEngine.UIVertex>
+		0x180A43442: [!] Compares {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and 0
+		0x180A43445: Jumps to 0x180A43F96 (which throws a NRE) if vh equals 0. Implicitly present in managed code, so ignored here.
+		0x180A4344B: Compares {Unknown Global at 0x1832AC0F9, first ten bytes are [90 16 0 87 90 16 0 144 104 234], or as chars "Z WZ hê"} and 0
+		0x180A43452: Jumps to 0x180A43467 if {Unknown Global at 0x1832AC0F9, first ten bytes are [90 16 0 87 90 16 0 144 104 234], or as chars "Z WZ hê"} != 0
+
+		0x180A43454: Loads the global generic method reference for method System.Int32 System.Collections.Generic.List`1::get_Count() on type System.Collections.Generic.List`1<UnityEngine.Vector3> and stores the result in constant {'get_Count' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180A4345B: Initializes runtime metadata value 
+		0x180A43467: Clears register rsi, yielding zero-local {'local2' (type System.Int32)}
+		0x180A43469: [!] Compares {field m_Positions, read from local {'vh' (function parameter, type UnityEngine.UI.VertexHelper)}} and {'local2' (type System.Int32)}
+		0x180A4346D: Jumps to 0x180A43479 if vh.m_Positions equals local2 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180A4346F: [!] Reads field m_Positions from {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and stores in a new local {'m_Positions' (type System.Collections.Generic.List`1<UnityEngine.Vector3>)}
+
+		0x180A43477: Jumps to 0x180A4347C (which is an function-local jump destination)
+
+		0x180A43479: Copies {'local2' (type System.Int32)} from rsi into r12
+
+		End Of If-Else Block (at 0x180A4347C) where the else started at 0x180A43479
+		0x180A4347C: Loads the class pointer from this into a constant constant12 in register rdx
+		0x180A4347F: Copies {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} from rbx into rcx
+		0x180A43482: Loads the pointer to the implementation of virtual function System.Boolean UnityEngine.EventSystems.UIBehaviour::IsActive() specific to UnityEngine.UI.Extensions.Gradient from the class pointer in rdx, slot 9 (from memory offset 456) and stores in constant constant13
+		0x180A43489: Loads the pointer to the implementation of virtual function System.Boolean UnityEngine.EventSystems.UIBehaviour::IsActive() specific to UnityEngine.UI.Extensions.Gradient from the class pointer in rdx, slot 9 (from memory offset 464) and stores in constant constant14
+		0x180A43490: [!] Calls managed method System.Boolean UnityEngine.EventSystems.UIBehaviour::IsActive() on instance {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores the result in {'isActive' (type System.Boolean)}
+
+		0x180A43492: [!] Compares {'isActive' (type System.Boolean)} and False
+		0x180A43494: Jumps to 0x180A43AFE if isActive equals False ;  - This is probably a goto, jumping to 0x180A43AFE which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A4349A: [!] Compares {'local2' (type System.Int32)} and 0
+		0x180A4349D: Jumps to 0x180A43AFE if local2 equals 0 ;  - This is probably a goto, jumping to 0x180A43AFE which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A434A3: Loads the type definition for managed type System.Collections.Generic.List`1<UnityEngine.UIVertex> as a constant "List`1" in rcx
+		0x180A434AA: [!] Allocates an instance of type System.Collections.Generic.List`1<UnityEngine.UIVertex> and stores it as list in rax.
+
+		0x180A434AF: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::.ctor() on type System.Collections.Generic.List`1<UnityEngine.UIVertex> and stores the result in constant {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180A434B6: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rax into rcx
+		0x180A434B9: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rax into rdi
+		0x180A434C4: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rdi into rdx
+		0x180A434C7: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from r15 into rcx
+		0x180A434CA: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::GetUIVertexStream(System.Collections.Generic.List`1<UnityEngine.UIVertex>) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} with arguments [{'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)}]
+
+		0x180A434D2: Clears register rax, yielding zero-local {'local9' (type System.Int32)}
+		0x180A434F3: [!] Compares {field _gradientMode, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} and {'local9' (type System.Int32)}
+		0x180A434F6: Jumps to 0x180A43B82 if this._gradientMode equals local9 ;  - This is probably a goto, jumping to 0x180A43B82 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A434FC: [!] Compares {'local2' (type System.Int32)} and 0
+		0x180A434FF: Jumps to 0x180A43AFE if {'local2' (type System.Int32)} is less than or equal to 0 ;  - This is probably a goto, jumping to 0x180A43AFE which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43505: Reads {Unknown Global at 0x182E6F730, first ten bytes are [255 255 255 127 255 255 255 127 255 255], or as chars "ÿÿÿÿÿÿÿÿ"} into register xmm11 as a constant constant20
+		0x180A4350E: Reads {Unknown Global at 0x182E6EB6C, first ten bytes are [0 0 127 67 0 0 135 67 0 128], or as chars "  C  C "} into register xmm7 as a constant constant21
+		0x180A43516: Reads {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} into register xmm12 as a constant constant22
+		0x180A4351F: Reads {Unknown Global at 0x182E6E524, first ten bytes are [0 0 0 63 142 6 0 63 146 10], or as chars "   ? ?
+"} into register xmm13 as a constant constant23
+		0x180A43537: Copies {'local2' (type System.Int32)} from rsi into r8
+		0x180A4353A: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from r15 into rcx
+		0x180A4353D: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::PopulateUIVertex(UnityEngine.UIVertex,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A43542: [!] Compares {field _overwriteAllColor, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} and False
+		0x180A43549: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rdi into r14
+		0x180A4354D: Jumps to 0x180A4361A if {field _overwriteAllColor, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} != False ;  - This is probably a goto, jumping to 0x180A4361A which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43553: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rdi into rax
+		0x180A4355D: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rax into rax
+		0x180A43569: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rdi into rax
+		0x180A4356E: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rax into rax
+		0x180A4357A: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rdi into rax
+		0x180A4359D: [!] Reads field targetGraphic from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'targetGraphic' (type UnityEngine.UI.Graphic)}
+
+		0x180A435A1: [!] Compares {'targetGraphic' (type UnityEngine.UI.Graphic)} and 0
+		0x180A435A4: Jumps to 0x180A43F96 (which throws a NRE) if targetGraphic equals 0. Implicitly present in managed code, so ignored here.
+		0x180A435AA: Loads the class pointer from targetGraphic into a constant constant26 in register r8
+		0x180A435B1: Loads the pointer to the implementation of virtual function UnityEngine.Color UnityEngine.UI.Graphic::get_color() specific to UnityEngine.UI.Graphic from the class pointer in r8, slot 22 (from memory offset 664) and stores in constant constant27
+		0x180A435B8: Loads the pointer to the implementation of virtual function UnityEngine.Color UnityEngine.UI.Graphic::get_color() specific to UnityEngine.UI.Graphic from the class pointer in r8, slot 22 (from memory offset 672) and stores in constant constant28
+		0x180A435BF: [!] Calls managed method UnityEngine.Color UnityEngine.UI.Graphic::get_color() on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and stores the result in {'color' (type UnityEngine.Color)}
+
+		0x180A435C1: Loads the class pointer from color into a constant constant29 in register xmm0
+		0x180A435C9: Moves constant29 (type Cpp2IL.Core.Analysis.Il2CppClassIdentifier) from register xmm0 to the stack at offset 32 (0x20) as a new local local13
+		0x180A435D2: Compares {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} against itself
+		0x180A435D6: Jumps to 0x180A43AF3 if {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} is less than or equal to  ;  - This is probably a goto, jumping to 0x180A43AF3 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A435E7: Compares {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} against itself
+		0x180A435EB: Jumps to 0x180A43AF3 if {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} is less than or equal to  ;  - This is probably a goto, jumping to 0x180A43AF3 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A435FC: Compares {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} against itself
+		0x180A43600: Jumps to 0x180A43AF3 if {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} is less than or equal to  ;  - This is probably a goto, jumping to 0x180A43AF3 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43610: Compares {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} against itself
+		0x180A43614: Jumps to 0x180A43AF3 if {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} is less than or equal to  ;  - This is probably a goto, jumping to 0x180A43AF3 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A4361A: [!] Reads field _gradientDir from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_gradientDir' (type UnityEngine.UI.Extensions.GradientDir)}
+
+		0x180A4361D: [!] Compares {'_gradientDir' (type UnityEngine.UI.Extensions.GradientDir)} and 0
+		0x180A4361F: Jumps to 0x180A439D8 if _gradientDir equals 0 ;  - This is probably a goto, jumping to 0x180A439D8 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43628: Jumps to 0x180A43918 if _gradientDir equals 0 ;  - This is probably a goto, jumping to 0x180A43918 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43631: Jumps to 0x180A437AA if _gradientDir equals 0 ;  - This is probably a goto, jumping to 0x180A437AA which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43637: [!] Compares {'_gradientDir' (type UnityEngine.UI.Extensions.GradientDir)} and 1
+		0x180A4363A: Jumps to 0x180A43A9C if {'_gradientDir' (type UnityEngine.UI.Extensions.GradientDir)} != 1 ;  - This is probably a goto, jumping to 0x180A43A9C which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43640: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rdi into rax
+		0x180A4364A: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rax into rax
+		0x180A43655: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rdi into rax
+		0x180A4365A: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rax into rax
+		0x180A43689: [!] Loads the constant value 4294967295 into the register rax as constant constant32 using an LEA instruction
+		0x180A43691: Jumps to 0x180A4369A if {'_gradientDir' (type UnityEngine.UI.Extensions.GradientDir)} is greater than or equal to 1 ;  - This is probably a goto, jumping to 0x180A4369A which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43698: [!] Adds 1 to the value , stored in rax
+		0x180A4369A: [!] Compares -1 and 0
+		0x180A4369C: Jumps to 0x180A436AC if -1 != 0 ;  - This is probably a goto, jumping to 0x180A436AC which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A4369E: [!] Reads field _vertex1 from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_vertex1' (type UnityEngine.Color)}
+
+		0x180A436A2: Moves _vertex1 (type UnityEngine.Color) from register xmm0 to the stack at offset 48 (0x30)
+		0x180A436A7: Jumps to 0x180A43760 (which is an function-local jump destination)
+
+		0x180A436AC: [!] Loads the constant value 4294967293 into the register rax as constant constant34 using an LEA instruction
+		0x180A436B4: Jumps to 0x180A436BD if -1 is greater than or equal to 0 ;  - This is probably a goto, jumping to 0x180A436BD which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A436BB: [!] Adds 1 to the value , stored in rax
+		0x180A436BD: [!] Compares -3 and 0
+		0x180A436BF: Jumps to 0x180A436CF if -3 != 0 ;  - This is probably a goto, jumping to 0x180A436CF which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A436C1: [!] Reads field _vertex2 from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_vertex2' (type UnityEngine.Color)}
+
+		0x180A436C5: Moves _vertex2 (type UnityEngine.Color) from register xmm0 to the stack at offset 48 (0x30)
+		0x180A436CA: Jumps to 0x180A43760 (which is an function-local jump destination)
+
+		0x180A436CF: [!] Reads field _vertex1 from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_vertex12' (type UnityEngine.Color)}
+
+		0x180A436D7: Copies {'_vertex12' (type UnityEngine.Color)} from xmm5 into xmm2
+		0x180A436DA: Copies {'_vertex12' (type UnityEngine.Color)} from xmm5 into xmm4
+		0x180A436E5: Copies {'_vertex12' (type UnityEngine.Color)} from xmm5 into xmm1
+		0x180A436E8: Copies {'local18' (type UnityEngine.Color)} from xmm3 into xmm0
+		0x180A4370D: Copies {'local18' (type UnityEngine.Color)} from xmm3 into xmm0
+		0x180A43736: Copies {'_vertex12' (type UnityEngine.Color)} from xmm2 into xmm4
+		0x180A4373E: Copies {'_vertex12' (type UnityEngine.Color)} from xmm1 into xmm4
+		0x180A43746: Copies {'_vertex12' (type UnityEngine.Color)} from xmm5 into xmm4
+		0x180A4374E: Moves _vertex12 (type UnityEngine.Color) from register xmm4 to the stack at offset 32 (0x20)
+		0x180A43753: Moves _vertex12 (type UnityEngine.Color) from register xmm4 to the stack at offset 48 (0x30)
+
+		Jump Destination (0x180A43760):
+		0x180A43760: Multiplies  by the field  from , and stores the result in new local  in register xmm6 ;  - This shouldn't be a field read? Op in reg rsp is , offset is 48 (0x30)
+		0x180A43766: Multiplies  by the field  from , and stores the result in new local  in register xmm8 ;  - This shouldn't be a field read? Op in reg rsp is , offset is 52 (0x34)
+		0x180A4376D: Multiplies  by the field  from , and stores the result in new local  in register xmm9 ;  - This shouldn't be a field read? Op in reg rsp is , offset is 56 (0x38)
+		0x180A43774: Multiplies  by the field  from , and stores the result in new local  in register xmm10 ;  - This shouldn't be a field read? Op in reg rsp is , offset is 60 (0x3C)
+		0x180A437A5: Jumps to 0x180A43A8F (which is an function-local jump destination)
+
+		0x180A437AA: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rdi into rax
+		0x180A437B4: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rax into rax
+		0x180A437BF: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rdi into rax
+		0x180A437C4: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rax into rax
+		0x180A437F3: Copies {'local2' (type System.Int32)} from rsi into rax
+		0x180A437FA: Jumps to 0x180A43803 if -3 is greater than or equal to 0 ;  - This is probably a goto, jumping to 0x180A43803 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43801: [!] Adds 1 to the value {'local2' (type System.Int32)}, stored in rax
+		0x180A43803: [!] Compares {'local2' (type System.Int32)} and 0
+		0x180A43805: Jumps to 0x180A43815 if {'local2' (type System.Int32)} != 0 ;  - This is probably a goto, jumping to 0x180A43815 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43807: [!] Reads field _vertex1 from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_vertex13' (type UnityEngine.Color)}
+
+		0x180A4380B: Moves _vertex13 (type UnityEngine.Color) from register xmm0 to the stack at offset 48 (0x30)
+		0x180A43810: Jumps to 0x180A438C1 (which is an function-local jump destination)
+
+		0x180A43815: [!] Loads the constant value 4294967294 into the register rax as constant constant37 using an LEA instruction
+		0x180A4381D: Jumps to 0x180A43826 if {'local2' (type System.Int32)} is greater than or equal to 0 ;  - This is probably a goto, jumping to 0x180A43826 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43824: [!] Adds 1 to the value , stored in rax
+		0x180A43826: [!] Compares -2 and 0
+		0x180A43828: Jumps to 0x180A43838 if -2 != 0 ;  - This is probably a goto, jumping to 0x180A43838 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A4382A: [!] Reads field _vertex2 from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_vertex22' (type UnityEngine.Color)}
+
+		0x180A4382E: Moves _vertex22 (type UnityEngine.Color) from register xmm0 to the stack at offset 48 (0x30)
+		0x180A43833: Jumps to 0x180A438C1 (which is an function-local jump destination)
+
+		0x180A43838: [!] Reads field _vertex1 from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_vertex14' (type UnityEngine.Color)}
+
+		0x180A43840: Copies {'_vertex14' (type UnityEngine.Color)} from xmm5 into xmm2
+		0x180A43843: Copies {'_vertex14' (type UnityEngine.Color)} from xmm5 into xmm4
+		0x180A4384E: Copies {'_vertex14' (type UnityEngine.Color)} from xmm5 into xmm1
+		0x180A43851: Copies {'local22' (type UnityEngine.Color)} from xmm3 into xmm0
+		0x180A43876: Copies {'local22' (type UnityEngine.Color)} from xmm3 into xmm0
+		0x180A4389F: Copies {'_vertex14' (type UnityEngine.Color)} from xmm2 into xmm4
+		0x180A438A7: Copies {'_vertex14' (type UnityEngine.Color)} from xmm1 into xmm4
+		0x180A438AF: Copies {'_vertex14' (type UnityEngine.Color)} from xmm5 into xmm4
+		0x180A438B7: Moves _vertex14 (type UnityEngine.Color) from register xmm4 to the stack at offset 32 (0x20)
+		0x180A438BC: Moves _vertex14 (type UnityEngine.Color) from register xmm4 to the stack at offset 48 (0x30)
+
+		Jump Destination (0x180A438C1):
+		0x180A438C1: Reads local {'_vertex14' (type UnityEngine.Color)} from stack offset 48 (0x30) into register xmm3
+		0x180A438C7: Reads unknown value in stack, offset 52 (0x34) and stores the pointer in register xmm0 as new constant constant39
+		0x180A438CD: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register xmm1 as new constant constant40
+		0x180A438D3: Reads unknown value in stack, offset 60 (0x3C) and stores the pointer in register xmm2 as new constant constant41
+		0x180A438F0: Copies {'constant39' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm0 into xmm3
+		0x180A438F8: Copies {'constant40' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm1 into xmm3
+		0x180A43900: Copies {'constant41' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm2 into xmm3
+		0x180A43908: Moves constant41 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm3 to the stack at offset 32 (0x20) as a new local local23
+		0x180A4390D: Moves constant41 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm3 to the stack at offset 32 (0x20) as a new local local24
+		0x180A43913: Jumps to 0x180A43A8F (which is an function-local jump destination)
+
+		0x180A43918: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rdi into rax
+		0x180A43922: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rax into rax
+		0x180A4392C: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rdi into rax
+		0x180A43931: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rax into rax
+		0x180A43958: Copies {'local2' (type System.Int32)} from rsi into rax
+		0x180A4395F: Jumps to 0x180A43968 if -2 is greater than or equal to 0 ;  - This is probably a goto, jumping to 0x180A43968 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43966: [!] Adds 1 to the value {'local2' (type System.Int32)}, stored in rax
+		0x180A43968: [!] Compares {'local2' (type System.Int32)} and 0
+		0x180A4396A: Jumps to 0x180A43987 if local2 equals 0 ;  - This is probably a goto, jumping to 0x180A43987 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A4396C: [!] Loads the constant value 4294967293 into the register rax as constant constant43 using an LEA instruction
+		0x180A43974: Jumps to 0x180A4397D if {'local2' (type System.Int32)} is greater than or equal to 0 ;  - This is probably a goto, jumping to 0x180A4397D which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A4397B: [!] Adds 1 to the value , stored in rax
+		0x180A4397D: [!] Compares -3 and 0
+		0x180A4397F: Jumps to 0x180A43987 if -3 equals 0 ;  - This is probably a goto, jumping to 0x180A43987 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43985: Jumps to 0x180A4398B (which is an function-local jump destination)
+
+		0x180A43987: [!] Reads field _vertex1 from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_vertex15' (type UnityEngine.Color)}
+
+
+		Jump Destination (0x180A4398B):
+		0x180A4398B: Moves _vertex15 (type UnityEngine.Color) from register xmm0 to the stack at offset 48 (0x30)
+		0x180A43990: Reads local {'_vertex15' (type UnityEngine.Color)} from stack offset 48 (0x30) into register xmm0
+		0x180A43996: Multiplies  by the field  from , and stores the result in new local  in register xmm1 ;  - This shouldn't be a field read? Op in reg rsp is , offset is 52 (0x34)
+		0x180A4399C: Multiplies  by the field  from , and stores the result in new local  in register xmm2 ;  - This shouldn't be a field read? Op in reg rsp is , offset is 56 (0x38)
+		0x180A439A2: Multiplies  by the field  from , and stores the result in new local  in register xmm3 ;  - This shouldn't be a field read? Op in reg rsp is , offset is 60 (0x3C)
+		0x180A439B0: Copies {'constant40' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm1 into xmm0
+		0x180A439B8: Copies {'constant41' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm2 into xmm0
+		0x180A439C0: Copies {'constant41' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm3 into xmm0
+		0x180A439C8: Moves constant41 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm0 to the stack at offset 32 (0x20) as a new local local27
+		0x180A439CD: Moves constant41 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm0 to the stack at offset 32 (0x20) as a new local local28
+		0x180A439D3: Jumps to 0x180A43A8F (which is an function-local jump destination)
+
+		0x180A439D8: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rdi into rax
+		0x180A439E2: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rax into rax
+		0x180A439EC: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rdi into rax
+		0x180A439F1: Copies {'list' (type System.Collections.Generic.List`1<UnityEngine.UIVertex>)} from rax into rax
+		0x180A43A18: Copies {'local2' (type System.Int32)} from rsi into rax
+		0x180A43A1F: Jumps to 0x180A43A28 if -3 is greater than or equal to 0 ;  - This is probably a goto, jumping to 0x180A43A28 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43A26: [!] Adds 1 to the value {'local2' (type System.Int32)}, stored in rax
+		0x180A43A28: [!] Compares {'local2' (type System.Int32)} and 0
+		0x180A43A2A: Jumps to 0x180A43A47 if local2 equals 0 ;  - This is probably a goto, jumping to 0x180A43A47 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43A2C: [!] Loads the constant value 4294967295 into the register rax as constant constant46 using an LEA instruction
+		0x180A43A34: Jumps to 0x180A43A3D if {'local2' (type System.Int32)} is greater than or equal to 0 ;  - This is probably a goto, jumping to 0x180A43A3D which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43A3B: [!] Adds 1 to the value , stored in rax
+		0x180A43A3D: [!] Compares -1 and 0
+		0x180A43A3F: Jumps to 0x180A43A47 if -1 equals 0 ;  - This is probably a goto, jumping to 0x180A43A47 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43A45: Jumps to 0x180A43A4B (which is an function-local jump destination)
+
+		0x180A43A47: [!] Reads field _vertex1 from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_vertex16' (type UnityEngine.Color)}
+
+
+		Jump Destination (0x180A43A4B):
+		0x180A43A4B: Moves _vertex16 (type UnityEngine.Color) from register xmm0 to the stack at offset 48 (0x30)
+		0x180A43A50: Multiplies  by the field  from , and stores the result in new local  in register xmm1 ;  - This shouldn't be a field read? Op in reg rsp is , offset is 48 (0x30)
+		0x180A43A56: Multiplies  by the field  from , and stores the result in new local  in register xmm2 ;  - This shouldn't be a field read? Op in reg rsp is , offset is 52 (0x34)
+		0x180A43A5C: Multiplies  by the field  from , and stores the result in new local  in register xmm3 ;  - This shouldn't be a field read? Op in reg rsp is , offset is 56 (0x38)
+		0x180A43A62: Multiplies {'_vertex14' (type UnityEngine.Color)} by the field  from , and stores the result in new local  in register xmm4 ;  - This shouldn't be a field read? Op in reg rsp is , offset is 60 (0x3C)
+		0x180A43A6C: Copies {'constant41' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm2 into xmm1
+		0x180A43A74: Copies {'constant41' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm3 into xmm1
+		0x180A43A7C: Copies {'_vertex14' (type UnityEngine.Color)} from xmm4 into xmm1
+		0x180A43A84: Moves _vertex14 (type UnityEngine.Color) from register xmm1 to the stack at offset 32 (0x20)
+		0x180A43A89: Moves _vertex14 (type UnityEngine.Color) from register xmm1 to the stack at offset 32 (0x20)
+
+		Jump Destination (0x180A43A8F):
+		0x180A43A8F: Loads a pointer to stack offset 0x20 into register rcx as new constant constant48
+		0x180A43AA0: Loads a pointer to stack offset 0x40 into register rdx as new constant constant49
+		0x180A43AAF: Copies {'local2' (type System.Int32)} from rsi into r8
+		0x180A43AB2: Moves _vertex16 (type UnityEngine.Color) from register xmm0 to the stack at offset 64 (0x40)
+		0x180A43AB7: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from r15 into rcx
+		0x180A43ABE: Moves _vertex16 (type UnityEngine.Color) from register xmm0 to the stack at offset 96 (0x60)
+		0x180A43AC7: Moves _vertex14 (type UnityEngine.Color) from register xmm1 to the stack at offset 80 (0x50)
+		0x180A43AD9: Moves _vertex14 (type UnityEngine.Color) from register xmm1 to the stack at offset 112 (0x70)
+		0x180A43AEE: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::SetUIVertex(UnityEngine.UIVertex,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A43AF3: [!] Adds 1 to the value {'local2' (type System.Int32)}, stored in rsi
+		0x180A43AF5: [!] Compares {'local2' (type System.Int32)} against itself
+
+		Potential Loop Start (0x180A43AFE):
+		0x180A43AFE: Reads unknown value in stack, offset 304 (0x130) and stores the pointer in register xmm15 as new constant constant50
+		0x180A43B07: Reads unknown value in stack, offset 320 (0x140) and stores the pointer in register xmm14 as new constant constant51
+		0x180A43B10: Reads unknown value in stack, offset 336 (0x150) and stores the pointer in register xmm13 as new constant constant52
+		0x180A43B19: Reads unknown value in stack, offset 352 (0x160) and stores the pointer in register xmm12 as new constant constant53
+		0x180A43B22: Reads unknown value in stack, offset 368 (0x170) and stores the pointer in register xmm11 as new constant constant54
+		0x180A43B2B: Reads unknown value in stack, offset 384 (0x180) and stores the pointer in register xmm10 as new constant constant55
+		0x180A43B34: Reads unknown value in stack, offset 400 (0x190) and stores the pointer in register xmm9 as new constant constant56
+		0x180A43B3D: Reads unknown value in stack, offset 416 (0x1A0) and stores the pointer in register xmm8 as new constant constant57
+		0x180A43B46: Reads unknown value in stack, offset 432 (0x1B0) and stores the pointer in register xmm7 as new constant constant58
+		0x180A43B4E: Reads unknown value in stack, offset 448 (0x1C0) and stores the pointer in register xmm6 as new constant constant59
+		0x180A43B56: Reads unknown value in stack, offset 520 (0x208) and stores the pointer in register r14 as new constant constant60
+		0x180A43B5E: Reads unknown value in stack, offset 512 (0x200) and stores the pointer in register r12 as new constant constant61
+		0x180A43B66: Reads unknown value in stack, offset 504 (0x1F8) and stores the pointer in register rdi as new constant constant62
+		0x180A43B6E: Reads unknown value in stack, offset 496 (0x1F0) and stores the pointer in register rsi as new constant constant63
+		0x180A43B81: [!] Returns from the function
+
+		0x180A43B82: [!] Compares {field _gradientDir, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} and 2
+		0x180A43B86: Jumps to 0x180A43B8E if this._gradientDir equals 2 ;  - This is probably a goto, jumping to 0x180A43B8E which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43B88: [!] Compares {field _gradientDir, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} and 3
+		0x180A43B8C: Jumps to 0x180A43B91 if {field _gradientDir, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} != 3 ;  - This is probably a goto, jumping to 0x180A43B91 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43B8E: [!] Sets the field _gradientDir (Type UnityEngine.UI.Extensions.GradientDir) on local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} to the value stored in 0
+		0x180A43B91: [!] Compares {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and 0
+		0x180A43B94: Jumps to 0x180A43F96 (which throws a NRE) if constant62 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A43B9E: [!] Compares {field _gradientDir, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} and -1
+		0x180A43BA1: Loads the pointer to the field  on {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} into register rax
+		0x180A43BA4: Jumps to 0x180A43BD9 if {field _gradientDir, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} != -1 ;  - This is probably a goto, jumping to 0x180A43BD9 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43BA6: Compares -1 and "{il2cpp field on {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}, offset 0x18}"
+		0x180A43BA9: Jumps to 0x180A43FA2 if -1 is greater than or equal to "{il2cpp field on {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}, offset 0x18}" ;  - This is probably a goto, jumping to 0x180A43FA2 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43BB3: [!] Compares {'constant49' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and 0
+		0x180A43BB6: Jumps to 0x180A43F96 (which throws a NRE) if constant49 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A43BBC: Loads the pointer to the field  on {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} into register rax
+		0x180A43BBF: Compares -1 and "{il2cpp field on {'constant49' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}, offset 0x18}"
+		0x180A43BC2: Jumps to 0x180A43F9C (which throws a NRE) if -1 is greater than or equal to "{il2cpp field on {'constant49' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}, offset 0x18}". Implicitly present in managed code, so ignored here.
+		0x180A43BC8: [!] Multiplies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and 108, and stores the result in new local {'local32' (type System.Int64)} in register rcx
+		0x180A43BD7: Jumps to 0x180A43C05 (which is an function-local jump destination)
+
+		0x180A43BD9: Compares -1 and "{il2cpp field on {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}, offset 0x18}"
+		0x180A43BDC: Jumps to 0x180A43FA2 if -1 is greater than or equal to "{il2cpp field on {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}, offset 0x18}" ;  - This is probably a goto, jumping to 0x180A43FA2 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43BE6: [!] Compares {'constant49' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and 0
+		0x180A43BE9: Jumps to 0x180A43F96 (which throws a NRE) if constant49 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A43BEF: Subtracts 1 from local32 and stores the result in local33
+		0x180A43BF2: Compares {'local33' (type System.Int64)} and "{il2cpp field on {'constant49' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}, offset 0x18}"
+		0x180A43BF5: Jumps to 0x180A43F9C (which throws a NRE) if {'local33' (type System.Int64)} is greater than or equal to "{il2cpp field on {'constant49' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}, offset 0x18}". Implicitly present in managed code, so ignored here.
+		0x180A43BFB: [!] Multiplies {'local32' (type System.Int64)} and 108, and stores the result in new local {'local34' (type System.Int64)} in register rcx
+
+		Jump Destination (0x180A43C05):
+		0x180A43C16: Moves _vertex16 (type UnityEngine.Color) from register xmm0 to the stack at offset 80 (0x50)
+		0x180A43C20: Moves _vertex14 (type UnityEngine.Color) from register xmm1 to the stack at offset 96 (0x60)
+		0x180A43C2A: Moves _vertex16 (type UnityEngine.Color) from register xmm0 to the stack at offset 112 (0x70)
+		0x180A43C4A: [!] Compares {field _gradientDir, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} and {'constant63' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}
+		0x180A43C4D: Jumps to 0x180A43C79 if {field _gradientDir, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} != {'constant63' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} ;  - This is probably a goto, jumping to 0x180A43C79 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43C4F: [!] Compares {'local33' (type System.Int64)} and {'constant75' (constant value of type System.Int64)}
+		0x180A43C51: Jumps to 0x180A43FA2 if local33 equals constant75 ;  - This is probably a goto, jumping to 0x180A43FA2 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43C5B: [!] Compares {'local33' (type System.Int64)} and {'constant76' (constant value of type System.Int64)}
+		0x180A43C5E: Jumps to 0x180A43F96 (which throws a NRE) if local33 equals constant76. Implicitly present in managed code, so ignored here.
+		0x180A43C64: [!] Compares  and {'constant63' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}
+		0x180A43C67: Jumps to 0x180A43F9C (which throws a NRE) if  is less than or equal to {'constant63' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}. Implicitly present in managed code, so ignored here.
+		0x180A43C6D: [!] Reads field  from {'local33' (type System.Int64)} and stores in a new local 
+
+		0x180A43C77: Jumps to 0x180A43C9C (which is an function-local jump destination)
+
+		0x180A43C79: [!] Compares {'local33' (type System.Int64)} and {'constant77' (constant value of type System.Int64)}
+		0x180A43C7B: Jumps to 0x180A43FA2 if local33 equals constant77 ;  - This is probably a goto, jumping to 0x180A43FA2 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43C85: [!] Compares {'local33' (type System.Int64)} and {'constant78' (constant value of type System.Int64)}
+		0x180A43C88: Jumps to 0x180A43F96 (which throws a NRE) if local33 equals constant78. Implicitly present in managed code, so ignored here.
+		0x180A43C8E: [!] Compares  and {'constant63' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}
+		0x180A43C91: Jumps to 0x180A43F9C (which throws a NRE) if  is less than or equal to {'constant63' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}. Implicitly present in managed code, so ignored here.
+		0x180A43C97: [!] Reads field  from {'local33' (type System.Int64)} and stores in a new local 
+
+
+		Jump Destination (0x180A43C9C):
+		0x180A43C9C: [!] Reads field  from {'local33' (type System.Int64)} and stores in a new local 
+
+		0x180A43CA0: [!] Reads field  from {'local33' (type System.Int64)} and stores in a new local 
+
+		0x180A43CA4: Moves _vertex16 (type UnityEngine.Color) from register xmm0 to the stack at offset 80 (0x50)
+		0x180A43CA9: [!] Reads field  from {'local33' (type System.Int64)} and stores in a new local 
+
+		0x180A43CAD: Moves _vertex14 (type UnityEngine.Color) from register xmm1 to the stack at offset 96 (0x60)
+		0x180A43CB2: [!] Reads field  from {'local33' (type System.Int64)} and stores in a new local 
+
+		0x180A43CB6: Moves _vertex16 (type UnityEngine.Color) from register xmm0 to the stack at offset 112 (0x70)
+		0x180A43CBB: [!] Reads field  from {'local33' (type System.Int64)} and stores in a new local 
+
+		0x180A43CCB: [!] Reads field  from {'local33' (type System.Int64)} and stores in a new local 
+
+		0x180A43CE2: [!] Compares {'constant61' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and 0
+		0x180A43CE5: Jumps to 0x180A43AFE if {'constant61' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} is less than or equal to 0 ;  - This is probably a goto, jumping to 0x180A43AFE which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43CEB: Reads {Unknown Global at 0x182E6EB6C, first ten bytes are [0 0 127 67 0 0 135 67 0 128], or as chars "  C  C "} into register xmm7 as a constant constant80
+		0x180A43CF3: Clears register xmm14, yielding zero-local {'local35' (type System.Int32)}
+		0x180A43CF7: Reads {Unknown Global at 0x182E6E338, first ten bytes are [254 230 219 46 255 230 219 46 0 0], or as chars "þæÛ.ÿæÛ.  "} into register xmm15 as a constant constant81
+		0x180A43D00: Reads {Unknown Global at 0x182E6E600, first ten bytes are [0 0 128 63 84 0 128 63 146 65], or as chars "  ?T ?A"} into register xmm12 as a constant constant82
+		0x180A43D17: Copies {'constant63' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rsi into r8
+		0x180A43D1A: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from r15 into rcx
+		0x180A43D1D: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::PopulateUIVertex(UnityEngine.UIVertex,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A43D22: [!] Compares {field _overwriteAllColor, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} and False
+		0x180A43D29: Copies {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rdi into r14
+		0x180A43D2D: Jumps to 0x180A43DF5 if {field _overwriteAllColor, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} != False ;  - This is probably a goto, jumping to 0x180A43DF5 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43D33: Copies {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rdi into rax
+		0x180A43D3D: Copies {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rax into rax
+		0x180A43D48: Copies {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rdi into rax
+		0x180A43D4D: Copies {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rax into rax
+		0x180A43D58: Copies {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rdi into rax
+		0x180A43D7D: [!] Reads field targetGraphic from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'targetGraphic2' (type UnityEngine.UI.Graphic)}
+
+		0x180A43D81: [!] Compares {'targetGraphic2' (type UnityEngine.UI.Graphic)} and 0
+		0x180A43D84: Jumps to 0x180A43F96 (which throws a NRE) if targetGraphic2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A43D8A: Loads the class pointer from targetGraphic2 into a constant constant85 in register r8
+		0x180A43D91: Loads the pointer to the implementation of virtual function UnityEngine.Color UnityEngine.UI.Graphic::get_color() specific to UnityEngine.UI.Graphic from the class pointer in r8, slot 22 (from memory offset 664) and stores in constant constant86
+		0x180A43D98: Loads the pointer to the implementation of virtual function UnityEngine.Color UnityEngine.UI.Graphic::get_color() specific to UnityEngine.UI.Graphic from the class pointer in r8, slot 22 (from memory offset 672) and stores in constant constant87
+		0x180A43D9F: [!] Calls managed method UnityEngine.Color UnityEngine.UI.Graphic::get_color() on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} and stores the result in {'color2' (type UnityEngine.Color)}
+
+		0x180A43DA1: Loads the class pointer from color2 into a constant constant88 in register xmm1
+		0x180A43DA4: Copies {'constant88' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm1 into xmm0
+		0x180A43DB4: Copies {'constant88' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from xmm1 into xmm0
+		0x180A43DEB: Compares {Unknown Global at 0x182E6E338, first ten bytes are [254 230 219 46 255 230 219 46 0 0], or as chars "þæÛ.ÿæÛ.  "} and {'constant59' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}
+		0x180A43DEF: Jumps to 0x180A43F86 if {Unknown Global at 0x182E6E338, first ten bytes are [254 230 219 46 255 230 219 46 0 0], or as chars "þæÛ.ÿæÛ.  "} is less than or equal to {'constant59' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} ;  - This is probably a goto, jumping to 0x180A43F86 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43DF5: Copies {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rdi into rax
+		0x180A43DFF: Copies {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rax into rax
+		0x180A43E0A: Copies {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rdi into rax
+		0x180A43E0F: Copies {'constant62' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rax into rax
+		0x180A43E3E: [!] Compares {field _gradientDir, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} and 0
+		0x180A43E42: [!] Reads field _vertex1 from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_vertex17' (type UnityEngine.Color)}
+
+		0x180A43E46: [!] Reads field _vertex2 from {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} and stores in a new local {'_vertex23' (type UnityEngine.Color)}
+
+		0x180A43E4A: Moves _vertex17 (type UnityEngine.Color) from register xmm0 to the stack at offset 48 (0x30)
+		0x180A43E4F: Moves _vertex23 (type UnityEngine.Color) from register xmm1 to the stack at offset 32 (0x20)
+		0x180A43E54: Jumps to 0x180A43E5D if {field _gradientDir, read from local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)}} != 0 ;  - This is probably a goto, jumping to 0x180A43E5D which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43E5B: Jumps to 0x180A43E70 (which is an function-local jump destination)
+
+
+		Jump Destination (0x180A43E70):
+		0x180A43E7A: [!] Compares {'local35' (type System.Int32)} and {'_vertex14' (type UnityEngine.Color)}
+		0x180A43E7E: Jumps to 0x180A43E8C if {'local35' (type System.Int32)} is greater than {'_vertex14' (type UnityEngine.Color)} ;  - This is probably a goto, jumping to 0x180A43E8C which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43E80: Compares {'_vertex14' (type UnityEngine.Color)} and {Unknown Global at 0x182E6E600, first ten bytes are [0 0 128 63 84 0 128 63 146 65], or as chars "  ?T ?A"}
+		0x180A43E84: Jumps to 0x180A43E90 if {'_vertex14' (type UnityEngine.Color)} is less than or equal to {Unknown Global at 0x182E6E600, first ten bytes are [0 0 128 63 84 0 128 63 146 65], or as chars "  ?T ?A"} ;  - This is probably a goto, jumping to 0x180A43E90 which is after end of current block @ 0x180A4347C (started at 0x180A43479)
+
+		0x180A43E86: Copies {Unknown Global at 0x182E6E600, first ten bytes are [0 0 128 63 84 0 128 63 146 65], or as chars "  ?T ?A"} from xmm12 into xmm5
+		0x180A43E8A: Jumps to 0x180A43E90 (which is an function-local jump destination)
+
+		0x180A43E8C: Copies {'local35' (type System.Int32)} from xmm14 into xmm5
+
+		Jump Destination (0x180A43E90):
+		0x180A43E90: Reads local {'_vertex17' (type UnityEngine.Color)} from stack offset 48 (0x30) into register xmm4
+		0x180A43E9C: Reads unknown value in stack, offset 52 (0x34) and stores the pointer in register xmm3 as new constant constant90
+		0x180A43EA8: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register xmm2 as new constant constant91
+		0x180A43EB4: Reads unknown value in stack, offset 60 (0x3C) and stores the pointer in register xmm1 as new constant constant92
+		0x180A43EFF: Loads a pointer to stack offset 0x20 into register rcx as new constant constant93
+		0x180A43F04: Copies {'constant90' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm3 into xmm4
+		0x180A43F0C: Copies {'constant91' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm2 into xmm4
+		0x180A43F14: Copies {'constant92' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm1 into xmm4
+		0x180A43F1C: Moves constant92 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm4 to the stack at offset 32 (0x20) as a new local local41
+		0x180A43F21: Moves constant92 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm4 to the stack at offset 32 (0x20) as a new local local42
+		0x180A43F30: Loads a pointer to stack offset 0x40 into register rdx as new constant constant94
+		0x180A43F3C: Moves _vertex17 (type UnityEngine.Color) from register xmm0 to the stack at offset 64 (0x40)
+		0x180A43F41: Copies {'constant63' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rsi into r8
+		0x180A43F47: Copies {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} from r15 into rcx
+		0x180A43F51: Moves _vertex17 (type UnityEngine.Color) from register xmm0 to the stack at offset 96 (0x60)
+		0x180A43F5A: Moves constant92 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm1 to the stack at offset 80 (0x50) as a new local local44
+		0x180A43F6C: Moves constant92 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm1 to the stack at offset 112 (0x70) as a new local local45
+		0x180A43F81: [!] Calls managed method System.Void UnityEngine.UI.VertexHelper::SetUIVertex(UnityEngine.UIVertex,System.Int32) on instance {'vh' (function parameter, type UnityEngine.UI.VertexHelper)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A43F86: [!] Adds 1 to the value , stored in rsi
+		0x180A43F88: [!] Compares {'constant63' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and {'constant61' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}
+		0x180A43F91: Jumps to 0x180A43AFE - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x180A43F96: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x180A43FA2: Clears register rcx, yielding zero-local {'local47' (type System.Int32)}
+		0x180A43FA4: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	System.Void ModifyMesh(UnityEngine.UI.VertexHelper vh)
+		ulong local2 = 0
+
+		if (vh.m_Positions != local2)
+		    System.Collections.Generic.List`1<UnityEngine.Vector3> m_Positions = vh.m_Positions
+		else
+		endif
+        
+
+		System.Boolean isActive = this.IsActive()
+
+		if (isActive == False)
+            goto INSN_180A43AFE
+        endif
+
+		if (local2 == 0)
+            goto INSN_180A43AFE
+        endif
+		System.Collections.Generic.List`1<UnityEngine.UIVertex> list = new System.Collections.Generic.List`1<UnityEngine.UIVertex>()
+
+		vh.GetUIVertexStream(list) //(List`1 stream)
+		ulong local9 = 0
+
+		if (this._gradientMode == local9)
+            goto INSN_180A43B82
+        endif
+
+		if (local2 <= 0)
+            goto INSN_180A43AFE
+        endif
+
+		vh.PopulateUIVertex()
+
+		if (this._overwriteAllColor != False)
+            goto INSN_180A4361A
+        endif
+		UnityEngine.UI.Graphic targetGraphic = this.targetGraphic
+
+		UnityEngine.Color color = vh.color
+
+		INSN_180A4361A:
+		UnityEngine.UI.Extensions.GradientDir _gradientDir = this._gradientDir
+
+		if (_gradientDir == 0)
+            goto INSN_180A439D8
+        endif
+
+		if (_gradientDir == 0)
+            goto INSN_180A43918
+        endif
+
+		if (_gradientDir == 0)
+            goto INSN_180A437AA
+        endif
+
+		if (_gradientDir != 1)
+            goto INSN_180A43A9C
+        endif
+		System.Int32 -1 = 4294967295
+
+		if (_gradientDir >= 1)
+            goto INSN_180A4369A
+        endif
+		 += 1
+
+		INSN_180A4369A:
+
+		if (-1 != 0)
+            goto INSN_180A436AC
+        endif
+		UnityEngine.Color _vertex1 = this._vertex1
+
+		INSN_180A436AC:
+		System.Int32 -3 = 4294967293
+
+		if (-1 >= 0)
+            goto INSN_180A436BD
+        endif
+		 += 1
+
+		INSN_180A436BD:
+
+		if (-3 != 0)
+            goto INSN_180A436CF
+        endif
+		UnityEngine.Color _vertex2 = this._vertex2
+
+		INSN_180A436CF:
+		UnityEngine.Color _vertex12 = this._vertex1
+		  =  * .
+		  =  * .
+		  =  * .
+		  =  * .
+
+		INSN_180A437AA:
+
+		if (-3 >= 0)
+            goto INSN_180A43803
+        endif
+		local2 += 1
+
+		INSN_180A43803:
+
+		if (local2 != 0)
+            goto INSN_180A43815
+        endif
+		UnityEngine.Color _vertex13 = this._vertex1
+
+		INSN_180A43815:
+		System.Int32 -2 = 4294967294
+
+		if (local2 >= 0)
+            goto INSN_180A43826
+        endif
+		 += 1
+
+		INSN_180A43826:
+
+		if (-2 != 0)
+            goto INSN_180A43838
+        endif
+		UnityEngine.Color _vertex22 = this._vertex2
+
+		INSN_180A43838:
+		UnityEngine.Color _vertex14 = this._vertex1
+
+		INSN_180A43918:
+
+		if (-2 >= 0)
+            goto INSN_180A43968
+        endif
+		local2 += 1
+
+		INSN_180A43968:
+
+		if (local2 == 0)
+            goto INSN_180A43987
+        endif
+		System.Int32 -3 = 4294967293
+
+		if (local2 >= 0)
+            goto INSN_180A4397D
+        endif
+		 += 1
+
+		INSN_180A4397D:
+
+		if (-3 == 0)
+            goto INSN_180A43987
+        endif
+
+		INSN_180A43987:
+		UnityEngine.Color _vertex15 = this._vertex1
+		  =  * .
+		  =  * .
+		  =  * .
+
+		INSN_180A439D8:
+
+		if (-3 >= 0)
+            goto INSN_180A43A28
+        endif
+		local2 += 1
+
+		INSN_180A43A28:
+
+		if (local2 == 0)
+            goto INSN_180A43A47
+        endif
+		System.Int32 -1 = 4294967295
+
+		if (local2 >= 0)
+            goto INSN_180A43A3D
+        endif
+		 += 1
+
+		INSN_180A43A3D:
+
+		if (-1 == 0)
+            goto INSN_180A43A47
+        endif
+
+		INSN_180A43A47:
+		UnityEngine.Color _vertex16 = this._vertex1
+		  =  * .
+		  =  * .
+		  =  * .
+		  = _vertex14 * .
+
+		INSN_180A43A9C:
+
+		vh.SetUIVertex()
+		local2 += 1
+
+		INSN_180A43AFE:
+		return
+
+		INSN_180A43B82:
+
+		if (this._gradientDir == 2)
+            goto INSN_180A43B8E
+        endif
+
+		if (this._gradientDir != 3)
+            goto INSN_180A43B91
+        endif
+
+		INSN_180A43B8E:
+		this._gradientDir = 0
+
+		INSN_180A43B91:
+
+		if (this._gradientDir != -1)
+            goto INSN_180A43BD9
+        endif
+		System.Int64 local32 = vh * 108
+
+		INSN_180A43BD9:
+		System.Int64 local33 = local32 - 1
+		System.Int64 local34 = local32 * 108
+
+		if (this._gradientDir != constant63)
+            goto INSN_180A43C79
+        endif
+
+		if (local33 == constant75)
+            goto INSN_180A43FA2
+        endif
+		  = local33.
+
+		INSN_180A43C79:
+
+		if (local33 == constant77)
+            goto INSN_180A43FA2
+        endif
+		  = local33.
+		  = local33.
+		  = local33.
+		  = local33.
+		  = local33.
+		  = local33.
+		  = local33.
+
+		if (constant61 <= 0)
+            goto INSN_180A43AFE
+        endif
+		ulong local35 = 0
+
+		vh.PopulateUIVertex()
+
+		if (this._overwriteAllColor != False)
+            goto INSN_180A43DF5
+        endif
+		UnityEngine.UI.Graphic targetGraphic2 = this.targetGraphic
+
+		UnityEngine.Color color2 = vh.color
+
+		INSN_180A43DF5:
+		UnityEngine.Color _vertex17 = this._vertex1
+		UnityEngine.Color _vertex23 = this._vertex2
+
+		if (this._gradientDir != 0)
+            goto INSN_180A43E5D
+        endif
+
+		INSN_180A43E5D:
+
+		if (local35 > _vertex14)
+            goto INSN_180A43E8C
+        endif
+
+		INSN_180A43E8C:
+
+		vh.SetUIVertex()
+		 += 1
+		throw new System.NullReferenceException()
+
+		INSN_180A43FA2:
+		ulong local47 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.AllocateInstanceAction at (0x180A434AA) is corrupt (Managed method being called is GetUIVertexStream, not a ctor.) and cannot be created as IL. Aborting here.
+
+
+Method: System.Boolean UnityEngine.UI.Extensions.Gradient::CompareCarefully(UnityEngine.Color,UnityEngine.Color):	Method Body (x86 ASM):
+		0x180A43FB0 movss xmm0,dword ptr [rdx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180A43FB4 subss xmm0,dword ptr [r8]		; DEBUG: {Register}/XMM0 {Memory}/None ||| R8 | 0 | None ||| N/A | N/A
+		0x180A43FB9 movss xmm1,dword ptr [182E6F730h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RIP | 6491141936 | None ||| N/A | N/A
+		0x180A43FC1 movss xmm2,dword ptr [182E6E384h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RIP | 6491136900 | None ||| N/A | N/A
+		0x180A43FC9 andps xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43FCC comiss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A43FCF jbe short 0000000180A4400Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43FD1 movss xmm0,dword ptr [rdx+4]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 4 | None ||| N/A | N/A
+		0x180A43FD6 subss xmm0,dword ptr [r8+4]		; DEBUG: {Register}/XMM0 {Memory}/None ||| R8 | 4 | None ||| N/A | N/A
+		0x180A43FDC andps xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43FDF comiss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A43FE2 jbe short 0000000180A4400Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43FE4 movss xmm0,dword ptr [rdx+8]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 8 | None ||| N/A | N/A
+		0x180A43FE9 subss xmm0,dword ptr [r8+8]		; DEBUG: {Register}/XMM0 {Memory}/None ||| R8 | 8 | None ||| N/A | N/A
+		0x180A43FEF andps xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A43FF2 comiss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A43FF5 jbe short 0000000180A4400Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A43FF7 movss xmm0,dword ptr [rdx+0Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 12 | None ||| N/A | N/A
+		0x180A43FFC subss xmm0,dword ptr [r8+0Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| R8 | 12 | None ||| N/A | N/A
+		0x180A44002 andps xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180A44005 comiss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180A44008 seta al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4400B ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4400C xor al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A4400E ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A4400F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean UnityEngine.UI.Extensions.Gradient::CompareCarefully(UnityEngine.Color,UnityEngine.Color):
+		End of function at 0x180A44010
+		Absolute End is at 0x180A44010
+		Identified Jump Destination addresses:
+
+		0x180A43FB0: Loads the class pointer from col1 into a constant constant1 in register xmm0
+		0x180A43FB9: Reads {Unknown Global at 0x182E6F730, first ten bytes are [255 255 255 127 255 255 255 127 255 255], or as chars "ÿÿÿÿÿÿÿÿ"} into register xmm1 as a constant constant2
+		0x180A43FC1: Reads {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} into register xmm2 as a constant constant3
+		0x180A43FCC: Compares {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} and {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}
+		0x180A43FCF: Jumps to 0x180A4400C if {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} is less than or equal to {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}
+
+		0x180A43FD1: [!] Reads field g from {'col1' (function parameter, type UnityEngine.Color)} and stores in a new local {'single' (type System.Single)}
+
+		0x180A43FDF: Compares {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} and {'single' (type System.Single)}
+		0x180A43FE2: Jumps to 0x180A4400C if {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} is less than or equal to {'single' (type System.Single)}
+
+		0x180A43FE4: [!] Reads field b from {'col1' (function parameter, type UnityEngine.Color)} and stores in a new local {'single2' (type System.Single)}
+
+		0x180A43FF2: Compares {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} and {'single2' (type System.Single)}
+		0x180A43FF5: Jumps to 0x180A4400C if {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} is less than or equal to {'single2' (type System.Single)}
+
+		0x180A43FF7: [!] Reads field a from {'col1' (function parameter, type UnityEngine.Color)} and stores in a new local {'single3' (type System.Single)}
+
+		0x180A44005: Compares {Unknown Global at 0x182E6E384, first ten bytes are [166 155 68 59 167 196 98 59 0 0], or as chars "¦D;§Äb;  "} and {'single3' (type System.Single)}
+		0x180A4400B: [!] Returns  from the function
+
+		0x180A4400C: Clears register rax, yielding zero-local {'local6' (type System.Int32)}
+		0x180A4400E: [!] Returns {'local6' (type System.Int32)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	System.Boolean CompareCarefully(UnityEngine.Color col1, UnityEngine.Color col2)
+		System.Single single = col1.g
+		System.Single single2 = col1.b
+		System.Single single3 = col1.a
+		return 
+		ulong local6 = 0
+		return local6
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.ReturnFromFunctionAction at (0x180A4400B) is corrupt (Return value is missing) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.Extensions.Gradient::.ctor():	Method Body (x86 ASM):
+		0x180A44010 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A44014 movaps xmm0,[182E6F3E0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491141088 | None ||| N/A | N/A
+		0x180A4401B movaps xmm1,[182E6F1D0h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RIP | 6491140560 | None ||| N/A | N/A
+		0x180A44022 movups [rcx+34h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RCX | 52 | None ||| N/A | N/A
+		0x180A44026 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x180A4402D movups [rcx+44h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RCX | 68 | None ||| N/A | N/A
+		0x180A44031 jne short 0000000180A44046h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A44033 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A4403A call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4403F mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x180A44046 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A4404D cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A44054 jne short 0000000180A4405Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A44056 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A4405A jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A4405F add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A44063 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A44064 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.Gradient::.ctor():
+		End of function at 0x180A44065
+		Absolute End is at 0x180A44065
+		Identified Jump Destination addresses:
+
+		0x180A44014: Reads {Unknown Global at 0x182E6F3E0, first ten bytes are [0 0 128 63 0 0 128 63 0 0], or as chars "  ?  ?  "} into register xmm0 as a constant constant1
+		0x180A4401B: Reads {Unknown Global at 0x182E6F1D0, first ten bytes are [0 0 0 0 0 0 0 0 0 0], or as chars "          "} into register xmm1 as a constant constant2
+		0x180A44022: [!] Sets the field _vertex1 (Type UnityEngine.Color) on local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} to the value stored in {Unknown Global at 0x182E6F3E0, first ten bytes are [0 0 128 63 0 0 128 63 0 0], or as chars "  ?  ?  "}
+		0x180A44026: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x180A4402D: [!] Sets the field _vertex2 (Type UnityEngine.Color) on local {'this' (function parameter, type UnityEngine.UI.Extensions.Gradient)} to the value stored in {Unknown Global at 0x182E6F1D0, first ten bytes are [0 0 0 0 0 0 0 0 0 0], or as chars "          "}
+		0x180A44031: Jumps to 0x180A44046 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x180A44033: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A4403A: Initializes runtime metadata value UnityEngine.Object
+		0x180A44046: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A4404D: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A44054: Jumps to 0x180A4405F if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180A44063: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.Gradient
+	System.Void .ctor()
+		this._vertex1 = constant1
+		this._vertex2 = constant2
+		return
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.RegToFieldAction at (0x180A44022) is corrupt (ConstantDefinition: Don't know how to get IL to load a Cpp2IL.Core.Analysis.ResultModels.UnknownGlobalAddr) and cannot be created as IL. Aborting here.
+
+

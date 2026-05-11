@@ -1,0 +1,596 @@
+Type: DataAnalyzerBuilding
+
+Method: System.Void DataAnalyzerBuilding::LoadDependentData():	Method Body (x86 ASM):
+		0x180ACB990 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACB992 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180ACB996 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180ACB998 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180ACB99B call 0000000180734690h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACB9A0 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9A2 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9A5 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180ACB9A9 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9AA jmp near ptr 0000000180ACBA10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACB9AF int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DataAnalyzerBuilding::LoadDependentData():
+		End of function at 0x180ACB9B0
+		Absolute End is at 0x180ACB9B0
+		Identified Jump Destination addresses:
+
+		0x180ACB990: Saves the content of rbx to the stack
+		0x180ACB998: Copies {'this' (function parameter, type DataAnalyzerBuilding)} from rcx into rbx
+		0x180ACB99B: [!] Calls managed method System.Void BaseBuilding::LoadDependentData() on instance {'this' (function parameter, type DataAnalyzerBuilding)}
+
+		0x180ACB9A2: Copies {'this' (function parameter, type DataAnalyzerBuilding)} from rbx into rcx
+		0x180ACB9AA: [!] Calls managed method System.Void DataAnalyzerBuilding::UpdateProgressBar() on instance {'this' (function parameter, type DataAnalyzerBuilding)}
+
+		0x180ACB9AA: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DataAnalyzerBuilding
+	System.Void LoadDependentData()
+
+		base.LoadDependentData()
+
+		this.UpdateProgressBar()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call System.Void BaseBuilding::LoadDependentData()
+	IL_0006: ldarg.0
+	IL_0007: call System.Void DataAnalyzerBuilding::UpdateProgressBar()
+	IL_000c: ret
+	
+
+Method: System.Void DataAnalyzerBuilding::InitComponents():	Method Body (x86 ASM):
+		0x180ACB9B0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9B2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180ACB9B6 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9B8 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9BB call 0000000180736900h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACB9C0 mov rcx,[rbx+580h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 1408 | None ||| N/A | N/A
+		0x180ACB9C7 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9CA je short 0000000180ACB9E7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACB9CC movd xmm1,dword ptr [rbx+588h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBX | 1416 | None ||| N/A | N/A
+		0x180ACB9D4 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9D7 cvtdq2ps xmm1,xmm1		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9DA xorps xmm2,xmm2		; DEBUG: {Register}/XMM2 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9DD add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180ACB9E1 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9E2 jmp near ptr 00000001805D54F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACB9E7 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACB9EC int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DataAnalyzerBuilding::InitComponents():
+		End of function at 0x180ACB9ED
+		Absolute End is at 0x180ACB9ED
+		Identified Jump Destination addresses:
+
+		0x180ACB9B0: Saves the content of rbx to the stack
+		0x180ACB9B6: Clears register rdx, yielding zero-local {'local1' (type System.Int32)}
+		0x180ACB9B8: Copies {'this' (function parameter, type DataAnalyzerBuilding)} from rcx into rbx
+		0x180ACB9BB: [!] Calls managed method System.Void BaseBuilding::InitComponents() on instance {'this' (function parameter, type DataAnalyzerBuilding)}
+
+		0x180ACB9C0: [!] Reads field progressBar from {'this' (function parameter, type DataAnalyzerBuilding)} and stores in a new local {'progressBar' (type HealthBar)}
+
+		0x180ACB9C7: [!] Compares {'progressBar' (type HealthBar)} and 0
+		0x180ACB9CA: Jumps to 0x180ACB9E7 (which throws a NRE) if progressBar equals 0. Implicitly present in managed code, so ignored here.
+		0x180ACB9DA: Clears register xmm2, yielding zero-local {'local4' (type System.Int32)}
+		0x180ACB9E2: [!] Calls managed method System.Void HealthBar::Setup(System.Single,System.Single) on instance {'progressBar' (type HealthBar)} with arguments [{'local1' (type System.Int32)}, {'local4' (type System.Int32)}]
+
+		0x180ACB9E2: [!] Returns from the function
+
+		0x180ACB9E7: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DataAnalyzerBuilding
+	System.Void InitComponents()
+		ulong local1 = 0
+
+		base.InitComponents()
+		HealthBar progressBar = this.progressBar
+		ulong local4 = 0
+
+		progressBar.Setup(local1, local4) //(Single maxHealth, Single currentHealth)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldc.i4.0
+	IL_0001: stloc.0
+	IL_0002: ldarg.0
+	IL_0003: call System.Void BaseBuilding::InitComponents()
+	IL_0008: ldarg.0
+	IL_0009: ldfld HealthBar DataAnalyzerBuilding::progressBar
+	IL_000e: stloc.1
+	IL_000f: ldc.i4.0
+	IL_0010: stloc.2
+	IL_0011: ldloc.1
+	IL_0012: ldloc.0
+	IL_0013: ldloc.2
+	IL_0014: call System.Void HealthBar::Setup(System.Single,System.Single)
+	IL_0019: ret
+	IL_001a: newobj System.Void System.NullReferenceException::.ctor()
+	IL_001f: throw
+	
+
+Method: System.Void DataAnalyzerBuilding::Start():	Method Body (x86 ASM):
+		0x180ACB9F0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9F2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180ACB9F6 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9F8 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180ACB9FB call 0000000180735740h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBA00 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA02 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA05 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180ACBA09 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA0A jmp near ptr 0000000180ACBA10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBA0F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DataAnalyzerBuilding::Start():
+		End of function at 0x180ACBA10
+		Absolute End is at 0x180ACBA10
+		Identified Jump Destination addresses:
+
+		0x180ACB9F0: Saves the content of rbx to the stack
+		0x180ACB9F8: Copies {'this' (function parameter, type DataAnalyzerBuilding)} from rcx into rbx
+		0x180ACB9FB: [!] Calls managed method System.Void BaseBuilding::Start() on instance {'this' (function parameter, type DataAnalyzerBuilding)}
+
+		0x180ACBA02: Copies {'this' (function parameter, type DataAnalyzerBuilding)} from rbx into rcx
+		0x180ACBA0A: [!] Calls managed method System.Void DataAnalyzerBuilding::UpdateProgressBar() on instance {'this' (function parameter, type DataAnalyzerBuilding)}
+
+		0x180ACBA0A: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DataAnalyzerBuilding
+	System.Void Start()
+
+		base.Start()
+
+		this.UpdateProgressBar()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call System.Void BaseBuilding::Start()
+	IL_0006: ldarg.0
+	IL_0007: call System.Void DataAnalyzerBuilding::UpdateProgressBar()
+	IL_000c: ret
+	
+
+Method: System.Void DataAnalyzerBuilding::UpdateProgressBar():	Method Body (x86 ASM):
+		0x180ACBA10 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA12 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180ACBA16 cmp byte ptr [18329C2C7h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495519431 | None ||| N/A | 0
+		0x180ACBA1D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA20 jne short 0000000180ACBA35h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBA22 lea rcx,[1831002D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493831888 | None ||| N/A | N/A
+		0x180ACBA29 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBA2E mov byte ptr [18329C2C7h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495519431 | None ||| N/A | 1
+		0x180ACBA35 mov rcx,[rbx+450h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 1104 | None ||| N/A | N/A
+		0x180ACBA3C test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA3F je short 0000000180ACBAABh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBA41 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA44 mov edx,207h		; DEBUG: {Register}/EDX {Immediate32}/None ||| None | 0 | None ||| N/A | 519
+		0x180ACBA49 call 00000001807BF110h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBA4E test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA51 je short 0000000180ACBAABh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBA53 mov rbx,[rbx+580h]		; DEBUG: {Register}/RBX {Memory}/None ||| RBX | 1408 | None ||| N/A | N/A
+		0x180ACBA5A test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA5D je short 0000000180ACBAABh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBA5F movd xmm1,dword ptr [rax+18h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x180ACBA64 movss xmm0,dword ptr [rbx+0A4h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 164 | None ||| N/A | N/A
+		0x180ACBA6C cvtdq2ps xmm1,xmm1		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA6F ucomiss xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA72 jp short 0000000180ACBA76h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBA74 je short 0000000180ACBAA5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBA76 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA79 movss dword ptr [rbx+0A4h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 164 | None ||| N/A | N/A
+		0x180ACBA81 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180ACBA83 movss dword ptr [rbx+0ACh],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 172 | None ||| N/A | N/A
+		0x180ACBA8B mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA8E call 00000001805D6080h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBA93 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA96 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180ACBA98 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBA9B add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180ACBA9F pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACBAA0 jmp near ptr 00000001805D6500h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBAA5 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180ACBAA9 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACBAAA ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACBAAB call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBAB0 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DataAnalyzerBuilding::UpdateProgressBar():
+		End of function at 0x180ACBAB1
+		Absolute End is at 0x180ACBAB1
+		Identified Jump Destination addresses:
+
+		0x180ACBA10: Saves the content of rbx to the stack
+		0x180ACBA16: Compares {Unknown Global at 0x18329C2C7, first ten bytes are [0 113 240 4 0 56 196 239 2 128], or as chars " qð 8Äï"} and 0
+		0x180ACBA1D: Copies {'this' (function parameter, type DataAnalyzerBuilding)} from rcx into rbx
+		0x180ACBA20: Jumps to 0x180ACBA35 if {Unknown Global at 0x18329C2C7, first ten bytes are [0 113 240 4 0 56 196 239 2 128], or as chars " qð 8Äï"} != 0
+
+		0x180ACBA22: Loads the global generic method reference for method System.Int32 System.Collections.Generic.List`1::get_Count() on type System.Collections.Generic.List`1<BaseBuilding> and stores the result in constant {'get_Count' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180ACBA29: Initializes runtime metadata value 
+		0x180ACBA35: [!] Reads field parentArea from {'this' (function parameter, type DataAnalyzerBuilding)} and stores in a new local {'parentArea' (type WorldArea)}
+
+		0x180ACBA3C: [!] Compares {'parentArea' (type WorldArea)} and 0
+		0x180ACBA3F: Jumps to 0x180ACBAAB (which throws a NRE) if parentArea equals 0. Implicitly present in managed code, so ignored here.
+		0x180ACBA44: [!] Writes the constant 0x207 into operand 519 (type UInt64) in register rdx
+		0x180ACBA49: [!] Calls managed method System.Collections.Generic.List`1<BaseBuilding> WorldArea::GetPlayerBuildings(System.Int32) on instance {'parentArea' (type WorldArea)} with arguments [519] and stores the result in {'playerBuildings' (type System.Collections.Generic.List`1<BaseBuilding>)}
+
+		0x180ACBA4E: [!] Compares {'playerBuildings' (type System.Collections.Generic.List`1<BaseBuilding>)} and 0
+		0x180ACBA51: Jumps to 0x180ACBAAB (which throws a NRE) if playerBuildings equals 0. Implicitly present in managed code, so ignored here.
+		0x180ACBA53: [!] Reads field progressBar from {'this' (function parameter, type DataAnalyzerBuilding)} and stores in a new local {'progressBar' (type HealthBar)}
+
+		0x180ACBA5A: [!] Compares {'progressBar' (type HealthBar)} and 0
+		0x180ACBA5D: Jumps to 0x180ACBAAB (which throws a NRE) if progressBar equals 0. Implicitly present in managed code, so ignored here.
+		0x180ACBA74: Jumps to 0x180ACBAA5 (which is an if statement's body) if progressBar equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180ACBA79: [!] Sets the field currentHealth (Type System.Single) on local {'progressBar' (type HealthBar)} to the value stored in 
+		0x180ACBA81: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x180ACBA83: [!] Sets the field currentHealthBG (Type System.Single) on local {'progressBar' (type HealthBar)} to the value stored in 
+		0x180ACBA8B: Copies {'progressBar' (type HealthBar)} from rbx into rcx
+		0x180ACBA8E: [!] Calls managed method System.Void HealthBar::UpdateSize(System.Boolean) on instance {'progressBar' (type HealthBar)} with arguments [True]
+
+		0x180ACBA96: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x180ACBA98: Copies {'progressBar' (type HealthBar)} from rbx into rcx
+		0x180ACBAA0: [!] Calls managed method System.Void HealthBar::UpdateWhiteBarSize(System.Boolean) on instance {'progressBar' (type HealthBar)} with arguments [True]
+
+		0x180ACBAA0: [!] Returns from the function
+
+		0x180ACBAAA: [!] Returns from the function
+
+		0x180ACBAAB: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DataAnalyzerBuilding
+	System.Void UpdateProgressBar()
+		WorldArea parentArea = this.parentArea
+
+		System.Collections.Generic.List`1<BaseBuilding> playerBuildings = parentArea.GetPlayerBuildings(519) //(Int32 buildingId)
+		HealthBar progressBar = this.progressBar
+
+		if (progressBar != 0)
+		    progressBar.currentHealth = 
+		    progressBar.currentHealthBG = 
+
+		    progressBar.UpdateSize(True) //(Boolean animate)
+
+		    progressBar.UpdateWhiteBarSize(True) //(Boolean animate)
+		    return
+		endif
+        
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.RegToFieldAction at (0x180ACBA79) is corrupt (Value read is null) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void DataAnalyzerBuilding::EnterDestroyed():	Method Body (x86 ASM):
+		0x180ACBAC0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACBAC2 sub rsp,70h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 112
+		0x180ACBAC6 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBAC9 cmp byte ptr [18329C2C8h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495519432 | None ||| N/A | 0
+		0x180ACBAD0 jne short 0000000180ACBB15h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBAD2 lea rcx,[1830FD818h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493820952 | None ||| N/A | N/A
+		0x180ACBAD9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBADE lea rcx,[1830FD800h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493820928 | None ||| N/A | N/A
+		0x180ACBAE5 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBAEA lea rcx,[1830FD7F0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493820912 | None ||| N/A | N/A
+		0x180ACBAF1 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBAF6 lea rcx,[18311CCD8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493949144 | None ||| N/A | N/A
+		0x180ACBAFD call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBB02 lea rcx,[1830FD7C8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493820872 | None ||| N/A | N/A
+		0x180ACBB09 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBB0E mov byte ptr [18329C2C8h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495519432 | None ||| N/A | 1
+		0x180ACBB15 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBB17 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBB1A call 0000000180752F70h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBB1F mov rcx,[rbx+450h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 1104 | None ||| N/A | N/A
+		0x180ACBB26 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBB29 je near ptr 0000000180ACBC70h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBB2F xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180ACBB32 mov edx,207h		; DEBUG: {Register}/EDX {Immediate32}/None ||| None | 0 | None ||| N/A | 519
+		0x180ACBB37 call 00000001807BF110h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBB3C mov r9,rax		; DEBUG: {Register}/R9 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBB3F test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBB42 je near ptr 0000000180ACBC70h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBB48 xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180ACBB4B movdqu [rsp+40h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 64 | None ||| N/A | N/A
+		0x180ACBB51 mov [rsp+38h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 56 | None ||| N/A | N/A
+		0x180ACBB56 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180ACBB5D je short 0000000180ACBBA1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBB5F lea r8,[rsp+38h]		; DEBUG: {Register}/R8 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180ACBB64 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180ACBB68 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180ACBB6F mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180ACBB72 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180ACBB76 lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x180ACBB7D lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x180ACBB81 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180ACBB85 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180ACBB88 nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180ACBB90 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180ACBB93 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBB96 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180ACBB9A lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x180ACBB9F jne short 0000000180ACBB90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBBA1 xor ebx,ebx		; DEBUG: {Register}/EBX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBBA3 mov [rsp+40h],ebx		; DEBUG: {Memory}/None {Register}/EBX ||| RSP | 64 | None ||| N/A | N/A
+		0x180ACBBA7 mov eax,[r9+1Ch]		; DEBUG: {Register}/EAX {Memory}/None ||| R9 | 28 | None ||| N/A | N/A
+		0x180ACBBAB mov [rsp+44h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 68 | None ||| N/A | N/A
+		0x180ACBBAF xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBBB1 mov [rsp+48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 72 | None ||| N/A | N/A
+		0x180ACBBB6 movups xmm0,[rsp+38h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180ACBBBB movups [rsp+50h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 80 | None ||| N/A | N/A
+		0x180ACBBC0 movsd xmm1,qword ptr [rsp+48h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x180ACBBC6 movsd qword ptr [rsp+60h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 96 | None ||| N/A | N/A
+		0x180ACBBCC mov [rsp+28h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 40 | None ||| N/A | N/A
+		0x180ACBBD1 lea rax,[rsp+50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x180ACBBD6 mov [rsp+30h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 48 | None ||| N/A | N/A
+		0x180ACBBDB nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180ACBBE0 mov rdx,[1830FD800h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493820928 | None ||| N/A | N/A
+		0x180ACBBE7 lea rcx,[rsp+50h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x180ACBBEC call 0000000181058730h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBBF1 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180ACBBF3 je short 0000000180ACBC52h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBBF5 mov rdx,[rsp+60h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x180ACBBFA test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBBFD je short 0000000180ACBC64h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBBFF mov r9,[rdx]		; DEBUG: {Register}/R9 {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180ACBC02 mov r8,[18311CCD8h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493949144 | None ||| N/A | N/A
+		0x180ACBC09 movzx eax,byte ptr [r8+130h]		; DEBUG: {Register}/EAX {Memory}/None ||| R8 | 304 | None ||| N/A | N/A
+		0x180ACBC11 cmp [r9+130h],al		; DEBUG: {Memory}/None {Register}/AL ||| R9 | 304 | None ||| N/A | N/A
+		0x180ACBC18 jb short 0000000180ACBC64h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBC1A movzx ecx,al		; DEBUG: {Register}/ECX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180ACBC1D mov rax,[r9+0C8h]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 200 | None ||| N/A | N/A
+		0x180ACBC24 cmp [rax+rcx*8-8],r8		; DEBUG: {Memory}/None {Register}/R8 ||| RAX | 18446744073709551608 | RCX ||| N/A | N/A
+		0x180ACBC29 jne short 0000000180ACBC64h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBC2B test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBC2E je short 0000000180ACBC64h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBC30 movzx ecx,byte ptr [r8+130h]		; DEBUG: {Register}/ECX {Memory}/None ||| R8 | 304 | None ||| N/A | N/A
+		0x180ACBC38 cmp [rax+rcx*8-8],r8		; DEBUG: {Memory}/None {Register}/R8 ||| RAX | 18446744073709551608 | RCX ||| N/A | N/A
+		0x180ACBC3D sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACBC40 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBC43 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180ACBC45 cmovne rcx,rdx		; DEBUG: {Register}/RCX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBC49 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBC4B call 0000000180AF75E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBC50 jmp short 0000000180ACBBE0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBC52 jmp short 0000000180ACBC5Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBC54 mov rcx,[rsp+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 40 | None ||| N/A | N/A
+		0x180ACBC59 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180ACBC5C jne short 0000000180ACBC6Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBC5E add rsp,70h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 112
+		0x180ACBC62 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACBC63 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACBC64 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBC69 nop		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACBC6A call 00000001802C4E80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180ACBC6F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DataAnalyzerBuilding::EnterDestroyed():
+		End of function at 0x180ACBC70
+		Absolute End is at 0x180ACBC70
+		Identified Jump Destination addresses:
+			0x180ACBC5E
+		0x180ACBAC0: Saves the content of rbx to the stack
+		0x180ACBAC6: Copies {'this' (function parameter, type DataAnalyzerBuilding)} from rcx into rbx
+		0x180ACBAC9: Compares {Unknown Global at 0x18329C2C8, first ten bytes are [113 240 4 0 56 196 239 2 128 240], or as chars "qð 8Äïð"} and 0
+		0x180ACBAD0: Jumps to 0x180ACBB15 if {Unknown Global at 0x18329C2C8, first ten bytes are [113 240 4 0 56 196 239 2 128 240], or as chars "qð 8Äïð"} != 0
+
+		0x180ACBAD2: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1/Enumerator::Dispose() on type System.Collections.Generic.List`1/Enumerator<BaseBuilding> and stores the result in constant {'Dispose' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180ACBAD9: Initializes runtime metadata value 
+		0x180ACBADE: Loads the global generic method reference for method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on type System.Collections.Generic.List`1/Enumerator<BaseBuilding> and stores the result in constant {'MoveNext' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180ACBAE5: Initializes runtime metadata value 
+		0x180ACBAEA: Loads the global generic method reference for method T System.Collections.Generic.List`1/Enumerator::get_Current() on type System.Collections.Generic.List`1/Enumerator<BaseBuilding> and stores the result in constant {'get_Current' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180ACBAF1: Initializes runtime metadata value 
+		0x180ACBAF6: Loads the type definition for managed type ExtractorTowerBuilding as a constant "ExtractorTowerBuilding" in rcx
+		0x180ACBAFD: Initializes runtime metadata value ExtractorTowerBuilding
+		0x180ACBB02: Loads the global generic method reference for method System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1::GetEnumerator() on type System.Collections.Generic.List`1<BaseBuilding> and stores the result in constant {'GetEnumerator' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180ACBB09: Initializes runtime metadata value 
+		0x180ACBB17: Copies {'this' (function parameter, type DataAnalyzerBuilding)} from rbx into rcx
+		0x180ACBB1A: [!] Calls managed method System.Void BaseBuilding::EnterDestroyed() on instance {'this' (function parameter, type DataAnalyzerBuilding)}
+
+		0x180ACBB1F: [!] Reads field parentArea from {'this' (function parameter, type DataAnalyzerBuilding)} and stores in a new local {'parentArea' (type WorldArea)}
+
+		0x180ACBB26: [!] Compares {'parentArea' (type WorldArea)} and 0
+		0x180ACBB29: Jumps to 0x180ACBC70 (which throws a NRE) if parentArea equals 0. Implicitly present in managed code, so ignored here.
+		0x180ACBB32: [!] Writes the constant 0x207 into operand 519 (type UInt64) in register rdx
+		0x180ACBB37: [!] Calls managed method System.Collections.Generic.List`1<BaseBuilding> WorldArea::GetPlayerBuildings(System.Int32) on instance {'parentArea' (type WorldArea)} with arguments [519] and stores the result in {'playerBuildings' (type System.Collections.Generic.List`1<BaseBuilding>)}
+
+		0x180ACBB3C: Copies {'playerBuildings' (type System.Collections.Generic.List`1<BaseBuilding>)} from rax into r9
+		0x180ACBB3F: [!] Compares {'playerBuildings' (type System.Collections.Generic.List`1<BaseBuilding>)} and 0
+		0x180ACBB42: Jumps to 0x180ACBC70 (which throws a NRE) if playerBuildings equals 0. Implicitly present in managed code, so ignored here.
+		0x180ACBB51: Moves playerBuildings (type System.Collections.Generic.List`1<BaseBuilding>) from register rax to the stack at offset 56 (0x38)
+		0x180ACBB56: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180ACBB5D: Jumps to 0x180ACBBA1 if constant11 equals 0
+
+		0x180ACBB5F: Loads a pointer to stack offset 0x38 into register r8 as new constant constant13
+		0x180ACBB6F: Copies {'constant13' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r8 into rax
+		0x180ACBB76: Loads string "¡
+m" into register rcx as constant {'constant14' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180ACBB93: Copies {'constant13' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rax into rcx
+		0x180ACBB9F: Jumps to 0x180ACBB90 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x180ACBBA1: Clears register rbx, yielding zero-local {'local6' (type System.Int32)}
+		0x180ACBBA3: Moves local6 (type System.Int32) from register rbx to the stack at offset 64 (0x40)
+		0x180ACBBA7: [!] Reads field _version from {'playerBuildings' (type System.Collections.Generic.List`1<BaseBuilding>)} and stores in a new local {'_version' (type System.Int32)}
+
+		0x180ACBBAB: Moves _version (type System.Int32) from register rax to the stack at offset 68 (0x44)
+		0x180ACBBAF: Clears register rax, yielding zero-local {'local8' (type System.Int32)}
+		0x180ACBBB1: Moves local8 (type System.Int32) from register rax to the stack at offset 72 (0x48)
+		0x180ACBBB6: Reads local {'playerBuildings' (type System.Collections.Generic.List`1<BaseBuilding>)} from stack offset 56 (0x38) into register xmm0
+		0x180ACBBBB: Moves playerBuildings (type System.Collections.Generic.List`1<BaseBuilding>) from register xmm0 to the stack at offset 80 (0x50)
+		0x180ACBBCC: Moves local6 (type System.Int32) from register rbx to the stack at offset 40 (0x28)
+		0x180ACBBD1: Loads a pointer to stack offset 0x50 into register rax as new constant constant15
+		0x180ACBBD6: Moves constant15 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register rax to the stack at offset 48 (0x30) as a new local local9
+
+		Potential Loop Start (0x180ACBBE0):
+		0x180ACBBE0: Loads the global generic method reference for method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on type System.Collections.Generic.List`1/Enumerator<BaseBuilding> and stores the result in constant {'MoveNext' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180ACBBE7: Loads a pointer to stack offset 0x50 into register rcx as new constant constant17
+		0x180ACBBEC: [!] Calls managed method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on instance  and stores the result in {'boolean' (type System.Boolean)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180ACBBF1: [!] Compares {'boolean' (type System.Boolean)} and False
+		0x180ACBBF3: Jumps to 0x180ACBC52 (which is an if statement's body) if boolean equals False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180ACBBF5: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register rdx as new constant constant19
+		0x180ACBBFA: [!] Compares {'constant19' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and 0
+		0x180ACBBFD: Jumps to 0x180ACBC64 (which throws a NRE) if constant19 equals 0. Implicitly present in managed code, so ignored here.
+		0x180ACBC02: Loads the type definition for managed type ExtractorTowerBuilding as a constant "ExtractorTowerBuilding" in r8
+		0x180ACBC11: [!] Compares  and {'boolean' (type System.Boolean)}
+		0x180ACBC1A: Copies {'boolean' (type System.Boolean)} from rax into rcx
+		0x180ACBC1D: [!] Reads field  from {'playerBuildings' (type System.Collections.Generic.List`1<BaseBuilding>)} and stores in a new local 
+
+		0x180ACBC24: [!] Compares  and {'ExtractorTowerBuilding' (constant value of type Mono.Cecil.TypeReference)}
+		0x180ACBC29: Jumps to 0x180ACBC64 (which throws a NRE) if  != {'ExtractorTowerBuilding' (constant value of type Mono.Cecil.TypeReference)}. Implicitly present in managed code, so ignored here.
+		0x180ACBC2B: [!] Compares {'constant19' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and 0
+		0x180ACBC2E: Jumps to 0x180ACBC64 (which throws a NRE) if constant19 equals 0. Implicitly present in managed code, so ignored here.
+		0x180ACBC38: [!] Compares  and {'ExtractorTowerBuilding' (constant value of type Mono.Cecil.TypeReference)}
+		0x180ACBC3D: [!] Sets the boolean {'local11' (type System.Boolean)} in rax to true if  is equal to ExtractorTowerBuilding, otherwise false.
+		0x180ACBC40: Copies {'local6' (type System.Int32)} from rbx into rcx
+		0x180ACBC43: [!] Compares {'local11' (type System.Boolean)} and False
+		0x180ACBC45: [!] Copies {'constant19' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rdx into rcx based on previous comparison
+		0x180ACBC4B: [!] Calls managed method System.Void ExtractorTowerBuilding::StopExtracting() on instance 
+
+		0x180ACBC50: Jumps to 0x180ACBBE0 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x180ACBC52: Jumps to 0x180ACBC5E (which is an function-local jump destination)
+
+		0x180ACBC54: Reads local {'local6' (type System.Int32)} from stack offset 40 (0x28) into register rcx
+		0x180ACBC59: [!] Compares {'local6' (type System.Int32)} and 0
+		0x180ACBC5C: Jumps to 0x180ACBC6A if {'local6' (type System.Int32)} != 0 ;  - This is probably a goto, jumping to 0x180ACBC6A which is after end of current block @ 0x180ACBC52 (started at 0x180ACBBF5)
+
+
+		Jump Destination (0x180ACBC5E):
+		0x180ACBC63: [!] Returns from the function
+
+		0x180ACBC64: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DataAnalyzerBuilding
+	System.Void EnterDestroyed()
+
+		base.EnterDestroyed()
+		WorldArea parentArea = this.parentArea
+
+		System.Collections.Generic.List`1<BaseBuilding> playerBuildings = parentArea.GetPlayerBuildings(519) //(Int32 buildingId)
+		ulong local6 = 0
+		System.Int32 _version = playerBuildings._version
+		ulong local8 = 0
+
+		System.Boolean boolean = .MoveNext()
+
+		if (boolean != False)
+		      = playerBuildings.
+		    System.Boolean local11 =  == ExtractorTowerBuilding
+
+		    .StopExtracting()
+		endif
+        
+
+		if (local6 != 0)
+            goto INSN_180ACBC6A
+        endif
+		return
+		throw new System.NullReferenceException()
+
+		INSN_180ACBC6A:
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionAction at (0x180ACBBEC) is corrupt (Method is non-static but don't have an instance) and cannot be created as IL. Aborting here.
+
+
+Method: System.Int32 DataAnalyzerBuilding::get_NumberOfTotalTowers():	Method Body (x86 ASM):
+		0x180ACBC80 mov eax,[rcx+588h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 1416 | None ||| N/A | N/A
+		0x180ACBC86 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180ACBC87 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Int32 DataAnalyzerBuilding::get_NumberOfTotalTowers():
+		End of function at 0x180ACBC88
+		Absolute End is at 0x180ACBC88
+		Identified Jump Destination addresses:
+
+		0x180ACBC80: [!] Reads field numberOfTotalTowers from {'this' (function parameter, type DataAnalyzerBuilding)} and stores in a new local {'numberOfTotalTowers' (type System.Int32)}
+
+		0x180ACBC86: [!] Returns {'numberOfTotalTowers' (type System.Int32)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DataAnalyzerBuilding
+	System.Int32 get_NumberOfTotalTowers()
+		System.Int32 numberOfTotalTowers = this.numberOfTotalTowers
+		return numberOfTotalTowers
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Int32 DataAnalyzerBuilding::numberOfTotalTowers
+	IL_0006: ret
+	
+
+Method: System.Void DataAnalyzerBuilding::.ctor():	Method Body (x86 ASM):
+		0x18059F810 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18059F812 jmp near ptr 0000000180756980h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18059F817 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DataAnalyzerBuilding::.ctor():
+		End of function at 0x18059F818
+		Absolute End is at 0x18059F818
+		Identified Jump Destination addresses:
+
+		0x18059F812: [!] Calls managed method System.Void BaseBuilding::.ctor() on instance {'this' (function parameter, type DataAnalyzerBuilding)}
+
+		0x18059F812: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DataAnalyzerBuilding
+	System.Void .ctor()
+
+		base..ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call System.Void BaseBuilding::.ctor()
+	IL_0006: ret
+	
+

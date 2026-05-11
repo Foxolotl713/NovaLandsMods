@@ -1,0 +1,409 @@
+Type: Steamworks.SteamHTTP:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Method: CreateHTTPRequest:
+		Accessibility: Public
+		Return Type: Steamworks.HTTPRequestHandle
+		File Offset 0x00B848C0
+		Ram Offset 0x180b85ac0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eHTTPRequestMethod
+			Type: Steamworks.EHTTPMethod
+			Default Value: 
+		Parameter 1:
+			Name: pchAbsoluteURL
+			Type: System.String
+			Default Value: 
+	Method: SetHTTPRequestContextValue:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B84A00
+		Ram Offset 0x180b85c00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: ulContextValue
+			Type: System.UInt64
+			Default Value: 
+	Method: SetHTTPRequestNetworkActivityTimeout:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B84A60
+		Ram Offset 0x180b85c60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: unTimeoutSeconds
+			Type: System.UInt32
+			Default Value: 
+	Method: SetHTTPRequestHeaderValue:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B84AC0
+		Ram Offset 0x180b85cc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: pchHeaderName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: pchHeaderValue
+			Type: System.String
+			Default Value: 
+	Method: SetHTTPRequestGetOrPostParameter:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B84C80
+		Ram Offset 0x180b85e80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: pchParamName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: pchParamValue
+			Type: System.String
+			Default Value: 
+	Method: SendHTTPRequest:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B84E40
+		Ram Offset 0x180b86040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: pCallHandle
+			Type: Steamworks.SteamAPICall_t
+			Default Value: 
+	Method: SendHTTPRequestAndStreamResponse:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B84EA0
+		Ram Offset 0x180b860a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: pCallHandle
+			Type: Steamworks.SteamAPICall_t
+			Default Value: 
+	Method: DeferHTTPRequest:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B84F00
+		Ram Offset 0x180b86100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+	Method: PrioritizeHTTPRequest:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B84F50
+		Ram Offset 0x180b86150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+	Method: GetHTTPResponseHeaderSize:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B84FA0
+		Ram Offset 0x180b861a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: pchHeaderName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: unResponseHeaderSize
+			Type: System.UInt32
+			Default Value: 
+	Method: GetHTTPResponseHeaderValue:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B850D0
+		Ram Offset 0x180b862d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: pchHeaderName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: pHeaderValueBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 3:
+			Name: unBufferSize
+			Type: System.UInt32
+			Default Value: 
+	Method: GetHTTPResponseBodySize:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B85210
+		Ram Offset 0x180b86410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: unBodySize
+			Type: System.UInt32
+			Default Value: 
+	Method: GetHTTPResponseBodyData:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B85270
+		Ram Offset 0x180b86470
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: pBodyDataBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: unBufferSize
+			Type: System.UInt32
+			Default Value: 
+	Method: GetHTTPStreamingResponseBodyData:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B852F0
+		Ram Offset 0x180b864f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: cOffset
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: pBodyDataBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 3:
+			Name: unBufferSize
+			Type: System.UInt32
+			Default Value: 
+	Method: ReleaseHTTPRequest:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B85380
+		Ram Offset 0x180b86580
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+	Method: GetHTTPDownloadProgressPct:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B853D0
+		Ram Offset 0x180b865d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: pflPercentOut
+			Type: System.Single
+			Default Value: 
+	Method: SetHTTPRequestRawPostBody:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B85430
+		Ram Offset 0x180b86630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: pchContentType
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: pubBody
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 3:
+			Name: unBodyLen
+			Type: System.UInt32
+			Default Value: 
+	Method: CreateCookieContainer:
+		Accessibility: Public
+		Return Type: Steamworks.HTTPCookieContainerHandle
+		File Offset 0x00B85570
+		Ram Offset 0x180b86770
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bAllowResponsesToModify
+			Type: System.Boolean
+			Default Value: 
+	Method: ReleaseCookieContainer:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B85600
+		Ram Offset 0x180b86800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hCookieContainer
+			Type: Steamworks.HTTPCookieContainerHandle
+			Default Value: 
+	Method: SetCookie:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B85650
+		Ram Offset 0x180b86850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hCookieContainer
+			Type: Steamworks.HTTPCookieContainerHandle
+			Default Value: 
+		Parameter 1:
+			Name: pchHost
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: pchUrl
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: pchCookie
+			Type: System.String
+			Default Value: 
+	Method: SetHTTPRequestCookieContainer:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B858A0
+		Ram Offset 0x180b86aa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: hCookieContainer
+			Type: Steamworks.HTTPCookieContainerHandle
+			Default Value: 
+	Method: SetHTTPRequestUserAgentInfo:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B85900
+		Ram Offset 0x180b86b00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: pchUserAgentInfo
+			Type: System.String
+			Default Value: 
+	Method: SetHTTPRequestRequiresVerifiedCertificate:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B85A20
+		Ram Offset 0x180b86c20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: bRequireVerifiedCertificate
+			Type: System.Boolean
+			Default Value: 
+	Method: SetHTTPRequestAbsoluteTimeoutMS:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B85A80
+		Ram Offset 0x180b86c80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: unMilliseconds
+			Type: System.UInt32
+			Default Value: 
+	Method: GetHTTPRequestWasTimedOut:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B85AE0
+		Ram Offset 0x180b86ce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hRequest
+			Type: Steamworks.HTTPRequestHandle
+			Default Value: 
+		Parameter 1:
+			Name: pbWasTimedOut
+			Type: System.Boolean
+			Default Value: 

@@ -1,0 +1,3714 @@
+Type: Rewired.UI.ControlMapper.ControlMapper:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Nested Types:
+		Rewired.UI.ControlMapper.ControlMapper/GUIElement
+		Rewired.UI.ControlMapper.ControlMapper/GUIButton
+		Rewired.UI.ControlMapper.ControlMapper/GUIInputField
+		Rewired.UI.ControlMapper.ControlMapper/GUIToggle
+		Rewired.UI.ControlMapper.ControlMapper/GUILabel
+		Rewired.UI.ControlMapper.ControlMapper/MappingSet
+		Rewired.UI.ControlMapper.ControlMapper/InputBehaviorSettings
+		Rewired.UI.ControlMapper.ControlMapper/Prefabs
+		Rewired.UI.ControlMapper.ControlMapper/References
+		Rewired.UI.ControlMapper.ControlMapper/InputActionSet
+		Rewired.UI.ControlMapper.ControlMapper/InputMapping
+		Rewired.UI.ControlMapper.ControlMapper/AxisCalibrator
+		Rewired.UI.ControlMapper.ControlMapper/IndexedDictionary`2
+		Rewired.UI.ControlMapper.ControlMapper/LayoutElementSizeType
+		Rewired.UI.ControlMapper.ControlMapper/WindowType
+		Rewired.UI.ControlMapper.ControlMapper/InputGrid
+		Rewired.UI.ControlMapper.ControlMapper/InputGridEntryList
+		Rewired.UI.ControlMapper.ControlMapper/WindowManager
+		Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass343_0
+		Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass344_0
+		Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass351_0
+		Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass352_0
+		Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass405_0
+		Rewired.UI.ControlMapper.ControlMapper/<>c__DisplayClass458_0
+		Rewired.UI.ControlMapper.ControlMapper/<ElementAssignmentConflicts>d__413
+
+	Static Field: versionMajor
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Static Field: buttonIdentifier_restoreDefaults
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: RestoreDefaults
+
+	Static Field: buttonIdentifier_done
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: Done
+
+	Static Field: buttonIdentifier_assignedControllerSelection
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: AssignedControllerSelection
+
+	Static Field: buttonIdentifier_mapCategorySelection
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: MapCategorySelection
+
+	Static Field: buttonIdentifier_editInputBehaviors
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: EditInputBehaviors
+
+	Static Field: buttonIdentifier_calibrateController
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: CalibrateController
+
+	Static Field: Instance
+		Type: Rewired.UI.ControlMapper.ControlMapper
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: buttonIdentifier_removeController
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: RemoveController
+
+	Static Field: versionMinor
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Static Field: usesTMPro
+		Type: System.Boolean
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: True
+
+	Static Field: buttonIdentifier_assignController
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: AssignController
+
+	Static Field: buttonIdentifier_playerSelection
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: PlayerSelection
+
+	Static Field: blockInputOnFocusTimeout
+		Type: System.Single
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 0,1
+
+	Field: _rewiredInputManager
+		Type: Rewired.InputManager
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _dontDestroyOnLoad
+		Type: System.Boolean
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _openOnStart
+		Type: System.Boolean
+		Offset in Defining Type: 0x29
+		Has Default: False
+
+	Field: _keyboardMapDefaultLayout
+		Type: System.Int32
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Field: _mouseMapDefaultLayout
+		Type: System.Int32
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _joystickMapDefaultLayout
+		Type: System.Int32
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Field: _mappingSets
+		Type: Rewired.UI.ControlMapper.ControlMapper/MappingSet[]
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _showPlayers
+		Type: System.Boolean
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: _showControllers
+		Type: System.Boolean
+		Offset in Defining Type: 0x41
+		Has Default: False
+
+	Field: _showKeyboard
+		Type: System.Boolean
+		Offset in Defining Type: 0x42
+		Has Default: False
+
+	Field: _showMouse
+		Type: System.Boolean
+		Offset in Defining Type: 0x43
+		Has Default: False
+
+	Field: _maxControllersPerPlayer
+		Type: System.Int32
+		Offset in Defining Type: 0x44
+		Has Default: False
+
+	Field: _showActionCategoryLabels
+		Type: System.Boolean
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: _keyboardInputFieldCount
+		Type: System.Int32
+		Offset in Defining Type: 0x4C
+		Has Default: False
+
+	Field: _mouseInputFieldCount
+		Type: System.Int32
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: _controllerInputFieldCount
+		Type: System.Int32
+		Offset in Defining Type: 0x54
+		Has Default: False
+
+	Field: _showFullAxisInputFields
+		Type: System.Boolean
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: _showSplitAxisInputFields
+		Type: System.Boolean
+		Offset in Defining Type: 0x59
+		Has Default: False
+
+	Field: _allowElementAssignmentConflicts
+		Type: System.Boolean
+		Offset in Defining Type: 0x5A
+		Has Default: False
+
+	Field: _allowElementAssignmentSwap
+		Type: System.Boolean
+		Offset in Defining Type: 0x5B
+		Has Default: False
+
+	Field: _actionLabelWidth
+		Type: System.Int32
+		Offset in Defining Type: 0x5C
+		Has Default: False
+
+	Field: _keyboardColMaxWidth
+		Type: System.Int32
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: _mouseColMaxWidth
+		Type: System.Int32
+		Offset in Defining Type: 0x64
+		Has Default: False
+
+	Field: _controllerColMaxWidth
+		Type: System.Int32
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: _inputRowHeight
+		Type: System.Int32
+		Offset in Defining Type: 0x6C
+		Has Default: False
+
+	Field: _inputRowPadding
+		Type: UnityEngine.RectOffset
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: _inputRowFieldSpacing
+		Type: System.Int32
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: _inputColumnSpacing
+		Type: System.Int32
+		Offset in Defining Type: 0x7C
+		Has Default: False
+
+	Field: _inputRowCategorySpacing
+		Type: System.Int32
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: _invertToggleWidth
+		Type: System.Int32
+		Offset in Defining Type: 0x84
+		Has Default: False
+
+	Field: _defaultWindowWidth
+		Type: System.Int32
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: _defaultWindowHeight
+		Type: System.Int32
+		Offset in Defining Type: 0x8C
+		Has Default: False
+
+	Field: _controllerAssignmentTimeout
+		Type: System.Single
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: _preInputAssignmentTimeout
+		Type: System.Single
+		Offset in Defining Type: 0x94
+		Has Default: False
+
+	Field: _inputAssignmentTimeout
+		Type: System.Single
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: _axisCalibrationTimeout
+		Type: System.Single
+		Offset in Defining Type: 0x9C
+		Has Default: False
+
+	Field: _ignoreMouseXAxisAssignment
+		Type: System.Boolean
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: _ignoreMouseYAxisAssignment
+		Type: System.Boolean
+		Offset in Defining Type: 0xA1
+		Has Default: False
+
+	Field: _screenToggleAction
+		Type: System.Int32
+		Offset in Defining Type: 0xA4
+		Has Default: False
+
+	Field: _screenOpenAction
+		Type: System.Int32
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: _screenCloseAction
+		Type: System.Int32
+		Offset in Defining Type: 0xAC
+		Has Default: False
+
+	Field: _universalCancelAction
+		Type: System.Int32
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: _universalCancelClosesScreen
+		Type: System.Boolean
+		Offset in Defining Type: 0xB4
+		Has Default: False
+
+	Field: _showInputBehaviorSettings
+		Type: System.Boolean
+		Offset in Defining Type: 0xB5
+		Has Default: False
+
+	Field: _inputBehaviorSettings
+		Type: Rewired.UI.ControlMapper.ControlMapper/InputBehaviorSettings[]
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: _useThemeSettings
+		Type: System.Boolean
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: _themeSettings
+		Type: Rewired.UI.ControlMapper.ThemeSettings
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: _language
+		Type: Rewired.UI.ControlMapper.LanguageDataBase
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: prefabs
+		Type: Rewired.UI.ControlMapper.ControlMapper/Prefabs
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: references
+		Type: Rewired.UI.ControlMapper.ControlMapper/References
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: _showPlayersGroupLabel
+		Type: System.Boolean
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: _showControllerGroupLabel
+		Type: System.Boolean
+		Offset in Defining Type: 0xE9
+		Has Default: False
+
+	Field: _showAssignedControllersGroupLabel
+		Type: System.Boolean
+		Offset in Defining Type: 0xEA
+		Has Default: False
+
+	Field: _showSettingsGroupLabel
+		Type: System.Boolean
+		Offset in Defining Type: 0xEB
+		Has Default: False
+
+	Field: _showMapCategoriesGroupLabel
+		Type: System.Boolean
+		Offset in Defining Type: 0xEC
+		Has Default: False
+
+	Field: _showControllerNameLabel
+		Type: System.Boolean
+		Offset in Defining Type: 0xED
+		Has Default: False
+
+	Field: _showAssignedControllers
+		Type: System.Boolean
+		Offset in Defining Type: 0xEE
+		Has Default: False
+
+	Field: _ScreenClosedEvent
+		Type: System.Action
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: _ScreenOpenedEvent
+		Type: System.Action
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: _PopupWindowOpenedEvent
+		Type: System.Action
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: _PopupWindowClosedEvent
+		Type: System.Action
+		Offset in Defining Type: 0x108
+		Has Default: False
+
+	Field: _InputPollingStartedEvent
+		Type: System.Action
+		Offset in Defining Type: 0x110
+		Has Default: False
+
+	Field: _InputPollingEndedEvent
+		Type: System.Action
+		Offset in Defining Type: 0x118
+		Has Default: False
+
+	Field: _onScreenClosed
+		Type: UnityEngine.Events.UnityEvent
+		Offset in Defining Type: 0x120
+		Has Default: False
+
+	Field: _onScreenOpened
+		Type: UnityEngine.Events.UnityEvent
+		Offset in Defining Type: 0x128
+		Has Default: False
+
+	Field: _onPopupWindowClosed
+		Type: UnityEngine.Events.UnityEvent
+		Offset in Defining Type: 0x130
+		Has Default: False
+
+	Field: _onPopupWindowOpened
+		Type: UnityEngine.Events.UnityEvent
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: _onInputPollingStarted
+		Type: UnityEngine.Events.UnityEvent
+		Offset in Defining Type: 0x140
+		Has Default: False
+
+	Field: _onInputPollingEnded
+		Type: UnityEngine.Events.UnityEvent
+		Offset in Defining Type: 0x148
+		Has Default: False
+
+	Field: initialized
+		Type: System.Boolean
+		Offset in Defining Type: 0x150
+		Has Default: False
+
+	Field: playerCount
+		Type: System.Int32
+		Offset in Defining Type: 0x154
+		Has Default: False
+
+	Field: inputGrid
+		Type: Rewired.UI.ControlMapper.ControlMapper/InputGrid
+		Offset in Defining Type: 0x158
+		Has Default: False
+
+	Field: windowManager
+		Type: Rewired.UI.ControlMapper.ControlMapper/WindowManager
+		Offset in Defining Type: 0x160
+		Has Default: False
+
+	Field: currentPlayerId
+		Type: System.Int32
+		Offset in Defining Type: 0x168
+		Has Default: False
+
+	Field: currentMapCategoryId
+		Type: System.Int32
+		Offset in Defining Type: 0x16C
+		Has Default: False
+
+	Field: playerButtons
+		Type: System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/GUIButton>
+		Offset in Defining Type: 0x170
+		Has Default: False
+
+	Field: mapCategoryButtons
+		Type: System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/GUIButton>
+		Offset in Defining Type: 0x178
+		Has Default: False
+
+	Field: assignedControllerButtons
+		Type: System.Collections.Generic.List`1<Rewired.UI.ControlMapper.ControlMapper/GUIButton>
+		Offset in Defining Type: 0x180
+		Has Default: False
+
+	Field: assignedControllerButtonsPlaceholder
+		Type: Rewired.UI.ControlMapper.ControlMapper/GUIButton
+		Offset in Defining Type: 0x188
+		Has Default: False
+
+	Field: miscInstantiatedObjects
+		Type: System.Collections.Generic.List`1<UnityEngine.GameObject>
+		Offset in Defining Type: 0x190
+		Has Default: False
+
+	Field: canvas
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x198
+		Has Default: False
+
+	Field: lastUISelection
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x1A0
+		Has Default: False
+
+	Field: currentJoystickId
+		Type: System.Int32
+		Offset in Defining Type: 0x1A8
+		Has Default: False
+
+	Field: blockInputOnFocusEndTime
+		Type: System.Single
+		Offset in Defining Type: 0x1AC
+		Has Default: False
+
+	Field: isPollingForInput
+		Type: System.Boolean
+		Offset in Defining Type: 0x1B0
+		Has Default: False
+
+	Field: pendingInputMapping
+		Type: Rewired.UI.ControlMapper.ControlMapper/InputMapping
+		Offset in Defining Type: 0x1B8
+		Has Default: False
+
+	Field: pendingAxisCalibration
+		Type: Rewired.UI.ControlMapper.ControlMapper/AxisCalibrator
+		Offset in Defining Type: 0x1C0
+		Has Default: False
+
+	Field: inputFieldActivatedDelegate
+		Type: System.Action`1<Rewired.UI.ControlMapper.InputFieldInfo>
+		Offset in Defining Type: 0x1C8
+		Has Default: False
+
+	Field: inputFieldInvertToggleStateChangedDelegate
+		Type: System.Action`2<Rewired.UI.ControlMapper.ToggleInfo,System.Boolean>
+		Offset in Defining Type: 0x1D0
+		Has Default: False
+
+	Field: _restoreDefaultsDelegate
+		Type: System.Action
+		Offset in Defining Type: 0x1D8
+		Has Default: False
+
+	Method: add_ScreenClosedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097C260
+		Ram Offset 0x18097d460
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: remove_ScreenClosedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097C360
+		Ram Offset 0x18097d560
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: add_ScreenOpenedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097C460
+		Ram Offset 0x18097d660
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: remove_ScreenOpenedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097C560
+		Ram Offset 0x18097d760
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: add_PopupWindowClosedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097C660
+		Ram Offset 0x18097d860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: remove_PopupWindowClosedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097C760
+		Ram Offset 0x18097d960
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: add_PopupWindowOpenedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097C860
+		Ram Offset 0x18097da60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: remove_PopupWindowOpenedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097C960
+		Ram Offset 0x18097db60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: add_InputPollingStartedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097CA60
+		Ram Offset 0x18097dc60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: remove_InputPollingStartedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097CB60
+		Ram Offset 0x18097dd60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: add_InputPollingEndedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097CC60
+		Ram Offset 0x18097de60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: remove_InputPollingEndedEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097CD60
+		Ram Offset 0x18097df60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: add_onScreenClosed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097CE60
+		Ram Offset 0x18097e060
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: remove_onScreenClosed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097CE90
+		Ram Offset 0x18097e090
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: add_onScreenOpened:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097CEF0
+		Ram Offset 0x18097e0f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: remove_onScreenOpened:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097CF20
+		Ram Offset 0x18097e120
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: add_onPopupWindowClosed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097CF80
+		Ram Offset 0x18097e180
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: remove_onPopupWindowClosed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097CFB0
+		Ram Offset 0x18097e1b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: add_onPopupWindowOpened:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D010
+		Ram Offset 0x18097e210
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: remove_onPopupWindowOpened:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D040
+		Ram Offset 0x18097e240
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: add_onInputPollingStarted:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D0A0
+		Ram Offset 0x18097e2a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: remove_onInputPollingStarted:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D0D0
+		Ram Offset 0x18097e2d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: add_onInputPollingEnded:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D130
+		Ram Offset 0x18097e330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: remove_onInputPollingEnded:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D160
+		Ram Offset 0x18097e360
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Events.UnityAction
+			Default Value: 
+	Method: get_rewiredInputManager:
+		Accessibility: Public
+		Return Type: Rewired.InputManager
+		File Offset 0x00395870
+		Ram Offset 0x180396a70
+		Virtual Method Slot: 65535
+
+	Method: set_rewiredInputManager:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D1C0
+		Ram Offset 0x18097e3c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: Rewired.InputManager
+			Default Value: 
+	Method: get_dontDestroyOnLoad:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003A0750
+		Ram Offset 0x1803a1950
+		Virtual Method Slot: 65535
+
+	Method: set_dontDestroyOnLoad:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D270
+		Ram Offset 0x18097e470
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_keyboardMapDefaultLayout:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00477B00
+		Ram Offset 0x180478d00
+		Virtual Method Slot: 65535
+
+	Method: set_keyboardMapDefaultLayout:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D3B0
+		Ram Offset 0x18097e5b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_mouseMapDefaultLayout:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x005ED0C0
+		Ram Offset 0x1805ee2c0
+		Virtual Method Slot: 65535
+
+	Method: set_mouseMapDefaultLayout:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D410
+		Ram Offset 0x18097e610
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_joystickMapDefaultLayout:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00773C00
+		Ram Offset 0x180774e00
+		Virtual Method Slot: 65535
+
+	Method: set_joystickMapDefaultLayout:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D470
+		Ram Offset 0x18097e670
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_showPlayers:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097D4D0
+		Ram Offset 0x18097e6d0
+		Virtual Method Slot: 65535
+
+	Method: set_showPlayers:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D540
+		Ram Offset 0x18097e740
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_showControllers:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097D5A0
+		Ram Offset 0x18097e7a0
+		Virtual Method Slot: 65535
+
+	Method: set_showControllers:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D5B0
+		Ram Offset 0x18097e7b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_showKeyboard:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097D610
+		Ram Offset 0x18097e810
+		Virtual Method Slot: 65535
+
+	Method: set_showKeyboard:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D620
+		Ram Offset 0x18097e820
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_showMouse:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097D680
+		Ram Offset 0x18097e880
+		Virtual Method Slot: 65535
+
+	Method: set_showMouse:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D690
+		Ram Offset 0x18097e890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_maxControllersPerPlayer:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0040E2D0
+		Ram Offset 0x18040f4d0
+		Virtual Method Slot: 65535
+
+	Method: set_maxControllersPerPlayer:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D6F0
+		Ram Offset 0x18097e8f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_showActionCategoryLabels:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00860EA0
+		Ram Offset 0x1808620a0
+		Virtual Method Slot: 65535
+
+	Method: set_showActionCategoryLabels:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D750
+		Ram Offset 0x18097e950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_keyboardInputFieldCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00560DB0
+		Ram Offset 0x180561fb0
+		Virtual Method Slot: 65535
+
+	Method: set_keyboardInputFieldCount:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D7B0
+		Ram Offset 0x18097e9b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_mouseInputFieldCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0069F1F0
+		Ram Offset 0x1806a03f0
+		Virtual Method Slot: 65535
+
+	Method: set_mouseInputFieldCount:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D810
+		Ram Offset 0x18097ea10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_controllerInputFieldCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00569900
+		Ram Offset 0x18056ab00
+		Virtual Method Slot: 65535
+
+	Method: set_controllerInputFieldCount:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D870
+		Ram Offset 0x18097ea70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_showFullAxisInputFields:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003C6270
+		Ram Offset 0x1803c7470
+		Virtual Method Slot: 65535
+
+	Method: set_showFullAxisInputFields:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D8D0
+		Ram Offset 0x18097ead0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_showSplitAxisInputFields:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003C63D0
+		Ram Offset 0x1803c75d0
+		Virtual Method Slot: 65535
+
+	Method: set_showSplitAxisInputFields:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D930
+		Ram Offset 0x18097eb30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_allowElementAssignmentConflicts:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00754D00
+		Ram Offset 0x180755f00
+		Virtual Method Slot: 65535
+
+	Method: set_allowElementAssignmentConflicts:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D990
+		Ram Offset 0x18097eb90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_allowElementAssignmentSwap:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097D9A0
+		Ram Offset 0x18097eba0
+		Virtual Method Slot: 65535
+
+	Method: set_allowElementAssignmentSwap:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D9B0
+		Ram Offset 0x18097ebb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_actionLabelWidth:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x003C6280
+		Ram Offset 0x1803c7480
+		Virtual Method Slot: 65535
+
+	Method: set_actionLabelWidth:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097D9C0
+		Ram Offset 0x18097ebc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_keyboardColMaxWidth:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x004E0500
+		Ram Offset 0x1804e1700
+		Virtual Method Slot: 65535
+
+	Method: set_keyboardColMaxWidth:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DA20
+		Ram Offset 0x18097ec20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_mouseColMaxWidth:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0097DA80
+		Ram Offset 0x18097ec80
+		Virtual Method Slot: 65535
+
+	Method: set_mouseColMaxWidth:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DA90
+		Ram Offset 0x18097ec90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_controllerColMaxWidth:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x007DBF90
+		Ram Offset 0x1807dd190
+		Virtual Method Slot: 65535
+
+	Method: set_controllerColMaxWidth:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DAF0
+		Ram Offset 0x18097ecf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_inputRowHeight:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x007DBF40
+		Ram Offset 0x1807dd140
+		Virtual Method Slot: 65535
+
+	Method: set_inputRowHeight:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DB50
+		Ram Offset 0x18097ed50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_inputColumnSpacing:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0097DBB0
+		Ram Offset 0x18097edb0
+		Virtual Method Slot: 65535
+
+	Method: set_inputColumnSpacing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DBC0
+		Ram Offset 0x18097edc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_inputRowCategorySpacing:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0097DC20
+		Ram Offset 0x18097ee20
+		Virtual Method Slot: 65535
+
+	Method: set_inputRowCategorySpacing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DC30
+		Ram Offset 0x18097ee30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_invertToggleWidth:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0085F510
+		Ram Offset 0x180860710
+		Virtual Method Slot: 65535
+
+	Method: set_invertToggleWidth:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DC90
+		Ram Offset 0x18097ee90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_defaultWindowWidth:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0097DCF0
+		Ram Offset 0x18097eef0
+		Virtual Method Slot: 65535
+
+	Method: set_defaultWindowWidth:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DD00
+		Ram Offset 0x18097ef00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_defaultWindowHeight:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0097DD60
+		Ram Offset 0x18097ef60
+		Virtual Method Slot: 65535
+
+	Method: set_defaultWindowHeight:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DD70
+		Ram Offset 0x18097ef70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_controllerAssignmentTimeout:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x008598B0
+		Ram Offset 0x18085aab0
+		Virtual Method Slot: 65535
+
+	Method: set_controllerAssignmentTimeout:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DDD0
+		Ram Offset 0x18097efd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_preInputAssignmentTimeout:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x008598C0
+		Ram Offset 0x18085aac0
+		Virtual Method Slot: 65535
+
+	Method: set_preInputAssignmentTimeout:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004DC130
+		Ram Offset 0x1804dd330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_inputAssignmentTimeout:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00695D40
+		Ram Offset 0x180696f40
+		Virtual Method Slot: 65535
+
+	Method: set_inputAssignmentTimeout:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00564A30
+		Ram Offset 0x180565c30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_axisCalibrationTimeout:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0097DDE0
+		Ram Offset 0x18097efe0
+		Virtual Method Slot: 65535
+
+	Method: set_axisCalibrationTimeout:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DDF0
+		Ram Offset 0x18097eff0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_ignoreMouseXAxisAssignment:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097DE00
+		Ram Offset 0x18097f000
+		Virtual Method Slot: 65535
+
+	Method: set_ignoreMouseXAxisAssignment:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DE10
+		Ram Offset 0x18097f010
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_ignoreMouseYAxisAssignment:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097DE20
+		Ram Offset 0x18097f020
+		Virtual Method Slot: 65535
+
+	Method: set_ignoreMouseYAxisAssignment:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DE30
+		Ram Offset 0x18097f030
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_universalCancelClosesScreen:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097DE40
+		Ram Offset 0x18097f040
+		Virtual Method Slot: 65535
+
+	Method: set_universalCancelClosesScreen:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DE50
+		Ram Offset 0x18097f050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_showInputBehaviorSettings:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097DE60
+		Ram Offset 0x18097f060
+		Virtual Method Slot: 65535
+
+	Method: set_showInputBehaviorSettings:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DE70
+		Ram Offset 0x18097f070
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_useThemeSettings:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097DED0
+		Ram Offset 0x18097f0d0
+		Virtual Method Slot: 65535
+
+	Method: set_useThemeSettings:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DEE0
+		Ram Offset 0x18097f0e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_language:
+		Accessibility: Public
+		Return Type: Rewired.UI.ControlMapper.LanguageDataBase
+		File Offset 0x004FF760
+		Ram Offset 0x180500960
+		Virtual Method Slot: 65535
+
+	Method: set_language:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097DF40
+		Ram Offset 0x18097f140
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: Rewired.UI.ControlMapper.LanguageDataBase
+			Default Value: 
+	Method: get_showPlayersGroupLabel:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00970E10
+		Ram Offset 0x180972010
+		Virtual Method Slot: 65535
+
+	Method: set_showPlayersGroupLabel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097E0D0
+		Ram Offset 0x18097f2d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_showControllerGroupLabel:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00970E30
+		Ram Offset 0x180972030
+		Virtual Method Slot: 65535
+
+	Method: set_showControllerGroupLabel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097E130
+		Ram Offset 0x18097f330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_showAssignedControllersGroupLabel:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00970E50
+		Ram Offset 0x180972050
+		Virtual Method Slot: 65535
+
+	Method: set_showAssignedControllersGroupLabel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097E190
+		Ram Offset 0x18097f390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_showSettingsGroupLabel:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00970E70
+		Ram Offset 0x180972070
+		Virtual Method Slot: 65535
+
+	Method: set_showSettingsGroupLabel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097E1F0
+		Ram Offset 0x18097f3f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_showMapCategoriesGroupLabel:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00970E90
+		Ram Offset 0x180972090
+		Virtual Method Slot: 65535
+
+	Method: set_showMapCategoriesGroupLabel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097E250
+		Ram Offset 0x18097f450
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_showControllerNameLabel:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x009715D0
+		Ram Offset 0x1809727d0
+		Virtual Method Slot: 65535
+
+	Method: set_showControllerNameLabel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097E2B0
+		Ram Offset 0x18097f4b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_showAssignedControllers:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097E310
+		Ram Offset 0x18097f510
+		Virtual Method Slot: 65535
+
+	Method: set_showAssignedControllers:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097E320
+		Ram Offset 0x18097f520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_restoreDefaultsDelegate:
+		Accessibility: Public
+		Return Type: System.Action
+		File Offset 0x0049B170
+		Ram Offset 0x18049c370
+		Virtual Method Slot: 65535
+
+	Method: set_restoreDefaultsDelegate:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0097E380
+		Ram Offset 0x18097f580
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action
+			Default Value: 
+	Method: get_isOpen:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097E3E0
+		Ram Offset 0x18097f5e0
+		Virtual Method Slot: 65535
+
+	Method: get_isFocused:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0097E5C0
+		Ram Offset 0x18097f7c0
+		Virtual Method Slot: 65535
+
+	Method: get_currentFocusedWindow:
+		Accessibility: Public
+		Return Type: Rewired.UI.ControlMapper.Window
+		File Offset 0x0097E600
+		Ram Offset 0x18097f800
+		Virtual Method Slot: 65535
+
+	Method: get_inputAllowed:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0097E640
+		Ram Offset 0x18097f840
+		Virtual Method Slot: 65535
+
+	Method: get_inputGridColumnCount:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0097E6A0
+		Ram Offset 0x18097f8a0
+		Virtual Method Slot: 65535
+
+	Method: get_inputGridWidth:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0097E6D0
+		Ram Offset 0x18097f8d0
+		Virtual Method Slot: 65535
+
+	Method: get_currentPlayer:
+		Accessibility: Private
+		Return Type: Rewired.Player
+		File Offset 0x0097E740
+		Ram Offset 0x18097f940
+		Virtual Method Slot: 65535
+
+	Method: get_currentMapCategory:
+		Accessibility: Private
+		Return Type: Rewired.InputCategory
+		File Offset 0x0097E7B0
+		Ram Offset 0x18097f9b0
+		Virtual Method Slot: 65535
+
+	Method: get_currentMappingSet:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.ControlMapper/MappingSet
+		File Offset 0x0097E820
+		Ram Offset 0x18097fa20
+		Virtual Method Slot: 65535
+
+	Method: get_currentJoystick:
+		Accessibility: Private
+		Return Type: Rewired.Joystick
+		File Offset 0x0097E8A0
+		Ram Offset 0x18097faa0
+		Virtual Method Slot: 65535
+
+	Method: get_isJoystickSelected:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0097E910
+		Ram Offset 0x18097fb10
+		Virtual Method Slot: 65535
+
+	Method: get_currentUISelection:
+		Accessibility: Private
+		Return Type: UnityEngine.GameObject
+		File Offset 0x0097E920
+		Ram Offset 0x18097fb20
+		Virtual Method Slot: 65535
+
+	Method: get_showSettings:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0097EA30
+		Ram Offset 0x18097fc30
+		Virtual Method Slot: 65535
+
+	Method: get_showMapCategories:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0097EA70
+		Ram Offset 0x18097fc70
+		Virtual Method Slot: 65535
+
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0097EA90
+		Ram Offset 0x18097fc90
+		Virtual Method Slot: 65535
+
+	Method: Start:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0097EBF0
+		Ram Offset 0x18097fdf0
+		Virtual Method Slot: 65535
+
+	Method: Update:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0097EC10
+		Ram Offset 0x18097fe10
+		Virtual Method Slot: 65535
+
+	Method: OnDestroy:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0097ED40
+		Ram Offset 0x18097ff40
+		Virtual Method Slot: 65535
+
+	Method: PreInitialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0097EF80
+		Ram Offset 0x180980180
+		Virtual Method Slot: 65535
+
+	Method: Initialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0097F190
+		Ram Offset 0x180980390
+		Virtual Method Slot: 65535
+
+	Method: OnJoystickConnected:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009800B0
+		Ram Offset 0x1809812b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: args
+			Type: Rewired.ControllerStatusChangedEventArgs
+			Default Value: 
+	Method: OnJoystickDisconnected:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009800B0
+		Ram Offset 0x1809812b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: args
+			Type: Rewired.ControllerStatusChangedEventArgs
+			Default Value: 
+	Method: OnJoystickPreDisconnect:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00866150
+		Ram Offset 0x180867350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: args
+			Type: Rewired.ControllerStatusChangedEventArgs
+			Default Value: 
+	Method: OnButtonActivated:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00980120
+		Ram Offset 0x180981320
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buttonInfo
+			Type: Rewired.UI.ControlMapper.ButtonInfo
+			Default Value: 
+	Method: OnInputFieldActivated:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009806C0
+		Ram Offset 0x1809818c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fieldInfo
+			Type: Rewired.UI.ControlMapper.InputFieldInfo
+			Default Value: 
+	Method: OnInputFieldInvertToggleStateChanged:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009808E0
+		Ram Offset 0x180981ae0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: toggleInfo
+			Type: Rewired.UI.ControlMapper.ToggleInfo
+			Default Value: 
+		Parameter 1:
+			Name: newState
+			Type: System.Boolean
+			Default Value: 
+	Method: OnPlayerSelected:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00980A60
+		Ram Offset 0x180981c60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: playerId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: redraw
+			Type: System.Boolean
+			Default Value: 
+	Method: OnControllerSelected:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00980A90
+		Ram Offset 0x180981c90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: joystickId
+			Type: System.Int32
+			Default Value: 
+	Method: OnRemoveCurrentController:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00980AB0
+		Ram Offset 0x180981cb0
+		Virtual Method Slot: 65535
+
+	Method: OnMapCategorySelected:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00980B60
+		Ram Offset 0x180981d60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: id
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: redraw
+			Type: System.Boolean
+			Default Value: 
+	Method: OnRestoreDefaults:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00980B90
+		Ram Offset 0x180981d90
+		Virtual Method Slot: 65535
+
+	Method: OnScreenToggleActionPressed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00980BB0
+		Ram Offset 0x180981db0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: Rewired.InputActionEventData
+			Default Value: 
+	Method: OnScreenOpenActionPressed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00980C20
+		Ram Offset 0x180981e20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: Rewired.InputActionEventData
+			Default Value: 
+	Method: OnScreenCloseActionPressed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00980C30
+		Ram Offset 0x180981e30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: Rewired.InputActionEventData
+			Default Value: 
+	Method: OnUniversalCancelActionPressed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00980C90
+		Ram Offset 0x180981e90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: Rewired.InputActionEventData
+			Default Value: 
+	Method: OnWindowCancel:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00980D20
+		Ram Offset 0x180981f20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+	Method: OnRemoveElementAssignment:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00980D40
+		Ram Offset 0x180981f40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: map
+			Type: Rewired.ControllerMap
+			Default Value: 
+		Parameter 2:
+			Name: aem
+			Type: Rewired.ActionElementMap
+			Default Value: 
+	Method: OnBeginElementAssignment:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00980D90
+		Ram Offset 0x180981f90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fieldInfo
+			Type: Rewired.UI.ControlMapper.InputFieldInfo
+			Default Value: 
+		Parameter 1:
+			Name: map
+			Type: Rewired.ControllerMap
+			Default Value: 
+		Parameter 2:
+			Name: aem
+			Type: Rewired.ActionElementMap
+			Default Value: 
+		Parameter 3:
+			Name: actionName
+			Type: System.String
+			Default Value: 
+	Method: OnControllerAssignmentConfirmed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009810C0
+		Ram Offset 0x1809822c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: player
+			Type: Rewired.Player
+			Default Value: 
+		Parameter 2:
+			Name: controllerId
+			Type: System.Int32
+			Default Value: 
+	Method: OnMouseAssignmentConfirmed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00981110
+		Ram Offset 0x180982310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: player
+			Type: Rewired.Player
+			Default Value: 
+	Method: OnElementAssignmentConflictReplaceConfirmed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00981380
+		Ram Offset 0x180982580
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: mapping
+			Type: Rewired.UI.ControlMapper.ControlMapper/InputMapping
+			Default Value: 
+		Parameter 2:
+			Name: assignment
+			Type: Rewired.ElementAssignment
+			Default Value: 
+		Parameter 3:
+			Name: skipOtherPlayers
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: allowSwap
+			Type: System.Boolean
+			Default Value: 
+	Method: OnElementAssignmentAddConfirmed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00981D00
+		Ram Offset 0x180982f00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: mapping
+			Type: Rewired.UI.ControlMapper.ControlMapper/InputMapping
+			Default Value: 
+		Parameter 2:
+			Name: assignment
+			Type: Rewired.ElementAssignment
+			Default Value: 
+	Method: OnRestoreDefaultsConfirmed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00981DD0
+		Ram Offset 0x180982fd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+	Method: OnAssignControllerWindowUpdate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00982120
+		Ram Offset 0x180983320
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+	Method: OnElementAssignmentPrePollingWindowUpdate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009823E0
+		Ram Offset 0x1809835e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+	Method: OnJoystickElementAssignmentPollingWindowUpdate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00982690
+		Ram Offset 0x180983890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+	Method: OnKeyboardElementAssignmentPollingWindowUpdate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00982BF0
+		Ram Offset 0x180983df0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+	Method: OnMouseElementAssignmentPollingWindowUpdate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009830A0
+		Ram Offset 0x1809842a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+	Method: OnCalibrateAxisStep1WindowUpdate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00983760
+		Ram Offset 0x180984960
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+	Method: OnCalibrateAxisStep2WindowUpdate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00983950
+		Ram Offset 0x180984b50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+	Method: ShowAssignControllerWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00983C90
+		Ram Offset 0x180984e90
+		Virtual Method Slot: 65535
+
+	Method: ShowControllerAssignmentConflictWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00984030
+		Ram Offset 0x180985230
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: controllerId
+			Type: System.Int32
+			Default Value: 
+	Method: ShowBeginElementAssignmentReplacementWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00984800
+		Ram Offset 0x180985a00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fieldInfo
+			Type: Rewired.UI.ControlMapper.InputFieldInfo
+			Default Value: 
+		Parameter 1:
+			Name: action
+			Type: Rewired.InputAction
+			Default Value: 
+		Parameter 2:
+			Name: map
+			Type: Rewired.ControllerMap
+			Default Value: 
+		Parameter 3:
+			Name: aem
+			Type: Rewired.ActionElementMap
+			Default Value: 
+		Parameter 4:
+			Name: actionName
+			Type: System.String
+			Default Value: 
+	Method: ShowCreateNewElementAssignmentWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00984F90
+		Ram Offset 0x180986190
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fieldInfo
+			Type: Rewired.UI.ControlMapper.InputFieldInfo
+			Default Value: 
+		Parameter 1:
+			Name: action
+			Type: Rewired.InputAction
+			Default Value: 
+		Parameter 2:
+			Name: map
+			Type: Rewired.ControllerMap
+			Default Value: 
+		Parameter 3:
+			Name: actionName
+			Type: System.String
+			Default Value: 
+	Method: ShowElementAssignmentPrePollingWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00985030
+		Ram Offset 0x180986230
+		Virtual Method Slot: 65535
+
+	Method: ShowElementAssignmentPollingWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00985410
+		Ram Offset 0x180986610
+		Virtual Method Slot: 65535
+
+	Method: ShowJoystickElementAssignmentPollingWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009854E0
+		Ram Offset 0x1809866e0
+		Virtual Method Slot: 65535
+
+	Method: ShowKeyboardElementAssignmentPollingWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00985850
+		Ram Offset 0x180986a50
+		Virtual Method Slot: 65535
+
+	Method: ShowMouseElementAssignmentPollingWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00985D40
+		Ram Offset 0x180986f40
+		Virtual Method Slot: 65535
+
+	Method: ShowElementAssignmentConflictWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009860B0
+		Ram Offset 0x1809872b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: assignment
+			Type: Rewired.ElementAssignment
+			Default Value: 
+		Parameter 1:
+			Name: skipOtherPlayers
+			Type: System.Boolean
+			Default Value: 
+	Method: ShowMouseAssignmentConflictWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009868A0
+		Ram Offset 0x180987aa0
+		Virtual Method Slot: 65535
+
+	Method: ShowCalibrateControllerWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00986FD0
+		Ram Offset 0x1809881d0
+		Virtual Method Slot: 65535
+
+	Method: ShowCalibrateAxisStep1Window:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00987340
+		Ram Offset 0x180988540
+		Virtual Method Slot: 65535
+
+	Method: ShowCalibrateAxisStep2Window:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00987890
+		Ram Offset 0x180988a90
+		Virtual Method Slot: 65535
+
+	Method: ShowEditInputBehaviorsWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00987DE0
+		Ram Offset 0x180988fe0
+		Virtual Method Slot: 65535
+
+	Method: ShowRestoreDefaultsWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009880D0
+		Ram Offset 0x1809892d0
+		Virtual Method Slot: 65535
+
+	Method: CreateInputGrid:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009882D0
+		Ram Offset 0x1809894d0
+		Virtual Method Slot: 65535
+
+	Method: InitializeInputGrid:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009885D0
+		Ram Offset 0x1809897d0
+		Virtual Method Slot: 65535
+
+	Method: RefreshInputGridStructure:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00988D20
+		Ram Offset 0x180989f20
+		Virtual Method Slot: 65535
+
+	Method: CreateHeaderLabels:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00988EF0
+		Ram Offset 0x18098a0f0
+		Virtual Method Slot: 65535
+
+	Method: CreateActionLabelColumn:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009895E0
+		Ram Offset 0x18098a7e0
+		Virtual Method Slot: 65535
+
+	Method: CreateKeyboardInputFieldColumn:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00989700
+		Ram Offset 0x18098a900
+		Virtual Method Slot: 65535
+
+	Method: CreateMouseInputFieldColumn:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00989760
+		Ram Offset 0x18098a960
+		Virtual Method Slot: 65535
+
+	Method: CreateControllerInputFieldColumn:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009897C0
+		Ram Offset 0x18098a9c0
+		Virtual Method Slot: 65535
+
+	Method: CreateInputFieldColumn:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00989820
+		Ram Offset 0x18098aa20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: controllerType
+			Type: Rewired.ControllerType
+			Default Value: 
+		Parameter 2:
+			Name: maxWidth
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cols
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: disableFullAxis
+			Type: System.Boolean
+			Default Value: 
+	Method: CreateInputActionLabels:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00989A80
+		Ram Offset 0x18098ac80
+		Virtual Method Slot: 65535
+
+	Method: CreateInputFields:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098A790
+		Ram Offset 0x18098b990
+		Virtual Method Slot: 65535
+
+	Method: CreateInputFields:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098A870
+		Ram Offset 0x18098ba70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: columnXform
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 1:
+			Name: controllerType
+			Type: Rewired.ControllerType
+			Default Value: 
+		Parameter 2:
+			Name: maxWidth
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cols
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: disableFullAxis
+			Type: System.Boolean
+			Default Value: 
+	Method: CreateInputFieldSet:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098AFC0
+		Ram Offset 0x18098c1c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 1:
+			Name: mapCategoryId
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: action
+			Type: Rewired.InputAction
+			Default Value: 
+		Parameter 3:
+			Name: axisRange
+			Type: Rewired.AxisRange
+			Default Value: 
+		Parameter 4:
+			Name: controllerType
+			Type: Rewired.ControllerType
+			Default Value: 
+		Parameter 5:
+			Name: cols
+			Type: System.Int32
+			Default Value: 
+		Parameter 6:
+			Name: fieldWidth
+			Type: System.Int32
+			Default Value: 
+		Parameter 7:
+			Name: yPos
+			Type: System.Int32
+			Default Value: 
+		Parameter 8:
+			Name: disableFullAxis
+			Type: System.Boolean
+			Default Value: 
+	Method: PopulateInputFields:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098B540
+		Ram Offset 0x18098c740
+		Virtual Method Slot: 65535
+
+	Method: PopulateInputFieldGroup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098BB70
+		Ram Offset 0x18098cd70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: actionSet
+			Type: Rewired.UI.ControlMapper.ControlMapper/InputActionSet
+			Default Value: 
+		Parameter 1:
+			Name: controllerMap
+			Type: Rewired.ControllerMap
+			Default Value: 
+		Parameter 2:
+			Name: controllerType
+			Type: Rewired.ControllerType
+			Default Value: 
+		Parameter 3:
+			Name: controllerId
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: maxFields
+			Type: System.Int32
+			Default Value: 
+	Method: DisableInputFieldGroup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098C250
+		Ram Offset 0x18098d450
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: actionSet
+			Type: Rewired.UI.ControlMapper.ControlMapper/InputActionSet
+			Default Value: 
+		Parameter 1:
+			Name: controllerType
+			Type: Rewired.ControllerType
+			Default Value: 
+		Parameter 2:
+			Name: fieldCount
+			Type: System.Int32
+			Default Value: 
+	Method: ResetInputGridScrollBar:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098C300
+		Ram Offset 0x18098d500
+		Virtual Method Slot: 65535
+
+	Method: CreateLayout:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098C460
+		Ram Offset 0x18098d660
+		Virtual Method Slot: 65535
+
+	Method: Draw:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098C970
+		Ram Offset 0x18098db70
+		Virtual Method Slot: 65535
+
+	Method: DrawPlayersGroup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098CAC0
+		Ram Offset 0x18098dcc0
+		Virtual Method Slot: 65535
+
+	Method: DrawControllersGroup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098CE30
+		Ram Offset 0x18098e030
+		Virtual Method Slot: 65535
+
+	Method: DrawSettingsGroup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098D3A0
+		Ram Offset 0x18098e5a0
+		Virtual Method Slot: 65535
+
+	Method: DrawMapCategoriesGroup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098D620
+		Ram Offset 0x18098e820
+		Virtual Method Slot: 65535
+
+	Method: DrawWindowButtonsGroup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098D9A0
+		Ram Offset 0x18098eba0
+		Virtual Method Slot: 65535
+
+	Method: Redraw:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098DAC0
+		Ram Offset 0x18098ecc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: listsChanged
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: playTransitions
+			Type: System.Boolean
+			Default Value: 
+	Method: RedrawPlayerGroup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098DC50
+		Ram Offset 0x18098ee50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: playTransitions
+			Type: System.Boolean
+			Default Value: 
+	Method: RedrawControllerGroup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098DE00
+		Ram Offset 0x18098f000
+		Virtual Method Slot: 65535
+
+	Method: RedrawMapCategoriesGroup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098EC90
+		Ram Offset 0x18098fe90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: playTransitions
+			Type: System.Boolean
+			Default Value: 
+	Method: RedrawInputGrid:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098EE50
+		Ram Offset 0x180990050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: listsChanged
+			Type: System.Boolean
+			Default Value: 
+	Method: ForceRefresh:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098EE90
+		Ram Offset 0x180990090
+		Virtual Method Slot: 65535
+
+	Method: CreateInputCategoryRow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0098EEE0
+		Ram Offset 0x1809900e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rowCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: category
+			Type: Rewired.InputCategory
+			Default Value: 
+	Method: CreateLabel:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.ControlMapper/GUILabel
+		File Offset 0x0098EFA0
+		Ram Offset 0x1809901a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: labelText
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: CreateLabel:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.ControlMapper/GUILabel
+		File Offset 0x0098EFE0
+		Ram Offset 0x1809901e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: prefab
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 1:
+			Name: labelText
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 3:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: CreateButton:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.ControlMapper/GUIButton
+		File Offset 0x0098F310
+		Ram Offset 0x180990510
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: labelText
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: CreateFitButton:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.ControlMapper/GUIButton
+		File Offset 0x0098F3F0
+		Ram Offset 0x1809905f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: labelText
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: CreateInputField:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.ControlMapper/GUIInputField
+		File Offset 0x0098F4D0
+		Ram Offset 0x1809906d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 2:
+			Name: label
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: actionId
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: axisRange
+			Type: Rewired.AxisRange
+			Default Value: 
+		Parameter 5:
+			Name: controllerType
+			Type: Rewired.ControllerType
+			Default Value: 
+		Parameter 6:
+			Name: fieldIndex
+			Type: System.Int32
+			Default Value: 
+	Method: CreateInputField:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.ControlMapper/GUIInputField
+		File Offset 0x0098F770
+		Ram Offset 0x180990970
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: CreateToggle:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.ControlMapper/GUIToggle
+		File Offset 0x0098F820
+		Ram Offset 0x180990a20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: prefab
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 1:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 3:
+			Name: label
+			Type: System.String
+			Default Value: 
+		Parameter 4:
+			Name: actionId
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: axisRange
+			Type: Rewired.AxisRange
+			Default Value: 
+		Parameter 6:
+			Name: controllerType
+			Type: Rewired.ControllerType
+			Default Value: 
+		Parameter 7:
+			Name: fieldIndex
+			Type: System.Int32
+			Default Value: 
+	Method: CreateToggle:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.ControlMapper/GUIToggle
+		File Offset 0x0098FA80
+		Ram Offset 0x180990c80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: prefab
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 1:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: InstantiateGUIObject:
+		Accessibility: Private
+		Return Type: UnityEngine.GameObject
+		File Offset 0x0098FB30
+		Ram Offset 0x180990d30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: prefab
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 1:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: CreateNewGUIObject:
+		Accessibility: Private
+		Return Type: UnityEngine.GameObject
+		File Offset 0x0098FCA0
+		Ram Offset 0x180990ea0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: InitializeNewGUIGameObject:
+		Accessibility: Private
+		Return Type: UnityEngine.GameObject
+		File Offset 0x0098FD70
+		Ram Offset 0x180990f70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: gameObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 1:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: CreateNewColumnGroup:
+		Accessibility: Private
+		Return Type: UnityEngine.GameObject
+		File Offset 0x00990020
+		Ram Offset 0x180991220
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: maxWidth
+			Type: System.Int32
+			Default Value: 
+	Method: OpenWindow:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.Window
+		File Offset 0x00990230
+		Ram Offset 0x180991430
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: closeOthers
+			Type: System.Boolean
+			Default Value: 
+	Method: OpenWindow:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.Window
+		File Offset 0x009903A0
+		Ram Offset 0x1809915a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: closeOthers
+			Type: System.Boolean
+			Default Value: 
+	Method: OpenWindow:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.Window
+		File Offset 0x009904F0
+		Ram Offset 0x1809916f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowPrefab
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 1:
+			Name: closeOthers
+			Type: System.Boolean
+			Default Value: 
+	Method: OpenWindow:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.Window
+		File Offset 0x00990560
+		Ram Offset 0x180991760
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowPrefab
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 1:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: closeOthers
+			Type: System.Boolean
+			Default Value: 
+	Method: OpenModal:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00990780
+		Ram Offset 0x180991980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: title
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: message
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: confirmText
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: confirmAction
+			Type: System.Action`1<System.Int32>
+			Default Value: 
+		Parameter 4:
+			Name: cancelText
+			Type: System.String
+			Default Value: 
+		Parameter 5:
+			Name: cancelAction
+			Type: System.Action`1<System.Int32>
+			Default Value: 
+		Parameter 6:
+			Name: closeOthers
+			Type: System.Boolean
+			Default Value: 
+	Method: CloseWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00990CF0
+		Ram Offset 0x180991ef0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+	Method: CloseTopWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00990D70
+		Ram Offset 0x180991f70
+		Virtual Method Slot: 65535
+
+	Method: CloseAllWindows:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00990DC0
+		Ram Offset 0x180991fc0
+		Virtual Method Slot: 65535
+
+	Method: ChildWindowOpened:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00990E60
+		Ram Offset 0x180992060
+		Virtual Method Slot: 65535
+
+	Method: ChildWindowClosed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00990F30
+		Ram Offset 0x180992130
+		Virtual Method Slot: 65535
+
+	Method: HasElementAssignmentConflicts:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00990FB0
+		Ram Offset 0x1809921b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: player
+			Type: Rewired.Player
+			Default Value: 
+		Parameter 1:
+			Name: mapping
+			Type: Rewired.UI.ControlMapper.ControlMapper/InputMapping
+			Default Value: 
+		Parameter 2:
+			Name: assignment
+			Type: Rewired.ElementAssignment
+			Default Value: 
+		Parameter 3:
+			Name: skipOtherPlayers
+			Type: System.Boolean
+			Default Value: 
+	Method: IsBlockingAssignmentConflict:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x009911D0
+		Ram Offset 0x1809923d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: mapping
+			Type: Rewired.UI.ControlMapper.ControlMapper/InputMapping
+			Default Value: 
+		Parameter 1:
+			Name: assignment
+			Type: Rewired.ElementAssignment
+			Default Value: 
+		Parameter 2:
+			Name: skipOtherPlayers
+			Type: System.Boolean
+			Default Value: 
+	Method: ElementAssignmentConflicts:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.IEnumerable`1<Rewired.ElementAssignmentConflictInfo>
+		File Offset 0x00991770
+		Ram Offset 0x180992970
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: player
+			Type: Rewired.Player
+			Default Value: 
+		Parameter 1:
+			Name: mapping
+			Type: Rewired.UI.ControlMapper.ControlMapper/InputMapping
+			Default Value: 
+		Parameter 2:
+			Name: assignment
+			Type: Rewired.ElementAssignment
+			Default Value: 
+		Parameter 3:
+			Name: skipOtherPlayers
+			Type: System.Boolean
+			Default Value: 
+	Method: CreateConflictCheck:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00991910
+		Ram Offset 0x180992b10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: mapping
+			Type: Rewired.UI.ControlMapper.ControlMapper/InputMapping
+			Default Value: 
+		Parameter 1:
+			Name: assignment
+			Type: Rewired.ElementAssignment
+			Default Value: 
+		Parameter 2:
+			Name: conflictCheck
+			Type: Rewired.ElementAssignmentConflictCheck
+			Default Value: 
+	Method: PollKeyboardForAssignment:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00991A70
+		Ram Offset 0x180992c70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pollingInfo
+			Type: Rewired.ControllerPollingInfo
+			Default Value: 
+		Parameter 1:
+			Name: modifierKeyPressed
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: modifierFlags
+			Type: Rewired.ModifierKeyFlags
+			Default Value: 
+		Parameter 3:
+			Name: label
+			Type: System.String
+			Default Value: 
+	Method: GetFirstElementAssignmentConflict:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00992260
+		Ram Offset 0x180993460
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: conflictCheck
+			Type: Rewired.ElementAssignmentConflictCheck
+			Default Value: 
+		Parameter 1:
+			Name: conflict
+			Type: Rewired.ElementAssignmentConflictInfo
+			Default Value: 
+		Parameter 2:
+			Name: skipOtherPlayers
+			Type: System.Boolean
+			Default Value: 
+	Method: GetFirstElementAssignmentConflict:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00992520
+		Ram Offset 0x180993720
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: player
+			Type: Rewired.Player
+			Default Value: 
+		Parameter 1:
+			Name: conflictCheck
+			Type: Rewired.ElementAssignmentConflictCheck
+			Default Value: 
+		Parameter 2:
+			Name: conflict
+			Type: Rewired.ElementAssignmentConflictInfo
+			Default Value: 
+	Method: StartAxisCalibration:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00992730
+		Ram Offset 0x180993930
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: axisIndex
+			Type: System.Int32
+			Default Value: 
+	Method: EndAxisCalibration:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00992990
+		Ram Offset 0x180993b90
+		Virtual Method Slot: 65535
+
+	Method: SetUISelection:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00992AB0
+		Ram Offset 0x180993cb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: selection
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: RestoreLastUISelection:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00992BD0
+		Ram Offset 0x180993dd0
+		Virtual Method Slot: 65535
+
+	Method: SetDefaultUISelection:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00992D10
+		Ram Offset 0x180993f10
+		Virtual Method Slot: 65535
+
+	Method: SelectDefaultMapCategory:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00992E80
+		Ram Offset 0x180994080
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: redraw
+			Type: System.Boolean
+			Default Value: 
+	Method: CheckUISelection:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00993140
+		Ram Offset 0x180994340
+		Virtual Method Slot: 65535
+
+	Method: OnUIElementSelected:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00993250
+		Ram Offset 0x180994450
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: selectedObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: SetIsFocused:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009932B0
+		Ram Offset 0x1809944b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: state
+			Type: System.Boolean
+			Default Value: 
+	Method: Toggle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009933B0
+		Ram Offset 0x1809945b0
+		Virtual Method Slot: 65535
+
+	Method: Open:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00980C20
+		Ram Offset 0x180981e20
+		Virtual Method Slot: 65535
+
+	Method: Open:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009933F0
+		Ram Offset 0x1809945f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: force
+			Type: System.Boolean
+			Default Value: 
+	Method: Close:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00993520
+		Ram Offset 0x180994720
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: save
+			Type: System.Boolean
+			Default Value: 
+	Method: Clear:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00993650
+		Ram Offset 0x180994850
+		Virtual Method Slot: 65535
+
+	Method: ClearCompletely:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009937D0
+		Ram Offset 0x1809949d0
+		Virtual Method Slot: 65535
+
+	Method: ClearSpawnedObjects:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00993800
+		Ram Offset 0x180994a00
+		Virtual Method Slot: 65535
+
+	Method: ClearVarsOnPlayerChange:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00994240
+		Ram Offset 0x180995440
+		Virtual Method Slot: 65535
+
+	Method: ClearVarsOnJoystickChange:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00994240
+		Ram Offset 0x180995440
+		Virtual Method Slot: 65535
+
+	Method: ClearAllVars:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00994250
+		Ram Offset 0x180995450
+		Virtual Method Slot: 65535
+
+	Method: Reset:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009946D0
+		Ram Offset 0x1809958d0
+		Virtual Method Slot: 65535
+
+	Method: SetActionAxisInverted:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00994730
+		Ram Offset 0x180995930
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: state
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: controllerType
+			Type: Rewired.ControllerType
+			Default Value: 
+		Parameter 2:
+			Name: actionElementMapId
+			Type: System.Int32
+			Default Value: 
+	Method: GetControllerMap:
+		Accessibility: Private
+		Return Type: Rewired.ControllerMap
+		File Offset 0x00994840
+		Ram Offset 0x180995a40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: Rewired.ControllerType
+			Default Value: 
+	Method: GetControllerMapOrCreateNew:
+		Accessibility: Private
+		Return Type: Rewired.ControllerMap
+		File Offset 0x009949A0
+		Ram Offset 0x180995ba0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: controllerType
+			Type: Rewired.ControllerType
+			Default Value: 
+		Parameter 1:
+			Name: controllerId
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: layoutId
+			Type: System.Int32
+			Default Value: 
+	Method: CountIEnumerable:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x00D42880
+		Ram Offset 0x180d43a80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enumerable
+			Type: System.Collections.Generic.IEnumerable`1<T>
+			Default Value: 
+	Method: GetDefaultMapCategoryId:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x00994A70
+		Ram Offset 0x180995c70
+		Virtual Method Slot: 65535
+
+	Method: SubscribeFixedUISelectionEvents:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00994B70
+		Ram Offset 0x180995d70
+		Virtual Method Slot: 65535
+
+	Method: SubscribeMenuControlInputEvents:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00994D30
+		Ram Offset 0x180995f30
+		Virtual Method Slot: 65535
+
+	Method: UnsubscribeMenuControlInputEvents:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00994E80
+		Ram Offset 0x180996080
+		Virtual Method Slot: 65535
+
+	Method: SubscribeRewiredInputEventAllPlayers:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00994FD0
+		Ram Offset 0x1809961d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: actionId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: callback
+			Type: System.Action`1<Rewired.InputActionEventData>
+			Default Value: 
+	Method: UnsubscribeRewiredInputEventAllPlayers:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00995230
+		Ram Offset 0x180996430
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: actionId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: callback
+			Type: System.Action`1<Rewired.InputActionEventData>
+			Default Value: 
+	Method: GetMaxControllersPerPlayer:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x009954B0
+		Ram Offset 0x1809966b0
+		Virtual Method Slot: 65535
+
+	Method: ShowAssignedControllers:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00995500
+		Ram Offset 0x180996700
+		Virtual Method Slot: 65535
+
+	Method: InspectorPropertyChanged:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00995570
+		Ram Offset 0x180996770
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: reset
+			Type: System.Boolean
+			Default Value: False
+	Method: AssignController:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009955D0
+		Ram Offset 0x1809967d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: player
+			Type: Rewired.Player
+			Default Value: 
+		Parameter 1:
+			Name: controllerId
+			Type: System.Int32
+			Default Value: 
+	Method: RemoveAllControllers:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00995AD0
+		Ram Offset 0x180996cd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: player
+			Type: Rewired.Player
+			Default Value: 
+	Method: RemoveController:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00995C10
+		Ram Offset 0x180996e10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: player
+			Type: Rewired.Player
+			Default Value: 
+		Parameter 1:
+			Name: controllerId
+			Type: System.Int32
+			Default Value: 
+	Method: IsAllowedAssignment:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00995E30
+		Ram Offset 0x180997030
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pendingInputMapping
+			Type: Rewired.UI.ControlMapper.ControlMapper/InputMapping
+			Default Value: 
+		Parameter 1:
+			Name: pollingInfo
+			Type: Rewired.ControllerPollingInfo
+			Default Value: 
+	Method: InputPollingStarted:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00995E80
+		Ram Offset 0x180997080
+		Virtual Method Slot: 65535
+
+	Method: InputPollingStopped:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00995EE0
+		Ram Offset 0x1809970e0
+		Virtual Method Slot: 65535
+
+	Method: GetControllerInputFieldCount:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x00995F40
+		Ram Offset 0x180997140
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: controllerType
+			Type: Rewired.ControllerType
+			Default Value: 
+	Method: ShowSwapButton:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00995FB0
+		Ram Offset 0x1809971b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: windowId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: mapping
+			Type: Rewired.UI.ControlMapper.ControlMapper/InputMapping
+			Default Value: 
+		Parameter 2:
+			Name: assignment
+			Type: Rewired.ElementAssignment
+			Default Value: 
+		Parameter 3:
+			Name: skipOtherPlayers
+			Type: System.Boolean
+			Default Value: 
+	Method: SwapIsSameInputRange:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00996930
+		Ram Offset 0x180997b30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: origElementType
+			Type: Rewired.ControllerElementType
+			Default Value: 
+		Parameter 1:
+			Name: origAxisRange
+			Type: Rewired.AxisRange
+			Default Value: 
+		Parameter 2:
+			Name: origAxisContribution
+			Type: Rewired.Pole
+			Default Value: 
+		Parameter 3:
+			Name: conflictElementType
+			Type: Rewired.ControllerElementType
+			Default Value: 
+		Parameter 4:
+			Name: conflictAxisRange
+			Type: Rewired.AxisRange
+			Default Value: 
+		Parameter 5:
+			Name: conflictAxisContribution
+			Type: Rewired.Pole
+			Default Value: 
+	Method: ApplyTheme:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00996980
+		Ram Offset 0x180997b80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: elementInfo
+			Type: Rewired.UI.ControlMapper.ThemedElement/ElementInfo[]
+			Default Value: 
+	Method: GetLanguage:
+		Accessibility: Public
+		Return Type: Rewired.UI.ControlMapper.LanguageDataBase
+		File Offset 0x00996B90
+		Ram Offset 0x180997d90
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00996C90
+		Ram Offset 0x180997e90
+		Virtual Method Slot: 65535

@@ -1,0 +1,339 @@
+Type: ICSharpCode.SharpZipLib.Zip.Compression.DeflaterEngine:
+	Base Class: 
+		ICSharpCode.SharpZipLib.Zip.Compression.DeflaterConstants
+
+	Interfaces:
+
+	Static Field: TooFar
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 4096
+
+	Field: ins_h
+		Type: System.Int32
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: head
+		Type: System.Int16[]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: prev
+		Type: System.Int16[]
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: matchStart
+		Type: System.Int32
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: matchLen
+		Type: System.Int32
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Field: prevAvailable
+		Type: System.Boolean
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: blockStart
+		Type: System.Int32
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Field: strstart
+		Type: System.Int32
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: lookahead
+		Type: System.Int32
+		Offset in Defining Type: 0x3C
+		Has Default: False
+
+	Field: window
+		Type: System.Byte[]
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: strategy
+		Type: ICSharpCode.SharpZipLib.Zip.Compression.DeflateStrategy
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: max_chain
+		Type: System.Int32
+		Offset in Defining Type: 0x4C
+		Has Default: False
+
+	Field: max_lazy
+		Type: System.Int32
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: niceLength
+		Type: System.Int32
+		Offset in Defining Type: 0x54
+		Has Default: False
+
+	Field: goodLength
+		Type: System.Int32
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: compressionFunction
+		Type: System.Int32
+		Offset in Defining Type: 0x5C
+		Has Default: False
+
+	Field: inputBuf
+		Type: System.Byte[]
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: totalIn
+		Type: System.Int64
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: inputOff
+		Type: System.Int32
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: inputEnd
+		Type: System.Int32
+		Offset in Defining Type: 0x74
+		Has Default: False
+
+	Field: pending
+		Type: ICSharpCode.SharpZipLib.Zip.Compression.DeflaterPending
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: huffman
+		Type: ICSharpCode.SharpZipLib.Zip.Compression.DeflaterHuffman
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: adler
+		Type: ICSharpCode.SharpZipLib.Checksums.Adler32
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0161F620
+		Ram Offset 0x181620820
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pending
+			Type: ICSharpCode.SharpZipLib.Zip.Compression.DeflaterPending
+			Default Value: 
+	Method: Deflate:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0161F960
+		Ram Offset 0x181620b60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: flush
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: finish
+			Type: System.Boolean
+			Default Value: 
+	Method: SetInput:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0161FC40
+		Ram Offset 0x181620e40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: NeedsInput:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0161FE10
+		Ram Offset 0x181621010
+		Virtual Method Slot: 65535
+
+	Method: SetDictionary:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0161FE20
+		Ram Offset 0x181621020
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+	Method: Reset:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0161FF30
+		Ram Offset 0x181621130
+		Virtual Method Slot: 65535
+
+	Method: ResetAdler:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01620030
+		Ram Offset 0x181621230
+		Virtual Method Slot: 65535
+
+	Method: get_Adler:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01620060
+		Ram Offset 0x181621260
+		Virtual Method Slot: 65535
+
+	Method: get_TotalIn:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x00530090
+		Ram Offset 0x180531290
+		Virtual Method Slot: 65535
+
+	Method: get_Strategy:
+		Accessibility: Public
+		Return Type: ICSharpCode.SharpZipLib.Zip.Compression.DeflateStrategy
+		File Offset 0x00789EB0
+		Ram Offset 0x18078b0b0
+		Virtual Method Slot: 65535
+
+	Method: set_Strategy:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009ABFD0
+		Ram Offset 0x1809ad1d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: ICSharpCode.SharpZipLib.Zip.Compression.DeflateStrategy
+			Default Value: 
+	Method: SetLevel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01620080
+		Ram Offset 0x181621280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: level
+			Type: System.Int32
+			Default Value: 
+	Method: FillWindow:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01620380
+		Ram Offset 0x181621580
+		Virtual Method Slot: 65535
+
+	Method: UpdateHash:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01620480
+		Ram Offset 0x181621680
+		Virtual Method Slot: 65535
+
+	Method: InsertString:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x016204D0
+		Ram Offset 0x1816216d0
+		Virtual Method Slot: 65535
+
+	Method: SlideWindow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01620570
+		Ram Offset 0x181621770
+		Virtual Method Slot: 65535
+
+	Method: FindLongestMatch:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01620640
+		Ram Offset 0x181621840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: curMatch
+			Type: System.Int32
+			Default Value: 
+	Method: DeflateStored:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01620A60
+		Ram Offset 0x181621c60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: flush
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: finish
+			Type: System.Boolean
+			Default Value: 
+	Method: DeflateFast:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01620BA0
+		Ram Offset 0x181621da0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: flush
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: finish
+			Type: System.Boolean
+			Default Value: 
+	Method: DeflateSlow:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01620E40
+		Ram Offset 0x181622040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: flush
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: finish
+			Type: System.Boolean
+			Default Value: 

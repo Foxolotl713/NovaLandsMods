@@ -1,0 +1,764 @@
+Type: DG.Tweening.Core.TweenManager:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		DG.Tweening.Core.TweenManager/CapacityIncreaseMode
+
+	Static Field: _DefaultMaxTweeners
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 200
+
+	Static Field: _DefaultMaxSequences
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 50
+
+	Static Field: _MaxTweensReached
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: Max Tweens reached: capacity has automatically been increased from #0 to #1. Use DOTween.SetTweensCapacity to set it manually at startup
+
+	Static Field: _EpsilonVsTimeCheck
+		Type: System.Single
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1E-06
+
+	Static Field: isUnityEditor
+		Type: System.Boolean
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: isDebugBuild
+		Type: System.Boolean
+		Offset in Defining Type: 0x1
+		Has Default: False
+
+	Static Field: maxActive
+		Type: System.Int32
+		Offset in Defining Type: 0x4
+		Has Default: False
+
+	Static Field: maxTweeners
+		Type: System.Int32
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: maxSequences
+		Type: System.Int32
+		Offset in Defining Type: 0xC
+		Has Default: False
+
+	Static Field: hasActiveTweens
+		Type: System.Boolean
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: hasActiveDefaultTweens
+		Type: System.Boolean
+		Offset in Defining Type: 0x11
+		Has Default: False
+
+	Static Field: hasActiveLateTweens
+		Type: System.Boolean
+		Offset in Defining Type: 0x12
+		Has Default: False
+
+	Static Field: hasActiveFixedTweens
+		Type: System.Boolean
+		Offset in Defining Type: 0x13
+		Has Default: False
+
+	Static Field: hasActiveManualTweens
+		Type: System.Boolean
+		Offset in Defining Type: 0x14
+		Has Default: False
+
+	Static Field: totActiveTweens
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: totActiveDefaultTweens
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Static Field: totActiveLateTweens
+		Type: System.Int32
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: totActiveFixedTweens
+		Type: System.Int32
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Static Field: totActiveManualTweens
+		Type: System.Int32
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: totActiveTweeners
+		Type: System.Int32
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Static Field: totActiveSequences
+		Type: System.Int32
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Static Field: totPooledTweeners
+		Type: System.Int32
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Static Field: totPooledSequences
+		Type: System.Int32
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Static Field: totTweeners
+		Type: System.Int32
+		Offset in Defining Type: 0x3C
+		Has Default: False
+
+	Static Field: totSequences
+		Type: System.Int32
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Static Field: isUpdateLoop
+		Type: System.Boolean
+		Offset in Defining Type: 0x44
+		Has Default: False
+
+	Static Field: _activeTweens
+		Type: DG.Tweening.Tween[]
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Static Field: _pooledTweeners
+		Type: DG.Tweening.Tween[]
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Static Field: _PooledSequences
+		Type: System.Collections.Generic.Stack`1<DG.Tweening.Tween>
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Static Field: _KillList
+		Type: System.Collections.Generic.List`1<DG.Tweening.Tween>
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Static Field: _TweenLinks
+		Type: System.Collections.Generic.Dictionary`2<DG.Tweening.Tween,DG.Tweening.Core.TweenLink>
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Static Field: _totTweenLinks
+		Type: System.Int32
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Static Field: _maxActiveLookupId
+		Type: System.Int32
+		Offset in Defining Type: 0x74
+		Has Default: False
+
+	Static Field: _requiresActiveReorganization
+		Type: System.Boolean
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Static Field: _reorganizeFromId
+		Type: System.Int32
+		Offset in Defining Type: 0x7C
+		Has Default: False
+
+	Static Field: _minPooledTweenerId
+		Type: System.Int32
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Static Field: _maxPooledTweenerId
+		Type: System.Int32
+		Offset in Defining Type: 0x84
+		Has Default: False
+
+	Static Field: _despawnAllCalledFromUpdateLoopCallback
+		Type: System.Boolean
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00C2F7B0
+		Ram Offset 0x180c309b0
+		Virtual Method Slot: 65535
+
+	Method: GetTweener:
+		Accessibility: Assembly
+		Return Type: DG.Tweening.Core.TweenerCore`3<T1, T2, TPlugOptions>
+		File Offset 0x00DD2020
+		Ram Offset 0x180dd3220
+		Virtual Method Slot: 65535
+
+	Method: GetSequence:
+		Accessibility: Assembly
+		Return Type: DG.Tweening.Sequence
+		File Offset 0x00C2FCC0
+		Ram Offset 0x180c30ec0
+		Virtual Method Slot: 65535
+
+	Method: SetUpdateType:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00C30140
+		Ram Offset 0x180c31340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+		Parameter 1:
+			Name: updateType
+			Type: DG.Tweening.UpdateType
+			Default Value: 
+		Parameter 2:
+			Name: isIndependentUpdate
+			Type: System.Boolean
+			Default Value: 
+	Method: AddActiveTweenToSequence:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00C30420
+		Ram Offset 0x180c31620
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+	Method: DespawnAll:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x00C30470
+		Ram Offset 0x180c31670
+		Virtual Method Slot: 65535
+
+	Method: Despawn:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00C307B0
+		Ram Offset 0x180c319b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+		Parameter 1:
+			Name: modifyActiveLists
+			Type: System.Boolean
+			Default Value: True
+	Method: PurgeAll:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00C30E20
+		Ram Offset 0x180c32020
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: isApplicationQuitting
+			Type: System.Boolean
+			Default Value: 
+	Method: PurgePools:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00C31130
+		Ram Offset 0x180c32330
+		Virtual Method Slot: 65535
+
+	Method: AddTweenLink:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00C31250
+		Ram Offset 0x180c32450
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+		Parameter 1:
+			Name: tweenLink
+			Type: DG.Tweening.Core.TweenLink
+			Default Value: 
+	Method: RemoveTweenLink:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00C314C0
+		Ram Offset 0x180c326c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+	Method: ResetCapacities:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00C315C0
+		Ram Offset 0x180c327c0
+		Virtual Method Slot: 65535
+
+	Method: SetCapacities:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00C31610
+		Ram Offset 0x180c32810
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tweenersCapacity
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: sequencesCapacity
+			Type: System.Int32
+			Default Value: 
+	Method: Validate:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x00C31730
+		Ram Offset 0x180c32930
+		Virtual Method Slot: 65535
+
+	Method: Update:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00C31960
+		Ram Offset 0x180c32b60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: updateType
+			Type: DG.Tweening.UpdateType
+			Default Value: 
+		Parameter 1:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: independentTime
+			Type: System.Single
+			Default Value: 
+	Method: Update:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C31BF0
+		Ram Offset 0x180c32df0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+		Parameter 1:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: independentTime
+			Type: System.Single
+			Default Value: 
+		Parameter 3:
+			Name: isSingleTweenManualUpdate
+			Type: System.Boolean
+			Default Value: 
+	Method: FilteredOperation:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x00C31E90
+		Ram Offset 0x180c33090
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: operationType
+			Type: DG.Tweening.Core.Enums.OperationType
+			Default Value: 
+		Parameter 1:
+			Name: filterType
+			Type: DG.Tweening.Core.Enums.FilterType
+			Default Value: 
+		Parameter 2:
+			Name: id
+			Type: System.Object
+			Default Value: 
+		Parameter 3:
+			Name: optionalBool
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: optionalFloat
+			Type: System.Single
+			Default Value: 
+		Parameter 5:
+			Name: optionalObj
+			Type: System.Object
+			Default Value: 
+		Parameter 6:
+			Name: optionalArray
+			Type: System.Object[]
+			Default Value: 
+	Method: Complete:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C32BF0
+		Ram Offset 0x180c33df0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+		Parameter 1:
+			Name: modifyActiveLists
+			Type: System.Boolean
+			Default Value: True
+		Parameter 2:
+			Name: updateMode
+			Type: DG.Tweening.Core.Enums.UpdateMode
+			Default Value: 1
+	Method: Flip:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C32D10
+		Ram Offset 0x180c33f10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+	Method: ForceInit:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00C32D30
+		Ram Offset 0x180c33f30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+		Parameter 1:
+			Name: isSequenced
+			Type: System.Boolean
+			Default Value: False
+	Method: Goto:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C32E00
+		Ram Offset 0x180c34000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+		Parameter 1:
+			Name: to
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: andPlay
+			Type: System.Boolean
+			Default Value: False
+		Parameter 3:
+			Name: updateMode
+			Type: DG.Tweening.Core.Enums.UpdateMode
+			Default Value: 1
+	Method: Pause:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C32F30
+		Ram Offset 0x180c34130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+	Method: Play:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C32F80
+		Ram Offset 0x180c34180
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+	Method: PlayBackwards:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C33010
+		Ram Offset 0x180c34210
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+	Method: PlayForward:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C33220
+		Ram Offset 0x180c34420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+	Method: Restart:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C333A0
+		Ram Offset 0x180c345a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+		Parameter 1:
+			Name: includeDelay
+			Type: System.Boolean
+			Default Value: True
+		Parameter 2:
+			Name: changeDelayTo
+			Type: System.Single
+			Default Value: -1
+	Method: Rewind:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C33490
+		Ram Offset 0x180c34690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+		Parameter 1:
+			Name: includeDelay
+			Type: System.Boolean
+			Default Value: True
+	Method: SmoothRewind:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C33640
+		Ram Offset 0x180c34840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+	Method: TogglePause:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C337C0
+		Ram Offset 0x180c349c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+	Method: TotalPooledTweens:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x00C338D0
+		Ram Offset 0x180c34ad0
+		Virtual Method Slot: 65535
+
+	Method: TotalPlayingTweens:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x00C33930
+		Ram Offset 0x180c34b30
+		Virtual Method Slot: 65535
+
+	Method: GetActiveTweens:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.List`1<DG.Tweening.Tween>
+		File Offset 0x00C33A60
+		Ram Offset 0x180c34c60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: playing
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: fillableList
+			Type: System.Collections.Generic.List`1<DG.Tweening.Tween>
+			Default Value: 
+	Method: GetTweensById:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.List`1<DG.Tweening.Tween>
+		File Offset 0x00C33C30
+		Ram Offset 0x180c34e30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: id
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: playingOnly
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: fillableList
+			Type: System.Collections.Generic.List`1<DG.Tweening.Tween>
+			Default Value: 
+	Method: GetTweensByTarget:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.List`1<DG.Tweening.Tween>
+		File Offset 0x00C33F60
+		Ram Offset 0x180c35160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: target
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: playingOnly
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: fillableList
+			Type: System.Collections.Generic.List`1<DG.Tweening.Tween>
+			Default Value: 
+	Method: MarkForKilling:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00C34140
+		Ram Offset 0x180c35340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+		Parameter 1:
+			Name: isSingleTweenManualUpdate
+			Type: System.Boolean
+			Default Value: False
+	Method: EvaluateTweenLink:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00C34220
+		Ram Offset 0x180c35420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+	Method: AddActiveTween:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00C346B0
+		Ram Offset 0x180c358b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+	Method: ReorganizeActiveTweens:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00C34A80
+		Ram Offset 0x180c35c80
+		Virtual Method Slot: 65535
+
+	Method: DespawnActiveTweens:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00C34D40
+		Ram Offset 0x180c35f40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tweens
+			Type: System.Collections.Generic.List`1<DG.Tweening.Tween>
+			Default Value: 
+	Method: RemoveActiveTween:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00C34E00
+		Ram Offset 0x180c36000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+	Method: ClearTweenArray:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00C354F0
+		Ram Offset 0x180c366f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tweens
+			Type: DG.Tweening.Tween[]
+			Default Value: 
+	Method: IncreaseCapacities:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00C355A0
+		Ram Offset 0x180c367a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: increaseMode
+			Type: DG.Tweening.Core.TweenManager/CapacityIncreaseMode
+			Default Value: 
+	Method: ManageOnRewindCallbackWhenAlreadyRewinded:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00C357E0
+		Ram Offset 0x180c369e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: DG.Tweening.Tween
+			Default Value: 
+		Parameter 1:
+			Name: isPlayBackwardsOrSmoothRewind
+			Type: System.Boolean
+			Default Value: 

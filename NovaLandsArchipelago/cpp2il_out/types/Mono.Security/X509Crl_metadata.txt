@@ -1,0 +1,179 @@
+Type: Mono.Security.X509.X509Crl:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		Mono.Security.X509.X509Crl/X509CrlEntry
+
+	Field: issuer
+		Type: System.String
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: version
+		Type: System.Byte
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: thisUpdate
+		Type: System.DateTime
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: nextUpdate
+		Type: System.DateTime
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: entries
+		Type: System.Collections.ArrayList
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: signatureOID
+		Type: System.String
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: signature
+		Type: System.Byte[]
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: extensions
+		Type: Mono.Security.X509.X509ExtensionCollection
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: encoded
+		Type: System.Byte[]
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: hash_value
+		Type: System.Byte[]
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01676420
+		Ram Offset 0x181677620
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: crl
+			Type: System.Byte[]
+			Default Value: 
+	Method: Parse:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01676570
+		Ram Offset 0x181677770
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: crl
+			Type: System.Byte[]
+			Default Value: 
+	Method: get_Extensions:
+		Accessibility: Public
+		Return Type: Mono.Security.X509.X509ExtensionCollection
+		File Offset 0x003F4770
+		Ram Offset 0x1803f5970
+		Virtual Method Slot: 65535
+
+	Method: get_Hash:
+		Accessibility: Public
+		Return Type: System.Byte[]
+		File Offset 0x01676C00
+		Ram Offset 0x181677e00
+		Virtual Method Slot: 65535
+
+	Method: get_IssuerName:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x00386E40
+		Ram Offset 0x180388040
+		Virtual Method Slot: 65535
+
+	Method: get_NextUpdate:
+		Accessibility: Public
+		Return Type: System.DateTime
+		File Offset 0x003A7D00
+		Ram Offset 0x1803a8f00
+		Virtual Method Slot: 65535
+
+	Method: Compare:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01676EB0
+		Ram Offset 0x1816780b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: array1
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: array2
+			Type: System.Byte[]
+			Default Value: 
+	Method: GetCrlEntry:
+		Accessibility: Public
+		Return Type: Mono.Security.X509.X509Crl/X509CrlEntry
+		File Offset 0x01676F20
+		Ram Offset 0x181678120
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x509
+			Type: Mono.Security.X509.X509Certificate
+			Default Value: 
+	Method: GetCrlEntry:
+		Accessibility: Public
+		Return Type: Mono.Security.X509.X509Crl/X509CrlEntry
+		File Offset 0x01676FB0
+		Ram Offset 0x1816781b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: serialNumber
+			Type: System.Byte[]
+			Default Value: 
+	Method: VerifySignature:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x016771D0
+		Ram Offset 0x1816783d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dsa
+			Type: System.Security.Cryptography.DSA
+			Default Value: 
+	Method: VerifySignature:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x016774E0
+		Ram Offset 0x1816786e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rsa
+			Type: System.Security.Cryptography.RSA
+			Default Value: 
+	Method: VerifySignature:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x016775C0
+		Ram Offset 0x1816787c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: aa
+			Type: System.Security.Cryptography.AsymmetricAlgorithm
+			Default Value: 

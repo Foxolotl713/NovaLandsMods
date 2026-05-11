@@ -1,0 +1,660 @@
+Type: System.Collections.Hashtable:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.Collections.IDictionary
+		System.Collections.ICollection
+		System.Collections.IEnumerable
+		System.Runtime.Serialization.ISerializable
+		System.Runtime.Serialization.IDeserializationCallback
+		System.ICloneable
+
+	Nested Types:
+		System.Collections.Hashtable/bucket
+		System.Collections.Hashtable/KeyCollection
+		System.Collections.Hashtable/ValueCollection
+		System.Collections.Hashtable/SyncHashtable
+		System.Collections.Hashtable/HashtableEnumerator
+		System.Collections.Hashtable/HashtableDebugView
+
+	Static Field: HashPrime
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 101
+
+	Static Field: KeyComparerName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: KeyComparer
+
+	Static Field: ValuesName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: Values
+
+	Static Field: KeysName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: Keys
+
+	Static Field: HashSizeName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: HashSize
+
+	Static Field: s_serializationInfoTable
+		Type: System.Runtime.CompilerServices.ConditionalWeakTable`2<System.Object,System.Runtime.Serialization.SerializationInfo>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: ComparerName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: Comparer
+
+	Static Field: VersionName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: Version
+
+	Static Field: LoadFactorName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: LoadFactor
+
+	Static Field: InitialSize
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 3
+
+	Static Field: HashCodeProviderName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: HashCodeProvider
+
+	Field: _buckets
+		Type: System.Collections.Hashtable/bucket[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: _count
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _occupancy
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: _loadsize
+		Type: System.Int32
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _loadFactor
+		Type: System.Single
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Field: _version
+		Type: System.Int32
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _isWriterInProgress
+		Type: System.Boolean
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Field: _keys
+		Type: System.Collections.ICollection
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _values
+		Type: System.Collections.ICollection
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _keycomparer
+		Type: System.Collections.IEqualityComparer
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: _syncRoot
+		Type: System.Object
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Method: get_SerializationInfoTable:
+		Accessibility: Private
+		Return Type: System.Runtime.CompilerServices.ConditionalWeakTable`2<System.Object, System.Runtime.Serialization.SerializationInfo>
+		File Offset 0x01844B80
+		Ram Offset 0x181845d80
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: trash
+			Type: System.Boolean
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01844C00
+		Ram Offset 0x181845e00
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01844C20
+		Ram Offset 0x181845e20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: capacity
+			Type: System.Int32
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01844C30
+		Ram Offset 0x181845e30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: capacity
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: loadFactor
+			Type: System.Single
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01844EB0
+		Ram Offset 0x1818460b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: capacity
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: loadFactor
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: equalityComparer
+			Type: System.Collections.IEqualityComparer
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01844F20
+		Ram Offset 0x181846120
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hcp
+			Type: System.Collections.IHashCodeProvider
+			Default Value: 
+		Parameter 1:
+			Name: comparer
+			Type: System.Collections.IComparer
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01845000
+		Ram Offset 0x181846200
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: equalityComparer
+			Type: System.Collections.IEqualityComparer
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01845080
+		Ram Offset 0x181846280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: capacity
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: equalityComparer
+			Type: System.Collections.IEqualityComparer
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01845100
+		Ram Offset 0x181846300
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: capacity
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: loadFactor
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: hcp
+			Type: System.Collections.IHashCodeProvider
+			Default Value: 
+		Parameter 3:
+			Name: comparer
+			Type: System.Collections.IComparer
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x018451E0
+		Ram Offset 0x1818463e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: info
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: context
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: InitHash:
+		Accessibility: Private
+		Return Type: System.UInt32
+		File Offset 0x01845240
+		Ram Offset 0x181846440
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: hashsize
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: seed
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: incr
+			Type: System.UInt32
+			Default Value: 
+	Method: Add:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01845290
+		Ram Offset 0x181846490
+		Virtual Method Slot: 23
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: System.Object
+			Default Value: 
+	Method: Clear:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x018452B0
+		Ram Offset 0x1818464b0
+		Virtual Method Slot: 24
+
+	Method: Clone:
+		Accessibility: Public
+		Return Type: System.Object
+		File Offset 0x01845490
+		Ram Offset 0x181846690
+		Virtual Method Slot: 25
+
+	Method: Contains:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x018455A0
+		Ram Offset 0x1818467a0
+		Virtual Method Slot: 26
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+	Method: ContainsKey:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x018455C0
+		Ram Offset 0x1818467c0
+		Virtual Method Slot: 27
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+	Method: CopyKeys:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01845750
+		Ram Offset 0x181846950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: array
+			Type: System.Array
+			Default Value: 
+		Parameter 1:
+			Name: arrayIndex
+			Type: System.Int32
+			Default Value: 
+	Method: CopyEntries:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x018457F0
+		Ram Offset 0x1818469f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: array
+			Type: System.Array
+			Default Value: 
+		Parameter 1:
+			Name: arrayIndex
+			Type: System.Int32
+			Default Value: 
+	Method: CopyTo:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x018458F0
+		Ram Offset 0x181846af0
+		Virtual Method Slot: 28
+
+		Parameter 0:
+			Name: array
+			Type: System.Array
+			Default Value: 
+		Parameter 1:
+			Name: arrayIndex
+			Type: System.Int32
+			Default Value: 
+	Method: CopyValues:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01845B90
+		Ram Offset 0x181846d90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: array
+			Type: System.Array
+			Default Value: 
+		Parameter 1:
+			Name: arrayIndex
+			Type: System.Int32
+			Default Value: 
+	Method: get_Item:
+		Accessibility: Public
+		Return Type: System.Object
+		File Offset 0x01845C30
+		Ram Offset 0x181846e30
+		Virtual Method Slot: 29
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+	Method: set_Item:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01845E10
+		Ram Offset 0x181847010
+		Virtual Method Slot: 30
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: System.Object
+			Default Value: 
+	Method: expand:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01845E30
+		Ram Offset 0x181847030
+		Virtual Method Slot: 65535
+
+	Method: rehash:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01845EA0
+		Ram Offset 0x1818470a0
+		Virtual Method Slot: 65535
+
+	Method: UpdateVersion:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01845ED0
+		Ram Offset 0x1818470d0
+		Virtual Method Slot: 65535
+
+	Method: rehash:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01845EF0
+		Ram Offset 0x1818470f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newsize
+			Type: System.Int32
+			Default Value: 
+	Method: System.Collections.IEnumerable.GetEnumerator:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x01846080
+		Ram Offset 0x181847280
+		Virtual Method Slot: 19
+
+	Method: GetEnumerator:
+		Accessibility: Public
+		Return Type: System.Collections.IDictionaryEnumerator
+		File Offset 0x01846140
+		Ram Offset 0x181847340
+		Virtual Method Slot: 31
+
+	Method: GetHash:
+		Accessibility: Family
+		Return Type: System.Int32
+		File Offset 0x01846200
+		Ram Offset 0x181847400
+		Virtual Method Slot: 32
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+	Method: get_IsReadOnly:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 33
+
+	Method: get_IsFixedSize:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 34
+
+	Method: get_IsSynchronized:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 35
+
+	Method: KeyEquals:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x01846290
+		Ram Offset 0x181847490
+		Virtual Method Slot: 36
+
+		Parameter 0:
+			Name: item
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: key
+			Type: System.Object
+			Default Value: 
+	Method: get_Keys:
+		Accessibility: Public
+		Return Type: System.Collections.ICollection
+		File Offset 0x01846360
+		Ram Offset 0x181847560
+		Virtual Method Slot: 37
+
+	Method: get_Values:
+		Accessibility: Public
+		Return Type: System.Collections.ICollection
+		File Offset 0x01846460
+		Ram Offset 0x181847660
+		Virtual Method Slot: 38
+
+	Method: Insert:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01846560
+		Ram Offset 0x181847760
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: nvalue
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: add
+			Type: System.Boolean
+			Default Value: 
+	Method: putEntry:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01846BC0
+		Ram Offset 0x181847dc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newBuckets
+			Type: System.Collections.Hashtable/bucket[]
+			Default Value: 
+		Parameter 1:
+			Name: key
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: nvalue
+			Type: System.Object
+			Default Value: 
+		Parameter 3:
+			Name: hashcode
+			Type: System.Int32
+			Default Value: 
+	Method: Remove:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01846D90
+		Ram Offset 0x181847f90
+		Virtual Method Slot: 39
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+	Method: get_SyncRoot:
+		Accessibility: Public
+		Return Type: System.Object
+		File Offset 0x01847090
+		Ram Offset 0x181848290
+		Virtual Method Slot: 40
+
+	Method: get_Count:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00387EB0
+		Ram Offset 0x1803890b0
+		Virtual Method Slot: 41
+
+	Method: Synchronized:
+		Accessibility: Public
+		Return Type: System.Collections.Hashtable
+		File Offset 0x01847140
+		Ram Offset 0x181848340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: table
+			Type: System.Collections.Hashtable
+			Default Value: 
+	Method: GetObjectData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01847220
+		Ram Offset 0x181848420
+		Virtual Method Slot: 42
+
+		Parameter 0:
+			Name: info
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: context
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: OnDeserialization:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01847E40
+		Ram Offset 0x181849040
+		Virtual Method Slot: 43
+
+		Parameter 0:
+			Name: sender
+			Type: System.Object
+			Default Value: 

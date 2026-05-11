@@ -1,0 +1,476 @@
+Type: UnityEngine.Timeline.ControlPlayableAsset:
+	Base Class: 
+		UnityEngine.Playables.PlayableAsset
+
+	Interfaces:
+		UnityEngine.Timeline.IPropertyPreview
+		UnityEngine.Timeline.ITimelineClipAsset
+
+	Nested Types:
+		UnityEngine.Timeline.ControlPlayableAsset/<GetControlableScripts>d__39
+
+	Static Field: k_MaxRandInt
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 10000
+
+	Static Field: k_EmptyDirectorsList
+		Type: System.Collections.Generic.List`1<UnityEngine.Playables.PlayableDirector>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: k_EmptyParticlesList
+		Type: System.Collections.Generic.List`1<UnityEngine.ParticleSystem>
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: s_SubEmitterCollector
+		Type: System.Collections.Generic.HashSet`1<UnityEngine.ParticleSystem>
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: sourceGameObject
+		Type: UnityEngine.ExposedReference`1<UnityEngine.GameObject>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: s_ProcessedDirectors
+		Type: System.Collections.Generic.HashSet`1<UnityEngine.Playables.PlayableDirector>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: s_CreatedPrefabs
+		Type: System.Collections.Generic.HashSet`1<UnityEngine.GameObject>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: prefabGameObject
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: updateParticle
+		Type: System.Boolean
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: particleRandomSeed
+		Type: System.UInt32
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Field: updateDirector
+		Type: System.Boolean
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: updateITimeControl
+		Type: System.Boolean
+		Offset in Defining Type: 0x39
+		Has Default: False
+
+	Field: searchHierarchy
+		Type: System.Boolean
+		Offset in Defining Type: 0x3A
+		Has Default: False
+
+	Field: active
+		Type: System.Boolean
+		Offset in Defining Type: 0x3B
+		Has Default: False
+
+	Field: postPlayback
+		Type: UnityEngine.Timeline.ActivationControlPlayable/PostPlaybackState
+		Offset in Defining Type: 0x3C
+		Has Default: False
+
+	Field: m_ControlDirectorAsset
+		Type: UnityEngine.Playables.PlayableAsset
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: m_Duration
+		Type: System.Double
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: m_SupportLoop
+		Type: System.Boolean
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: <controllingDirectors>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x51
+		Has Default: False
+
+	Field: <controllingParticles>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x52
+		Has Default: False
+
+	Method: get_controllingDirectors:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00E835D0
+		Ram Offset 0x180e847d0
+		Virtual Method Slot: 65535
+
+	Method: set_controllingDirectors:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00E835E0
+		Ram Offset 0x180e847e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_controllingParticles:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01F98490
+		Ram Offset 0x181f99690
+		Virtual Method Slot: 65535
+
+	Method: set_controllingParticles:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023EC580
+		Ram Offset 0x1823ed780
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: OnEnable:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023EC590
+		Ram Offset 0x1823ed790
+		Virtual Method Slot: 65535
+
+	Method: get_duration:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x023EC5F0
+		Ram Offset 0x1823ed7f0
+		Virtual Method Slot: 7
+
+	Method: get_clipCaps:
+		Accessibility: Public
+		Return Type: UnityEngine.Timeline.ClipCaps
+		File Offset 0x023EC600
+		Ram Offset 0x1823ed800
+		Virtual Method Slot: 10
+
+	Method: CreatePlayable:
+		Accessibility: Public
+		Return Type: UnityEngine.Playables.Playable
+		File Offset 0x023EC610
+		Ram Offset 0x1823ed810
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: ConnectPlayablesToMixer:
+		Accessibility: Private
+		Return Type: UnityEngine.Playables.Playable
+		File Offset 0x023ED610
+		Ram Offset 0x1823ee810
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: playables
+			Type: System.Collections.Generic.List`1<UnityEngine.Playables.Playable>
+			Default Value: 
+	Method: CreateActivationPlayable:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023ED9F0
+		Ram Offset 0x1823eebf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: root
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 1:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 2:
+			Name: outplayables
+			Type: System.Collections.Generic.List`1<UnityEngine.Playables.Playable>
+			Default Value: 
+	Method: SearchHierarchyAndConnectParticleSystem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023EDBD0
+		Ram Offset 0x1823eedd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: particleSystems
+			Type: System.Collections.Generic.IEnumerable`1<UnityEngine.ParticleSystem>
+			Default Value: 
+		Parameter 1:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 2:
+			Name: outplayables
+			Type: System.Collections.Generic.List`1<UnityEngine.Playables.Playable>
+			Default Value: 
+	Method: SearchHierarchyAndConnectDirector:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023EDF40
+		Ram Offset 0x1823ef140
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: directors
+			Type: System.Collections.Generic.IEnumerable`1<UnityEngine.Playables.PlayableDirector>
+			Default Value: 
+		Parameter 1:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 2:
+			Name: outplayables
+			Type: System.Collections.Generic.List`1<UnityEngine.Playables.Playable>
+			Default Value: 
+		Parameter 3:
+			Name: disableSelfReferences
+			Type: System.Boolean
+			Default Value: 
+	Method: SearchHierarchyAndConnectControlableScripts:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023EE3D0
+		Ram Offset 0x1823ef5d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: controlableScripts
+			Type: System.Collections.Generic.IEnumerable`1<UnityEngine.MonoBehaviour>
+			Default Value: 
+		Parameter 1:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 2:
+			Name: outplayables
+			Type: System.Collections.Generic.List`1<UnityEngine.Playables.Playable>
+			Default Value: 
+	Method: ConnectMixerAndPlayable:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023EE810
+		Ram Offset 0x1823efa10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: mixer
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+		Parameter 2:
+			Name: playable
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+		Parameter 3:
+			Name: portIndex
+			Type: System.Int32
+			Default Value: 
+	Method: GetComponent:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.IList`1<T>
+		File Offset 0x00D429A0
+		Ram Offset 0x180d43ba0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: gameObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: GetControlableScripts:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.IEnumerable`1<UnityEngine.MonoBehaviour>
+		File Offset 0x023EE990
+		Ram Offset 0x1823efb90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: root
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: UpdateDurationAndLoopFlag:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023EEA30
+		Ram Offset 0x1823efc30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: directors
+			Type: System.Collections.Generic.IList`1<UnityEngine.Playables.PlayableDirector>
+			Default Value: 
+		Parameter 1:
+			Name: particleSystems
+			Type: System.Collections.Generic.IList`1<UnityEngine.ParticleSystem>
+			Default Value: 
+	Method: GetControllableParticleSystems:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.IList`1<UnityEngine.ParticleSystem>
+		File Offset 0x023EF260
+		Ram Offset 0x1823f0460
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: GetControllableParticleSystems:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023EF4A0
+		Ram Offset 0x1823f06a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: t
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 1:
+			Name: roots
+			Type: System.Collections.Generic.ICollection`1<UnityEngine.ParticleSystem>
+			Default Value: 
+		Parameter 2:
+			Name: subEmitters
+			Type: System.Collections.Generic.HashSet`1<UnityEngine.ParticleSystem>
+			Default Value: 
+	Method: CacheSubEmitters:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023EF780
+		Ram Offset 0x1823f0980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ps
+			Type: UnityEngine.ParticleSystem
+			Default Value: 
+		Parameter 1:
+			Name: subEmitters
+			Type: System.Collections.Generic.HashSet`1<UnityEngine.ParticleSystem>
+			Default Value: 
+	Method: GatherProperties:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023EFA00
+		Ram Offset 0x1823f0c00
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: director
+			Type: UnityEngine.Playables.PlayableDirector
+			Default Value: 
+		Parameter 1:
+			Name: driver
+			Type: UnityEngine.Timeline.IPropertyCollector
+			Default Value: 
+	Method: PreviewParticles:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023EFDD0
+		Ram Offset 0x1823f0fd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: driver
+			Type: UnityEngine.Timeline.IPropertyCollector
+			Default Value: 
+		Parameter 1:
+			Name: particles
+			Type: System.Collections.Generic.IEnumerable`1<UnityEngine.ParticleSystem>
+			Default Value: 
+	Method: PreviewActivation:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023F0200
+		Ram Offset 0x1823f1400
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: driver
+			Type: UnityEngine.Timeline.IPropertyCollector
+			Default Value: 
+		Parameter 1:
+			Name: objects
+			Type: System.Collections.Generic.IEnumerable`1<UnityEngine.GameObject>
+			Default Value: 
+	Method: PreviewTimeControl:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023F0460
+		Ram Offset 0x1823f1660
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: driver
+			Type: UnityEngine.Timeline.IPropertyCollector
+			Default Value: 
+		Parameter 1:
+			Name: director
+			Type: UnityEngine.Playables.PlayableDirector
+			Default Value: 
+		Parameter 2:
+			Name: scripts
+			Type: System.Collections.Generic.IEnumerable`1<UnityEngine.MonoBehaviour>
+			Default Value: 
+	Method: PreviewDirectors:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023F0690
+		Ram Offset 0x1823f1890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: driver
+			Type: UnityEngine.Timeline.IPropertyCollector
+			Default Value: 
+		Parameter 1:
+			Name: directors
+			Type: System.Collections.Generic.IEnumerable`1<UnityEngine.Playables.PlayableDirector>
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023F09D0
+		Ram Offset 0x1823f1bd0
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023F0A50
+		Ram Offset 0x1823f1c50
+		Virtual Method Slot: 65535

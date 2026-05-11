@@ -1,0 +1,1372 @@
+Type: UIPointer
+
+Method: System.Boolean Rewired.Demos.UIPointer::get_autoSort():	Method Body (x86 ASM):
+		0x180833E30 movzx eax,byte ptr [rcx+21h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 33 | None ||| N/A | N/A
+		0x180833E34 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180833E35 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean Rewired.Demos.UIPointer::get_autoSort():
+		End of function at 0x180833E36
+		Absolute End is at 0x180833E36
+		Identified Jump Destination addresses:
+
+		0x180833E30: [!] Reads field _autoSort from {'this' (function parameter, type Rewired.Demos.UIPointer)} and stores in a new local {'_autoSort' (type System.Boolean)}
+
+		0x180833E34: [!] Returns {'_autoSort' (type System.Boolean)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.UIPointer
+	System.Boolean get_autoSort()
+		System.Boolean _autoSort = this._autoSort
+		return _autoSort
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Boolean Rewired.Demos.UIPointer::_autoSort
+	IL_0006: ret
+	
+
+Method: System.Void Rewired.Demos.UIPointer::set_autoSort(System.Boolean):	Method Body (x86 ASM):
+		0x1809D08F0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D08F2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D08F6 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809D08F9 cmp dl,[rcx+21h]		; DEBUG: {Register}/DL {Memory}/None ||| RCX | 33 | None ||| N/A | N/A
+		0x1809D08FC je short 00000001809D0965h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D08FE mov [rcx+21h],dl		; DEBUG: {Memory}/None {Register}/DL ||| RCX | 33 | None ||| N/A | N/A
+		0x1809D0901 test dl,dl		; DEBUG: {Register}/DL {Register}/DL ||| None | 0 | None ||| N/A | N/A
+		0x1809D0903 je short 00000001809D0965h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0905 mov rax,[1832A9D48h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D090C test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D090F jne short 00000001809D0929h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0911 lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x1809D0918 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D091D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0920 je short 00000001809D0971h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0922 mov [1832A9D48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0929 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D092C call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D092E mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0931 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0934 je short 00000001809D096Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0936 mov rax,[1832AA360h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576928 | None ||| N/A | N/A
+		0x1809D093D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0940 jne short 00000001809D095Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0942 lea rcx,[18297BE90h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485950096 | None ||| N/A | N/A
+		0x1809D0949 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D094E test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0951 je short 00000001809D0988h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0953 mov [1832AA360h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576928 | None ||| N/A | N/A
+		0x1809D095A mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D095D add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D0961 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0962 jmp rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0965 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D0969 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D096A ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D096B call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0970 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.UIPointer::set_autoSort(System.Boolean):
+		End of function at 0x1809D0971
+		Absolute End is at 0x1809D0971
+		Identified Jump Destination addresses:
+
+		0x1809D08F0: Saves the content of rbx to the stack
+		0x1809D08F6: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rcx into rbx
+		0x1809D08F9: [!] Compares {'value' (function parameter, type System.Boolean)} and {field _autoSort, read from local {'this' (function parameter, type Rewired.Demos.UIPointer)}}
+		0x1809D08FC: Jumps to 0x1809D0965 (which is an if statement's body) if value equals this._autoSort ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809D08FE: [!] Sets the field _autoSort (Type System.Boolean) on local {'this' (function parameter, type Rewired.Demos.UIPointer)} to the value stored in {'value' (function parameter, type System.Boolean)}
+		0x1809D0901: [!] Compares {'value' (function parameter, type System.Boolean)} and False
+		0x1809D0903: Jumps to 0x1809D0965 (which is an if statement's body) if value equals False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809D0905: Loads string "<õ7" into register rax as constant UnityEngine.Component.get_transform
+		0x1809D090C: Compares UnityEngine.Component.get_transform and 0
+		0x1809D090F: Jumps to 0x1809D0929 if UnityEngine.Component.get_transform != 0
+
+		0x1809D0911: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant4' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0918: Looks up unity ICall by name "UnityEngine.Component::get_transform()" which resolves to UnityEngine.Transform UnityEngine.Component::get_transform()
+		0x1809D091D: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0920: Jumps to 0x1809D0971 if UnityEngine.Component.get_transform equals 0 ;  - This is probably a goto, jumping to 0x1809D0971 which is after end of current block @ 0x1809D0965 (started at 0x1809D0905)
+
+		0x1809D0929: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rbx into rcx
+		0x1809D092C: [!] Calls managed method UnityEngine.Transform UnityEngine.Component::get_transform() on instance {'this' (function parameter, type Rewired.Demos.UIPointer)} and stores the result in {'transform' (type UnityEngine.Transform)}
+
+		0x1809D092E: Copies {'transform' (type UnityEngine.Transform)} from rax into rbx
+		0x1809D0931: [!] Compares {'transform' (type UnityEngine.Transform)} and 0
+		0x1809D0934: Jumps to 0x1809D096B (which throws a NRE) if transform equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D0936: Loads string "dì×" into register rax as constant UnityEngine.Transform.SetAsLastSibling
+		0x1809D093D: Compares UnityEngine.Transform.SetAsLastSibling and 0
+		0x1809D0940: Jumps to 0x1809D095A if UnityEngine.Transform.SetAsLastSibling != 0
+
+		0x1809D0942: Loads string "UnityEngine.Transform::SetAsLastSibling()" into register rcx as constant {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0949: Looks up unity ICall by name "UnityEngine.Transform::SetAsLastSibling()" which resolves to System.Void UnityEngine.Transform::SetAsLastSibling()
+		0x1809D094E: Compares UnityEngine.Transform.SetAsLastSibling and 0
+		0x1809D0951: Jumps to 0x1809D0988 if UnityEngine.Transform.SetAsLastSibling equals 0 ;  - This is probably a goto, jumping to 0x1809D0988 which is after end of current block @ 0x1809D0965 (started at 0x1809D0905)
+
+		0x1809D095A: Copies {'transform' (type UnityEngine.Transform)} from rbx into rcx
+		0x1809D096A: [!] Returns from the function
+
+		0x1809D096B: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.UIPointer
+	System.Void set_autoSort(System.Boolean value)
+
+		if (value != this._autoSort)
+		    this._autoSort = value
+
+		    if (value != False)
+
+		        UnityEngine.Transform transform = this.transform
+		    endif
+            
+		    return
+		    throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: ldarg.0
+	IL_0002: ldfld System.Boolean Rewired.Demos.UIPointer::_autoSort
+	IL_0007: beq.s IL_001b
+	IL_0009: ldarg.0
+	IL_000a: ldarg.1
+	IL_000b: stfld System.Boolean Rewired.Demos.UIPointer::_autoSort
+	IL_0010: ldarg.1
+	IL_0011: ldc.i4.0
+	IL_0012: beq.s IL_001b
+	IL_0014: ldarg.0
+	IL_0015: call UnityEngine.Transform UnityEngine.Component::get_transform()
+	IL_001a: stloc.0
+	IL_001b: ret
+	IL_001c: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0021: throw
+	
+
+Method: System.Void Rewired.Demos.UIPointer::Awake():	Method Body (x86 ASM):
+		0x1809D09A0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1809D09A5 mov [rsp+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 16 | None ||| N/A | N/A
+		0x1809D09AA push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D09AB sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D09AF cmp byte ptr [18329BDDEh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518174 | None ||| N/A | 0
+		0x1809D09B6 mov rsi,rcx		; DEBUG: {Register}/RSI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809D09B9 jne short 00000001809D09CEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D09BB lea rcx,[183103B90h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493846416 | None ||| N/A | N/A
+		0x1809D09C2 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D09C7 mov byte ptr [18329BDDEh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518174 | None ||| N/A | 1
+		0x1809D09CE mov rbx,[183103B90h]		; DEBUG: {Register}/RBX {Memory}/None ||| RIP | 6493846416 | None ||| N/A | N/A
+		0x1809D09D5 cmp qword ptr [rbx+38h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RBX | 56 | None ||| N/A | 0
+		0x1809D09DA jne short 00000001809D09E4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D09DC mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D09DF call 00000001802E7F90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D09E4 mov rax,[rbx+38h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 56 | None ||| N/A | N/A
+		0x1809D09E8 mov r8,[rax]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1809D09EB xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1809D09ED mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1809D09F0 call 0000000180D41BE0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D09F5 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D09F8 xor ebx,ebx		; DEBUG: {Register}/EBX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D09FA mov eax,ebx		; DEBUG: {Register}/EAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D09FC test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809D09FF je near ptr 00000001809D0AE7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0A05 cmp eax,[rdi+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDI | 24 | None ||| N/A | N/A
+		0x1809D0A08 jge short 00000001809D0A3Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0A0A cmp ebx,[rdi+18h]		; DEBUG: {Register}/EBX {Memory}/None ||| RDI | 24 | None ||| N/A | N/A
+		0x1809D0A0D jae near ptr 00000001809D0AEDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0A13 movsxd rax,ebx		; DEBUG: {Register}/RAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0A16 mov rcx,[rdi+rax*8+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 32 | RAX ||| N/A | N/A
+		0x1809D0A1B test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0A1E je near ptr 00000001809D0AE7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0A24 mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1809D0A27 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0A29 mov r8,[rax+2D0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 720 | None ||| N/A | N/A
+		0x1809D0A30 call qword ptr [rax+2C8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 712 | None ||| N/A | N/A
+		0x1809D0A36 inc ebx		; DEBUG: {Register}/EBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0A38 mov eax,ebx		; DEBUG: {Register}/EAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0A3A jmp short 00000001809D0A05h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0A3C cmp byte ptr [rsi+20h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RSI | 32 | None ||| N/A | 0
+		0x1809D0A40 je short 00000001809D0A6Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0A42 mov rax,[1832A9A38h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495574584 | None ||| N/A | N/A
+		0x1809D0A49 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0A4C jne short 00000001809D0A6Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0A4E lea rcx,[182978060h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485934176 | None ||| N/A | N/A
+		0x1809D0A55 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0A5A test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0A5D je near ptr 00000001809D0AF3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0A63 mov [1832A9A38h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495574584 | None ||| N/A | N/A
+		0x1809D0A6A xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0A6C call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0A6E cmp byte ptr [rsi+21h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RSI | 33 | None ||| N/A | 0
+		0x1809D0A72 je short 00000001809D0ACEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0A74 mov rax,[1832A9D48h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0A7B test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0A7E jne short 00000001809D0A98h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0A80 lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x1809D0A87 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0A8C test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0A8F je short 00000001809D0B0Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0A91 mov [1832A9D48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0A98 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1809D0A9B call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0A9D mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0AA0 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0AA3 je short 00000001809D0AE7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0AA5 mov rax,[1832AA360h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576928 | None ||| N/A | N/A
+		0x1809D0AAC test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0AAF jne short 00000001809D0AC9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0AB1 lea rcx,[18297BE90h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485950096 | None ||| N/A | N/A
+		0x1809D0AB8 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0ABD test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0AC0 je short 00000001809D0B21h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0AC2 mov [1832AA360h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576928 | None ||| N/A | N/A
+		0x1809D0AC9 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0ACC call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0ACE xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0AD0 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1809D0AD3 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1809D0AD8 mov rsi,[rsp+38h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1809D0ADD add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D0AE1 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0AE2 jmp near ptr 00000001809D1180h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0AE7 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0AEC int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.UIPointer::Awake():
+		End of function at 0x1809D0AED
+		Absolute End is at 0x1809D0AED
+		Identified Jump Destination addresses:
+
+		0x1809D09AA: Saves the content of rdi to the stack
+		0x1809D09AF: Compares {Unknown Global at 0x18329BDDE, first ten bytes are [4 0 156 112 239 2 112 160 4 0], or as chars " pïp  "} and 0
+		0x1809D09B6: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rcx into rsi
+		0x1809D09B9: Jumps to 0x1809D09CE if {Unknown Global at 0x18329BDDE, first ten bytes are [4 0 156 112 239 2 112 160 4 0], or as chars " pïp  "} != 0
+
+		0x1809D09BB: Loads the global generic method reference for method T[] UnityEngine.Component::GetComponentsInChildren<UnityEngine.UI.Graphic>() on type UnityEngine.Component and stores the result in constant {'GetComponentsInChildren' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809D09C2: Initializes runtime metadata value 
+		0x1809D09CE: Loads the global generic method reference for method T[] UnityEngine.Component::GetComponentsInChildren<UnityEngine.UI.Graphic>() on type UnityEngine.Component and stores the result in constant {'GetComponentsInChildren' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rbx
+		0x1809D09D5: Compares "{il2cpp field on {'GetComponentsInChildren' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)}, offset 0x38}" and 0
+		0x1809D09DA: Jumps to 0x1809D09E4 if "{il2cpp field on {'GetComponentsInChildren' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)}, offset 0x38}" != 0
+
+		0x1809D09DC: Copies {'GetComponentsInChildren' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} from rbx into rcx
+		0x1809D09EB: Clears register rdx, yielding zero-local {'local1' (type System.Int32)}
+		0x1809D09ED: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rsi into rcx
+		0x1809D09F0: [!] Calls managed method T[] UnityEngine.Component::GetComponentsInChildren(System.Boolean) on instance {'this' (function parameter, type Rewired.Demos.UIPointer)} with arguments [{'local1' (type System.Int32)}] and stores the result in {'componentsInChildren' (type T[])}
+
+		0x1809D09F5: Copies {'componentsInChildren' (type T[])} from rax into rdi
+		0x1809D09F8: Clears register rbx, yielding zero-local {'local3' (type System.Int32)}
+		0x1809D09FA: Copies {'local3' (type System.Int32)} from rbx into rax
+		0x1809D09FC: [!] Compares {'componentsInChildren' (type T[])} and 0
+		0x1809D09FF: Jumps to 0x1809D0AE7 (which throws a NRE) if componentsInChildren equals 0. Implicitly present in managed code, so ignored here.
+
+		Potential Loop Start (0x1809D0A05):
+		0x1809D0A05: [!] Compares {'local3' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'componentsInChildren' (type T[])}}
+		0x1809D0A08: Jumps to 0x1809D0A3C if {'local3' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'componentsInChildren' (type T[])}} ;  - Increasing indentation - is while loop, unimportant is False
+
+		0x1809D0A0A: [!] Compares {'local3' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'componentsInChildren' (type T[])}}
+		0x1809D0A0D: Jumps to 0x1809D0AED (which throws a NRE) if {'local3' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'componentsInChildren' (type T[])}}. Implicitly present in managed code, so ignored here.
+		0x1809D0A13: Copies {'local3' (type System.Int32)} from rbx into rax
+		0x1809D0A16: Copies the element in the array {'componentsInChildren' (type T[])} at the index specified by {'local3' (type System.Int32)} into new local {'t' (type T)}
+		0x1809D0A1B: [!] Compares {'t' (type T)} and 0
+		0x1809D0A1E: Jumps to 0x1809D0AE7 (which throws a NRE) if t equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D0A24: Loads the class pointer from t into a constant constant9 in register rax
+		0x1809D0A29: Loads the pointer to the implementation of virtual function  specific to System.Object from the class pointer in rax, slot 25 (from memory offset 720) and stores in constant 
+		0x1809D0A30: [!] Calls managed method  on instance 
+
+		0x1809D0A36: [!] Adds 1 to the value {'local3' (type System.Int32)}, stored in rbx
+		0x1809D0A38: Copies {'local3' (type System.Int32)} from rbx into rax
+		0x1809D0A3A: Jumps to 0x1809D0A05 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x1809D0A3C: [!] Compares {field _hideHardwarePointer, read from local {'this' (function parameter, type Rewired.Demos.UIPointer)}} and False
+		0x1809D0A40: Jumps to 0x1809D0A6E if this._hideHardwarePointer equals False ;  - This is probably a goto, jumping to 0x1809D0A6E which is after end of current block @ 0x1809D0A3C (started at 0x1809D0A05)
+
+		0x1809D0A42: Loads string "w[" into register rax as constant UnityEngine.Cursor.set_visible
+		0x1809D0A49: Compares UnityEngine.Cursor.set_visible and 0
+		0x1809D0A4C: Jumps to 0x1809D0A6A if UnityEngine.Cursor.set_visible != 0 ;  - This is probably a goto, jumping to 0x1809D0A6A which is after end of current block @ 0x1809D0A3C (started at 0x1809D0A05)
+
+		0x1809D0A4E: Loads string "UnityEngine.Cursor::set_visible(System.Boolean)" into register rcx as constant {'constant13' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0A55: Looks up unity ICall by name "UnityEngine.Cursor::set_visible(System.Boolean)" which resolves to System.Void UnityEngine.Cursor::set_visible(System.Boolean)
+		0x1809D0A5A: Compares UnityEngine.Cursor.set_visible and 0
+		0x1809D0A5D: Jumps to 0x1809D0AF3 if UnityEngine.Cursor.set_visible equals 0 ;  - This is probably a goto, jumping to 0x1809D0AF3 which is after end of current block @ 0x1809D0A3C (started at 0x1809D0A05)
+
+		0x1809D0A6A: Clears register rcx, yielding zero-local {'local6' (type System.Int32)}
+		0x1809D0A6C: [!] Calls static managed method System.Void UnityEngine.Cursor::set_visible(System.Boolean) with arguments [{'local6' (type System.Int32)}]
+
+		0x1809D0A6E: [!] Compares {field _autoSort, read from local {'this' (function parameter, type Rewired.Demos.UIPointer)}} and False
+		0x1809D0A72: Jumps to 0x1809D0ACE if this._autoSort equals False ;  - This is probably a goto, jumping to 0x1809D0ACE which is after end of current block @ 0x1809D0A3C (started at 0x1809D0A05)
+
+		0x1809D0A74: Loads string "<õ7" into register rax as constant UnityEngine.Component.get_transform
+		0x1809D0A7B: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0A7E: Jumps to 0x1809D0A98 if UnityEngine.Component.get_transform != 0 ;  - This is probably a goto, jumping to 0x1809D0A98 which is after end of current block @ 0x1809D0A3C (started at 0x1809D0A05)
+
+		0x1809D0A80: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant18' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0A87: Looks up unity ICall by name "UnityEngine.Component::get_transform()" which resolves to UnityEngine.Transform UnityEngine.Component::get_transform()
+		0x1809D0A8C: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0A8F: Jumps to 0x1809D0B0A if UnityEngine.Component.get_transform equals 0 ;  - This is probably a goto, jumping to 0x1809D0B0A which is after end of current block @ 0x1809D0A3C (started at 0x1809D0A05)
+
+		0x1809D0A98: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rsi into rcx
+		0x1809D0A9B: [!] Calls managed method UnityEngine.Transform UnityEngine.Component::get_transform() on instance {'this' (function parameter, type Rewired.Demos.UIPointer)} and stores the result in {'transform' (type UnityEngine.Transform)}
+
+		0x1809D0A9D: Copies {'transform' (type UnityEngine.Transform)} from rax into rbx
+		0x1809D0AA0: [!] Compares {'transform' (type UnityEngine.Transform)} and 0
+		0x1809D0AA3: Jumps to 0x1809D0AE7 (which throws a NRE) if transform equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D0AA5: Loads string "dì×" into register rax as constant UnityEngine.Transform.SetAsLastSibling
+		0x1809D0AAC: Compares UnityEngine.Transform.SetAsLastSibling and 0
+		0x1809D0AAF: Jumps to 0x1809D0AC9 if UnityEngine.Transform.SetAsLastSibling != 0 ;  - This is probably a goto, jumping to 0x1809D0AC9 which is after end of current block @ 0x1809D0A3C (started at 0x1809D0A05)
+
+		0x1809D0AB1: Loads string "UnityEngine.Transform::SetAsLastSibling()" into register rcx as constant {'constant23' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0AB8: Looks up unity ICall by name "UnityEngine.Transform::SetAsLastSibling()" which resolves to System.Void UnityEngine.Transform::SetAsLastSibling()
+		0x1809D0ABD: Compares UnityEngine.Transform.SetAsLastSibling and 0
+		0x1809D0AC0: Jumps to 0x1809D0B21 if UnityEngine.Transform.SetAsLastSibling equals 0 ;  - This is probably a goto, jumping to 0x1809D0B21 which is after end of current block @ 0x1809D0A3C (started at 0x1809D0A05)
+
+		0x1809D0AC9: Copies {'transform' (type UnityEngine.Transform)} from rbx into rcx
+		0x1809D0ACC: [!] Calls managed method System.Void UnityEngine.Transform::SetAsLastSibling() on instance {'transform' (type UnityEngine.Transform)}
+
+		0x1809D0AD0: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rsi into rcx
+		0x1809D0AD3: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant25
+		0x1809D0AD8: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rsi as new constant constant26
+		0x1809D0AE2: [!] Calls managed method System.Void Rewired.Demos.UIPointer::GetDependencies() on instance {'this' (function parameter, type Rewired.Demos.UIPointer)}
+
+		0x1809D0AE2: [!] Returns from the function
+
+		0x1809D0AE7: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.UIPointer
+	System.Void Awake()
+		ulong local1 = 0
+
+		T[] componentsInChildren = base.GetComponentsInChildren(local1) //(Boolean includeInactive)
+		ulong local3 = 0
+
+		while (local3 < componentsInChildren.Length)
+		    T t = componentsInChildren[local3]
+
+		    [instruction error - managed method being called is null]
+		    local3 += 1
+		endwhile
+        
+
+		if (this._hideHardwarePointer == False)
+            goto INSN_1809D0A6E
+        endif
+		ulong local6 = 0
+
+		UnityEngine.Cursor.visible = local6
+
+		INSN_1809D0A6E:
+
+		if (this._autoSort == False)
+            goto INSN_1809D0ACE
+        endif
+
+		UnityEngine.Transform transform = this.transform
+
+		transform.SetAsLastSibling()
+
+		INSN_1809D0ACE:
+
+		this.GetDependencies()
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local componentsInChildren of type T[]
+	
+
+Method: System.Void Rewired.Demos.UIPointer::Update():	Method Body (x86 ASM):
+		0x1809D0B40 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0B42 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D0B46 cmp byte ptr [rcx+21h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 33 | None ||| N/A | 0
+		0x1809D0B4A mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0B4D je near ptr 00000001809D0CD6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0B53 mov rax,[1832A9D48h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0B5A test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0B5D jne short 00000001809D0B7Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0B5F lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x1809D0B66 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0B6B test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0B6E je near ptr 00000001809D0CE2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0B74 mov [1832A9D48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0B7B mov [rsp+30h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 48 | None ||| N/A | N/A
+		0x1809D0B80 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0B83 mov [rsp+38h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 56 | None ||| N/A | N/A
+		0x1809D0B88 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0B8A mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0B8D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0B90 je near ptr 00000001809D0CDCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0B96 mov rax,[1832AA370h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576944 | None ||| N/A | N/A
+		0x1809D0B9D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0BA0 jne short 00000001809D0BBEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0BA2 lea rcx,[18297BFF0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485950448 | None ||| N/A | N/A
+		0x1809D0BA9 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0BAE test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0BB1 je near ptr 00000001809D0CF9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0BB7 mov [1832AA370h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576944 | None ||| N/A | N/A
+		0x1809D0BBE mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809D0BC1 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0BC3 mov esi,eax		; DEBUG: {Register}/ESI {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0BC5 mov rax,[1832A9D48h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0BCC test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0BCF jne short 00000001809D0BEDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0BD1 lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x1809D0BD8 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0BDD test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0BE0 je near ptr 00000001809D0D10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0BE6 mov [1832A9D48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0BED mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0BF0 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0BF2 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0BF5 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0BF8 je near ptr 00000001809D0CDCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0BFE mov rax,[1832AA330h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576880 | None ||| N/A | N/A
+		0x1809D0C05 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C08 jne short 00000001809D0C26h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0C0A lea rcx,[18297C160h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485950816 | None ||| N/A | N/A
+		0x1809D0C11 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0C16 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C19 je near ptr 00000001809D0D27h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0C1F mov [1832AA330h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576880 | None ||| N/A | N/A
+		0x1809D0C26 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C29 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C2B mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C2E test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C31 je near ptr 00000001809D0CDCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0C37 mov rax,[1832AA350h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576912 | None ||| N/A | N/A
+		0x1809D0C3E test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C41 jne short 00000001809D0C5Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0C43 lea rcx,[18297BEE8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485950184 | None ||| N/A | N/A
+		0x1809D0C4A call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0C4F test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C52 je near ptr 00000001809D0D3Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0C58 mov [1832AA350h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576912 | None ||| N/A | N/A
+		0x1809D0C5F mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C62 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C64 dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C66 cmp esi,eax		; DEBUG: {Register}/ESI {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C68 jge short 00000001809D0CCCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0C6A mov rax,[1832A9D48h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0C71 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C74 jne short 00000001809D0C92h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0C76 lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x1809D0C7D call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0C82 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C85 je near ptr 00000001809D0D55h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0C8B mov [1832A9D48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0C92 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C95 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C97 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C9A test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0C9D je short 00000001809D0CDCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0C9F mov rax,[1832AA360h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576928 | None ||| N/A | N/A
+		0x1809D0CA6 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0CA9 jne short 00000001809D0CC7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0CAB lea rcx,[18297BE90h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485950096 | None ||| N/A | N/A
+		0x1809D0CB2 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0CB7 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0CBA je near ptr 00000001809D0D6Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0CC0 mov [1832AA360h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576928 | None ||| N/A | N/A
+		0x1809D0CC7 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0CCA call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0CCC mov rsi,[rsp+30h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1809D0CD1 mov rdi,[rsp+38h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1809D0CD6 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D0CDA pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0CDB ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0CDC call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0CE1 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.UIPointer::Update():
+		End of function at 0x1809D0CE2
+		Absolute End is at 0x1809D0CE2
+		Identified Jump Destination addresses:
+
+		0x1809D0B40: Saves the content of rbx to the stack
+		0x1809D0B46: [!] Compares {field _autoSort, read from local {'this' (function parameter, type Rewired.Demos.UIPointer)}} and False
+		0x1809D0B4A: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rcx into rbx
+		0x1809D0B4D: Jumps to 0x1809D0CD6 (which is an if statement's body) if this._autoSort equals False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809D0B53: Loads string "<õ7" into register rax as constant UnityEngine.Component.get_transform
+		0x1809D0B5A: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0B5D: Jumps to 0x1809D0B7B if UnityEngine.Component.get_transform != 0
+
+		0x1809D0B5F: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant4' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0B66: Looks up unity ICall by name "UnityEngine.Component::get_transform()" which resolves to UnityEngine.Transform UnityEngine.Component::get_transform()
+		0x1809D0B6B: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0B6E: Jumps to 0x1809D0CE2 if UnityEngine.Component.get_transform equals 0 ;  - This is probably a goto, jumping to 0x1809D0CE2 which is after end of current block @ 0x1809D0CD6 (started at 0x1809D0B53)
+
+		0x1809D0B80: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rbx into rcx
+		0x1809D0B88: [!] Calls managed method UnityEngine.Transform UnityEngine.Component::get_transform() on instance {'this' (function parameter, type Rewired.Demos.UIPointer)} and stores the result in {'transform' (type UnityEngine.Transform)}
+
+		0x1809D0B8A: Copies {'transform' (type UnityEngine.Transform)} from rax into rdi
+		0x1809D0B8D: [!] Compares {'transform' (type UnityEngine.Transform)} and 0
+		0x1809D0B90: Jumps to 0x1809D0CDC (which throws a NRE) if transform equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D0B96: Loads string "«×" into register rax as constant UnityEngine.Transform.GetSiblingIndex
+		0x1809D0B9D: Compares UnityEngine.Transform.GetSiblingIndex and 0
+		0x1809D0BA0: Jumps to 0x1809D0BBE if UnityEngine.Transform.GetSiblingIndex != 0
+
+		0x1809D0BA2: Loads string "UnityEngine.Transform::GetSiblingIndex()" into register rcx as constant {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0BA9: Looks up unity ICall by name "UnityEngine.Transform::GetSiblingIndex()" which resolves to System.Int32 UnityEngine.Transform::GetSiblingIndex()
+		0x1809D0BAE: Compares UnityEngine.Transform.GetSiblingIndex and 0
+		0x1809D0BB1: Jumps to 0x1809D0CF9 if UnityEngine.Transform.GetSiblingIndex equals 0 ;  - This is probably a goto, jumping to 0x1809D0CF9 which is after end of current block @ 0x1809D0CD6 (started at 0x1809D0B53)
+
+		0x1809D0BBE: Copies {'transform' (type UnityEngine.Transform)} from rdi into rcx
+		0x1809D0BC1: [!] Calls managed method System.Int32 UnityEngine.Transform::GetSiblingIndex() on instance {'transform' (type UnityEngine.Transform)} and stores the result in {'siblingIndex' (type System.Int32)}
+
+		0x1809D0BC3: Copies {'siblingIndex' (type System.Int32)} from rax into rsi
+		0x1809D0BC5: Loads string "<õ7" into register rax as constant UnityEngine.Component.get_transform
+		0x1809D0BCC: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0BCF: Jumps to 0x1809D0BED if UnityEngine.Component.get_transform != 0
+
+		0x1809D0BD1: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant13' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0BD8: Looks up unity ICall by name "UnityEngine.Component::get_transform()" which resolves to UnityEngine.Transform UnityEngine.Component::get_transform()
+		0x1809D0BDD: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0BE0: Jumps to 0x1809D0D10 if UnityEngine.Component.get_transform equals 0 ;  - This is probably a goto, jumping to 0x1809D0D10 which is after end of current block @ 0x1809D0CD6 (started at 0x1809D0B53)
+
+		0x1809D0BED: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rbx into rcx
+		0x1809D0BF0: [!] Calls managed method UnityEngine.Transform UnityEngine.Component::get_transform() on instance {'this' (function parameter, type Rewired.Demos.UIPointer)} and stores the result in {'transform2' (type UnityEngine.Transform)}
+
+		0x1809D0BF2: Copies {'transform2' (type UnityEngine.Transform)} from rax into rdi
+		0x1809D0BF5: [!] Compares {'transform2' (type UnityEngine.Transform)} and 0
+		0x1809D0BF8: Jumps to 0x1809D0CDC (which throws a NRE) if transform2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D0BFE: Loads string "È<õçÔ" into register rax as constant UnityEngine.Transform.GetParent
+		0x1809D0C05: Compares UnityEngine.Transform.GetParent and 0
+		0x1809D0C08: Jumps to 0x1809D0C26 if UnityEngine.Transform.GetParent != 0
+
+		0x1809D0C0A: Loads string "UnityEngine.Transform::GetParent()" into register rcx as constant {'constant18' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0C11: Looks up unity ICall by name "UnityEngine.Transform::GetParent()" which resolves to UnityEngine.Transform UnityEngine.Transform::GetParent()
+		0x1809D0C16: Compares UnityEngine.Transform.GetParent and 0
+		0x1809D0C19: Jumps to 0x1809D0D27 if UnityEngine.Transform.GetParent equals 0 ;  - This is probably a goto, jumping to 0x1809D0D27 which is after end of current block @ 0x1809D0CD6 (started at 0x1809D0B53)
+
+		0x1809D0C26: Copies {'transform2' (type UnityEngine.Transform)} from rdi into rcx
+		0x1809D0C29: [!] Calls managed method UnityEngine.Transform UnityEngine.Transform::GetParent() on instance {'transform2' (type UnityEngine.Transform)} and stores the result in {'parent' (type UnityEngine.Transform)}
+
+		0x1809D0C2B: Copies {'parent' (type UnityEngine.Transform)} from rax into rdi
+		0x1809D0C2E: [!] Compares {'parent' (type UnityEngine.Transform)} and 0
+		0x1809D0C31: Jumps to 0x1809D0CDC (which throws a NRE) if parent equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D0C37: Reads {Unknown Global at 0x1832AA350, first ten bytes are [130 213 14 0 224 60 245 2 144 213], or as chars "Õ à<õÕ"} into register rax as a constant constant21
+		0x1809D0C3E: Compares UnityEngine.Transform.get_childCount and 0
+		0x1809D0C41: Jumps to 0x1809D0C5F if UnityEngine.Transform.get_childCount != 0
+
+		0x1809D0C43: Loads string "UnityEngine.Transform::get_childCount()" into register rcx as constant {'constant23' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0C4A: Looks up unity ICall by name "UnityEngine.Transform::get_childCount()" which resolves to System.Int32 UnityEngine.Transform::get_childCount()
+		0x1809D0C4F: Compares UnityEngine.Transform.get_childCount and 0
+		0x1809D0C52: Jumps to 0x1809D0D3E if UnityEngine.Transform.get_childCount equals 0 ;  - This is probably a goto, jumping to 0x1809D0D3E which is after end of current block @ 0x1809D0CD6 (started at 0x1809D0B53)
+
+		0x1809D0C5F: Copies {'parent' (type UnityEngine.Transform)} from rdi into rcx
+		0x1809D0C62: [!] Calls managed method System.Int32 UnityEngine.Transform::get_childCount() on instance {'parent' (type UnityEngine.Transform)} and stores the result in {'childCount' (type System.Int32)}
+
+		0x1809D0C66: [!] Compares {'siblingIndex' (type System.Int32)} and {'childCount' (type System.Int32)}
+		0x1809D0C68: Jumps to 0x1809D0CCC (which is an if statement's body) if {'siblingIndex' (type System.Int32)} is greater than or equal to {'childCount' (type System.Int32)} ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809D0C6A: Loads string "<õ7" into register rax as constant UnityEngine.Component.get_transform
+		0x1809D0C71: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0C74: Jumps to 0x1809D0C92 if UnityEngine.Component.get_transform != 0
+
+		0x1809D0C76: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant27' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0C7D: Looks up unity ICall by name "UnityEngine.Component::get_transform()" which resolves to UnityEngine.Transform UnityEngine.Component::get_transform()
+		0x1809D0C82: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0C85: Jumps to 0x1809D0D55 if UnityEngine.Component.get_transform equals 0 ;  - This is probably a goto, jumping to 0x1809D0D55 which is after end of current block @ 0x1809D0CCC (started at 0x1809D0C6A)
+
+		0x1809D0C92: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rbx into rcx
+		0x1809D0C95: [!] Calls managed method UnityEngine.Transform UnityEngine.Component::get_transform() on instance {'this' (function parameter, type Rewired.Demos.UIPointer)} and stores the result in {'transform3' (type UnityEngine.Transform)}
+
+		0x1809D0C97: Copies {'transform3' (type UnityEngine.Transform)} from rax into rbx
+		0x1809D0C9A: [!] Compares {'transform3' (type UnityEngine.Transform)} and 0
+		0x1809D0C9D: Jumps to 0x1809D0CDC (which throws a NRE) if transform3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D0C9F: Loads string "dì×" into register rax as constant UnityEngine.Transform.SetAsLastSibling
+		0x1809D0CA6: Compares UnityEngine.Transform.SetAsLastSibling and 0
+		0x1809D0CA9: Jumps to 0x1809D0CC7 if UnityEngine.Transform.SetAsLastSibling != 0
+
+		0x1809D0CAB: Loads string "UnityEngine.Transform::SetAsLastSibling()" into register rcx as constant {'constant32' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0CB2: Looks up unity ICall by name "UnityEngine.Transform::SetAsLastSibling()" which resolves to System.Void UnityEngine.Transform::SetAsLastSibling()
+		0x1809D0CB7: Compares UnityEngine.Transform.SetAsLastSibling and 0
+		0x1809D0CBA: Jumps to 0x1809D0D6C if UnityEngine.Transform.SetAsLastSibling equals 0 ;  - This is probably a goto, jumping to 0x1809D0D6C which is after end of current block @ 0x1809D0CCC (started at 0x1809D0C6A)
+
+		0x1809D0CC7: Copies {'transform3' (type UnityEngine.Transform)} from rbx into rcx
+		0x1809D0CCA: [!] Calls managed method System.Void UnityEngine.Transform::SetAsLastSibling() on instance {'transform3' (type UnityEngine.Transform)}
+
+		0x1809D0CCC: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rsi as new constant constant34
+		0x1809D0CD1: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rdi as new constant constant35
+		0x1809D0CDB: [!] Returns from the function
+
+		0x1809D0CDC: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.UIPointer
+	System.Void Update()
+
+		if (this._autoSort != False)
+
+		    UnityEngine.Transform transform = this.transform
+
+		    System.Int32 siblingIndex = transform.GetSiblingIndex()
+
+		    UnityEngine.Transform transform2 = this.transform
+
+		    UnityEngine.Transform parent = transform2.GetParent()
+
+		    System.Int32 childCount = parent.childCount
+
+		    if (siblingIndex < childCount)
+
+		        UnityEngine.Transform transform3 = this.transform
+
+		        transform3.SetAsLastSibling()
+		    endif
+            
+		endif
+        
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Boolean Rewired.Demos.UIPointer::_autoSort
+	IL_0006: ldc.i4.0
+	IL_0007: beq.s IL_0035
+	IL_0009: ldarg.0
+	IL_000a: call UnityEngine.Transform UnityEngine.Component::get_transform()
+	IL_000f: call System.Int32 UnityEngine.Transform::GetSiblingIndex()
+	IL_0014: stloc.0
+	IL_0015: ldarg.0
+	IL_0016: call UnityEngine.Transform UnityEngine.Component::get_transform()
+	IL_001b: call UnityEngine.Transform UnityEngine.Transform::GetParent()
+	IL_0020: call System.Int32 UnityEngine.Transform::get_childCount()
+	IL_0025: stloc.1
+	IL_0026: ldloc.0
+	IL_0027: ldloc.1
+	IL_0028: bge.s IL_0035
+	IL_002a: ldarg.0
+	IL_002b: call UnityEngine.Transform UnityEngine.Component::get_transform()
+	IL_0030: call System.Void UnityEngine.Transform::SetAsLastSibling()
+	IL_0035: ret
+	IL_0036: newobj System.Void System.NullReferenceException::.ctor()
+	IL_003b: throw
+	
+
+Method: System.Void Rewired.Demos.UIPointer::OnTransformParentChanged():	Method Body (x86 ASM):
+		0x1809D0D90 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0D92 jmp near ptr 00000001809D1180h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0D97 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.UIPointer::OnTransformParentChanged():
+		End of function at 0x1809D0D98
+		Absolute End is at 0x1809D0D98
+		Identified Jump Destination addresses:
+
+		0x1809D0D92: [!] Calls managed method System.Void Rewired.Demos.UIPointer::GetDependencies() on instance {'this' (function parameter, type Rewired.Demos.UIPointer)}
+
+		0x1809D0D92: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.UIPointer
+	System.Void OnTransformParentChanged()
+
+		this.GetDependencies()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call System.Void Rewired.Demos.UIPointer::GetDependencies()
+	IL_0006: ret
+	
+
+Method: System.Void Rewired.Demos.UIPointer::OnCanvasGroupChanged():	Method Body (x86 ASM):
+		0x1809D0D90 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0D92 jmp near ptr 00000001809D1180h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0D97 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.UIPointer::OnCanvasGroupChanged():
+		End of function at 0x1809D0D98
+		Absolute End is at 0x1809D0D98
+		Identified Jump Destination addresses:
+
+		0x1809D0D92: [!] Calls managed method System.Void Rewired.Demos.UIPointer::GetDependencies() on instance {'this' (function parameter, type Rewired.Demos.UIPointer)}
+
+		0x1809D0D92: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.UIPointer
+	System.Void OnCanvasGroupChanged()
+
+		this.GetDependencies()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call System.Void Rewired.Demos.UIPointer::GetDependencies()
+	IL_0006: ret
+	
+
+Method: System.Void Rewired.Demos.UIPointer::OnScreenPositionChanged(UnityEngine.Vector2):	Method Body (x86 ASM):
+		0x1809D0DA0 mov [rsp+18h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 24 | None ||| N/A | N/A
+		0x1809D0DA5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0DA6 sub rsp,70h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 112
+		0x1809D0DAA cmp byte ptr [18329BDDFh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518175 | None ||| N/A | 0
+		0x1809D0DB1 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0DB4 movaps [rsp+60h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 96 | None ||| N/A | N/A
+		0x1809D0DB9 movq xmm6,rdx		; DEBUG: {Register}/XMM6 {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0DBE jne short 00000001809D0DEBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0DC0 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809D0DC7 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0DCC lea rcx,[183119408h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493934600 | None ||| N/A | N/A
+		0x1809D0DD3 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0DD8 lea rcx,[1830E0F50h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493704016 | None ||| N/A | N/A
+		0x1809D0DDF call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0DE4 mov byte ptr [18329BDDFh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518175 | None ||| N/A | 1
+		0x1809D0DEB mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809D0DF2 xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0DF4 mov rdi,[rbx+28h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1809D0DF8 mov [rsp+80h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 128 | None ||| N/A | N/A
+		0x1809D0E00 cmp [rcx+0E0h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RCX | 224 | None ||| N/A | N/A
+		0x1809D0E06 jne short 00000001809D0E0Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0E08 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0E0D cmp byte ptr [1832A9FABh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 0
+		0x1809D0E14 jne short 00000001809D0E29h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0E16 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809D0E1D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0E22 mov byte ptr [1832A9FABh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 1
+		0x1809D0E29 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809D0E30 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1809D0E37 jne short 00000001809D0E3Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0E39 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0E3E cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x1809D0E45 jne short 00000001809D0E5Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0E47 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809D0E4E call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0E53 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x1809D0E5A test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809D0E5D je near ptr 00000001809D10BDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0E63 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809D0E6A cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1809D0E71 jne short 00000001809D0E78h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0E73 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0E78 cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x1809D0E7D je near ptr 00000001809D10BDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0E83 mov [rsp+88h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 136 | None ||| N/A | N/A
+		0x1809D0E8B mov rdi,[rbx+28h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1809D0E8F xor esi,esi		; DEBUG: {Register}/ESI {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x1809D0E91 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809D0E94 je near ptr 00000001809D10D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0E9A mov rax,[1832AD1D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495588816 | None ||| N/A | N/A
+		0x1809D0EA1 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0EA4 jne short 00000001809D0EC2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0EA6 lea rcx,[182992100h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6486040832 | None ||| N/A | N/A
+		0x1809D0EAD call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0EB2 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0EB5 je near ptr 00000001809D10D6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0EBB mov [1832AD1D0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495588816 | None ||| N/A | N/A
+		0x1809D0EC2 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809D0EC5 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0EC7 test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0EC9 je short 00000001809D0EE9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0ECB dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0ECD cmp eax,1		; DEBUG: {Register}/EAX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 1
+		0x1809D0ED0 ja short 00000001809D0EE9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0ED2 mov rcx,[rbx+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1809D0ED6 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0ED9 je near ptr 00000001809D10D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0EDF xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0EE1 call 0000000182781EF0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0EE6 mov rsi,rax		; DEBUG: {Register}/RSI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0EE9 mov rax,[1832A9D48h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0EF0 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0EF3 jne short 00000001809D0F11h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0EF5 lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x1809D0EFC call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0F01 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F04 je near ptr 00000001809D10EDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0F0A mov [1832A9D48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0F11 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F14 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F16 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F19 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F1C je near ptr 00000001809D10D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0F22 mov rax,[1832AA330h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576880 | None ||| N/A | N/A
+		0x1809D0F29 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F2C jne short 00000001809D0F4Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0F2E lea rcx,[18297C160h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485950816 | None ||| N/A | N/A
+		0x1809D0F35 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0F3A test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F3D je near ptr 00000001809D1104h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0F43 mov [1832AA330h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576880 | None ||| N/A | N/A
+		0x1809D0F4A mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F4D call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F4F mov rcx,[183119408h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493934600 | None ||| N/A | N/A
+		0x1809D0F56 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F59 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1809D0F60 jne short 00000001809D0F67h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0F62 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0F67 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F69 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F6C je short 00000001809D0F7Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0F6E mov rax,[1830E0F50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493704016 | None ||| N/A | N/A
+		0x1809D0F75 cmp [rdi],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RDI | 0 | None ||| N/A | N/A
+		0x1809D0F78 cmove rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F7C lea r9,[rsp+80h]		; DEBUG: {Register}/R9 {Memory}/None ||| RSP | 128 | None ||| N/A | N/A
+		0x1809D0F84 mov qword ptr [rsp+20h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 32 | None ||| N/A | 0
+		0x1809D0F8D mov r8,rsi		; DEBUG: {Register}/R8 {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F90 movq rdx,xmm6		; DEBUG: {Register}/RDX {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x1809D0F95 call 000000018277FBF0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0F9A mov rax,[1832A9D48h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0FA1 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0FA4 jne short 00000001809D0FC2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0FA6 lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x1809D0FAD call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0FB2 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0FB5 je near ptr 00000001809D111Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0FBB mov [1832A9D48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0FC2 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0FC5 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0FC7 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0FCA mov rax,[1832A9D48h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0FD1 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0FD4 jne short 00000001809D0FF2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0FD6 lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x1809D0FDD call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0FE2 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0FE5 je near ptr 00000001809D1132h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D0FEB mov [1832A9D48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D0FF2 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0FF5 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D0FF7 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0FFA test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D0FFD je near ptr 00000001809D10D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D1003 xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D1005 mov [rsp+40h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 64 | None ||| N/A | N/A
+		0x1809D100A mov [rsp+48h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 72 | None ||| N/A | N/A
+		0x1809D100E mov rax,[1832AA3C0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495577024 | None ||| N/A | N/A
+		0x1809D1015 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D1018 jne short 00000001809D1036h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D101A lea rcx,[18297C5E0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485951968 | None ||| N/A | N/A
+		0x1809D1021 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D1026 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D1029 je near ptr 00000001809D1149h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D102F mov [1832AA3C0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495577024 | None ||| N/A | N/A
+		0x1809D1036 lea rdx,[rsp+40h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1809D103B mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D103E call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D1040 movss xmm0,dword ptr [rsp+80h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 128 | None ||| N/A | N/A
+		0x1809D1049 movss xmm1,dword ptr [rsp+84h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 132 | None ||| N/A | N/A
+		0x1809D1052 movss dword ptr [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x1809D1058 movss xmm0,dword ptr [rsp+48h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x1809D105E movss dword ptr [rsp+38h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 56 | None ||| N/A | N/A
+		0x1809D1064 movss dword ptr [rsp+34h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 52 | None ||| N/A | N/A
+		0x1809D106A test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809D106D je short 00000001809D10D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D106F mov eax,[rsp+38h]		; DEBUG: {Register}/EAX {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1809D1073 movsd xmm0,qword ptr [rsp+30h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1809D1079 mov [rsp+58h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 88 | None ||| N/A | N/A
+		0x1809D107D mov rax,[1832AA3C8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495577032 | None ||| N/A | N/A
+		0x1809D1084 movsd qword ptr [rsp+50h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 80 | None ||| N/A | N/A
+		0x1809D108A test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D108D jne short 00000001809D10ABh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D108F lea rcx,[18297C630h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485952048 | None ||| N/A | N/A
+		0x1809D1096 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D109B test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D109E je near ptr 00000001809D1160h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D10A4 mov [1832AA3C8h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495577032 | None ||| N/A | N/A
+		0x1809D10AB lea rdx,[rsp+50h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1809D10B0 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809D10B3 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D10B5 mov rsi,[rsp+88h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 136 | None ||| N/A | N/A
+		0x1809D10BD mov rbx,[rsp+90h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 144 | None ||| N/A | N/A
+		0x1809D10C5 movaps xmm6,[rsp+60h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x1809D10CA add rsp,70h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 112
+		0x1809D10CE pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D10CF ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D10D0 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D10D5 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.UIPointer::OnScreenPositionChanged(UnityEngine.Vector2):
+		End of function at 0x1809D10D6
+		Absolute End is at 0x1809D10D6
+		Identified Jump Destination addresses:
+
+		0x1809D0DA5: Saves the content of rdi to the stack
+		0x1809D0DAA: Compares {Unknown Global at 0x18329BDDF, first ten bytes are [0 156 112 239 2 112 160 4 0 27], or as chars " pïp  "} and 0
+		0x1809D0DB1: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rcx into rbx
+		0x1809D0DBE: Jumps to 0x1809D0DEB if {Unknown Global at 0x18329BDDF, first ten bytes are [0 156 112 239 2 112 160 4 0 27], or as chars " pïp  "} != 0
+
+		0x1809D0DC0: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809D0DC7: Initializes runtime metadata value UnityEngine.Object
+		0x1809D0DCC: Loads the type definition for managed type UnityEngine.RectTransformUtility as a constant "RectTransformUtility" in rcx
+		0x1809D0DD3: Initializes runtime metadata value UnityEngine.RectTransformUtility
+		0x1809D0DD8: Loads the type definition for managed type UnityEngine.RectTransform as a constant "RectTransform" in rcx
+		0x1809D0DDF: Initializes runtime metadata value UnityEngine.RectTransform
+		0x1809D0DEB: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809D0DF2: Clears register rax, yielding zero-local {'local2' (type System.Int32)}
+		0x1809D0DF4: [!] Reads field _canvas from {'this' (function parameter, type Rewired.Demos.UIPointer)} and stores in a new local {'_canvas' (type UnityEngine.Canvas)}
+
+		0x1809D0DF8: Moves local2 (type System.Int32) from register rax to the stack at offset 128 (0x80)
+		0x1809D0E00: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and {'local2' (type System.Int32)}
+		0x1809D0E06: Jumps to 0x1809D0E0D if "{il2cpp field UnityEngine.Object->cctor_finished}" != {'local2' (type System.Int32)}
+
+		0x1809D0E08: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1809D0E0D: Compares {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} and 0
+		0x1809D0E14: Jumps to 0x1809D0E29 if {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} != 0
+
+		0x1809D0E16: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809D0E1D: Initializes runtime metadata value UnityEngine.Object
+		0x1809D0E29: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809D0E30: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1809D0E37: Jumps to 0x1809D0E3E if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1809D0E39: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1809D0E3E: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x1809D0E45: Jumps to 0x1809D0E5A if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x1809D0E47: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809D0E4E: Initializes runtime metadata value UnityEngine.Object
+		0x1809D0E5A: [!] Compares {'_canvas' (type UnityEngine.Canvas)} and 0
+		0x1809D0E5D: Jumps to 0x1809D10BD (which is an if statement's body) if _canvas equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809D0E63: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809D0E6A: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1809D0E71: Jumps to 0x1809D0E78 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1809D0E73: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1809D0E78: [!] Compares {field <externBeginRenderOverlays>k__BackingField, read from local {'_canvas' (type UnityEngine.Canvas)}} and 0
+		0x1809D0E7D: Jumps to 0x1809D10BD (which is an if statement's body) if _canvas.<externBeginRenderOverlays>k__BackingField equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809D0E8B: [!] Reads field _canvas from {'this' (function parameter, type Rewired.Demos.UIPointer)} and stores in a new local {'_canvas2' (type UnityEngine.Canvas)}
+
+		0x1809D0E91: [!] Compares {'_canvas2' (type UnityEngine.Canvas)} and 0
+		0x1809D0E94: Jumps to 0x1809D10D0 (which throws a NRE) if _canvas2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D0E9A: Loads string "%'" into register rax as constant UnityEngine.Canvas.get_renderMode
+		0x1809D0EA1: Compares UnityEngine.Canvas.get_renderMode and 0
+		0x1809D0EA4: Jumps to 0x1809D0EC2 if UnityEngine.Canvas.get_renderMode != 0
+
+		0x1809D0EA6: Loads string "UnityEngine.Canvas::get_renderMode()" into register rcx as constant {'constant25' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0EAD: Looks up unity ICall by name "UnityEngine.Canvas::get_renderMode()" which resolves to UnityEngine.RenderMode UnityEngine.Canvas::get_renderMode()
+		0x1809D0EB2: Compares UnityEngine.Canvas.get_renderMode and 0
+		0x1809D0EB5: Jumps to 0x1809D10D6 if UnityEngine.Canvas.get_renderMode equals 0 ;  - This is probably a goto, jumping to 0x1809D10D6 which is after end of current block @ 0x1809D10BD (started at 0x1809D0E83)
+
+		0x1809D0EC2: Copies {'_canvas2' (type UnityEngine.Canvas)} from rdi into rcx
+		0x1809D0EC5: [!] Calls managed method UnityEngine.RenderMode UnityEngine.Canvas::get_renderMode() on instance {'_canvas2' (type UnityEngine.Canvas)} and stores the result in {'renderMode' (type UnityEngine.RenderMode)}
+
+		0x1809D0EC7: [!] Compares {'renderMode' (type UnityEngine.RenderMode)} and 0
+		0x1809D0EC9: Jumps to 0x1809D0EE9 (which is an if statement's body) if renderMode equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809D0ECD: [!] Compares {'renderMode' (type UnityEngine.RenderMode)} and 1
+		0x1809D0ED0: Jumps to 0x1809D0EE9 (which is an if statement's body) if {'renderMode' (type UnityEngine.RenderMode)} is greater than 1 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1809D0ED2: [!] Reads field _canvas from {'this' (function parameter, type Rewired.Demos.UIPointer)} and stores in a new local {'_canvas3' (type UnityEngine.Canvas)}
+
+		0x1809D0ED6: [!] Compares {'_canvas3' (type UnityEngine.Canvas)} and 0
+		0x1809D0ED9: Jumps to 0x1809D10D0 (which throws a NRE) if _canvas3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D0EE1: [!] Calls managed method UnityEngine.Camera UnityEngine.Canvas::get_worldCamera() on instance {'_canvas3' (type UnityEngine.Canvas)} and stores the result in {'worldCamera' (type UnityEngine.Camera)}
+
+		0x1809D0EE6: Copies {'worldCamera' (type UnityEngine.Camera)} from rax into rsi
+		0x1809D0EE9: Loads string "<õ7" into register rax as constant UnityEngine.Component.get_transform
+		0x1809D0EF0: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0EF3: Jumps to 0x1809D0F11 if UnityEngine.Component.get_transform != 0 ;  - This is probably a goto, jumping to 0x1809D0F11 which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D0EF5: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant32' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0EFC: Looks up unity ICall by name "UnityEngine.Component::get_transform()" which resolves to UnityEngine.Transform UnityEngine.Component::get_transform()
+		0x1809D0F01: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0F04: Jumps to 0x1809D10ED if UnityEngine.Component.get_transform equals 0 ;  - This is probably a goto, jumping to 0x1809D10ED which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D0F11: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rbx into rcx
+		0x1809D0F14: [!] Calls managed method UnityEngine.Transform UnityEngine.Component::get_transform() on instance {'this' (function parameter, type Rewired.Demos.UIPointer)} and stores the result in {'transform' (type UnityEngine.Transform)}
+
+		0x1809D0F16: Copies {'transform' (type UnityEngine.Transform)} from rax into rdi
+		0x1809D0F19: [!] Compares {'transform' (type UnityEngine.Transform)} and 0
+		0x1809D0F1C: Jumps to 0x1809D10D0 (which throws a NRE) if transform equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D0F22: Loads string "È<õçÔ" into register rax as constant UnityEngine.Transform.GetParent
+		0x1809D0F29: Compares UnityEngine.Transform.GetParent and 0
+		0x1809D0F2C: Jumps to 0x1809D0F4A if UnityEngine.Transform.GetParent != 0 ;  - This is probably a goto, jumping to 0x1809D0F4A which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D0F2E: Loads string "UnityEngine.Transform::GetParent()" into register rcx as constant {'constant37' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0F35: Looks up unity ICall by name "UnityEngine.Transform::GetParent()" which resolves to UnityEngine.Transform UnityEngine.Transform::GetParent()
+		0x1809D0F3A: Compares UnityEngine.Transform.GetParent and 0
+		0x1809D0F3D: Jumps to 0x1809D1104 if UnityEngine.Transform.GetParent equals 0 ;  - This is probably a goto, jumping to 0x1809D1104 which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D0F4A: Copies {'transform' (type UnityEngine.Transform)} from rdi into rcx
+		0x1809D0F4D: [!] Calls managed method UnityEngine.Transform UnityEngine.Transform::GetParent() on instance {'transform' (type UnityEngine.Transform)} and stores the result in {'parent' (type UnityEngine.Transform)}
+
+		0x1809D0F4F: Loads the type definition for managed type UnityEngine.RectTransformUtility as a constant "RectTransformUtility" in rcx
+		0x1809D0F56: Copies {'parent' (type UnityEngine.Transform)} from rax into rdi
+		0x1809D0F59: Compares "{il2cpp field UnityEngine.RectTransformUtility->cctor_finished}" and 0
+		0x1809D0F60: Jumps to 0x1809D0F67 if "{il2cpp field UnityEngine.RectTransformUtility->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x1809D0F67 which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D0F62: Calls the il2cpp cctor for the type UnityEngine.RectTransformUtility
+		0x1809D0F69: [!] Compares {'parent' (type UnityEngine.Transform)} and 0
+		0x1809D0F6C: Jumps to 0x1809D0F7C if parent equals 0 ;  - This is probably a goto, jumping to 0x1809D0F7C which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D0F6E: Loads the type definition for managed type UnityEngine.RectTransform as a constant "RectTransform" in rax
+		0x1809D0F75: [!] Compares {'constant44' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} and {'RectTransform' (constant value of type Mono.Cecil.TypeReference)}
+		0x1809D0F78: [!] Copies {'parent' (type UnityEngine.Transform)} from rdi into rcx based on previous comparison
+		0x1809D0F7C: Loads a pointer to stack offset 0x80 into register r9 as new constant constant45
+		0x1809D0F84: Moves 0 (immediate ulong value) to the stack at offset 32 as a new local local13
+		0x1809D0F8D: Copies {'local5' (type System.Int32)} from rsi into r8
+		0x1809D0F95: [!] Calls static managed method System.Boolean UnityEngine.RectTransformUtility::ScreenPointToLocalPointInRectangle(UnityEngine.RectTransform,UnityEngine.Vector2,UnityEngine.Camera,UnityEngine.Vector2) and stores the result in {'boolean' (type System.Boolean)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x1809D0F9A: Loads string "<õ7" into register rax as constant UnityEngine.Component.get_transform
+		0x1809D0FA1: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0FA4: Jumps to 0x1809D0FC2 if UnityEngine.Component.get_transform != 0 ;  - This is probably a goto, jumping to 0x1809D0FC2 which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D0FA6: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant48' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0FAD: Looks up unity ICall by name "UnityEngine.Component::get_transform()" which resolves to UnityEngine.Transform UnityEngine.Component::get_transform()
+		0x1809D0FB2: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0FB5: Jumps to 0x1809D111B if UnityEngine.Component.get_transform equals 0 ;  - This is probably a goto, jumping to 0x1809D111B which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D0FC2: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rbx into rcx
+		0x1809D0FC5: [!] Calls managed method UnityEngine.Transform UnityEngine.Component::get_transform() on instance {'this' (function parameter, type Rewired.Demos.UIPointer)} and stores the result in {'transform2' (type UnityEngine.Transform)}
+
+		0x1809D0FC7: Copies {'transform2' (type UnityEngine.Transform)} from rax into rdi
+		0x1809D0FCA: Loads string "<õ7" into register rax as constant UnityEngine.Component.get_transform
+		0x1809D0FD1: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0FD4: Jumps to 0x1809D0FF2 if UnityEngine.Component.get_transform != 0 ;  - This is probably a goto, jumping to 0x1809D0FF2 which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D0FD6: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant52' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D0FDD: Looks up unity ICall by name "UnityEngine.Component::get_transform()" which resolves to UnityEngine.Transform UnityEngine.Component::get_transform()
+		0x1809D0FE2: Compares UnityEngine.Component.get_transform and 0
+		0x1809D0FE5: Jumps to 0x1809D1132 if UnityEngine.Component.get_transform equals 0 ;  - This is probably a goto, jumping to 0x1809D1132 which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D0FF2: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rbx into rcx
+		0x1809D0FF5: [!] Calls managed method UnityEngine.Transform UnityEngine.Component::get_transform() on instance {'this' (function parameter, type Rewired.Demos.UIPointer)} and stores the result in {'transform3' (type UnityEngine.Transform)}
+
+		0x1809D0FF7: Copies {'transform3' (type UnityEngine.Transform)} from rax into rbx
+		0x1809D0FFA: [!] Compares {'transform3' (type UnityEngine.Transform)} and 0
+		0x1809D0FFD: Jumps to 0x1809D10D0 (which throws a NRE) if transform3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D1003: Clears register rax, yielding zero-local {'local17' (type System.Int32)}
+		0x1809D1005: Moves local17 (type System.Int32) from register rax to the stack at offset 64 (0x40)
+		0x1809D100A: Moves local17 (type System.Int32) from register rax to the stack at offset 72 (0x48)
+		0x1809D100E: Loads string "H=õ÷Û" into register rax as constant UnityEngine.Transform.get_localPosition
+		0x1809D1015: Compares UnityEngine.Transform.get_localPosition and 0
+		0x1809D1018: Jumps to 0x1809D1036 if UnityEngine.Transform.get_localPosition != 0 ;  - This is probably a goto, jumping to 0x1809D1036 which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D101A: Loads string "UnityEngine.Transform::get_localPosition_Injected(UnityEngine.Vector3&)" into register rcx as constant {'constant57' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D1021: Looks up unity ICall by name "UnityEngine.Transform::get_localPosition_Injected(UnityEngine.Vector3&)" which resolves to UnityEngine.Vector3 UnityEngine.Transform::get_localPosition()
+		0x1809D1026: Compares UnityEngine.Transform.get_localPosition and 0
+		0x1809D1029: Jumps to 0x1809D1149 if UnityEngine.Transform.get_localPosition equals 0 ;  - This is probably a goto, jumping to 0x1809D1149 which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D1036: Loads a pointer to stack offset 0x40 into register rdx as new constant constant59
+		0x1809D103B: Copies {'transform3' (type UnityEngine.Transform)} from rbx into rcx
+		0x1809D103E: [!] Calls managed method UnityEngine.Vector3 UnityEngine.Transform::get_localPosition() on instance {'transform3' (type UnityEngine.Transform)} and stores the result in {'localPosition' (type UnityEngine.Vector3)}
+
+		0x1809D1040: Reads local {'local2' (type System.Int32)} from stack offset 128 (0x80) into register xmm0
+		0x1809D1049: Reads unknown value in stack, offset 132 (0x84) and stores the pointer in register xmm1 as new constant constant60
+		0x1809D1052: Moves local2 (type System.Int32) from register xmm0 to the stack at offset 48 (0x30)
+		0x1809D1058: Reads local {'local17' (type System.Int32)} from stack offset 72 (0x48) into register xmm0
+		0x1809D105E: Moves local17 (type System.Int32) from register xmm0 to the stack at offset 56 (0x38)
+		0x1809D1064: Moves constant60 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm1 to the stack at offset 52 (0x34) as a new local local19
+		0x1809D106A: [!] Compares {'transform2' (type UnityEngine.Transform)} and 0
+		0x1809D106D: Jumps to 0x1809D10D0 (which throws a NRE) if transform2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D106F: Reads local {'local17' (type System.Int32)} from stack offset 56 (0x38) into register rax
+		0x1809D1079: Moves local17 (type System.Int32) from register rax to the stack at offset 88 (0x58)
+		0x1809D107D: Reads {Unknown Global at 0x1832AA3C8, first ten bytes are [7 220 14 0 96 61 245 2 7 220], or as chars "Ü `=õÜ"} into register rax as a constant constant62
+		0x1809D108A: Compares UnityEngine.Transform.set_localPosition and 0
+		0x1809D108D: Jumps to 0x1809D10AB if UnityEngine.Transform.set_localPosition != 0 ;  - This is probably a goto, jumping to 0x1809D10AB which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D108F: Loads string "UnityEngine.Transform::set_localPosition_Injected(UnityEngine.Vector3&)" into register rcx as constant {'constant64' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D1096: Looks up unity ICall by name "UnityEngine.Transform::set_localPosition_Injected(UnityEngine.Vector3&)" which resolves to System.Void UnityEngine.Transform::set_localPosition(UnityEngine.Vector3)
+		0x1809D109B: Compares UnityEngine.Transform.set_localPosition and 0
+		0x1809D109E: Jumps to 0x1809D1160 if UnityEngine.Transform.set_localPosition equals 0 ;  - This is probably a goto, jumping to 0x1809D1160 which is after end of current block @ 0x1809D0EE9 (started at 0x1809D0ED2)
+
+		0x1809D10AB: Loads a pointer to stack offset 0x50 into register rdx as new constant constant66
+		0x1809D10B0: Copies {'transform2' (type UnityEngine.Transform)} from rdi into rcx
+		0x1809D10B3: [!] Calls managed method System.Void UnityEngine.Transform::set_localPosition(UnityEngine.Vector3) on instance {'transform2' (type UnityEngine.Transform)} ;  - Mismatched parameters detected here.
+
+		0x1809D10B5: Reads unknown value in stack, offset 136 (0x88) and stores the pointer in register rsi as new constant constant67
+		0x1809D10BD: Reads unknown value in stack, offset 144 (0x90) and stores the pointer in register rbx as new constant constant68
+		0x1809D10C5: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register xmm6 as new constant constant69
+		0x1809D10CF: [!] Returns from the function
+
+		0x1809D10D0: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.UIPointer
+	System.Void OnScreenPositionChanged(UnityEngine.Vector2 screenPosition)
+		ulong local2 = 0
+		UnityEngine.Canvas _canvas = this._canvas
+
+		if (_canvas != 0)
+
+		    if (_canvas.<externBeginRenderOverlays>k__BackingField != 0)
+		        UnityEngine.Canvas _canvas2 = this._canvas
+
+		        UnityEngine.RenderMode renderMode = _canvas2.renderMode
+
+		        if (renderMode != 0)
+
+		            if (renderMode <= 1)
+		                UnityEngine.Canvas _canvas3 = this._canvas
+
+		                UnityEngine.Camera worldCamera = _canvas3.worldCamera
+		            endif
+                    
+
+		            UnityEngine.Transform transform = this.transform
+
+		            UnityEngine.Transform parent = transform.GetParent()
+
+		            if (parent == 0)
+                        goto INSN_1809D0F7C
+                    endif
+
+		            INSN_1809D0F7C:
+
+		            System.Boolean boolean = UnityEngine.RectTransformUtility.ScreenPointToLocalPointInRectangle()
+
+		            UnityEngine.Transform transform2 = this.transform
+
+		            UnityEngine.Transform transform3 = this.transform
+		            ulong local17 = 0
+
+		            UnityEngine.Vector3 localPosition = transform3.localPosition
+
+		            transform2.set_localPosition()
+		        endif
+                
+		        return
+		        throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionAction at (0x1809D0F95) is corrupt (Couldn't get arguments, or actual count (-1) is not equal to expected count (4)) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void Rewired.Demos.UIPointer::GetDependencies():	Method Body (x86 ASM):
+		0x1809D1180 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D1182 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D1186 cmp byte ptr [18329BDE0h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518176 | None ||| N/A | 0
+		0x1809D118D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1809D1190 jne short 00000001809D11A5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D1192 lea rcx,[183103B88h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493846408 | None ||| N/A | N/A
+		0x1809D1199 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D119E mov byte ptr [18329BDE0h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518176 | None ||| N/A | 1
+		0x1809D11A5 mov rax,[1832A9D48h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D11AC test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D11AF jne short 00000001809D11CDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D11B1 lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x1809D11B8 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D11BD test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D11C0 je near ptr 00000001809D1282h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D11C6 mov [1832A9D48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1809D11CD mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1809D11D0 mov [rsp+30h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 48 | None ||| N/A | N/A
+		0x1809D11D5 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D11D7 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D11DA test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D11DD je near ptr 00000001809D127Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D11E3 mov rax,[1832AA348h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576904 | None ||| N/A | N/A
+		0x1809D11EA test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D11ED jne short 00000001809D120Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D11EF lea rcx,[18297BEC0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485950144 | None ||| N/A | N/A
+		0x1809D11F6 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D11FB test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D11FE je near ptr 00000001809D1299h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D1204 mov [1832AA348h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576904 | None ||| N/A | N/A
+		0x1809D120B mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1809D120E call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D1210 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D1213 je short 00000001809D127Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D1215 mov rdx,[183103B88h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493846408 | None ||| N/A | N/A
+		0x1809D121C mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D121F call 0000000180D40B10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D1224 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1809D122B mov [rbx+28h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBX | 40 | None ||| N/A | N/A
+		0x1809D122F je short 00000001809D1271h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D1231 lea r8,[rbx+28h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1809D1235 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1809D1239 lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x1809D1240 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1809D1247 mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1809D124A shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1809D124E and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1809D1252 lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x1809D1256 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1809D1259 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1809D1260 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1809D1263 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809D1266 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1809D126A lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x1809D126F jne short 00000001809D1260h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D1271 mov rdi,[rsp+30h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1809D1276 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1809D127A pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D127B ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D127C call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D1281 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.UIPointer::GetDependencies():
+		End of function at 0x1809D1282
+		Absolute End is at 0x1809D1282
+		Identified Jump Destination addresses:
+
+		0x1809D1180: Saves the content of rbx to the stack
+		0x1809D1186: Compares {Unknown Global at 0x18329BDE0, first ten bytes are [156 112 239 2 112 160 4 0 27 162], or as chars "pïp  ¢"} and 0
+		0x1809D118D: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rcx into rbx
+		0x1809D1190: Jumps to 0x1809D11A5 if {Unknown Global at 0x18329BDE0, first ten bytes are [156 112 239 2 112 160 4 0 27 162], or as chars "pïp  ¢"} != 0
+
+		0x1809D1192: Loads the global generic method reference for method T UnityEngine.Component::GetComponentInChildren<UnityEngine.Canvas>() on type UnityEngine.Component and stores the result in constant {'GetComponentInChildren' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1809D1199: Initializes runtime metadata value 
+		0x1809D11A5: Loads string "<õ7" into register rax as constant UnityEngine.Component.get_transform
+		0x1809D11AC: Compares UnityEngine.Component.get_transform and 0
+		0x1809D11AF: Jumps to 0x1809D11CD if UnityEngine.Component.get_transform != 0
+
+		0x1809D11B1: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant6' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D11B8: Looks up unity ICall by name "UnityEngine.Component::get_transform()" which resolves to UnityEngine.Transform UnityEngine.Component::get_transform()
+		0x1809D11BD: Compares UnityEngine.Component.get_transform and 0
+		0x1809D11C0: Jumps to 0x1809D1282 if UnityEngine.Component.get_transform equals 0
+
+		0x1809D11CD: Copies {'this' (function parameter, type Rewired.Demos.UIPointer)} from rbx into rcx
+		0x1809D11D5: [!] Calls managed method UnityEngine.Transform UnityEngine.Component::get_transform() on instance {'this' (function parameter, type Rewired.Demos.UIPointer)} and stores the result in {'transform' (type UnityEngine.Transform)}
+
+		0x1809D11D7: Copies {'transform' (type UnityEngine.Transform)} from rax into rdi
+		0x1809D11DA: [!] Compares {'transform' (type UnityEngine.Transform)} and 0
+		0x1809D11DD: Jumps to 0x1809D127C (which throws a NRE) if transform equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D11E3: Loads string "ð<õwÕ" into register rax as constant UnityEngine.Transform.GetRoot
+		0x1809D11EA: Compares UnityEngine.Transform.GetRoot and 0
+		0x1809D11ED: Jumps to 0x1809D120B if UnityEngine.Transform.GetRoot != 0
+
+		0x1809D11EF: Loads string "UnityEngine.Transform::GetRoot()" into register rcx as constant {'constant11' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D11F6: Looks up unity ICall by name "UnityEngine.Transform::GetRoot()" which resolves to UnityEngine.Transform UnityEngine.Transform::GetRoot()
+		0x1809D11FB: Compares UnityEngine.Transform.GetRoot and 0
+		0x1809D11FE: Jumps to 0x1809D1299 if UnityEngine.Transform.GetRoot equals 0
+
+		0x1809D120B: Copies {'transform' (type UnityEngine.Transform)} from rdi into rcx
+		0x1809D120E: [!] Calls managed method UnityEngine.Transform UnityEngine.Transform::GetRoot() on instance {'transform' (type UnityEngine.Transform)} and stores the result in {'root' (type UnityEngine.Transform)}
+
+		0x1809D1210: [!] Compares {'root' (type UnityEngine.Transform)} and 0
+		0x1809D1213: Jumps to 0x1809D127C (which throws a NRE) if root equals 0. Implicitly present in managed code, so ignored here.
+		0x1809D1215: Loads the global generic method reference for method T UnityEngine.Component::GetComponentInChildren<UnityEngine.Canvas>() on type UnityEngine.Component and stores the result in constant {'GetComponentInChildren' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x1809D121C: Copies {'root' (type UnityEngine.Transform)} from rax into rcx
+		0x1809D121F: [!] Calls managed method T UnityEngine.Component::GetComponentInChildren<UnityEngine.Canvas>() on instance {'root' (type UnityEngine.Transform)} and stores the result in {'componentInChildren' (type UnityEngine.Canvas)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x1809D1224: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1809D122B: [!] Sets the field _canvas (Type UnityEngine.Canvas) on local {'this' (function parameter, type Rewired.Demos.UIPointer)} to the value stored in {'componentInChildren' (type UnityEngine.Canvas)}
+		0x1809D122F: Jumps to 0x1809D1271 if constant15 equals 0
+
+		0x1809D1231: Loads the pointer to the field _canvas on {'this' (function parameter, type Rewired.Demos.UIPointer)} into register r8
+		0x1809D1239: Loads string "¡
+m" into register rcx as constant {'constant18' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809D1247: Copies {'constant17' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x1809D1260: Moves the method pointer for method T UnityEngine.Component::GetComponentInChildren<UnityEngine.Canvas>() from rdx to rax
+		0x1809D1263: Copies {'GetComponentInChildren' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} from rax into rcx
+		0x1809D126F: Jumps to 0x1809D1260 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x1809D1271: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rdi as new constant constant19
+		0x1809D127B: [!] Returns from the function
+
+		0x1809D127C: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.UIPointer
+	System.Void GetDependencies()
+
+		UnityEngine.Transform transform = this.transform
+
+		UnityEngine.Transform root = transform.GetRoot()
+
+		UnityEngine.Canvas componentInChildren = root.GetComponentInChildren<UnityEngine.Canvas>()
+		this._canvas = componentInChildren
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call UnityEngine.Transform UnityEngine.Component::get_transform()
+	IL_0006: call UnityEngine.Transform UnityEngine.Transform::GetRoot()
+	IL_000b: call T UnityEngine.Component::GetComponentInChildren<UnityEngine.Canvas>()
+	IL_0010: stloc.0
+	IL_0011: ldarg.0
+	IL_0012: ldloc.0
+	IL_0013: stfld UnityEngine.Canvas Rewired.Demos.UIPointer::_canvas
+	IL_0018: ret
+	IL_0019: newobj System.Void System.NullReferenceException::.ctor()
+	IL_001e: throw
+	
+
+Method: System.Void Rewired.Demos.UIPointer::.ctor():	Method Body (x86 ASM):
+		0x1809D12B0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809D12B4 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x1809D12BB mov word ptr [rcx+20h],101h		; DEBUG: {Memory}/None {Immediate16}/None ||| RCX | 32 | None ||| N/A | 257
+		0x1809D12C1 jne short 00000001809D12D6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D12C3 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809D12CA call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D12CF mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x1809D12D6 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1809D12DD cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1809D12E4 jne short 00000001809D12EFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D12E6 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809D12EA jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809D12EF add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1809D12F3 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809D12F4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Demos.UIPointer::.ctor():
+		End of function at 0x1809D12F5
+		Absolute End is at 0x1809D12F5
+		Identified Jump Destination addresses:
+
+		0x1809D12B4: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x1809D12BB: [!] Sets the field _hideHardwarePointer (Type System.Boolean) on local {'this' (function parameter, type Rewired.Demos.UIPointer)} to the value stored in True
+		0x1809D12C1: Jumps to 0x1809D12D6 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x1809D12C3: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809D12CA: Initializes runtime metadata value UnityEngine.Object
+		0x1809D12D6: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1809D12DD: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1809D12E4: Jumps to 0x1809D12EF if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1809D12F3: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Demos.UIPointer
+	System.Void .ctor()
+		this._hideHardwarePointer = True
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4.1
+	IL_0002: stfld System.Boolean Rewired.Demos.UIPointer::_hideHardwarePointer
+	IL_0007: ret
+	
+

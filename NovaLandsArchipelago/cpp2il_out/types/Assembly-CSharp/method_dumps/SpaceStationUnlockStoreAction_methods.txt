@@ -1,0 +1,2106 @@
+Type: SpaceStationUnlockStoreAction
+
+Method: System.Void SpaceStationUnlockStoreAction::Setup(BasePlayer,UnityEngine.Vector2,UnityEngine.GameObject,UnityEngine.GameObject):	Method Body (x86 ASM):
+		0x180756DD0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180756DD5 mov [rsp+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 16 | None ||| N/A | N/A
+		0x180756DDA push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180756DDB sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180756DDF cmp byte ptr [18329B1DEh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515102 | None ||| N/A | 0
+		0x180756DE6 mov rsi,r9		; DEBUG: {Register}/RSI {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x180756DE9 movaps [rsp+20h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 32 | None ||| N/A | N/A
+		0x180756DEE mov rbx,rdx		; DEBUG: {Register}/RBX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180756DF1 movq xmm6,r8		; DEBUG: {Register}/XMM6 {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180756DF6 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180756DF9 jne short 0000000180756E1Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756DFB lea rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x180756E02 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756E07 lea rcx,[1830DDA80h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493690496 | None ||| N/A | N/A
+		0x180756E0E call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756E13 mov byte ptr [18329B1DEh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515102 | None ||| N/A | 1
+		0x180756E1A mov ecx,[1832990E4h]		; DEBUG: {Register}/ECX {Memory}/None ||| RIP | 6495506660 | None ||| N/A | N/A
+		0x180756E20 lea r9,[1832AE560h]		; DEBUG: {Register}/R9 {Memory}/None ||| RIP | 6495593824 | None ||| N/A | N/A
+		0x180756E27 mov [rdi+58h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RDI | 88 | None ||| N/A | N/A
+		0x180756E2B test ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180756E2D je short 0000000180756E81h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756E2F lea r8,[rdi+58h]		; DEBUG: {Register}/R8 {Memory}/None ||| RDI | 88 | None ||| N/A | N/A
+		0x180756E33 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180756E37 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180756E3E mov edx,r8d		; DEBUG: {Register}/EDX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180756E41 shr rdx,6		; DEBUG: {Register}/RDX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180756E45 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180756E49 prefetchw [r9+rdx*8+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x180756E52 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180756E56 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180756E60 mov rax,[r9+rdx*8+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x180756E68 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180756E6B bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180756E6F lock cmpxchg [r9+rdx*8+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x180756E79 jne short 0000000180756E60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756E7B mov ecx,[1832990E4h]		; DEBUG: {Register}/ECX {Memory}/None ||| RIP | 6495506660 | None ||| N/A | N/A
+		0x180756E81 movsd qword ptr [rdi+60h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RDI | 96 | None ||| N/A | N/A
+		0x180756E86 mov [rdi+68h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RDI | 104 | None ||| N/A | N/A
+		0x180756E8A test ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180756E8C je short 0000000180756ED2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756E8E lea r8,[rdi+68h]		; DEBUG: {Register}/R8 {Memory}/None ||| RDI | 104 | None ||| N/A | N/A
+		0x180756E92 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180756E96 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180756E9D mov edx,r8d		; DEBUG: {Register}/EDX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180756EA0 shr rdx,6		; DEBUG: {Register}/RDX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180756EA4 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180756EA8 prefetchw [r9+rdx*8+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x180756EB1 mov rax,[r9+rdx*8+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x180756EB9 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180756EBC bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180756EC0 lock cmpxchg [r9+rdx*8+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x180756ECA jne short 0000000180756EB1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756ECC mov ecx,[1832990E4h]		; DEBUG: {Register}/ECX {Memory}/None ||| RIP | 6495506660 | None ||| N/A | N/A
+		0x180756ED2 mov rax,[rsp+60h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x180756ED7 mov [rdi+70h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RDI | 112 | None ||| N/A | N/A
+		0x180756EDB test ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180756EDD je short 0000000180756F2Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756EDF lea r8,[rdi+70h]		; DEBUG: {Register}/R8 {Memory}/None ||| RDI | 112 | None ||| N/A | N/A
+		0x180756EE3 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180756EE7 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180756EEE mov edx,r8d		; DEBUG: {Register}/EDX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180756EF1 shr rdx,6		; DEBUG: {Register}/RDX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180756EF5 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180756EF9 prefetchw [r9+rdx*8+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x180756F02 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180756F06 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180756F10 mov rax,[r9+rdx*8+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x180756F18 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180756F1B bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180756F1F lock cmpxchg [r9+rdx*8+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| R9 | 287456 | RDX ||| N/A | N/A
+		0x180756F29 jne short 0000000180756F10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756F2B xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180756F2D xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180756F30 call 00000001807141C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756F35 mov rbx,[rdi+58h]		; DEBUG: {Register}/RBX {Memory}/None ||| RDI | 88 | None ||| N/A | N/A
+		0x180756F39 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180756F3C je near ptr 00000001807570EDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756F42 cmp byte ptr [183298856h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 0
+		0x180756F49 mov byte ptr [rbx+7A8h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 1960 | None ||| N/A | 0
+		0x180756F50 jne short 0000000180756F65h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756F52 lea rcx,[1830F62D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x180756F59 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756F5E mov byte ptr [183298856h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 1
+		0x180756F65 mov rax,[1830F62D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x180756F6C mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180756F73 movss xmm0,dword ptr [rcx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180756F77 movss xmm1,dword ptr [rcx+4]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 4 | None ||| N/A | N/A
+		0x180756F7C mov rcx,[rbx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 1600 | None ||| N/A | N/A
+		0x180756F83 movss dword ptr [rbx+2B4h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 692 | None ||| N/A | N/A
+		0x180756F8B movss dword ptr [rbx+2B8h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 696 | None ||| N/A | N/A
+		0x180756F93 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180756F96 je near ptr 00000001807570EDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756F9C xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180756F9F xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180756FA2 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180756FA4 call 00000001806C5CC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756FA9 mov rcx,[rdi+58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 88 | None ||| N/A | N/A
+		0x180756FAD test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180756FB0 je near ptr 00000001807570EDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756FB6 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180756FB9 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180756FBB call 000000018044B000h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756FC0 mov rbx,[rdi+58h]		; DEBUG: {Register}/RBX {Memory}/None ||| RDI | 88 | None ||| N/A | N/A
+		0x180756FC4 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180756FC7 je near ptr 00000001807570EDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756FCD cmp byte ptr [183298856h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 0
+		0x180756FD4 mov byte ptr [rbx+7A8h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 1960 | None ||| N/A | 0
+		0x180756FDB jne short 0000000180756FF0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756FDD lea rcx,[1830F62D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x180756FE4 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180756FE9 mov byte ptr [183298856h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 1
+		0x180756FF0 mov rax,[1830F62D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x180756FF7 mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180756FFE movss xmm0,dword ptr [rcx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180757002 movss xmm1,dword ptr [rcx+4]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 4 | None ||| N/A | N/A
+		0x180757007 mov rcx,[rbx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 1600 | None ||| N/A | N/A
+		0x18075700E movss dword ptr [rbx+2B4h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 692 | None ||| N/A | N/A
+		0x180757016 movss dword ptr [rbx+2B8h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 696 | None ||| N/A | N/A
+		0x18075701E test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180757021 je near ptr 00000001807570EDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757027 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18075702A xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18075702D xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18075702F call 00000001806C5CC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757034 mov rcx,[rdi+58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 88 | None ||| N/A | N/A
+		0x180757038 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18075703B je near ptr 00000001807570EDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757041 mov rcx,[rcx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 1600 | None ||| N/A | N/A
+		0x180757048 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18075704B je near ptr 00000001807570EDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757051 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180757054 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180757056 call 00000001806C4D30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075705B cmp byte ptr [183298874h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504500 | None ||| N/A | 0
+		0x180757062 jne short 0000000180757077h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757064 lea rcx,[183100600h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493832704 | None ||| N/A | N/A
+		0x18075706B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757070 mov byte ptr [183298874h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504500 | None ||| N/A | 1
+		0x180757077 mov rax,[183100600h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493832704 | None ||| N/A | N/A
+		0x18075707E mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180757085 mov rcx,[rcx]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180757088 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18075708B je short 00000001807570EDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075708D xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18075708F call 00000001803ED270h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757094 mov rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x18075709B call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807570A0 mov r8,[1830DDA80h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493690496 | None ||| N/A | N/A
+		0x1807570A7 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1807570AA mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1807570AD mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807570B0 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807570B3 call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807570B8 movss xmm2,dword ptr [rdi+24h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 36 | None ||| N/A | N/A
+		0x1807570BD xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1807570C0 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807570C3 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1807570C6 call 0000000180757A50h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807570CB xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807570CE mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807570D1 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1807570D4 mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1807570D9 mov rsi,[rsp+48h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x1807570DE movaps xmm6,[rsp+20h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x1807570E3 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1807570E7 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807570E8 jmp near ptr 000000018248C0A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807570ED call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807570F2 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SpaceStationUnlockStoreAction::Setup(BasePlayer,UnityEngine.Vector2,UnityEngine.GameObject,UnityEngine.GameObject):
+		End of function at 0x1807570F3
+		Absolute End is at 0x1807570F3
+		Identified Jump Destination addresses:
+
+		0x180756DDA: Saves the content of rdi to the stack
+		0x180756DDF: Compares {Unknown Global at 0x18329B1DE, first ten bytes are [3 0 228 254 238 2 240 226 3 0], or as chars " äþîðâ "} and 0
+		0x180756DE6: Copies {'store' (function parameter, type UnityEngine.GameObject)} from r9 into rsi
+		0x180756DEE: Copies {'player' (function parameter, type BasePlayer)} from rdx into rbx
+		0x180756DF6: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rcx into rdi
+		0x180756DF9: Jumps to 0x180756E1A if {Unknown Global at 0x18329B1DE, first ten bytes are [3 0 228 254 238 2 240 226 3 0], or as chars " äþîðâ "} != 0
+
+		0x180756DFB: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x180756E02: Initializes runtime metadata value System.Action
+		0x180756E07: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::FocusStoreStep0() as a constant "FocusStoreStep0"
+		0x180756E0E: Initializes runtime metadata value System.Void SpaceStationUnlockStoreAction::FocusStoreStep0()
+		0x180756E1A: Loads string "YB" into register rcx as constant {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180756E20: Reads {Unknown Global at 0x1832AE560, first ten bytes are [20 59 240 2 208 31 18 0 228 32], or as chars ";ðÐ ä "} into register r9 as a constant constant6
+		0x180756E27: [!] Sets the field player (Type BasePlayer) on local {'this' (function parameter, type SpaceStationUnlockStoreAction)} to the value stored in {'player' (function parameter, type BasePlayer)}
+		0x180756E2B: Compares {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} and 0
+		0x180756E2D: Jumps to 0x180756E81 if constant5 equals 0
+
+		0x180756E2F: Loads the pointer to the field player on {'this' (function parameter, type SpaceStationUnlockStoreAction)} into register r8
+		0x180756E3E: Copies {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rdx
+		0x180756E68: Copies {'FocusStoreStep0' (constant value of type Mono.Cecil.MethodReference)} from rax into rcx
+		0x180756E79: Jumps to 0x180756E60 if {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} != 0
+
+		0x180756E7B: Loads string "YB" into register rcx as constant {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180756E86: [!] Sets the field store (Type UnityEngine.GameObject) on local {'this' (function parameter, type SpaceStationUnlockStoreAction)} to the value stored in {'store' (function parameter, type UnityEngine.GameObject)}
+		0x180756E8A: Compares {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} and 0
+		0x180756E8C: Jumps to 0x180756ED2 if constant9 equals 0
+
+		0x180756E8E: Loads the pointer to the field store on {'this' (function parameter, type SpaceStationUnlockStoreAction)} into register r8
+		0x180756E9D: Copies {'constant11' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rdx
+		0x180756EB9: Copies {'FocusStoreStep0' (constant value of type Mono.Cecil.MethodReference)} from rax into rcx
+		0x180756ECA: Jumps to 0x180756EB1 if {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} != 0
+
+		0x180756ECC: Loads string "YB" into register rcx as constant {'constant12' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180756ED2: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register rax as new constant constant13
+		0x180756ED7: [!] Sets the field blocker (Type UnityEngine.GameObject) on local {'this' (function parameter, type SpaceStationUnlockStoreAction)} to the value stored in 0
+		0x180756EDB: Compares {'constant12' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} and 0
+		0x180756EDD: Jumps to 0x180756F2B if constant12 equals 0
+
+		0x180756EDF: Loads the pointer to the field blocker on {'this' (function parameter, type SpaceStationUnlockStoreAction)} into register r8
+		0x180756EEE: Copies {'constant15' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rdx
+		0x180756F18: Copies {'constant13' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rax into rcx
+		0x180756F29: Jumps to 0x180756F10 if {'constant12' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} != 0
+
+		0x180756F2D: Clears register xmm0, yielding zero-local {'local6' (type System.Int32)}
+		0x180756F30: [!] Calls static managed method System.Void WorldTimeManager::set_TimeScale(System.Single) with arguments [{'local6' (type System.Int32)}]
+
+		0x180756F35: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player' (type BasePlayer)}
+
+		0x180756F39: [!] Compares {'player' (type BasePlayer)} and 0
+		0x180756F3C: Jumps to 0x1807570ED (which throws a NRE) if player equals 0. Implicitly present in managed code, so ignored here.
+		0x180756F42: Compares {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} and 0
+		0x180756F49: [!] Sets the field inputEnabled (Type System.Boolean) on local {'player' (type BasePlayer)} to the value stored in False
+		0x180756F50: Jumps to 0x180756F65 if {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} != 0
+
+		0x180756F52: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rcx
+		0x180756F59: Initializes runtime metadata value UnityEngine.Vector2
+		0x180756F65: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rax
+		0x180756F6C: Loads the pointer to the static fields for UnityEngine.Vector2 and stores it in constant21 in register rcx
+		0x180756F73: [!] Reads the static field UnityEngine.Vector2 UnityEngine.Vector2::zeroVector into new local zeroVector
+		0x180756F77: [!] Reads the static field  into new local 
+		0x180756F7C: [!] Reads field hudManager from {'player' (type BasePlayer)} and stores in a new local {'hudManager' (type HUDManager)}
+
+		0x180756F83: [!] Sets the field currentDirection (Type UnityEngine.Vector2) on local {'player' (type BasePlayer)} to the value stored in {'zeroVector' (type UnityEngine.Vector2)}
+		0x180756F8B: [!] Sets the field currentDirection.y (Type System.Single) on local {'player' (type BasePlayer)} to the value stored in 
+		0x180756F93: [!] Compares {'hudManager' (type HUDManager)} and 0
+		0x180756F96: Jumps to 0x1807570ED (which throws a NRE) if hudManager equals 0. Implicitly present in managed code, so ignored here.
+		0x180756F9F: Clears register r8, yielding zero-local {'local11' (type System.Int32)}
+		0x180756FA2: Clears register rdx, yielding zero-local {'local12' (type System.Int32)}
+		0x180756FA4: [!] Calls managed method System.Void HUDManager::EnableMainHUDInput(System.Boolean,System.Boolean) on instance {'hudManager' (type HUDManager)} with arguments [{'local12' (type System.Int32)}, {'local11' (type System.Int32)}]
+
+		0x180756FA9: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player2' (type BasePlayer)}
+
+		0x180756FAD: [!] Compares {'player2' (type BasePlayer)} and 0
+		0x180756FB0: Jumps to 0x1807570ED (which throws a NRE) if player2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180756FB9: Clears register rdx, yielding zero-local {'local15' (type System.Int32)}
+		0x180756FBB: [!] Calls managed method System.Void BasePlayer::CloseInteractingPopup(System.Boolean) on instance {'player2' (type BasePlayer)} with arguments [{'local15' (type System.Int32)}]
+
+		0x180756FC0: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player3' (type BasePlayer)}
+
+		0x180756FC4: [!] Compares {'player3' (type BasePlayer)} and 0
+		0x180756FC7: Jumps to 0x1807570ED (which throws a NRE) if player3 equals 0. Implicitly present in managed code, so ignored here.
+		0x180756FCD: Compares {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} and 0
+		0x180756FD4: [!] Sets the field inputEnabled (Type System.Boolean) on local {'player3' (type BasePlayer)} to the value stored in False
+		0x180756FDB: Jumps to 0x180756FF0 if {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} != 0
+
+		0x180756FDD: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rcx
+		0x180756FE4: Initializes runtime metadata value UnityEngine.Vector2
+		0x180756FF0: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rax
+		0x180756FF7: Loads the pointer to the static fields for UnityEngine.Vector2 and stores it in constant29 in register rcx
+		0x180756FFE: [!] Reads the static field UnityEngine.Vector2 UnityEngine.Vector2::zeroVector into new local zeroVector2
+		0x180757002: [!] Reads the static field  into new local 
+		0x180757007: [!] Reads field hudManager from {'player3' (type BasePlayer)} and stores in a new local {'hudManager2' (type HUDManager)}
+
+		0x18075700E: [!] Sets the field currentDirection (Type UnityEngine.Vector2) on local {'player3' (type BasePlayer)} to the value stored in {'zeroVector2' (type UnityEngine.Vector2)}
+		0x180757016: [!] Sets the field currentDirection.y (Type System.Single) on local {'player3' (type BasePlayer)} to the value stored in 
+		0x18075701E: [!] Compares {'hudManager2' (type HUDManager)} and 0
+		0x180757021: Jumps to 0x1807570ED (which throws a NRE) if hudManager2 equals 0. Implicitly present in managed code, so ignored here.
+		0x18075702A: Clears register r8, yielding zero-local {'local20' (type System.Int32)}
+		0x18075702D: Clears register rdx, yielding zero-local {'local21' (type System.Int32)}
+		0x18075702F: [!] Calls managed method System.Void HUDManager::EnableMainHUDInput(System.Boolean,System.Boolean) on instance {'hudManager2' (type HUDManager)} with arguments [{'local21' (type System.Int32)}, {'local20' (type System.Int32)}]
+
+		0x180757034: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player4' (type BasePlayer)}
+
+		0x180757038: [!] Compares {'player4' (type BasePlayer)} and 0
+		0x18075703B: Jumps to 0x1807570ED (which throws a NRE) if player4 equals 0. Implicitly present in managed code, so ignored here.
+		0x180757041: [!] Reads field hudManager from {'player4' (type BasePlayer)} and stores in a new local {'hudManager3' (type HUDManager)}
+
+		0x180757048: [!] Compares {'hudManager3' (type HUDManager)} and 0
+		0x18075704B: Jumps to 0x1807570ED (which throws a NRE) if hudManager3 equals 0. Implicitly present in managed code, so ignored here.
+		0x180757054: Clears register rdx, yielding zero-local {'local25' (type System.Int32)}
+		0x180757056: [!] Calls managed method System.Void HUDManager::SetVisible(System.Boolean) on instance {'hudManager3' (type HUDManager)} with arguments [{'local25' (type System.Int32)}]
+
+		0x18075705B: Compares {Unknown Global at 0x183298874, first ten bytes are [137 228 0 0 27 229 0 0 12 166], or as chars "ä  å  ¦"} and 0
+		0x180757062: Jumps to 0x180757077 if {Unknown Global at 0x183298874, first ten bytes are [137 228 0 0 27 229 0 0 12 166], or as chars "ä  å  ¦"} != 0
+
+		0x180757064: Loads the type definition for managed type FinalCamera as a constant "FinalCamera" in rcx
+		0x18075706B: Initializes runtime metadata value FinalCamera
+		0x180757077: Loads the type definition for managed type FinalCamera as a constant "FinalCamera" in rax
+		0x18075707E: Loads the pointer to the static fields for FinalCamera and stores it in constant37 in register rcx
+		0x180757085: [!] Reads the static field FinalCamera FinalCamera::<Instance>k__BackingField into new local Instance
+		0x180757088: [!] Compares {'Instance' (type FinalCamera)} and 0
+		0x18075708B: Jumps to 0x1807570ED (which throws a NRE) if Instance equals 0. Implicitly present in managed code, so ignored here.
+		0x18075708F: [!] Calls managed method System.Void FinalCamera::ShowCinematicBars() on instance {'Instance' (type FinalCamera)}
+
+		0x180757094: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x18075709B: [!] Allocates an instance of type System.Action and stores it as action in rax.
+
+		0x1807570A0: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::FocusStoreStep0() as a constant "FocusStoreStep0"
+		0x1807570AA: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rdi into rdx
+		0x1807570AD: Copies {'action' (type System.Action)} from rax into rcx
+		0x1807570B0: Copies {'action' (type System.Action)} from rax into rbx
+		0x1807570B3: [!] Calls managed method System.Void System.Action::.ctor(System.Object,System.IntPtr) on instance {'action' (type System.Action)} with arguments [{'this' (function parameter, type SpaceStationUnlockStoreAction)}, {'FocusStoreStep0' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x1807570B8: [!] Reads field delayToFocusCameraOnStore from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'delayToFocusCameraOnStore' (type System.Single)}
+
+		0x1807570C0: Copies {'action' (type System.Action)} from rbx into rdx
+		0x1807570C3: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rdi into rcx
+		0x1807570C6: [!] Calls managed method System.Collections.IEnumerator SpaceStationUnlockStoreAction::InvokeRealtimeCoroutine(System.Action,System.Single) on instance {'this' (function parameter, type SpaceStationUnlockStoreAction)} with arguments [{'action' (type System.Action)}, {'delayToFocusCameraOnStore' (type System.Single)}] and stores the result in {'iEnumerator' (type System.Collections.IEnumerator)}
+
+		0x1807570CE: Copies {'iEnumerator' (type System.Collections.IEnumerator)} from rax into rdx
+		0x1807570D1: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rdi into rcx
+		0x1807570D4: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant41
+		0x1807570D9: Reads unknown value in stack, offset 72 (0x48) and stores the pointer in register rsi as new constant constant42
+		0x1807570DE: Reads unknown value in stack, offset 32 (0x20) and stores the pointer in register xmm6 as new constant constant43
+		0x1807570E8: [!] Calls managed method UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator) on instance {'this' (function parameter, type SpaceStationUnlockStoreAction)} with arguments [{'iEnumerator' (type System.Collections.IEnumerator)}] and stores the result in {'coroutine' (type UnityEngine.Coroutine)}
+
+		0x1807570E8: [!] Returns from the function
+
+		0x1807570ED: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SpaceStationUnlockStoreAction
+	System.Void Setup(BasePlayer player, UnityEngine.Vector2 storeFocusPosition, UnityEngine.GameObject store, UnityEngine.GameObject blocker)
+		this.player = player
+		this.store = store
+		this.blocker = 0
+		ulong local6 = 0
+
+		WorldTimeManager.TimeScale = local6
+		BasePlayer player = this.player
+		player.inputEnabled = False
+		UnityEngine.Vector2 zeroVector = UnityEngine.Vector2.zeroVector
+		  = .
+		HUDManager hudManager = player.hudManager
+		player.currentDirection = zeroVector
+		player.currentDirection.y = 
+		ulong local11 = 0
+		ulong local12 = 0
+
+		hudManager.EnableMainHUDInput(local12, local11) //(Boolean enable, Boolean ignreRadialMenu)
+		BasePlayer player2 = this.player
+		ulong local15 = 0
+
+		player2.CloseInteractingPopup(local15) //(Boolean forceUpdateInteractingObjects)
+		BasePlayer player3 = this.player
+		player3.inputEnabled = False
+		UnityEngine.Vector2 zeroVector2 = UnityEngine.Vector2.zeroVector
+		  = .
+		HUDManager hudManager2 = player3.hudManager
+		player3.currentDirection = zeroVector2
+		player3.currentDirection.y = 
+		ulong local20 = 0
+		ulong local21 = 0
+
+		hudManager2.EnableMainHUDInput(local21, local20) //(Boolean enable, Boolean ignreRadialMenu)
+		BasePlayer player4 = this.player
+		HUDManager hudManager3 = player4.hudManager
+		ulong local25 = 0
+
+		hudManager3.SetVisible(local25) //(Boolean visible)
+		FinalCamera Instance = FinalCamera.<Instance>k__BackingField
+
+		Instance.ShowCinematicBars()
+		System.Action action = new System.Action()
+
+		action..ctor(this, {'FocusStoreStep0' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+		System.Single delayToFocusCameraOnStore = this.delayToFocusCameraOnStore
+
+		System.Collections.IEnumerator iEnumerator = this.InvokeRealtimeCoroutine(action, delayToFocusCameraOnStore) //(Action callback, Single duration)
+
+		UnityEngine.Coroutine coroutine = base.StartCoroutine(iEnumerator) //(IEnumerator routine)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.ImmediateToFieldAction at (0x180756F49) is corrupt (Local player is a function parameter but is missing its parameter definition) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void SpaceStationUnlockStoreAction::InitialSetup():	Method Body (x86 ASM):
+		0x180757100 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180757105 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757106 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18075710A xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18075710C xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18075710F mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180757112 call 00000001807141C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757117 mov rbx,[rdi+58h]		; DEBUG: {Register}/RBX {Memory}/None ||| RDI | 88 | None ||| N/A | N/A
+		0x18075711B test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18075711E je near ptr 000000018075723Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757124 cmp byte ptr [183298856h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 0
+		0x18075712B mov byte ptr [rbx+7A8h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 1960 | None ||| N/A | 0
+		0x180757132 jne short 0000000180757147h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757134 lea rcx,[1830F62D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x18075713B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757140 mov byte ptr [183298856h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 1
+		0x180757147 mov rax,[1830F62D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x18075714E mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180757155 movss xmm0,dword ptr [rcx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180757159 movss xmm1,dword ptr [rcx+4]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 4 | None ||| N/A | N/A
+		0x18075715E mov rcx,[rbx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 1600 | None ||| N/A | N/A
+		0x180757165 movss dword ptr [rbx+2B4h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 692 | None ||| N/A | N/A
+		0x18075716D movss dword ptr [rbx+2B8h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 696 | None ||| N/A | N/A
+		0x180757175 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180757178 je near ptr 000000018075723Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075717E xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180757181 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180757184 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180757186 call 00000001806C5CC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075718B mov rcx,[rdi+58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 88 | None ||| N/A | N/A
+		0x18075718F test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180757192 je near ptr 000000018075723Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757198 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18075719B xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18075719D call 000000018044B000h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807571A2 mov rbx,[rdi+58h]		; DEBUG: {Register}/RBX {Memory}/None ||| RDI | 88 | None ||| N/A | N/A
+		0x1807571A6 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807571A9 je near ptr 000000018075723Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807571AF cmp byte ptr [183298856h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 0
+		0x1807571B6 mov byte ptr [rbx+7A8h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 1960 | None ||| N/A | 0
+		0x1807571BD jne short 00000001807571D2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807571BF lea rcx,[1830F62D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x1807571C6 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807571CB mov byte ptr [183298856h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 1
+		0x1807571D2 mov rax,[1830F62D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x1807571D9 mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1807571E0 movss xmm0,dword ptr [rcx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1807571E4 movss xmm1,dword ptr [rcx+4]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 4 | None ||| N/A | N/A
+		0x1807571E9 mov rcx,[rbx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 1600 | None ||| N/A | N/A
+		0x1807571F0 movss dword ptr [rbx+2B4h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 692 | None ||| N/A | N/A
+		0x1807571F8 movss dword ptr [rbx+2B8h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 696 | None ||| N/A | N/A
+		0x180757200 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180757203 je short 000000018075723Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757205 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180757208 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18075720B xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18075720D call 00000001806C5CC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757212 mov rcx,[rdi+58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 88 | None ||| N/A | N/A
+		0x180757216 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180757219 je short 000000018075723Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075721B mov rcx,[rcx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 1600 | None ||| N/A | N/A
+		0x180757222 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180757225 je short 000000018075723Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757227 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18075722A xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18075722C mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180757231 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180757235 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757236 jmp near ptr 00000001806C4D30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075723B call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757240 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SpaceStationUnlockStoreAction::InitialSetup():
+		End of function at 0x180757241
+		Absolute End is at 0x180757241
+		Identified Jump Destination addresses:
+
+		0x180757105: Saves the content of rdi to the stack
+		0x18075710C: Clears register xmm0, yielding zero-local {'local2' (type System.Int32)}
+		0x18075710F: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rcx into rdi
+		0x180757112: [!] Calls static managed method System.Void WorldTimeManager::set_TimeScale(System.Single) with arguments [{'local2' (type System.Int32)}]
+
+		0x180757117: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player' (type BasePlayer)}
+
+		0x18075711B: [!] Compares {'player' (type BasePlayer)} and 0
+		0x18075711E: Jumps to 0x18075723B (which throws a NRE) if player equals 0. Implicitly present in managed code, so ignored here.
+		0x180757124: Compares {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} and 0
+		0x18075712B: [!] Sets the field inputEnabled (Type System.Boolean) on local {'player' (type BasePlayer)} to the value stored in False
+		0x180757132: Jumps to 0x180757147 if {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} != 0
+
+		0x180757134: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rcx
+		0x18075713B: Initializes runtime metadata value UnityEngine.Vector2
+		0x180757147: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rax
+		0x18075714E: Loads the pointer to the static fields for UnityEngine.Vector2 and stores it in constant6 in register rcx
+		0x180757155: [!] Reads the static field UnityEngine.Vector2 UnityEngine.Vector2::zeroVector into new local zeroVector
+		0x180757159: [!] Reads the static field  into new local 
+		0x18075715E: [!] Reads field hudManager from {'player' (type BasePlayer)} and stores in a new local {'hudManager' (type HUDManager)}
+
+		0x180757165: [!] Sets the field currentDirection (Type UnityEngine.Vector2) on local {'player' (type BasePlayer)} to the value stored in {'zeroVector' (type UnityEngine.Vector2)}
+		0x18075716D: [!] Sets the field currentDirection.y (Type System.Single) on local {'player' (type BasePlayer)} to the value stored in 
+		0x180757175: [!] Compares {'hudManager' (type HUDManager)} and 0
+		0x180757178: Jumps to 0x18075723B (which throws a NRE) if hudManager equals 0. Implicitly present in managed code, so ignored here.
+		0x180757181: Clears register r8, yielding zero-local {'local7' (type System.Int32)}
+		0x180757184: Clears register rdx, yielding zero-local {'local8' (type System.Int32)}
+		0x180757186: [!] Calls managed method System.Void HUDManager::EnableMainHUDInput(System.Boolean,System.Boolean) on instance {'hudManager' (type HUDManager)} with arguments [{'local8' (type System.Int32)}, {'local7' (type System.Int32)}]
+
+		0x18075718B: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player2' (type BasePlayer)}
+
+		0x18075718F: [!] Compares {'player2' (type BasePlayer)} and 0
+		0x180757192: Jumps to 0x18075723B (which throws a NRE) if player2 equals 0. Implicitly present in managed code, so ignored here.
+		0x18075719B: Clears register rdx, yielding zero-local {'local11' (type System.Int32)}
+		0x18075719D: [!] Calls managed method System.Void BasePlayer::CloseInteractingPopup(System.Boolean) on instance {'player2' (type BasePlayer)} with arguments [{'local11' (type System.Int32)}]
+
+		0x1807571A2: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player3' (type BasePlayer)}
+
+		0x1807571A6: [!] Compares {'player3' (type BasePlayer)} and 0
+		0x1807571A9: Jumps to 0x18075723B (which throws a NRE) if player3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807571AF: Compares {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} and 0
+		0x1807571B6: [!] Sets the field inputEnabled (Type System.Boolean) on local {'player3' (type BasePlayer)} to the value stored in False
+		0x1807571BD: Jumps to 0x1807571D2 if {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} != 0
+
+		0x1807571BF: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rcx
+		0x1807571C6: Initializes runtime metadata value UnityEngine.Vector2
+		0x1807571D2: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rax
+		0x1807571D9: Loads the pointer to the static fields for UnityEngine.Vector2 and stores it in constant14 in register rcx
+		0x1807571E0: [!] Reads the static field UnityEngine.Vector2 UnityEngine.Vector2::zeroVector into new local zeroVector2
+		0x1807571E4: [!] Reads the static field  into new local 
+		0x1807571E9: [!] Reads field hudManager from {'player3' (type BasePlayer)} and stores in a new local {'hudManager2' (type HUDManager)}
+
+		0x1807571F0: [!] Sets the field currentDirection (Type UnityEngine.Vector2) on local {'player3' (type BasePlayer)} to the value stored in {'zeroVector2' (type UnityEngine.Vector2)}
+		0x1807571F8: [!] Sets the field currentDirection.y (Type System.Single) on local {'player3' (type BasePlayer)} to the value stored in 
+		0x180757200: [!] Compares {'hudManager2' (type HUDManager)} and 0
+		0x180757203: Jumps to 0x18075723B (which throws a NRE) if hudManager2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180757208: Clears register r8, yielding zero-local {'local16' (type System.Int32)}
+		0x18075720B: Clears register rdx, yielding zero-local {'local17' (type System.Int32)}
+		0x18075720D: [!] Calls managed method System.Void HUDManager::EnableMainHUDInput(System.Boolean,System.Boolean) on instance {'hudManager2' (type HUDManager)} with arguments [{'local17' (type System.Int32)}, {'local16' (type System.Int32)}]
+
+		0x180757212: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player4' (type BasePlayer)}
+
+		0x180757216: [!] Compares {'player4' (type BasePlayer)} and 0
+		0x180757219: Jumps to 0x18075723B (which throws a NRE) if player4 equals 0. Implicitly present in managed code, so ignored here.
+		0x18075721B: [!] Reads field hudManager from {'player4' (type BasePlayer)} and stores in a new local {'hudManager3' (type HUDManager)}
+
+		0x180757222: [!] Compares {'hudManager3' (type HUDManager)} and 0
+		0x180757225: Jumps to 0x18075723B (which throws a NRE) if hudManager3 equals 0. Implicitly present in managed code, so ignored here.
+		0x18075722A: Clears register rdx, yielding zero-local {'local21' (type System.Int32)}
+		0x18075722C: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant18
+		0x180757236: [!] Calls managed method System.Void HUDManager::SetVisible(System.Boolean) on instance {'hudManager3' (type HUDManager)} with arguments [{'local21' (type System.Int32)}]
+
+		0x180757236: [!] Returns from the function
+
+		0x18075723B: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SpaceStationUnlockStoreAction
+	System.Void InitialSetup()
+		ulong local2 = 0
+
+		WorldTimeManager.TimeScale = local2
+		BasePlayer player = this.player
+		player.inputEnabled = False
+		UnityEngine.Vector2 zeroVector = UnityEngine.Vector2.zeroVector
+		  = .
+		HUDManager hudManager = player.hudManager
+		player.currentDirection = zeroVector
+		player.currentDirection.y = 
+		ulong local7 = 0
+		ulong local8 = 0
+
+		hudManager.EnableMainHUDInput(local8, local7) //(Boolean enable, Boolean ignreRadialMenu)
+		BasePlayer player2 = this.player
+		ulong local11 = 0
+
+		player2.CloseInteractingPopup(local11) //(Boolean forceUpdateInteractingObjects)
+		BasePlayer player3 = this.player
+		player3.inputEnabled = False
+		UnityEngine.Vector2 zeroVector2 = UnityEngine.Vector2.zeroVector
+		  = .
+		HUDManager hudManager2 = player3.hudManager
+		player3.currentDirection = zeroVector2
+		player3.currentDirection.y = 
+		ulong local16 = 0
+		ulong local17 = 0
+
+		hudManager2.EnableMainHUDInput(local17, local16) //(Boolean enable, Boolean ignreRadialMenu)
+		BasePlayer player4 = this.player
+		HUDManager hudManager3 = player4.hudManager
+		ulong local21 = 0
+
+		hudManager3.SetVisible(local21) //(Boolean visible)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.StaticFieldToRegAction at (0x180757159) is corrupt (Couldn't identify the field being read (or its type).) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void SpaceStationUnlockStoreAction::FocusStoreStep0():	Method Body (x86 ASM):
+		0x180757250 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757252 sub rsp,50h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 80
+		0x180757256 cmp byte ptr [18329B1DFh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515103 | None ||| N/A | 0
+		0x18075725D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180757260 jne short 0000000180757281h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757262 lea rcx,[1830DDA68h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493690472 | None ||| N/A | N/A
+		0x180757269 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075726E lea rcx,[1830FBD78h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814136 | None ||| N/A | N/A
+		0x180757275 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075727A mov byte ptr [18329B1DFh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515103 | None ||| N/A | 1
+		0x180757281 mov rax,[rbx+58h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x180757285 mov [rsp+68h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 104 | None ||| N/A | N/A
+		0x18075728A mov [rsp+70h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 112 | None ||| N/A | N/A
+		0x18075728F movaps [rsp+40h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 64 | None ||| N/A | N/A
+		0x180757294 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757297 je near ptr 000000018075732Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075729D movss xmm0,dword ptr [rbx+60h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 96 | None ||| N/A | N/A
+		0x1807572A2 movss xmm1,dword ptr [rbx+64h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBX | 100 | None ||| N/A | N/A
+		0x1807572A7 mov rcx,[1830FBD78h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814136 | None ||| N/A | N/A
+		0x1807572AE mov rdi,[rax+518h]		; DEBUG: {Register}/RDI {Memory}/None ||| RAX | 1304 | None ||| N/A | N/A
+		0x1807572B5 movss xmm6,dword ptr [rbx+28h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1807572BA movss dword ptr [rsp+60h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 96 | None ||| N/A | N/A
+		0x1807572C0 movss dword ptr [rsp+64h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 100 | None ||| N/A | N/A
+		0x1807572C6 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807572CB mov r8,[1830DDA68h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493690472 | None ||| N/A | N/A
+		0x1807572D2 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1807572D5 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807572D8 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807572DB mov rsi,rax		; DEBUG: {Register}/RSI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807572DE call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807572E3 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1807572E6 je short 000000018075732Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807572E8 mov edx,[rbx+20h]		; DEBUG: {Register}/EDX {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x1807572EB mov r9,rsi		; DEBUG: {Register}/R9 {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1807572EE mov qword ptr [rsp+38h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 56 | None ||| N/A | 0
+		0x1807572F7 movaps xmm2,xmm6		; DEBUG: {Register}/XMM2 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x1807572FA mov byte ptr [rsp+30h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RSP | 48 | None ||| N/A | 1
+		0x1807572FF mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180757302 mov [rsp+28h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RSP | 40 | None ||| N/A | N/A
+		0x180757306 mov rdx,[rsp+60h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x18075730B mov byte ptr [rsp+20h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RSP | 32 | None ||| N/A | 1
+		0x180757310 call 00000001803F1A10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757315 movaps xmm6,[rsp+40h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x18075731A mov rdi,[rsp+70h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x18075731F mov rsi,[rsp+68h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 104 | None ||| N/A | N/A
+		0x180757324 add rsp,50h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 80
+		0x180757328 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757329 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18075732A call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075732F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SpaceStationUnlockStoreAction::FocusStoreStep0():
+		End of function at 0x180757330
+		Absolute End is at 0x180757330
+		Identified Jump Destination addresses:
+
+		0x180757250: Saves the content of rbx to the stack
+		0x180757256: Compares {Unknown Global at 0x18329B1DF, first ten bytes are [0 228 254 238 2 240 226 3 0 119], or as chars " äþîðâ w"} and 0
+		0x18075725D: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rcx into rbx
+		0x180757260: Jumps to 0x180757281 if {Unknown Global at 0x18329B1DF, first ten bytes are [0 228 254 238 2 240 226 3 0 119], or as chars " äþîðâ w"} != 0
+
+		0x180757262: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::OnCameraFocusStore() as a constant "OnCameraFocusStore"
+		0x180757269: Initializes runtime metadata value System.Void SpaceStationUnlockStoreAction::OnCameraFocusStore()
+		0x18075726E: Loads the type definition for managed type DG.Tweening.TweenCallback as a constant "TweenCallback" in rcx
+		0x180757275: Initializes runtime metadata value DG.Tweening.TweenCallback
+		0x180757281: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player' (type BasePlayer)}
+
+		0x180757294: [!] Compares {'player' (type BasePlayer)} and 0
+		0x180757297: Jumps to 0x18075732A (which throws a NRE) if player equals 0. Implicitly present in managed code, so ignored here.
+		0x18075729D: [!] Reads field storeFocusPosition from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'storeFocusPosition' (type UnityEngine.Vector2)}
+
+		0x1807572A2: [!] Reads field storeFocusPosition.y from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'single' (type System.Single)}
+
+		0x1807572A7: Loads the type definition for managed type DG.Tweening.TweenCallback as a constant "TweenCallback" in rcx
+		0x1807572AE: [!] Reads field playerCamera from {'player' (type BasePlayer)} and stores in a new local {'playerCamera' (type PlayerCamera)}
+
+		0x1807572B5: [!] Reads field focusStoreCameraSpeed from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'focusStoreCameraSpeed' (type System.Single)}
+
+		0x1807572BA: Moves storeFocusPosition (type UnityEngine.Vector2) from register xmm0 to the stack at offset 96 (0x60)
+		0x1807572C0: Moves single (type System.Single) from register xmm1 to the stack at offset 100 (0x64)
+		0x1807572C6: [!] Allocates an instance of type DG.Tweening.TweenCallback and stores it as tweenCallback in rax.
+
+		0x1807572CB: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::OnCameraFocusStore() as a constant "OnCameraFocusStore"
+		0x1807572D5: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rbx into rdx
+		0x1807572D8: Copies {'tweenCallback' (type DG.Tweening.TweenCallback)} from rax into rcx
+		0x1807572DB: Copies {'tweenCallback' (type DG.Tweening.TweenCallback)} from rax into rsi
+		0x1807572DE: [!] Calls managed method System.Void DG.Tweening.TweenCallback::.ctor(System.Object,System.IntPtr) on instance {'tweenCallback' (type DG.Tweening.TweenCallback)} with arguments [{'this' (function parameter, type SpaceStationUnlockStoreAction)}, {'OnCameraFocusStore' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x1807572E3: [!] Compares {'playerCamera' (type PlayerCamera)} and 0
+		0x1807572E6: Jumps to 0x18075732A (which throws a NRE) if playerCamera equals 0. Implicitly present in managed code, so ignored here.
+		0x1807572E8: [!] Reads field cameraMovementEaseType from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'cameraMovementEaseType' (type DG.Tweening.Ease)}
+
+		0x1807572EB: Copies {'tweenCallback' (type DG.Tweening.TweenCallback)} from rsi into r9
+		0x1807572EE: Moves 0 (immediate ulong value) to the stack at offset 56 as a new local local9
+		0x1807572F7: Copies {'focusStoreCameraSpeed' (type System.Single)} from xmm6 into xmm2
+		0x1807572FA: Moves 1 (immediate ulong value) to the stack at offset 48 as a new local local10
+		0x1807572FF: Copies {'playerCamera' (type PlayerCamera)} from rdi into rcx
+		0x180757302: Moves cameraMovementEaseType (type DG.Tweening.Ease) from register rdx to the stack at offset 40 (0x28)
+		0x180757306: Reads local {'storeFocusPosition' (type UnityEngine.Vector2)} from stack offset 96 (0x60) into register rdx
+		0x18075730B: Moves 1 (immediate ulong value) to the stack at offset 32 as a new local local11
+		0x180757310: [!] Calls managed method System.Void PlayerCamera::FocusOnPosition(UnityEngine.Vector2,System.Single,DG.Tweening.TweenCallback,System.Boolean,DG.Tweening.Ease,System.Boolean) on instance {'playerCamera' (type PlayerCamera)} with arguments [{'storeFocusPosition' (type UnityEngine.Vector2)}, {'focusStoreCameraSpeed' (type System.Single)}, {'tweenCallback' (type DG.Tweening.TweenCallback)}, {'local11' (type System.UInt64)}, {'cameraMovementEaseType' (type DG.Tweening.Ease)}, {'local10' (type System.UInt64)}]
+
+		0x180757315: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register xmm6 as new constant constant9
+		0x18075731A: Reads unknown value in stack, offset 112 (0x70) and stores the pointer in register rdi as new constant constant10
+		0x18075731F: Reads unknown value in stack, offset 104 (0x68) and stores the pointer in register rsi as new constant constant11
+		0x180757329: [!] Returns from the function
+
+		0x18075732A: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SpaceStationUnlockStoreAction
+	System.Void FocusStoreStep0()
+		BasePlayer player = this.player
+		UnityEngine.Vector2 storeFocusPosition = this.storeFocusPosition
+		System.Single single = this.storeFocusPosition.y
+		PlayerCamera playerCamera = player.playerCamera
+		System.Single focusStoreCameraSpeed = this.focusStoreCameraSpeed
+		DG.Tweening.TweenCallback tweenCallback = new DG.Tweening.TweenCallback()
+
+		tweenCallback..ctor(this, {'OnCameraFocusStore' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+		DG.Tweening.Ease cameraMovementEaseType = this.cameraMovementEaseType
+
+		playerCamera.FocusOnPosition(storeFocusPosition, focusStoreCameraSpeed, tweenCallback, local11, cameraMovementEaseType, local10) //(Vector2 position, Single speed, TweenCallback onComplete, Boolean unscaledTime, Ease easeType, Boolean killCurrentTween)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld BasePlayer SpaceStationUnlockStoreAction::player
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld UnityEngine.Vector2 SpaceStationUnlockStoreAction::storeFocusPosition
+	IL_000d: stloc.1
+	IL_000e: ldarg.0
+	IL_000f: ldfld UnityEngine.Vector2 SpaceStationUnlockStoreAction::storeFocusPosition
+	IL_0014: ldfld System.Single UnityEngine.Vector2::y
+	IL_0019: stloc.2
+	IL_001a: ldloc.0
+	IL_001b: ldfld PlayerCamera BasePlayer::playerCamera
+	IL_0020: stloc.3
+	IL_0021: ldarg.0
+	IL_0022: ldfld System.Single SpaceStationUnlockStoreAction::focusStoreCameraSpeed
+	IL_0027: stloc.s V_4
+	IL_0029: ldarg.0
+	IL_002a: ldftn System.Void SpaceStationUnlockStoreAction::OnCameraFocusStore()
+	IL_0030: newobj System.Void DG.Tweening.TweenCallback::.ctor(System.Object,System.IntPtr)
+	IL_0035: stloc.s V_5
+	IL_0037: ldarg.0
+	IL_0038: ldfld DG.Tweening.Ease SpaceStationUnlockStoreAction::cameraMovementEaseType
+	IL_003d: stloc.s V_6
+	IL_003f: ldloc.3
+	IL_0040: ldloc.1
+	IL_0041: ldloc.s V_4
+	IL_0043: ldloc.s V_5
+	IL_0045: ldloc.s V_9
+	IL_0047: ldloc.s V_6
+	IL_0049: ldloc.s V_8
+	IL_004b: call System.Void PlayerCamera::FocusOnPosition(UnityEngine.Vector2,System.Single,DG.Tweening.TweenCallback,System.Boolean,DG.Tweening.Ease,System.Boolean)
+	IL_0050: ret
+	IL_0051: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0056: throw
+	
+
+Method: System.Void SpaceStationUnlockStoreAction::OnCameraFocusStore():	Method Body (x86 ASM):
+		0x180757330 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180757335 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757336 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18075733A cmp byte ptr [18329B1E0h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515104 | None ||| N/A | 0
+		0x180757341 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180757344 jne short 0000000180757365h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757346 lea rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x18075734D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757352 lea rcx,[1830DDA60h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493690464 | None ||| N/A | N/A
+		0x180757359 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075735E mov byte ptr [18329B1E0h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515104 | None ||| N/A | 1
+		0x180757365 mov rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x18075736C call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757371 mov r8,[1830DDA60h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493690464 | None ||| N/A | N/A
+		0x180757378 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18075737B mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18075737E mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757381 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757384 call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757389 movss xmm2,dword ptr [rdi+38h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 56 | None ||| N/A | N/A
+		0x18075738E xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180757391 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180757394 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180757397 call 0000000180757A50h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075739C xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18075739F mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807573A2 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1807573A5 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1807573AA add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807573AE pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807573AF jmp near ptr 000000018248C0A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807573B4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SpaceStationUnlockStoreAction::OnCameraFocusStore():
+		End of function at 0x1807573B5
+		Absolute End is at 0x1807573B5
+		Identified Jump Destination addresses:
+
+		0x180757335: Saves the content of rdi to the stack
+		0x18075733A: Compares {Unknown Global at 0x18329B1E0, first ten bytes are [228 254 238 2 240 226 3 0 119 227], or as chars "äþîðâ wã"} and 0
+		0x180757341: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rcx into rdi
+		0x180757344: Jumps to 0x180757365 if {Unknown Global at 0x18329B1E0, first ten bytes are [228 254 238 2 240 226 3 0 119 227], or as chars "äþîðâ wã"} != 0
+
+		0x180757346: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x18075734D: Initializes runtime metadata value System.Action
+		0x180757352: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::FadeToBlackStep1() as a constant "FadeToBlackStep1"
+		0x180757359: Initializes runtime metadata value System.Void SpaceStationUnlockStoreAction::FadeToBlackStep1()
+		0x180757365: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x18075736C: [!] Allocates an instance of type System.Action and stores it as action in rax.
+
+		0x180757371: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::FadeToBlackStep1() as a constant "FadeToBlackStep1"
+		0x18075737B: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rdi into rdx
+		0x18075737E: Copies {'action' (type System.Action)} from rax into rcx
+		0x180757381: Copies {'action' (type System.Action)} from rax into rbx
+		0x180757384: [!] Calls managed method System.Void System.Action::.ctor(System.Object,System.IntPtr) on instance {'action' (type System.Action)} with arguments [{'this' (function parameter, type SpaceStationUnlockStoreAction)}, {'FadeToBlackStep1' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x180757389: [!] Reads field delayToFadeToBlackCameraOnFocusedStore from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'delayToFadeToBlackCameraOnFocusedStore' (type System.Single)}
+
+		0x180757391: Copies {'action' (type System.Action)} from rbx into rdx
+		0x180757394: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rdi into rcx
+		0x180757397: [!] Calls managed method System.Collections.IEnumerator SpaceStationUnlockStoreAction::InvokeRealtimeCoroutine(System.Action,System.Single) on instance {'this' (function parameter, type SpaceStationUnlockStoreAction)} with arguments [{'action' (type System.Action)}, {'delayToFadeToBlackCameraOnFocusedStore' (type System.Single)}] and stores the result in {'iEnumerator' (type System.Collections.IEnumerator)}
+
+		0x18075739F: Copies {'iEnumerator' (type System.Collections.IEnumerator)} from rax into rdx
+		0x1807573A2: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rdi into rcx
+		0x1807573A5: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant7
+		0x1807573AF: [!] Calls managed method UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator) on instance {'this' (function parameter, type SpaceStationUnlockStoreAction)} with arguments [{'iEnumerator' (type System.Collections.IEnumerator)}] and stores the result in {'coroutine' (type UnityEngine.Coroutine)}
+
+		0x1807573AF: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SpaceStationUnlockStoreAction
+	System.Void OnCameraFocusStore()
+		System.Action action = new System.Action()
+
+		action..ctor(this, {'FadeToBlackStep1' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+		System.Single delayToFadeToBlackCameraOnFocusedStore = this.delayToFadeToBlackCameraOnFocusedStore
+
+		System.Collections.IEnumerator iEnumerator = this.InvokeRealtimeCoroutine(action, delayToFadeToBlackCameraOnFocusedStore) //(Action callback, Single duration)
+
+		UnityEngine.Coroutine coroutine = base.StartCoroutine(iEnumerator) //(IEnumerator routine)
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldftn System.Void SpaceStationUnlockStoreAction::FadeToBlackStep1()
+	IL_0007: newobj System.Void System.Action::.ctor(System.Object,System.IntPtr)
+	IL_000c: stloc.0
+	IL_000d: ldarg.0
+	IL_000e: ldfld System.Single SpaceStationUnlockStoreAction::delayToFadeToBlackCameraOnFocusedStore
+	IL_0013: stloc.1
+	IL_0014: ldarg.0
+	IL_0015: ldloc.0
+	IL_0016: ldloc.1
+	IL_0017: call System.Collections.IEnumerator SpaceStationUnlockStoreAction::InvokeRealtimeCoroutine(System.Action,System.Single)
+	IL_001c: stloc.2
+	IL_001d: ldarg.0
+	IL_001e: ldloc.2
+	IL_001f: call UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
+	IL_0024: stloc.3
+	IL_0025: ret
+	
+
+Method: System.Void SpaceStationUnlockStoreAction::FadeToBlackStep1():	Method Body (x86 ASM):
+		0x1807573C0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1807573C5 mov [rsp+10h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 16 | None ||| N/A | N/A
+		0x1807573CA mov [rsp+18h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 24 | None ||| N/A | N/A
+		0x1807573CF push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807573D0 sub rsp,70h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 112
+		0x1807573D4 cmp byte ptr [18329B1E1h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515105 | None ||| N/A | 0
+		0x1807573DB mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807573DE movaps [rsp+60h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 96 | None ||| N/A | N/A
+		0x1807573E3 movaps [rsp+50h],xmm7		; DEBUG: {Memory}/None {Register}/XMM7 ||| RSP | 80 | None ||| N/A | N/A
+		0x1807573E8 movaps [rsp+40h],xmm8		; DEBUG: {Memory}/None {Register}/XMM8 ||| RSP | 64 | None ||| N/A | N/A
+		0x1807573EE jne short 000000018075741Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807573F0 lea rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x1807573F7 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807573FC lea rcx,[1830DDA48h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493690440 | None ||| N/A | N/A
+		0x180757403 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757408 lea rcx,[1830DDA50h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493690448 | None ||| N/A | N/A
+		0x18075740F call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757414 mov byte ptr [18329B1E1h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515105 | None ||| N/A | 1
+		0x18075741B cmp byte ptr [183298874h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504500 | None ||| N/A | 0
+		0x180757422 jne short 0000000180757437h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757424 lea rcx,[183100600h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493832704 | None ||| N/A | N/A
+		0x18075742B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757430 mov byte ptr [183298874h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504500 | None ||| N/A | 1
+		0x180757437 mov rax,[183100600h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493832704 | None ||| N/A | N/A
+		0x18075743E movss xmm6,dword ptr [rbx+3Ch]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RBX | 60 | None ||| N/A | N/A
+		0x180757443 movss xmm7,dword ptr [rbx+40h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RBX | 64 | None ||| N/A | N/A
+		0x180757448 movss xmm8,dword ptr [rbx+44h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RBX | 68 | None ||| N/A | N/A
+		0x18075744E mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180757455 mov rdi,[rcx]		; DEBUG: {Register}/RDI {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180757458 mov rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x18075745F call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757464 mov r8,[1830DDA48h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493690440 | None ||| N/A | N/A
+		0x18075746B xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18075746E mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180757471 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757474 mov rsi,rax		; DEBUG: {Register}/RSI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757477 call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075747C mov rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x180757483 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757488 mov r8,[1830DDA50h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493690448 | None ||| N/A | N/A
+		0x18075748F xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180757492 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180757495 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757498 mov rbp,rax		; DEBUG: {Register}/RBP {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18075749B call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807574A0 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1807574A3 je short 00000001807574EFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807574A5 mov qword ptr [rsp+30h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 48 | None ||| N/A | 0
+		0x1807574AE movaps xmm3,xmm8		; DEBUG: {Register}/XMM3 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x1807574B2 mov [rsp+28h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 40 | None ||| N/A | N/A
+		0x1807574B7 movaps xmm2,xmm7		; DEBUG: {Register}/XMM2 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x1807574BA movaps xmm1,xmm6		; DEBUG: {Register}/XMM1 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x1807574BD mov [rsp+20h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 32 | None ||| N/A | N/A
+		0x1807574C2 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1807574C5 call 00000001803ECB90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807574CA movaps xmm6,[rsp+60h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x1807574CF lea r11,[rsp+70h]		; DEBUG: {Register}/R11 {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x1807574D4 mov rbx,[r11+10h]		; DEBUG: {Register}/RBX {Memory}/None ||| R11 | 16 | None ||| N/A | N/A
+		0x1807574D8 mov rbp,[r11+18h]		; DEBUG: {Register}/RBP {Memory}/None ||| R11 | 24 | None ||| N/A | N/A
+		0x1807574DC mov rsi,[r11+20h]		; DEBUG: {Register}/RSI {Memory}/None ||| R11 | 32 | None ||| N/A | N/A
+		0x1807574E0 movaps xmm8,[r11-30h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| R11 | 18446744073709551568 | None ||| N/A | N/A
+		0x1807574E5 movaps xmm7,[rsp+50h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1807574EA mov rsp,r11		; DEBUG: {Register}/RSP {Register}/R11 ||| None | 0 | None ||| N/A | N/A
+		0x1807574ED pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807574EE ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807574EF call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807574F4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SpaceStationUnlockStoreAction::FadeToBlackStep1():
+		End of function at 0x1807574F5
+		Absolute End is at 0x1807574F5
+		Identified Jump Destination addresses:
+
+		0x1807573CF: Saves the content of rdi to the stack
+		0x1807573D4: Compares {Unknown Global at 0x18329B1E1, first ten bytes are [254 238 2 240 226 3 0 119 227 3], or as chars "þîðâ wã"} and 0
+		0x1807573DB: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rcx into rbx
+		0x1807573EE: Jumps to 0x18075741B if {Unknown Global at 0x18329B1E1, first ten bytes are [254 238 2 240 226 3 0 119 227 3], or as chars "þîðâ wã"} != 0
+
+		0x1807573F0: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x1807573F7: Initializes runtime metadata value System.Action
+		0x1807573FC: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::EnableStore() as a constant "EnableStore"
+		0x180757403: Initializes runtime metadata value System.Void SpaceStationUnlockStoreAction::EnableStore()
+		0x180757408: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::OnCompleteUnlockStoreFade() as a constant "OnCompleteUnlockStoreFade"
+		0x18075740F: Initializes runtime metadata value System.Void SpaceStationUnlockStoreAction::OnCompleteUnlockStoreFade()
+		0x18075741B: Compares {Unknown Global at 0x183298874, first ten bytes are [137 228 0 0 27 229 0 0 12 166], or as chars "ä  å  ¦"} and 0
+		0x180757422: Jumps to 0x180757437 if {Unknown Global at 0x183298874, first ten bytes are [137 228 0 0 27 229 0 0 12 166], or as chars "ä  å  ¦"} != 0
+
+		0x180757424: Loads the type definition for managed type FinalCamera as a constant "FinalCamera" in rcx
+		0x18075742B: Initializes runtime metadata value FinalCamera
+		0x180757437: Loads the type definition for managed type FinalCamera as a constant "FinalCamera" in rax
+		0x18075743E: [!] Reads field unlockStoreFadeOutDuration from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'unlockStoreFadeOutDuration' (type System.Single)}
+
+		0x180757443: [!] Reads field unlockStoreFadeOutStayDuration from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'unlockStoreFadeOutStayDuration' (type System.Single)}
+
+		0x180757448: [!] Reads field unlockStoreFadeInDuration from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'unlockStoreFadeInDuration' (type System.Single)}
+
+		0x18075744E: Loads the pointer to the static fields for FinalCamera and stores it in constant10 in register rcx
+		0x180757455: [!] Reads the static field FinalCamera FinalCamera::<Instance>k__BackingField into new local Instance
+		0x180757458: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x18075745F: [!] Allocates an instance of type System.Action and stores it as action in rax.
+
+		0x180757464: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::EnableStore() as a constant "EnableStore"
+		0x18075746E: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rbx into rdx
+		0x180757471: Copies {'action' (type System.Action)} from rax into rcx
+		0x180757474: Copies {'action' (type System.Action)} from rax into rsi
+		0x180757477: [!] Calls managed method System.Void System.Action::.ctor(System.Object,System.IntPtr) on instance {'action' (type System.Action)} with arguments [{'this' (function parameter, type SpaceStationUnlockStoreAction)}, {'EnableStore' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x18075747C: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x180757483: [!] Allocates an instance of type System.Action and stores it as action2 in rax.
+
+		0x180757488: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::OnCompleteUnlockStoreFade() as a constant "OnCompleteUnlockStoreFade"
+		0x180757492: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rbx into rdx
+		0x180757495: Copies {'action2' (type System.Action)} from rax into rcx
+		0x180757498: Copies {'action2' (type System.Action)} from rax into rbp
+		0x18075749B: [!] Calls managed method System.Void System.Action::.ctor(System.Object,System.IntPtr) on instance {'action2' (type System.Action)} with arguments [{'this' (function parameter, type SpaceStationUnlockStoreAction)}, {'OnCompleteUnlockStoreFade' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x1807574A0: [!] Compares {'Instance' (type FinalCamera)} and 0
+		0x1807574A3: Jumps to 0x1807574EF (which throws a NRE) if Instance equals 0. Implicitly present in managed code, so ignored here.
+		0x1807574A5: Moves 0 (immediate ulong value) to the stack at offset 48 as a new local local9
+		0x1807574AE: Copies {'unlockStoreFadeInDuration' (type System.Single)} from xmm8 into xmm3
+		0x1807574B2: Moves action2 (type System.Action) from register rbp to the stack at offset 40 (0x28)
+		0x1807574B7: Copies {'unlockStoreFadeOutStayDuration' (type System.Single)} from xmm7 into xmm2
+		0x1807574BA: Copies {'unlockStoreFadeOutDuration' (type System.Single)} from xmm6 into xmm1
+		0x1807574BD: Moves action (type System.Action) from register rsi to the stack at offset 32 (0x20)
+		0x1807574C2: Copies {'Instance' (type FinalCamera)} from rdi into rcx
+		0x1807574C5: [!] Calls managed method System.Void FinalCamera::FadeOutFadeIn(System.Single,System.Single,System.Single,System.Action,System.Action) on instance {'Instance' (type FinalCamera)} with arguments [{'unlockStoreFadeOutDuration' (type System.Single)}, {'unlockStoreFadeOutStayDuration' (type System.Single)}, {'unlockStoreFadeInDuration' (type System.Single)}, {'action' (type System.Action)}, {'action2' (type System.Action)}]
+
+		0x1807574CA: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register xmm6 as new constant constant16
+		0x1807574CF: Loads a pointer to stack offset 0x70 into register r11 as new constant constant17
+		0x1807574E5: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register xmm7 as new constant constant18
+		0x1807574EA: Copies {'constant17' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r11 into rsp
+		0x1807574EE: [!] Returns from the function
+
+		0x1807574EF: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SpaceStationUnlockStoreAction
+	System.Void FadeToBlackStep1()
+		System.Single unlockStoreFadeOutDuration = this.unlockStoreFadeOutDuration
+		System.Single unlockStoreFadeOutStayDuration = this.unlockStoreFadeOutStayDuration
+		System.Single unlockStoreFadeInDuration = this.unlockStoreFadeInDuration
+		FinalCamera Instance = FinalCamera.<Instance>k__BackingField
+		System.Action action = new System.Action()
+
+		action..ctor(this, {'EnableStore' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+		System.Action action2 = new System.Action()
+
+		action2..ctor(this, {'OnCompleteUnlockStoreFade' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+
+		Instance.FadeOutFadeIn(unlockStoreFadeOutDuration, unlockStoreFadeOutStayDuration, unlockStoreFadeInDuration, action, action2) //(Single fadeOutDuration, Single stayBlackDuration, Single fadeInDuration, Action onCompleteFadeOut, Action onCompleteFadeIn)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Single SpaceStationUnlockStoreAction::unlockStoreFadeOutDuration
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld System.Single SpaceStationUnlockStoreAction::unlockStoreFadeOutStayDuration
+	IL_000d: stloc.1
+	IL_000e: ldarg.0
+	IL_000f: ldfld System.Single SpaceStationUnlockStoreAction::unlockStoreFadeInDuration
+	IL_0014: stloc.2
+	IL_0015: ldsfld FinalCamera FinalCamera::<Instance>k__BackingField
+	IL_001a: stloc.3
+	IL_001b: ldarg.0
+	IL_001c: ldftn System.Void SpaceStationUnlockStoreAction::EnableStore()
+	IL_0022: newobj System.Void System.Action::.ctor(System.Object,System.IntPtr)
+	IL_0027: stloc.s V_4
+	IL_0029: ldarg.0
+	IL_002a: ldftn System.Void SpaceStationUnlockStoreAction::OnCompleteUnlockStoreFade()
+	IL_0030: newobj System.Void System.Action::.ctor(System.Object,System.IntPtr)
+	IL_0035: stloc.s V_5
+	IL_0037: ldloc.3
+	IL_0038: ldloc.0
+	IL_0039: ldloc.1
+	IL_003a: ldloc.2
+	IL_003b: ldloc.s V_4
+	IL_003d: ldloc.s V_5
+	IL_003f: call System.Void FinalCamera::FadeOutFadeIn(System.Single,System.Single,System.Single,System.Action,System.Action)
+	IL_0044: ret
+	IL_0045: newobj System.Void System.NullReferenceException::.ctor()
+	IL_004a: throw
+	
+
+Method: System.Void SpaceStationUnlockStoreAction::EnableStore():	Method Body (x86 ASM):
+		0x180757500 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757502 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180757506 cmp byte ptr [183298863h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504483 | None ||| N/A | 0
+		0x18075750D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180757510 jne short 0000000180757525h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757512 lea rcx,[1830FBD20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814048 | None ||| N/A | N/A
+		0x180757519 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075751E mov byte ptr [183298863h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504483 | None ||| N/A | 1
+		0x180757525 mov rax,[1830FBD20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493814048 | None ||| N/A | N/A
+		0x18075752C mov [rsp+30h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 48 | None ||| N/A | N/A
+		0x180757531 mov rdx,[rax+0B8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180757538 mov rcx,[rdx]		; DEBUG: {Register}/RCX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x18075753B test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18075753E je near ptr 00000001807575C6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757544 mov rdx,[rbx+30h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 48 | None ||| N/A | N/A
+		0x180757548 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18075754B xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18075754E call 00000001803A9AD0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757553 mov rdi,[rbx+68h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 104 | None ||| N/A | N/A
+		0x180757557 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18075755A je short 00000001807575C6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075755C mov rax,[1832A9DF0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575536 | None ||| N/A | N/A
+		0x180757563 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757566 jne short 0000000180757580h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757568 lea rcx,[182979C38h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485941304 | None ||| N/A | N/A
+		0x18075756F call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757574 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757577 je short 00000001807575CCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757579 mov [1832A9DF0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575536 | None ||| N/A | N/A
+		0x180757580 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180757582 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180757585 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757587 mov rbx,[rbx+70h]		; DEBUG: {Register}/RBX {Memory}/None ||| RBX | 112 | None ||| N/A | N/A
+		0x18075758B test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18075758E je short 00000001807575BBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757590 mov rax,[1832A9DF0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575536 | None ||| N/A | N/A
+		0x180757597 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18075759A jne short 00000001807575B4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075759C lea rcx,[182979C38h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485941304 | None ||| N/A | N/A
+		0x1807575A3 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807575A8 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807575AB je short 00000001807575E3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807575AD mov [1832A9DF0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575536 | None ||| N/A | N/A
+		0x1807575B4 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807575B6 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1807575B9 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807575BB mov rdi,[rsp+30h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1807575C0 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1807575C4 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807575C5 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807575C6 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807575CB int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SpaceStationUnlockStoreAction::EnableStore():
+		End of function at 0x1807575CC
+		Absolute End is at 0x1807575CC
+		Identified Jump Destination addresses:
+
+		0x180757500: Saves the content of rbx to the stack
+		0x180757506: Compares {Unknown Global at 0x183298863, first ten bytes are [0 152 104 234 2 96 228 0 0 137], or as chars " hê`ä  "} and 0
+		0x18075750D: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rcx into rbx
+		0x180757510: Jumps to 0x180757525 if {Unknown Global at 0x183298863, first ten bytes are [0 152 104 234 2 96 228 0 0 137], or as chars " hê`ä  "} != 0
+
+		0x180757512: Loads the type definition for managed type FMODSoundManager as a constant "FMODSoundManager" in rcx
+		0x180757519: Initializes runtime metadata value FMODSoundManager
+		0x180757525: Loads the type definition for managed type FMODSoundManager as a constant "FMODSoundManager" in rax
+		0x180757531: Loads the pointer to the static fields for FMODSoundManager and stores it in constant5 in register rdx
+		0x180757538: [!] Reads the static field FMODSoundManager FMODSoundManager::instance into new local instance
+		0x18075753B: [!] Compares {'instance' (type FMODSoundManager)} and 0
+		0x18075753E: Jumps to 0x1807575C6 (which throws a NRE) if instance equals 0. Implicitly present in managed code, so ignored here.
+		0x180757544: [!] Reads field unlockStoreSFX from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'unlockStoreSFX' (type System.String)}
+
+		0x18075754B: Clears register r8, yielding zero-local {'local4' (type System.Int32)}
+		0x18075754E: [!] Calls managed method System.Void FMODSoundManager::PlaySfx(System.String,System.Boolean) on instance {'instance' (type FMODSoundManager)} with arguments [{'unlockStoreSFX' (type System.String)}, {'local4' (type System.Int32)}]
+
+		0x180757553: [!] Reads field store from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'store' (type UnityEngine.GameObject)}
+
+		0x180757557: [!] Compares {'store' (type UnityEngine.GameObject)} and 0
+		0x18075755A: Jumps to 0x1807575C6 (which throws a NRE) if store equals 0. Implicitly present in managed code, so ignored here.
+		0x18075755C: Loads string "äõ×" into register rax as constant UnityEngine.GameObject.SetActive
+		0x180757563: Compares UnityEngine.GameObject.SetActive and 0
+		0x180757566: Jumps to 0x180757580 if UnityEngine.GameObject.SetActive != 0
+
+		0x180757568: Loads string "UnityEngine.GameObject::SetActive(System.Boolean)" into register rcx as constant {'constant10' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x18075756F: Looks up unity ICall by name "UnityEngine.GameObject::SetActive(System.Boolean)" which resolves to System.Void UnityEngine.GameObject::SetActive(System.Boolean)
+		0x180757574: Compares UnityEngine.GameObject.SetActive and 0
+		0x180757577: Jumps to 0x1807575CC if UnityEngine.GameObject.SetActive equals 0
+
+		0x180757580: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x180757582: Copies {'store' (type UnityEngine.GameObject)} from rdi into rcx
+		0x180757585: [!] Calls managed method System.Void UnityEngine.GameObject::SetActive(System.Boolean) on instance {'store' (type UnityEngine.GameObject)} with arguments [True]
+
+		0x180757587: [!] Reads field blocker from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'blocker' (type UnityEngine.GameObject)}
+
+		0x18075758B: [!] Compares {'blocker' (type UnityEngine.GameObject)} and 0
+		0x18075758E: Jumps to 0x1807575BB (which is an if statement's body) if blocker equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180757590: Loads string "äõ×" into register rax as constant UnityEngine.GameObject.SetActive
+		0x180757597: Compares UnityEngine.GameObject.SetActive and 0
+		0x18075759A: Jumps to 0x1807575B4 if UnityEngine.GameObject.SetActive != 0
+
+		0x18075759C: Loads string "UnityEngine.GameObject::SetActive(System.Boolean)" into register rcx as constant {'constant16' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1807575A3: Looks up unity ICall by name "UnityEngine.GameObject::SetActive(System.Boolean)" which resolves to System.Void UnityEngine.GameObject::SetActive(System.Boolean)
+		0x1807575A8: Compares UnityEngine.GameObject.SetActive and 0
+		0x1807575AB: Jumps to 0x1807575E3 if UnityEngine.GameObject.SetActive equals 0 ;  - This is probably a goto, jumping to 0x1807575E3 which is after end of current block @ 0x1807575BB (started at 0x180757590)
+
+		0x1807575B4: Clears register rdx, yielding zero-local {'local7' (type System.Int32)}
+		0x1807575B6: Copies {'blocker' (type UnityEngine.GameObject)} from rbx into rcx
+		0x1807575B9: [!] Calls managed method System.Void UnityEngine.GameObject::SetActive(System.Boolean) on instance {'blocker' (type UnityEngine.GameObject)} with arguments [{'local7' (type System.Int32)}]
+
+		0x1807575BB: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rdi as new constant constant18
+		0x1807575C5: [!] Returns from the function
+
+		0x1807575C6: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SpaceStationUnlockStoreAction
+	System.Void EnableStore()
+		FMODSoundManager instance = FMODSoundManager.instance
+		System.String unlockStoreSFX = this.unlockStoreSFX
+		ulong local4 = 0
+
+		instance.PlaySfx(unlockStoreSFX, local4) //(String eventPath, Boolean force)
+		UnityEngine.GameObject store = this.store
+
+		store.SetActive(True) //(Boolean value)
+		UnityEngine.GameObject blocker = this.blocker
+
+		if (blocker != 0)
+		    ulong local7 = 0
+
+		    blocker.SetActive(local7) //(Boolean value)
+		endif
+        
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldsfld FMODSoundManager FMODSoundManager::instance
+	IL_0005: stloc.0
+	IL_0006: ldarg.0
+	IL_0007: ldfld System.String SpaceStationUnlockStoreAction::unlockStoreSFX
+	IL_000c: stloc.1
+	IL_000d: ldc.i4.0
+	IL_000e: stloc.2
+	IL_000f: ldloc.0
+	IL_0010: ldloc.1
+	IL_0011: ldloc.2
+	IL_0012: call System.Void FMODSoundManager::PlaySfx(System.String,System.Boolean)
+	IL_0017: ldarg.0
+	IL_0018: ldfld UnityEngine.GameObject SpaceStationUnlockStoreAction::store
+	IL_001d: ldc.i4.1
+	IL_001e: call System.Void UnityEngine.GameObject::SetActive(System.Boolean)
+	IL_0023: ldarg.0
+	IL_0024: ldfld UnityEngine.GameObject SpaceStationUnlockStoreAction::blocker
+	IL_0029: stloc.3
+	IL_002a: ldloc.3
+	IL_002b: ldc.i4.0
+	IL_002c: beq.s IL_0039
+	IL_002e: ldc.i4.0
+	IL_002f: stloc.s V_4
+	IL_0031: ldloc.3
+	IL_0032: ldloc.s V_4
+	IL_0034: call System.Void UnityEngine.GameObject::SetActive(System.Boolean)
+	IL_0039: ret
+	IL_003a: newobj System.Void System.NullReferenceException::.ctor()
+	IL_003f: throw
+	
+
+Method: System.Void SpaceStationUnlockStoreAction::OnCompleteUnlockStoreFade():	Method Body (x86 ASM):
+		0x180757600 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180757605 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757606 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18075760A cmp byte ptr [18329B1E2h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515106 | None ||| N/A | 0
+		0x180757611 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180757614 jne short 0000000180757635h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757616 lea rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x18075761D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757622 lea rcx,[1830DDA38h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493690424 | None ||| N/A | N/A
+		0x180757629 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075762E mov byte ptr [18329B1E2h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515106 | None ||| N/A | 1
+		0x180757635 mov rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x18075763C call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757641 mov r8,[1830DDA38h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493690424 | None ||| N/A | N/A
+		0x180757648 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18075764B mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18075764E mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757651 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757654 call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757659 movss xmm2,dword ptr [rdi+38h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 56 | None ||| N/A | N/A
+		0x18075765E xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180757661 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180757664 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180757667 call 0000000180757A50h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075766C xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18075766F mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757672 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180757675 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x18075767A add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18075767E pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18075767F jmp near ptr 000000018248C0A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757684 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SpaceStationUnlockStoreAction::OnCompleteUnlockStoreFade():
+		End of function at 0x180757685
+		Absolute End is at 0x180757685
+		Identified Jump Destination addresses:
+
+		0x180757605: Saves the content of rdi to the stack
+		0x18075760A: Compares {Unknown Global at 0x18329B1E2, first ten bytes are [238 2 240 226 3 0 119 227 3 0], or as chars "îðâ wã "} and 0
+		0x180757611: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rcx into rdi
+		0x180757614: Jumps to 0x180757635 if {Unknown Global at 0x18329B1E2, first ten bytes are [238 2 240 226 3 0 119 227 3 0], or as chars "îðâ wã "} != 0
+
+		0x180757616: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x18075761D: Initializes runtime metadata value System.Action
+		0x180757622: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::FocusPlayerStep2() as a constant "FocusPlayerStep2"
+		0x180757629: Initializes runtime metadata value System.Void SpaceStationUnlockStoreAction::FocusPlayerStep2()
+		0x180757635: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x18075763C: [!] Allocates an instance of type System.Action and stores it as action in rax.
+
+		0x180757641: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::FocusPlayerStep2() as a constant "FocusPlayerStep2"
+		0x18075764B: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rdi into rdx
+		0x18075764E: Copies {'action' (type System.Action)} from rax into rcx
+		0x180757651: Copies {'action' (type System.Action)} from rax into rbx
+		0x180757654: [!] Calls managed method System.Void System.Action::.ctor(System.Object,System.IntPtr) on instance {'action' (type System.Action)} with arguments [{'this' (function parameter, type SpaceStationUnlockStoreAction)}, {'FocusPlayerStep2' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x180757659: [!] Reads field delayToFadeToBlackCameraOnFocusedStore from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'delayToFadeToBlackCameraOnFocusedStore' (type System.Single)}
+
+		0x180757661: Copies {'action' (type System.Action)} from rbx into rdx
+		0x180757664: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rdi into rcx
+		0x180757667: [!] Calls managed method System.Collections.IEnumerator SpaceStationUnlockStoreAction::InvokeRealtimeCoroutine(System.Action,System.Single) on instance {'this' (function parameter, type SpaceStationUnlockStoreAction)} with arguments [{'action' (type System.Action)}, {'delayToFadeToBlackCameraOnFocusedStore' (type System.Single)}] and stores the result in {'iEnumerator' (type System.Collections.IEnumerator)}
+
+		0x18075766F: Copies {'iEnumerator' (type System.Collections.IEnumerator)} from rax into rdx
+		0x180757672: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rdi into rcx
+		0x180757675: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant7
+		0x18075767F: [!] Calls managed method UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator) on instance {'this' (function parameter, type SpaceStationUnlockStoreAction)} with arguments [{'iEnumerator' (type System.Collections.IEnumerator)}] and stores the result in {'coroutine' (type UnityEngine.Coroutine)}
+
+		0x18075767F: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SpaceStationUnlockStoreAction
+	System.Void OnCompleteUnlockStoreFade()
+		System.Action action = new System.Action()
+
+		action..ctor(this, {'FocusPlayerStep2' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+		System.Single delayToFadeToBlackCameraOnFocusedStore = this.delayToFadeToBlackCameraOnFocusedStore
+
+		System.Collections.IEnumerator iEnumerator = this.InvokeRealtimeCoroutine(action, delayToFadeToBlackCameraOnFocusedStore) //(Action callback, Single duration)
+
+		UnityEngine.Coroutine coroutine = base.StartCoroutine(iEnumerator) //(IEnumerator routine)
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldftn System.Void SpaceStationUnlockStoreAction::FocusPlayerStep2()
+	IL_0007: newobj System.Void System.Action::.ctor(System.Object,System.IntPtr)
+	IL_000c: stloc.0
+	IL_000d: ldarg.0
+	IL_000e: ldfld System.Single SpaceStationUnlockStoreAction::delayToFadeToBlackCameraOnFocusedStore
+	IL_0013: stloc.1
+	IL_0014: ldarg.0
+	IL_0015: ldloc.0
+	IL_0016: ldloc.1
+	IL_0017: call System.Collections.IEnumerator SpaceStationUnlockStoreAction::InvokeRealtimeCoroutine(System.Action,System.Single)
+	IL_001c: stloc.2
+	IL_001d: ldarg.0
+	IL_001e: ldloc.2
+	IL_001f: call UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
+	IL_0024: stloc.3
+	IL_0025: ret
+	
+
+Method: System.Void SpaceStationUnlockStoreAction::FocusPlayerStep2():	Method Body (x86 ASM):
+		0x180757690 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757692 sub rsp,60h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 96
+		0x180757696 cmp byte ptr [18329B1E3h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515107 | None ||| N/A | 0
+		0x18075769D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807576A0 jne short 00000001807576C1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807576A2 lea rcx,[1830DDA30h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493690416 | None ||| N/A | N/A
+		0x1807576A9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807576AE lea rcx,[1830FBD78h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814136 | None ||| N/A | N/A
+		0x1807576B5 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807576BA mov byte ptr [18329B1E3h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515107 | None ||| N/A | 1
+		0x1807576C1 mov rax,[rbx+58h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x1807576C5 mov [rsp+78h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 120 | None ||| N/A | N/A
+		0x1807576CA mov [rsp+80h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 128 | None ||| N/A | N/A
+		0x1807576D2 movaps [rsp+50h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 80 | None ||| N/A | N/A
+		0x1807576D7 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807576DA je near ptr 00000001807577EBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807576E0 mov rsi,[rax+518h]		; DEBUG: {Register}/RSI {Memory}/None ||| RAX | 1304 | None ||| N/A | N/A
+		0x1807576E7 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807576EA mov rax,[1832A9D48h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x1807576F1 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1807576F4 jne short 0000000180757712h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807576F6 lea rcx,[1829796F8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939960 | None ||| N/A | N/A
+		0x1807576FD call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757702 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757705 je near ptr 00000001807577F1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075770B mov [1832A9D48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575368 | None ||| N/A | N/A
+		0x180757712 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180757715 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757717 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18075771A test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18075771D je near ptr 00000001807577EBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757723 xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180757725 mov [rsp+40h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 64 | None ||| N/A | N/A
+		0x18075772A mov [rsp+48h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 72 | None ||| N/A | N/A
+		0x18075772E mov rax,[1832AA3B0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495577008 | None ||| N/A | N/A
+		0x180757735 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757738 jne short 0000000180757756h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075773A lea rcx,[18297C680h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485952128 | None ||| N/A | N/A
+		0x180757741 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757746 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757749 je near ptr 0000000180757808h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075774F mov [1832AA3B0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495577008 | None ||| N/A | N/A
+		0x180757756 lea rdx,[rsp+40h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x18075775B mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18075775E call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757760 movss xmm0,dword ptr [rsp+40h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x180757766 movss xmm1,dword ptr [rsp+44h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 68 | None ||| N/A | N/A
+		0x18075776C movss dword ptr [rsp+70h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 112 | None ||| N/A | N/A
+		0x180757772 movss dword ptr [rsp+74h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 116 | None ||| N/A | N/A
+		0x180757778 mov rcx,[1830FBD78h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493814136 | None ||| N/A | N/A
+		0x18075777F movss xmm6,dword ptr [rbx+4Ch]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RBX | 76 | None ||| N/A | N/A
+		0x180757784 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757789 mov r8,[1830DDA30h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493690416 | None ||| N/A | N/A
+		0x180757790 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180757793 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180757796 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757799 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18075779C call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807577A1 test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1807577A4 je short 00000001807577EBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807577A6 mov edx,[rbx+20h]		; DEBUG: {Register}/EDX {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x1807577A9 mov r9,rdi		; DEBUG: {Register}/R9 {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1807577AC mov qword ptr [rsp+38h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 56 | None ||| N/A | 0
+		0x1807577B5 movaps xmm2,xmm6		; DEBUG: {Register}/XMM2 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x1807577B8 mov byte ptr [rsp+30h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RSP | 48 | None ||| N/A | 1
+		0x1807577BD mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1807577C0 mov [rsp+28h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RSP | 40 | None ||| N/A | N/A
+		0x1807577C4 mov rdx,[rsp+70h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x1807577C9 mov byte ptr [rsp+20h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RSP | 32 | None ||| N/A | 1
+		0x1807577CE call 00000001803F1A10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807577D3 movaps xmm6,[rsp+50h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1807577D8 mov rdi,[rsp+80h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 128 | None ||| N/A | N/A
+		0x1807577E0 mov rsi,[rsp+78h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 120 | None ||| N/A | N/A
+		0x1807577E5 add rsp,60h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 96
+		0x1807577E9 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807577EA ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807577EB call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807577F0 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SpaceStationUnlockStoreAction::FocusPlayerStep2():
+		End of function at 0x1807577F1
+		Absolute End is at 0x1807577F1
+		Identified Jump Destination addresses:
+
+		0x180757690: Saves the content of rbx to the stack
+		0x180757696: Compares {Unknown Global at 0x18329B1E3, first ten bytes are [2 240 226 3 0 119 227 3 0 36], or as chars "ðâ wã $"} and 0
+		0x18075769D: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rcx into rbx
+		0x1807576A0: Jumps to 0x1807576C1 if {Unknown Global at 0x18329B1E3, first ten bytes are [2 240 226 3 0 119 227 3 0 36], or as chars "ðâ wã $"} != 0
+
+		0x1807576A2: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::OnCameraFocusPlayer() as a constant "OnCameraFocusPlayer"
+		0x1807576A9: Initializes runtime metadata value System.Void SpaceStationUnlockStoreAction::OnCameraFocusPlayer()
+		0x1807576AE: Loads the type definition for managed type DG.Tweening.TweenCallback as a constant "TweenCallback" in rcx
+		0x1807576B5: Initializes runtime metadata value DG.Tweening.TweenCallback
+		0x1807576C1: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player' (type BasePlayer)}
+
+		0x1807576D7: [!] Compares {'player' (type BasePlayer)} and 0
+		0x1807576DA: Jumps to 0x1807577EB (which throws a NRE) if player equals 0. Implicitly present in managed code, so ignored here.
+		0x1807576E0: [!] Reads field playerCamera from {'player' (type BasePlayer)} and stores in a new local {'playerCamera' (type PlayerCamera)}
+
+		0x1807576E7: Copies {'player' (type BasePlayer)} from rax into rdi
+		0x1807576EA: Loads string "<õ7" into register rax as constant UnityEngine.Component.get_transform
+		0x1807576F1: Compares UnityEngine.Component.get_transform and 0
+		0x1807576F4: Jumps to 0x180757712 if UnityEngine.Component.get_transform != 0
+
+		0x1807576F6: Loads string "UnityEngine.Component::get_transform()" into register rcx as constant {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1807576FD: Looks up unity ICall by name "UnityEngine.Component::get_transform()" which resolves to UnityEngine.Transform UnityEngine.Component::get_transform()
+		0x180757702: Compares UnityEngine.Component.get_transform and 0
+		0x180757705: Jumps to 0x1807577F1 if UnityEngine.Component.get_transform equals 0
+
+		0x180757712: Copies {'player' (type BasePlayer)} from rdi into rcx
+		0x180757715: [!] Calls managed method UnityEngine.Transform UnityEngine.Component::get_transform() on instance {'player' (type BasePlayer)} and stores the result in {'transform' (type UnityEngine.Transform)}
+
+		0x180757717: Copies {'transform' (type UnityEngine.Transform)} from rax into rdi
+		0x18075771A: [!] Compares {'transform' (type UnityEngine.Transform)} and 0
+		0x18075771D: Jumps to 0x1807577EB (which throws a NRE) if transform equals 0. Implicitly present in managed code, so ignored here.
+		0x180757723: Clears register rax, yielding zero-local {'local4' (type System.Int32)}
+		0x180757725: Moves local4 (type System.Int32) from register rax to the stack at offset 64 (0x40)
+		0x18075772A: Moves local4 (type System.Int32) from register rax to the stack at offset 72 (0x48)
+		0x18075772E: Loads string "+Û" into register rax as constant UnityEngine.Transform.get_position
+		0x180757735: Compares UnityEngine.Transform.get_position and 0
+		0x180757738: Jumps to 0x180757756 if UnityEngine.Transform.get_position != 0
+
+		0x18075773A: Loads string "UnityEngine.Transform::get_position_Injected(UnityEngine.Vector3&)" into register rcx as constant {'constant13' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180757741: Looks up unity ICall by name "UnityEngine.Transform::get_position_Injected(UnityEngine.Vector3&)" which resolves to UnityEngine.Vector3 UnityEngine.Transform::get_position()
+		0x180757746: Compares UnityEngine.Transform.get_position and 0
+		0x180757749: Jumps to 0x180757808 if UnityEngine.Transform.get_position equals 0
+
+		0x180757756: Loads a pointer to stack offset 0x40 into register rdx as new constant constant15
+		0x18075775B: Copies {'transform' (type UnityEngine.Transform)} from rdi into rcx
+		0x18075775E: [!] Calls managed method UnityEngine.Vector3 UnityEngine.Transform::get_position() on instance {'transform' (type UnityEngine.Transform)} and stores the result in {'position' (type UnityEngine.Vector3)}
+
+		0x180757760: Reads local {'local4' (type System.Int32)} from stack offset 64 (0x40) into register xmm0
+		0x180757766: Reads unknown value in stack, offset 68 (0x44) and stores the pointer in register xmm1 as new constant constant16
+		0x18075776C: Moves local4 (type System.Int32) from register xmm0 to the stack at offset 112 (0x70)
+		0x180757772: Moves constant16 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm1 to the stack at offset 116 (0x74) as a new local local6
+		0x180757778: Loads the type definition for managed type DG.Tweening.TweenCallback as a constant "TweenCallback" in rcx
+		0x18075777F: [!] Reads field focusPlayerCameraSpeed from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'focusPlayerCameraSpeed' (type System.Single)}
+
+		0x180757784: [!] Allocates an instance of type DG.Tweening.TweenCallback and stores it as tweenCallback in rax.
+
+		0x180757789: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::OnCameraFocusPlayer() as a constant "OnCameraFocusPlayer"
+		0x180757793: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rbx into rdx
+		0x180757796: Copies {'tweenCallback' (type DG.Tweening.TweenCallback)} from rax into rcx
+		0x180757799: Copies {'tweenCallback' (type DG.Tweening.TweenCallback)} from rax into rdi
+		0x18075779C: [!] Calls managed method System.Void DG.Tweening.TweenCallback::.ctor(System.Object,System.IntPtr) on instance {'tweenCallback' (type DG.Tweening.TweenCallback)} with arguments [{'this' (function parameter, type SpaceStationUnlockStoreAction)}, {'OnCameraFocusPlayer' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x1807577A1: [!] Compares {'playerCamera' (type PlayerCamera)} and 0
+		0x1807577A4: Jumps to 0x1807577EB (which throws a NRE) if playerCamera equals 0. Implicitly present in managed code, so ignored here.
+		0x1807577A6: [!] Reads field cameraMovementEaseType from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'cameraMovementEaseType' (type DG.Tweening.Ease)}
+
+		0x1807577A9: Copies {'tweenCallback' (type DG.Tweening.TweenCallback)} from rdi into r9
+		0x1807577AC: Moves 0 (immediate ulong value) to the stack at offset 56 as a new local local11
+		0x1807577B5: Copies {'focusPlayerCameraSpeed' (type System.Single)} from xmm6 into xmm2
+		0x1807577B8: Moves 1 (immediate ulong value) to the stack at offset 48 as a new local local12
+		0x1807577BD: Copies {'playerCamera' (type PlayerCamera)} from rsi into rcx
+		0x1807577C0: Moves cameraMovementEaseType (type DG.Tweening.Ease) from register rdx to the stack at offset 40 (0x28)
+		0x1807577C4: Reads local {'local4' (type System.Int32)} from stack offset 112 (0x70) into register rdx
+		0x1807577C9: Moves 1 (immediate ulong value) to the stack at offset 32 as a new local local13
+		0x1807577CE: [!] Calls managed method System.Void PlayerCamera::FocusOnPosition(UnityEngine.Vector2,System.Single,DG.Tweening.TweenCallback,System.Boolean,DG.Tweening.Ease,System.Boolean) on instance {'playerCamera' (type PlayerCamera)} with arguments [{'local4' (type System.Int32)}, {'focusPlayerCameraSpeed' (type System.Single)}, {'tweenCallback' (type DG.Tweening.TweenCallback)}, {'local13' (type System.UInt64)}, {'cameraMovementEaseType' (type DG.Tweening.Ease)}, {'local12' (type System.UInt64)}]
+
+		0x1807577D3: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register xmm6 as new constant constant20
+		0x1807577D8: Reads unknown value in stack, offset 128 (0x80) and stores the pointer in register rdi as new constant constant21
+		0x1807577E0: Reads unknown value in stack, offset 120 (0x78) and stores the pointer in register rsi as new constant constant22
+		0x1807577EA: [!] Returns from the function
+
+		0x1807577EB: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SpaceStationUnlockStoreAction
+	System.Void FocusPlayerStep2()
+		BasePlayer player = this.player
+		PlayerCamera playerCamera = player.playerCamera
+
+		UnityEngine.Transform transform = player.transform
+		ulong local4 = 0
+
+		UnityEngine.Vector3 position = transform.position
+		System.Single focusPlayerCameraSpeed = this.focusPlayerCameraSpeed
+		DG.Tweening.TweenCallback tweenCallback = new DG.Tweening.TweenCallback()
+
+		tweenCallback..ctor(this, {'OnCameraFocusPlayer' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+		DG.Tweening.Ease cameraMovementEaseType = this.cameraMovementEaseType
+
+		playerCamera.FocusOnPosition(local4, focusPlayerCameraSpeed, tweenCallback, local13, cameraMovementEaseType, local12) //(Vector2 position, Single speed, TweenCallback onComplete, Boolean unscaledTime, Ease easeType, Boolean killCurrentTween)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld BasePlayer SpaceStationUnlockStoreAction::player
+	IL_0006: stloc.0
+	IL_0007: ldloc.0
+	IL_0008: ldfld PlayerCamera BasePlayer::playerCamera
+	IL_000d: stloc.1
+	IL_000e: ldloc.0
+	IL_000f: call UnityEngine.Transform UnityEngine.Component::get_transform()
+	IL_0014: stloc.2
+	IL_0015: ldc.i4.0
+	IL_0016: stloc.3
+	IL_0017: ldloc.2
+	IL_0018: call UnityEngine.Vector3 UnityEngine.Transform::get_position()
+	IL_001d: stloc.s V_4
+	IL_001f: ldarg.0
+	IL_0020: ldfld System.Single SpaceStationUnlockStoreAction::focusPlayerCameraSpeed
+	IL_0025: stloc.s V_5
+	IL_0027: ldarg.0
+	IL_0028: ldftn System.Void SpaceStationUnlockStoreAction::OnCameraFocusPlayer()
+	IL_002e: newobj System.Void DG.Tweening.TweenCallback::.ctor(System.Object,System.IntPtr)
+	IL_0033: stloc.s V_6
+	IL_0035: ldarg.0
+	IL_0036: ldfld DG.Tweening.Ease SpaceStationUnlockStoreAction::cameraMovementEaseType
+	IL_003b: stloc.s V_7
+	IL_003d: ldloc.1
+	IL_003e: ldloc.3
+	IL_003f: ldloc.s V_5
+	IL_0041: ldloc.s V_6
+	IL_0043: ldloc.s V_10
+	IL_0045: ldloc.s V_7
+	IL_0047: ldloc.s V_9
+	IL_0049: call System.Void PlayerCamera::FocusOnPosition(UnityEngine.Vector2,System.Single,DG.Tweening.TweenCallback,System.Boolean,DG.Tweening.Ease,System.Boolean)
+	IL_004e: ret
+	IL_004f: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0054: throw
+	
+
+Method: System.Void SpaceStationUnlockStoreAction::OnCameraFocusPlayer():	Method Body (x86 ASM):
+		0x180757820 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180757825 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757826 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18075782A cmp byte ptr [18329B1E4h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515108 | None ||| N/A | 0
+		0x180757831 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180757834 jne short 0000000180757855h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757836 lea rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x18075783D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757842 lea rcx,[1830DDA18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493690392 | None ||| N/A | N/A
+		0x180757849 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075784E mov byte ptr [18329B1E4h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515108 | None ||| N/A | 1
+		0x180757855 mov rcx,[1830F6768h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792104 | None ||| N/A | N/A
+		0x18075785C call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757861 mov r8,[1830DDA18h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493690392 | None ||| N/A | N/A
+		0x180757868 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x18075786B mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18075786E mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757871 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757874 call 00000001803A2780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757879 movss xmm2,dword ptr [rdi+50h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RDI | 80 | None ||| N/A | N/A
+		0x18075787E xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180757881 mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180757884 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180757887 call 0000000180757A50h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075788C xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18075788F mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757892 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180757895 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x18075789A add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18075789E pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18075789F jmp near ptr 000000018248C0A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807578A4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SpaceStationUnlockStoreAction::OnCameraFocusPlayer():
+		End of function at 0x1807578A5
+		Absolute End is at 0x1807578A5
+		Identified Jump Destination addresses:
+
+		0x180757825: Saves the content of rdi to the stack
+		0x18075782A: Compares {Unknown Global at 0x18329B1E4, first ten bytes are [240 226 3 0 119 227 3 0 36 139], or as chars "ðâ wã $"} and 0
+		0x180757831: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rcx into rdi
+		0x180757834: Jumps to 0x180757855 if {Unknown Global at 0x18329B1E4, first ten bytes are [240 226 3 0 119 227 3 0 36 139], or as chars "ðâ wã $"} != 0
+
+		0x180757836: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x18075783D: Initializes runtime metadata value System.Action
+		0x180757842: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::FinishCutscene() as a constant "FinishCutscene"
+		0x180757849: Initializes runtime metadata value System.Void SpaceStationUnlockStoreAction::FinishCutscene()
+		0x180757855: Loads the type definition for managed type System.Action as a constant "Action" in rcx
+		0x18075785C: [!] Allocates an instance of type System.Action and stores it as action in rax.
+
+		0x180757861: Loads the method definition for managed method System.Void SpaceStationUnlockStoreAction::FinishCutscene() as a constant "FinishCutscene"
+		0x18075786B: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rdi into rdx
+		0x18075786E: Copies {'action' (type System.Action)} from rax into rcx
+		0x180757871: Copies {'action' (type System.Action)} from rax into rbx
+		0x180757874: [!] Calls managed method System.Void System.Action::.ctor(System.Object,System.IntPtr) on instance {'action' (type System.Action)} with arguments [{'this' (function parameter, type SpaceStationUnlockStoreAction)}, {'FinishCutscene' (constant value of type Mono.Cecil.MethodReference)}]
+
+		0x180757879: [!] Reads field delayToEnablePlayerInput from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'delayToEnablePlayerInput' (type System.Single)}
+
+		0x180757881: Copies {'action' (type System.Action)} from rbx into rdx
+		0x180757884: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rdi into rcx
+		0x180757887: [!] Calls managed method System.Collections.IEnumerator SpaceStationUnlockStoreAction::InvokeRealtimeCoroutine(System.Action,System.Single) on instance {'this' (function parameter, type SpaceStationUnlockStoreAction)} with arguments [{'action' (type System.Action)}, {'delayToEnablePlayerInput' (type System.Single)}] and stores the result in {'iEnumerator' (type System.Collections.IEnumerator)}
+
+		0x18075788F: Copies {'iEnumerator' (type System.Collections.IEnumerator)} from rax into rdx
+		0x180757892: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rdi into rcx
+		0x180757895: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant7
+		0x18075789F: [!] Calls managed method UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator) on instance {'this' (function parameter, type SpaceStationUnlockStoreAction)} with arguments [{'iEnumerator' (type System.Collections.IEnumerator)}] and stores the result in {'coroutine' (type UnityEngine.Coroutine)}
+
+		0x18075789F: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SpaceStationUnlockStoreAction
+	System.Void OnCameraFocusPlayer()
+		System.Action action = new System.Action()
+
+		action..ctor(this, {'FinishCutscene' (constant value of type Mono.Cecil.MethodReference)}) //(Object object, IntPtr method)
+		System.Single delayToEnablePlayerInput = this.delayToEnablePlayerInput
+
+		System.Collections.IEnumerator iEnumerator = this.InvokeRealtimeCoroutine(action, delayToEnablePlayerInput) //(Action callback, Single duration)
+
+		UnityEngine.Coroutine coroutine = base.StartCoroutine(iEnumerator) //(IEnumerator routine)
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldftn System.Void SpaceStationUnlockStoreAction::FinishCutscene()
+	IL_0007: newobj System.Void System.Action::.ctor(System.Object,System.IntPtr)
+	IL_000c: stloc.0
+	IL_000d: ldarg.0
+	IL_000e: ldfld System.Single SpaceStationUnlockStoreAction::delayToEnablePlayerInput
+	IL_0013: stloc.1
+	IL_0014: ldarg.0
+	IL_0015: ldloc.0
+	IL_0016: ldloc.1
+	IL_0017: call System.Collections.IEnumerator SpaceStationUnlockStoreAction::InvokeRealtimeCoroutine(System.Action,System.Single)
+	IL_001c: stloc.2
+	IL_001d: ldarg.0
+	IL_001e: ldloc.2
+	IL_001f: call UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
+	IL_0024: stloc.3
+	IL_0025: ret
+	
+
+Method: System.Void SpaceStationUnlockStoreAction::FinishCutscene():	Method Body (x86 ASM):
+		0x1807578B0 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1807578B2 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1807578B6 cmp byte ptr [18329888Dh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504525 | None ||| N/A | 0
+		0x1807578BD mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807578C0 jne short 00000001807578D5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807578C2 lea rcx,[18311CFE8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493949928 | None ||| N/A | N/A
+		0x1807578C9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807578CE mov byte ptr [18329888Dh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504525 | None ||| N/A | 1
+		0x1807578D5 mov rax,[18311CFE8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493949928 | None ||| N/A | N/A
+		0x1807578DC mov [rsp+40h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 64 | None ||| N/A | N/A
+		0x1807578E1 mov rdx,[rax+0B8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1807578E8 mov rcx,[rdx]		; DEBUG: {Register}/RCX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1807578EB test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807578EE je near ptr 0000000180757A3Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807578F4 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1807578F6 call 00000001807E05B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807578FB cmp byte ptr [183298874h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504500 | None ||| N/A | 0
+		0x180757902 jne short 0000000180757917h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757904 lea rcx,[183100600h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493832704 | None ||| N/A | N/A
+		0x18075790B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757910 mov byte ptr [183298874h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504500 | None ||| N/A | 1
+		0x180757917 mov rax,[183100600h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493832704 | None ||| N/A | N/A
+		0x18075791E mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180757925 mov rcx,[rcx]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180757928 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18075792B je near ptr 0000000180757A3Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757931 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180757933 call 00000001803ED9B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757938 mov rbx,[rdi+58h]		; DEBUG: {Register}/RBX {Memory}/None ||| RDI | 88 | None ||| N/A | N/A
+		0x18075793C test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18075793F je near ptr 0000000180757A3Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757945 cmp byte ptr [183298856h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 0
+		0x18075794C mov byte ptr [rbx+7A8h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 1960 | None ||| N/A | 1
+		0x180757953 jne short 0000000180757968h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757955 lea rcx,[1830F62D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x18075795C call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757961 mov byte ptr [183298856h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 1
+		0x180757968 mov rax,[1830F62D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x18075796F mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180757976 movss xmm0,dword ptr [rcx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x18075797A movss xmm1,dword ptr [rcx+4]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 4 | None ||| N/A | N/A
+		0x18075797F mov rcx,[rbx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 1600 | None ||| N/A | N/A
+		0x180757986 movss dword ptr [rbx+2B4h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RBX | 692 | None ||| N/A | N/A
+		0x18075798E movss dword ptr [rbx+2B8h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RBX | 696 | None ||| N/A | N/A
+		0x180757996 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180757999 je near ptr 0000000180757A3Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18075799F xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1807579A2 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807579A5 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1807579A7 call 00000001806C5CC0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807579AC mov rcx,[rdi+58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 88 | None ||| N/A | N/A
+		0x1807579B0 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807579B3 je near ptr 0000000180757A3Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807579B9 mov rcx,[rcx+640h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 1600 | None ||| N/A | N/A
+		0x1807579C0 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807579C3 je short 0000000180757A3Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807579C5 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807579C8 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1807579CA call 00000001806C4D30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807579CF mov rcx,[rdi+58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 88 | None ||| N/A | N/A
+		0x1807579D3 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807579D6 je short 0000000180757A3Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807579D8 mov rcx,[rcx+518h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 1304 | None ||| N/A | N/A
+		0x1807579DF test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1807579E2 je short 0000000180757A3Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807579E4 movss xmm1,dword ptr [182E6ECE0h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RIP | 6491139296 | None ||| N/A | N/A
+		0x1807579EC mov r9b,1		; DEBUG: {Register}/R9L {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1807579EF mov qword ptr [rsp+28h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 40 | None ||| N/A | 0
+		0x1807579F8 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1807579FB mov dword ptr [rsp+20h],1		; DEBUG: {Memory}/None {Immediate32}/None ||| RSP | 32 | None ||| N/A | 1
+		0x180757A03 call 00000001803F2C80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757A08 mov rax,[rdi+58h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDI | 88 | None ||| N/A | N/A
+		0x180757A0C test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757A0F je short 0000000180757A3Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757A11 mov rax,[rax+518h]		; DEBUG: {Register}/RAX {Memory}/None ||| RAX | 1304 | None ||| N/A | N/A
+		0x180757A18 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757A1B je short 0000000180757A3Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757A1D movss xmm0,dword ptr [182E6E600h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491137536 | None ||| N/A | N/A
+		0x180757A25 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180757A27 mov byte ptr [rax+80h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RAX | 128 | None ||| N/A | 1
+		0x180757A2E mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x180757A33 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180757A37 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757A38 jmp near ptr 00000001807141C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757A3D call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757A42 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SpaceStationUnlockStoreAction::FinishCutscene():
+		End of function at 0x180757A43
+		Absolute End is at 0x180757A43
+		Identified Jump Destination addresses:
+
+		0x1807578B0: Saves the content of rdi to the stack
+		0x1807578B6: Compares {Unknown Global at 0x18329888D, first ten bytes are [229 0 0 47 229 0 0 48 166 237], or as chars "å  /å  0¦í"} and 0
+		0x1807578BD: Copies {'this' (function parameter, type SpaceStationUnlockStoreAction)} from rcx into rdi
+		0x1807578C0: Jumps to 0x1807578D5 if {Unknown Global at 0x18329888D, first ten bytes are [229 0 0 47 229 0 0 48 166 237], or as chars "å  /å  0¦í"} != 0
+
+		0x1807578C2: Loads the type definition for managed type SpaceStationAreaController as a constant "SpaceStationAreaController" in rcx
+		0x1807578C9: Initializes runtime metadata value SpaceStationAreaController
+		0x1807578D5: Loads the type definition for managed type SpaceStationAreaController as a constant "SpaceStationAreaController" in rax
+		0x1807578E1: Loads the pointer to the static fields for SpaceStationAreaController and stores it in constant5 in register rdx
+		0x1807578E8: [!] Reads the static field SpaceStationAreaController SpaceStationAreaController::<Instance>k__BackingField into new local Instance
+		0x1807578EB: [!] Compares {'Instance' (type SpaceStationAreaController)} and 0
+		0x1807578EE: Jumps to 0x180757A3D (which throws a NRE) if Instance equals 0. Implicitly present in managed code, so ignored here.
+		0x1807578F6: [!] Calls managed method System.Void SpaceStationAreaController::UpdateAmbienceVolume() on instance {'Instance' (type SpaceStationAreaController)}
+
+		0x1807578FB: Compares {Unknown Global at 0x183298874, first ten bytes are [137 228 0 0 27 229 0 0 12 166], or as chars "ä  å  ¦"} and 0
+		0x180757902: Jumps to 0x180757917 if {Unknown Global at 0x183298874, first ten bytes are [137 228 0 0 27 229 0 0 12 166], or as chars "ä  å  ¦"} != 0
+
+		0x180757904: Loads the type definition for managed type FinalCamera as a constant "FinalCamera" in rcx
+		0x18075790B: Initializes runtime metadata value FinalCamera
+		0x180757917: Loads the type definition for managed type FinalCamera as a constant "FinalCamera" in rax
+		0x18075791E: Loads the pointer to the static fields for FinalCamera and stores it in constant11 in register rcx
+		0x180757925: [!] Reads the static field FinalCamera FinalCamera::<Instance>k__BackingField into new local Instance2
+		0x180757928: [!] Compares {'Instance2' (type FinalCamera)} and 0
+		0x18075792B: Jumps to 0x180757A3D (which throws a NRE) if Instance2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180757933: [!] Calls managed method System.Void FinalCamera::HideCinematicBars() on instance {'Instance2' (type FinalCamera)}
+
+		0x180757938: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player' (type BasePlayer)}
+
+		0x18075793C: [!] Compares {'player' (type BasePlayer)} and 0
+		0x18075793F: Jumps to 0x180757A3D (which throws a NRE) if player equals 0. Implicitly present in managed code, so ignored here.
+		0x180757945: Compares {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} and 0
+		0x18075794C: [!] Sets the field inputEnabled (Type System.Boolean) on local {'player' (type BasePlayer)} to the value stored in True
+		0x180757953: Jumps to 0x180757968 if {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} != 0
+
+		0x180757955: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rcx
+		0x18075795C: Initializes runtime metadata value UnityEngine.Vector2
+		0x180757968: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rax
+		0x18075796F: Loads the pointer to the static fields for UnityEngine.Vector2 and stores it in constant18 in register rcx
+		0x180757976: [!] Reads the static field UnityEngine.Vector2 UnityEngine.Vector2::zeroVector into new local zeroVector
+		0x18075797A: [!] Reads the static field  into new local 
+		0x18075797F: [!] Reads field hudManager from {'player' (type BasePlayer)} and stores in a new local {'hudManager' (type HUDManager)}
+
+		0x180757986: [!] Sets the field currentDirection (Type UnityEngine.Vector2) on local {'player' (type BasePlayer)} to the value stored in {'zeroVector' (type UnityEngine.Vector2)}
+		0x18075798E: [!] Sets the field currentDirection.y (Type System.Single) on local {'player' (type BasePlayer)} to the value stored in 
+		0x180757996: [!] Compares {'hudManager' (type HUDManager)} and 0
+		0x180757999: Jumps to 0x180757A3D (which throws a NRE) if hudManager equals 0. Implicitly present in managed code, so ignored here.
+		0x1807579A2: Clears register r8, yielding zero-local {'local9' (type System.Int32)}
+		0x1807579A5: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x1807579A7: [!] Calls managed method System.Void HUDManager::EnableMainHUDInput(System.Boolean,System.Boolean) on instance {'hudManager' (type HUDManager)} with arguments [True, {'local9' (type System.Int32)}]
+
+		0x1807579AC: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player2' (type BasePlayer)}
+
+		0x1807579B0: [!] Compares {'player2' (type BasePlayer)} and 0
+		0x1807579B3: Jumps to 0x180757A3D (which throws a NRE) if player2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807579B9: [!] Reads field hudManager from {'player2' (type BasePlayer)} and stores in a new local {'hudManager2' (type HUDManager)}
+
+		0x1807579C0: [!] Compares {'hudManager2' (type HUDManager)} and 0
+		0x1807579C3: Jumps to 0x180757A3D (which throws a NRE) if hudManager2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807579C8: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x1807579CA: [!] Calls managed method System.Void HUDManager::SetVisible(System.Boolean) on instance {'hudManager2' (type HUDManager)} with arguments [True]
+
+		0x1807579CF: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player3' (type BasePlayer)}
+
+		0x1807579D3: [!] Compares {'player3' (type BasePlayer)} and 0
+		0x1807579D6: Jumps to 0x180757A3D (which throws a NRE) if player3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1807579D8: [!] Reads field playerCamera from {'player3' (type BasePlayer)} and stores in a new local {'playerCamera' (type PlayerCamera)}
+
+		0x1807579DF: [!] Compares {'playerCamera' (type PlayerCamera)} and 0
+		0x1807579E2: Jumps to 0x180757A3D (which throws a NRE) if playerCamera equals 0. Implicitly present in managed code, so ignored here.
+		0x1807579E4: Reads {Unknown Global at 0x182E6ECE0, first ten bytes are [0 0 128 191 0 0 0 0 123 20], or as chars "  ¿    {"} into register xmm1 as a constant constant26
+		0x1807579EC: [!] Writes the constant 0x1 into operand True (type UInt64) in register r9
+		0x1807579EF: Moves 0 (immediate ulong value) to the stack at offset 40 as a new local local15
+		0x1807579FB: Moves 1 (immediate ulong value) to the stack at offset 32 as a new local local17
+		0x180757A03: [!] Calls managed method System.Void PlayerCamera::ResetZoom(System.Single,DG.Tweening.TweenCallback,System.Boolean,DG.Tweening.Ease) on instance {'playerCamera' (type PlayerCamera)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180757A08: [!] Reads field player from {'this' (function parameter, type SpaceStationUnlockStoreAction)} and stores in a new local {'player4' (type BasePlayer)}
+
+		0x180757A0C: [!] Compares {'player4' (type BasePlayer)} and 0
+		0x180757A0F: Jumps to 0x180757A3D (which throws a NRE) if player4 equals 0. Implicitly present in managed code, so ignored here.
+		0x180757A11: [!] Reads field playerCamera from {'player4' (type BasePlayer)} and stores in a new local {'playerCamera2' (type PlayerCamera)}
+
+		0x180757A18: [!] Compares {'playerCamera2' (type PlayerCamera)} and 0
+		0x180757A1B: Jumps to 0x180757A3D (which throws a NRE) if playerCamera2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180757A1D: Reads {Unknown Global at 0x182E6E600, first ten bytes are [0 0 128 63 84 0 128 63 146 65], or as chars "  ?T ?A"} into register xmm0 as a constant constant30
+		0x180757A27: [!] Sets the field followingPlayer (Type System.Boolean) on local {'playerCamera2' (type PlayerCamera)} to the value stored in True
+		0x180757A2E: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant31
+		0x180757A38: [!] Calls static managed method System.Void WorldTimeManager::set_TimeScale(System.Single) with arguments [1]
+
+		0x180757A38: [!] Returns from the function
+
+		0x180757A3D: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SpaceStationUnlockStoreAction
+	System.Void FinishCutscene()
+		SpaceStationAreaController Instance = SpaceStationAreaController.<Instance>k__BackingField
+
+		Instance.UpdateAmbienceVolume()
+		FinalCamera Instance2 = FinalCamera.<Instance>k__BackingField
+
+		Instance2.HideCinematicBars()
+		BasePlayer player = this.player
+		player.inputEnabled = True
+		UnityEngine.Vector2 zeroVector = UnityEngine.Vector2.zeroVector
+		  = .
+		HUDManager hudManager = player.hudManager
+		player.currentDirection = zeroVector
+		player.currentDirection.y = 
+		ulong local9 = 0
+
+		hudManager.EnableMainHUDInput(True, local9) //(Boolean enable, Boolean ignreRadialMenu)
+		BasePlayer player2 = this.player
+		HUDManager hudManager2 = player2.hudManager
+
+		hudManager2.SetVisible(True) //(Boolean visible)
+		BasePlayer player3 = this.player
+		PlayerCamera playerCamera = player3.playerCamera
+
+		playerCamera.ResetZoom()
+		BasePlayer player4 = this.player
+		PlayerCamera playerCamera2 = player4.playerCamera
+		playerCamera2.followingPlayer = True
+
+		WorldTimeManager.TimeScale = 1
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.StaticFieldToRegAction at (0x18075797A) is corrupt (Couldn't identify the field being read (or its type).) and cannot be created as IL. Aborting here.
+
+
+Method: System.Collections.IEnumerator SpaceStationUnlockStoreAction::InvokeRealtimeCoroutine(System.Action,System.Single):	Method Body (x86 ASM):
+		0x180757A50 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757A52 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180757A56 cmp byte ptr [18329B1E5h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515109 | None ||| N/A | 0
+		0x180757A5D mov rbx,rdx		; DEBUG: {Register}/RBX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180757A60 movaps [rsp+20h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 32 | None ||| N/A | N/A
+		0x180757A65 movaps xmm6,xmm2		; DEBUG: {Register}/XMM6 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180757A68 jne short 0000000180757A7Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757A6A lea rcx,[1830DDA08h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493690376 | None ||| N/A | N/A
+		0x180757A71 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757A76 mov byte ptr [18329B1E5h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495515109 | None ||| N/A | 1
+		0x180757A7D mov rcx,[1830DDA08h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493690376 | None ||| N/A | N/A
+		0x180757A84 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757A89 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180757A90 mov r8,rax		; DEBUG: {Register}/R8 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757A93 mov dword ptr [rax+10h],0		; DEBUG: {Memory}/None {Immediate32}/None ||| RAX | 16 | None ||| N/A | 0
+		0x180757A9A mov [rax+28h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RAX | 40 | None ||| N/A | N/A
+		0x180757A9E je short 0000000180757AF7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757AA0 lea r9,[rax+28h]		; DEBUG: {Register}/R9 {Memory}/None ||| RAX | 40 | None ||| N/A | N/A
+		0x180757AA4 shr r9,0Ch		; DEBUG: {Register}/R9 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180757AA8 lea r10,[1832F4840h]		; DEBUG: {Register}/R10 {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x180757AAF and r9d,1FFFFFh		; DEBUG: {Register}/R9D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180757AB6 mov edx,r9d		; DEBUG: {Register}/EDX {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180757AB9 shr rdx,6		; DEBUG: {Register}/RDX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180757ABD and r9d,3Fh		; DEBUG: {Register}/R9D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180757AC1 prefetchw [r10+rdx*8]		; DEBUG: {Memory}/None {Register}/None ||| R10 | 0 | RDX ||| N/A | N/A
+		0x180757AC6 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180757AD0 mov rax,[r10+rdx*8]		; DEBUG: {Register}/RAX {Memory}/None ||| R10 | 0 | RDX ||| N/A | N/A
+		0x180757AD4 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180757AD7 bts rcx,r9		; DEBUG: {Register}/RCX {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x180757ADB lock cmpxchg [r10+rdx*8],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| R10 | 0 | RDX ||| N/A | N/A
+		0x180757AE1 jne short 0000000180757AD0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757AE3 movss dword ptr [r8+20h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| R8 | 32 | None ||| N/A | N/A
+		0x180757AE9 mov rax,r8		; DEBUG: {Register}/RAX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180757AEC movaps xmm6,[rsp+20h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180757AF1 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180757AF5 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757AF6 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757AF7 movss dword ptr [rax+20h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RAX | 32 | None ||| N/A | N/A
+		0x180757AFC movaps xmm6,[rsp+20h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180757B01 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180757B05 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757B06 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757B07 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Collections.IEnumerator SpaceStationUnlockStoreAction::InvokeRealtimeCoroutine(System.Action,System.Single):
+		End of function at 0x180757B08
+		Absolute End is at 0x180757B08
+		Identified Jump Destination addresses:
+
+		0x180757A50: Saves the content of rbx to the stack
+		0x180757A56: Compares {Unknown Global at 0x18329B1E5, first ten bytes are [226 3 0 119 227 3 0 36 139 234], or as chars "â wã $ê"} and 0
+		0x180757A5D: Copies {'callback' (function parameter, type System.Action)} from rdx into rbx
+		0x180757A65: Copies {'duration' (function parameter, type System.Single)} from xmm2 into xmm6
+		0x180757A68: Jumps to 0x180757A7D if {Unknown Global at 0x18329B1E5, first ten bytes are [226 3 0 119 227 3 0 36 139 234], or as chars "â wã $ê"} != 0
+
+		0x180757A6A: Loads the type definition for managed type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25 as a constant "<InvokeRealtimeCoroutine>d__25" in rcx
+		0x180757A71: Initializes runtime metadata value SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25
+		0x180757A7D: Loads the type definition for managed type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25 as a constant "<InvokeRealtimeCoroutine>d__25" in rcx
+		0x180757A84: [!] Allocates an instance of type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25 and stores it as enumeratorInstance in rax.
+
+		0x180757A89: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180757A90: Copies {'enumeratorInstance' (type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25)} from rax into r8
+		0x180757A93: [!] Sets the field <>1__state (Type System.Int32) on local {'enumeratorInstance' (type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25)} to the value stored in 0
+		0x180757A9A: [!] Sets the field callback (Type System.Action) on local {'enumeratorInstance' (type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25)} to the value stored in {'callback' (function parameter, type System.Action)}
+		0x180757A9E: Jumps to 0x180757AF7 if constant5 equals 0
+
+		0x180757AA0: Loads the pointer to the field callback on {'enumeratorInstance' (type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25)} into register r9
+		0x180757AA8: Loads string "¡
+m" into register r10 as constant {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180757AB6: Copies {'constant7' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r9 into rdx
+		0x180757AD4: Copies {'enumeratorInstance' (type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25)} from rax into rcx
+		0x180757AE1: Jumps to 0x180757AD0 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x180757AE3: [!] Sets the field duration (Type System.Single) on local {'enumeratorInstance' (type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25)} to the value stored in {'duration' (function parameter, type System.Single)}
+		0x180757AE9: Copies {'enumeratorInstance' (type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25)} from r8 into rax
+		0x180757AEC: Reads unknown value in stack, offset 32 (0x20) and stores the pointer in register xmm6 as new constant constant9
+		0x180757AF6: [!] Returns {'enumeratorInstance' (type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25)} from the function
+
+		0x180757AF7: [!] Sets the field duration (Type System.Single) on local {'enumeratorInstance' (type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25)} to the value stored in 0
+		0x180757AFC: Reads unknown value in stack, offset 32 (0x20) and stores the pointer in register xmm6 as new constant constant10
+		0x180757B06: [!] Returns {'enumeratorInstance' (type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SpaceStationUnlockStoreAction
+	System.Collections.IEnumerator InvokeRealtimeCoroutine(System.Action callback, System.Single duration)
+		SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25 enumeratorInstance = new SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25()
+		enumeratorInstance.<>1__state = 0
+		enumeratorInstance.callback = callback
+		enumeratorInstance.duration = duration
+		return enumeratorInstance
+		enumeratorInstance.duration = 0
+		return enumeratorInstance
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.AllocateInstanceAction at (0x180757A84) is corrupt (Cannot find the call to the constructor for instance allocation, of type SpaceStationUnlockStoreAction/<InvokeRealtimeCoroutine>d__25 (Is Value: False)) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void SpaceStationUnlockStoreAction::.ctor():	Method Body (x86 ASM):
+		0x180757B10 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180757B14 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x180757B1B mov dword ptr [rcx+20h],1		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 32 | None ||| N/A | 1
+		0x180757B22 mov dword ptr [rcx+24h],3E19999Ah		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 36 | None ||| N/A | 1041865114
+		0x180757B29 mov dword ptr [rcx+3Ch],3F800000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 60 | None ||| N/A | 1065353216
+		0x180757B30 mov dword ptr [rcx+40h],40000000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 64 | None ||| N/A | 1073741824
+		0x180757B37 mov dword ptr [rcx+44h],3F800000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 68 | None ||| N/A | 1065353216
+		0x180757B3E mov dword ptr [rcx+48h],3F800000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 72 | None ||| N/A | 1065353216
+		0x180757B45 mov dword ptr [rcx+50h],3F800000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 80 | None ||| N/A | 1065353216
+		0x180757B4C jne short 0000000180757B61h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757B4E lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180757B55 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757B5A mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x180757B61 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180757B68 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180757B6F jne short 0000000180757B7Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757B71 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180757B75 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180757B7A add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180757B7E ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180757B7F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SpaceStationUnlockStoreAction::.ctor():
+		End of function at 0x180757B80
+		Absolute End is at 0x180757B80
+		Identified Jump Destination addresses:
+
+		0x180757B14: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x180757B1B: [!] Sets the field cameraMovementEaseType (Type DG.Tweening.Ease) on local {'this' (function parameter, type SpaceStationUnlockStoreAction)} to the value stored in 1
+		0x180757B22: [!] Sets the field delayToFocusCameraOnStore (Type System.Single) on local {'this' (function parameter, type SpaceStationUnlockStoreAction)} to the value stored in 0,15
+		0x180757B29: [!] Sets the field unlockStoreFadeOutDuration (Type System.Single) on local {'this' (function parameter, type SpaceStationUnlockStoreAction)} to the value stored in 1
+		0x180757B30: [!] Sets the field unlockStoreFadeOutStayDuration (Type System.Single) on local {'this' (function parameter, type SpaceStationUnlockStoreAction)} to the value stored in 2
+		0x180757B37: [!] Sets the field unlockStoreFadeInDuration (Type System.Single) on local {'this' (function parameter, type SpaceStationUnlockStoreAction)} to the value stored in 1
+		0x180757B3E: [!] Sets the field delayToFocusPlayerAgain (Type System.Single) on local {'this' (function parameter, type SpaceStationUnlockStoreAction)} to the value stored in 1
+		0x180757B45: [!] Sets the field delayToEnablePlayerInput (Type System.Single) on local {'this' (function parameter, type SpaceStationUnlockStoreAction)} to the value stored in 1
+		0x180757B4C: Jumps to 0x180757B61 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x180757B4E: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180757B55: Initializes runtime metadata value UnityEngine.Object
+		0x180757B61: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180757B68: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180757B6F: Jumps to 0x180757B7A if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180757B7E: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SpaceStationUnlockStoreAction
+	System.Void .ctor()
+		this.cameraMovementEaseType = 1
+		this.delayToFocusCameraOnStore = 0,15
+		this.unlockStoreFadeOutDuration = 1
+		this.unlockStoreFadeOutStayDuration = 2
+		this.unlockStoreFadeInDuration = 1
+		this.delayToFocusPlayerAgain = 1
+		this.delayToEnablePlayerInput = 1
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4.1
+	IL_0002: conv.i8
+	IL_0003: conv.u8
+	IL_0004: stfld DG.Tweening.Ease SpaceStationUnlockStoreAction::cameraMovementEaseType
+	IL_0009: ldarg.0
+	IL_000a: ldc.r4 0,15
+	IL_000f: stfld System.Single SpaceStationUnlockStoreAction::delayToFocusCameraOnStore
+	IL_0014: ldarg.0
+	IL_0015: ldc.r4 1
+	IL_001a: stfld System.Single SpaceStationUnlockStoreAction::unlockStoreFadeOutDuration
+	IL_001f: ldarg.0
+	IL_0020: ldc.r4 2
+	IL_0025: stfld System.Single SpaceStationUnlockStoreAction::unlockStoreFadeOutStayDuration
+	IL_002a: ldarg.0
+	IL_002b: ldc.r4 1
+	IL_0030: stfld System.Single SpaceStationUnlockStoreAction::unlockStoreFadeInDuration
+	IL_0035: ldarg.0
+	IL_0036: ldc.r4 1
+	IL_003b: stfld System.Single SpaceStationUnlockStoreAction::delayToFocusPlayerAgain
+	IL_0040: ldarg.0
+	IL_0041: ldc.r4 1
+	IL_0046: stfld System.Single SpaceStationUnlockStoreAction::delayToEnablePlayerInput
+	IL_004b: ret
+	
+

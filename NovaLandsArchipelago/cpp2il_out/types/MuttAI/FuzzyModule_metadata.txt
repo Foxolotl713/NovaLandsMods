@@ -1,0 +1,91 @@
+Type: MuttAI.Fuzzy.FuzzyModule:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: NUM_SAMPLES
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 15
+
+	Field: variables
+		Type: System.Collections.Generic.Dictionary`2<System.String,MuttAI.Fuzzy.FuzzyVariable>
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: rules
+		Type: System.Collections.Generic.List`1<MuttAI.Fuzzy.FuzzyRule>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01956470
+		Ram Offset 0x181957670
+		Virtual Method Slot: 65535
+
+	Method: CreateFLV:
+		Accessibility: Public
+		Return Type: MuttAI.Fuzzy.FuzzyVariable
+		File Offset 0x019565C0
+		Ram Offset 0x1819577c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: AddRule:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01956700
+		Ram Offset 0x181957900
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: antecedent
+			Type: MuttAI.Fuzzy.FuzzyTerm
+			Default Value: 
+		Parameter 1:
+			Name: consequence
+			Type: MuttAI.Fuzzy.FuzzyTerm
+			Default Value: 
+	Method: Fuzzify:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01956870
+		Ram Offset 0x181957a70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nameOfFLV
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: val
+			Type: System.Single
+			Default Value: 
+	Method: DeFuzzify:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x01956970
+		Ram Offset 0x181957b70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: key
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: method
+			Type: MuttAI.Fuzzy.DefuzzifyMethod
+			Default Value: 0
+	Method: SetConfidencesOfConsequentsToZero:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01956C70
+		Ram Offset 0x181957e70
+		Virtual Method Slot: 65535

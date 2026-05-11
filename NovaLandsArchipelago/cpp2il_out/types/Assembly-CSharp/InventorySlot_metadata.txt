@@ -1,0 +1,700 @@
+Type: MuttInventory.InventorySlot:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Static Field: currentSlotId
+		Type: System.Int64
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: topAnchor
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: bottomAnchor
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: inventoryItemParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: backgroundImage
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: itemImage
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: selectionMarker
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: highlightScale
+		Type: System.Single
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: itemCategory
+		Type: MuttInventory.ItemCategory
+		Offset in Defining Type: 0x54
+		Has Default: False
+
+	Field: itemCategoryItemId
+		Type: System.Int32
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: itemCategoryImage
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: itemCategoriesSprites
+		Type: System.Collections.Generic.List`1<ItemCategorySpritePair>
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: slotTitle
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: slotId
+		Type: System.Int64
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: selectableComponent
+		Type: UnityEngine.UI.Selectable
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: owner
+		Type: MuttInventory.InventoryWindow
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: eventTrigger
+		Type: UnityEngine.EventSystems.EventTrigger
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: onChangeItems
+		Type: System.Action
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: onChangeItemsCount
+		Type: System.Action`1<System.Collections.Generic.Dictionary`2<System.Int32,System.Int32>>
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: maxStackSize
+		Type: System.Int32
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: itemCategoriesSpritesDict
+		Type: System.Collections.Generic.Dictionary`2<MuttInventory.ItemCategory,UnityEngine.Sprite>
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: canAddItemCallback
+		Type: System.Func`2<System.Int32,System.Boolean>
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: InventoryItem
+		Type: MuttInventory.InventoryItem
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F0C60
+		Ram Offset 0x1809f1e60
+		Virtual Method Slot: 65535
+
+	Method: OnDisable:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F1270
+		Ram Offset 0x1809f2470
+		Virtual Method Slot: 65535
+
+	Method: OnDestroy:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F1280
+		Ram Offset 0x1809f2480
+		Virtual Method Slot: 65535
+
+	Method: SanitizeMe:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F1360
+		Ram Offset 0x1809f2560
+		Virtual Method Slot: 65535
+
+	Method: SetMaxStackSize:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F13C0
+		Ram Offset 0x1809f25c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: InitItemCategoriesSpritesDict:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F13D0
+		Ram Offset 0x1809f25d0
+		Virtual Method Slot: 65535
+
+	Method: SetItemCategory:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F1610
+		Ram Offset 0x1809f2810
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: itemCategory
+			Type: MuttInventory.ItemCategory
+			Default Value: 
+		Parameter 1:
+			Name: itemId
+			Type: System.Int32
+			Default Value: -1
+	Method: UpdateItemCategoryIcon:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F1620
+		Ram Offset 0x1809f2820
+		Virtual Method Slot: 65535
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F1960
+		Ram Offset 0x1809f2b60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: owner
+			Type: MuttInventory.InventoryWindow
+			Default Value: 
+		Parameter 1:
+			Name: onChangeItems
+			Type: System.Action
+			Default Value: 
+		Parameter 2:
+			Name: itemCategory
+			Type: MuttInventory.ItemCategory
+			Default Value: -1
+	Method: SetSlotTile:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F1A30
+		Ram Offset 0x1809f2c30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: title
+			Type: System.String
+			Default Value: 
+	Method: SetCanAddItemCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F1B90
+		Ram Offset 0x1809f2d90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: canAddItemCallback
+			Type: System.Func`2<System.Int32, System.Boolean>
+			Default Value: 
+	Method: SetOnChangeCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F1BF0
+		Ram Offset 0x1809f2df0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: onChangeItems
+			Type: System.Action
+			Default Value: 
+	Method: SetOnChangeCountCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F1C50
+		Ram Offset 0x1809f2e50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: onChangeItemsCount
+			Type: System.Action`1<System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>>
+			Default Value: 
+	Method: GetItemsChange:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+		File Offset 0x009F1CB0
+		Ram Offset 0x1809f2eb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+	Method: SetCurrentItem:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F2190
+		Ram Offset 0x1809f3390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+		Parameter 1:
+			Name: destroyCurrent
+			Type: System.Boolean
+			Default Value: False
+		Parameter 2:
+			Name: playUnmarkSfx
+			Type: System.Boolean
+			Default Value: True
+	Method: SetCurrentItem:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F2AD0
+		Ram Offset 0x1809f3cd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: itemPrefab
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+		Parameter 1:
+			Name: itemId
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: maxStack
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: sprite
+			Type: UnityEngine.Sprite
+			Default Value: 
+		Parameter 5:
+			Name: destroyCurrent
+			Type: System.Boolean
+			Default Value: False
+		Parameter 6:
+			Name: playUnmarkSfx
+			Type: System.Boolean
+			Default Value: True
+		Parameter 7:
+			Name: destroyAfterTime
+			Type: System.Single
+			Default Value: -1
+		Parameter 8:
+			Name: resourceToSpawnOnDestroy
+			Type: System.Int32
+			Default Value: -1
+	Method: EnableInput:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F3360
+		Ram Offset 0x1809f4560
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: IsInputEnable:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x009F36B0
+		Ram Offset 0x1809f48b0
+		Virtual Method Slot: 65535
+
+	Method: EnableSelectionMarker:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: DisableSelectionMarker:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: OnSelect:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: OnDeselect:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F38D0
+		Ram Offset 0x1809f4ad0
+		Virtual Method Slot: 65535
+
+	Method: Highlight:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F38E0
+		Ram Offset 0x1809f4ae0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: highlight
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: updateSelectionMarker
+			Type: System.Boolean
+			Default Value: False
+	Method: OnPointerDownEventData:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F3DD0
+		Ram Offset 0x1809f4fd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: OnPointerDown:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F3E50
+		Ram Offset 0x1809f5050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnPointerEnter:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F4710
+		Ram Offset 0x1809f5910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: OnPointerExit:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F48E0
+		Ram Offset 0x1809f5ae0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: StartMovingCommon:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F4CD0
+		Ram Offset 0x1809f5ed0
+		Virtual Method Slot: 65535
+
+	Method: StartMovingHalf:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F4DD0
+		Ram Offset 0x1809f5fd0
+		Virtual Method Slot: 65535
+
+	Method: ProcessTransferAll:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F53B0
+		Ram Offset 0x1809f65b0
+		Virtual Method Slot: 65535
+
+	Method: ProcessTransferHalf:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F5750
+		Ram Offset 0x1809f6950
+		Virtual Method Slot: 65535
+
+	Method: ProcessTransferSingleItem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F5FB0
+		Ram Offset 0x1809f71b0
+		Virtual Method Slot: 65535
+
+	Method: StartMovingContentItem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F6190
+		Ram Offset 0x1809f7390
+		Virtual Method Slot: 65535
+
+	Method: SetItemParent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F61E0
+		Ram Offset 0x1809f73e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+	Method: SetItemParent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F6310
+		Ram Offset 0x1809f7510
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+		Parameter 1:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+	Method: AddItemToStack:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x009F6430
+		Ram Offset 0x1809f7630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: otherItem
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+		Parameter 1:
+			Name: cutHalf
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: triggerChangeItemsCallback
+			Type: System.Boolean
+			Default Value: False
+	Method: AddItemToStack:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x009F65F0
+		Ram Offset 0x1809f77f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: currentStackSize
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: itemTypeId
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: cutHalf
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: triggerChangeItemsCallback
+			Type: System.Boolean
+			Default Value: False
+	Method: CanAddItemToStack:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x009F6760
+		Ram Offset 0x1809f7960
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: otherItem
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+	Method: CanAddItemToStack:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x009F6A50
+		Ram Offset 0x1809f7c50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: itemId
+			Type: System.Int32
+			Default Value: 
+	Method: CanAddItemCategory:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x009F6CA0
+		Ram Offset 0x1809f7ea0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItemType
+			Default Value: 
+	Method: CanAddItemCategory:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x009F6DA0
+		Ram Offset 0x1809f7fa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: itemId
+			Type: System.Int32
+			Default Value: 
+	Method: CanAddItemCategory:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x009F6F10
+		Ram Offset 0x1809f8110
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: category
+			Type: MuttInventory.ItemCategory
+			Default Value: 
+		Parameter 1:
+			Name: itemId
+			Type: System.Int32
+			Default Value: -1
+	Method: SetInteractable:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F6F30
+		Ram Offset 0x1809f8130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: interactable
+			Type: System.Boolean
+			Default Value: 
+	Method: get_Owner:
+		Accessibility: Public
+		Return Type: MuttInventory.InventoryWindow
+		File Offset 0x00530430
+		Ram Offset 0x180531630
+		Virtual Method Slot: 65535
+
+	Method: get_OnChangeItemsCount:
+		Accessibility: Public
+		Return Type: System.Action`1<System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>>
+		File Offset 0x005D7520
+		Ram Offset 0x1805d8720
+		Virtual Method Slot: 65535
+
+	Method: get_MaxStackSize:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x009F6F60
+		Ram Offset 0x1809f8160
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009F6F70
+		Ram Offset 0x1809f8170
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F6FC0
+		Ram Offset 0x1809f81c0
+		Virtual Method Slot: 65535
+
+	Method: <Awake>b__22_0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F7000
+		Ram Offset 0x1809f8200
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: <Awake>b__22_1:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F7080
+		Ram Offset 0x1809f8280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: <Awake>b__22_2:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F7080
+		Ram Offset 0x1809f8280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: <Awake>b__22_3:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F7090
+		Ram Offset 0x1809f8290
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 
+	Method: <Awake>b__22_4:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F7090
+		Ram Offset 0x1809f8290
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: UnityEngine.EventSystems.BaseEventData
+			Default Value: 

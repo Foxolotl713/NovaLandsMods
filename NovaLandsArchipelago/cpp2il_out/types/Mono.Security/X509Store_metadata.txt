@@ -1,0 +1,134 @@
+Type: Mono.Security.X509.X509Store:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Field: _storePath
+		Type: System.String
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: _certificates
+		Type: Mono.Security.X509.X509CertificateCollection
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _crls
+		Type: System.Collections.ArrayList
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _crl
+		Type: System.Boolean
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _newFormat
+		Type: System.Boolean
+		Offset in Defining Type: 0x29
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0167C9E0
+		Ram Offset 0x18167dbe0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: crl
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: newFormat
+			Type: System.Boolean
+			Default Value: 
+	Method: get_Certificates:
+		Accessibility: Public
+		Return Type: Mono.Security.X509.X509CertificateCollection
+		File Offset 0x0167CA50
+		Ram Offset 0x18167dc50
+		Virtual Method Slot: 65535
+
+	Method: get_Crls:
+		Accessibility: Public
+		Return Type: System.Collections.ArrayList
+		File Offset 0x0167CAD0
+		Ram Offset 0x18167dcd0
+		Virtual Method Slot: 65535
+
+	Method: Load:
+		Accessibility: Private
+		Return Type: System.Byte[]
+		File Offset 0x0167CBF0
+		Ram Offset 0x18167ddf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: filename
+			Type: System.String
+			Default Value: 
+	Method: LoadCertificate:
+		Accessibility: Private
+		Return Type: Mono.Security.X509.X509Certificate
+		File Offset 0x0167CD50
+		Ram Offset 0x18167df50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: filename
+			Type: System.String
+			Default Value: 
+	Method: LoadCrl:
+		Accessibility: Private
+		Return Type: Mono.Security.X509.X509Crl
+		File Offset 0x0167CDC0
+		Ram Offset 0x18167dfc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: filename
+			Type: System.String
+			Default Value: 
+	Method: CheckStore:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0167CF60
+		Ram Offset 0x18167e160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: throwException
+			Type: System.Boolean
+			Default Value: 
+	Method: BuildCertificatesCollection:
+		Accessibility: Private
+		Return Type: Mono.Security.X509.X509CertificateCollection
+		File Offset 0x0167CFC0
+		Ram Offset 0x18167e1c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: storeName
+			Type: System.String
+			Default Value: 
+	Method: BuildCrlsCollection:
+		Accessibility: Private
+		Return Type: System.Collections.ArrayList
+		File Offset 0x0167D190
+		Ram Offset 0x18167e390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: storeName
+			Type: System.String
+			Default Value: 

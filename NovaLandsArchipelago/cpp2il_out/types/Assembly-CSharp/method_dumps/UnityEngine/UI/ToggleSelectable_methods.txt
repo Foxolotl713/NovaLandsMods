@@ -1,0 +1,2344 @@
+Type: ToggleSelectable
+
+Method: System.Boolean UnityEngine.UI.ToggleSelectable::get_isToggled():	Method Body (x86 ASM):
+		0x180497F60 movzx eax,byte ptr [rcx+100h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 256 | None ||| N/A | N/A
+		0x180497F67 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180497F68 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean UnityEngine.UI.ToggleSelectable::get_isToggled():
+		End of function at 0x180497F69
+		Absolute End is at 0x180497F69
+		Identified Jump Destination addresses:
+
+		0x180497F60: [!] Reads field _isToggled from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'_isToggled' (type System.Boolean)}
+
+		0x180497F67: [!] Returns {'_isToggled' (type System.Boolean)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Boolean get_isToggled()
+		System.Boolean _isToggled = this._isToggled
+		return _isToggled
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Boolean UnityEngine.UI.ToggleSelectable::_isToggled
+	IL_0006: ret
+	
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::set_isToggled(System.Boolean):	Method Body (x86 ASM):
+		0x180A09240 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09242 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A09246 mov [rcx+100h],dl		; DEBUG: {Memory}/None {Register}/DL ||| RCX | 256 | None ||| N/A | N/A
+		0x180A0924C mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A0924F mov rdx,[rcx]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180A09252 mov rax,[rdx+2B8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 696 | None ||| N/A | N/A
+		0x180A09259 mov rdx,[rdx+2C0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 704 | None ||| N/A | N/A
+		0x180A09260 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09262 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A09264 je short 0000000180A09293h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09266 cmp byte ptr [rbx+0F1h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 241 | None ||| N/A | 0
+		0x180A0926D jne short 0000000180A0928Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0926F cmp byte ptr [rbx+0F2h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 242 | None ||| N/A | 0
+		0x180A09276 jne short 0000000180A09285h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09278 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A0927A cmp [rbx+0F0h],dl		; DEBUG: {Memory}/None {Register}/DL ||| RBX | 240 | None ||| N/A | N/A
+		0x180A09280 setne dl		; DEBUG: {Register}/DL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09283 jmp short 0000000180A09298h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09285 mov edx,3		; DEBUG: {Register}/EDX {Immediate32}/None ||| None | 0 | None ||| N/A | 3
+		0x180A0928A jmp short 0000000180A09298h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0928C mov edx,2		; DEBUG: {Register}/EDX {Immediate32}/None ||| None | 0 | None ||| N/A | 2
+		0x180A09291 jmp short 0000000180A09298h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09293 mov edx,4		; DEBUG: {Register}/EDX {Immediate32}/None ||| None | 0 | None ||| N/A | 4
+		0x180A09298 mov rax,[rbx]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x180A0929B xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A0929E mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A092A1 mov r9,[rax+2E0h]		; DEBUG: {Register}/R9 {Memory}/None ||| RAX | 736 | None ||| N/A | N/A
+		0x180A092A8 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A092AC pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A092AD jmp qword ptr [rax+2D8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 728 | None ||| N/A | N/A
+		0x180A092B4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::set_isToggled(System.Boolean):
+		End of function at 0x180A092B5
+		Absolute End is at 0x180A092B5
+		Identified Jump Destination addresses:
+			0x180A09298
+		0x180A09240: Saves the content of rbx to the stack
+		0x180A09246: [!] Sets the field _isToggled (Type System.Boolean) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in {'value' (function parameter, type System.Boolean)}
+		0x180A0924C: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rcx into rbx
+		0x180A0924F: Loads the class pointer from this into a constant constant1 in register rdx
+		0x180A09252: Loads the pointer to the implementation of virtual function System.Boolean UnityEngine.UI.Selectable::IsInteractable() specific to UnityEngine.UI.ToggleSelectable from the class pointer in rdx, slot 24 (from memory offset 696) and stores in constant constant2
+		0x180A09259: Loads the pointer to the implementation of virtual function System.Boolean UnityEngine.UI.Selectable::IsInteractable() specific to UnityEngine.UI.ToggleSelectable from the class pointer in rdx, slot 24 (from memory offset 704) and stores in constant constant3
+		0x180A09260: [!] Calls managed method System.Boolean UnityEngine.UI.Selectable::IsInteractable() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'isInteractable' (type System.Boolean)}
+
+		0x180A09262: [!] Compares {'isInteractable' (type System.Boolean)} and False
+		0x180A09264: Jumps to 0x180A09293 if isInteractable equals False ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180A09266: [!] Compares  and 0
+		0x180A0926D: Jumps to 0x180A0928C if  != 0 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180A0926F: [!] Compares  and 0
+		0x180A09276: Jumps to 0x180A09285 if  != 0 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180A09278: Clears register rdx, yielding zero-local {'local3' (type System.Int32)}
+		0x180A0927A: [!] Compares  and {'local3' (type System.Int32)}
+		0x180A09280: [!] Sets the boolean {'local4' (type System.Boolean)} in rdx to true if  isn't equal to local3, otherwise false.
+		0x180A09283: Jumps to 0x180A09298 (which is an function-local jump destination)
+
+		0x180A09285: [!] Writes the constant 0x3 into operand 3 (type UInt64) in register rdx
+		0x180A0928A: Jumps to 0x180A09298 (which is an function-local jump destination)
+
+		0x180A0928C: [!] Writes the constant 0x2 into operand 2 (type UInt64) in register rdx
+		0x180A09291: Jumps to 0x180A09298 (which is an function-local jump destination)
+
+		0x180A09293: [!] Writes the constant 0x4 into operand True (type UInt64) in register rdx
+
+		End Of If-Else Block (at 0x180A09298) where the else started at 0x180A09293
+		0x180A09298: Loads the class pointer from this into a constant constant10 in register rax
+		0x180A0929E: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A092A1: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.ToggleSelectable::DoStateTransition(UnityEngine.UI.Selectable/SelectionState,System.Boolean) specific to UnityEngine.UI.ToggleSelectable from the class pointer in rax, slot 26 (from memory offset 736) and stores in constant constant11
+		0x180A092AD: [!] Calls managed method Rewired.PlayerController/Button Rewired.IPlayerMouse::get_leftButton() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'leftButton' (type Rewired.PlayerController/Button)} ;  - Leftover parameters detected, but first few match.
+
+		0x180A092AD: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void set_isToggled(System.Boolean value)
+		this._isToggled = value
+
+		System.Boolean isInteractable = this.IsInteractable()
+
+		if (isInteractable != False)
+
+		    if ( == 0)
+
+		        if ( == 0)
+		            ulong local3 = 0
+		            System.Boolean local4 =  != local3
+		        else
+		        else
+		        else
+		        endif
+                
+
+		        Rewired.PlayerController/Button leftButton = base.leftButton
+		        return
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.JumpIfNonZeroOrNonNullAction at (0x180A0926D) is corrupt (One of the arguments is null) and cannot be created as IL. Aborting here.
+
+
+Method: UnityEngine.UI.ColorBlock UnityEngine.UI.ToggleSelectable::get_toggledColors():	Method Body (x86 ASM):
+		0x180A092C0 movups xmm0,[rdx+104h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 260 | None ||| N/A | N/A
+		0x180A092C7 mov rax,rcx		; DEBUG: {Register}/RAX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A092CA movups xmm1,[rdx+114h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RDX | 276 | None ||| N/A | N/A
+		0x180A092D1 movups [rcx],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RCX | 0 | None ||| N/A | N/A
+		0x180A092D4 movups xmm0,[rdx+124h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 292 | None ||| N/A | N/A
+		0x180A092DB movups [rcx+10h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RCX | 16 | None ||| N/A | N/A
+		0x180A092DF movups xmm1,[rdx+134h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RDX | 308 | None ||| N/A | N/A
+		0x180A092E6 movups [rcx+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RCX | 32 | None ||| N/A | N/A
+		0x180A092EA movups xmm0,[rdx+144h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 324 | None ||| N/A | N/A
+		0x180A092F1 movups [rcx+30h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RCX | 48 | None ||| N/A | N/A
+		0x180A092F5 movsd xmm1,qword ptr [rdx+154h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RDX | 340 | None ||| N/A | N/A
+		0x180A092FD movups [rcx+40h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RCX | 64 | None ||| N/A | N/A
+		0x180A09301 movsd qword ptr [rcx+50h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RCX | 80 | None ||| N/A | N/A
+		0x180A09306 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09307 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method UnityEngine.UI.ColorBlock UnityEngine.UI.ToggleSelectable::get_toggledColors():
+		End of function at 0x180A09308
+		Absolute End is at 0x180A09308
+		Identified Jump Destination addresses:
+
+		0x180A092C7: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rcx into rax
+		0x180A092D1: [!] Sets the field  (Type ) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in 
+		0x180A092DB: [!] Sets the field m_CachedPtr (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in 
+		0x180A092E6: [!] Sets the field m_EnableCalled (Type System.Boolean) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in 
+		0x180A092F1: [!] Sets the field m_Navigation.m_SelectOnUp (Type UnityEngine.UI.Selectable) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in 
+		0x180A092FD: [!] Sets the field m_Navigation.m_SelectOnLeft (Type UnityEngine.UI.Selectable) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in 
+		0x180A09306: [!] Returns {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	UnityEngine.UI.ColorBlock get_toggledColors()
+		this. = 
+		this.m_CachedPtr = 
+		this.m_EnableCalled = 
+		this.m_Navigation.m_SelectOnUp = 
+		this.m_Navigation.m_SelectOnLeft = 
+		return this
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.RegToFieldAction at (0x180A092D1) is corrupt (Instance or field is null) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::set_toggledColors(UnityEngine.UI.ColorBlock):	Method Body (x86 ASM):
+		0x180A09310 movups xmm0,[rdx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180A09313 movups xmm1,[rdx+10h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x180A09317 movups [rcx+104h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RCX | 260 | None ||| N/A | N/A
+		0x180A0931E movups xmm0,[rdx+20h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 32 | None ||| N/A | N/A
+		0x180A09322 movups [rcx+114h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RCX | 276 | None ||| N/A | N/A
+		0x180A09329 movups xmm1,[rdx+30h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RDX | 48 | None ||| N/A | N/A
+		0x180A0932D movups [rcx+124h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RCX | 292 | None ||| N/A | N/A
+		0x180A09334 movups xmm0,[rdx+40h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 64 | None ||| N/A | N/A
+		0x180A09338 movups [rcx+134h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RCX | 308 | None ||| N/A | N/A
+		0x180A0933F movsd xmm1,qword ptr [rdx+50h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RDX | 80 | None ||| N/A | N/A
+		0x180A09344 movups [rcx+144h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RCX | 324 | None ||| N/A | N/A
+		0x180A0934B movsd qword ptr [rcx+154h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RCX | 340 | None ||| N/A | N/A
+		0x180A09353 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09354 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::set_toggledColors(UnityEngine.UI.ColorBlock):
+		End of function at 0x180A09355
+		Absolute End is at 0x180A09355
+		Identified Jump Destination addresses:
+
+		0x180A09310: Loads the class pointer from value into a constant constant1 in register xmm0
+		0x180A09313: [!] Reads field m_HighlightedColor from {'value' (function parameter, type UnityEngine.UI.ColorBlock)} and stores in a new local {'m_HighlightedColor' (type UnityEngine.Color)}
+
+		0x180A09317: [!] Sets the field _toggledColors (Type UnityEngine.UI.ColorBlock) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in {'constant1' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}
+		0x180A0931E: [!] Reads field m_PressedColor from {'value' (function parameter, type UnityEngine.UI.ColorBlock)} and stores in a new local {'m_PressedColor' (type UnityEngine.Color)}
+
+		0x180A09322: [!] Sets the field _toggledColors.m_HighlightedColor (Type UnityEngine.Color) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in {'m_HighlightedColor' (type UnityEngine.Color)}
+		0x180A09329: [!] Reads field m_SelectedColor from {'value' (function parameter, type UnityEngine.UI.ColorBlock)} and stores in a new local {'m_SelectedColor' (type UnityEngine.Color)}
+
+		0x180A0932D: [!] Sets the field _toggledColors.m_PressedColor (Type UnityEngine.Color) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in {'m_PressedColor' (type UnityEngine.Color)}
+		0x180A09334: [!] Reads field m_DisabledColor from {'value' (function parameter, type UnityEngine.UI.ColorBlock)} and stores in a new local {'m_DisabledColor' (type UnityEngine.Color)}
+
+		0x180A09338: [!] Sets the field _toggledColors.m_SelectedColor (Type UnityEngine.Color) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in {'m_SelectedColor' (type UnityEngine.Color)}
+		0x180A09344: [!] Sets the field _toggledColors.m_DisabledColor (Type UnityEngine.Color) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in {'m_DisabledColor' (type UnityEngine.Color)}
+		0x180A09353: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void set_toggledColors(UnityEngine.UI.ColorBlock value)
+		UnityEngine.Color m_HighlightedColor = value.m_HighlightedColor
+		this._toggledColors = constant1
+		UnityEngine.Color m_PressedColor = value.m_PressedColor
+		this._toggledColors.m_HighlightedColor = m_HighlightedColor
+		UnityEngine.Color m_SelectedColor = value.m_SelectedColor
+		this._toggledColors.m_PressedColor = m_PressedColor
+		UnityEngine.Color m_DisabledColor = value.m_DisabledColor
+		this._toggledColors.m_SelectedColor = m_SelectedColor
+		this._toggledColors.m_DisabledColor = m_DisabledColor
+		return
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.RegToFieldAction at (0x180A09317) is corrupt (ConstantDefinition: Don't know how to get IL to load a Cpp2IL.Core.Analysis.Il2CppClassIdentifier) and cannot be created as IL. Aborting here.
+
+
+Method: UnityEngine.UI.SpriteState UnityEngine.UI.ToggleSelectable::get_toggledSpriteState():	Method Body (x86 ASM):
+		0x180A09360 movups xmm0,[rdx+160h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 352 | None ||| N/A | N/A
+		0x180A09367 mov rax,rcx		; DEBUG: {Register}/RAX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A0936A movups xmm1,[rdx+170h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RDX | 368 | None ||| N/A | N/A
+		0x180A09371 movups [rcx],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RCX | 0 | None ||| N/A | N/A
+		0x180A09374 movups [rcx+10h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RCX | 16 | None ||| N/A | N/A
+		0x180A09378 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09379 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method UnityEngine.UI.SpriteState UnityEngine.UI.ToggleSelectable::get_toggledSpriteState():
+		End of function at 0x180A0937A
+		Absolute End is at 0x180A0937A
+		Identified Jump Destination addresses:
+
+		0x180A09367: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rcx into rax
+		0x180A09371: [!] Sets the field  (Type ) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in 
+		0x180A09374: [!] Sets the field m_CachedPtr (Type System.IntPtr) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in 
+		0x180A09378: [!] Returns {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	UnityEngine.UI.SpriteState get_toggledSpriteState()
+		this. = 
+		this.m_CachedPtr = 
+		return this
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.RegToFieldAction at (0x180A09371) is corrupt (Instance or field is null) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::set_toggledSpriteState(UnityEngine.UI.SpriteState):	Method Body (x86 ASM):
+		0x180A09380 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180A09387 movups xmm0,[rdx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180A0938A movups xmm1,[rdx+10h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x180A0938E movups [rcx+160h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RCX | 352 | None ||| N/A | N/A
+		0x180A09395 movups [rcx+170h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RCX | 368 | None ||| N/A | N/A
+		0x180A0939C je short 0000000180A093E1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0939E lea r8,[rcx+160h]		; DEBUG: {Register}/R8 {Memory}/None ||| RCX | 352 | None ||| N/A | N/A
+		0x180A093A5 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180A093A9 lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x180A093B0 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180A093B7 mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A093BA shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180A093BE and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180A093C2 lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x180A093C6 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180A093C9 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A093D0 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180A093D3 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A093D6 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180A093DA lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x180A093DF jne short 0000000180A093D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A093E1 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A093E2 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::set_toggledSpriteState(UnityEngine.UI.SpriteState):
+		End of function at 0x180A093E3
+		Absolute End is at 0x180A093E3
+		Identified Jump Destination addresses:
+
+		0x180A09380: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180A09387: Loads the class pointer from value into a constant constant3 in register xmm0
+		0x180A0938A: [!] Reads field m_SelectedSprite from {'value' (function parameter, type UnityEngine.UI.SpriteState)} and stores in a new local {'m_SelectedSprite' (type UnityEngine.Sprite)}
+
+		0x180A0938E: [!] Sets the field _toggledSpriteState (Type UnityEngine.UI.SpriteState) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in {'constant3' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}
+		0x180A09395: [!] Sets the field _toggledSpriteState.m_SelectedSprite (Type UnityEngine.Sprite) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in {'m_SelectedSprite' (type UnityEngine.Sprite)}
+		0x180A0939C: Jumps to 0x180A093E1 if constant1 equals 0
+
+		0x180A0939E: Loads the pointer to the field _toggledSpriteState on {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} into register r8
+		0x180A093A9: Loads string "¡
+m" into register rcx as constant {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A093B7: Copies {'constant4' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x180A093D0: Loads the class pointer from value into a constant constant6 in register rax
+		0x180A093D3: Copies {'constant6' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x180A093DF: Jumps to 0x180A093D0 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x180A093E1: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void set_toggledSpriteState(UnityEngine.UI.SpriteState value)
+		UnityEngine.Sprite m_SelectedSprite = value.m_SelectedSprite
+		this._toggledSpriteState = constant3
+		this._toggledSpriteState.m_SelectedSprite = m_SelectedSprite
+		return
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.RegToFieldAction at (0x180A0938E) is corrupt (ConstantDefinition: Don't know how to get IL to load a Cpp2IL.Core.Analysis.Il2CppClassIdentifier) and cannot be created as IL. Aborting here.
+
+
+Method: UnityEngine.UI.AnimationTriggers UnityEngine.UI.ToggleSelectable::get_toggledAnimationTriggers():	Method Body (x86 ASM):
+		0x1805E1070 mov rax,[rcx+180h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 384 | None ||| N/A | N/A
+		0x1805E1077 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1805E1078 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method UnityEngine.UI.AnimationTriggers UnityEngine.UI.ToggleSelectable::get_toggledAnimationTriggers():
+		End of function at 0x1805E1079
+		Absolute End is at 0x1805E1079
+		Identified Jump Destination addresses:
+
+		0x1805E1070: [!] Reads field _toggledAnimationTriggers from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'_toggledAnimationTriggers' (type UnityEngine.UI.AnimationTriggers)}
+
+		0x1805E1077: [!] Returns {'_toggledAnimationTriggers' (type UnityEngine.UI.AnimationTriggers)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	UnityEngine.UI.AnimationTriggers get_toggledAnimationTriggers()
+		UnityEngine.UI.AnimationTriggers _toggledAnimationTriggers = this._toggledAnimationTriggers
+		return _toggledAnimationTriggers
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld UnityEngine.UI.AnimationTriggers UnityEngine.UI.ToggleSelectable::_toggledAnimationTriggers
+	IL_0006: ret
+	
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::set_toggledAnimationTriggers(UnityEngine.UI.AnimationTriggers):	Method Body (x86 ASM):
+		0x1809A8260 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1809A8267 mov [rcx+180h],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| RCX | 384 | None ||| N/A | N/A
+		0x1809A826E je short 00000001809A82B1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809A8270 lea r8,[rcx+180h]		; DEBUG: {Register}/R8 {Memory}/None ||| RCX | 384 | None ||| N/A | N/A
+		0x1809A8277 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1809A827B lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x1809A8282 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1809A8289 mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1809A828C shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1809A8290 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1809A8294 lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x1809A8298 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1809A829B nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x1809A82A0 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1809A82A3 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1809A82A6 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1809A82AA lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x1809A82AF jne short 00000001809A82A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1809A82B1 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1809A82B2 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::set_toggledAnimationTriggers(UnityEngine.UI.AnimationTriggers):
+		End of function at 0x1809A82B3
+		Absolute End is at 0x1809A82B3
+		Identified Jump Destination addresses:
+
+		0x1809A8260: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1809A8267: [!] Sets the field _toggledAnimationTriggers (Type UnityEngine.UI.AnimationTriggers) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in {'value' (function parameter, type UnityEngine.UI.AnimationTriggers)}
+		0x1809A826E: Jumps to 0x1809A82B1 if constant1 equals 0
+
+		0x1809A8270: Loads the pointer to the field _toggledAnimationTriggers on {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} into register r8
+		0x1809A827B: Loads string "¡
+m" into register rcx as constant {'constant4' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1809A8289: Copies {'constant3' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x1809A82A0: Loads the class pointer from value into a constant constant5 in register rax
+		0x1809A82A3: Copies {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x1809A82AF: Jumps to 0x1809A82A0 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x1809A82B1: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void set_toggledAnimationTriggers(UnityEngine.UI.AnimationTriggers value)
+		this._toggledAnimationTriggers = value
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldarg.1
+	IL_0002: stfld UnityEngine.UI.AnimationTriggers UnityEngine.UI.ToggleSelectable::_toggledAnimationTriggers
+	IL_0007: ret
+	
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::DoStateTransition(UnityEngine.UI.Selectable/SelectionState,System.Boolean):	Method Body (x86 ASM):
+		0x180A093F0 mov [rsp+18h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 24 | None ||| N/A | N/A
+		0x180A093F5 mov [rsp+20h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 32 | None ||| N/A | N/A
+		0x180A093FA push r14		; DEBUG: {Register}/R14 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A093FC sub rsp,60h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 96
+		0x180A09400 cmp byte ptr [18329BF0Eh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518478 | None ||| N/A | 0
+		0x180A09407 movzx r14d,r8b		; DEBUG: {Register}/R14D {Register}/R8L ||| None | 0 | None ||| N/A | N/A
+		0x180A0940B mov edi,edx		; DEBUG: {Register}/EDI {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A0940D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A09410 jne short 0000000180A09425h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09412 lea rcx,[1830F6708h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792008 | None ||| N/A | N/A
+		0x180A09419 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0941E mov byte ptr [18329BF0Eh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518478 | None ||| N/A | 1
+		0x180A09425 cmp byte ptr [rbx+100h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 256 | None ||| N/A | 0
+		0x180A0942C jne short 0000000180A09451h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0942E xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x180A09431 movzx r8d,r14b		; DEBUG: {Register}/R8D {Register}/R14L ||| None | 0 | None ||| N/A | N/A
+		0x180A09435 mov edx,edi		; DEBUG: {Register}/EDX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A09437 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A0943A lea r11,[rsp+60h]		; DEBUG: {Register}/R11 {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x180A0943F mov rbx,[r11+20h]		; DEBUG: {Register}/RBX {Memory}/None ||| R11 | 32 | None ||| N/A | N/A
+		0x180A09443 mov rdi,[r11+28h]		; DEBUG: {Register}/RDI {Memory}/None ||| R11 | 40 | None ||| N/A | N/A
+		0x180A09447 mov rsp,r11		; DEBUG: {Register}/RSP {Register}/R11 ||| None | 0 | None ||| N/A | N/A
+		0x180A0944A pop r14		; DEBUG: {Register}/R14 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A0944C jmp near ptr 00000001825B53C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09451 mov [rsp+70h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 112 | None ||| N/A | N/A
+		0x180A09456 mov [rsp+78h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 120 | None ||| N/A | N/A
+		0x180A0945B test edi,edi		; DEBUG: {Register}/EDI {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x180A0945D je near ptr 0000000180A09526h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09463 sub edi,1		; DEBUG: {Register}/EDI {Immediate8to32}/None ||| None | 0 | None ||| N/A | 1
+		0x180A09466 je near ptr 0000000180A094FDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0946C sub edi,1		; DEBUG: {Register}/EDI {Immediate8to32}/None ||| None | 0 | None ||| N/A | 1
+		0x180A0946F je short 0000000180A094D4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09471 sub edi,1		; DEBUG: {Register}/EDI {Immediate8to32}/None ||| None | 0 | None ||| N/A | 1
+		0x180A09474 je short 0000000180A094B3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09476 cmp edi,1		; DEBUG: {Register}/EDI {Immediate8to32}/None ||| None | 0 | None ||| N/A | 1
+		0x180A09479 jne short 0000000180A094B3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0947B movups xmm0,[rbx+144h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 324 | None ||| N/A | N/A
+		0x180A09482 mov rdi,[rbx+180h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 384 | None ||| N/A | N/A
+		0x180A09489 mov rsi,[rbx+178h]		; DEBUG: {Register}/RSI {Memory}/None ||| RBX | 376 | None ||| N/A | N/A
+		0x180A09490 movups xmm1,[rbx+160h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBX | 352 | None ||| N/A | N/A
+		0x180A09497 movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A0949C movups [rsp+40h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 64 | None ||| N/A | N/A
+		0x180A094A1 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A094A4 je near ptr 0000000180A097E5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A094AA mov rdi,[rdi+30h]		; DEBUG: {Register}/RDI {Memory}/None ||| RDI | 48 | None ||| N/A | N/A
+		0x180A094AE jmp near ptr 0000000180A09548h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A094B3 movaps xmm0,[182E6F1D0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491140560 | None ||| N/A | N/A
+		0x180A094BA mov rax,[1830F6708h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493792008 | None ||| N/A | N/A
+		0x180A094C1 xor esi,esi		; DEBUG: {Register}/ESI {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A094C3 movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A094C8 mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180A094CF mov rdi,[rcx]		; DEBUG: {Register}/RDI {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180A094D2 jmp short 0000000180A09548h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A094D4 movups xmm0,[rbx+124h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 292 | None ||| N/A | N/A
+		0x180A094DB mov rdi,[rbx+180h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 384 | None ||| N/A | N/A
+		0x180A094E2 mov rsi,[rbx+168h]		; DEBUG: {Register}/RSI {Memory}/None ||| RBX | 360 | None ||| N/A | N/A
+		0x180A094E9 movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A094EE test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A094F1 je near ptr 0000000180A097E5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A094F7 mov rdi,[rdi+20h]		; DEBUG: {Register}/RDI {Memory}/None ||| RDI | 32 | None ||| N/A | N/A
+		0x180A094FB jmp short 0000000180A09548h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A094FD movups xmm0,[rbx+114h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 276 | None ||| N/A | N/A
+		0x180A09504 mov rdi,[rbx+180h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 384 | None ||| N/A | N/A
+		0x180A0950B mov rsi,[rbx+160h]		; DEBUG: {Register}/RSI {Memory}/None ||| RBX | 352 | None ||| N/A | N/A
+		0x180A09512 movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A09517 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A0951A je near ptr 0000000180A097E5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09520 mov rdi,[rdi+18h]		; DEBUG: {Register}/RDI {Memory}/None ||| RDI | 24 | None ||| N/A | N/A
+		0x180A09524 jmp short 0000000180A09548h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09526 movups xmm0,[rbx+104h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 260 | None ||| N/A | N/A
+		0x180A0952D mov rdi,[rbx+180h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 384 | None ||| N/A | N/A
+		0x180A09534 xor esi,esi		; DEBUG: {Register}/ESI {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x180A09536 movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A0953B test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A0953E je near ptr 0000000180A097E5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09544 mov rdi,[rdi+10h]		; DEBUG: {Register}/RDI {Memory}/None ||| RDI | 16 | None ||| N/A | N/A
+		0x180A09548 mov rax,[1832A9D50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575376 | None ||| N/A | N/A
+		0x180A0954F test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09552 jne short 0000000180A09570h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09554 lea rcx,[182979720h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485940000 | None ||| N/A | N/A
+		0x180A0955B call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09560 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09563 je near ptr 0000000180A097EBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09569 mov [1832A9D50h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575376 | None ||| N/A | N/A
+		0x180A09570 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A09573 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09575 mov rbp,rax		; DEBUG: {Register}/RBP {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09578 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A0957B je near ptr 0000000180A097E5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09581 mov rax,[1832A9E00h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575552 | None ||| N/A | N/A
+		0x180A09588 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A0958B jne short 0000000180A095A9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0958D lea rcx,[182979BD0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485941200 | None ||| N/A | N/A
+		0x180A09594 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09599 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A0959C je near ptr 0000000180A09802h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A095A2 mov [1832A9E00h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575552 | None ||| N/A | N/A
+		0x180A095A9 mov rcx,rbp		; DEBUG: {Register}/RCX {Register}/RBP ||| None | 0 | None ||| N/A | N/A
+		0x180A095AC call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A095AE test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A095B0 je short 0000000180A095D6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A095B2 mov ecx,[rbx+50h]		; DEBUG: {Register}/ECX {Memory}/None ||| RBX | 80 | None ||| N/A | N/A
+		0x180A095B5 sub ecx,1		; DEBUG: {Register}/ECX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 1
+		0x180A095B8 je near ptr 0000000180A096CDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A095BE sub ecx,1		; DEBUG: {Register}/ECX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 1
+		0x180A095C1 je short 0000000180A095F3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A095C3 cmp ecx,1		; DEBUG: {Register}/ECX {Immediate8to32}/None ||| None | 0 | None ||| N/A | 1
+		0x180A095C6 jne short 0000000180A095D6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A095C8 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A095CB mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A095CE mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A095D1 call 0000000180A09A50h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A095D6 mov rbp,[rsp+70h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x180A095DB mov rsi,[rsp+78h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 120 | None ||| N/A | N/A
+		0x180A095E0 lea r11,[rsp+60h]		; DEBUG: {Register}/R11 {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x180A095E5 mov rbx,[r11+20h]		; DEBUG: {Register}/RBX {Memory}/None ||| R11 | 32 | None ||| N/A | N/A
+		0x180A095E9 mov rdi,[r11+28h]		; DEBUG: {Register}/RDI {Memory}/None ||| R11 | 40 | None ||| N/A | N/A
+		0x180A095ED mov rsp,r11		; DEBUG: {Register}/RSP {Register}/R11 ||| None | 0 | None ||| N/A | N/A
+		0x180A095F0 pop r14		; DEBUG: {Register}/R14 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A095F2 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A095F3 cmp byte ptr [18329BF10h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518480 | None ||| N/A | 0
+		0x180A095FA jne short 0000000180A0960Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A095FC lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09603 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09608 mov byte ptr [18329BF10h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518480 | None ||| N/A | 1
+		0x180A0960F xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09611 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A09614 call 00000001825B46E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09619 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09620 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09623 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A0962A jne short 0000000180A09631h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0962C call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09631 cmp byte ptr [1832A9FABh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 0
+		0x180A09638 jne short 0000000180A0964Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0963A lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09641 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09646 mov byte ptr [1832A9FABh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 1
+		0x180A0964D mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09654 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A0965B jne short 0000000180A09662h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0965D call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09662 cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x180A09669 jne short 0000000180A0967Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0966B lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09672 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09677 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x180A0967E test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A09681 je near ptr 0000000180A095D6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09687 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A0968E cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A09695 jne short 0000000180A0969Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09697 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0969C cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x180A096A1 je near ptr 0000000180A095D6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A096A7 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A096A9 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A096AC call 00000001825B46E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A096B1 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A096B4 je near ptr 0000000180A097E5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A096BA xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A096BD mov rdx,rsi		; DEBUG: {Register}/RDX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A096C0 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A096C3 call 0000000182581C20h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A096C8 jmp near ptr 0000000180A095D6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A096CD movups xmm4,[rsp+30h]		; DEBUG: {Register}/XMM4 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A096D2 movss xmm3,dword ptr [rbx+154h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RBX | 340 | None ||| N/A | N/A
+		0x180A096DA shufps xmm3,xmm3,0		; DEBUG: {Register}/XMM3 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A096DE mulps xmm4,xmm3		; DEBUG: {Register}/XMM4 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180A096E1 movups [rsp+30h],xmm4		; DEBUG: {Memory}/None {Register}/XMM4 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A096E6 cmp byte ptr [18329BF0Fh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518479 | None ||| N/A | 0
+		0x180A096ED jne short 0000000180A09702h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A096EF lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A096F6 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A096FB mov byte ptr [18329BF0Fh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518479 | None ||| N/A | 1
+		0x180A09702 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09709 mov rdi,[rbx+0E0h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 224 | None ||| N/A | N/A
+		0x180A09710 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A09717 jne short 0000000180A0971Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09719 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0971E cmp byte ptr [1832A9FABh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 0
+		0x180A09725 jne short 0000000180A0973Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09727 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A0972E call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09733 mov byte ptr [1832A9FABh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 1
+		0x180A0973A mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09741 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A09748 jne short 0000000180A0974Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0974A call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0974F cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x180A09756 jne short 0000000180A0976Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09758 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A0975F call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09764 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x180A0976B test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A0976E je near ptr 0000000180A095D6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09774 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A0977B cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A09782 jne short 0000000180A09789h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09784 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09789 cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x180A0978E je near ptr 0000000180A095D6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09794 test r14b,r14b		; DEBUG: {Register}/R14L {Register}/R14L ||| None | 0 | None ||| N/A | N/A
+		0x180A09797 je short 0000000180A0979Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09799 xorps xmm2,xmm2		; DEBUG: {Register}/XMM2 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A0979C jmp short 0000000180A097A6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0979E movss xmm2,dword ptr [rbx+158h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RBX | 344 | None ||| N/A | N/A
+		0x180A097A6 mov rcx,[rbx+0E0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 224 | None ||| N/A | N/A
+		0x180A097AD test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A097B0 je short 0000000180A097E5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A097B2 mov r8,[rcx]		; DEBUG: {Register}/R8 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180A097B5 lea rdx,[rsp+30h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A097BA movups xmm0,[rsp+30h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A097BF mov r9b,1		; DEBUG: {Register}/R9L {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180A097C2 mov rax,[r8+430h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 1072 | None ||| N/A | N/A
+		0x180A097C9 mov [rsp+28h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 40 | None ||| N/A | N/A
+		0x180A097CE mov byte ptr [rsp+20h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RSP | 32 | None ||| N/A | 1
+		0x180A097D3 movdqa [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A097D9 call qword ptr [r8+428h]		; DEBUG: {Memory}/None {Register}/None ||| R8 | 1064 | None ||| N/A | N/A
+		0x180A097E0 jmp near ptr 0000000180A095D6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A097E5 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A097EA int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::DoStateTransition(UnityEngine.UI.Selectable/SelectionState,System.Boolean):
+		End of function at 0x180A097EB
+		Absolute End is at 0x180A097EB
+		Identified Jump Destination addresses:
+			0x180A09548
+			0x180A097A6
+		0x180A093FA: Saves the content of r14 to the stack
+		0x180A09400: Compares {Unknown Global at 0x18329BF0E, first ten bytes are [239 2 192 176 4 0 225 176 4 0], or as chars "ïÀ° á° "} and 0
+		0x180A09407: Copies {'instant' (function parameter, type System.Boolean)} from r8 into r14
+		0x180A0940B: [!] Implicitly reads field at offset 0 (which is value__) from struct state of type UnityEngine.UI.Selectable/SelectionState and stores in new local {'local3' (type System.Int32)}
+		0x180A0940D: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rcx into rbx
+		0x180A09410: Jumps to 0x180A09425 if {Unknown Global at 0x18329BF0E, first ten bytes are [239 2 192 176 4 0 225 176 4 0], or as chars "ïÀ° á° "} != 0
+
+		0x180A09412: Loads the type definition for managed type System.String as a constant "String" in rcx
+		0x180A09419: Initializes runtime metadata value System.String
+		0x180A09425: [!] Compares {field _isToggled, read from local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)}} and False
+		0x180A0942C: Jumps to 0x180A09451 (which is an if statement's body) if {field _isToggled, read from local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)}} != False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A09431: Copies {'instant' (function parameter, type System.Boolean)} from r14 into r8
+		0x180A09435: Copies {'local3' (type System.Int32)} from rdi into rdx
+		0x180A09437: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A0943A: Loads a pointer to stack offset 0x60 into register r11 as new constant constant5
+		0x180A09447: Copies {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r11 into rsp
+		0x180A0944C: [!] Calls managed method System.Void UnityEngine.UI.Selectable::DoStateTransition(UnityEngine.UI.Selectable/SelectionState,System.Boolean) on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A0944C: [!] Returns from the function
+
+		0x180A0945B: [!] Compares {'local3' (type System.Int32)} and 0
+		0x180A0945D: Jumps to 0x180A09526 if local3 equals 0 ;  - This is probably a goto, jumping to 0x180A09526 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A09466: Jumps to 0x180A094FD if local3 equals 0 ;  - This is probably a goto, jumping to 0x180A094FD which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A0946F: Jumps to 0x180A094D4 if local3 equals 0 ;  - This is probably a goto, jumping to 0x180A094D4 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A09474: Jumps to 0x180A094B3 if local3 equals 0 ;  - This is probably a goto, jumping to 0x180A094B3 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A09476: [!] Compares {'local3' (type System.Int32)} and 1
+		0x180A09479: Jumps to 0x180A094B3 if {'local3' (type System.Int32)} != 1 ;  - This is probably a goto, jumping to 0x180A094B3 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A0947B: [!] Reads field _toggledColors.m_DisabledColor from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'m_DisabledColor' (type UnityEngine.Color)}
+
+		0x180A09482: [!] Reads field _toggledAnimationTriggers from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'_toggledAnimationTriggers' (type UnityEngine.UI.AnimationTriggers)}
+
+		0x180A09490: [!] Reads field _toggledSpriteState from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'_toggledSpriteState' (type UnityEngine.UI.SpriteState)}
+
+		0x180A09497: Moves m_DisabledColor (type UnityEngine.Color) from register xmm0 to the stack at offset 48 (0x30)
+		0x180A0949C: Moves _toggledSpriteState (type UnityEngine.UI.SpriteState) from register xmm1 to the stack at offset 64 (0x40)
+		0x180A094A1: [!] Compares {'_toggledAnimationTriggers' (type UnityEngine.UI.AnimationTriggers)} and 0
+		0x180A094A4: Jumps to 0x180A097E5 (which throws a NRE) if _toggledAnimationTriggers equals 0. Implicitly present in managed code, so ignored here.
+		0x180A094AE: Jumps to 0x180A09548 (which is an function-local jump destination)
+
+		0x180A094B3: Reads {Unknown Global at 0x182E6F1D0, first ten bytes are [0 0 0 0 0 0 0 0 0 0], or as chars "          "} into register xmm0 as a constant constant9
+		0x180A094BA: Loads the type definition for managed type System.String as a constant "String" in rax
+		0x180A094C3: Moves constant9 (type Cpp2IL.Core.Analysis.ResultModels.UnknownGlobalAddr) from register xmm0 to the stack at offset 48 (0x30) as a new local local11
+		0x180A094C8: Loads the pointer to the static fields for System.String and stores it in constant11 in register rcx
+		0x180A094CF: [!] Reads the static field System.String System.String::Empty into new local empty
+		0x180A094D2: Jumps to 0x180A09548 (which is an function-local jump destination)
+
+		0x180A094D4: [!] Reads field _toggledColors.m_PressedColor from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'m_PressedColor' (type UnityEngine.Color)}
+
+		0x180A094DB: [!] Reads field _toggledAnimationTriggers from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'_toggledAnimationTriggers2' (type UnityEngine.UI.AnimationTriggers)}
+
+		0x180A094E9: Moves m_PressedColor (type UnityEngine.Color) from register xmm0 to the stack at offset 48 (0x30)
+		0x180A094EE: [!] Compares {'_toggledAnimationTriggers2' (type UnityEngine.UI.AnimationTriggers)} and 0
+		0x180A094F1: Jumps to 0x180A097E5 (which throws a NRE) if _toggledAnimationTriggers2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A094FB: Jumps to 0x180A09548 (which is an function-local jump destination)
+
+		0x180A094FD: [!] Reads field _toggledColors.m_HighlightedColor from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'m_HighlightedColor' (type UnityEngine.Color)}
+
+		0x180A09504: [!] Reads field _toggledAnimationTriggers from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'_toggledAnimationTriggers3' (type UnityEngine.UI.AnimationTriggers)}
+
+		0x180A09512: Moves m_HighlightedColor (type UnityEngine.Color) from register xmm0 to the stack at offset 48 (0x30)
+		0x180A09517: [!] Compares {'_toggledAnimationTriggers3' (type UnityEngine.UI.AnimationTriggers)} and 0
+		0x180A0951A: Jumps to 0x180A097E5 (which throws a NRE) if _toggledAnimationTriggers3 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09524: Jumps to 0x180A09548 (which is an function-local jump destination)
+
+		0x180A09526: [!] Reads field _toggledColors from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'_toggledColors' (type UnityEngine.UI.ColorBlock)}
+
+		0x180A0952D: [!] Reads field _toggledAnimationTriggers from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'_toggledAnimationTriggers4' (type UnityEngine.UI.AnimationTriggers)}
+
+		0x180A09536: Moves _toggledColors (type UnityEngine.UI.ColorBlock) from register xmm0 to the stack at offset 48 (0x30)
+		0x180A0953B: [!] Compares {'_toggledAnimationTriggers4' (type UnityEngine.UI.AnimationTriggers)} and 0
+		0x180A0953E: Jumps to 0x180A097E5 (which throws a NRE) if _toggledAnimationTriggers4 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09544: [!] Reads field m_NormalTrigger from {'_toggledAnimationTriggers4' (type UnityEngine.UI.AnimationTriggers)} and stores in a new local {'m_NormalTrigger' (type System.String)}
+
+
+		Jump Destination (0x180A09548):
+		0x180A09548: Loads string "G" into register rax as constant UnityEngine.Component.get_gameObject
+		0x180A0954F: Compares UnityEngine.Component.get_gameObject and 0
+		0x180A09552: Jumps to 0x180A09570 if UnityEngine.Component.get_gameObject != 0 ;  - This is probably a goto, jumping to 0x180A09570 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A09554: Loads string "UnityEngine.Component::get_gameObject()" into register rcx as constant {'constant17' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A0955B: Looks up unity ICall by name "UnityEngine.Component::get_gameObject()" which resolves to UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+		0x180A09560: Compares UnityEngine.Component.get_gameObject and 0
+		0x180A09563: Jumps to 0x180A097EB if UnityEngine.Component.get_gameObject equals 0 ;  - This is probably a goto, jumping to 0x180A097EB which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A09570: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A09573: [!] Calls managed method UnityEngine.GameObject UnityEngine.Component::get_gameObject() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'gameObject' (type UnityEngine.GameObject)}
+
+		0x180A09575: Copies {'gameObject' (type UnityEngine.GameObject)} from rax into rbp
+		0x180A09578: [!] Compares {'gameObject' (type UnityEngine.GameObject)} and 0
+		0x180A0957B: Jumps to 0x180A097E5 (which throws a NRE) if gameObject equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09581: Loads string "ð" into register rax as constant UnityEngine.GameObject.get_activeInHierarchy
+		0x180A09588: Compares UnityEngine.GameObject.get_activeInHierarchy and 0
+		0x180A0958B: Jumps to 0x180A095A9 if UnityEngine.GameObject.get_activeInHierarchy != 0 ;  - This is probably a goto, jumping to 0x180A095A9 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A0958D: Loads string "UnityEngine.GameObject::get_activeInHierarchy()" into register rcx as constant {'constant22' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A09594: Looks up unity ICall by name "UnityEngine.GameObject::get_activeInHierarchy()" which resolves to System.Boolean UnityEngine.GameObject::get_activeInHierarchy()
+		0x180A09599: Compares UnityEngine.GameObject.get_activeInHierarchy and 0
+		0x180A0959C: Jumps to 0x180A09802 if UnityEngine.GameObject.get_activeInHierarchy equals 0 ;  - This is probably a goto, jumping to 0x180A09802 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A095A9: Copies {'gameObject' (type UnityEngine.GameObject)} from rbp into rcx
+		0x180A095AC: [!] Calls managed method System.Boolean UnityEngine.GameObject::get_activeInHierarchy() on instance {'gameObject' (type UnityEngine.GameObject)} and stores the result in {'activeInHierarchy' (type System.Boolean)}
+
+		0x180A095AE: [!] Compares {'activeInHierarchy' (type System.Boolean)} and False
+		0x180A095B0: Jumps to 0x180A095D6 if activeInHierarchy equals False ;  - This is probably a goto, jumping to 0x180A095D6 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A095B2: [!] Reads field m_Transition from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'m_Transition' (type UnityEngine.UI.Selectable/Transition)}
+
+		0x180A095B8: Jumps to 0x180A096CD if activeInHierarchy equals False ;  - This is probably a goto, jumping to 0x180A096CD which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A095C1: Jumps to 0x180A095F3 if activeInHierarchy equals False ;  - This is probably a goto, jumping to 0x180A095F3 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A095C3: [!] Compares {'m_Transition' (type UnityEngine.UI.Selectable/Transition)} and 1
+		0x180A095C6: Jumps to 0x180A095D6 if {'m_Transition' (type UnityEngine.UI.Selectable/Transition)} != 1 ;  - This is probably a goto, jumping to 0x180A095D6 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A095CB: Copies {'m_NormalTrigger' (type System.String)} from rdi into rdx
+		0x180A095CE: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A095D1: [!] Calls managed method System.Void UnityEngine.UI.ToggleSelectable::TriggerAnimation(System.String) on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} with arguments [{'m_NormalTrigger' (type System.String)}]
+
+
+		Potential Loop Start (0x180A095D6):
+		0x180A095D6: Reads unknown value in stack, offset 112 (0x70) and stores the pointer in register rbp as new constant constant26
+		0x180A095DB: Reads unknown value in stack, offset 120 (0x78) and stores the pointer in register rsi as new constant constant27
+		0x180A095E0: Loads a pointer to stack offset 0x60 into register r11 as new constant constant28
+		0x180A095ED: Copies {'constant28' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r11 into rsp
+		0x180A095F2: [!] Returns from the function
+
+		0x180A095F3: Compares {Unknown Global at 0x18329BF10, first ten bytes are [192 176 4 0 225 176 4 0 192 104], or as chars "À° á° Àh"} and 0
+		0x180A095FA: Jumps to 0x180A0960F if {Unknown Global at 0x18329BF10, first ten bytes are [192 176 4 0 225 176 4 0 192 104], or as chars "À° á° Àh"} != 0 ;  - This is probably a goto, jumping to 0x180A0960F which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A095FC: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09603: Initializes runtime metadata value UnityEngine.Object
+		0x180A09611: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A09614: [!] Calls managed method UnityEngine.UI.Image UnityEngine.UI.Selectable::get_image() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'image' (type UnityEngine.UI.Image)}
+
+		0x180A09619: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09620: Copies {'image' (type UnityEngine.UI.Image)} from rax into rdi
+		0x180A09623: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A0962A: Jumps to 0x180A09631 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x180A09631 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A0962C: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A09631: Compares {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} and 0
+		0x180A09638: Jumps to 0x180A0964D if {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} != 0 ;  - This is probably a goto, jumping to 0x180A0964D which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A0963A: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09641: Initializes runtime metadata value UnityEngine.Object
+		0x180A0964D: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09654: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A0965B: Jumps to 0x180A09662 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x180A09662 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A0965D: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A09662: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x180A09669: Jumps to 0x180A0967E if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0 ;  - This is probably a goto, jumping to 0x180A0967E which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A0966B: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09672: Initializes runtime metadata value UnityEngine.Object
+		0x180A0967E: [!] Compares {'image' (type UnityEngine.UI.Image)} and 0
+		0x180A09681: Jumps to 0x180A095D6 if image equals 0 ;  - This is probably a goto, jumping to 0x180A095D6 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A09687: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A0968E: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A09695: Jumps to 0x180A0969C if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x180A0969C which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A09697: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A0969C: [!] Compares {field s_UVScratch, read from local {'image' (type UnityEngine.UI.Image)}} and 0
+		0x180A096A1: Jumps to 0x180A095D6 if image.s_UVScratch equals 0 ;  - This is probably a goto, jumping to 0x180A095D6 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A096A9: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A096AC: [!] Calls managed method UnityEngine.UI.Image UnityEngine.UI.Selectable::get_image() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'image2' (type UnityEngine.UI.Image)}
+
+		0x180A096B1: [!] Compares {'image2' (type UnityEngine.UI.Image)} and 0
+		0x180A096B4: Jumps to 0x180A097E5 (which throws a NRE) if image2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A096BD: Copies {'constant27' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rsi into rdx
+		0x180A096C0: Copies {'image2' (type UnityEngine.UI.Image)} from rax into rcx
+		0x180A096C3: [!] Calls managed method System.Void UnityEngine.UI.Image::set_overrideSprite(UnityEngine.Sprite) on instance {'image2' (type UnityEngine.UI.Image)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x180A096C8: Jumps to 0x180A095D6 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x180A096CD: Reads local {'_toggledColors' (type UnityEngine.UI.ColorBlock)} from stack offset 48 (0x30) into register xmm4
+		0x180A096E1: Moves _toggledColors (type UnityEngine.UI.ColorBlock) from register xmm4 to the stack at offset 48 (0x30)
+		0x180A096E6: Compares {Unknown Global at 0x18329BF0F, first ten bytes are [2 192 176 4 0 225 176 4 0 192], or as chars "À° á° À"} and 0
+		0x180A096ED: Jumps to 0x180A09702 if {Unknown Global at 0x18329BF0F, first ten bytes are [2 192 176 4 0 225 176 4 0 192], or as chars "À° á° À"} != 0 ;  - This is probably a goto, jumping to 0x180A09702 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A096EF: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A096F6: Initializes runtime metadata value UnityEngine.Object
+		0x180A09702: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09709: [!] Reads field m_TargetGraphic from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'m_TargetGraphic' (type UnityEngine.UI.Graphic)}
+
+		0x180A09710: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A09717: Jumps to 0x180A0971E if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x180A0971E which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A09719: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A0971E: Compares {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} and 0
+		0x180A09725: Jumps to 0x180A0973A if {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} != 0 ;  - This is probably a goto, jumping to 0x180A0973A which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A09727: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A0972E: Initializes runtime metadata value UnityEngine.Object
+		0x180A0973A: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09741: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A09748: Jumps to 0x180A0974F if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x180A0974F which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A0974A: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A0974F: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x180A09756: Jumps to 0x180A0976B if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0 ;  - This is probably a goto, jumping to 0x180A0976B which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A09758: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A0975F: Initializes runtime metadata value UnityEngine.Object
+		0x180A0976B: [!] Compares {'m_TargetGraphic' (type UnityEngine.UI.Graphic)} and 0
+		0x180A0976E: Jumps to 0x180A095D6 if m_TargetGraphic equals 0 ;  - This is probably a goto, jumping to 0x180A095D6 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A09774: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A0977B: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A09782: Jumps to 0x180A09789 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x180A09789 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A09784: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A09789: [!] Compares {field s_Mesh, read from local {'m_TargetGraphic' (type UnityEngine.UI.Graphic)}} and 0
+		0x180A0978E: Jumps to 0x180A095D6 if m_TargetGraphic.s_Mesh equals 0 ;  - This is probably a goto, jumping to 0x180A095D6 which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A09794: [!] Compares {'instant' (function parameter, type System.Boolean)} and False
+		0x180A09797: Jumps to 0x180A0979E if instant equals False ;  - This is probably a goto, jumping to 0x180A0979E which is after end of current block @ 0x180A09451 (started at 0x180A0942E)
+
+		0x180A0979C: Jumps to 0x180A097A6 (which is an function-local jump destination)
+
+
+		Jump Destination (0x180A097A6):
+		0x180A097A6: [!] Reads field m_TargetGraphic from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'m_TargetGraphic2' (type UnityEngine.UI.Graphic)}
+
+		0x180A097AD: [!] Compares {'m_TargetGraphic2' (type UnityEngine.UI.Graphic)} and 0
+		0x180A097B0: Jumps to 0x180A097E5 (which throws a NRE) if m_TargetGraphic2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A097B2: Loads the class pointer from m_TargetGraphic2 into a constant constant72 in register r8
+		0x180A097B5: Loads a pointer to stack offset 0x30 into register rdx as new constant constant73
+		0x180A097BA: Reads local {'_toggledColors' (type UnityEngine.UI.ColorBlock)} from stack offset 48 (0x30) into register xmm0
+		0x180A097C2: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::CrossFadeColor(UnityEngine.Color,System.Single,System.Boolean,System.Boolean) specific to UnityEngine.UI.Graphic from the class pointer in r8, slot 47 (from memory offset 1072) and stores in constant constant74
+		0x180A097C9: Moves UnityEngine.UI.Graphic.CrossFadeColor (type Mono.Cecil.MethodDefinition) from register rax to the stack at offset 40 (0x28) as a new local local40
+		0x180A097CE: Moves 1 (immediate ulong value) to the stack at offset 32 as a new local local41
+		0x180A097D3: Moves _toggledColors (type UnityEngine.UI.ColorBlock) from register xmm0 to the stack at offset 48 (0x30)
+		0x180A097D9: [!] Calls managed method System.Void UnityEngine.UI.Graphic::CrossFadeColor(UnityEngine.Color,System.Single,System.Boolean,System.Boolean) on instance {'m_TargetGraphic2' (type UnityEngine.UI.Graphic)} ;  - Arguments are incorrect?
+
+		0x180A097E0: Jumps to 0x180A095D6 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x180A097E5: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void DoStateTransition(UnityEngine.UI.Selectable/SelectionState state, System.Boolean instant)
+		System.Int32 local3 = state.value__
+
+		if (this._isToggled == False)
+
+		    base.DoStateTransition()
+		    return
+		endif
+        
+
+		if (local3 == 0)
+            goto INSN_180A09526
+        endif
+
+		if (local3 == 0)
+            goto INSN_180A094FD
+        endif
+
+		if (local3 == 0)
+            goto INSN_180A094D4
+        endif
+
+		if (local3 == 0)
+            goto INSN_180A094B3
+        endif
+
+		if (local3 != 1)
+            goto INSN_180A094B3
+        endif
+		UnityEngine.Color m_DisabledColor = this._toggledColors.m_DisabledColor
+		UnityEngine.UI.AnimationTriggers _toggledAnimationTriggers = this._toggledAnimationTriggers
+		UnityEngine.UI.SpriteState _toggledSpriteState = this._toggledSpriteState
+
+		INSN_180A094B3:
+		System.String empty = System.String.Empty
+
+		INSN_180A094D4:
+		UnityEngine.Color m_PressedColor = this._toggledColors.m_PressedColor
+		UnityEngine.UI.AnimationTriggers _toggledAnimationTriggers2 = this._toggledAnimationTriggers
+
+		INSN_180A094FD:
+		UnityEngine.Color m_HighlightedColor = this._toggledColors.m_HighlightedColor
+		UnityEngine.UI.AnimationTriggers _toggledAnimationTriggers3 = this._toggledAnimationTriggers
+
+		INSN_180A09526:
+		UnityEngine.UI.ColorBlock _toggledColors = this._toggledColors
+		UnityEngine.UI.AnimationTriggers _toggledAnimationTriggers4 = this._toggledAnimationTriggers
+		System.String m_NormalTrigger = _toggledAnimationTriggers4.m_NormalTrigger
+
+		UnityEngine.GameObject gameObject = this.gameObject
+
+		System.Boolean activeInHierarchy = gameObject.activeInHierarchy
+
+		if (activeInHierarchy == False)
+            goto INSN_180A095D6
+        endif
+		UnityEngine.UI.Selectable/Transition m_Transition = this.m_Transition
+
+		if (activeInHierarchy == False)
+            goto INSN_180A096CD
+        endif
+
+		if (activeInHierarchy == False)
+            goto INSN_180A095F3
+        endif
+
+		if (m_Transition != 1)
+            goto INSN_180A095D6
+        endif
+
+		this.TriggerAnimation(m_NormalTrigger) //(String triggername)
+
+		INSN_180A095D6:
+		return
+
+		INSN_180A095F3:
+
+		UnityEngine.UI.Image image = base.image
+
+		if (image == 0)
+            goto INSN_180A095D6
+        endif
+
+		if (image.s_UVScratch == 0)
+            goto INSN_180A095D6
+        endif
+
+		UnityEngine.UI.Image image2 = base.image
+
+		image2.set_overrideSprite()
+
+		INSN_180A096CD:
+		UnityEngine.UI.Graphic m_TargetGraphic = this.m_TargetGraphic
+
+		if (m_TargetGraphic == 0)
+            goto INSN_180A095D6
+        endif
+
+		if (m_TargetGraphic.s_Mesh == 0)
+            goto INSN_180A095D6
+        endif
+
+		if (instant == False)
+            goto INSN_180A0979E
+        endif
+
+		INSN_180A0979E:
+		UnityEngine.UI.Graphic m_TargetGraphic2 = this.m_TargetGraphic
+
+		m_TargetGraphic2.CrossFadeColor()
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionAction at (0x180A0944C) is corrupt (Couldn't get arguments, or actual count (-1) is not equal to expected count (2)) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::StartColorTween(UnityEngine.Color,System.Boolean):	Method Body (x86 ASM):
+		0x180A09820 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180A09825 mov [rsp+10h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 16 | None ||| N/A | N/A
+		0x180A0982A mov [rsp+18h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 24 | None ||| N/A | N/A
+		0x180A0982F push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09830 sub rsp,40h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 64
+		0x180A09834 cmp byte ptr [18329BF0Fh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518479 | None ||| N/A | 0
+		0x180A0983B movzx esi,r8b		; DEBUG: {Register}/ESI {Register}/R8L ||| None | 0 | None ||| N/A | N/A
+		0x180A0983F mov rbp,rdx		; DEBUG: {Register}/RBP {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09842 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A09845 jne short 0000000180A0985Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09847 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A0984E call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09853 mov byte ptr [18329BF0Fh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518479 | None ||| N/A | 1
+		0x180A0985A mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09861 mov rdi,[rbx+0E0h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 224 | None ||| N/A | N/A
+		0x180A09868 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A0986F jne short 0000000180A09876h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09871 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09876 cmp byte ptr [1832A9FABh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 0
+		0x180A0987D jne short 0000000180A09892h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0987F lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09886 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0988B mov byte ptr [1832A9FABh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 1
+		0x180A09892 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09899 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A098A0 jne short 0000000180A098A7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A098A2 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A098A7 cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x180A098AE jne short 0000000180A098C3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A098B0 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A098B7 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A098BC mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x180A098C3 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A098C6 je short 0000000180A0992Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A098C8 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A098CF cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A098D6 jne short 0000000180A098DDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A098D8 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A098DD cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x180A098E2 je short 0000000180A0992Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A098E4 test sil,sil		; DEBUG: {Register}/SIL {Register}/SIL ||| None | 0 | None ||| N/A | N/A
+		0x180A098E7 je short 0000000180A098EEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A098E9 xorps xmm2,xmm2		; DEBUG: {Register}/XMM2 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180A098EC jmp short 0000000180A098F6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A098EE movss xmm2,dword ptr [rbx+158h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RBX | 344 | None ||| N/A | N/A
+		0x180A098F6 mov rcx,[rbx+0E0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 224 | None ||| N/A | N/A
+		0x180A098FD test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A09900 je short 0000000180A09943h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09902 mov r8,[rcx]		; DEBUG: {Register}/R8 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180A09905 lea rdx,[rsp+30h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A0990A movups xmm0,[rbp]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBP | 0 | None ||| N/A | N/A
+		0x180A0990E mov r9b,1		; DEBUG: {Register}/R9L {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180A09911 mov rax,[r8+430h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 1072 | None ||| N/A | N/A
+		0x180A09918 mov [rsp+28h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 40 | None ||| N/A | N/A
+		0x180A0991D mov byte ptr [rsp+20h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RSP | 32 | None ||| N/A | 1
+		0x180A09922 movaps [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180A09927 call qword ptr [r8+428h]		; DEBUG: {Memory}/None {Register}/None ||| R8 | 1064 | None ||| N/A | N/A
+		0x180A0992E mov rbx,[rsp+50h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x180A09933 mov rbp,[rsp+58h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 88 | None ||| N/A | N/A
+		0x180A09938 mov rsi,[rsp+60h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x180A0993D add rsp,40h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 64
+		0x180A09941 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09942 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09943 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09948 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::StartColorTween(UnityEngine.Color,System.Boolean):
+		End of function at 0x180A09949
+		Absolute End is at 0x180A09949
+		Identified Jump Destination addresses:
+			0x180A098F6
+		0x180A0982F: Saves the content of rdi to the stack
+		0x180A09834: Compares {Unknown Global at 0x18329BF0F, first ten bytes are [2 192 176 4 0 225 176 4 0 192], or as chars "À° á° À"} and 0
+		0x180A0983B: Copies {'instant' (function parameter, type System.Boolean)} from r8 into rsi
+		0x180A0983F: Copies {'targetColor' (function parameter, type UnityEngine.Color)} from rdx into rbp
+		0x180A09842: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rcx into rbx
+		0x180A09845: Jumps to 0x180A0985A if {Unknown Global at 0x18329BF0F, first ten bytes are [2 192 176 4 0 225 176 4 0 192], or as chars "À° á° À"} != 0
+
+		0x180A09847: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A0984E: Initializes runtime metadata value UnityEngine.Object
+		0x180A0985A: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09861: [!] Reads field m_TargetGraphic from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'m_TargetGraphic' (type UnityEngine.UI.Graphic)}
+
+		0x180A09868: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A0986F: Jumps to 0x180A09876 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180A09871: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A09876: Compares {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} and 0
+		0x180A0987D: Jumps to 0x180A09892 if {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} != 0
+
+		0x180A0987F: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09886: Initializes runtime metadata value UnityEngine.Object
+		0x180A09892: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09899: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A098A0: Jumps to 0x180A098A7 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180A098A2: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A098A7: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x180A098AE: Jumps to 0x180A098C3 if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x180A098B0: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A098B7: Initializes runtime metadata value UnityEngine.Object
+		0x180A098C3: [!] Compares {'m_TargetGraphic' (type UnityEngine.UI.Graphic)} and 0
+		0x180A098C6: Jumps to 0x180A0992E (which is an if statement's body) if m_TargetGraphic equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A098C8: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A098CF: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A098D6: Jumps to 0x180A098DD if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180A098D8: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A098DD: [!] Compares {field s_Mesh, read from local {'m_TargetGraphic' (type UnityEngine.UI.Graphic)}} and 0
+		0x180A098E2: Jumps to 0x180A0992E (which is an if statement's body) if m_TargetGraphic.s_Mesh equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A098E4: [!] Compares {'instant' (function parameter, type System.Boolean)} and False
+		0x180A098E7: Jumps to 0x180A098EE if instant equals False ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180A098EC: Jumps to 0x180A098F6 (which is an function-local jump destination)
+
+
+		End Of If-Else Block (at 0x180A098F6) where the else started at 0x180A098EE
+		0x180A098F6: [!] Reads field m_TargetGraphic from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'m_TargetGraphic2' (type UnityEngine.UI.Graphic)}
+
+		0x180A098FD: [!] Compares {'m_TargetGraphic2' (type UnityEngine.UI.Graphic)} and 0
+		0x180A09900: Jumps to 0x180A09943 (which throws a NRE) if m_TargetGraphic2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09902: Loads the class pointer from m_TargetGraphic2 into a constant constant23 in register r8
+		0x180A09905: Loads a pointer to stack offset 0x30 into register rdx as new constant constant24
+		0x180A0990A: Loads the class pointer from targetColor into a constant constant25 in register xmm0
+		0x180A0990E: [!] Writes the constant 0x1 into operand 1 (type UInt64) in register r9
+		0x180A09911: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::CrossFadeColor(UnityEngine.Color,System.Single,System.Boolean,System.Boolean) specific to UnityEngine.UI.Graphic from the class pointer in r8, slot 47 (from memory offset 1072) and stores in constant constant27
+		0x180A09918: Moves UnityEngine.UI.Graphic.CrossFadeColor (type Mono.Cecil.MethodDefinition) from register rax to the stack at offset 40 (0x28) as a new local local7
+		0x180A0991D: Moves 1 (immediate ulong value) to the stack at offset 32 as a new local local8
+		0x180A09922: Moves constant25 (type Cpp2IL.Core.Analysis.Il2CppClassIdentifier) from register xmm0 to the stack at offset 48 (0x30) as a new local local9
+		0x180A09927: [!] Calls managed method System.Void UnityEngine.UI.Graphic::CrossFadeColor(UnityEngine.Color,System.Single,System.Boolean,System.Boolean) on instance {'m_TargetGraphic2' (type UnityEngine.UI.Graphic)} ;  - Arguments are incorrect?
+
+		0x180A0992E: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register rbx as new constant constant28
+		0x180A09933: Reads unknown value in stack, offset 88 (0x58) and stores the pointer in register rbp as new constant constant29
+		0x180A09938: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register rsi as new constant constant30
+		0x180A09942: [!] Returns from the function
+
+		0x180A09943: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void StartColorTween(UnityEngine.Color targetColor, System.Boolean instant)
+		UnityEngine.UI.Graphic m_TargetGraphic = this.m_TargetGraphic
+
+		if (m_TargetGraphic != 0)
+
+		    if (m_TargetGraphic.s_Mesh != 0)
+
+		        if (instant != False)
+		        else
+		        endif
+                
+		        UnityEngine.UI.Graphic m_TargetGraphic2 = this.m_TargetGraphic
+
+		        m_TargetGraphic2.CrossFadeColor()
+		    endif
+            
+		    return
+		    throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallVirtualMethodAction at (0x180A09927) is corrupt (Couldn't get arguments, or actual count (-1) is not equal to expected count (4)) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::DoSpriteSwap(UnityEngine.Sprite):	Method Body (x86 ASM):
+		0x180A09950 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180A09955 mov [rsp+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 16 | None ||| N/A | N/A
+		0x180A0995A push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A0995B sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A0995F cmp byte ptr [18329BF10h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518480 | None ||| N/A | 0
+		0x180A09966 mov rsi,rdx		; DEBUG: {Register}/RSI {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09969 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A0996C jne short 0000000180A09981h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0996E lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09975 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0997A mov byte ptr [18329BF10h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518480 | None ||| N/A | 1
+		0x180A09981 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09983 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A09986 call 00000001825B46E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0998B mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09992 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09995 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A0999C jne short 0000000180A099A3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0999E call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A099A3 cmp byte ptr [1832A9FABh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 0
+		0x180A099AA jne short 0000000180A099BFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A099AC lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A099B3 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A099B8 mov byte ptr [1832A9FABh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 1
+		0x180A099BF mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A099C6 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A099CD jne short 0000000180A099D4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A099CF call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A099D4 cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x180A099DB jne short 0000000180A099F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A099DD lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A099E4 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A099E9 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x180A099F0 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A099F3 je short 0000000180A09A2Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A099F5 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A099FC cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A09A03 jne short 0000000180A09A0Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09A05 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09A0A cmp qword ptr [rbx+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RBX | 16 | None ||| N/A | 0
+		0x180A09A0F je short 0000000180A09A2Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09A11 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09A13 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A09A16 call 00000001825B46E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09A1B test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09A1E je short 0000000180A09A3Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09A20 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A09A23 mov rdx,rsi		; DEBUG: {Register}/RDX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A09A26 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09A29 call 0000000182581C20h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09A2E mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A09A33 mov rsi,[rsp+38h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180A09A38 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A09A3C pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09A3D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09A3E call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09A43 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::DoSpriteSwap(UnityEngine.Sprite):
+		End of function at 0x180A09A44
+		Absolute End is at 0x180A09A44
+		Identified Jump Destination addresses:
+
+		0x180A0995A: Saves the content of rdi to the stack
+		0x180A0995F: Compares {Unknown Global at 0x18329BF10, first ten bytes are [192 176 4 0 225 176 4 0 192 104], or as chars "À° á° Àh"} and 0
+		0x180A09966: Copies {'newSprite' (function parameter, type UnityEngine.Sprite)} from rdx into rsi
+		0x180A09969: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rcx into rdi
+		0x180A0996C: Jumps to 0x180A09981 if {Unknown Global at 0x18329BF10, first ten bytes are [192 176 4 0 225 176 4 0 192 104], or as chars "À° á° Àh"} != 0
+
+		0x180A0996E: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09975: Initializes runtime metadata value UnityEngine.Object
+		0x180A09983: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rdi into rcx
+		0x180A09986: [!] Calls managed method UnityEngine.UI.Image UnityEngine.UI.Selectable::get_image() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'image' (type UnityEngine.UI.Image)}
+
+		0x180A0998B: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09992: Copies {'image' (type UnityEngine.UI.Image)} from rax into rbx
+		0x180A09995: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A0999C: Jumps to 0x180A099A3 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180A0999E: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A099A3: Compares {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} and 0
+		0x180A099AA: Jumps to 0x180A099BF if {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} != 0
+
+		0x180A099AC: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A099B3: Initializes runtime metadata value UnityEngine.Object
+		0x180A099BF: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A099C6: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A099CD: Jumps to 0x180A099D4 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180A099CF: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A099D4: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x180A099DB: Jumps to 0x180A099F0 if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x180A099DD: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A099E4: Initializes runtime metadata value UnityEngine.Object
+		0x180A099F0: [!] Compares {'image' (type UnityEngine.UI.Image)} and 0
+		0x180A099F3: Jumps to 0x180A09A2E (which is an if statement's body) if image equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A099F5: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A099FC: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A09A03: Jumps to 0x180A09A0A if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180A09A05: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A09A0A: [!] Compares {field s_UVScratch, read from local {'image' (type UnityEngine.UI.Image)}} and 0
+		0x180A09A0F: Jumps to 0x180A09A2E (which is an if statement's body) if image.s_UVScratch equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A09A13: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rdi into rcx
+		0x180A09A16: [!] Calls managed method UnityEngine.UI.Image UnityEngine.UI.Selectable::get_image() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'image2' (type UnityEngine.UI.Image)}
+
+		0x180A09A1B: [!] Compares {'image2' (type UnityEngine.UI.Image)} and 0
+		0x180A09A1E: Jumps to 0x180A09A3E (which throws a NRE) if image2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09A23: Copies {'newSprite' (function parameter, type UnityEngine.Sprite)} from rsi into rdx
+		0x180A09A26: Copies {'image2' (type UnityEngine.UI.Image)} from rax into rcx
+		0x180A09A29: [!] Calls managed method System.Void UnityEngine.UI.Image::set_overrideSprite(UnityEngine.Sprite) on instance {'image2' (type UnityEngine.UI.Image)} with arguments [{'newSprite' (function parameter, type UnityEngine.Sprite)}]
+
+		0x180A09A2E: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant22
+		0x180A09A33: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rsi as new constant constant23
+		0x180A09A3D: [!] Returns from the function
+
+		0x180A09A3E: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void DoSpriteSwap(UnityEngine.Sprite newSprite)
+
+		UnityEngine.UI.Image image = base.image
+
+		if (image != 0)
+
+		    if (image.s_UVScratch != 0)
+
+		        UnityEngine.UI.Image image2 = base.image
+
+		        image2.overrideSprite = newSprite
+		    endif
+            
+		    return
+		    throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call UnityEngine.UI.Image UnityEngine.UI.Selectable::get_image()
+	IL_0006: stloc.0
+	IL_0007: ldloc.0
+	IL_0008: ldc.i4.0
+	IL_0009: beq.s IL_0022
+	IL_000b: ldloc.0
+	IL_000c: ldfld UnityEngine.Vector2[] UnityEngine.UI.Image::s_UVScratch
+	IL_0011: ldc.i4.0
+	IL_0012: conv.i8
+	IL_0013: conv.u8
+	IL_0014: beq.s IL_0022
+	IL_0016: ldarg.0
+	IL_0017: call UnityEngine.UI.Image UnityEngine.UI.Selectable::get_image()
+	IL_001c: ldarg.1
+	IL_001d: call System.Void UnityEngine.UI.Image::set_overrideSprite(UnityEngine.Sprite)
+	IL_0022: ret
+	IL_0023: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0028: throw
+	
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::TriggerAnimation(System.String):	Method Body (x86 ASM):
+		0x180A09A50 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180A09A55 mov [rsp+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 16 | None ||| N/A | N/A
+		0x180A09A5A push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09A5B sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A09A5F cmp byte ptr [18329BF11h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518481 | None ||| N/A | 0
+		0x180A09A66 mov rsi,rdx		; DEBUG: {Register}/RSI {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09A69 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A09A6C jne short 0000000180A09A81h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09A6E lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09A75 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09A7A mov byte ptr [18329BF11h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518481 | None ||| N/A | 1
+		0x180A09A81 cmp byte ptr [1832AC0A4h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584420 | None ||| N/A | 0
+		0x180A09A88 jne short 0000000180A09A9Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09A8A lea rcx,[18310AEE8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493875944 | None ||| N/A | N/A
+		0x180A09A91 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09A96 mov byte ptr [1832AC0A4h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584420 | None ||| N/A | 1
+		0x180A09A9D mov rdx,[18310AEE8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493875944 | None ||| N/A | N/A
+		0x180A09AA4 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A09AA7 call 0000000180D40810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09AAC mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09AB3 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09AB6 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A09ABD jne short 0000000180A09AC4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09ABF call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09AC4 cmp byte ptr [1832A9FABh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 0
+		0x180A09ACB jne short 0000000180A09AE0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09ACD lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09AD4 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09AD9 mov byte ptr [1832A9FABh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 1
+		0x180A09AE0 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09AE7 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A09AEE jne short 0000000180A09AF5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09AF0 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09AF5 cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x180A09AFC jne short 0000000180A09B11h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09AFE lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09B05 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09B0A mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x180A09B11 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A09B14 je near ptr 0000000180A09D80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09B1A mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09B21 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A09B28 jne short 0000000180A09B2Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09B2A call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09B2F cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x180A09B34 je near ptr 0000000180A09D80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09B3A cmp byte ptr [1832AC0A4h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584420 | None ||| N/A | 0
+		0x180A09B41 jne short 0000000180A09B56h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09B43 lea rcx,[18310AEE8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493875944 | None ||| N/A | N/A
+		0x180A09B4A call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09B4F mov byte ptr [1832AC0A4h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584420 | None ||| N/A | 1
+		0x180A09B56 mov rdx,[18310AEE8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493875944 | None ||| N/A | N/A
+		0x180A09B5D mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A09B60 call 0000000180D40810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09B65 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09B68 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09B6B je near ptr 0000000180A09D90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09B71 mov rax,[1832A9D30h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575344 | None ||| N/A | N/A
+		0x180A09B78 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09B7B jne short 0000000180A09B99h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09B7D lea rcx,[182979780h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485940096 | None ||| N/A | N/A
+		0x180A09B84 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09B89 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09B8C je near ptr 0000000180A09D96h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09B92 mov [1832A9D30h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575344 | None ||| N/A | N/A
+		0x180A09B99 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A09B9C call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09B9E test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A09BA0 je near ptr 0000000180A09D80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09BA6 cmp byte ptr [1832AC0A4h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584420 | None ||| N/A | 0
+		0x180A09BAD jne short 0000000180A09BC2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09BAF lea rcx,[18310AEE8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493875944 | None ||| N/A | N/A
+		0x180A09BB6 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09BBB mov byte ptr [1832AC0A4h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584420 | None ||| N/A | 1
+		0x180A09BC2 mov rdx,[18310AEE8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493875944 | None ||| N/A | N/A
+		0x180A09BC9 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A09BCC call 0000000180D40810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09BD1 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09BD4 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09BD7 je near ptr 0000000180A09D90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09BDD mov rax,[1832A8568h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495569256 | None ||| N/A | N/A
+		0x180A09BE4 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09BE7 jne short 0000000180A09C05h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09BE9 lea rcx,[18296C958h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485887320 | None ||| N/A | N/A
+		0x180A09BF0 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09BF5 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09BF8 je near ptr 0000000180A09DADh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09BFE mov [1832A8568h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495569256 | None ||| N/A | N/A
+		0x180A09C05 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A09C08 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09C0A mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09C11 mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09C14 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A09C1B jne short 0000000180A09C22h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09C1D call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09C22 cmp byte ptr [1832A9FABh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 0
+		0x180A09C29 jne short 0000000180A09C3Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09C2B lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09C32 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09C37 mov byte ptr [1832A9FABh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 1
+		0x180A09C3E mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09C45 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A09C4C jne short 0000000180A09C53h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09C4E call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09C53 cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x180A09C5A jne short 0000000180A09C6Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09C5C lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09C63 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09C68 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x180A09C6F test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A09C72 je near ptr 0000000180A09D80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09C78 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180A09C7F cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A09C86 jne short 0000000180A09C8Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09C88 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09C8D cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x180A09C92 je near ptr 0000000180A09D80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09C98 test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A09C9B je near ptr 0000000180A09D80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09CA1 cmp dword ptr [rsi+10h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RSI | 16 | None ||| N/A | 0
+		0x180A09CA5 jbe near ptr 0000000180A09D80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09CAB xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09CAD mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A09CB0 call 00000001825B4770h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09CB5 mov rdx,[rbx+180h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 384 | None ||| N/A | N/A
+		0x180A09CBC test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09CBF je near ptr 0000000180A09D90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09CC5 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09CC8 je near ptr 0000000180A09D90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09CCE mov rdx,[rdx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x180A09CD2 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A09CD5 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09CD8 call 0000000182440750h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09CDD xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09CDF mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A09CE2 call 00000001825B4770h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09CE7 mov rdx,[rbx+180h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 384 | None ||| N/A | N/A
+		0x180A09CEE test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09CF1 je near ptr 0000000180A09D90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09CF7 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09CFA je near ptr 0000000180A09D90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D00 mov rdx,[rdx+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 32 | None ||| N/A | N/A
+		0x180A09D04 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A09D07 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D0A call 0000000182440750h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D0F xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D11 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D14 call 00000001825B4770h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D19 mov rdx,[rbx+180h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 384 | None ||| N/A | N/A
+		0x180A09D20 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D23 je short 0000000180A09D90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D25 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D28 je short 0000000180A09D90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D2A mov rdx,[rdx+18h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 24 | None ||| N/A | N/A
+		0x180A09D2E xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A09D31 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D34 call 0000000182440750h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D39 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D3B mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D3E call 00000001825B4770h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D43 mov rdx,[rbx+180h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 384 | None ||| N/A | N/A
+		0x180A09D4A test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D4D je short 0000000180A09D90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D4F test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D52 je short 0000000180A09D90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D54 mov rdx,[rdx+30h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 48 | None ||| N/A | N/A
+		0x180A09D58 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A09D5B mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D5E call 0000000182440750h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D63 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D65 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D68 call 00000001825B4770h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D6D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D70 je short 0000000180A09D90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D72 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A09D75 mov rdx,rsi		; DEBUG: {Register}/RDX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180A09D78 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09D7B call 0000000182440690h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D80 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A09D85 mov rsi,[rsp+38h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180A09D8A add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A09D8E pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09D8F ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09D90 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09D95 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::TriggerAnimation(System.String):
+		End of function at 0x180A09D96
+		Absolute End is at 0x180A09D96
+		Identified Jump Destination addresses:
+
+		0x180A09A5A: Saves the content of rdi to the stack
+		0x180A09A5F: Compares {Unknown Global at 0x18329BF11, first ten bytes are [176 4 0 225 176 4 0 192 104 234], or as chars "° á° Àhê"} and 0
+		0x180A09A66: Copies {'triggername' (function parameter, type System.String)} from rdx into rsi
+		0x180A09A69: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rcx into rbx
+		0x180A09A6C: Jumps to 0x180A09A81 if {Unknown Global at 0x18329BF11, first ten bytes are [176 4 0 225 176 4 0 192 104 234], or as chars "° á° Àhê"} != 0
+
+		0x180A09A6E: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09A75: Initializes runtime metadata value UnityEngine.Object
+		0x180A09A81: Compares {Unknown Global at 0x1832AC0A4, first ten bytes are [240 86 16 0 71 87 16 0 60 105], or as chars "ðV GW <i"} and 0
+		0x180A09A88: Jumps to 0x180A09A9D if {Unknown Global at 0x1832AC0A4, first ten bytes are [240 86 16 0 71 87 16 0 60 105], or as chars "ðV GW <i"} != 0
+
+		0x180A09A8A: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.Animator>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180A09A91: Initializes runtime metadata value 
+		0x180A09A9D: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.Animator>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180A09AA4: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A09AA7: [!] Calls managed method T UnityEngine.Component::GetComponent<UnityEngine.Animator>() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'component' (type UnityEngine.Animator)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180A09AAC: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09AB3: Copies {'component' (type UnityEngine.Animator)} from rax into rdi
+		0x180A09AB6: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A09ABD: Jumps to 0x180A09AC4 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180A09ABF: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A09AC4: Compares {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} and 0
+		0x180A09ACB: Jumps to 0x180A09AE0 if {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} != 0
+
+		0x180A09ACD: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09AD4: Initializes runtime metadata value UnityEngine.Object
+		0x180A09AE0: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09AE7: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A09AEE: Jumps to 0x180A09AF5 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180A09AF0: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A09AF5: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x180A09AFC: Jumps to 0x180A09B11 if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x180A09AFE: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09B05: Initializes runtime metadata value UnityEngine.Object
+		0x180A09B11: [!] Compares {'component' (type UnityEngine.Animator)} and 0
+		0x180A09B14: Jumps to 0x180A09D80 (which is an if statement's body) if component equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A09B1A: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09B21: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A09B28: Jumps to 0x180A09B2F if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180A09B2A: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A09B2F: [!] Compares  and 0
+		0x180A09B34: Jumps to 0x180A09D80 (which is an if statement's body) if  equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A09B3A: Compares {Unknown Global at 0x1832AC0A4, first ten bytes are [240 86 16 0 71 87 16 0 60 105], or as chars "ðV GW <i"} and 0
+		0x180A09B41: Jumps to 0x180A09B56 if {Unknown Global at 0x1832AC0A4, first ten bytes are [240 86 16 0 71 87 16 0 60 105], or as chars "ðV GW <i"} != 0
+
+		0x180A09B43: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.Animator>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180A09B4A: Initializes runtime metadata value 
+		0x180A09B56: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.Animator>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180A09B5D: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A09B60: [!] Calls managed method T UnityEngine.Component::GetComponent<UnityEngine.Animator>() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'component2' (type UnityEngine.Animator)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180A09B65: Copies {'component2' (type UnityEngine.Animator)} from rax into rdi
+		0x180A09B68: [!] Compares {'component2' (type UnityEngine.Animator)} and 0
+		0x180A09B6B: Jumps to 0x180A09D90 (which throws a NRE) if component2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09B71: Loads string "Ü/ë@" into register rax as constant UnityEngine.Behaviour.get_isActiveAndEnabled
+		0x180A09B78: Compares UnityEngine.Behaviour.get_isActiveAndEnabled and 0
+		0x180A09B7B: Jumps to 0x180A09B99 if UnityEngine.Behaviour.get_isActiveAndEnabled != 0
+
+		0x180A09B7D: Loads string "UnityEngine.Behaviour::get_isActiveAndEnabled()" into register rcx as constant {'constant32' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A09B84: Looks up unity ICall by name "UnityEngine.Behaviour::get_isActiveAndEnabled()" which resolves to System.Boolean UnityEngine.Behaviour::get_isActiveAndEnabled()
+		0x180A09B89: Compares UnityEngine.Behaviour.get_isActiveAndEnabled and 0
+		0x180A09B8C: Jumps to 0x180A09D96 if UnityEngine.Behaviour.get_isActiveAndEnabled equals 0 ;  - This is probably a goto, jumping to 0x180A09D96 which is after end of current block @ 0x180A09D80 (started at 0x180A09B3A)
+
+		0x180A09B99: Copies {'component2' (type UnityEngine.Animator)} from rdi into rcx
+		0x180A09B9C: [!] Calls managed method System.Boolean UnityEngine.Behaviour::get_isActiveAndEnabled() on instance {'component2' (type UnityEngine.Animator)} and stores the result in {'isActiveAndEnabled' (type System.Boolean)}
+
+		0x180A09B9E: [!] Compares {'isActiveAndEnabled' (type System.Boolean)} and False
+		0x180A09BA0: Jumps to 0x180A09D80 (which is an if statement's body) if isActiveAndEnabled equals False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A09BA6: Compares {Unknown Global at 0x1832AC0A4, first ten bytes are [240 86 16 0 71 87 16 0 60 105], or as chars "ðV GW <i"} and 0
+		0x180A09BAD: Jumps to 0x180A09BC2 if {Unknown Global at 0x1832AC0A4, first ten bytes are [240 86 16 0 71 87 16 0 60 105], or as chars "ðV GW <i"} != 0
+
+		0x180A09BAF: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.Animator>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180A09BB6: Initializes runtime metadata value 
+		0x180A09BC2: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.Animator>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180A09BC9: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A09BCC: [!] Calls managed method T UnityEngine.Component::GetComponent<UnityEngine.Animator>() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'component3' (type UnityEngine.Animator)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180A09BD1: Copies {'component3' (type UnityEngine.Animator)} from rax into rdi
+		0x180A09BD4: [!] Compares {'component3' (type UnityEngine.Animator)} and 0
+		0x180A09BD7: Jumps to 0x180A09D90 (which throws a NRE) if component3 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09BDD: Reads {Unknown Global at 0x1832A8568, first ten bytes are [23 121 13 0 192 95 244 2 23 121], or as chars "y À_ôy"} into register rax as a constant constant40
+		0x180A09BE4: Compares UnityEngine.Animator.get_runtimeAnimatorController and 0
+		0x180A09BE7: Jumps to 0x180A09C05 if UnityEngine.Animator.get_runtimeAnimatorController != 0
+
+		0x180A09BE9: Loads string "UnityEngine.Animator::get_runtimeAnimatorController()" into register rcx as constant {'constant42' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A09BF0: Looks up unity ICall by name "UnityEngine.Animator::get_runtimeAnimatorController()" which resolves to UnityEngine.RuntimeAnimatorController UnityEngine.Animator::get_runtimeAnimatorController()
+		0x180A09BF5: Compares UnityEngine.Animator.get_runtimeAnimatorController and 0
+		0x180A09BF8: Jumps to 0x180A09DAD if UnityEngine.Animator.get_runtimeAnimatorController equals 0 ;  - This is probably a goto, jumping to 0x180A09DAD which is after end of current block @ 0x180A09D80 (started at 0x180A09BA6)
+
+		0x180A09C05: Copies {'component3' (type UnityEngine.Animator)} from rdi into rcx
+		0x180A09C08: [!] Calls managed method UnityEngine.RuntimeAnimatorController UnityEngine.Animator::get_runtimeAnimatorController() on instance {'component3' (type UnityEngine.Animator)} and stores the result in {'runtimeAnimatorController' (type UnityEngine.RuntimeAnimatorController)}
+
+		0x180A09C0A: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09C11: Copies {'runtimeAnimatorController' (type UnityEngine.RuntimeAnimatorController)} from rax into rdi
+		0x180A09C14: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A09C1B: Jumps to 0x180A09C22 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180A09C1D: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A09C22: Compares {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} and 0
+		0x180A09C29: Jumps to 0x180A09C3E if {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} != 0
+
+		0x180A09C2B: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09C32: Initializes runtime metadata value UnityEngine.Object
+		0x180A09C3E: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09C45: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A09C4C: Jumps to 0x180A09C53 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180A09C4E: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A09C53: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x180A09C5A: Jumps to 0x180A09C6F if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x180A09C5C: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09C63: Initializes runtime metadata value UnityEngine.Object
+		0x180A09C6F: [!] Compares {'runtimeAnimatorController' (type UnityEngine.RuntimeAnimatorController)} and 0
+		0x180A09C72: Jumps to 0x180A09D80 (which is an if statement's body) if runtimeAnimatorController equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A09C78: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180A09C7F: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180A09C86: Jumps to 0x180A09C8D if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180A09C88: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180A09C8D: [!] Compares  and 0
+		0x180A09C92: Jumps to 0x180A09D80 (which is an if statement's body) if  equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A09C98: [!] Compares {'triggername' (function parameter, type System.String)} and 0
+		0x180A09C9B: Jumps to 0x180A09D80 (which is an if statement's body) if triggername equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A09CA1: [!] Compares {field _stringLength, read from local {'triggername' (function parameter, type System.String)}} and 0
+		0x180A09CA5: Jumps to 0x180A09D80 (which is an if statement's body) if {field _stringLength, read from local {'triggername' (function parameter, type System.String)}} is less than or equal to 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180A09CAD: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A09CB0: [!] Calls managed method UnityEngine.Animator UnityEngine.UI.Selectable::get_animator() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'animator' (type UnityEngine.Animator)}
+
+		0x180A09CB5: [!] Reads field _toggledAnimationTriggers from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'_toggledAnimationTriggers' (type UnityEngine.UI.AnimationTriggers)}
+
+		0x180A09CBC: [!] Compares {'_toggledAnimationTriggers' (type UnityEngine.UI.AnimationTriggers)} and 0
+		0x180A09CBF: Jumps to 0x180A09D90 (which throws a NRE) if _toggledAnimationTriggers equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09CC5: [!] Compares {'animator' (type UnityEngine.Animator)} and 0
+		0x180A09CC8: Jumps to 0x180A09D90 (which throws a NRE) if animator equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09CCE: [!] Reads field m_NormalTrigger from {'_toggledAnimationTriggers' (type UnityEngine.UI.AnimationTriggers)} and stores in a new local {'m_NormalTrigger' (type System.String)}
+
+		0x180A09CD5: Copies {'animator' (type UnityEngine.Animator)} from rax into rcx
+		0x180A09CD8: [!] Calls managed method System.Void UnityEngine.Animator::ResetTrigger(System.String) on instance {'animator' (type UnityEngine.Animator)} with arguments [{'m_NormalTrigger' (type System.String)}]
+
+		0x180A09CDF: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A09CE2: [!] Calls managed method UnityEngine.Animator UnityEngine.UI.Selectable::get_animator() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'animator2' (type UnityEngine.Animator)}
+
+		0x180A09CE7: [!] Reads field _toggledAnimationTriggers from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'_toggledAnimationTriggers2' (type UnityEngine.UI.AnimationTriggers)}
+
+		0x180A09CEE: [!] Compares {'_toggledAnimationTriggers2' (type UnityEngine.UI.AnimationTriggers)} and 0
+		0x180A09CF1: Jumps to 0x180A09D90 (which throws a NRE) if _toggledAnimationTriggers2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09CF7: [!] Compares {'animator2' (type UnityEngine.Animator)} and 0
+		0x180A09CFA: Jumps to 0x180A09D90 (which throws a NRE) if animator2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09D00: [!] Reads field m_PressedTrigger from {'_toggledAnimationTriggers2' (type UnityEngine.UI.AnimationTriggers)} and stores in a new local {'m_PressedTrigger' (type System.String)}
+
+		0x180A09D07: Copies {'animator2' (type UnityEngine.Animator)} from rax into rcx
+		0x180A09D0A: [!] Calls managed method System.Void UnityEngine.Animator::ResetTrigger(System.String) on instance {'animator2' (type UnityEngine.Animator)} with arguments [{'m_PressedTrigger' (type System.String)}]
+
+		0x180A09D11: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A09D14: [!] Calls managed method UnityEngine.Animator UnityEngine.UI.Selectable::get_animator() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'animator3' (type UnityEngine.Animator)}
+
+		0x180A09D19: [!] Reads field _toggledAnimationTriggers from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'_toggledAnimationTriggers3' (type UnityEngine.UI.AnimationTriggers)}
+
+		0x180A09D20: [!] Compares {'_toggledAnimationTriggers3' (type UnityEngine.UI.AnimationTriggers)} and 0
+		0x180A09D23: Jumps to 0x180A09D90 (which throws a NRE) if _toggledAnimationTriggers3 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09D25: [!] Compares {'animator3' (type UnityEngine.Animator)} and 0
+		0x180A09D28: Jumps to 0x180A09D90 (which throws a NRE) if animator3 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09D2A: [!] Reads field m_HighlightedTrigger from {'_toggledAnimationTriggers3' (type UnityEngine.UI.AnimationTriggers)} and stores in a new local {'m_HighlightedTrigger' (type System.String)}
+
+		0x180A09D31: Copies {'animator3' (type UnityEngine.Animator)} from rax into rcx
+		0x180A09D34: [!] Calls managed method System.Void UnityEngine.Animator::ResetTrigger(System.String) on instance {'animator3' (type UnityEngine.Animator)} with arguments [{'m_HighlightedTrigger' (type System.String)}]
+
+		0x180A09D3B: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A09D3E: [!] Calls managed method UnityEngine.Animator UnityEngine.UI.Selectable::get_animator() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'animator4' (type UnityEngine.Animator)}
+
+		0x180A09D43: [!] Reads field _toggledAnimationTriggers from {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores in a new local {'_toggledAnimationTriggers4' (type UnityEngine.UI.AnimationTriggers)}
+
+		0x180A09D4A: [!] Compares {'_toggledAnimationTriggers4' (type UnityEngine.UI.AnimationTriggers)} and 0
+		0x180A09D4D: Jumps to 0x180A09D90 (which throws a NRE) if _toggledAnimationTriggers4 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09D4F: [!] Compares {'animator4' (type UnityEngine.Animator)} and 0
+		0x180A09D52: Jumps to 0x180A09D90 (which throws a NRE) if animator4 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09D54: [!] Reads field m_DisabledTrigger from {'_toggledAnimationTriggers4' (type UnityEngine.UI.AnimationTriggers)} and stores in a new local {'m_DisabledTrigger' (type System.String)}
+
+		0x180A09D5B: Copies {'animator4' (type UnityEngine.Animator)} from rax into rcx
+		0x180A09D5E: [!] Calls managed method System.Void UnityEngine.Animator::ResetTrigger(System.String) on instance {'animator4' (type UnityEngine.Animator)} with arguments [{'m_DisabledTrigger' (type System.String)}]
+
+		0x180A09D65: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A09D68: [!] Calls managed method UnityEngine.Animator UnityEngine.UI.Selectable::get_animator() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'animator5' (type UnityEngine.Animator)}
+
+		0x180A09D6D: [!] Compares {'animator5' (type UnityEngine.Animator)} and 0
+		0x180A09D70: Jumps to 0x180A09D90 (which throws a NRE) if animator5 equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09D75: Copies {'triggername' (function parameter, type System.String)} from rsi into rdx
+		0x180A09D78: Copies {'animator5' (type UnityEngine.Animator)} from rax into rcx
+		0x180A09D7B: [!] Calls managed method System.Void UnityEngine.Animator::SetTrigger(System.String) on instance {'animator5' (type UnityEngine.Animator)} with arguments [{'triggername' (function parameter, type System.String)}]
+
+		0x180A09D80: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant72
+		0x180A09D85: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rsi as new constant constant73
+		0x180A09D8F: [!] Returns from the function
+
+		0x180A09D90: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void TriggerAnimation(System.String triggername)
+
+		UnityEngine.Animator component = base.GetComponent<UnityEngine.Animator>()
+
+		if (component != 0)
+
+		    if ( != 0)
+
+		        UnityEngine.Animator component2 = base.GetComponent<UnityEngine.Animator>()
+
+		        System.Boolean isActiveAndEnabled = component2.isActiveAndEnabled
+
+		        if (isActiveAndEnabled != False)
+
+		            UnityEngine.Animator component3 = base.GetComponent<UnityEngine.Animator>()
+
+		            UnityEngine.RuntimeAnimatorController runtimeAnimatorController = component3.runtimeAnimatorController
+
+		            if (runtimeAnimatorController != 0)
+
+		                if ( != 0)
+
+		                    if (triggername != 0)
+
+		                        if (triggername._stringLength > 0)
+
+		                            UnityEngine.Animator animator = base.animator
+		                            UnityEngine.UI.AnimationTriggers _toggledAnimationTriggers = this._toggledAnimationTriggers
+		                            System.String m_NormalTrigger = _toggledAnimationTriggers.m_NormalTrigger
+
+		                            animator.ResetTrigger(m_NormalTrigger) //(String name)
+
+		                            UnityEngine.Animator animator2 = base.animator
+		                            UnityEngine.UI.AnimationTriggers _toggledAnimationTriggers2 = this._toggledAnimationTriggers
+		                            System.String m_PressedTrigger = _toggledAnimationTriggers2.m_PressedTrigger
+
+		                            animator2.ResetTrigger(m_PressedTrigger) //(String name)
+
+		                            UnityEngine.Animator animator3 = base.animator
+		                            UnityEngine.UI.AnimationTriggers _toggledAnimationTriggers3 = this._toggledAnimationTriggers
+		                            System.String m_HighlightedTrigger = _toggledAnimationTriggers3.m_HighlightedTrigger
+
+		                            animator3.ResetTrigger(m_HighlightedTrigger) //(String name)
+
+		                            UnityEngine.Animator animator4 = base.animator
+		                            UnityEngine.UI.AnimationTriggers _toggledAnimationTriggers4 = this._toggledAnimationTriggers
+		                            System.String m_DisabledTrigger = _toggledAnimationTriggers4.m_DisabledTrigger
+
+		                            animator4.ResetTrigger(m_DisabledTrigger) //(String name)
+
+		                            UnityEngine.Animator animator5 = base.animator
+
+		                            animator5.SetTrigger(triggername) //(String name)
+		                        endif
+                                
+		                        return
+		                        throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.JumpIfZeroOrNullAction at (0x180A09B34) is corrupt (One of the arguments is null) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::OnPointerDown(UnityEngine.EventSystems.PointerEventData):	Method Body (x86 ASM):
+		0x180A09DD0 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A09DD3 jmp near ptr 00000001825B70D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09DD8 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::OnPointerDown(UnityEngine.EventSystems.PointerEventData):
+		End of function at 0x180A09DD9
+		Absolute End is at 0x180A09DD9
+		Identified Jump Destination addresses:
+
+		0x180A09DD3: [!] Calls managed method System.Void UnityEngine.UI.Selectable::OnPointerDown(UnityEngine.EventSystems.PointerEventData) on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} with arguments [{'eventData' (function parameter, type UnityEngine.EventSystems.PointerEventData)}]
+
+		0x180A09DD3: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void OnPointerDown(UnityEngine.EventSystems.PointerEventData eventData)
+
+		base.OnPointerDown(eventData) //(PointerEventData eventData)
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldarg.1
+	IL_0002: call System.Void UnityEngine.UI.Selectable::OnPointerDown(UnityEngine.EventSystems.PointerEventData)
+	IL_0007: ret
+	
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::OnPointerUp(UnityEngine.EventSystems.PointerEventData):	Method Body (x86 ASM):
+		0x180A09DE0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180A09DE5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09DE6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A09DEA cmp byte ptr [rcx+100h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 256 | None ||| N/A | 0
+		0x180A09DF1 mov rdi,rdx		; DEBUG: {Register}/RDI {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09DF4 mov rdx,[rcx]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180A09DF7 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A09DFA sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09DFD mov [rcx+100h],al		; DEBUG: {Memory}/None {Register}/AL ||| RCX | 256 | None ||| N/A | N/A
+		0x180A09E03 mov rax,[rdx+2B8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 696 | None ||| N/A | N/A
+		0x180A09E0A mov rdx,[rdx+2C0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 704 | None ||| N/A | N/A
+		0x180A09E11 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09E13 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A09E15 je short 0000000180A09E44h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09E17 cmp byte ptr [rbx+0F1h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 241 | None ||| N/A | 0
+		0x180A09E1E jne short 0000000180A09E3Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09E20 cmp byte ptr [rbx+0F2h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 242 | None ||| N/A | 0
+		0x180A09E27 jne short 0000000180A09E36h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09E29 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09E2B cmp [rbx+0F0h],dl		; DEBUG: {Memory}/None {Register}/DL ||| RBX | 240 | None ||| N/A | N/A
+		0x180A09E31 setne dl		; DEBUG: {Register}/DL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09E34 jmp short 0000000180A09E49h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09E36 mov edx,3		; DEBUG: {Register}/EDX {Immediate32}/None ||| None | 0 | None ||| N/A | 3
+		0x180A09E3B jmp short 0000000180A09E49h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09E3D mov edx,2		; DEBUG: {Register}/EDX {Immediate32}/None ||| None | 0 | None ||| N/A | 2
+		0x180A09E42 jmp short 0000000180A09E49h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09E44 mov edx,4		; DEBUG: {Register}/EDX {Immediate32}/None ||| None | 0 | None ||| N/A | 4
+		0x180A09E49 mov rax,[rbx]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x180A09E4C xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A09E4F mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A09E52 mov r9,[rax+2E0h]		; DEBUG: {Register}/R9 {Memory}/None ||| RAX | 736 | None ||| N/A | N/A
+		0x180A09E59 call qword ptr [rax+2D8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 728 | None ||| N/A | N/A
+		0x180A09E5F test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A09E62 je short 0000000180A09E89h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09E64 cmp dword ptr [rdi+144h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RDI | 324 | None ||| N/A | 0
+		0x180A09E6B jne short 0000000180A09E7Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09E6D xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09E6F mov byte ptr [rbx+0F1h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 241 | None ||| N/A | 0
+		0x180A09E76 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180A09E79 call 00000001825B7060h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09E7E mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A09E83 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A09E87 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09E88 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09E89 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09E8E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::OnPointerUp(UnityEngine.EventSystems.PointerEventData):
+		End of function at 0x180A09E8F
+		Absolute End is at 0x180A09E8F
+		Identified Jump Destination addresses:
+			0x180A09E49
+		0x180A09DE5: Saves the content of rdi to the stack
+		0x180A09DEA: [!] Compares {field _isToggled, read from local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)}} and False
+		0x180A09DF1: Copies {'eventData' (function parameter, type UnityEngine.EventSystems.PointerEventData)} from rdx into rdi
+		0x180A09DF4: Loads the class pointer from this into a constant constant2 in register rdx
+		0x180A09DF7: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rcx into rbx
+		0x180A09DFA: [!] Sets the boolean {'local2' (type System.Boolean)} in rax to true if this._isToggled is equal to False, otherwise false.
+		0x180A09DFD: [!] Sets the field _isToggled (Type System.Boolean) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in {'local2' (type System.Boolean)}
+		0x180A09E03: Loads the pointer to the implementation of virtual function System.Boolean UnityEngine.UI.Selectable::IsInteractable() specific to UnityEngine.UI.ToggleSelectable from the class pointer in rdx, slot 24 (from memory offset 696) and stores in constant constant3
+		0x180A09E0A: Loads the pointer to the implementation of virtual function System.Boolean UnityEngine.UI.Selectable::IsInteractable() specific to UnityEngine.UI.ToggleSelectable from the class pointer in rdx, slot 24 (from memory offset 704) and stores in constant constant4
+		0x180A09E11: [!] Calls managed method System.Boolean UnityEngine.UI.Selectable::IsInteractable() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} and stores the result in {'isInteractable' (type System.Boolean)}
+
+		0x180A09E13: [!] Compares {'isInteractable' (type System.Boolean)} and False
+		0x180A09E15: Jumps to 0x180A09E44 if isInteractable equals False ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180A09E17: [!] Compares  and 0
+		0x180A09E1E: Jumps to 0x180A09E3D if  != 0 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180A09E20: [!] Compares  and 0
+		0x180A09E27: Jumps to 0x180A09E36 if  != 0 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180A09E29: Clears register rdx, yielding zero-local {'local4' (type System.Int32)}
+		0x180A09E2B: [!] Compares  and {'local4' (type System.Int32)}
+		0x180A09E31: [!] Sets the boolean {'local5' (type System.Boolean)} in rdx to true if  isn't equal to local4, otherwise false.
+		0x180A09E34: Jumps to 0x180A09E49 (which is an function-local jump destination)
+
+		0x180A09E36: [!] Writes the constant 0x3 into operand 3 (type UInt64) in register rdx
+		0x180A09E3B: Jumps to 0x180A09E49 (which is an function-local jump destination)
+
+		0x180A09E3D: [!] Writes the constant 0x2 into operand 2 (type UInt64) in register rdx
+		0x180A09E42: Jumps to 0x180A09E49 (which is an function-local jump destination)
+
+		0x180A09E44: [!] Writes the constant 0x4 into operand 4 (type UInt64) in register rdx
+
+		End Of If-Else Block (at 0x180A09E49) where the else started at 0x180A09E44
+		0x180A09E49: Loads the class pointer from this into a constant constant11 in register rax
+		0x180A09E4C: Clears register r8, yielding zero-local {'local6' (type System.Int32)}
+		0x180A09E4F: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A09E52: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.ToggleSelectable::DoStateTransition(UnityEngine.UI.Selectable/SelectionState,System.Boolean) specific to UnityEngine.UI.ToggleSelectable from the class pointer in rax, slot 26 (from memory offset 736) and stores in constant constant12
+		0x180A09E59: [!] Calls managed method System.Void UnityEngine.UI.ToggleSelectable::DoStateTransition(UnityEngine.UI.Selectable/SelectionState,System.Boolean) on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} with arguments [4, {'local6' (type System.Int32)}]
+
+		0x180A09E5F: [!] Compares {'eventData' (function parameter, type UnityEngine.EventSystems.PointerEventData)} and 0
+		0x180A09E62: Jumps to 0x180A09E89 (which throws a NRE) if eventData equals 0. Implicitly present in managed code, so ignored here.
+		0x180A09E64: [!] Compares {field <button>k__BackingField, read from local {'eventData' (function parameter, type UnityEngine.EventSystems.PointerEventData)}} and 0
+		0x180A09E6B: Jumps to 0x180A09E7E if {field <button>k__BackingField, read from local {'eventData' (function parameter, type UnityEngine.EventSystems.PointerEventData)}} != 0 ;  - This is probably a goto, jumping to 0x180A09E7E which is after end of current block @ 0x180A09E49 (started at 0x180A09E44)
+
+		0x180A09E6F: [!] Sets the field <isPointerDown>k__BackingField (Type System.Boolean) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in False
+		0x180A09E76: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rbx into rcx
+		0x180A09E79: [!] Calls managed method System.Void UnityEngine.UI.Selectable::EvaluateAndTransitionToSelectionState() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)}
+
+		0x180A09E7E: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant15
+		0x180A09E88: [!] Returns from the function
+
+		0x180A09E89: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void OnPointerUp(UnityEngine.EventSystems.PointerEventData eventData)
+		System.Boolean local2 = this._isToggled == False
+		this._isToggled = local2
+
+		System.Boolean isInteractable = this.IsInteractable()
+
+		if (isInteractable != False)
+
+		    if ( == 0)
+
+		        if ( == 0)
+		            ulong local4 = 0
+		            System.Boolean local5 =  != local4
+		        else
+		        else
+		        else
+		        endif
+                
+		        ulong local6 = 0
+
+		        this.DoStateTransition(4, local6) //(SelectionState state, Boolean instant)
+
+		        if (eventData.<button>k__BackingField != 0)
+                    goto INSN_180A09E7E
+                endif
+		        this.<isPointerDown>k__BackingField = False
+
+		        base.EvaluateAndTransitionToSelectionState()
+
+		        INSN_180A09E7E:
+		        return
+		        throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.JumpIfNonZeroOrNonNullAction at (0x180A09E1E) is corrupt (One of the arguments is null) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::OnPointerEnter(UnityEngine.EventSystems.PointerEventData):	Method Body (x86 ASM):
+		0x180A09E90 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09E92 mov byte ptr [rcx+0F0h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 240 | None ||| N/A | 1
+		0x180A09E99 jmp near ptr 00000001825B7060h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09E9E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::OnPointerEnter(UnityEngine.EventSystems.PointerEventData):
+		End of function at 0x180A09E9F
+		Absolute End is at 0x180A09E9F
+		Identified Jump Destination addresses:
+
+		0x180A09E92: [!] Sets the field <isPointerInside>k__BackingField (Type System.Boolean) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in True
+		0x180A09E99: [!] Calls managed method System.Void UnityEngine.UI.Selectable::EvaluateAndTransitionToSelectionState() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)}
+
+		0x180A09E99: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void OnPointerEnter(UnityEngine.EventSystems.PointerEventData eventData)
+		this.<isPointerInside>k__BackingField = True
+
+		base.EvaluateAndTransitionToSelectionState()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4.1
+	IL_0002: stfld System.Boolean UnityEngine.UI.Selectable::<isPointerInside>k__BackingField
+	IL_0007: ldarg.0
+	IL_0008: call System.Void UnityEngine.UI.Selectable::EvaluateAndTransitionToSelectionState()
+	IL_000d: ret
+	
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::OnPointerExit(UnityEngine.EventSystems.PointerEventData):	Method Body (x86 ASM):
+		0x180A09EA0 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09EA2 mov byte ptr [rcx+0F0h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 240 | None ||| N/A | 0
+		0x180A09EA9 jmp near ptr 00000001825B7060h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09EAE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::OnPointerExit(UnityEngine.EventSystems.PointerEventData):
+		End of function at 0x180A09EAF
+		Absolute End is at 0x180A09EAF
+		Identified Jump Destination addresses:
+
+		0x180A09EA2: [!] Sets the field <isPointerInside>k__BackingField (Type System.Boolean) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in False
+		0x180A09EA9: [!] Calls managed method System.Void UnityEngine.UI.Selectable::EvaluateAndTransitionToSelectionState() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)}
+
+		0x180A09EA9: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void OnPointerExit(UnityEngine.EventSystems.PointerEventData eventData)
+		this.<isPointerInside>k__BackingField = False
+
+		base.EvaluateAndTransitionToSelectionState()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4.0
+	IL_0002: stfld System.Boolean UnityEngine.UI.Selectable::<isPointerInside>k__BackingField
+	IL_0007: ldarg.0
+	IL_0008: call System.Void UnityEngine.UI.Selectable::EvaluateAndTransitionToSelectionState()
+	IL_000d: ret
+	
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::OnSelect(UnityEngine.EventSystems.BaseEventData):	Method Body (x86 ASM):
+		0x180A09EB0 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09EB2 mov byte ptr [rcx+0F2h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 242 | None ||| N/A | 1
+		0x180A09EB9 jmp near ptr 00000001825B7060h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09EBE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::OnSelect(UnityEngine.EventSystems.BaseEventData):
+		End of function at 0x180A09EBF
+		Absolute End is at 0x180A09EBF
+		Identified Jump Destination addresses:
+
+		0x180A09EB2: [!] Sets the field <hasSelection>k__BackingField (Type System.Boolean) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in True
+		0x180A09EB9: [!] Calls managed method System.Void UnityEngine.UI.Selectable::EvaluateAndTransitionToSelectionState() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)}
+
+		0x180A09EB9: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void OnSelect(UnityEngine.EventSystems.BaseEventData eventData)
+		this.<hasSelection>k__BackingField = True
+
+		base.EvaluateAndTransitionToSelectionState()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4.1
+	IL_0002: stfld System.Boolean UnityEngine.UI.Selectable::<hasSelection>k__BackingField
+	IL_0007: ldarg.0
+	IL_0008: call System.Void UnityEngine.UI.Selectable::EvaluateAndTransitionToSelectionState()
+	IL_000d: ret
+	
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::OnDeselect(UnityEngine.EventSystems.BaseEventData):	Method Body (x86 ASM):
+		0x180A09EC0 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09EC2 mov byte ptr [rcx+0F2h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 242 | None ||| N/A | 0
+		0x180A09EC9 jmp near ptr 00000001825B7060h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09ECE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::OnDeselect(UnityEngine.EventSystems.BaseEventData):
+		End of function at 0x180A09ECF
+		Absolute End is at 0x180A09ECF
+		Identified Jump Destination addresses:
+
+		0x180A09EC2: [!] Sets the field <hasSelection>k__BackingField (Type System.Boolean) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in False
+		0x180A09EC9: [!] Calls managed method System.Void UnityEngine.UI.Selectable::EvaluateAndTransitionToSelectionState() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)}
+
+		0x180A09EC9: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void OnDeselect(UnityEngine.EventSystems.BaseEventData eventData)
+		this.<hasSelection>k__BackingField = False
+
+		base.EvaluateAndTransitionToSelectionState()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4.0
+	IL_0002: stfld System.Boolean UnityEngine.UI.Selectable::<hasSelection>k__BackingField
+	IL_0007: ldarg.0
+	IL_0008: call System.Void UnityEngine.UI.Selectable::EvaluateAndTransitionToSelectionState()
+	IL_000d: ret
+	
+
+Method: System.Void UnityEngine.UI.ToggleSelectable::.ctor():	Method Body (x86 ASM):
+		0x180A09ED0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180A09ED5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A09ED6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A09EDA cmp byte ptr [18329BF12h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518482 | None ||| N/A | 0
+		0x180A09EE1 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180A09EE4 jne short 0000000180A09F11h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09EE6 lea rcx,[183100BB0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493834160 | None ||| N/A | N/A
+		0x180A09EED call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09EF2 lea rcx,[18310ABE0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493875168 | None ||| N/A | N/A
+		0x180A09EF9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09EFE lea rcx,[183100CD0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493834448 | None ||| N/A | N/A
+		0x180A09F05 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09F0A mov byte ptr [18329BF12h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495518482 | None ||| N/A | 1
+		0x180A09F11 mov rax,[18310ABE0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493875168 | None ||| N/A | N/A
+		0x180A09F18 cmp dword ptr [rax+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 224 | None ||| N/A | 0
+		0x180A09F1F jne short 0000000180A09F30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09F21 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09F24 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09F29 mov rax,[18310ABE0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493875168 | None ||| N/A | N/A
+		0x180A09F30 mov rax,[rax+0B8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x180A09F37 movups xmm1,[rax]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A09F3A movups xmm2,[rax+10h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x180A09F3E movups xmm3,[rax+20h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RAX | 32 | None ||| N/A | N/A
+		0x180A09F42 movups xmm4,[rax+30h]		; DEBUG: {Register}/XMM4 {Memory}/None ||| RAX | 48 | None ||| N/A | N/A
+		0x180A09F46 movups xmm5,[rax+40h]		; DEBUG: {Register}/XMM5 {Memory}/None ||| RAX | 64 | None ||| N/A | N/A
+		0x180A09F4A movsd xmm0,qword ptr [rax+50h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RAX | 80 | None ||| N/A | N/A
+		0x180A09F4F movups [rdi+104h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RDI | 260 | None ||| N/A | N/A
+		0x180A09F56 movups [rdi+114h],xmm2		; DEBUG: {Memory}/None {Register}/XMM2 ||| RDI | 276 | None ||| N/A | N/A
+		0x180A09F5D movups [rdi+124h],xmm3		; DEBUG: {Memory}/None {Register}/XMM3 ||| RDI | 292 | None ||| N/A | N/A
+		0x180A09F64 movups [rdi+134h],xmm4		; DEBUG: {Memory}/None {Register}/XMM4 ||| RDI | 308 | None ||| N/A | N/A
+		0x180A09F6B movups [rdi+144h],xmm5		; DEBUG: {Memory}/None {Register}/XMM5 ||| RDI | 324 | None ||| N/A | N/A
+		0x180A09F72 movsd qword ptr [rdi+154h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RDI | 340 | None ||| N/A | N/A
+		0x180A09F7A mov rcx,[183100BB0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493834160 | None ||| N/A | N/A
+		0x180A09F81 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09F86 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09F88 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09F8B mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09F8E call 0000000182567030h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09F93 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180A09F9A mov [rdi+180h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RDI | 384 | None ||| N/A | N/A
+		0x180A09FA1 je short 0000000180A09FE3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09FA3 lea r8,[rdi+180h]		; DEBUG: {Register}/R8 {Memory}/None ||| RDI | 384 | None ||| N/A | N/A
+		0x180A09FAA shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180A09FAE lea r9,[1832F4840h]		; DEBUG: {Register}/R9 {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x180A09FB5 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180A09FBC mov ecx,r8d		; DEBUG: {Register}/ECX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A09FBF shr rcx,6		; DEBUG: {Register}/RCX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180A09FC3 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180A09FC7 prefetchw [r9+rcx*8]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 0 | RCX ||| N/A | N/A
+		0x180A09FCC nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x180A09FD0 mov rax,[r9+rcx*8]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 0 | RCX ||| N/A | N/A
+		0x180A09FD4 mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A09FD7 bts rdx,r8		; DEBUG: {Register}/RDX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180A09FDB lock cmpxchg [r9+rcx*8],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| R9 | 0 | RCX ||| N/A | N/A
+		0x180A09FE1 jne short 0000000180A09FD0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09FE3 mov rcx,[183100CD0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493834448 | None ||| N/A | N/A
+		0x180A09FEA cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180A09FF1 jne short 0000000180A09FF8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09FF3 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A09FF8 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180A09FFA mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180A09FFD mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180A0A002 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180A0A006 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A0A007 jmp near ptr 00000001825B4460h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A0A00C int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.ToggleSelectable::.ctor():
+		End of function at 0x180A0A00D
+		Absolute End is at 0x180A0A00D
+		Identified Jump Destination addresses:
+
+		0x180A09ED5: Saves the content of rdi to the stack
+		0x180A09EDA: Compares {Unknown Global at 0x18329BF12, first ten bytes are [4 0 225 176 4 0 192 104 234 2], or as chars " á° Àhê"} and 0
+		0x180A09EE1: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rcx into rdi
+		0x180A09EE4: Jumps to 0x180A09F11 if {Unknown Global at 0x18329BF12, first ten bytes are [4 0 225 176 4 0 192 104 234 2], or as chars " á° Àhê"} != 0
+
+		0x180A09EE6: Loads the type definition for managed type UnityEngine.UI.AnimationTriggers as a constant "AnimationTriggers" in rcx
+		0x180A09EED: Initializes runtime metadata value UnityEngine.UI.AnimationTriggers
+		0x180A09EF2: Loads the type definition for managed type UnityEngine.UI.ColorBlock as a constant "ColorBlock" in rcx
+		0x180A09EF9: Initializes runtime metadata value UnityEngine.UI.ColorBlock
+		0x180A09EFE: Loads the type definition for managed type UnityEngine.UI.Selectable as a constant "Selectable" in rcx
+		0x180A09F05: Initializes runtime metadata value UnityEngine.UI.Selectable
+		0x180A09F11: Loads the type definition for managed type UnityEngine.UI.ColorBlock as a constant "ColorBlock" in rax
+		0x180A09F18: Compares "{il2cpp field UnityEngine.UI.ColorBlock->cctor_finished}" and 0
+		0x180A09F1F: Jumps to 0x180A09F30 if "{il2cpp field UnityEngine.UI.ColorBlock->cctor_finished}" != 0
+
+		0x180A09F21: Copies {'ColorBlock' (constant value of type Mono.Cecil.TypeReference)} from rax into rcx
+		0x180A09F24: Calls the il2cpp cctor for the type UnityEngine.UI.ColorBlock
+		0x180A09F29: Loads the type definition for managed type UnityEngine.UI.ColorBlock as a constant "ColorBlock" in rax
+		0x180A09F30: Loads the pointer to the static fields for UnityEngine.UI.ColorBlock and stores it in constant10 in register rax
+		0x180A09F37: [!] Reads the static field UnityEngine.UI.ColorBlock UnityEngine.UI.ColorBlock::defaultColorBlock into new local defaultColorBlock
+		0x180A09F3A: [!] Reads the static field  into new local 
+		0x180A09F3E: [!] Reads the static field  into new local 
+		0x180A09F42: [!] Reads the static field  into new local 
+		0x180A09F46: [!] Reads the static field  into new local 
+		0x180A09F4F: [!] Sets the field _toggledColors (Type UnityEngine.UI.ColorBlock) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in {'defaultColorBlock' (type UnityEngine.UI.ColorBlock)}
+		0x180A09F56: [!] Sets the field _toggledColors.m_HighlightedColor (Type UnityEngine.Color) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in 
+		0x180A09F5D: [!] Sets the field _toggledColors.m_PressedColor (Type UnityEngine.Color) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in 
+		0x180A09F64: [!] Sets the field _toggledColors.m_SelectedColor (Type UnityEngine.Color) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in 
+		0x180A09F6B: [!] Sets the field _toggledColors.m_DisabledColor (Type UnityEngine.Color) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in 
+		0x180A09F7A: Loads the type definition for managed type UnityEngine.UI.AnimationTriggers as a constant "AnimationTriggers" in rcx
+		0x180A09F81: [!] Allocates an instance of type UnityEngine.UI.AnimationTriggers and stores it as animationTriggers in rax.
+
+		0x180A09F88: Copies {'animationTriggers' (type UnityEngine.UI.AnimationTriggers)} from rax into rcx
+		0x180A09F8B: Copies {'animationTriggers' (type UnityEngine.UI.AnimationTriggers)} from rax into rbx
+		0x180A09F8E: [!] Calls managed method System.Void UnityEngine.UI.AnimationTriggers::.ctor() on instance {'animationTriggers' (type UnityEngine.UI.AnimationTriggers)}
+
+		0x180A09F93: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180A09F9A: [!] Sets the field _toggledAnimationTriggers (Type UnityEngine.UI.AnimationTriggers) on local {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} to the value stored in {'animationTriggers' (type UnityEngine.UI.AnimationTriggers)}
+		0x180A09FA1: Jumps to 0x180A09FE3 if constant12 equals 0
+
+		0x180A09FA3: Loads the pointer to the field _toggledAnimationTriggers on {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} into register r8
+		0x180A09FAE: Loads string "¡
+m" into register r9 as constant {'constant15' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180A09FBC: Copies {'constant14' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rcx
+		0x180A09FD4: Copies {'animationTriggers' (type UnityEngine.UI.AnimationTriggers)} from rax into rdx
+		0x180A09FE1: Jumps to 0x180A09FD0 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x180A09FE3: Loads the type definition for managed type UnityEngine.UI.Selectable as a constant "Selectable" in rcx
+		0x180A09FEA: Compares "{il2cpp field UnityEngine.UI.Selectable->cctor_finished}" and 0
+		0x180A09FF1: Jumps to 0x180A09FF8 if "{il2cpp field UnityEngine.UI.Selectable->cctor_finished}" != 0
+
+		0x180A09FF3: Calls the il2cpp cctor for the type UnityEngine.UI.Selectable
+		0x180A09FFA: Copies {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)} from rdi into rcx
+		0x180A09FFD: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant19
+		0x180A0A007: [!] Calls managed method System.Void UnityEngine.UI.Selectable::.ctor() on instance {'this' (function parameter, type UnityEngine.UI.ToggleSelectable)}
+
+		0x180A0A007: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.ToggleSelectable
+	System.Void .ctor()
+		UnityEngine.UI.ColorBlock defaultColorBlock = UnityEngine.UI.ColorBlock.defaultColorBlock
+		  = .
+		  = .
+		  = .
+		  = .
+		this._toggledColors = defaultColorBlock
+		this._toggledColors.m_HighlightedColor = 
+		this._toggledColors.m_PressedColor = 
+		this._toggledColors.m_SelectedColor = 
+		this._toggledColors.m_DisabledColor = 
+		UnityEngine.UI.AnimationTriggers animationTriggers = new UnityEngine.UI.AnimationTriggers()
+
+		animationTriggers..ctor()
+		this._toggledAnimationTriggers = animationTriggers
+
+		base..ctor()
+		return
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.StaticFieldToRegAction at (0x180A09F3A) is corrupt (Couldn't identify the field being read (or its type).) and cannot be created as IL. Aborting here.
+
+

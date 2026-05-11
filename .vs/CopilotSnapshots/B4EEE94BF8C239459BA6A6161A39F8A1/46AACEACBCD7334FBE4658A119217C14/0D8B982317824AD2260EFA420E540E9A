@@ -1,0 +1,100 @@
+﻿using System;
+using System.Reflection;
+using System.Linq;
+using HarmonyLib;
+using MelonLoader;
+
+namespace NovaLandsArchipelago
+{
+    public static class HarmonyPatches
+    {
+        // Apply Harmony patches used by this mod
+        public static void Apply(global::HarmonyLib.Harmony harmony)
+        {
+            try
+            {
+                var targetType = AccessTools.TypeByName("SaveToFileManager");
+                if (targetType == null)
+                {
+                    MelonLogger.Error("HarmonyPatches: Unable to find type 'SaveToFileManager'.");
+                }
+                else
+                {
+                    var targetMethod = AccessTools.Method(targetType, "Load", new Type[] { typeof(string) });
+                    if (targetMethod == null)
+                    {
+                        MelonLogger.Error("HarmonyPatches: Unable to find method 'Load(string)'.");
+                    }
+                    else
+                    {
+                        var prefix = typeof(HarmonyPatches).GetMethod(nameof(Load_Prefix), BindingFlags.Static | BindingFlags.NonPublic);
+                        harmony.Patch(targetMethod, prefix: new HarmonyMethod(prefix));
+                        MelonLogger.Msg("HarmonyPatches: Patched SaveToFileManager.Load(string).");
+                    }
+                }
+
+                // Patch ResearchesList.OnUnlock (call OnResearchPurchased after unlock)
+                try
+                {
+                    var researchesType = AccessTools.TypeByName("ResearchesList");
+                    if (researchesType == null)
+                    {
+                        MelonLogger.Msg("HarmonyPatches: ResearchesList type not found; skipping OnUnlock patch.");
+                    }
+                    else
+                    {
+                        // Find any method named "OnUnlock"
+                        var onUnlockMethod = researchesType.GetMethods(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+                                                            .FirstOrDefault(m => m.Name == "OnUnlock");
+                        if (onUnlockMethod == null)
+                        {
+                            MelonLogger.Msg("HarmonyPatches: No OnUnlock method found on ResearchesList.");
+                        }
+                        else
+                        {
+                            var postfix = typeof(HarmonyPatches).GetMethod(nameof(OnUnlock_Postfix), BindingFlags.Static | BindingFlags.NonPublic);
+                            harmony.Patch(onUnlockMethod, postfix: new HarmonyMethod(postfix));
+                            MelonLogger.Msg("HarmonyPatches: Patched ResearchesList.OnUnlock.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MelonLogger.Error($"HarmonyPatches: Failed to patch ResearchesList.OnUnlock: {ex}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MelonLogger.Error($"HarmonyPatches: Failed to apply patch: {ex}");
+            }
+        }
+
+        // Prefix runs before SaveToFileManager.Load(string fileName).
+        // Returning true allows the original method to run; returning false would skip it.
+        static bool Load_Prefix(string fileName)
+        {
+            MelonLogger.Msg($"SaveToFileManager.Load called with fileName: {fileName}");
+            return true;
+        }
+
+        // Postfix runs after ResearchesList.OnUnlock to trigger Archipelago location check
+        static void OnUnlock_Postfix()
+        {
+            try
+            {
+                if (Core.Instance != null)
+                {
+                    Core.Instance.OnResearchPurchased();
+                }
+                else
+                {
+                    MelonLogger.Msg("HarmonyPatches: Core.Instance is null when ResearchesList.OnUnlock fired.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MelonLogger.Error($"HarmonyPatches: Exception in OnUnlock_Postfix: {ex}");
+            }
+        }
+    }
+}

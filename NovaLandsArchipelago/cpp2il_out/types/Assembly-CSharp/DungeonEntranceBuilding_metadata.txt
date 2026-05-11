@@ -1,0 +1,295 @@
+Type: DungeonEntranceBuilding:
+	Base Class: 
+		BaseBuilding
+
+	Interfaces:
+
+	Nested Types:
+		DungeonEntranceBuilding/<CheckFloorEmpty>d__24
+
+	Field: showConfirmationDialog
+		Type: System.Boolean
+		Offset in Defining Type: 0x580
+		Has Default: False
+
+	Field: enterDungeonString
+		Type: System.String
+		Offset in Defining Type: 0x588
+		Has Default: False
+
+	Field: nextLevelString
+		Type: System.String
+		Offset in Defining Type: 0x590
+		Has Default: False
+
+	Field: nextLevelConfirmString
+		Type: System.String
+		Offset in Defining Type: 0x598
+		Has Default: False
+
+	Field: nextLevelCancelString
+		Type: System.String
+		Offset in Defining Type: 0x5A0
+		Has Default: False
+
+	Field: nextLevelGoBackString
+		Type: System.String
+		Offset in Defining Type: 0x5A8
+		Has Default: False
+
+	Field: dungeonLockedString
+		Type: System.String
+		Offset in Defining Type: 0x5B0
+		Has Default: False
+
+	Field: interactionStringOverride
+		Type: System.String
+		Offset in Defining Type: 0x5B8
+		Has Default: False
+
+	Field: isDungeonEntrance
+		Type: System.Boolean
+		Offset in Defining Type: 0x5C0
+		Has Default: False
+
+	Field: isPassageToPreviousRoom
+		Type: System.Boolean
+		Offset in Defining Type: 0x5C1
+		Has Default: False
+
+	Field: previousFloorSprite
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x5C8
+		Has Default: False
+
+	Field: doorSprite
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x5D0
+		Has Default: False
+
+	Field: keyToOpen
+		Type: UniqueItem
+		Offset in Defining Type: 0x5D8
+		Has Default: False
+
+	Field: unlockSFX
+		Type: System.String
+		Offset in Defining Type: 0x5E0
+		Has Default: False
+
+	Field: notImplementedYetFeedback
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x5E8
+		Has Default: False
+
+	Field: isLastLevel
+		Type: System.Boolean
+		Offset in Defining Type: 0x5F0
+		Has Default: False
+
+	Field: dungeonDescriptorId
+		Type: System.Int32
+		Offset in Defining Type: 0x5F4
+		Has Default: False
+
+	Field: player
+		Type: BasePlayer
+		Offset in Defining Type: 0x5F8
+		Has Default: False
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE0680
+		Ram Offset 0x180ae1880
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: parentArea
+			Type: WorldArea
+			Default Value: 
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x00AE0B20
+		Ram Offset 0x180ae1d20
+		Virtual Method Slot: 97
+
+		Parameter 0:
+			Name: firstSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: Start:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE0F50
+		Ram Offset 0x180ae2150
+		Virtual Method Slot: 5
+
+	Method: SetupBehavior:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE1110
+		Ram Offset 0x180ae2310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: entrance
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: isPassageToPreviousRoom
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: descriptor
+			Type: DungeonDescriptor
+			Default Value: 
+		Parameter 3:
+			Name: showNextLevelConfirmation
+			Type: System.Boolean
+			Default Value: True
+	Method: SetupBehavior:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE1530
+		Ram Offset 0x180ae2730
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: entrance
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: isPassageToPreviousRoom
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: isLastLevel
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: dungeonDescriptorId
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: showNextLevelConfirmation
+			Type: System.Boolean
+			Default Value: True
+	Method: InitProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AE1870
+		Ram Offset 0x180ae2a70
+		Virtual Method Slot: 25
+
+	Method: CheckFloorEmpty:
+		Accessibility: Family
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00AE19C0
+		Ram Offset 0x180ae2bc0
+		Virtual Method Slot: 65535
+
+	Method: StopCheckEnemiesDeadCoroutine:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE1A00
+		Ram Offset 0x180ae2c00
+		Virtual Method Slot: 65535
+
+	Method: OnNextDialogue:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: activate
+			Type: System.Boolean
+			Default Value: 
+	Method: ShowPopup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE1A50
+		Ram Offset 0x180ae2c50
+		Virtual Method Slot: 116
+
+	Method: HidePopup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00424470
+		Ram Offset 0x180425670
+		Virtual Method Slot: 117
+
+	Method: OnCancelEnter:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AE2750
+		Ram Offset 0x180ae3950
+		Virtual Method Slot: 65535
+
+	Method: OnConfirmEnter:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AE2780
+		Ram Offset 0x180ae3980
+		Virtual Method Slot: 65535
+
+	Method: FinishSaving:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AE29F0
+		Ram Offset 0x180ae3bf0
+		Virtual Method Slot: 65535
+
+	Method: OnGoBack:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AE3040
+		Ram Offset 0x180ae4240
+		Virtual Method Slot: 65535
+
+	Method: SetLocked:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE3220
+		Ram Offset 0x180ae4420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: locked
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: playSFX
+			Type: System.Boolean
+			Default Value: True
+	Method: SpawnNotImplementedYetFeedback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AE33C0
+		Ram Offset 0x180ae45c0
+		Virtual Method Slot: 65535
+
+	Method: get_IsPassageToPreviousRoom:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AE35B0
+		Ram Offset 0x180ae47b0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE35C0
+		Ram Offset 0x180ae47c0
+		Virtual Method Slot: 65535

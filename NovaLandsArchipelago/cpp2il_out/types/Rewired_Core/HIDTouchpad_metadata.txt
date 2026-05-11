@@ -1,0 +1,91 @@
+Type: Rewired.HID.HIDTouchpad:
+	Base Class: 
+		Rewired.HID.HIDControllerElement
+
+	Interfaces:
+
+	Nested Types:
+		Rewired.HID.HIDTouchpad/TouchpadInfo
+		Rewired.HID.HIDTouchpad/TouchData
+
+	Field: ieJkcRIEUKQNpPqIGNEttIgjIREc
+		Type: Rewired.HID.HIDTouchpad/TouchpadInfo
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: nRVtXnRvJfpgVabOyoiQyiyncTSA
+		Type: System.Collections.Generic.Queue`1<Rewired.HID.HIDTouchpad/TouchData>
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: QlawnFFfTWjjzhBllBVzYuZcYVor
+		Type: Rewired.HID.HIDTouchpad/TouchData[]
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: NVrJWcvGoJhdmBQLUXqaeUSElNsb
+		Type: System.Action`2<Rewired.Utils.Classes.Data.NativeBuffer,Rewired.HID.HIDTouchpad/TouchData[]>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: values
+		Type: Rewired.HID.HIDTouchpad/TouchData[]
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x019BA570
+		Ram Offset 0x1819bb770
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.Byte
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: Rewired.HID.HIDTouchpad/TouchpadInfo
+			Default Value: 
+		Parameter 2:
+			Name: 
+			Type: Rewired.HID.HIDControllerElement/HIDInfo
+			Default Value: 
+		Parameter 3:
+			Name: 
+			Type: System.Action`2<Rewired.Utils.Classes.Data.NativeBuffer, Rewired.HID.HIDTouchpad/TouchData[]>
+			Default Value: 
+	Method: UpdateValue:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x019BA8F0
+		Ram Offset 0x1819bbaf0
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: inputReport
+			Type: Rewired.Utils.Classes.Data.NativeBuffer
+			Default Value: 
+		Parameter 1:
+			Name: timestamp
+			Type: System.Double
+			Default Value: 
+	Method: ProcessQueue:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x019BABE0
+		Ram Offset 0x1819bbde0
+		Virtual Method Slot: 65535
+
+	Method: IsTouching:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x019BB040
+		Ram Offset 0x1819bc240
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: touchId
+			Type: System.Int32
+			Default Value: 

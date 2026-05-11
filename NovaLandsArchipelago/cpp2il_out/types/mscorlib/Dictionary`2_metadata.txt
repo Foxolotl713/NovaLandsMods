@@ -1,0 +1,645 @@
+Type: System.Collections.Generic.Dictionary`2:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.Collections.Generic.IDictionary`2<TKey,TValue>
+		System.Collections.Generic.ICollection`1<System.Collections.Generic.KeyValuePair`2<TKey,TValue>>
+		System.Collections.Generic.IEnumerable`1<System.Collections.Generic.KeyValuePair`2<TKey,TValue>>
+		System.Collections.IEnumerable
+		System.Collections.IDictionary
+		System.Collections.ICollection
+		System.Collections.Generic.IReadOnlyDictionary`2<TKey,TValue>
+		System.Collections.Generic.IReadOnlyCollection`1<System.Collections.Generic.KeyValuePair`2<TKey,TValue>>
+		System.Runtime.Serialization.ISerializable
+		System.Runtime.Serialization.IDeserializationCallback
+
+	Nested Types:
+		System.Collections.Generic.Dictionary`2/Entry
+		System.Collections.Generic.Dictionary`2/Enumerator
+		System.Collections.Generic.Dictionary`2/KeyCollection
+		System.Collections.Generic.Dictionary`2/ValueCollection
+
+	Field: _buckets
+		Type: System.Int32[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _entries
+		Type: System.Collections.Generic.Dictionary`2/Entry<TKey,TValue>[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _count
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _freeList
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _freeCount
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _version
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _comparer
+		Type: System.Collections.Generic.IEqualityComparer`1<TKey>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _keys
+		Type: System.Collections.Generic.Dictionary`2/KeyCollection<TKey,TValue>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _values
+		Type: System.Collections.Generic.Dictionary`2/ValueCollection<TKey,TValue>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _syncRoot
+		Type: System.Object
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: VersionName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: Version
+
+	Static Field: HashSizeName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: HashSize
+
+	Static Field: KeyValuePairsName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: KeyValuePairs
+
+	Static Field: ComparerName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: Comparer
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00F59A80
+		Ram Offset 0x180f5ac80
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00F59B10
+		Ram Offset 0x180f5ad10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: capacity
+			Type: System.Int32
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00F59B30
+		Ram Offset 0x180f5ad30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: comparer
+			Type: System.Collections.Generic.IEqualityComparer`1<TKey>
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00F59BC0
+		Ram Offset 0x180f5adc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: capacity
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: comparer
+			Type: System.Collections.Generic.IEqualityComparer`1<TKey>
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00F59C80
+		Ram Offset 0x180f5ae80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dictionary
+			Type: System.Collections.Generic.IDictionary`2<TKey, TValue>
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00F59CA0
+		Ram Offset 0x180f5aea0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dictionary
+			Type: System.Collections.Generic.IDictionary`2<TKey, TValue>
+			Default Value: 
+		Parameter 1:
+			Name: comparer
+			Type: System.Collections.Generic.IEqualityComparer`1<TKey>
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00F5A0B0
+		Ram Offset 0x180f5b2b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: info
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: context
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: get_Count:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00F5A130
+		Ram Offset 0x180f5b330
+		Virtual Method Slot: 37
+
+	Method: get_Keys:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2/KeyCollection<TKey, TValue>
+		File Offset 0x00F5A140
+		Ram Offset 0x180f5b340
+		Virtual Method Slot: 65535
+
+	Method: System.Collections.Generic.IDictionary<TKey,TValue>.get_Keys:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.ICollection`1<TKey>
+		File Offset 0x00F5A140
+		Ram Offset 0x180f5b340
+		Virtual Method Slot: 6
+
+	Method: get_Values:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2/ValueCollection<TKey, TValue>
+		File Offset 0x00F5A250
+		Ram Offset 0x180f5b450
+		Virtual Method Slot: 65535
+
+	Method: System.Collections.Generic.IDictionary<TKey,TValue>.get_Values:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.ICollection`1<TValue>
+		File Offset 0x00F5A250
+		Ram Offset 0x180f5b450
+		Virtual Method Slot: 7
+
+	Method: get_Item:
+		Accessibility: Public
+		Return Type: TValue
+		File Offset 0x00F5A360
+		Ram Offset 0x180f5b560
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: key
+			Type: TKey
+			Default Value: 
+	Method: set_Item:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00F5A420
+		Ram Offset 0x180f5b620
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: key
+			Type: TKey
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: TValue
+			Default Value: 
+	Method: Add:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00F5A460
+		Ram Offset 0x180f5b660
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: key
+			Type: TKey
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: TValue
+			Default Value: 
+	Method: System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey,TValue>>.Add:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00F5A4A0
+		Ram Offset 0x180f5b6a0
+		Virtual Method Slot: 14
+
+		Parameter 0:
+			Name: keyValuePair
+			Type: System.Collections.Generic.KeyValuePair`2<TKey, TValue>
+			Default Value: 
+	Method: System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey,TValue>>.Contains:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00F5A500
+		Ram Offset 0x180f5b700
+		Virtual Method Slot: 16
+
+		Parameter 0:
+			Name: keyValuePair
+			Type: System.Collections.Generic.KeyValuePair`2<TKey, TValue>
+			Default Value: 
+	Method: System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey,TValue>>.Remove:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00F5A5D0
+		Ram Offset 0x180f5b7d0
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: keyValuePair
+			Type: System.Collections.Generic.KeyValuePair`2<TKey, TValue>
+			Default Value: 
+	Method: Clear:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00F5A6E0
+		Ram Offset 0x180f5b8e0
+		Virtual Method Slot: 27
+
+	Method: ContainsKey:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00F5A750
+		Ram Offset 0x180f5b950
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: key
+			Type: TKey
+			Default Value: 
+	Method: ContainsValue:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00F5A790
+		Ram Offset 0x180f5b990
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: TValue
+			Default Value: 
+	Method: CopyTo:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00F5A8B0
+		Ram Offset 0x180f5bab0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: array
+			Type: System.Collections.Generic.KeyValuePair`2<TKey, TValue>[]
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: GetEnumerator:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2/Enumerator<TKey, TValue>
+		File Offset 0x00F5AA10
+		Ram Offset 0x180f5bc10
+		Virtual Method Slot: 65535
+
+	Method: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<TKey,TValue>>.GetEnumerator:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.IEnumerator`1<System.Collections.Generic.KeyValuePair`2<TKey, TValue>>
+		File Offset 0x00F5AAC0
+		Ram Offset 0x180f5bcc0
+		Virtual Method Slot: 19
+
+	Method: GetObjectData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00F5ABA0
+		Ram Offset 0x180f5bda0
+		Virtual Method Slot: 40
+
+		Parameter 0:
+			Name: info
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: context
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: FindEntry:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x00F5AED0
+		Ram Offset 0x180f5c0d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: key
+			Type: TKey
+			Default Value: 
+	Method: Initialize:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x00F5B200
+		Ram Offset 0x180f5c400
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: capacity
+			Type: System.Int32
+			Default Value: 
+	Method: TryInsert:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00F5B370
+		Ram Offset 0x180f5c570
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: key
+			Type: TKey
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: TValue
+			Default Value: 
+		Parameter 2:
+			Name: behavior
+			Type: System.Collections.Generic.InsertionBehavior
+			Default Value: 
+	Method: OnDeserialization:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00F5B8F0
+		Ram Offset 0x180f5caf0
+		Virtual Method Slot: 41
+
+		Parameter 0:
+			Name: sender
+			Type: System.Object
+			Default Value: 
+	Method: Resize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00F5BDB0
+		Ram Offset 0x180f5cfb0
+		Virtual Method Slot: 65535
+
+	Method: Resize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00F5BE30
+		Ram Offset 0x180f5d030
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newSize
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: forceNewHashCodes
+			Type: System.Boolean
+			Default Value: 
+	Method: Remove:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00F5C0B0
+		Ram Offset 0x180f5d2b0
+		Virtual Method Slot: 10
+
+		Parameter 0:
+			Name: key
+			Type: TKey
+			Default Value: 
+	Method: TryGetValue:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00F5C3F0
+		Ram Offset 0x180f5d5f0
+		Virtual Method Slot: 36
+
+		Parameter 0:
+			Name: key
+			Type: TKey
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: TValue
+			Default Value: 
+	Method: TryAdd:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00F5C4C0
+		Ram Offset 0x180f5d6c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: key
+			Type: TKey
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: TValue
+			Default Value: 
+	Method: System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey,TValue>>.get_IsReadOnly:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 13
+
+	Method: System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<TKey,TValue>>.CopyTo:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00F5C500
+		Ram Offset 0x180f5d700
+		Virtual Method Slot: 17
+
+		Parameter 0:
+			Name: array
+			Type: System.Collections.Generic.KeyValuePair`2<TKey, TValue>[]
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: System.Collections.ICollection.CopyTo:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00F5C510
+		Ram Offset 0x180f5d710
+		Virtual Method Slot: 32
+
+		Parameter 0:
+			Name: array
+			Type: System.Array
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: System.Collections.IEnumerable.GetEnumerator:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00F5AAC0
+		Ram Offset 0x180f5bcc0
+		Virtual Method Slot: 20
+
+	Method: System.Collections.ICollection.get_IsSynchronized:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 35
+
+	Method: System.Collections.ICollection.get_SyncRoot:
+		Accessibility: Private
+		Return Type: System.Object
+		File Offset 0x00F5C8D0
+		Ram Offset 0x180f5dad0
+		Virtual Method Slot: 34
+
+	Method: System.Collections.IDictionary.get_IsFixedSize:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 29
+
+	Method: System.Collections.IDictionary.get_IsReadOnly:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 28
+
+	Method: System.Collections.IDictionary.get_Keys:
+		Accessibility: Private
+		Return Type: System.Collections.ICollection
+		File Offset 0x00F5C980
+		Ram Offset 0x180f5db80
+		Virtual Method Slot: 23
+
+	Method: System.Collections.IDictionary.get_Values:
+		Accessibility: Private
+		Return Type: System.Collections.ICollection
+		File Offset 0x00F5CAA0
+		Ram Offset 0x180f5dca0
+		Virtual Method Slot: 24
+
+	Method: System.Collections.IDictionary.get_Item:
+		Accessibility: Private
+		Return Type: System.Object
+		File Offset 0x00F5CAC0
+		Ram Offset 0x180f5dcc0
+		Virtual Method Slot: 21
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+	Method: System.Collections.IDictionary.set_Item:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00F5CC40
+		Ram Offset 0x180f5de40
+		Virtual Method Slot: 22
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: System.Object
+			Default Value: 
+	Method: IsCompatibleKey:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00F5CE60
+		Ram Offset 0x180f5e060
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+	Method: System.Collections.IDictionary.Add:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00F5CED0
+		Ram Offset 0x180f5e0d0
+		Virtual Method Slot: 26
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: System.Object
+			Default Value: 
+	Method: System.Collections.IDictionary.Contains:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00F5D0F0
+		Ram Offset 0x180f5e2f0
+		Virtual Method Slot: 25
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 
+	Method: System.Collections.IDictionary.GetEnumerator:
+		Accessibility: Private
+		Return Type: System.Collections.IDictionaryEnumerator
+		File Offset 0x00F5D260
+		Ram Offset 0x180f5e460
+		Virtual Method Slot: 30
+
+	Method: System.Collections.IDictionary.Remove:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00F5D340
+		Ram Offset 0x180f5e540
+		Virtual Method Slot: 31
+
+		Parameter 0:
+			Name: key
+			Type: System.Object
+			Default Value: 

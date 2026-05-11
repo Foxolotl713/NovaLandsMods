@@ -1,0 +1,402 @@
+Type: NPCSpStManagerShopPopup:
+	Base Class: 
+		BuildingPopup
+
+	Interfaces:
+
+	Nested Types:
+		NPCSpStManagerShopPopup/<>c__DisplayClass53_0
+		NPCSpStManagerShopPopup/<SetFirstSelected>d__43
+
+	Field: numberOfSlots
+		Type: System.Int32
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: dropdown
+		Type: TMPro.TMP_Dropdown
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: produceButton
+		Type: UnityEngine.UI.Button
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: cancelButton
+		Type: UnityEngine.UI.Button
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: ingredientsArea
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: ingredientPrefab
+		Type: CurrentRequiredResourceAmountPairHUD
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: upgradeSelectionParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: upgradeSelectionTemplate
+		Type: NPCUpgradeShopPopupSelectionSlot
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: portraitImage
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: mapRect
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: unlockStoreAction
+		Type: SpaceStationUnlockStoreAction
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: storeIcons
+		Type: System.Collections.Generic.List`1<UnityEngine.UI.Image>
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: storeIconsTargetMergeColor
+		Type: System.Collections.Generic.List`1<UnityEngine.Color>
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: selectedStoreIconTargetMergeColorAmount
+		Type: System.Single
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: selectedStoreIconEaseType
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0x104
+		Has Default: False
+
+	Field: selectedStoreIconAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0x108
+		Has Default: False
+
+	Field: descriptionArea
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x110
+		Has Default: False
+
+	Field: currentSelectedUpgradeTitle
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x118
+		Has Default: False
+
+	Field: currentSelectedUpgradeDescription
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x120
+		Has Default: False
+
+	Field: priceLabel
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x128
+		Has Default: False
+
+	Field: currentSelectedUpgradeImage
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x130
+		Has Default: False
+
+	Field: currentSelectedUpgradeShadowImage
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: produceAction
+		Type: System.Int32
+		Offset in Defining Type: 0x140
+		Has Default: False
+
+	Field: produceActionDescriptionString
+		Type: System.String
+		Offset in Defining Type: 0x148
+		Has Default: False
+
+	Field: cancelAction
+		Type: System.Int32
+		Offset in Defining Type: 0x150
+		Has Default: False
+
+	Field: cancelActionDescriptionString
+		Type: System.String
+		Offset in Defining Type: 0x158
+		Has Default: False
+
+	Field: npcBuilding
+		Type: BaseNPC
+		Offset in Defining Type: 0x160
+		Has Default: False
+
+	Field: upgrades
+		Type: System.Collections.Generic.List`1<SpaceStationUpgradeScriptableObject>
+		Offset in Defining Type: 0x168
+		Has Default: False
+
+	Field: currentSelectedUpgrade
+		Type: System.Int32
+		Offset in Defining Type: 0x170
+		Has Default: False
+
+	Field: timeToCheckResourcesAvailability
+		Type: System.Single
+		Offset in Defining Type: 0x174
+		Has Default: False
+
+	Field: currentTime
+		Type: System.Single
+		Offset in Defining Type: 0x178
+		Has Default: False
+
+	Field: currentStoreIconTween
+		Type: DG.Tweening.Tween
+		Offset in Defining Type: 0x180
+		Has Default: False
+
+	Field: purchaseDone
+		Type: System.Boolean
+		Offset in Defining Type: 0x188
+		Has Default: False
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00634CB0
+		Ram Offset 0x180635eb0
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+		Parameter 1:
+			Name: player
+			Type: BaseCharacter
+			Default Value: 
+	Method: InitUpgrades:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00635050
+		Ram Offset 0x180636250
+		Virtual Method Slot: 65535
+
+	Method: SelectNextUpgrade:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00635180
+		Ram Offset 0x180636380
+		Virtual Method Slot: 65535
+
+	Method: SetPopupName:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x006351F0
+		Ram Offset 0x1806363f0
+		Virtual Method Slot: 65535
+
+	Method: OnEnable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00635290
+		Ram Offset 0x180636490
+		Virtual Method Slot: 9
+
+	Method: OnDisable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x006353E0
+		Ram Offset 0x1806365e0
+		Virtual Method Slot: 10
+
+	Method: UpdateValues:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006356F0
+		Ram Offset 0x1806368f0
+		Virtual Method Slot: 11
+
+	Method: GetFirstSelectable:
+		Accessibility: Public
+		Return Type: UnityEngine.GameObject
+		File Offset 0x00635710
+		Ram Offset 0x180636910
+		Virtual Method Slot: 22
+
+	Method: GetBottomSelectable:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Selectable
+		File Offset 0x004FAF50
+		Ram Offset 0x1804fc150
+		Virtual Method Slot: 20
+
+	Method: SetupDescriptionContext:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00635770
+		Ram Offset 0x180636970
+		Virtual Method Slot: 65535
+
+	Method: SetFirstSelected:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00635890
+		Ram Offset 0x180636a90
+		Virtual Method Slot: 65535
+
+	Method: ProcessCloseInput:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00635920
+		Ram Offset 0x180636b20
+		Virtual Method Slot: 16
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+	Method: ResetCamera:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x006359F0
+		Ram Offset 0x180636bf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+	Method: OnClickCancel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00635B00
+		Ram Offset 0x180636d00
+		Virtual Method Slot: 65535
+
+	Method: OnClickProduce:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00635B40
+		Ram Offset 0x180636d40
+		Virtual Method Slot: 65535
+
+	Method: ExecutePurchase:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00635DA0
+		Ram Offset 0x180636fa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: upgrade
+			Type: SpaceStationUpgradeScriptableObject
+			Default Value: 
+	Method: TriggerUnlockStoreFlow:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006360A0
+		Ram Offset 0x1806372a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: upgrade
+			Type: SpaceStationUpgradeScriptableObject
+			Default Value: 
+	Method: EnableButtonInteraction:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00627D30
+		Ram Offset 0x180628f30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: CheckResourcesAvailable:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006363E0
+		Ram Offset 0x1806375e0
+		Virtual Method Slot: 65535
+
+	Method: UpdatePrice:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006366B0
+		Ram Offset 0x1806378b0
+		Virtual Method Slot: 65535
+
+	Method: UpdateMapIcons:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006369C0
+		Ram Offset 0x180637bc0
+		Virtual Method Slot: 65535
+
+	Method: UpdateDetailsArea:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00636EF0
+		Ram Offset 0x1806380f0
+		Virtual Method Slot: 65535
+
+	Method: SetupButtons:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00637550
+		Ram Offset 0x180638750
+		Virtual Method Slot: 65535
+
+	Method: OnChangeInputSource:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x006376B0
+		Ram Offset 0x1806388b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: controller
+			Type: Rewired.ControllerType
+			Default Value: 
+	Method: Update:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x006376C0
+		Ram Offset 0x1806388c0
+		Virtual Method Slot: 14
+
+	Method: get_InteractingCharacter:
+		Accessibility: Public
+		Return Type: BasePlayer
+		File Offset 0x00637B70
+		Ram Offset 0x180638d70
+		Virtual Method Slot: 65535
+
+	Method: get_Upgrades:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<SpaceStationUpgradeScriptableObject>
+		File Offset 0x003D59B0
+		Ram Offset 0x1803d6bb0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00637BA0
+		Ram Offset 0x180638da0
+		Virtual Method Slot: 65535

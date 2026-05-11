@@ -1,0 +1,658 @@
+Type: EnergyGenerationBuilding:
+	Base Class: 
+		BaseBuilding
+
+	Interfaces:
+
+	Nested Types:
+		EnergyGenerationBuilding/<>c
+
+	Static Field: ADD_RECIPE_INDEX
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Static Field: HOLD_TO_MOVE_COMMAND_INDEX
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 2
+
+	Field: fuelConsumptionFeedback
+		Type: ProducedResourceProgressFeedback
+		Offset in Defining Type: 0x580
+		Has Default: False
+
+	Field: producingVisualFeedbacks
+		Type: System.Collections.Generic.List`1<UnityEngine.GameObject>
+		Offset in Defining Type: 0x588
+		Has Default: False
+
+	Field: producingFeedbackParticles
+		Type: System.Collections.Generic.List`1<UnityEngine.ParticleSystem>
+		Offset in Defining Type: 0x590
+		Has Default: False
+
+	Field: contentOverlay
+		Type: ItemsContentOverlay
+		Offset in Defining Type: 0x598
+		Has Default: False
+
+	Field: producedEnergy
+		Type: System.Int32
+		Offset in Defining Type: 0x5A0
+		Has Default: False
+
+	Field: useFuel
+		Type: System.Boolean
+		Offset in Defining Type: 0x5A4
+		Has Default: False
+
+	Field: fuel
+		Type: BaseResourceScriptableObject
+		Offset in Defining Type: 0x5A8
+		Has Default: False
+
+	Field: fuelDuration
+		Type: System.Single
+		Offset in Defining Type: 0x5B0
+		Has Default: False
+
+	Field: depositAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0x5B4
+		Has Default: False
+
+	Field: originalProducedEnergy
+		Type: System.Int32
+		Offset in Defining Type: 0x5B8
+		Has Default: False
+
+	Field: energyUnits
+		Type: System.Collections.Generic.List`1<EnergyUnit>
+		Offset in Defining Type: 0x5C0
+		Has Default: False
+
+	Field: availableUnits
+		Type: System.Collections.Generic.List`1<EnergyUnit>
+		Offset in Defining Type: 0x5C8
+		Has Default: False
+
+	Field: consumedUnits
+		Type: System.Collections.Generic.List`1<EnergyUnit>
+		Offset in Defining Type: 0x5D0
+		Has Default: False
+
+	Field: currentFuelDuration
+		Type: System.Single
+		Offset in Defining Type: 0x5D8
+		Has Default: False
+
+	Field: consumingFuel
+		Type: System.Boolean
+		Offset in Defining Type: 0x5DC
+		Has Default: False
+
+	Field: generatorPopup
+		Type: BaseEnergyGeneratorPopup
+		Offset in Defining Type: 0x5E0
+		Has Default: False
+
+	Field: waitingForFuel
+		Type: System.Boolean
+		Offset in Defining Type: 0x5E8
+		Has Default: False
+
+	Field: solarPowerSkillEnabled
+		Type: System.Boolean
+		Offset in Defining Type: 0x5E9
+		Has Default: False
+
+	Field: solarPowerSkill
+		Type: PlayerSkillDescriptor
+		Offset in Defining Type: 0x5F0
+		Has Default: False
+
+	Method: Start:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE3780
+		Ram Offset 0x180ae4980
+		Virtual Method Slot: 5
+
+	Method: InitProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AE3B70
+		Ram Offset 0x180ae4d70
+		Virtual Method Slot: 25
+
+	Method: InitCanvases:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AE3C70
+		Ram Offset 0x180ae4e70
+		Virtual Method Slot: 56
+
+	Method: InitInteractionFeedbacks:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AE3DB0
+		Ram Offset 0x180ae4fb0
+		Virtual Method Slot: 100
+
+	Method: InitPopup:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AE4610
+		Ram Offset 0x180ae5810
+		Virtual Method Slot: 115
+
+	Method: UpdateInteractionLabels:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AE4720
+		Ram Offset 0x180ae5920
+		Virtual Method Slot: 102
+
+	Method: GetPlayerHasFuelResources:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00AE4A30
+		Ram Offset 0x180ae5c30
+		Virtual Method Slot: 65535
+
+	Method: GetLootToBeSpawned:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+		File Offset 0x00AE4C50
+		Ram Offset 0x180ae5e50
+		Virtual Method Slot: 60
+
+	Method: CanInteractSecondary:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AE5000
+		Ram Offset 0x180ae6200
+		Virtual Method Slot: 110
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: ExecuteSecondaryInteraction:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AE5060
+		Ram Offset 0x180ae6260
+		Virtual Method Slot: 111
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+	Method: AddFuelItems:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AE50B0
+		Ram Offset 0x180ae62b0
+		Virtual Method Slot: 187
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+	Method: AddFuelItemFeedback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AE5320
+		Ram Offset 0x180ae6520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: depositant
+			Type: BasePlayer
+			Default Value: 
+	Method: BecameVisibleCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE57B0
+		Ram Offset 0x180ae69b0
+		Virtual Method Slot: 54
+
+	Method: BecameInvisibleCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE5820
+		Ram Offset 0x180ae6a20
+		Virtual Method Slot: 55
+
+	Method: ShowPopup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE5890
+		Ram Offset 0x180ae6a90
+		Virtual Method Slot: 116
+
+	Method: EnableOverlay:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE5AA0
+		Ram Offset 0x180ae6ca0
+		Virtual Method Slot: 33
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: UpdateContentOverlay:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE5BF0
+		Ram Offset 0x180ae6df0
+		Virtual Method Slot: 65535
+
+	Method: OnChangeInventory:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE5D40
+		Ram Offset 0x180ae6f40
+		Virtual Method Slot: 65535
+
+	Method: InitEnergyUnits:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AE5D50
+		Ram Offset 0x180ae6f50
+		Virtual Method Slot: 65535
+
+	Method: UpdateEnergyUnits:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE6090
+		Ram Offset 0x180ae7290
+		Virtual Method Slot: 65535
+
+	Method: AllocateEnergy:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<EnergyUnit>
+		File Offset 0x00AE62C0
+		Ram Offset 0x180ae74c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+	Method: AllocateActualEnergy:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<EnergyUnit>
+		File Offset 0x00AE6510
+		Ram Offset 0x180ae7710
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+	Method: ReturnEnergyUnit:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE67B0
+		Ram Offset 0x180ae79b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: unit
+			Type: EnergyUnit
+			Default Value: 
+	Method: UpdateIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE6900
+		Ram Offset 0x180ae7b00
+		Virtual Method Slot: 161
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: UpdateFuelConsumption:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AE6AC0
+		Ram Offset 0x180ae7cc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: ConsumeFuel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE6C30
+		Ram Offset 0x180ae7e30
+		Virtual Method Slot: 188
+
+		Parameter 0:
+			Name: checkConsuming
+			Type: System.Boolean
+			Default Value: False
+	Method: EnableProducingFeedbacks:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE6DA0
+		Ram Offset 0x180ae7fa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: ShowFuelConsumptionFeedback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AE70C0
+		Ram Offset 0x180ae82c0
+		Virtual Method Slot: 189
+
+	Method: HideFuelConsumptionFeedback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AE72B0
+		Ram Offset 0x180ae84b0
+		Virtual Method Slot: 190
+
+	Method: UpdateFuelConsumptionFeedback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AE7440
+		Ram Offset 0x180ae8640
+		Virtual Method Slot: 191
+
+	Method: TryToConsumeFuel:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00AE7570
+		Ram Offset 0x180ae8770
+		Virtual Method Slot: 65535
+
+	Method: AddFuel:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00AE7800
+		Ram Offset 0x180ae8a00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+	Method: HasFuel:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00AE7910
+		Ram Offset 0x180ae8b10
+		Virtual Method Slot: 65535
+
+	Method: NotifyConsumers:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AE7A90
+		Ram Offset 0x180ae8c90
+		Virtual Method Slot: 65535
+
+	Method: EnterDestroyed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE7F10
+		Ram Offset 0x180ae9110
+		Virtual Method Slot: 166
+
+	Method: DropContent:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AE7F30
+		Ram Offset 0x180ae9130
+		Virtual Method Slot: 65535
+
+	Method: OnDestroy:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AE83A0
+		Ram Offset 0x180ae95a0
+		Virtual Method Slot: 8
+
+	Method: GetFuelIcon:
+		Accessibility: Public
+		Return Type: UnityEngine.Sprite
+		File Offset 0x00AE85A0
+		Ram Offset 0x180ae97a0
+		Virtual Method Slot: 65535
+
+	Method: CanAddItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AE85D0
+		Ram Offset 0x180ae97d0
+		Virtual Method Slot: 120
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: isRecipe
+			Type: System.Boolean
+			Default Value: 
+	Method: CanReceiveItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AE86E0
+		Ram Offset 0x180ae98e0
+		Virtual Method Slot: 121
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+	Method: TryToConsumeItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00AE87E0
+		Ram Offset 0x180ae99e0
+		Virtual Method Slot: 118
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+		Parameter 1:
+			Name: sourceCharacter
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: dropToTheGround
+			Type: System.Boolean
+			Default Value: 
+	Method: PlayCantConsumeItemFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE8DB0
+		Ram Offset 0x180ae9fb0
+		Virtual Method Slot: 119
+
+		Parameter 0:
+			Name: itemId
+			Type: System.Int32
+			Default Value: 
+	Method: GetCurrentRecipeRequirementAmount:
+		Accessibility: Family
+		Return Type: System.Int32
+		File Offset 0x00AE8EF0
+		Ram Offset 0x180aea0f0
+		Virtual Method Slot: 140
+
+		Parameter 0:
+			Name: requiredResources
+			Type: System.Collections.Generic.List`1<ResourceAmountPair>
+			Default Value: 
+	Method: HasLogisticsPriority:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00599650
+		Ram Offset 0x18059a850
+		Virtual Method Slot: 148
+
+	Method: IsLogisticsHiPriority:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00AE9090
+		Ram Offset 0x180aea290
+		Virtual Method Slot: 150
+
+	Method: IsLogisticsLoPriority:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00AE9240
+		Ram Offset 0x180aea440
+		Virtual Method Slot: 149
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE9340
+		Ram Offset 0x180aea540
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: parentArea
+			Type: WorldArea
+			Default Value: 
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x00AE9540
+		Ram Offset 0x180aea740
+		Virtual Method Slot: 97
+
+		Parameter 0:
+			Name: firstSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: get_ConsumedUnits:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<EnergyUnit>
+		File Offset 0x00AE99E0
+		Ram Offset 0x180aeabe0
+		Virtual Method Slot: 65535
+
+	Method: get_AvailableUnits:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<EnergyUnit>
+		File Offset 0x0041BED0
+		Ram Offset 0x18041d0d0
+		Virtual Method Slot: 65535
+
+	Method: get_RealAvailableUnits:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<EnergyUnit>
+		File Offset 0x00AE99F0
+		Ram Offset 0x180aeabf0
+		Virtual Method Slot: 65535
+
+	Method: get_RealTotalUnits:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<EnergyUnit>
+		File Offset 0x00AE9B50
+		Ram Offset 0x180aead50
+		Virtual Method Slot: 65535
+
+	Method: get_AllUnits:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<EnergyUnit>
+		File Offset 0x00AE9CB0
+		Ram Offset 0x180aeaeb0
+		Virtual Method Slot: 65535
+
+	Method: get_IsProducingEnergy:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AE9CC0
+		Ram Offset 0x180aeaec0
+		Virtual Method Slot: 65535
+
+	Method: get_ProducedEnergyRaw:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00AE9CE0
+		Ram Offset 0x180aeaee0
+		Virtual Method Slot: 65535
+
+	Method: get_ProducedEnergy:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00AE9D30
+		Ram Offset 0x180aeaf30
+		Virtual Method Slot: 65535
+
+	Method: get_FuelType:
+		Accessibility: Public
+		Return Type: BaseResourceScriptableObject
+		File Offset 0x0072F5B0
+		Ram Offset 0x1807307b0
+		Virtual Method Slot: 65535
+
+	Method: get_FuelConsumptionProgress:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00AE9E00
+		Ram Offset 0x180aeb000
+		Virtual Method Slot: 65535
+
+	Method: get_UseFuel:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AE9E30
+		Ram Offset 0x180aeb030
+		Virtual Method Slot: 65535
+
+	Method: get_FuelDuration:
+		Accessibility: Family
+		Return Type: System.Single
+		File Offset 0x00AE9E40
+		Ram Offset 0x180aeb040
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AE9E60
+		Ram Offset 0x180aeb060
+		Virtual Method Slot: 65535

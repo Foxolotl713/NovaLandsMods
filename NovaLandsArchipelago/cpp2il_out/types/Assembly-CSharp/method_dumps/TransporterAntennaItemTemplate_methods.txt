@@ -1,0 +1,378 @@
+Type: TransporterAntennaItemTemplate
+
+Method: System.Void TransporterAntennaItemTemplate::Setup(UnityEngine.Sprite,System.Boolean):	Method Body (x86 ASM):
+		0x180B41530 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180B41535 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B41536 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180B4153A movzx edi,r8b		; DEBUG: {Register}/EDI {Register}/R8L ||| None | 0 | None ||| N/A | N/A
+		0x180B4153E mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180B41541 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180B41544 call 0000000180B41570h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B41549 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180B4154C movzx edx,dil		; DEBUG: {Register}/EDX {Register}/DIL ||| None | 0 | None ||| N/A | N/A
+		0x180B41550 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180B41553 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180B41558 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180B4155C pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B4155D jmp near ptr 0000000180B415E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B41562 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void TransporterAntennaItemTemplate::Setup(UnityEngine.Sprite,System.Boolean):
+		End of function at 0x180B41563
+		Absolute End is at 0x180B41563
+		Identified Jump Destination addresses:
+
+		0x180B41535: Saves the content of rdi to the stack
+		0x180B4153A: Copies {'emit' (function parameter, type System.Boolean)} from r8 into rdi
+		0x180B4153E: Copies {'this' (function parameter, type TransporterAntennaItemTemplate)} from rcx into rbx
+		0x180B41544: [!] Calls managed method System.Void TransporterAntennaItemTemplate::SetSprite(UnityEngine.Sprite) on instance {'this' (function parameter, type TransporterAntennaItemTemplate)} with arguments [{'sprite' (function parameter, type UnityEngine.Sprite)}]
+
+		0x180B4154C: Copies {'emit' (function parameter, type System.Boolean)} from rdi into rdx
+		0x180B41550: Copies {'this' (function parameter, type TransporterAntennaItemTemplate)} from rbx into rcx
+		0x180B41553: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant1
+		0x180B4155D: [!] Calls managed method System.Void TransporterAntennaItemTemplate::SetEmit(System.Boolean) on instance {'this' (function parameter, type TransporterAntennaItemTemplate)} with arguments [{'emit' (function parameter, type System.Boolean)}]
+
+		0x180B4155D: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: TransporterAntennaItemTemplate
+	System.Void Setup(UnityEngine.Sprite sprite, System.Boolean emit)
+
+		this.SetSprite(sprite) //(Sprite sprite)
+
+		this.SetEmit(emit) //(Boolean emit)
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldarg.1
+	IL_0002: call System.Void TransporterAntennaItemTemplate::SetSprite(UnityEngine.Sprite)
+	IL_0007: ldarg.0
+	IL_0008: ldarg.2
+	IL_0009: call System.Void TransporterAntennaItemTemplate::SetEmit(System.Boolean)
+	IL_000e: ret
+	
+
+Method: System.Void TransporterAntennaItemTemplate::SetSprite(UnityEngine.Sprite):	Method Body (x86 ASM):
+		0x180B41570 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180B41575 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B41576 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180B4157A mov rbx,[rcx+20h]		; DEBUG: {Register}/RBX {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x180B4157E mov rdi,rdx		; DEBUG: {Register}/RDI {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180B41581 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180B41584 je short 0000000180B415BDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B41586 mov rax,[1832AA458h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495577176 | None ||| N/A | N/A
+		0x180B4158D test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180B41590 jne short 0000000180B415AAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B41592 lea rcx,[18297C778h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485952376 | None ||| N/A | N/A
+		0x180B41599 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B4159E test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180B415A1 je short 0000000180B415C3h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B415A3 mov [1832AA458h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495577176 | None ||| N/A | N/A
+		0x180B415AA mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180B415AD mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180B415B0 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180B415B5 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180B415B9 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B415BA jmp rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B415BD call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B415C2 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void TransporterAntennaItemTemplate::SetSprite(UnityEngine.Sprite):
+		End of function at 0x180B415C3
+		Absolute End is at 0x180B415C3
+		Identified Jump Destination addresses:
+
+		0x180B41575: Saves the content of rdi to the stack
+		0x180B4157A: [!] Reads field sprite from {'this' (function parameter, type TransporterAntennaItemTemplate)} and stores in a new local {'sprite' (type UnityEngine.SpriteRenderer)}
+
+		0x180B4157E: Copies {'sprite' (function parameter, type UnityEngine.Sprite)} from rdx into rdi
+		0x180B41581: [!] Compares {'sprite' (type UnityEngine.SpriteRenderer)} and 0
+		0x180B41584: Jumps to 0x180B415BD (which throws a NRE) if sprite equals 0. Implicitly present in managed code, so ignored here.
+		0x180B41586: Loads string " ä" into register rax as constant UnityEngine.SpriteRenderer.set_sprite
+		0x180B4158D: Compares UnityEngine.SpriteRenderer.set_sprite and 0
+		0x180B41590: Jumps to 0x180B415AA if UnityEngine.SpriteRenderer.set_sprite != 0
+
+		0x180B41592: Loads string "UnityEngine.SpriteRenderer::set_sprite(UnityEngine.Sprite)" into register rcx as constant {'constant4' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180B41599: Looks up unity ICall by name "UnityEngine.SpriteRenderer::set_sprite(UnityEngine.Sprite)" which resolves to System.Void UnityEngine.SpriteRenderer::set_sprite(UnityEngine.Sprite)
+		0x180B4159E: Compares UnityEngine.SpriteRenderer.set_sprite and 0
+		0x180B415A1: Jumps to 0x180B415C3 if UnityEngine.SpriteRenderer.set_sprite equals 0
+
+		0x180B415AA: Copies {'sprite' (function parameter, type UnityEngine.Sprite)} from rdi into rdx
+		0x180B415AD: Copies {'sprite' (type UnityEngine.SpriteRenderer)} from rbx into rcx
+		0x180B415B0: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant6
+		0x180B415BD: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: TransporterAntennaItemTemplate
+	System.Void SetSprite(UnityEngine.Sprite sprite)
+		UnityEngine.SpriteRenderer sprite = this.sprite
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld UnityEngine.SpriteRenderer TransporterAntennaItemTemplate::sprite
+	IL_0006: stloc.0
+	IL_0007: newobj System.Void System.NullReferenceException::.ctor()
+	IL_000c: throw
+	
+
+Method: System.Void TransporterAntennaItemTemplate::SetEmit(System.Boolean):	Method Body (x86 ASM):
+		0x180B415E0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180B415E5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B415E6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180B415EA mov rbx,[rcx+28h]		; DEBUG: {Register}/RBX {Memory}/None ||| RCX | 40 | None ||| N/A | N/A
+		0x180B415EE movzx edi,dl		; DEBUG: {Register}/EDI {Register}/DL ||| None | 0 | None ||| N/A | N/A
+		0x180B415F1 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180B415F4 je short 0000000180B4162Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B415F6 mov rax,[1832A9148h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495572296 | None ||| N/A | N/A
+		0x180B415FD test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180B41600 jne short 0000000180B4161Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B41602 lea rcx,[182973778h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485915512 | None ||| N/A | N/A
+		0x180B41609 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B4160E test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180B41611 je short 0000000180B41634h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B41613 mov [1832A9148h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495572296 | None ||| N/A | N/A
+		0x180B4161A movzx edx,dil		; DEBUG: {Register}/EDX {Register}/DIL ||| None | 0 | None ||| N/A | N/A
+		0x180B4161E mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180B41621 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180B41626 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180B4162A pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B4162B jmp rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B4162E call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B41633 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void TransporterAntennaItemTemplate::SetEmit(System.Boolean):
+		End of function at 0x180B41634
+		Absolute End is at 0x180B41634
+		Identified Jump Destination addresses:
+
+		0x180B415E5: Saves the content of rdi to the stack
+		0x180B415EA: [!] Reads field trail from {'this' (function parameter, type TransporterAntennaItemTemplate)} and stores in a new local {'trail' (type UnityEngine.TrailRenderer)}
+
+		0x180B415EE: Copies {'emit' (function parameter, type System.Boolean)} from rdx into rdi
+		0x180B415F1: [!] Compares {'trail' (type UnityEngine.TrailRenderer)} and 0
+		0x180B415F4: Jumps to 0x180B4162E (which throws a NRE) if trail equals 0. Implicitly present in managed code, so ignored here.
+		0x180B415F6: Reads {Unknown Global at 0x1832A9148, first ten bytes are [20 169 244 2 85 253 13 0 96 253], or as chars "©ôUý `ý"} into register rax as a constant constant2
+		0x180B415FD: Compares UnityEngine.TrailRenderer.set_emitting and 0
+		0x180B41600: Jumps to 0x180B4161A if UnityEngine.TrailRenderer.set_emitting != 0
+
+		0x180B41602: Loads string "UnityEngine.TrailRenderer::set_emitting(System.Boolean)" into register rcx as constant {'constant4' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180B41609: Looks up unity ICall by name "UnityEngine.TrailRenderer::set_emitting(System.Boolean)" which resolves to System.Void UnityEngine.TrailRenderer::set_emitting(System.Boolean)
+		0x180B4160E: Compares UnityEngine.TrailRenderer.set_emitting and 0
+		0x180B41611: Jumps to 0x180B41634 if UnityEngine.TrailRenderer.set_emitting equals 0
+
+		0x180B4161A: Copies {'emit' (function parameter, type System.Boolean)} from rdi into rdx
+		0x180B4161E: Copies {'trail' (type UnityEngine.TrailRenderer)} from rbx into rcx
+		0x180B41621: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant6
+		0x180B4162E: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: TransporterAntennaItemTemplate
+	System.Void SetEmit(System.Boolean emit)
+		UnityEngine.TrailRenderer trail = this.trail
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld UnityEngine.TrailRenderer TransporterAntennaItemTemplate::trail
+	IL_0006: stloc.0
+	IL_0007: newobj System.Void System.NullReferenceException::.ctor()
+	IL_000c: throw
+	
+
+Method: System.Void TransporterAntennaItemTemplate::Reset():	Method Body (x86 ASM):
+		0x180B41650 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B41652 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180B41656 mov rbx,[rcx+28h]		; DEBUG: {Register}/RBX {Memory}/None ||| RCX | 40 | None ||| N/A | N/A
+		0x180B4165A test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180B4165D je short 0000000180B4168Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B4165F mov rax,[1832A9150h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495572304 | None ||| N/A | N/A
+		0x180B41666 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180B41669 jne short 0000000180B41683h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B4166B lea rcx,[1829738A8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485915816 | None ||| N/A | N/A
+		0x180B41672 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B41677 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180B4167A je short 0000000180B41694h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B4167C mov [1832A9150h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495572304 | None ||| N/A | N/A
+		0x180B41683 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180B41686 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180B4168A pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B4168B jmp rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B4168E call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B41693 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void TransporterAntennaItemTemplate::Reset():
+		End of function at 0x180B41694
+		Absolute End is at 0x180B41694
+		Identified Jump Destination addresses:
+
+		0x180B41650: Saves the content of rbx to the stack
+		0x180B41656: [!] Reads field trail from {'this' (function parameter, type TransporterAntennaItemTemplate)} and stores in a new local {'trail' (type UnityEngine.TrailRenderer)}
+
+		0x180B4165A: [!] Compares {'trail' (type UnityEngine.TrailRenderer)} and 0
+		0x180B4165D: Jumps to 0x180B4168E (which throws a NRE) if trail equals 0. Implicitly present in managed code, so ignored here.
+		0x180B4165F: Loads string "`ý" into register rax as constant UnityEngine.TrailRenderer.Clear
+		0x180B41666: Compares UnityEngine.TrailRenderer.Clear and 0
+		0x180B41669: Jumps to 0x180B41683 if UnityEngine.TrailRenderer.Clear != 0
+
+		0x180B4166B: Loads string "UnityEngine.TrailRenderer::Clear()" into register rcx as constant {'constant4' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180B41672: Looks up unity ICall by name "UnityEngine.TrailRenderer::Clear()" which resolves to System.Void UnityEngine.TrailRenderer::Clear()
+		0x180B41677: Compares UnityEngine.TrailRenderer.Clear and 0
+		0x180B4167A: Jumps to 0x180B41694 if UnityEngine.TrailRenderer.Clear equals 0
+
+		0x180B41683: Copies {'trail' (type UnityEngine.TrailRenderer)} from rbx into rcx
+		0x180B4168E: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: TransporterAntennaItemTemplate
+	System.Void Reset()
+		UnityEngine.TrailRenderer trail = this.trail
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld UnityEngine.TrailRenderer TransporterAntennaItemTemplate::trail
+	IL_0006: stloc.0
+	IL_0007: newobj System.Void System.NullReferenceException::.ctor()
+	IL_000c: throw
+	
+
+Method: System.Void TransporterAntennaItemTemplate::SetColor(UnityEngine.Color):	Method Body (x86 ASM):
+		0x180B416B0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B416B2 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180B416B6 mov rbx,[rcx+20h]		; DEBUG: {Register}/RBX {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x180B416BA test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180B416BD je short 0000000180B416FBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B416BF movups xmm0,[rdx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180B416C2 mov rax,[1832AA490h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495577232 | None ||| N/A | N/A
+		0x180B416C9 movaps [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x180B416CE test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180B416D1 jne short 0000000180B416EBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B416D3 lea rcx,[18297C870h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485952624 | None ||| N/A | N/A
+		0x180B416DA call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B416DF test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180B416E2 je short 0000000180B41701h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B416E4 mov [1832AA490h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495577232 | None ||| N/A | N/A
+		0x180B416EB lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180B416F0 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180B416F3 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B416F5 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x180B416F9 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B416FA ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180B416FB call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180B41700 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void TransporterAntennaItemTemplate::SetColor(UnityEngine.Color):
+		End of function at 0x180B41701
+		Absolute End is at 0x180B41701
+		Identified Jump Destination addresses:
+
+		0x180B416B0: Saves the content of rbx to the stack
+		0x180B416B6: [!] Reads field sprite from {'this' (function parameter, type TransporterAntennaItemTemplate)} and stores in a new local {'sprite' (type UnityEngine.SpriteRenderer)}
+
+		0x180B416BA: [!] Compares {'sprite' (type UnityEngine.SpriteRenderer)} and 0
+		0x180B416BD: Jumps to 0x180B416FB (which throws a NRE) if sprite equals 0. Implicitly present in managed code, so ignored here.
+		0x180B416BF: Loads the class pointer from color into a constant constant2 in register xmm0
+		0x180B416C2: Loads string "'æ" into register rax as constant UnityEngine.SpriteRenderer.set_color
+		0x180B416C9: Moves constant2 (type Cpp2IL.Core.Analysis.Il2CppClassIdentifier) from register xmm0 to the stack at offset 32 (0x20) as a new local local3
+		0x180B416CE: Compares UnityEngine.SpriteRenderer.set_color and 0
+		0x180B416D1: Jumps to 0x180B416EB if UnityEngine.SpriteRenderer.set_color != 0
+
+		0x180B416D3: Loads string "UnityEngine.SpriteRenderer::set_color_Injected(UnityEngine.Color&)" into register rcx as constant {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180B416DA: Looks up unity ICall by name "UnityEngine.SpriteRenderer::set_color_Injected(UnityEngine.Color&)" which resolves to System.Void UnityEngine.SpriteRenderer::set_color(UnityEngine.Color)
+		0x180B416DF: Compares UnityEngine.SpriteRenderer.set_color and 0
+		0x180B416E2: Jumps to 0x180B41701 if UnityEngine.SpriteRenderer.set_color equals 0
+
+		0x180B416EB: Loads a pointer to stack offset 0x20 into register rdx as new constant constant7
+		0x180B416F0: Copies {'sprite' (type UnityEngine.SpriteRenderer)} from rbx into rcx
+		0x180B416F3: [!] Calls managed method System.Void UnityEngine.SpriteRenderer::set_color(UnityEngine.Color) on instance {'sprite' (type UnityEngine.SpriteRenderer)} ;  - Mismatched parameters detected here.
+
+		0x180B416FA: [!] Returns from the function
+
+		0x180B416FB: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: TransporterAntennaItemTemplate
+	System.Void SetColor(UnityEngine.Color color)
+		UnityEngine.SpriteRenderer sprite = this.sprite
+
+		sprite.set_color()
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionInRegAction at (0x180B416F3) is corrupt (Couldn't get arguments, or actual count (-1) is not equal to expected count (1)) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void TransporterAntennaItemTemplate::.ctor():	Method Body (x86 ASM):
+		0x18037A630 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A634 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x18037A63B jne short 000000018037A650h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A63D lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A644 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A649 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x18037A650 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A657 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18037A65E jne short 000000018037A669h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A660 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A664 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A669 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A66D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18037A66E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void TransporterAntennaItemTemplate::.ctor():
+		End of function at 0x18037A66F
+		Absolute End is at 0x18037A66F
+		Identified Jump Destination addresses:
+
+		0x18037A634: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x18037A63B: Jumps to 0x18037A650 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x18037A63D: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A644: Initializes runtime metadata value UnityEngine.Object
+		0x18037A650: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A657: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18037A65E: Jumps to 0x18037A669 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18037A66D: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: TransporterAntennaItemTemplate
+	System.Void .ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ret
+	
+

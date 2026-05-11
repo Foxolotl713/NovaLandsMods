@@ -1,0 +1,157 @@
+Type: Internal.Cryptography.Pal.CertificateData:
+	Base Class: 
+		System.ValueType
+
+	Interfaces:
+
+	Nested Types:
+		Internal.Cryptography.Pal.CertificateData/AlgorithmIdentifier
+		Internal.Cryptography.Pal.CertificateData/<ReadReverseRdns>d__21
+
+	Field: RawData
+		Type: System.Byte[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: SubjectPublicKeyInfo
+		Type: System.Byte[]
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Field: Version
+		Type: System.Int32
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: SerialNumber
+		Type: System.Byte[]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: TbsSignature
+		Type: Internal.Cryptography.Pal.CertificateData/AlgorithmIdentifier
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: Issuer
+		Type: System.Security.Cryptography.X509Certificates.X500DistinguishedName
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: NotBefore
+		Type: System.DateTime
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: NotAfter
+		Type: System.DateTime
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: Subject
+		Type: System.Security.Cryptography.X509Certificates.X500DistinguishedName
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: PublicKeyAlgorithm
+		Type: Internal.Cryptography.Pal.CertificateData/AlgorithmIdentifier
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: PublicKey
+		Type: System.Byte[]
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: IssuerUniqueId
+		Type: System.Byte[]
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: SubjectUniqueId
+		Type: System.Byte[]
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: Extensions
+		Type: System.Collections.Generic.List`1<System.Security.Cryptography.X509Certificates.X509Extension>
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: SignatureAlgorithm
+		Type: Internal.Cryptography.Pal.CertificateData/AlgorithmIdentifier
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: SignatureValue
+		Type: System.Byte[]
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01ED96F0
+		Ram Offset 0x181eda8f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rawData
+			Type: System.Byte[]
+			Default Value: 
+	Method: GetNameInfo:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01EDA0C0
+		Ram Offset 0x181edb2c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nameType
+			Type: System.Security.Cryptography.X509Certificates.X509NameType
+			Default Value: 
+		Parameter 1:
+			Name: forIssuer
+			Type: System.Boolean
+			Default Value: 
+	Method: GetSimpleNameInfo:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x01EDA630
+		Ram Offset 0x181edb830
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.Security.Cryptography.X509Certificates.X500DistinguishedName
+			Default Value: 
+	Method: FindAltNameMatch:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x01EDAA10
+		Ram Offset 0x181edbc10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: extensionBytes
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: matchType
+			Type: Internal.Cryptography.Pal.GeneralNameType
+			Default Value: 
+		Parameter 2:
+			Name: otherOid
+			Type: System.String
+			Default Value: 
+	Method: ReadReverseRdns:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.IEnumerable`1<System.Collections.Generic.KeyValuePair`2<System.String, System.String>>
+		File Offset 0x01EDAC10
+		Ram Offset 0x181edbe10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.Security.Cryptography.X509Certificates.X500DistinguishedName
+			Default Value: 

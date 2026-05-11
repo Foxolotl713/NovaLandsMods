@@ -1,0 +1,120 @@
+Type: ZXing.OneD.UPCEANExtension5Support:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: CHECK_DIGIT_ENCODINGS
+		Type: System.Int32[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: decodeMiddleCounters
+		Type: System.Int32[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: decodeRowStringBuffer
+		Type: System.Text.StringBuilder
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02810F00
+		Ram Offset 0x182812100
+		Virtual Method Slot: 65535
+
+	Method: decodeRow:
+		Accessibility: Assembly
+		Return Type: ZXing.Result
+		File Offset 0x02811030
+		Ram Offset 0x182812230
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rowNumber
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 2:
+			Name: extensionStartRange
+			Type: System.Int32[]
+			Default Value: 
+	Method: decodeMiddle:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x02811350
+		Ram Offset 0x182812550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 1:
+			Name: startRange
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 2:
+			Name: resultString
+			Type: System.Text.StringBuilder
+			Default Value: 
+	Method: extensionChecksum:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x028116D0
+		Ram Offset 0x1828128d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: s
+			Type: System.String
+			Default Value: 
+	Method: determineCheckDigit:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x02811780
+		Ram Offset 0x182812980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: lgPatternFound
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: checkDigit
+			Type: System.Int32
+			Default Value: 
+	Method: parseExtensionString:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.IDictionary`2<ZXing.ResultMetadataType, System.Object>
+		File Offset 0x02811830
+		Ram Offset 0x182812a30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: raw
+			Type: System.String
+			Default Value: 
+	Method: parseExtension5String:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x02811920
+		Ram Offset 0x182812b20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: raw
+			Type: System.String
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02811E50
+		Ram Offset 0x182813050
+		Virtual Method Slot: 65535

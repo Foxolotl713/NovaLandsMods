@@ -1,0 +1,173 @@
+Type: Mono.Security.Authenticode.AuthenticodeDeformatter:
+	Base Class: 
+		Mono.Security.Authenticode.AuthenticodeBase
+
+	Interfaces:
+
+	Field: filename
+		Type: System.String
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: rawdata
+		Type: System.Byte[]
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: hash
+		Type: System.Byte[]
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: coll
+		Type: Mono.Security.X509.X509CertificateCollection
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: signedHash
+		Type: Mono.Security.ASN1
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: timestamp
+		Type: System.DateTime
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: signingCertificate
+		Type: Mono.Security.X509.X509Certificate
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: reason
+		Type: System.Int32
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: trustedRoot
+		Type: System.Boolean
+		Offset in Defining Type: 0x7C
+		Has Default: False
+
+	Field: trustedTimestampRoot
+		Type: System.Boolean
+		Offset in Defining Type: 0x7D
+		Has Default: False
+
+	Field: entry
+		Type: System.Byte[]
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: signerChain
+		Type: Mono.Security.X509.X509Chain
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: timestampChain
+		Type: Mono.Security.X509.X509Chain
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016912A0
+		Ram Offset 0x1816924a0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01691450
+		Ram Offset 0x181692650
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rawData
+			Type: System.Byte[]
+			Default Value: 
+	Method: set_RawData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01691630
+		Ram Offset 0x181692830
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte[]
+			Default Value: 
+	Method: get_SigningCertificate:
+		Accessibility: Public
+		Return Type: Mono.Security.X509.X509Certificate
+		File Offset 0x0061D420
+		Ram Offset 0x18061e620
+		Virtual Method Slot: 65535
+
+	Method: CheckSignature:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x016916E0
+		Ram Offset 0x1816928e0
+		Virtual Method Slot: 65535
+
+	Method: CompareIssuerSerial:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01691CD0
+		Ram Offset 0x181692ed0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: issuer
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: serial
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: x509
+			Type: Mono.Security.X509.X509Certificate
+			Default Value: 
+	Method: VerifySignature:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01691E00
+		Ram Offset 0x181693000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sd
+			Type: Mono.Security.PKCS7/SignedData
+			Default Value: 
+		Parameter 1:
+			Name: calculatedMessageDigest
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: ha
+			Type: System.Security.Cryptography.HashAlgorithm
+			Default Value: 
+	Method: VerifyCounterSignature:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01692A90
+		Ram Offset 0x181693c90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cs
+			Type: Mono.Security.PKCS7/SignerInfo
+			Default Value: 
+		Parameter 1:
+			Name: signature
+			Type: System.Byte[]
+			Default Value: 
+	Method: Reset:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016936A0
+		Ram Offset 0x1816948a0
+		Virtual Method Slot: 65535

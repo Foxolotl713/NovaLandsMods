@@ -1,0 +1,427 @@
+Type: EnergyWeapon:
+	Base Class: 
+		BaseWeapon
+
+	Interfaces:
+
+	Field: maxEnergy
+		Type: System.Single
+		Offset in Defining Type: 0x128
+		Has Default: False
+
+	Field: consumedEnergyPerShot
+		Type: System.Single
+		Offset in Defining Type: 0x12C
+		Has Default: False
+
+	Field: delayToRestoreEnergy
+		Type: System.Single
+		Offset in Defining Type: 0x130
+		Has Default: False
+
+	Field: energyRestorationPerSecond
+		Type: System.Single
+		Offset in Defining Type: 0x134
+		Has Default: False
+
+	Field: overheat
+		Type: System.Boolean
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: originalAmmoType
+		Type: AmmoResourceScriptableObject
+		Offset in Defining Type: 0x140
+		Has Default: False
+
+	Field: currentEnergy
+		Type: System.Single
+		Offset in Defining Type: 0x148
+		Has Default: False
+
+	Field: usedAllEnergy
+		Type: System.Boolean
+		Offset in Defining Type: 0x14C
+		Has Default: False
+
+	Field: currentDelayToRestoreEnergy
+		Type: System.Single
+		Offset in Defining Type: 0x150
+		Has Default: False
+
+	Field: rewiredPlayer
+		Type: Rewired.Player
+		Offset in Defining Type: 0x158
+		Has Default: False
+
+	Field: activateWeaponActionId
+		Type: System.Int32
+		Offset in Defining Type: 0x160
+		Has Default: False
+
+	Field: ownerPlayer
+		Type: BasePlayer
+		Offset in Defining Type: 0x168
+		Has Default: False
+
+	Field: bonusMaxEnergy
+		Type: System.Single
+		Offset in Defining Type: 0x170
+		Has Default: False
+
+	Field: bonusRechargeSpeed
+		Type: System.Single
+		Offset in Defining Type: 0x174
+		Has Default: False
+
+	Field: replacementAmmo
+		Type: AmmoResourceScriptableObject
+		Offset in Defining Type: 0x178
+		Has Default: False
+
+	Field: energyPercentageToUseReplacementBullet
+		Type: System.Single
+		Offset in Defining Type: 0x180
+		Has Default: False
+
+	Method: Awake:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0078A210
+		Ram Offset 0x18078b410
+		Virtual Method Slot: 17
+
+	Method: InitStatus:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0078A280
+		Ram Offset 0x18078b480
+		Virtual Method Slot: 19
+
+	Method: SetAmmo:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00785930
+		Ram Offset 0x180786b30
+		Virtual Method Slot: 16
+
+		Parameter 0:
+			Name: ammoType
+			Type: AmmoResourceScriptableObject
+			Default Value: 
+		Parameter 1:
+			Name: ammo
+			Type: System.Int32
+			Default Value: 
+	Method: OnEnable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0078A290
+		Ram Offset 0x18078b490
+		Virtual Method Slot: 20
+
+	Method: OnDisable:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0078A4E0
+		Ram Offset 0x18078b6e0
+		Virtual Method Slot: 65535
+
+	Method: UpdateEnergy:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0078A500
+		Ram Offset 0x18078b700
+		Virtual Method Slot: 65535
+
+	Method: UpdateWeapon:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0078A6B0
+		Ram Offset 0x18078b8b0
+		Virtual Method Slot: 24
+
+		Parameter 0:
+			Name: shoot
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: cursorPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 2:
+			Name: activateWeaponActionId
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: currentSortingOrder
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: autoRotate
+			Type: System.Boolean
+			Default Value: True
+		Parameter 5:
+			Name: renderShadowsInMask
+			Type: System.Boolean
+			Default Value: False
+		Parameter 6:
+			Name: onShoot
+			Type: System.Action`1<BaseBullet>
+			Default Value: 
+	Method: UpdateWeapon:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0078A7D0
+		Ram Offset 0x18078b9d0
+		Virtual Method Slot: 23
+
+		Parameter 0:
+			Name: rewiredPlayer
+			Type: Rewired.Player
+			Default Value: 
+		Parameter 1:
+			Name: cursorPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 2:
+			Name: activateWeaponActionId
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: currentSortingOrder
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: autoRotate
+			Type: System.Boolean
+			Default Value: True
+		Parameter 5:
+			Name: lastInputWasController
+			Type: System.Boolean
+			Default Value: False
+		Parameter 6:
+			Name: renderShadowsInMask
+			Type: System.Boolean
+			Default Value: False
+	Method: UpdateShooting:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0078A940
+		Ram Offset 0x18078bb40
+		Virtual Method Slot: 31
+
+		Parameter 0:
+			Name: rewiredPlayer
+			Type: Rewired.Player
+			Default Value: 
+		Parameter 1:
+			Name: cursorPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 2:
+			Name: activeWeaponActionId
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: autoRotate
+			Type: System.Boolean
+			Default Value: True
+		Parameter 4:
+			Name: lastInputWasController
+			Type: System.Boolean
+			Default Value: False
+		Parameter 5:
+			Name: renderShadowsInMask
+			Type: System.Boolean
+			Default Value: False
+	Method: OnShootBullet:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0078AD20
+		Ram Offset 0x18078bf20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bullet
+			Type: BaseBullet
+			Default Value: 
+	Method: Shoot:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0078ADD0
+		Ram Offset 0x18078bfd0
+		Virtual Method Slot: 29
+
+		Parameter 0:
+			Name: autoRotate
+			Type: System.Boolean
+			Default Value: True
+		Parameter 1:
+			Name: renderShadowsInMask
+			Type: System.Boolean
+			Default Value: False
+		Parameter 2:
+			Name: onShootBullet
+			Type: System.Action`1<BaseBullet>
+			Default Value: 
+	Method: Shoot:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0078AE80
+		Ram Offset 0x18078c080
+		Virtual Method Slot: 30
+
+		Parameter 0:
+			Name: targetPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: onShootBullet
+			Type: System.Action`1<BaseBullet>
+			Default Value: 
+	Method: ConsumeEnergy:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0078AF10
+		Ram Offset 0x18078c110
+		Virtual Method Slot: 65535
+
+	Method: UpdateRestoreEnergy:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0078A500
+		Ram Offset 0x18078b700
+		Virtual Method Slot: 65535
+
+	Method: CanShoot:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0078AF50
+		Ram Offset 0x18078c150
+		Virtual Method Slot: 33
+
+	Method: ShouldReload:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 34
+
+	Method: Reload:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0078AFD0
+		Ram Offset 0x18078c1d0
+		Virtual Method Slot: 35
+
+	Method: UploadReloadFeedback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0078B040
+		Ram Offset 0x18078c240
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: updateWhiteBar
+			Type: System.Boolean
+			Default Value: False
+	Method: SetBonusMaxEnergy:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0078B140
+		Ram Offset 0x18078c340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bonus
+			Type: System.Single
+			Default Value: 
+	Method: SetBonusRechargeSpeed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0078B150
+		Ram Offset 0x18078c350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bonus
+			Type: System.Single
+			Default Value: 
+	Method: SetLowAmmoAttackBonus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0078B160
+		Ram Offset 0x18078c360
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: replacementAmmo
+			Type: AmmoResourceScriptableObject
+			Default Value: 
+		Parameter 1:
+			Name: ammoPercentage
+			Type: System.Single
+			Default Value: 
+	Method: CheckReplaceAmmo:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0078B1D0
+		Ram Offset 0x18078c3d0
+		Virtual Method Slot: 65535
+
+	Method: get_Overheat:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0078B3B0
+		Ram Offset 0x18078c5b0
+		Virtual Method Slot: 65535
+
+	Method: get_HasEnergy:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0078B3D0
+		Ram Offset 0x18078c5d0
+		Virtual Method Slot: 65535
+
+	Method: get_MaxEnergy:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0078B3F0
+		Ram Offset 0x18078c5f0
+		Virtual Method Slot: 65535
+
+	Method: get_FullyCharged:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0078B410
+		Ram Offset 0x18078c610
+		Virtual Method Slot: 65535
+
+	Method: get_ConsumedEnergyPerShot:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00496DD0
+		Ram Offset 0x180497fd0
+		Virtual Method Slot: 65535
+
+	Method: get_DelayToRestoreEnergy:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0078B430
+		Ram Offset 0x18078c630
+		Virtual Method Slot: 65535
+
+	Method: get_EnergyRestorationPerSecond:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0078B440
+		Ram Offset 0x18078c640
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0078A120
+		Ram Offset 0x18078b320
+		Virtual Method Slot: 65535

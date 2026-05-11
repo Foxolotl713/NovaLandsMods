@@ -1,0 +1,697 @@
+Type: MessagePopup:
+	Base Class: 
+		BasePopup
+
+	Interfaces:
+
+	Nested Types:
+		MessagePopup/<InvokeRealtimeCoroutine>d__52
+
+	Field: raycaster
+		Type: UnityEngine.UI.GraphicRaycaster
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: image
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: title
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: message
+		Type: TMPro.TextMeshProUGUI
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: buttonLeftLabel
+		Type: System.Collections.Generic.List`1<TMPro.TextMeshProUGUI>
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: buttonCenterLabel
+		Type: System.Collections.Generic.List`1<TMPro.TextMeshProUGUI>
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: buttonRightLabel
+		Type: System.Collections.Generic.List`1<TMPro.TextMeshProUGUI>
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: buttonLeft
+		Type: CommandActionPair
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: buttonCenter
+		Type: CommandActionPair
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: buttonRight
+		Type: CommandActionPair
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: extraButton
+		Type: CommandActionPair
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: neutralButtonColors
+		Type: UnityEngine.UI.ColorBlock
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: neutralButtonLabelColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: positiveButtonColors
+		Type: UnityEngine.UI.ColorBlock
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: positiveButtonLabelColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x158
+		Has Default: False
+
+	Field: negativeButtonColors
+		Type: UnityEngine.UI.ColorBlock
+		Offset in Defining Type: 0x168
+		Has Default: False
+
+	Field: negativeButtonLabelColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x1C0
+		Has Default: False
+
+	Field: onClickLeftCallback
+		Type: System.Action
+		Offset in Defining Type: 0x1D0
+		Has Default: False
+
+	Field: onClickCenterCallback
+		Type: System.Action
+		Offset in Defining Type: 0x1D8
+		Has Default: False
+
+	Field: onClickRightCallback
+		Type: System.Action
+		Offset in Defining Type: 0x1E0
+		Has Default: False
+
+	Field: onCancelCallback
+		Type: System.Action
+		Offset in Defining Type: 0x1E8
+		Has Default: False
+
+	Field: onClickExtraButtonCallback
+		Type: System.Action
+		Offset in Defining Type: 0x1F0
+		Has Default: False
+
+	Field: buttonLeftActionId
+		Type: System.Int32
+		Offset in Defining Type: 0x1F8
+		Has Default: False
+
+	Field: buttonCenterActionId
+		Type: System.Int32
+		Offset in Defining Type: 0x1FC
+		Has Default: False
+
+	Field: buttonRightActionId
+		Type: System.Int32
+		Offset in Defining Type: 0x200
+		Has Default: False
+
+	Field: timeoutCoroutine
+		Type: UnityEngine.Coroutine
+		Offset in Defining Type: 0x208
+		Has Default: False
+
+	Field: backgroundAnimator
+		Type: UnityEngine.Animator
+		Offset in Defining Type: 0x210
+		Has Default: False
+
+	Field: inputEnabled
+		Type: System.Boolean
+		Offset in Defining Type: 0x218
+		Has Default: False
+
+	Field: ignoreNextInput
+		Type: System.Boolean
+		Offset in Defining Type: 0x219
+		Has Default: False
+
+	Field: ignoreCancelInputToo
+		Type: System.Boolean
+		Offset in Defining Type: 0x21A
+		Has Default: False
+
+	Field: originalPosition
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x21C
+		Has Default: False
+
+	Field: mainCamera
+		Type: UnityEngine.Camera
+		Offset in Defining Type: 0x228
+		Has Default: False
+
+	Field: <FixedScreenPosition>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x230
+		Has Default: False
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0066F510
+		Ram Offset 0x180670710
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: extraButtonActionId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: extraButtonString
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: onClickExtraButton
+			Type: System.Action
+			Default Value: 
+		Parameter 3:
+			Name: title
+			Type: System.String
+			Default Value: 
+		Parameter 4:
+			Name: message
+			Type: System.String
+			Default Value: 
+		Parameter 5:
+			Name: defaultOption
+			Type: System.Int32
+			Default Value: 
+		Parameter 6:
+			Name: onCancelCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 7:
+			Name: buttonLeftActionId
+			Type: System.Int32
+			Default Value: 
+		Parameter 8:
+			Name: buttonLeftText
+			Type: System.String
+			Default Value: 
+		Parameter 9:
+			Name: onClickLeftCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 10:
+			Name: leftButtonType
+			Type: PopupButtonType
+			Default Value: 0
+		Parameter 11:
+			Name: buttonCenterActionId
+			Type: System.Int32
+			Default Value: -1
+		Parameter 12:
+			Name: buttonCenterText
+			Type: System.String
+			Default Value: 
+		Parameter 13:
+			Name: onClickCenterCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 14:
+			Name: centerButtonType
+			Type: PopupButtonType
+			Default Value: 0
+		Parameter 15:
+			Name: buttonRightActionId
+			Type: System.Int32
+			Default Value: -1
+		Parameter 16:
+			Name: buttonRightText
+			Type: System.String
+			Default Value: 
+		Parameter 17:
+			Name: onClickRightCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 18:
+			Name: rightButtonType
+			Type: PopupButtonType
+			Default Value: 0
+		Parameter 19:
+			Name: timeout
+			Type: System.Single
+			Default Value: 0
+		Parameter 20:
+			Name: onTimeout
+			Type: System.Action
+			Default Value: 
+		Parameter 21:
+			Name: backgroundAnimator
+			Type: UnityEngine.Animator
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0066F8A0
+		Ram Offset 0x180670aa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: title
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: message
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: defaultOption
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: scale
+			Type: System.Single
+			Default Value: 
+		Parameter 4:
+			Name: onCancelCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 5:
+			Name: buttonLeftActionId
+			Type: System.Int32
+			Default Value: 
+		Parameter 6:
+			Name: buttonLeftText
+			Type: System.String
+			Default Value: 
+		Parameter 7:
+			Name: onClickLeftCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 8:
+			Name: leftButtonType
+			Type: PopupButtonType
+			Default Value: 0
+		Parameter 9:
+			Name: buttonCenterActionId
+			Type: System.Int32
+			Default Value: -1
+		Parameter 10:
+			Name: buttonCenterText
+			Type: System.String
+			Default Value: 
+		Parameter 11:
+			Name: onClickCenterCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 12:
+			Name: centerButtonType
+			Type: PopupButtonType
+			Default Value: 0
+		Parameter 13:
+			Name: buttonRightActionId
+			Type: System.Int32
+			Default Value: -1
+		Parameter 14:
+			Name: buttonRightText
+			Type: System.String
+			Default Value: 
+		Parameter 15:
+			Name: onClickRightCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 16:
+			Name: rightButtonType
+			Type: PopupButtonType
+			Default Value: 0
+		Parameter 17:
+			Name: timeout
+			Type: System.Single
+			Default Value: 0
+		Parameter 18:
+			Name: onTimeout
+			Type: System.Action
+			Default Value: 
+		Parameter 19:
+			Name: backgroundAnimator
+			Type: UnityEngine.Animator
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0066FAD0
+		Ram Offset 0x180670cd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sprite
+			Type: UnityEngine.Sprite
+			Default Value: 
+		Parameter 1:
+			Name: title
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: message
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: defaultOption
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: onCancelCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 5:
+			Name: buttonLeftActionId
+			Type: System.Int32
+			Default Value: 
+		Parameter 6:
+			Name: buttonLeftText
+			Type: System.String
+			Default Value: 
+		Parameter 7:
+			Name: onClickLeftCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 8:
+			Name: leftButtonType
+			Type: PopupButtonType
+			Default Value: 0
+		Parameter 9:
+			Name: buttonCenterActionId
+			Type: System.Int32
+			Default Value: -1
+		Parameter 10:
+			Name: buttonCenterText
+			Type: System.String
+			Default Value: 
+		Parameter 11:
+			Name: onClickCenterCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 12:
+			Name: centerButtonType
+			Type: PopupButtonType
+			Default Value: 0
+		Parameter 13:
+			Name: buttonRightActionId
+			Type: System.Int32
+			Default Value: -1
+		Parameter 14:
+			Name: buttonRightText
+			Type: System.String
+			Default Value: 
+		Parameter 15:
+			Name: onClickRightCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 16:
+			Name: rightButtonType
+			Type: PopupButtonType
+			Default Value: 0
+		Parameter 17:
+			Name: timeout
+			Type: System.Single
+			Default Value: 0
+		Parameter 18:
+			Name: onTimeout
+			Type: System.Action
+			Default Value: 
+		Parameter 19:
+			Name: backgroundAnimator
+			Type: UnityEngine.Animator
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0066FCD0
+		Ram Offset 0x180670ed0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: title
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: message
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: defaultOption
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: onCancelCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 4:
+			Name: buttonLeftActionId
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: buttonLeftText
+			Type: System.String
+			Default Value: 
+		Parameter 6:
+			Name: onClickLeftCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 7:
+			Name: leftButtonType
+			Type: PopupButtonType
+			Default Value: 0
+		Parameter 8:
+			Name: buttonCenterActionId
+			Type: System.Int32
+			Default Value: -1
+		Parameter 9:
+			Name: buttonCenterText
+			Type: System.String
+			Default Value: 
+		Parameter 10:
+			Name: onClickCenterCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 11:
+			Name: centerButtonType
+			Type: PopupButtonType
+			Default Value: 0
+		Parameter 12:
+			Name: buttonRightActionId
+			Type: System.Int32
+			Default Value: -1
+		Parameter 13:
+			Name: buttonRightText
+			Type: System.String
+			Default Value: 
+		Parameter 14:
+			Name: onClickRightCallback
+			Type: System.Action
+			Default Value: 
+		Parameter 15:
+			Name: rightButtonType
+			Type: PopupButtonType
+			Default Value: 0
+		Parameter 16:
+			Name: timeout
+			Type: System.Single
+			Default Value: 0
+		Parameter 17:
+			Name: onTimeout
+			Type: System.Action
+			Default Value: 
+		Parameter 18:
+			Name: backgroundAnimator
+			Type: UnityEngine.Animator
+			Default Value: 
+	Method: SetupNavigation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00670640
+		Ram Offset 0x180671840
+		Virtual Method Slot: 65535
+
+	Method: Start:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00671890
+		Ram Offset 0x180672a90
+		Virtual Method Slot: 4
+
+	Method: SetButtonColor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00671AD0
+		Ram Offset 0x180672cd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: button
+			Type: CommandActionPair
+			Default Value: 
+		Parameter 1:
+			Name: buttonLabels
+			Type: System.Collections.Generic.List`1<TMPro.TextMeshProUGUI>
+			Default Value: 
+		Parameter 2:
+			Name: buttonType
+			Type: PopupButtonType
+			Default Value: 
+	Method: CancelTimeoutCoroutine:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00671F00
+		Ram Offset 0x180673100
+		Virtual Method Slot: 65535
+
+	Method: OnClickCommon:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00671F00
+		Ram Offset 0x180673100
+		Virtual Method Slot: 65535
+
+	Method: SetupMouse:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: OnClickExtraButton:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00671F20
+		Ram Offset 0x180673120
+		Virtual Method Slot: 65535
+
+	Method: OnClickLeftButton:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00671F70
+		Ram Offset 0x180673170
+		Virtual Method Slot: 65535
+
+	Method: OnClickCenterButton:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00671FC0
+		Ram Offset 0x1806731c0
+		Virtual Method Slot: 65535
+
+	Method: OnClickRightButton:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00672010
+		Ram Offset 0x180673210
+		Virtual Method Slot: 65535
+
+	Method: OnClickCancel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00672060
+		Ram Offset 0x180673260
+		Virtual Method Slot: 65535
+
+	Method: OnDestroy:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00672080
+		Ram Offset 0x180673280
+		Virtual Method Slot: 65535
+
+	Method: ClickedButton:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x006721B0
+		Ram Offset 0x1806733b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: button
+			Type: UnityEngine.UI.Button
+			Default Value: 
+	Method: SetIgnorePauseInput:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00672580
+		Ram Offset 0x180673780
+		Virtual Method Slot: 65535
+
+	Method: SetIgnoreNextConfirmUp:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00672750
+		Ram Offset 0x180673950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ignoreCancelInputToo
+			Type: System.Boolean
+			Default Value: True
+	Method: Update:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00672760
+		Ram Offset 0x180673960
+		Virtual Method Slot: 65535
+
+	Method: InvokeRealtimeCoroutine:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00672DC0
+		Ram Offset 0x180673fc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: System.Action
+			Default Value: 
+		Parameter 1:
+			Name: duration
+			Type: System.Single
+			Default Value: 
+	Method: get_FixedScreenPosition:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00672E80
+		Ram Offset 0x180674080
+		Virtual Method Slot: 65535
+
+	Method: set_FixedScreenPosition:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00672E90
+		Ram Offset 0x180674090
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379430
+		Ram Offset 0x18037a630
+		Virtual Method Slot: 65535

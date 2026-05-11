@@ -1,0 +1,1126 @@
+Type: UnityEngine.Timeline.TrackAsset:
+	Base Class: 
+		UnityEngine.Playables.PlayableAsset
+
+	Interfaces:
+		UnityEngine.ISerializationCallbackReceiver
+		UnityEngine.Timeline.IPropertyPreview
+		UnityEngine.Timeline.ICurvesOwner
+
+	Nested Types:
+		UnityEngine.Timeline.TrackAsset/Versions
+		UnityEngine.Timeline.TrackAsset/TrackAssetUpgrade
+		UnityEngine.Timeline.TrackAsset/TransientBuildData
+		UnityEngine.Timeline.TrackAsset/<>c
+		UnityEngine.Timeline.TrackAsset/<get_outputs>d__65
+
+	Static Field: k_LatestVersion
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 3
+
+	Static Field: s_BuildData
+		Type: UnityEngine.Timeline.TrackAsset/TransientBuildData
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: kDefaultCurvesName
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: Track Parameters
+
+	Field: m_Version
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: OnClipPlayableCreate
+		Type: System.Action`3<UnityEngine.Timeline.TimelineClip,UnityEngine.GameObject,UnityEngine.Playables.Playable>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_AnimClip
+		Type: UnityEngine.AnimationClip
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: OnTrackAnimationPlayableCreate
+		Type: System.Action`3<UnityEngine.Timeline.TrackAsset,UnityEngine.GameObject,UnityEngine.Playables.Playable>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_Locked
+		Type: System.Boolean
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: s_EmptyCache
+		Type: UnityEngine.Timeline.TrackAsset[]
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_Muted
+		Type: System.Boolean
+		Offset in Defining Type: 0x29
+		Has Default: False
+
+	Field: m_CustomPlayableFullTypename
+		Type: System.String
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Static Field: s_TrackBindingTypeAttributeCache
+		Type: System.Collections.Generic.Dictionary`2<System.Type,UnityEngine.Timeline.TrackBindingTypeAttribute>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_Curves
+		Type: UnityEngine.AnimationClip
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_Parent
+		Type: UnityEngine.Playables.PlayableAsset
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: m_Children
+		Type: System.Collections.Generic.List`1<UnityEngine.ScriptableObject>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: m_ItemsHash
+		Type: System.Int32
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: m_ClipsCache
+		Type: UnityEngine.Timeline.TimelineClip[]
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: m_Start
+		Type: UnityEngine.Timeline.DiscreteTime
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: m_End
+		Type: UnityEngine.Timeline.DiscreteTime
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: m_CacheSorted
+		Type: System.Boolean
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: m_SupportsNotifications
+		Type: System.Nullable`1<System.Boolean>
+		Offset in Defining Type: 0x71
+		Has Default: False
+
+	Field: m_ChildTrackCache
+		Type: System.Collections.Generic.IEnumerable`1<UnityEngine.Timeline.TrackAsset>
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: m_Clips
+		Type: System.Collections.Generic.List`1<UnityEngine.Timeline.TimelineClip>
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: m_Markers
+		Type: UnityEngine.Timeline.MarkerList
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Method: OnBeforeTrackSerialize:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 20
+
+	Method: OnAfterTrackDeserialize:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 21
+
+	Method: OnUpgradeFromVersion:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 22
+
+		Parameter 0:
+			Name: oldVersion
+			Type: System.Int32
+			Default Value: 
+	Method: UnityEngine.ISerializationCallbackReceiver.OnBeforeSerialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023E1840
+		Ram Offset 0x1823e2a40
+		Virtual Method Slot: 9
+
+	Method: UnityEngine.ISerializationCallbackReceiver.OnAfterDeserialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023E1AC0
+		Ram Offset 0x1823e2cc0
+		Virtual Method Slot: 10
+
+	Method: UpgradeToLatestVersion:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: add_OnClipPlayableCreate:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E1DB0
+		Ram Offset 0x1823e2fb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`3<UnityEngine.Timeline.TimelineClip, UnityEngine.GameObject, UnityEngine.Playables.Playable>
+			Default Value: 
+	Method: remove_OnClipPlayableCreate:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E1F20
+		Ram Offset 0x1823e3120
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`3<UnityEngine.Timeline.TimelineClip, UnityEngine.GameObject, UnityEngine.Playables.Playable>
+			Default Value: 
+	Method: add_OnTrackAnimationPlayableCreate:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E2090
+		Ram Offset 0x1823e3290
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`3<UnityEngine.Timeline.TrackAsset, UnityEngine.GameObject, UnityEngine.Playables.Playable>
+			Default Value: 
+	Method: remove_OnTrackAnimationPlayableCreate:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E2200
+		Ram Offset 0x1823e3400
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Action`3<UnityEngine.Timeline.TrackAsset, UnityEngine.GameObject, UnityEngine.Playables.Playable>
+			Default Value: 
+	Method: get_start:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x023E2370
+		Ram Offset 0x1823e3570
+		Virtual Method Slot: 65535
+
+	Method: get_end:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x023E2400
+		Ram Offset 0x1823e3600
+		Virtual Method Slot: 65535
+
+	Method: get_duration:
+		Accessibility: Public
+		Return Type: System.Double
+		File Offset 0x023E2490
+		Ram Offset 0x1823e3690
+		Virtual Method Slot: 7
+
+	Method: get_muted:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A1D330
+		Ram Offset 0x180a1e530
+		Virtual Method Slot: 65535
+
+	Method: set_muted:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A4EF90
+		Ram Offset 0x180a50190
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_mutedInHierarchy:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x023E2530
+		Ram Offset 0x1823e3730
+		Virtual Method Slot: 65535
+
+	Method: get_timelineAsset:
+		Accessibility: Public
+		Return Type: UnityEngine.Timeline.TimelineAsset
+		File Offset 0x023E27B0
+		Ram Offset 0x1823e39b0
+		Virtual Method Slot: 65535
+
+	Method: get_parent:
+		Accessibility: Public
+		Return Type: UnityEngine.Playables.PlayableAsset
+		File Offset 0x0051A3F0
+		Ram Offset 0x18051b5f0
+		Virtual Method Slot: 65535
+
+	Method: set_parent:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x005399C0
+		Ram Offset 0x18053abc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Playables.PlayableAsset
+			Default Value: 
+	Method: GetClips:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.IEnumerable`1<UnityEngine.Timeline.TimelineClip>
+		File Offset 0x023E2A60
+		Ram Offset 0x1823e3c60
+		Virtual Method Slot: 65535
+
+	Method: get_clips:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Timeline.TimelineClip[]
+		File Offset 0x023E2A70
+		Ram Offset 0x1823e3c70
+		Virtual Method Slot: 65535
+
+	Method: get_isEmpty:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x023E2BC0
+		Ram Offset 0x1823e3dc0
+		Virtual Method Slot: 23
+
+	Method: get_hasClips:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x023E2C60
+		Ram Offset 0x1823e3e60
+		Virtual Method Slot: 65535
+
+	Method: get_hasCurves:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x023E2CB0
+		Ram Offset 0x1823e3eb0
+		Virtual Method Slot: 13
+
+	Method: get_isSubTrack:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x023E2DD0
+		Ram Offset 0x1823e3fd0
+		Virtual Method Slot: 65535
+
+	Method: get_outputs:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.IEnumerable`1<UnityEngine.Playables.PlayableBinding>
+		File Offset 0x023E2F30
+		Ram Offset 0x1823e4130
+		Virtual Method Slot: 8
+
+	Method: GetChildTracks:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.IEnumerable`1<UnityEngine.Timeline.TrackAsset>
+		File Offset 0x023E2FD0
+		Ram Offset 0x1823e41d0
+		Virtual Method Slot: 65535
+
+	Method: get_customPlayableTypename:
+		Accessibility: Assembly
+		Return Type: System.String
+		File Offset 0x003A09A0
+		Ram Offset 0x1803a1ba0
+		Virtual Method Slot: 65535
+
+	Method: set_customPlayableTypename:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x003A09B0
+		Ram Offset 0x1803a1bb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: get_curves:
+		Accessibility: Public
+		Return Type: UnityEngine.AnimationClip
+		File Offset 0x004E1440
+		Ram Offset 0x1804e2640
+		Virtual Method Slot: 12
+
+	Method: set_curves:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0068B340
+		Ram Offset 0x18068c540
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.AnimationClip
+			Default Value: 
+	Method: UnityEngine.Timeline.ICurvesOwner.get_defaultCurvesName:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x023E2FF0
+		Ram Offset 0x1823e41f0
+		Virtual Method Slot: 16
+
+	Method: UnityEngine.Timeline.ICurvesOwner.get_asset:
+		Accessibility: Private
+		Return Type: UnityEngine.Object
+		File Offset 0x00910F80
+		Ram Offset 0x180912180
+		Virtual Method Slot: 17
+
+	Method: UnityEngine.Timeline.ICurvesOwner.get_assetOwner:
+		Accessibility: Private
+		Return Type: UnityEngine.Object
+		File Offset 0x023E3020
+		Ram Offset 0x1823e4220
+		Virtual Method Slot: 18
+
+	Method: UnityEngine.Timeline.ICurvesOwner.get_targetTrack:
+		Accessibility: Private
+		Return Type: UnityEngine.Timeline.TrackAsset
+		File Offset 0x00910F80
+		Ram Offset 0x180912180
+		Virtual Method Slot: 19
+
+	Method: get_subTracksObjects:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.List`1<UnityEngine.ScriptableObject>
+		File Offset 0x003F4770
+		Ram Offset 0x1803f5970
+		Virtual Method Slot: 65535
+
+	Method: get_locked:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003A0750
+		Ram Offset 0x1803a1950
+		Virtual Method Slot: 65535
+
+	Method: set_locked:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003A0760
+		Ram Offset 0x1803a1960
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_lockedInHierarchy:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x023E3030
+		Ram Offset 0x1823e4230
+		Virtual Method Slot: 65535
+
+	Method: get_supportsNotifications:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x023E32B0
+		Ram Offset 0x1823e44b0
+		Virtual Method Slot: 65535
+
+	Method: __internalAwake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023E3340
+		Ram Offset 0x1823e4540
+		Virtual Method Slot: 65535
+
+	Method: CreateCurves:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023E34F0
+		Ram Offset 0x1823e46f0
+		Virtual Method Slot: 15
+
+		Parameter 0:
+			Name: curvesClipName
+			Type: System.String
+			Default Value: 
+	Method: CreateTrackMixer:
+		Accessibility: Public
+		Return Type: UnityEngine.Playables.Playable
+		File Offset 0x023E3640
+		Ram Offset 0x1823e4840
+		Virtual Method Slot: 24
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 
+	Method: CreatePlayable:
+		Accessibility: Public
+		Return Type: UnityEngine.Playables.Playable
+		File Offset 0x023E3740
+		Ram Offset 0x1823e4940
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+	Method: CreateDefaultClip:
+		Accessibility: Public
+		Return Type: UnityEngine.Timeline.TimelineClip
+		File Offset 0x023E37D0
+		Ram Offset 0x1823e49d0
+		Virtual Method Slot: 65535
+
+	Method: CreateClip:
+		Accessibility: Public
+		Return Type: UnityEngine.Timeline.TimelineClip
+		File Offset 0x00DD1000
+		Ram Offset 0x180dd2200
+		Virtual Method Slot: 65535
+
+	Method: DeleteClip:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x023E3AE0
+		Ram Offset 0x1823e4ce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: clip
+			Type: UnityEngine.Timeline.TimelineClip
+			Default Value: 
+	Method: CreateMarker:
+		Accessibility: Public
+		Return Type: UnityEngine.Timeline.IMarker
+		File Offset 0x023E3C60
+		Ram Offset 0x1823e4e60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+		Parameter 1:
+			Name: time
+			Type: System.Double
+			Default Value: 
+	Method: CreateMarker:
+		Accessibility: Public
+		Return Type: T
+		File Offset 0x00DD11D0
+		Ram Offset 0x180dd23d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: time
+			Type: System.Double
+			Default Value: 
+	Method: DeleteMarker:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x023E3C90
+		Ram Offset 0x1823e4e90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: marker
+			Type: UnityEngine.Timeline.IMarker
+			Default Value: 
+	Method: GetMarkers:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.IEnumerable`1<UnityEngine.Timeline.IMarker>
+		File Offset 0x023E3CA0
+		Ram Offset 0x1823e4ea0
+		Virtual Method Slot: 65535
+
+	Method: GetMarkerCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x023E3CD0
+		Ram Offset 0x1823e4ed0
+		Virtual Method Slot: 65535
+
+	Method: GetMarker:
+		Accessibility: Public
+		Return Type: UnityEngine.Timeline.IMarker
+		File Offset 0x023E3D20
+		Ram Offset 0x1823e4f20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: idx
+			Type: System.Int32
+			Default Value: 
+	Method: CreateClip:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Timeline.TimelineClip
+		File Offset 0x023E3D30
+		Ram Offset 0x1823e4f30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: requestedType
+			Type: System.Type
+			Default Value: 
+	Method: CreateAndAddNewClipOfType:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Timeline.TimelineClip
+		File Offset 0x023E3E70
+		Ram Offset 0x1823e5070
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: requestedType
+			Type: System.Type
+			Default Value: 
+	Method: CreateClipOfType:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Timeline.TimelineClip
+		File Offset 0x023E3EB0
+		Ram Offset 0x1823e50b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: requestedType
+			Type: System.Type
+			Default Value: 
+	Method: CreateClipFromPlayableAsset:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Timeline.TimelineClip
+		File Offset 0x023E4190
+		Ram Offset 0x1823e5390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: asset
+			Type: UnityEngine.Playables.IPlayableAsset
+			Default Value: 
+	Method: CreateClipFromAsset:
+		Accessibility: Private
+		Return Type: UnityEngine.Timeline.TimelineClip
+		File Offset 0x023E44B0
+		Ram Offset 0x1823e56b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: playableAsset
+			Type: UnityEngine.ScriptableObject
+			Default Value: 
+	Method: GetMarkersRaw:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.IEnumerable`1<UnityEngine.ScriptableObject>
+		File Offset 0x00530430
+		Ram Offset 0x180531630
+		Virtual Method Slot: 65535
+
+	Method: ClearMarkers:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E4760
+		Ram Offset 0x1823e5960
+		Virtual Method Slot: 65535
+
+	Method: AddMarker:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E47D0
+		Ram Offset 0x1823e59d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: e
+			Type: UnityEngine.ScriptableObject
+			Default Value: 
+	Method: DeleteMarkerRaw:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x023E47E0
+		Ram Offset 0x1823e59e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: marker
+			Type: UnityEngine.ScriptableObject
+			Default Value: 
+	Method: GetTimeRangeHash:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x023E4820
+		Ram Offset 0x1823e5a20
+		Virtual Method Slot: 65535
+
+	Method: AddClip:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E4A70
+		Ram Offset 0x1823e5c70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newClip
+			Type: UnityEngine.Timeline.TimelineClip
+			Default Value: 
+	Method: CreateNotificationsPlayable:
+		Accessibility: Private
+		Return Type: UnityEngine.Playables.Playable
+		File Offset 0x023E4B90
+		Ram Offset 0x1823e5d90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: mixerPlayable
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+		Parameter 2:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 3:
+			Name: timelinePlayable
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+	Method: CreatePlayableGraph:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Playables.Playable
+		File Offset 0x023E50F0
+		Ram Offset 0x1823e62f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 2:
+			Name: tree
+			Type: UnityEngine.Timeline.IntervalTree`1<UnityEngine.Timeline.RuntimeElement>
+			Default Value: 
+		Parameter 3:
+			Name: timelinePlayable
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+	Method: CompileClips:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Playables.Playable
+		File Offset 0x023E5550
+		Ram Offset 0x1823e6750
+		Virtual Method Slot: 25
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 2:
+			Name: timelineClips
+			Type: System.Collections.Generic.IList`1<UnityEngine.Timeline.TimelineClip>
+			Default Value: 
+		Parameter 3:
+			Name: tree
+			Type: UnityEngine.Timeline.IntervalTree`1<UnityEngine.Timeline.RuntimeElement>
+			Default Value: 
+	Method: GatherCompilableTracks:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023E5A10
+		Ram Offset 0x1823e6c10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tracks
+			Type: System.Collections.Generic.IList`1<UnityEngine.Timeline.TrackAsset>
+			Default Value: 
+	Method: GatherNotifications:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023E5CD0
+		Ram Offset 0x1823e6ed0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: markers
+			Type: System.Collections.Generic.List`1<UnityEngine.Timeline.IMarker>
+			Default Value: 
+	Method: CreateMixerPlayableGraph:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Playables.Playable
+		File Offset 0x023E5FC0
+		Ram Offset 0x1823e71c0
+		Virtual Method Slot: 26
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 2:
+			Name: tree
+			Type: UnityEngine.Timeline.IntervalTree`1<UnityEngine.Timeline.RuntimeElement>
+			Default Value: 
+	Method: ConfigureTrackAnimation:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E68B0
+		Ram Offset 0x1823e7ab0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tree
+			Type: UnityEngine.Timeline.IntervalTree`1<UnityEngine.Timeline.RuntimeElement>
+			Default Value: 
+		Parameter 1:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 2:
+			Name: blend
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+	Method: SortClips:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E6A50
+		Ram Offset 0x1823e7c50
+		Virtual Method Slot: 65535
+
+	Method: ClearClipsInternal:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E6CC0
+		Ram Offset 0x1823e7ec0
+		Virtual Method Slot: 65535
+
+	Method: ClearSubTracksInternal:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E6DE0
+		Ram Offset 0x1823e7fe0
+		Virtual Method Slot: 65535
+
+	Method: OnClipMove:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E6EA0
+		Ram Offset 0x1823e80a0
+		Virtual Method Slot: 65535
+
+	Method: CreateNewClipContainerInternal:
+		Accessibility: Assembly
+		Return Type: UnityEngine.Timeline.TimelineClip
+		File Offset 0x023E6EB0
+		Ram Offset 0x1823e80b0
+		Virtual Method Slot: 65535
+
+	Method: AddChild:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E72D0
+		Ram Offset 0x1823e84d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: child
+			Type: UnityEngine.Timeline.TrackAsset
+			Default Value: 
+	Method: MoveLastTrackBefore:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E7400
+		Ram Offset 0x1823e8600
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: asset
+			Type: UnityEngine.Timeline.TrackAsset
+			Default Value: 
+	Method: RemoveSubTrack:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x023E7750
+		Ram Offset 0x1823e8950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: child
+			Type: UnityEngine.Timeline.TrackAsset
+			Default Value: 
+	Method: RemoveClip:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E7820
+		Ram Offset 0x1823e8a20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: clip
+			Type: UnityEngine.Timeline.TimelineClip
+			Default Value: 
+	Method: GetEvaluationTime:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E78D0
+		Ram Offset 0x1823e8ad0
+		Virtual Method Slot: 27
+
+		Parameter 0:
+			Name: outStart
+			Type: System.Double
+			Default Value: 
+		Parameter 1:
+			Name: outDuration
+			Type: System.Double
+			Default Value: 
+	Method: GetSequenceTime:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E7B20
+		Ram Offset 0x1823e8d20
+		Virtual Method Slot: 28
+
+		Parameter 0:
+			Name: outStart
+			Type: System.Double
+			Default Value: 
+		Parameter 1:
+			Name: outDuration
+			Type: System.Double
+			Default Value: 
+	Method: GatherProperties:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023E7B40
+		Ram Offset 0x1823e8d40
+		Virtual Method Slot: 29
+
+		Parameter 0:
+			Name: director
+			Type: UnityEngine.Playables.PlayableDirector
+			Default Value: 
+		Parameter 1:
+			Name: driver
+			Type: UnityEngine.Timeline.IPropertyCollector
+			Default Value: 
+	Method: GetGameObjectBinding:
+		Accessibility: Assembly
+		Return Type: UnityEngine.GameObject
+		File Offset 0x023E81B0
+		Ram Offset 0x1823e93b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: director
+			Type: UnityEngine.Playables.PlayableDirector
+			Default Value: 
+	Method: ValidateClipType:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x023E8480
+		Ram Offset 0x1823e9680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: clipType
+			Type: System.Type
+			Default Value: 
+	Method: OnCreateClip:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 30
+
+		Parameter 0:
+			Name: clip
+			Type: UnityEngine.Timeline.TimelineClip
+			Default Value: 
+	Method: UpdateDuration:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023E8760
+		Ram Offset 0x1823e9960
+		Virtual Method Slot: 65535
+
+	Method: CalculateItemsHash:
+		Accessibility: FamORAssem
+		Return Type: System.Int32
+		File Offset 0x023E88C0
+		Ram Offset 0x1823e9ac0
+		Virtual Method Slot: 31
+
+	Method: CreatePlayable:
+		Accessibility: Family
+		Return Type: UnityEngine.Playables.Playable
+		File Offset 0x023E8970
+		Ram Offset 0x1823e9b70
+		Virtual Method Slot: 32
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: gameObject
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 2:
+			Name: clip
+			Type: UnityEngine.Timeline.TimelineClip
+			Default Value: 
+	Method: Invalidate:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x023E8CF0
+		Ram Offset 0x1823e9ef0
+		Virtual Method Slot: 65535
+
+	Method: GetNotificationDuration:
+		Accessibility: Assembly
+		Return Type: System.Double
+		File Offset 0x023E8E10
+		Ram Offset 0x1823ea010
+		Virtual Method Slot: 65535
+
+	Method: CanCompileClips:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x023E8FF0
+		Ram Offset 0x1823ea1f0
+		Virtual Method Slot: 33
+
+	Method: CanCreateTrackMixer:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01DC2AD0
+		Ram Offset 0x181dc3cd0
+		Virtual Method Slot: 34
+
+	Method: IsCompilable:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x023E9050
+		Ram Offset 0x1823ea250
+		Virtual Method Slot: 65535
+
+	Method: UpdateChildTrackCache:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023E9330
+		Ram Offset 0x1823ea530
+		Virtual Method Slot: 65535
+
+	Method: Hash:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x023E9640
+		Ram Offset 0x1823ea840
+		Virtual Method Slot: 35
+
+	Method: GetClipsHash:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x023E96B0
+		Ram Offset 0x1823ea8b0
+		Virtual Method Slot: 65535
+
+	Method: GetAnimationClipHash:
+		Accessibility: Family
+		Return Type: System.Int32
+		File Offset 0x023E9950
+		Ram Offset 0x1823eab50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: clip
+			Type: UnityEngine.AnimationClip
+			Default Value: 
+	Method: HasNotifications:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x023E9B40
+		Ram Offset 0x1823ead40
+		Virtual Method Slot: 65535
+
+	Method: CanCompileNotifications:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x023E9B70
+		Ram Offset 0x1823ead70
+		Virtual Method Slot: 65535
+
+	Method: CanCreateMixerRecursive:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x023E9BB0
+		Ram Offset 0x1823eadb0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x023E9D40
+		Ram Offset 0x1823eaf40
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023E9F00
+		Ram Offset 0x1823eb100
+		Virtual Method Slot: 65535

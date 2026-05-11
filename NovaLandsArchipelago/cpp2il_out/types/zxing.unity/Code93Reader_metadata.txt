@@ -1,0 +1,147 @@
+Type: ZXing.OneD.Code93Reader:
+	Base Class: 
+		ZXing.OneD.OneDReader
+
+	Interfaces:
+
+	Static Field: ALPHABET_STRING
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ-. $/+%abcd*
+
+	Static Field: ALPHABET
+		Type: System.Char[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: CHARACTER_ENCODINGS
+		Type: System.Int32[]
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: ASTERISK_ENCODING
+		Type: System.Int32
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: decodeRowResult
+		Type: System.Text.StringBuilder
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: counters
+		Type: System.Int32[]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x027ED6C0
+		Ram Offset 0x1827ee8c0
+		Virtual Method Slot: 65535
+
+	Method: decodeRow:
+		Accessibility: Public
+		Return Type: ZXing.Result
+		File Offset 0x027ED840
+		Ram Offset 0x1827eea40
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: rowNumber
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 2:
+			Name: hints
+			Type: System.Collections.Generic.IDictionary`2<ZXing.DecodeHintType, System.Object>
+			Default Value: 
+	Method: findAsteriskPattern:
+		Accessibility: Private
+		Return Type: System.Int32[]
+		File Offset 0x027EDFE0
+		Ram Offset 0x1827ef1e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+	Method: toPattern:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x027EE2A0
+		Ram Offset 0x1827ef4a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: counters
+			Type: System.Int32[]
+			Default Value: 
+	Method: patternToChar:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x027EE3F0
+		Ram Offset 0x1827ef5f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pattern
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: c
+			Type: System.Char
+			Default Value: 
+	Method: decodeExtended:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x027EE510
+		Ram Offset 0x1827ef710
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: encoded
+			Type: System.Text.StringBuilder
+			Default Value: 
+	Method: checkChecksums:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x027EE6B0
+		Ram Offset 0x1827ef8b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.Text.StringBuilder
+			Default Value: 
+	Method: checkOneChecksum:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x027EE760
+		Ram Offset 0x1827ef960
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.Text.StringBuilder
+			Default Value: 
+		Parameter 1:
+			Name: checkPosition
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: weightMax
+			Type: System.Int32
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027EE8A0
+		Ram Offset 0x1827efaa0
+		Virtual Method Slot: 65535

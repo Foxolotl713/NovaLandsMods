@@ -1,0 +1,76 @@
+Type: <>c__DisplayClass78_2
+
+Method: System.Void RewiredUserDataStore/<>c__DisplayClass78_2::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void RewiredUserDataStore/<>c__DisplayClass78_2::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: RewiredUserDataStore/<>c__DisplayClass78_2
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean RewiredUserDataStore/<>c__DisplayClass78_2::<LoadJoystickAssignmentsNow>b__2(RewiredUserDataStore/JoystickAssignmentHistoryInfo):	Method Body (x86 ASM):
+		0x18083B690 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18083B694 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18083B697 je short 000000018083B6A9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B699 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x18083B69D cmp [rdx+10h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RDX | 16 | None ||| N/A | N/A
+		0x18083B6A1 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18083B6A4 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18083B6A8 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18083B6A9 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B6AE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean RewiredUserDataStore/<>c__DisplayClass78_2::<LoadJoystickAssignmentsNow>b__2(RewiredUserDataStore/JoystickAssignmentHistoryInfo):
+		End of function at 0x18083B6AF
+		Absolute End is at 0x18083B6AF
+		Identified Jump Destination addresses:
+
+		0x18083B694: [!] Compares {'x' (function parameter, type RewiredUserDataStore/JoystickAssignmentHistoryInfo)} and 0
+		0x18083B697: Jumps to 0x18083B6A9 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x18083B699: [!] Reads field match from {'this' (function parameter, type RewiredUserDataStore/<>c__DisplayClass78_2)} and stores in a new local {'match' (type Rewired.Joystick)}
+
+		0x18083B69D: [!] Compares {field joystick, read from local {'x' (function parameter, type RewiredUserDataStore/JoystickAssignmentHistoryInfo)}} and {'match' (type Rewired.Joystick)}
+		0x18083B6A1: [!] Sets the boolean {'local3' (type System.Boolean)} in rax to true if x.joystick is equal to match, otherwise false.
+		0x18083B6A8: [!] Returns {'local3' (type System.Boolean)} from the function
+
+		0x18083B6A9: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: RewiredUserDataStore/<>c__DisplayClass78_2
+	System.Boolean <LoadJoystickAssignmentsNow>b__2(RewiredUserDataStore/JoystickAssignmentHistoryInfo x)
+		Rewired.Joystick match = this.match
+		System.Boolean local3 = x.joystick == match
+		return local3
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld Rewired.Joystick RewiredUserDataStore/<>c__DisplayClass78_2::match
+	IL_0006: stloc.0
+	IL_0007: ldarg.1
+	IL_0008: ldfld Rewired.Joystick RewiredUserDataStore/JoystickAssignmentHistoryInfo::joystick
+	IL_000d: ldloc.0
+	IL_000e: ceq
+	IL_0010: ret
+	IL_0011: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0016: throw
+	
+

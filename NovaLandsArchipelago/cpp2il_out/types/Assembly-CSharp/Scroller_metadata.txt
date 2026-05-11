@@ -1,0 +1,608 @@
+Type: UnityEngine.UI.Extensions.Scroller:
+	Base Class: 
+		UnityEngine.EventSystems.UIBehaviour
+
+	Interfaces:
+		UnityEngine.EventSystems.IPointerUpHandler
+		UnityEngine.EventSystems.IEventSystemHandler
+		UnityEngine.EventSystems.IPointerDownHandler
+		UnityEngine.EventSystems.IBeginDragHandler
+		UnityEngine.EventSystems.IEndDragHandler
+		UnityEngine.EventSystems.IDragHandler
+		UnityEngine.EventSystems.IScrollHandler
+
+	Nested Types:
+		UnityEngine.UI.Extensions.Scroller/Snap
+		UnityEngine.UI.Extensions.Scroller/AutoScrollState
+
+	Static Field: DefaultEasingFunction
+		Type: UnityEngine.UI.Extensions.EasingCore.EasingFunction
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: viewport
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: scrollDirection
+		Type: UnityEngine.UI.Extensions.ScrollDirection
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: movementType
+		Type: UnityEngine.UI.Extensions.MovementType
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Field: elasticity
+		Type: System.Single
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: scrollSensitivity
+		Type: System.Single
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Field: inertia
+		Type: System.Boolean
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: decelerationRate
+		Type: System.Single
+		Offset in Defining Type: 0x3C
+		Has Default: False
+
+	Field: snap
+		Type: UnityEngine.UI.Extensions.Scroller/Snap
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: draggable
+		Type: System.Boolean
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: scrollbar
+		Type: UnityEngine.UI.Scrollbar
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: autoScrollState
+		Type: UnityEngine.UI.Extensions.Scroller/AutoScrollState
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: onValueChanged
+		Type: System.Action`1<System.Single>
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: onSelectionChanged
+		Type: System.Action`1<System.Int32>
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: beginDragPointerPosition
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: scrollStartPosition
+		Type: System.Single
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: prevPosition
+		Type: System.Single
+		Offset in Defining Type: 0x7C
+		Has Default: False
+
+	Field: currentPosition
+		Type: System.Single
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: totalCount
+		Type: System.Int32
+		Offset in Defining Type: 0x84
+		Has Default: False
+
+	Field: hold
+		Type: System.Boolean
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: scrolling
+		Type: System.Boolean
+		Offset in Defining Type: 0x89
+		Has Default: False
+
+	Field: dragging
+		Type: System.Boolean
+		Offset in Defining Type: 0x8A
+		Has Default: False
+
+	Field: velocity
+		Type: System.Single
+		Offset in Defining Type: 0x8C
+		Has Default: False
+
+	Method: get_ViewportSize:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00A5D810
+		Ram Offset 0x180a5ea10
+		Virtual Method Slot: 65535
+
+	Method: get_ScrollDirection:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Extensions.ScrollDirection
+		File Offset 0x0077D120
+		Ram Offset 0x18077e320
+		Virtual Method Slot: 65535
+
+	Method: get_MovementType:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Extensions.MovementType
+		File Offset 0x00477B00
+		Ram Offset 0x180478d00
+		Virtual Method Slot: 65535
+
+	Method: set_MovementType:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00477B10
+		Ram Offset 0x180478d10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.Extensions.MovementType
+			Default Value: 
+	Method: get_Elasticity:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00773B80
+		Ram Offset 0x180774d80
+		Virtual Method Slot: 65535
+
+	Method: set_Elasticity:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A09260
+		Ram Offset 0x180a0a460
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_ScrollSensitivity:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00909CE0
+		Ram Offset 0x18090aee0
+		Virtual Method Slot: 65535
+
+	Method: set_ScrollSensitivity:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A00820
+		Ram Offset 0x180a01a20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_Inertia:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00773C10
+		Ram Offset 0x180774e10
+		Virtual Method Slot: 65535
+
+	Method: set_Inertia:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A00810
+		Ram Offset 0x180a01a10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_DecelerationRate:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x009B2230
+		Ram Offset 0x1809b3430
+		Virtual Method Slot: 65535
+
+	Method: set_DecelerationRate:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5D8F0
+		Ram Offset 0x180a5eaf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_SnapEnabled:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00A5D900
+		Ram Offset 0x180a5eb00
+		Virtual Method Slot: 65535
+
+	Method: set_SnapEnabled:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5D920
+		Ram Offset 0x180a5eb20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_Draggable:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00860EA0
+		Ram Offset 0x1808620a0
+		Virtual Method Slot: 65535
+
+	Method: set_Draggable:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5D940
+		Ram Offset 0x180a5eb40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_Scrollbar:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Scrollbar
+		File Offset 0x003C6290
+		Ram Offset 0x1803c7490
+		Virtual Method Slot: 65535
+
+	Method: get_Position:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x007DBF70
+		Ram Offset 0x1807dd170
+		Virtual Method Slot: 65535
+
+	Method: set_Position:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5D950
+		Ram Offset 0x180a5eb50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: Start:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00A5D9B0
+		Ram Offset 0x180a5ebb0
+		Virtual Method Slot: 6
+
+	Method: OnValueChanged:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004EB5D0
+		Ram Offset 0x1804ec7d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: System.Action`1<System.Single>
+			Default Value: 
+	Method: OnSelectionChanged:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00809650
+		Ram Offset 0x18080a850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: System.Action`1<System.Int32>
+			Default Value: 
+	Method: SetTotalCount:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5DAE0
+		Ram Offset 0x180a5ece0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: totalCount
+			Type: System.Int32
+			Default Value: 
+	Method: ScrollTo:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5DAF0
+		Ram Offset 0x180a5ecf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: duration
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: onComplete
+			Type: System.Action
+			Default Value: 
+	Method: ScrollTo:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5DD10
+		Ram Offset 0x180a5ef10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: duration
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: easing
+			Type: UnityEngine.UI.Extensions.EasingCore.Ease
+			Default Value: 
+		Parameter 3:
+			Name: onComplete
+			Type: System.Action
+			Default Value: 
+	Method: ScrollTo:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5DD60
+		Ram Offset 0x180a5ef60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: duration
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: easingFunction
+			Type: UnityEngine.UI.Extensions.EasingCore.EasingFunction
+			Default Value: 
+		Parameter 3:
+			Name: onComplete
+			Type: System.Action
+			Default Value: 
+	Method: JumpTo:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5E0C0
+		Ram Offset 0x180a5f2c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: GetMovementDirection:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Extensions.MovementDirection
+		File Offset 0x00A5E160
+		Ram Offset 0x180a5f360
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sourceIndex
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: destIndex
+			Type: System.Int32
+			Default Value: 
+	Method: UnityEngine.EventSystems.IPointerDownHandler.OnPointerDown:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5E1B0
+		Ram Offset 0x180a5f3b0
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: UnityEngine.EventSystems.IPointerUpHandler.OnPointerUp:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5E200
+		Ram Offset 0x180a5f400
+		Virtual Method Slot: 17
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: UnityEngine.EventSystems.IScrollHandler.OnScroll:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5E2E0
+		Ram Offset 0x180a5f4e0
+		Virtual Method Slot: 22
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: UnityEngine.EventSystems.IBeginDragHandler.OnBeginDrag:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5E420
+		Ram Offset 0x180a5f620
+		Virtual Method Slot: 19
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: UnityEngine.EventSystems.IDragHandler.OnDrag:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5E520
+		Ram Offset 0x180a5f720
+		Virtual Method Slot: 21
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: UnityEngine.EventSystems.IEndDragHandler.OnEndDrag:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5E6D0
+		Ram Offset 0x180a5f8d0
+		Virtual Method Slot: 20
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: CalculateOffset:
+		Accessibility: Private
+		Return Type: System.Single
+		File Offset 0x00A5E700
+		Ram Offset 0x180a5f900
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: System.Single
+			Default Value: 
+	Method: UpdatePosition:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5E750
+		Ram Offset 0x180a5f950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: updateScrollbar
+			Type: System.Boolean
+			Default Value: True
+	Method: UpdateSelection:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5E8B0
+		Ram Offset 0x180a5fab0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: RubberDelta:
+		Accessibility: Private
+		Return Type: System.Single
+		File Offset 0x00A5E8D0
+		Ram Offset 0x180a5fad0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: overStretching
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: viewSize
+			Type: System.Single
+			Default Value: 
+	Method: Update:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5E920
+		Ram Offset 0x180a5fb20
+		Virtual Method Slot: 65535
+
+	Method: CalculateMovementAmount:
+		Accessibility: Private
+		Return Type: System.Single
+		File Offset 0x00A5EEE0
+		Ram Offset 0x180a600e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sourcePosition
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: destPosition
+			Type: System.Single
+			Default Value: 
+	Method: CircularPosition:
+		Accessibility: Private
+		Return Type: System.Single
+		File Offset 0x00A5F060
+		Ram Offset 0x180a60260
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: p
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A5F0C0
+		Ram Offset 0x180a602c0
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5F250
+		Ram Offset 0x180a60450
+		Virtual Method Slot: 65535
+
+	Method: <Start>b__55_0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00A5F490
+		Ram Offset 0x180a60690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: x
+			Type: System.Single
+			Default Value: 

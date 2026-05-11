@@ -1,0 +1,269 @@
+Type: System.Security.SecurityElement:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		System.Security.SecurityElement/SecurityAttribute
+
+	Static Field: invalid_tag_chars
+		Type: System.Char[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: invalid_text_chars
+		Type: System.Char[]
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Field: text
+		Type: System.String
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: invalid_attr_name_chars
+		Type: System.Char[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: tag
+		Type: System.String
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: invalid_attr_value_chars
+		Type: System.Char[]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: attributes
+		Type: System.Collections.ArrayList
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: invalid_chars
+		Type: System.Char[]
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: children
+		Type: System.Collections.ArrayList
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016F3AB0
+		Ram Offset 0x1816f4cb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tag
+			Type: System.String
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016F3AC0
+		Ram Offset 0x1816f4cc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tag
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: text
+			Type: System.String
+			Default Value: 
+	Method: get_Children:
+		Accessibility: Public
+		Return Type: System.Collections.ArrayList
+		File Offset 0x003A7D00
+		Ram Offset 0x1803a8f00
+		Virtual Method Slot: 65535
+
+	Method: get_Tag:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x00379690
+		Ram Offset 0x18037a890
+		Virtual Method Slot: 65535
+
+	Method: set_Text:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016F3CA0
+		Ram Offset 0x1816f4ea0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: AddAttribute:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016F3E40
+		Ram Offset 0x1816f5040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: AddChild:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016F4030
+		Ram Offset 0x1816f5230
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: child
+			Type: System.Security.SecurityElement
+			Default Value: 
+	Method: Escape:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x016F4150
+		Ram Offset 0x1816f5350
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.String
+			Default Value: 
+	Method: Unescape:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x016F43B0
+		Ram Offset 0x1816f55b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.String
+			Default Value: 
+	Method: IsValidAttributeName:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x016F45A0
+		Ram Offset 0x1816f57a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: IsValidAttributeValue:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x016F4620
+		Ram Offset 0x1816f5820
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: IsValidTag:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x016F46A0
+		Ram Offset 0x1816f58a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tag
+			Type: System.String
+			Default Value: 
+	Method: IsValidText:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x016F4720
+		Ram Offset 0x1816f5920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: text
+			Type: System.String
+			Default Value: 
+	Method: SearchForChildByTag:
+		Accessibility: Public
+		Return Type: System.Security.SecurityElement
+		File Offset 0x016F47A0
+		Ram Offset 0x1816f59a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tag
+			Type: System.String
+			Default Value: 
+	Method: ToString:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x016F4920
+		Ram Offset 0x1816f5b20
+		Virtual Method Slot: 3
+
+	Method: ToXml:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016F49B0
+		Ram Offset 0x1816f5bb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: s
+			Type: System.Text.StringBuilder
+			Default Value: 
+		Parameter 1:
+			Name: level
+			Type: System.Int32
+			Default Value: 
+	Method: GetAttribute:
+		Accessibility: Assembly
+		Return Type: System.Security.SecurityElement/SecurityAttribute
+		File Offset 0x016F4FB0
+		Ram Offset 0x1816f61b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: set_m_strText:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00386E50
+		Ram Offset 0x180388050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: SearchForTextOfLocalName:
+		Accessibility: Assembly
+		Return Type: System.String
+		File Offset 0x016F51D0
+		Ram Offset 0x1816f63d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: strLocalName
+			Type: System.String
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016F5480
+		Ram Offset 0x1816f6680
+		Virtual Method Slot: 65535

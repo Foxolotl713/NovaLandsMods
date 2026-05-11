@@ -1,0 +1,466 @@
+Type: Mono.Btls.MonoBtlsSslCtx:
+	Base Class: 
+		Mono.Btls.MonoBtlsObject
+
+	Interfaces:
+
+	Nested Types:
+		Mono.Btls.MonoBtlsSslCtx/BoringSslCtxHandle
+		Mono.Btls.MonoBtlsSslCtx/NativeVerifyFunc
+		Mono.Btls.MonoBtlsSslCtx/NativeSelectFunc
+		Mono.Btls.MonoBtlsSslCtx/NativeServerNameFunc
+
+	Field: verifyFunc
+		Type: Mono.Btls.MonoBtlsSslCtx/NativeVerifyFunc
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: selectFunc
+		Type: Mono.Btls.MonoBtlsSslCtx/NativeSelectFunc
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: serverNameFunc
+		Type: Mono.Btls.MonoBtlsSslCtx/NativeServerNameFunc
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: verifyFuncPtr
+		Type: System.IntPtr
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: selectFuncPtr
+		Type: System.IntPtr
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: serverNameFuncPtr
+		Type: System.IntPtr
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: verifyCallback
+		Type: Mono.Btls.MonoBtlsVerifyCallback
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: selectCallback
+		Type: Mono.Btls.MonoBtlsSelectCallback
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: serverNameCallback
+		Type: Mono.Btls.MonoBtlsServerNameCallback
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: store
+		Type: Mono.Btls.MonoBtlsX509Store
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: instance
+		Type: System.Runtime.InteropServices.GCHandle
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: instancePtr
+		Type: System.IntPtr
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Method: get_Handle:
+		Accessibility: Assembly
+		Return Type: Mono.Btls.MonoBtlsSslCtx/BoringSslCtxHandle
+		File Offset 0x01EC7020
+		Ram Offset 0x181ec8220
+		Virtual Method Slot: 65535
+
+	Method: mono_btls_ssl_ctx_new:
+		Accessibility: Private
+		Return Type: System.IntPtr
+		File Offset 0x01EC70A0
+		Ram Offset 0x181ec82a0
+		Virtual Method Slot: 65535
+
+	Method: mono_btls_ssl_ctx_free:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01EC7110
+		Ram Offset 0x181ec8310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+	Method: mono_btls_ssl_ctx_initialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01EC7190
+		Ram Offset 0x181ec8390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: instance
+			Type: System.IntPtr
+			Default Value: 
+	Method: mono_btls_ssl_ctx_set_cert_verify_callback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01EC7220
+		Ram Offset 0x181ec8420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: func
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 2:
+			Name: cert_required
+			Type: System.Int32
+			Default Value: 
+	Method: mono_btls_ssl_ctx_set_cert_select_callback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01EC72C0
+		Ram Offset 0x181ec84c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: func
+			Type: System.IntPtr
+			Default Value: 
+	Method: mono_btls_ssl_ctx_set_min_version:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01EC7350
+		Ram Offset 0x181ec8550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: version
+			Type: System.Int32
+			Default Value: 
+	Method: mono_btls_ssl_ctx_set_max_version:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01EC73E0
+		Ram Offset 0x181ec85e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: version
+			Type: System.Int32
+			Default Value: 
+	Method: mono_btls_ssl_ctx_set_ciphers:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01EC7470
+		Ram Offset 0x181ec8670
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: data
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 3:
+			Name: allow_unsupported
+			Type: System.Int32
+			Default Value: 
+	Method: mono_btls_ssl_ctx_set_verify_param:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01EC7510
+		Ram Offset 0x181ec8710
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: param
+			Type: System.IntPtr
+			Default Value: 
+	Method: mono_btls_ssl_ctx_set_client_ca_list:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01EC75A0
+		Ram Offset 0x181ec87a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: sizes
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 3:
+			Name: data
+			Type: System.IntPtr
+			Default Value: 
+	Method: mono_btls_ssl_ctx_set_server_name_callback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01EC7640
+		Ram Offset 0x181ec8840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: func
+			Type: System.IntPtr
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01EC76D0
+		Ram Offset 0x181ec88d0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01EC77C0
+		Ram Offset 0x181ec89c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: Mono.Btls.MonoBtlsSslCtx/BoringSslCtxHandle
+			Default Value: 
+	Method: get_CertificateStore:
+		Accessibility: Public
+		Return Type: Mono.Btls.MonoBtlsX509Store
+		File Offset 0x00530090
+		Ram Offset 0x180531290
+		Virtual Method Slot: 65535
+
+	Method: VerifyCallback:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01EC7F20
+		Ram Offset 0x181ec9120
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: preverify_ok
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: ctx
+			Type: Mono.Btls.MonoBtlsX509StoreCtx
+			Default Value: 
+	Method: NativeVerifyCallback:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01EC7F50
+		Ram Offset 0x181ec9150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instance
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: preverify_ok
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: store_ctx
+			Type: System.IntPtr
+			Default Value: 
+	Method: NativeSelectCallback:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01EC82E0
+		Ram Offset 0x181ec94e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instance
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: sizes
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 3:
+			Name: data
+			Type: System.IntPtr
+			Default Value: 
+	Method: CopyIssuers:
+		Accessibility: Private
+		Return Type: System.String[]
+		File Offset 0x01EC8450
+		Ram Offset 0x181ec9650
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: sizesPtr
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 2:
+			Name: dataPtr
+			Type: System.IntPtr
+			Default Value: 
+	Method: SetVerifyCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01EC87C0
+		Ram Offset 0x181ec99c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: Mono.Btls.MonoBtlsVerifyCallback
+			Default Value: 
+		Parameter 1:
+			Name: client_cert_required
+			Type: System.Boolean
+			Default Value: 
+	Method: SetSelectCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01EC88E0
+		Ram Offset 0x181ec9ae0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: Mono.Btls.MonoBtlsSelectCallback
+			Default Value: 
+	Method: SetMinVersion:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01EC89E0
+		Ram Offset 0x181ec9be0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: version
+			Type: System.Int32
+			Default Value: 
+	Method: SetMaxVersion:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01EC8A90
+		Ram Offset 0x181ec9c90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: version
+			Type: System.Int32
+			Default Value: 
+	Method: SetCiphers:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01EC8B40
+		Ram Offset 0x181ec9d40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ciphers
+			Type: System.Int16[]
+			Default Value: 
+		Parameter 1:
+			Name: allow_unsupported
+			Type: System.Boolean
+			Default Value: 
+	Method: SetVerifyParam:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01EC8E20
+		Ram Offset 0x181eca020
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: param
+			Type: Mono.Btls.MonoBtlsX509VerifyParam
+			Default Value: 
+	Method: SetClientCertificateIssuers:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01EC8F30
+		Ram Offset 0x181eca130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: acceptableIssuers
+			Type: System.String[]
+			Default Value: 
+	Method: SetServerNameCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01EC9590
+		Ram Offset 0x181eca790
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: Mono.Btls.MonoBtlsServerNameCallback
+			Default Value: 
+	Method: NativeServerNameCallback:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01EC9690
+		Ram Offset 0x181eca890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instance
+			Type: System.IntPtr
+			Default Value: 
+	Method: Close:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01EC97B0
+		Ram Offset 0x181eca9b0
+		Virtual Method Slot: 5

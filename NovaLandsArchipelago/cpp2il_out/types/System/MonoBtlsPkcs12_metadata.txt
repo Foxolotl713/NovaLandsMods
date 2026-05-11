@@ -1,0 +1,163 @@
+Type: Mono.Btls.MonoBtlsPkcs12:
+	Base Class: 
+		Mono.Btls.MonoBtlsObject
+
+	Interfaces:
+
+	Nested Types:
+		Mono.Btls.MonoBtlsPkcs12/BoringPkcs12Handle
+
+	Field: privateKey
+		Type: Mono.Btls.MonoBtlsKey
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Method: get_Handle:
+		Accessibility: Assembly
+		Return Type: Mono.Btls.MonoBtlsPkcs12/BoringPkcs12Handle
+		File Offset 0x01CDB5E0
+		Ram Offset 0x181cdc7e0
+		Virtual Method Slot: 65535
+
+	Method: mono_btls_pkcs12_free:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01CDB660
+		Ram Offset 0x181cdc860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+	Method: mono_btls_pkcs12_new:
+		Accessibility: Private
+		Return Type: System.IntPtr
+		File Offset 0x01CDB6E0
+		Ram Offset 0x181cdc8e0
+		Virtual Method Slot: 65535
+
+	Method: mono_btls_pkcs12_get_count:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01CDB750
+		Ram Offset 0x181cdc950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+	Method: mono_btls_pkcs12_get_cert:
+		Accessibility: Private
+		Return Type: System.IntPtr
+		File Offset 0x01CDB7D0
+		Ram Offset 0x181cdc9d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: Handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: mono_btls_pkcs12_import:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01CDB860
+		Ram Offset 0x181cdca60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: chain
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: data
+			Type: System.Void*
+			Default Value: 
+		Parameter 2:
+			Name: len
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: password
+			Type: Microsoft.Win32.SafeHandles.SafePasswordHandle
+			Default Value: 
+	Method: mono_btls_pkcs12_has_private_key:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01CDB950
+		Ram Offset 0x181cdcb50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pkcs12
+			Type: System.IntPtr
+			Default Value: 
+	Method: mono_btls_pkcs12_get_private_key:
+		Accessibility: Private
+		Return Type: System.IntPtr
+		File Offset 0x01CDB9D0
+		Ram Offset 0x181cdcbd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pkcs12
+			Type: System.IntPtr
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01CDBA50
+		Ram Offset 0x181cdcc50
+		Virtual Method Slot: 65535
+
+	Method: get_Count:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01CDBB80
+		Ram Offset 0x181cdcd80
+		Virtual Method Slot: 65535
+
+	Method: GetCertificate:
+		Accessibility: Public
+		Return Type: Mono.Btls.MonoBtlsX509
+		File Offset 0x01CDBC20
+		Ram Offset 0x181cdce20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: Import:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CDBE00
+		Ram Offset 0x181cdd000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: password
+			Type: Microsoft.Win32.SafeHandles.SafePasswordHandle
+			Default Value: 
+	Method: get_HasPrivateKey:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01CDBF70
+		Ram Offset 0x181cdd170
+		Virtual Method Slot: 65535
+
+	Method: GetPrivateKey:
+		Accessibility: Public
+		Return Type: Mono.Btls.MonoBtlsKey
+		File Offset 0x01CDC010
+		Ram Offset 0x181cdd210
+		Virtual Method Slot: 65535

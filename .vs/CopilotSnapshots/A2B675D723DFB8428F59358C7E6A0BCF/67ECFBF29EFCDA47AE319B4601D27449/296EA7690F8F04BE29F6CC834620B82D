@@ -1,0 +1,219 @@
+﻿using MelonLoader;
+using UnityEngine;
+using System.Net.Sockets;
+using System.Threading.Tasks;
+using System;
+using System.Reflection;
+using System.Linq;
+
+[assembly: MelonInfo(typeof(NovaLandsArchipelago.Core), "NovaLandsArchipelago", "0.1.0", "Gott", null)]
+[assembly: MelonGame("BEHEMUTT", "Nova Lands")]
+
+namespace NovaLandsArchipelago
+{
+    public class Core : MelonMod
+    {
+        public override void OnSceneWasLoaded(int buildIndex, string sceneName)
+        {
+            LoggerInstance.Msg($"Scene {sceneName} with build index {buildIndex} has been loaded!");
+        }
+        public override void OnInitializeMelon()
+        {
+            LoggerInstance.Msg("Initialized.");
+            MelonEvents.OnGUI.Subscribe(DrawMenu, 100); // The higher the value, the lower the priority.
+        }
+
+        private string server = "";
+        private string playerName = "";
+        private string password = "";
+        private enum FocusField { None, Server, Name, Password }
+        private FocusField focused = FocusField.None;
+        private bool isConnecting = false;
+        private bool connected = false;
+        private string statusMessage = "";
+        private TcpClient tcpClient = null;
+        private object archipelagoClient = null;
+
+        private static (string host, int port) ParseHostPort(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+                throw new ArgumentException("Server address is empty");
+
+            // support formats like "host" or "host:port"
+            var parts = input.Split(':');
+            if (parts.Length == 1)
+            {
+                return (parts[0], 38281);
+            }
+            if (parts.Length == 2 && int.TryParse(parts[1], out var p))
+            {
+                return (parts[0], p);
+            }
+            // fallback
+            throw new FormatException("Invalid server format. Use host or host:port");
+        }
+
+        private void DrawMenu()
+        {
+            // Layout values
+            int x = 10;
+            int y = 10;
+            int width = 300;
+            int height = 22;
+            int labelWidth = 60;
+            int spacing = 28;
+
+            // Handle keyboard input when a field is focused
+            Event e = Event.current;
+            if (e.type == EventType.KeyDown && focused != FocusField.None)
+            {
+                if (e.keyCode == KeyCode.Backspace)
+                {
+                    switch (focused)
+                    {
+                        case FocusField.Server:
+                            if (server.Length > 0) server = server.Substring(0, server.Length - 1);
+                            break;
+                        case FocusField.Name:
+                            if (playerName.Length > 0) playerName = playerName.Substring(0, playerName.Length - 1);
+                            break;
+                        case FocusField.Password:
+                            if (password.Length > 0) password = password.Substring(0, password.Length - 1);
+                            break;
+                    }
+                }
+                else if (e.keyCode == KeyCode.Return || e.keyCode == KeyCode.KeypadEnter)
+                {
+                    // finish editing on enter
+                    focused = FocusField.None;
+                }
+                else
+                {
+                    char c = e.character;
+                    if (!char.IsControl(c))
+                    {
+                        switch (focused)
+                        {
+                            case FocusField.Server:
+                                server += c;
+                                break;
+                            case FocusField.Name:
+                                playerName += c;
+                                break;
+                            case FocusField.Password:
+                                password += c;
+                                break;
+                        }
+                    }
+                }
+            }
+
+            // Background box covering all fields
+            GUI.Box(new Rect(x - 6, y - 8, width + 16, height * 3 + spacing * 2 + 16), "");
+
+            // Server
+            GUI.Label(new Rect(x, y, labelWidth, height), "Server:");
+            string serverDisplay = server;
+            if (focused == FocusField.Server) serverDisplay += "|";
+            if (GUI.Button(new Rect(x + labelWidth, y, width - labelWidth, height), serverDisplay))
+                focused = FocusField.Server;
+            y += spacing;
+
+            // Name
+            GUI.Label(new Rect(x, y, labelWidth, height), "Name:");
+            string nameDisplay = playerName;
+            if (focused == FocusField.Name) nameDisplay += "|";
+            if (GUI.Button(new Rect(x + labelWidth, y, width - labelWidth, height), nameDisplay))
+                focused = FocusField.Name;
+            y += spacing;
+
+            // Password (masked)
+            GUI.Label(new Rect(x, y, labelWidth, height), "Password:");
+            string masked = new string('*', password.Length);
+            if (focused == FocusField.Password) masked += "|";
+            if (GUI.Button(new Rect(x + labelWidth, y, width - labelWidth, height), masked))
+                focused = FocusField.Password;
+            y += spacing;
+
+            // Connect button
+            bool disableConnect = isConnecting || connected;
+            if (disableConnect)
+            {
+                GUI.enabled = false;
+            }
+
+            if (GUI.Button(new Rect(x, y, 120, height), isConnecting ? "Connecting..." : "Connect"))
+            {
+                LoggerInstance.Msg($"Connect clicked. Server: {server}, Name: {playerName}");
+                // Start connection attempt in background
+                if (!isConnecting && !connected)
+                {
+                    isConnecting = true;
+                    statusMessage = "Connecting...";
+                    // capture values
+                    string serverInput = server;
+                    string nameInput = playerName;
+                    string passInput = password;
+                    Task.Run(async () =>
+                    {
+                        try
+                        {
+                            var (host, port) = ParseHostPort(serverInput);
+
+                            // Try to use Archipelago.MultiClient.Net library if available
+                            var usedLibrary = await TryConnectWithArchipelagoLibrary(host, port, nameInput, passInput);
+                            if (usedLibrary.success)
+                            {
+                                archipelagoClient = usedLibrary.clientObj;
+                                connected = true;
+                                statusMessage = "Connected (Archipelago library)";
+                                LoggerInstance.Msg($"Connected to {host}:{port} as {nameInput} using Archipelago library");
+                            }
+                            else
+                            {
+                                // fallback to raw TCP
+                                var client = new TcpClient();
+                                var connectTask = client.ConnectAsync(host, port);
+                                var timeoutTask = Task.Delay(5000);
+                                var completed = await Task.WhenAny(connectTask, timeoutTask);
+                                if (completed == timeoutTask)
+                                {
+                                    client.Close();
+                                    throw new TimeoutException("Connection timed out");
+                                }
+                                // connected
+                                tcpClient = client;
+                                connected = true;
+                                statusMessage = "Connected (TCP)";
+                                LoggerInstance.Msg($"Connected to {host}:{port} as {nameInput} (TCP)");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            statusMessage = $"Failed: {ex.Message}";
+                            LoggerInstance.Msg($"Connection failed: {ex}");
+                        }
+                        finally
+                        {
+                            isConnecting = false;
+                        }
+                    });
+                }
+            }
+            GUI.enabled = true;
+
+            y += spacing;
+
+            // Status message
+            if (!string.IsNullOrEmpty(statusMessage))
+            {
+                GUI.Label(new Rect(x, y, width, height), statusMessage);
+                y += spacing;
+            }
+
+            // Hide menu when connected
+            if (connected)
+                return;
+        }
+    }
+}

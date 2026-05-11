@@ -1,0 +1,58 @@
+Type: System.Runtime.Remoting.DisposerReplySink:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.Runtime.Remoting.Messaging.IMessageSink
+
+	Field: _next
+		Type: System.Runtime.Remoting.Messaging.IMessageSink
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: _disposable
+		Type: System.IDisposable
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00387490
+		Ram Offset 0x180388690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: next
+			Type: System.Runtime.Remoting.Messaging.IMessageSink
+			Default Value: 
+		Parameter 1:
+			Name: disposable
+			Type: System.IDisposable
+			Default Value: 
+	Method: SyncProcessMessage:
+		Accessibility: Public
+		Return Type: System.Runtime.Remoting.Messaging.IMessage
+		File Offset 0x01742DF0
+		Ram Offset 0x181743ff0
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: msg
+			Type: System.Runtime.Remoting.Messaging.IMessage
+			Default Value: 
+	Method: AsyncProcessMessage:
+		Accessibility: Public
+		Return Type: System.Runtime.Remoting.Messaging.IMessageCtrl
+		File Offset 0x01742E70
+		Ram Offset 0x181744070
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: msg
+			Type: System.Runtime.Remoting.Messaging.IMessage
+			Default Value: 
+		Parameter 1:
+			Name: replySink
+			Type: System.Runtime.Remoting.Messaging.IMessageSink
+			Default Value: 

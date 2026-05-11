@@ -1,0 +1,133 @@
+﻿using System;
+using System.Reflection;
+using System.Linq;
+using HarmonyLib;
+using MelonLoader;
+
+namespace NovaLandsArchipelago
+{
+    public static class HarmonyPatches
+    {
+        // Apply Harmony patches used by this mod
+        public static void Apply(global::HarmonyLib.Harmony harmony)
+        {
+            try
+            {
+
+                // Patch ResearchesList.OnUnlock (call OnResearchPurchased after unlock)
+                try
+                {
+                var researchesType = AccessTools.TypeByName("ResearchesList");
+                if (researchesType == null)
+                {
+                    MelonLogger.Msg("HarmonyPatches: ResearchesList type not found; skipping research patches.");
+                }
+                else
+                {
+                    // Patch OnResearched if present (called when a research completes)
+                    var onResearched = researchesType.GetMethod("GetResearch", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                    if (onResearched != null)
+                    {
+                        var prefix = typeof(HarmonyPatches).GetMethod(nameof(OnResearch_Prefix), BindingFlags.Static | BindingFlags.NonPublic);
+                        harmony.Patch(onResearched, prefix: new HarmonyMethod(prefix));
+                        MelonLogger.Msg("HarmonyPatches: Patched ResearchesList.OnResearched with prefix.");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg("HarmonyPatches: ResearchesList.OnResearched not found; skipping.");
+                    }
+                }
+                }
+                catch (Exception ex)
+                {
+                    MelonLogger.Error($"HarmonyPatches: Failed to patch ResearchesList.OnUnlock: {ex}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MelonLogger.Error($"HarmonyPatches: Failed to apply patch: {ex}");
+            }
+        }
+
+        // Prefix for research completion. Attempts to extract the research name and send a location check
+        // Returning false skips the original method (preventing local reward grants).
+        static bool OnResearch_Prefix(object descriptor)
+        {
+            try
+            {
+                // Log ResearchState constants for debugging when a research is attempted
+                LogResearchStateConstants();
+
+                string name = null;
+                if (descriptor != null)
+                {
+                    var t = descriptor.GetType();
+                    // Try common property/method names discovered in method dumps
+                    var mn = t.GetMethod("get_ResearchName", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                    if (mn != null)
+                    {
+                        name = mn.Invoke(descriptor, null) as string;
+                    }
+
+                    else
+                    {
+                        var prop = t.GetProperty("ResearchName", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                        if (prop != null) name = prop.GetValue(descriptor) as string;
+                    }
+                    if (name == null)
+                    {
+                        // fallback to UnityEngine.Object.name via get_name
+                        var gn = t.GetMethod("get_name", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                        if (gn != null) name = gn.Invoke(descriptor, null) as string;
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(name) && Core.Instance != null)
+                {
+                    Core.Instance.CheckLocation(name);
+                    return false; // skip original to avoid granting local reward
+                }
+            }
+            catch (Exception ex)
+            {
+                MelonLogger.Error($"HarmonyPatches: Exception in OnResearch_Prefix: {ex}");
+            }
+            // If we couldn't handle it, let original method run.
+            return true;
+        }
+
+        // Helper to log ResearchState enum static fields LOCKED, UNLOCKED, RESEARCHED
+        static void LogResearchStateConstants()
+        {
+            try
+            {
+                var rsType = AccessTools.TypeByName("ResearchState");
+                if (rsType == null)
+                {
+                    MelonLogger.Msg("HarmonyPatches: ResearchState type not found.");
+                    return;
+                }
+
+                string[] fieldNames = new[] { "LOCKED", "UNLOCKED", "RESEARCHED" };
+                foreach (var fn in fieldNames)
+                {
+                    var fi = rsType.GetField(fn, BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
+                    if (fi != null)
+                    {
+                        var val = fi.GetValue(null);
+                        try { MelonLogger.Msg($"ResearchState.{fn} = {Convert.ToInt32(val)}"); }
+                        catch { MelonLogger.Msg($"ResearchState.{fn} = {val}"); }
+                    }
+                    else
+                    {
+                        MelonLogger.Msg($"ResearchState.{fn} not found");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MelonLogger.Error($"HarmonyPatches: Exception while logging ResearchState constants: {ex}");
+            }
+        }
+    }
+}

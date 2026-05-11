@@ -1,0 +1,87 @@
+Type: <>c__DisplayClass5_0
+
+Method: System.Void ResourcesSpawner/<>c__DisplayClass5_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void ResourcesSpawner/<>c__DisplayClass5_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: ResourcesSpawner/<>c__DisplayClass5_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean ResourcesSpawner/<>c__DisplayClass5_0::<DestroyedPlanetProp>b__0(PlanetPropsSpawnValues):	Method Body (x86 ASM):
+		0x1806E4FC0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1806E4FC4 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1806E4FC7 je short 00000001806E4FE0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806E4FC9 mov rdx,[rdx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x1806E4FCD test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1806E4FD0 je short 00000001806E4FE0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806E4FD2 mov eax,[rcx+10h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1806E4FD5 cmp [rdx+40h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 64 | None ||| N/A | N/A
+		0x1806E4FD8 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806E4FDB add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1806E4FDF ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806E4FE0 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806E4FE5 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean ResourcesSpawner/<>c__DisplayClass5_0::<DestroyedPlanetProp>b__0(PlanetPropsSpawnValues):
+		End of function at 0x1806E4FE6
+		Absolute End is at 0x1806E4FE6
+		Identified Jump Destination addresses:
+
+		0x1806E4FC4: [!] Compares {'x' (function parameter, type PlanetPropsSpawnValues)} and 0
+		0x1806E4FC7: Jumps to 0x1806E4FE0 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x1806E4FC9: [!] Reads field building from {'x' (function parameter, type PlanetPropsSpawnValues)} and stores in a new local {'building' (type BaseBuilding)}
+
+		0x1806E4FCD: [!] Compares {'building' (type BaseBuilding)} and 0
+		0x1806E4FD0: Jumps to 0x1806E4FE0 (which throws a NRE) if building equals 0. Implicitly present in managed code, so ignored here.
+		0x1806E4FD2: [!] Reads field buildingId from {'this' (function parameter, type ResourcesSpawner/<>c__DisplayClass5_0)} and stores in a new local {'buildingId' (type System.Int32)}
+
+		0x1806E4FD5: [!] Compares {field buildingId, read from local {'building' (type BaseBuilding)}} and {'buildingId' (type System.Int32)}
+		0x1806E4FD8: [!] Sets the boolean {'local4' (type System.Boolean)} in rax to true if building.buildingId is equal to buildingId, otherwise false.
+		0x1806E4FDF: [!] Returns {'local4' (type System.Boolean)} from the function
+
+		0x1806E4FE0: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: ResourcesSpawner/<>c__DisplayClass5_0
+	System.Boolean <DestroyedPlanetProp>b__0(PlanetPropsSpawnValues x)
+		BaseBuilding building = x.building
+		System.Int32 buildingId = this.buildingId
+		System.Boolean local4 = building.buildingId == buildingId
+		return local4
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: ldfld BaseBuilding PlanetPropsSpawnValues::building
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld System.Int32 ResourcesSpawner/<>c__DisplayClass5_0::buildingId
+	IL_000d: stloc.1
+	IL_000e: ldloc.0
+	IL_000f: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0014: ldloc.1
+	IL_0015: ceq
+	IL_0017: ret
+	IL_0018: newobj System.Void System.NullReferenceException::.ctor()
+	IL_001d: throw
+	
+

@@ -1,0 +1,304 @@
+Type: System.IO.Enumeration.FileSystemEnumerator`1:
+	Base Class: 
+		System.Runtime.ConstrainedExecution.CriticalFinalizerObject
+
+	Interfaces:
+		System.Collections.Generic.IEnumerator`1<TResult>
+		System.IDisposable
+		System.Collections.IEnumerator
+
+	Field: _originalRootDirectory
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _rootDirectory
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _options
+		Type: System.IO.EnumerationOptions
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _lock
+		Type: System.Object
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _entry
+		Type: Interop/NtDll/FILE_FULL_DIR_INFORMATION*
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _current
+		Type: TResult
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _buffer
+		Type: System.IntPtr
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _bufferLength
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _directoryHandle
+		Type: System.IntPtr
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _currentPath
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _lastEntryFound
+		Type: System.Boolean
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _pending
+		Type: System.Collections.Generic.Queue`1<System.ValueTuple`2<System.IntPtr,System.String>>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Method: GetDataUWP:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01172FD0
+		Ram Offset 0x1811741d0
+		Virtual Method Slot: 65535
+
+	Method: CreateRelativeDirectoryHandleUWP:
+		Accessibility: Private
+		Return Type: System.IntPtr
+		File Offset 0x01173110
+		Ram Offset 0x181174310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: relativePath
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: fullPath
+			Type: System.String
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01173130
+		Ram Offset 0x181174330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: directory
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: options
+			Type: System.IO.EnumerationOptions
+			Default Value: 
+	Method: CloseDirectoryHandle:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x011735A0
+		Ram Offset 0x1811747a0
+		Virtual Method Slot: 65535
+
+	Method: CreateDirectoryHandle:
+		Accessibility: Private
+		Return Type: System.IntPtr
+		File Offset 0x011735C0
+		Ram Offset 0x1811747c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ignoreNotFound
+			Type: System.Boolean
+			Default Value: False
+	Method: ContinueOnDirectoryError:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01173720
+		Ram Offset 0x181174920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: error
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: ignoreNotFound
+			Type: System.Boolean
+			Default Value: 
+	Method: MoveNext:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01173780
+		Ram Offset 0x181174980
+		Virtual Method Slot: 6
+
+	Method: FindNextEntry:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x011741C0
+		Ram Offset 0x1811753c0
+		Virtual Method Slot: 65535
+
+	Method: DequeueNextDirectory:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x011743A0
+		Ram Offset 0x1811755a0
+		Virtual Method Slot: 65535
+
+	Method: InternalDispose:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01174470
+		Ram Offset 0x181175670
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: GetData:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01174800
+		Ram Offset 0x181175a00
+		Virtual Method Slot: 65535
+
+	Method: CreateRelativeDirectoryHandle:
+		Accessibility: Private
+		Return Type: System.IntPtr
+		File Offset 0x01174980
+		Ram Offset 0x181175b80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: relativePath
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+		Parameter 1:
+			Name: fullPath
+			Type: System.String
+			Default Value: 
+	Method: ShouldIncludeEntry:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: entry
+			Type: System.IO.Enumeration.FileSystemEntry
+			Default Value: 
+	Method: ShouldRecurseIntoEntry:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 10
+
+		Parameter 0:
+			Name: entry
+			Type: System.IO.Enumeration.FileSystemEntry
+			Default Value: 
+	Method: TransformEntry:
+		Accessibility: Family
+		Return Type: TResult
+		File Offset 0x00000000
+		Ram Offset 0x00000000
+		Virtual Method Slot: 11
+
+		Parameter 0:
+			Name: entry
+			Type: System.IO.Enumeration.FileSystemEntry
+			Default Value: 
+	Method: OnDirectoryFinished:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 12
+
+		Parameter 0:
+			Name: directory
+			Type: System.ReadOnlySpan`1<System.Char>
+			Default Value: 
+	Method: ContinueOnError:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 13
+
+		Parameter 0:
+			Name: error
+			Type: System.Int32
+			Default Value: 
+	Method: get_Current:
+		Accessibility: Public
+		Return Type: TResult
+		File Offset 0x004E1440
+		Ram Offset 0x1804e2640
+		Virtual Method Slot: 4
+
+	Method: System.Collections.IEnumerator.get_Current:
+		Accessibility: Private
+		Return Type: System.Object
+		File Offset 0x004E1440
+		Ram Offset 0x1804e2640
+		Virtual Method Slot: 7
+
+	Method: DirectoryFinished:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01174AA0
+		Ram Offset 0x181175ca0
+		Virtual Method Slot: 65535
+
+	Method: Reset:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00E4D5D0
+		Ram Offset 0x180e4e7d0
+		Virtual Method Slot: 8
+
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01174C20
+		Ram Offset 0x181175e20
+		Virtual Method Slot: 5
+
+	Method: Dispose:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 14
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: Finalize:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01174CA0
+		Ram Offset 0x181175ea0
+		Virtual Method Slot: 1

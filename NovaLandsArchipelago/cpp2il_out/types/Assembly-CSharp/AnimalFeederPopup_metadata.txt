@@ -1,0 +1,459 @@
+Type: AnimalFeederPopup:
+	Base Class: 
+		BuildingPopup
+
+	Interfaces:
+
+	Field: inventoryArea
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: logisticsArea
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: inventory
+		Type: MuttInventory.InventoryWindow
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: logisticsResourcesDropdown
+		Type: MultidimensionalDropDown
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: logisticsAttendedToggle
+		Type: SwapSpritesToggleButton
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: notAttendedByLogisticsIcon
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: inventoryAreaLogisticsEnabledBottomAnchor
+		Type: System.Single
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: dropdownOriginalSelectedTextAnchor
+		Type: System.Single
+		Offset in Defining Type: 0xCC
+		Has Default: False
+
+	Field: dropdownBlankSelectedTextAnchor
+		Type: System.Single
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: feeder
+		Type: AnimalFeeder
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: inventoryManager
+		Type: MuttInventory.InventoryManager
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: inventoriesParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: inventoryOriginalPosition
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: shouldAdjustFirstDropdownItem
+		Type: System.Boolean
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: currentLogisticsResource
+		Type: System.Int32
+		Offset in Defining Type: 0xFC
+		Has Default: False
+
+	Field: resources
+		Type: System.Collections.Generic.List`1<BaseResourceScriptableObject>
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: initLogisticsOnEnable
+		Type: System.Boolean
+		Offset in Defining Type: 0x108
+		Has Default: False
+
+	Method: PreSetup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004F02A0
+		Ram Offset 0x1804f14a0
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004F0480
+		Ram Offset 0x1804f1680
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+		Parameter 1:
+			Name: player
+			Type: BaseCharacter
+			Default Value: 
+	Method: InitInventory:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004F05F0
+		Ram Offset 0x1804f17f0
+		Virtual Method Slot: 23
+
+	Method: OnUseInventoryItem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004F0A90
+		Ram Offset 0x1804f1c90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+	Method: OnChangeInventory:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004F0B50
+		Ram Offset 0x1804f1d50
+		Virtual Method Slot: 65535
+
+	Method: OnDropItem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004F0C40
+		Ram Offset 0x1804f1e40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+	Method: OnChangeItemsCount:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004F0D00
+		Ram Offset 0x1804f1f00
+		Virtual Method Slot: 24
+
+		Parameter 0:
+			Name: change
+			Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+			Default Value: 
+	Method: InitLogistics:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004F0D50
+		Ram Offset 0x1804f1f50
+		Virtual Method Slot: 25
+
+	Method: OnDropdownChangedVisibility:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004F10A0
+		Ram Offset 0x1804f22a0
+		Virtual Method Slot: 65535
+
+	Method: UpdateSelectedLogisticsTextSize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004F1290
+		Ram Offset 0x1804f2490
+		Virtual Method Slot: 65535
+
+	Method: AdjustFirstDropdownItem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004F1510
+		Ram Offset 0x1804f2710
+		Virtual Method Slot: 65535
+
+	Method: SetupLogisticsDropdown:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004F1980
+		Ram Offset 0x1804f2b80
+		Virtual Method Slot: 65535
+
+	Method: GetFilteredResources:
+		Accessibility: Private
+		Return Type: System.Collections.Generic.List`1<BaseResourceScriptableObject>
+		File Offset 0x004F21A0
+		Ram Offset 0x1804f33a0
+		Virtual Method Slot: 65535
+
+	Method: OnLogisticsDropdownChanged:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004F23A0
+		Ram Offset 0x1804f35a0
+		Virtual Method Slot: 65535
+
+	Method: OnToggleAttendedByLogistics:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004F2580
+		Ram Offset 0x1804f3780
+		Virtual Method Slot: 26
+
+		Parameter 0:
+			Name: isOn
+			Type: System.Boolean
+			Default Value: 
+	Method: OnEnable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004F26D0
+		Ram Offset 0x1804f38d0
+		Virtual Method Slot: 9
+
+	Method: OnDisable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004F2890
+		Ram Offset 0x1804f3a90
+		Virtual Method Slot: 10
+
+	Method: UpdateValues:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004F2B50
+		Ram Offset 0x1804f3d50
+		Virtual Method Slot: 11
+
+	Method: CanAddItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004F2C40
+		Ram Offset 0x1804f3e40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: windowType
+			Type: MuttInventory.InventoryWindowType
+			Default Value: -1
+	Method: AddItemToInventory:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004F2FB0
+		Ram Offset 0x1804f41b0
+		Virtual Method Slot: 27
+
+		Parameter 0:
+			Name: itemType
+			Type: MuttInventory.InventoryItemType
+			Default Value: 
+		Parameter 1:
+			Name: remainingItems
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: windowType
+			Type: MuttInventory.InventoryWindowType
+			Default Value: -1
+	Method: AddItemToInventory:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004F30D0
+		Ram Offset 0x1804f42d0
+		Virtual Method Slot: 28
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: remainingItems
+			Type: System.Int32
+			Default Value: 
+	Method: ConsumeResource:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004F3210
+		Ram Offset 0x1804f4410
+		Virtual Method Slot: 12
+
+		Parameter 0:
+			Name: resourceAmount
+			Type: ResourceAmountPair
+			Default Value: 
+	Method: SetInventoryItem:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004F3390
+		Ram Offset 0x1804f4590
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: slot
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: itemId
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: itemAmount
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: maxStack
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: sprite
+			Type: UnityEngine.Sprite
+			Default Value: 
+		Parameter 5:
+			Name: isPackage
+			Type: System.Boolean
+			Default Value: 
+		Parameter 6:
+			Name: extraData
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+	Method: SetInventoryContent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004F3400
+		Ram Offset 0x1804f4600
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inventoryContentData
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: windowType
+			Type: MuttInventory.InventoryWindowType
+			Default Value: 
+	Method: HasResource:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004F3E30
+		Ram Offset 0x1804f5030
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+	Method: GetInventoryItems:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+		File Offset 0x004F3E60
+		Ram Offset 0x1804f5060
+		Virtual Method Slot: 65535
+
+	Method: GetInventorySlotsContent:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<MuttInventory.InventoryItem>
+		File Offset 0x004F3E90
+		Ram Offset 0x1804f5090
+		Virtual Method Slot: 65535
+
+	Method: UpdateInventoriesPositions:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004F3EC0
+		Ram Offset 0x1804f50c0
+		Virtual Method Slot: 65535
+
+	Method: Update:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004F3FE0
+		Ram Offset 0x1804f51e0
+		Virtual Method Slot: 14
+
+	Method: SetInventorySize:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004F4110
+		Ram Offset 0x1804f5310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: size
+			Type: UnityEngine.Vector2Int
+			Default Value: 
+	Method: SelectFirstSelectable:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004F4150
+		Ram Offset 0x1804f5350
+		Virtual Method Slot: 21
+
+	Method: GetFirstSelectable:
+		Accessibility: Public
+		Return Type: UnityEngine.GameObject
+		File Offset 0x004F43A0
+		Ram Offset 0x1804f55a0
+		Virtual Method Slot: 22
+
+	Method: GetBottomSelectable:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Selectable
+		File Offset 0x004F4510
+		Ram Offset 0x1804f5710
+		Virtual Method Slot: 20
+
+	Method: UpdateNavigation:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004F4750
+		Ram Offset 0x1804f5950
+		Virtual Method Slot: 19
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004F5230
+		Ram Offset 0x1804f6430
+		Virtual Method Slot: 65535
+
+	Method: <OnEnable>b__32_0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x004F5290
+		Ram Offset 0x1804f6490
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: diff
+			Type: UnityEngine.Vector2
+			Default Value: 

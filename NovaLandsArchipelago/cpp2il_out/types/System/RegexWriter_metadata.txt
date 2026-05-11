@@ -1,0 +1,181 @@
+Type: System.Text.RegularExpressions.RegexWriter:
+	Base Class: 
+		System.ValueType
+
+	Interfaces:
+
+	Field: _emitted
+		Type: System.Collections.Generic.ValueListBuilder`1<System.Int32>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: _intStack
+		Type: System.Collections.Generic.ValueListBuilder`1<System.Int32>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _stringHash
+		Type: System.Collections.Generic.Dictionary`2<System.String,System.Int32>
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: _stringTable
+		Type: System.Collections.Generic.List`1<System.String>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: _caps
+		Type: System.Collections.Hashtable
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: _trackCount
+		Type: System.Int32
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F08690
+		Ram Offset 0x181f09890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: emittedSpan
+			Type: System.Span`1<System.Int32>
+			Default Value: 
+		Parameter 1:
+			Name: intStackSpan
+			Type: System.Span`1<System.Int32>
+			Default Value: 
+	Method: Write:
+		Accessibility: Public
+		Return Type: System.Text.RegularExpressions.RegexCode
+		File Offset 0x01F08790
+		Ram Offset 0x181f09990
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tree
+			Type: System.Text.RegularExpressions.RegexTree
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01F08980
+		Ram Offset 0x181f09b80
+		Virtual Method Slot: 65535
+
+	Method: RegexCodeFromRegexTree:
+		Accessibility: Public
+		Return Type: System.Text.RegularExpressions.RegexCode
+		File Offset 0x01F089C0
+		Ram Offset 0x181f09bc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tree
+			Type: System.Text.RegularExpressions.RegexTree
+			Default Value: 
+	Method: PatchJump:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F090D0
+		Ram Offset 0x181f0a2d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: jumpDest
+			Type: System.Int32
+			Default Value: 
+	Method: Emit:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F09130
+		Ram Offset 0x181f0a330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: op
+			Type: System.Int32
+			Default Value: 
+	Method: Emit:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F091D0
+		Ram Offset 0x181f0a3d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: op
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: opd1
+			Type: System.Int32
+			Default Value: 
+	Method: Emit:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F09280
+		Ram Offset 0x181f0a480
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: op
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: opd1
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: opd2
+			Type: System.Int32
+			Default Value: 
+	Method: StringCode:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01F09350
+		Ram Offset 0x181f0a550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.String
+			Default Value: 
+	Method: MapCapnum:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01F094A0
+		Ram Offset 0x181f0a6a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: capnum
+			Type: System.Int32
+			Default Value: 
+	Method: EmitFragment:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F09560
+		Ram Offset 0x181f0a760
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nodetype
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: node
+			Type: System.Text.RegularExpressions.RegexNode
+			Default Value: 
+		Parameter 2:
+			Name: curIndex
+			Type: System.Int32
+			Default Value: 

@@ -1,0 +1,395 @@
+Type: UnityEngine.Rendering.ProbeBrickIndex:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		UnityEngine.Rendering.ProbeBrickIndex/Brick
+		UnityEngine.Rendering.ProbeBrickIndex/ReservedBrick
+		UnityEngine.Rendering.ProbeBrickIndex/VoxelMeta
+		UnityEngine.Rendering.ProbeBrickIndex/BrickMeta
+		UnityEngine.Rendering.ProbeBrickIndex/CellIndexUpdateInfo
+		UnityEngine.Rendering.ProbeBrickIndex/<>c
+
+	Static Field: kMaxSubdivisionLevels
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 7
+
+	Static Field: g_Cell
+		Type: UnityEngine.Rendering.ProbeReferenceVolume/Cell
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: kIndexChunkSize
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 243
+
+	Field: m_IndexChunks
+		Type: System.Collections.BitArray
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_IndexInChunks
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_NextFreeChunk
+		Type: System.Int32
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Field: m_AvailableChunkCount
+		Type: System.Int32
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_PhysicalIndexBuffer
+		Type: UnityEngine.ComputeBuffer
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_PhysicalIndexBufferData
+		Type: System.Int32[]
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: <estimatedVMemCost>k__BackingField
+		Type: System.Int32
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_CenterRS
+		Type: UnityEngine.Vector3Int
+		Offset in Defining Type: 0x3C
+		Has Default: False
+
+	Field: m_VoxelToBricks
+		Type: System.Collections.Generic.Dictionary`2<UnityEngine.Vector3Int,System.Collections.Generic.List`1<UnityEngine.Rendering.ProbeBrickIndex/VoxelMeta>>
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: m_BricksToVoxels
+		Type: System.Collections.Generic.Dictionary`2<UnityEngine.Rendering.ProbeReferenceVolume/Cell,UnityEngine.Rendering.ProbeBrickIndex/BrickMeta>
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: m_BrickMetaPool
+		Type: UnityEngine.Rendering.ObjectPool`1<UnityEngine.Rendering.ProbeBrickIndex/BrickMeta>
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: m_VoxelMetaListPool
+		Type: UnityEngine.Rendering.ObjectPool`1<System.Collections.Generic.List`1<UnityEngine.Rendering.ProbeBrickIndex/VoxelMeta>>
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: m_VoxelMetaPool
+		Type: UnityEngine.Rendering.ObjectPool`1<UnityEngine.Rendering.ProbeBrickIndex/VoxelMeta>
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: m_NeedUpdateIndexComputeBuffer
+		Type: System.Boolean
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: m_UpdateMinIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x74
+		Has Default: False
+
+	Field: m_UpdateMaxIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Method: get_estimatedVMemCost:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x006BABA0
+		Ram Offset 0x1806bbda0
+		Virtual Method Slot: 65535
+
+	Method: set_estimatedVMemCost:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0161D020
+		Ram Offset 0x18161e220
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: GetVoxelSubdivLevel:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x021820A0
+		Ram Offset 0x1821832a0
+		Virtual Method Slot: 65535
+
+	Method: SizeOfPhysicalIndexFromBudget:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x02182140
+		Ram Offset 0x182183340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: memoryBudget
+			Type: UnityEngine.Rendering.ProbeVolumeTextureMemoryBudget
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02182170
+		Ram Offset 0x182183370
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: memoryBudget
+			Type: UnityEngine.Rendering.ProbeVolumeTextureMemoryBudget
+			Default Value: 
+	Method: GetRemainingChunkCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00387EA0
+		Ram Offset 0x1803890a0
+		Virtual Method Slot: 65535
+
+	Method: UploadIndexData:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02182A20
+		Ram Offset 0x182183c20
+		Virtual Method Slot: 65535
+
+	Method: Clear:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02182A80
+		Ram Offset 0x182183c80
+		Virtual Method Slot: 65535
+
+	Method: MapBrickToVoxels:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x021831E0
+		Ram Offset 0x1821843e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: brick
+			Type: UnityEngine.Rendering.ProbeBrickIndex/Brick
+			Default Value: 
+		Parameter 1:
+			Name: voxels
+			Type: System.Collections.Generic.HashSet`1<UnityEngine.Vector3Int>
+			Default Value: 
+	Method: ClearVoxel:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02183440
+		Ram Offset 0x182184640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pos
+			Type: UnityEngine.Vector3Int
+			Default Value: 
+		Parameter 1:
+			Name: cellInfo
+			Type: UnityEngine.Rendering.ProbeBrickIndex/CellIndexUpdateInfo
+			Default Value: 
+	Method: GetRuntimeResources:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02183540
+		Ram Offset 0x182184740
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rr
+			Type: UnityEngine.Rendering.ProbeReferenceVolume/RuntimeResources
+			Default Value: 
+	Method: Cleanup:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02183600
+		Ram Offset 0x182184800
+		Virtual Method Slot: 65535
+
+	Method: MergeIndex:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x021836B0
+		Ram Offset 0x1821848b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: AssignIndexChunksToCell:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x021836D0
+		Ram Offset 0x1821848d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bricksCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: cellUpdateInfo
+			Type: UnityEngine.Rendering.ProbeBrickIndex/CellIndexUpdateInfo
+			Default Value: 
+		Parameter 2:
+			Name: ignoreErrorLog
+			Type: System.Boolean
+			Default Value: 
+	Method: AddBricks:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02183850
+		Ram Offset 0x182184a50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cell
+			Type: UnityEngine.Rendering.ProbeReferenceVolume/Cell
+			Default Value: 
+		Parameter 1:
+			Name: bricks
+			Type: Unity.Collections.NativeArray`1<UnityEngine.Rendering.ProbeBrickIndex/Brick>
+			Default Value: 
+		Parameter 2:
+			Name: allocations
+			Type: System.Collections.Generic.List`1<UnityEngine.Rendering.ProbeBrickPool/BrickChunkAlloc>
+			Default Value: 
+		Parameter 3:
+			Name: allocationSize
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: poolWidth
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: poolHeight
+			Type: System.Int32
+			Default Value: 
+		Parameter 6:
+			Name: cellInfo
+			Type: UnityEngine.Rendering.ProbeBrickIndex/CellIndexUpdateInfo
+			Default Value: 
+	Method: RemoveBricks:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02184140
+		Ram Offset 0x182185340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cellInfo
+			Type: UnityEngine.Rendering.ProbeReferenceVolume/CellInfo
+			Default Value: 
+	Method: UpdateIndexForVoxel:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02184840
+		Ram Offset 0x182185a40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: voxel
+			Type: UnityEngine.Vector3Int
+			Default Value: 
+		Parameter 1:
+			Name: cellInfo
+			Type: UnityEngine.Rendering.ProbeBrickIndex/CellIndexUpdateInfo
+			Default Value: 
+	Method: UpdatePhysicalIndex:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02184AE0
+		Ram Offset 0x182185ce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: brickMin
+			Type: UnityEngine.Vector3Int
+			Default Value: 
+		Parameter 1:
+			Name: brickMax
+			Type: UnityEngine.Vector3Int
+			Default Value: 
+		Parameter 2:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cellInfo
+			Type: UnityEngine.Rendering.ProbeBrickIndex/CellIndexUpdateInfo
+			Default Value: 
+	Method: ClipToIndexSpace:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02184FC0
+		Ram Offset 0x1821861c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pos
+			Type: UnityEngine.Vector3Int
+			Default Value: 
+		Parameter 1:
+			Name: subdiv
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: outMinpos
+			Type: UnityEngine.Vector3Int
+			Default Value: 
+		Parameter 3:
+			Name: outMaxpos
+			Type: UnityEngine.Vector3Int
+			Default Value: 
+		Parameter 4:
+			Name: cellInfo
+			Type: UnityEngine.Rendering.ProbeBrickIndex/CellIndexUpdateInfo
+			Default Value: 
+	Method: UpdateIndexForVoxel:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x021851E0
+		Ram Offset 0x1821863e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: voxel
+			Type: UnityEngine.Vector3Int
+			Default Value: 
+		Parameter 1:
+			Name: bricks
+			Type: System.Collections.Generic.List`1<UnityEngine.Rendering.ProbeBrickIndex/ReservedBrick>
+			Default Value: 
+		Parameter 2:
+			Name: indices
+			Type: System.Collections.Generic.List`1<System.UInt16>
+			Default Value: 
+		Parameter 3:
+			Name: cellInfo
+			Type: UnityEngine.Rendering.ProbeBrickIndex/CellIndexUpdateInfo
+			Default Value: 

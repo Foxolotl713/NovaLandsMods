@@ -1,0 +1,239 @@
+Type: System.Net.LazyAsyncResult:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.IAsyncResult
+
+	Nested Types:
+		System.Net.LazyAsyncResult/ThreadContext
+
+	Field: m_AsyncObject
+		Type: System.Object
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_AsyncState
+		Type: System.Object
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_AsyncCallback
+		Type: System.AsyncCallback
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_Result
+		Type: System.Object
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_IntCompleted
+		Type: System.Int32
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_EndCalled
+		Type: System.Boolean
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Field: m_UserEvent
+		Type: System.Boolean
+		Offset in Defining Type: 0x35
+		Has Default: False
+
+	Field: m_Event
+		Type: System.Object
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Static Field: t_ThreadContext
+		Type: System.Net.LazyAsyncResult/ThreadContext
+		Offset in Defining Type: 0xFFFFFFFF80000000
+		Has Default: False
+
+	Method: get_CurrentThreadContext:
+		Accessibility: Private
+		Return Type: System.Net.LazyAsyncResult/ThreadContext
+		File Offset 0x01F48620
+		Ram Offset 0x181f49820
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01F48780
+		Ram Offset 0x181f49980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: myObject
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: myState
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: myCallBack
+			Type: System.AsyncCallback
+			Default Value: 
+	Method: get_AsyncObject:
+		Accessibility: Assembly
+		Return Type: System.Object
+		File Offset 0x00386E40
+		Ram Offset 0x180388040
+		Virtual Method Slot: 65535
+
+	Method: get_AsyncState:
+		Accessibility: Public
+		Return Type: System.Object
+		File Offset 0x00379690
+		Ram Offset 0x18037a890
+		Virtual Method Slot: 6
+
+	Method: get_AsyncCallback:
+		Accessibility: Family
+		Return Type: System.AsyncCallback
+		File Offset 0x00395870
+		Ram Offset 0x180396a70
+		Virtual Method Slot: 65535
+
+	Method: get_AsyncWaitHandle:
+		Accessibility: Public
+		Return Type: System.Threading.WaitHandle
+		File Offset 0x01F48950
+		Ram Offset 0x181f49b50
+		Virtual Method Slot: 5
+
+	Method: LazilyCreateEvent:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F489F0
+		Ram Offset 0x181f49bf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: waitHandle
+			Type: System.Threading.ManualResetEvent
+			Default Value: 
+	Method: get_CompletedSynchronously:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01F48C50
+		Ram Offset 0x181f49e50
+		Virtual Method Slot: 7
+
+	Method: get_IsCompleted:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01F48C70
+		Ram Offset 0x181f49e70
+		Virtual Method Slot: 4
+
+	Method: get_InternalPeekCompleted:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01F48CA0
+		Ram Offset 0x181f49ea0
+		Virtual Method Slot: 65535
+
+	Method: get_EndCalled:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x009B2210
+		Ram Offset 0x1809b3410
+		Virtual Method Slot: 65535
+
+	Method: set_EndCalled:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00A2C1D0
+		Ram Offset 0x180a2d3d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ProtectedInvokeCallback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01F48CB0
+		Ram Offset 0x181f49eb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.Object
+			Default Value: 
+		Parameter 1:
+			Name: userToken
+			Type: System.IntPtr
+			Default Value: 
+	Method: InvokeCallback:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01F48E40
+		Ram Offset 0x181f4a040
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: result
+			Type: System.Object
+			Default Value: 
+	Method: InvokeCallback:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01F48E50
+		Ram Offset 0x181f4a050
+		Virtual Method Slot: 65535
+
+	Method: Complete:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01F48E60
+		Ram Offset 0x181f4a060
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: userToken
+			Type: System.IntPtr
+			Default Value: 
+	Method: WorkerThreadComplete:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F491A0
+		Ram Offset 0x181f4a3a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: Cleanup:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 9
+
+	Method: InternalWaitForCompletion:
+		Accessibility: Assembly
+		Return Type: System.Object
+		File Offset 0x01F49230
+		Ram Offset 0x181f4a430
+		Virtual Method Slot: 65535
+
+	Method: WaitForCompletion:
+		Accessibility: Private
+		Return Type: System.Object
+		File Offset 0x01F49240
+		Ram Offset 0x181f4a440
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: snap
+			Type: System.Boolean
+			Default Value: 

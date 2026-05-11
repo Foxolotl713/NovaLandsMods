@@ -1,0 +1,287 @@
+Type: Delaunay.Edge:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: _pool
+		Type: System.Collections.Generic.Stack`1<Delaunay.Edge>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: _nedges
+		Type: System.Int32
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: DELETED
+		Type: Delaunay.Edge
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: a
+		Type: System.Single
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: b
+		Type: System.Single
+		Offset in Defining Type: 0x14
+		Has Default: False
+
+	Field: c
+		Type: System.Single
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _leftVertex
+		Type: Delaunay.Vertex
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _rightVertex
+		Type: Delaunay.Vertex
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _clippedVertices
+		Type: System.Collections.Generic.Dictionary`2<Delaunay.LR.Side,System.Nullable`1<UnityEngine.Vector2>>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _sites
+		Type: System.Collections.Generic.Dictionary`2<Delaunay.LR.Side,Delaunay.Site>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _edgeIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Method: CreateBisectingEdge:
+		Accessibility: Public
+		Return Type: Delaunay.Edge
+		File Offset 0x00911E50
+		Ram Offset 0x180913050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: site0
+			Type: Delaunay.Site
+			Default Value: 
+		Parameter 1:
+			Name: site1
+			Type: Delaunay.Site
+			Default Value: 
+	Method: Create:
+		Accessibility: Private
+		Return Type: Delaunay.Edge
+		File Offset 0x00912220
+		Ram Offset 0x180913420
+		Virtual Method Slot: 65535
+
+	Method: DelaunayLine:
+		Accessibility: Public
+		Return Type: Delaunay.Geo.LineSegment
+		File Offset 0x00912310
+		Ram Offset 0x180913510
+		Virtual Method Slot: 65535
+
+	Method: VoronoiEdge:
+		Accessibility: Public
+		Return Type: Delaunay.Geo.LineSegment
+		File Offset 0x00912460
+		Ram Offset 0x180913660
+		Virtual Method Slot: 65535
+
+	Method: get_leftVertex:
+		Accessibility: Public
+		Return Type: Delaunay.Vertex
+		File Offset 0x00395870
+		Ram Offset 0x180396a70
+		Virtual Method Slot: 65535
+
+	Method: get_rightVertex:
+		Accessibility: Public
+		Return Type: Delaunay.Vertex
+		File Offset 0x003A7D00
+		Ram Offset 0x1803a8f00
+		Virtual Method Slot: 65535
+
+	Method: Vertex:
+		Accessibility: Public
+		Return Type: Delaunay.Vertex
+		File Offset 0x00912570
+		Ram Offset 0x180913770
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: leftRight
+			Type: Delaunay.LR.Side
+			Default Value: 
+	Method: SetVertex:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00912580
+		Ram Offset 0x180913780
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: leftRight
+			Type: Delaunay.LR.Side
+			Default Value: 
+		Parameter 1:
+			Name: v
+			Type: Delaunay.Vertex
+			Default Value: 
+	Method: IsPartOfConvexHull:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00912640
+		Ram Offset 0x180913840
+		Virtual Method Slot: 65535
+
+	Method: SitesDistance:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00912660
+		Ram Offset 0x180913860
+		Virtual Method Slot: 65535
+
+	Method: CompareSitesDistances_MAX:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00912720
+		Ram Offset 0x180913920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: edge0
+			Type: Delaunay.Edge
+			Default Value: 
+		Parameter 1:
+			Name: edge1
+			Type: Delaunay.Edge
+			Default Value: 
+	Method: CompareSitesDistances:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00912780
+		Ram Offset 0x180913980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: edge0
+			Type: Delaunay.Edge
+			Default Value: 
+		Parameter 1:
+			Name: edge1
+			Type: Delaunay.Edge
+			Default Value: 
+	Method: get_clippedEnds:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2<Delaunay.LR.Side, System.Nullable`1<UnityEngine.Vector2>>
+		File Offset 0x003A09A0
+		Ram Offset 0x1803a1ba0
+		Virtual Method Slot: 65535
+
+	Method: get_visible:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00912820
+		Ram Offset 0x180913a20
+		Virtual Method Slot: 65535
+
+	Method: get_leftSite:
+		Accessibility: Public
+		Return Type: Delaunay.Site
+		File Offset 0x00912830
+		Ram Offset 0x180913a30
+		Virtual Method Slot: 65535
+
+	Method: set_leftSite:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00912880
+		Ram Offset 0x180913a80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: Delaunay.Site
+			Default Value: 
+	Method: get_rightSite:
+		Accessibility: Public
+		Return Type: Delaunay.Site
+		File Offset 0x00912900
+		Ram Offset 0x180913b00
+		Virtual Method Slot: 65535
+
+	Method: set_rightSite:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00912950
+		Ram Offset 0x180913b50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: Delaunay.Site
+			Default Value: 
+	Method: Site:
+		Accessibility: Public
+		Return Type: Delaunay.Site
+		File Offset 0x009129D0
+		Ram Offset 0x180913bd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: leftRight
+			Type: Delaunay.LR.Side
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00912A30
+		Ram Offset 0x180913c30
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00912D40
+		Ram Offset 0x180913f40
+		Virtual Method Slot: 65535
+
+	Method: Init:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00912DB0
+		Ram Offset 0x180913fb0
+		Virtual Method Slot: 65535
+
+	Method: ToString:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x00912E60
+		Ram Offset 0x180914060
+		Virtual Method Slot: 3
+
+	Method: ClipVertices:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00913190
+		Ram Offset 0x180914390
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bounds
+			Type: UnityEngine.Rect
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009136A0
+		Ram Offset 0x1809148a0
+		Virtual Method Slot: 65535

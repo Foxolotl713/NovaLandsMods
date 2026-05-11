@@ -1,0 +1,275 @@
+Type: BuildingPlacementFeedbackTransporterContainer:
+	Base Class: 
+		BuildingPlacementFeedback
+
+	Interfaces:
+
+	Field: sprite2
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: gridSprite2
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: armSprite
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: armSpriteBaseOffset
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: armSpriteHorizontal
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: armSpriteVertical
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: depositSpriteHorizontal
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: depositSpriteVertical
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0x108
+		Has Default: False
+
+	Field: arrowVerticalUp
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x110
+		Has Default: False
+
+	Field: arrowVerticalDown
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x118
+		Has Default: False
+
+	Field: arrowHorizontalUp
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x120
+		Has Default: False
+
+	Field: arrowHorizontalDown
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x128
+		Has Default: False
+
+	Field: castPositionScale
+		Type: System.Single
+		Offset in Defining Type: 0x130
+		Has Default: False
+
+	Field: changeDirectionInstructionLabel
+		Type: CommandActionPair
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: changeDirectionSFX
+		Type: System.String
+		Offset in Defining Type: 0x140
+		Has Default: False
+
+	Field: originalSprite2Position
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x148
+		Has Default: False
+
+	Field: slot
+		Type: TransporterContainerSlot
+		Offset in Defining Type: 0x150
+		Has Default: False
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005354F0
+		Ram Offset 0x1805366f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sprite
+			Type: UnityEngine.Sprite
+			Default Value: 
+		Parameter 1:
+			Name: sprite2
+			Type: UnityEngine.Sprite
+			Default Value: 
+		Parameter 2:
+			Name: offset
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 3:
+			Name: collider
+			Type: UnityEngine.Collider2D
+			Default Value: 
+		Parameter 4:
+			Name: checkCollisionMask
+			Type: UnityEngine.LayerMask
+			Default Value: 
+		Parameter 5:
+			Name: feedbackText
+			Type: System.String
+			Default Value: 
+	Method: InitInteractionFeedbacks:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005361D0
+		Ram Offset 0x1805373d0
+		Virtual Method Slot: 5
+
+	Method: UpdateInteractionFeedbacksControls:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00536260
+		Ram Offset 0x180537460
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: controllerType
+			Type: Rewired.ControllerType
+			Default Value: 
+	Method: ShowTextFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005362E0
+		Ram Offset 0x1805374e0
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: text
+			Type: System.String
+			Default Value: 
+	Method: UpdateArmSprite:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005363B0
+		Ram Offset 0x1805375b0
+		Virtual Method Slot: 65535
+
+	Method: IsBetweenValues:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00537510
+		Ram Offset 0x180538710
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: val
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: min
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: max
+			Type: System.Single
+			Default Value: 
+	Method: UpdateFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00537520
+		Ram Offset 0x180538720
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: invert
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: canPlace
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: canKeepBuilding
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: decorationType
+			Type: HouseDecorationType
+			Default Value: 3
+	Method: CastCurrentPosition:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00538450
+		Ram Offset 0x180539650
+		Virtual Method Slot: 10
+
+	Method: GetClosestCollider:
+		Accessibility: Private
+		Return Type: UnityEngine.Collider2D
+		File Offset 0x00538620
+		Ram Offset 0x180539820
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: size
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 2:
+			Name: mask
+			Type: UnityEngine.LayerMask
+			Default Value: 
+	Method: CastCurrentPosition:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00538890
+		Ram Offset 0x180539a90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: UpdateColor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x005395A0
+		Ram Offset 0x18053a7a0
+		Virtual Method Slot: 13
+
+	Method: GetBuild2Position:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x005397C0
+		Ram Offset 0x18053a9c0
+		Virtual Method Slot: 11
+
+	Method: GetTransporterSlot:
+		Accessibility: Public
+		Return Type: TransporterContainerSlot
+		File Offset 0x0040DE70
+		Ram Offset 0x18040f070
+		Virtual Method Slot: 12
+
+	Method: get_CanPlace:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00533400
+		Ram Offset 0x180534600
+		Virtual Method Slot: 14
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x005398A0
+		Ram Offset 0x18053aaa0
+		Virtual Method Slot: 65535

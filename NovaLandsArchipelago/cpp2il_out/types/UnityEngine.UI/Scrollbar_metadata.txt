@@ -1,0 +1,484 @@
+Type: UnityEngine.UI.Scrollbar:
+	Base Class: 
+		UnityEngine.UI.Selectable
+
+	Interfaces:
+		UnityEngine.EventSystems.IBeginDragHandler
+		UnityEngine.EventSystems.IEventSystemHandler
+		UnityEngine.EventSystems.IDragHandler
+		UnityEngine.EventSystems.IInitializePotentialDragHandler
+		UnityEngine.UI.ICanvasElement
+
+	Nested Types:
+		UnityEngine.UI.Scrollbar/Direction
+		UnityEngine.UI.Scrollbar/ScrollEvent
+		UnityEngine.UI.Scrollbar/Axis
+		UnityEngine.UI.Scrollbar/<ClickRepeat>d__58
+
+	Field: m_HandleRect
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: m_Direction
+		Type: UnityEngine.UI.Scrollbar/Direction
+		Offset in Defining Type: 0x108
+		Has Default: False
+
+	Field: m_Value
+		Type: System.Single
+		Offset in Defining Type: 0x10C
+		Has Default: False
+
+	Field: m_Size
+		Type: System.Single
+		Offset in Defining Type: 0x110
+		Has Default: False
+
+	Field: m_NumberOfSteps
+		Type: System.Int32
+		Offset in Defining Type: 0x114
+		Has Default: False
+
+	Field: m_OnValueChanged
+		Type: UnityEngine.UI.Scrollbar/ScrollEvent
+		Offset in Defining Type: 0x118
+		Has Default: False
+
+	Field: m_ContainerRect
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x120
+		Has Default: False
+
+	Field: m_Offset
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x128
+		Has Default: False
+
+	Field: m_Tracker
+		Type: UnityEngine.DrivenRectTransformTracker
+		Offset in Defining Type: 0x130
+		Has Default: False
+
+	Field: m_PointerDownRepeat
+		Type: UnityEngine.Coroutine
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: isPointerDownAndNotDragging
+		Type: System.Boolean
+		Offset in Defining Type: 0x140
+		Has Default: False
+
+	Field: m_DelayedUpdateVisuals
+		Type: System.Boolean
+		Offset in Defining Type: 0x141
+		Has Default: False
+
+	Method: get_handleRect:
+		Accessibility: Public
+		Return Type: UnityEngine.RectTransform
+		File Offset 0x005F13D0
+		Ram Offset 0x1805f25d0
+		Virtual Method Slot: 65535
+
+	Method: set_handleRect:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025A99F0
+		Ram Offset 0x1825aabf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.RectTransform
+			Default Value: 
+	Method: get_direction:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Scrollbar/Direction
+		File Offset 0x0139D710
+		Ram Offset 0x18139e910
+		Virtual Method Slot: 65535
+
+	Method: set_direction:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025A9A60
+		Ram Offset 0x1825aac60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.Scrollbar/Direction
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x025A9AC0
+		Ram Offset 0x1825aacc0
+		Virtual Method Slot: 65535
+
+	Method: get_value:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x025A9BF0
+		Ram Offset 0x1825aadf0
+		Virtual Method Slot: 65535
+
+	Method: set_value:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025A9C50
+		Ram Offset 0x1825aae50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: SetValueWithoutNotify:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025A9C60
+		Ram Offset 0x1825aae60
+		Virtual Method Slot: 47
+
+		Parameter 0:
+			Name: input
+			Type: System.Single
+			Default Value: 
+	Method: get_size:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00582E80
+		Ram Offset 0x180584080
+		Virtual Method Slot: 65535
+
+	Method: set_size:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025A9D10
+		Ram Offset 0x1825aaf10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_numberOfSteps:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00582E90
+		Ram Offset 0x180584090
+		Virtual Method Slot: 65535
+
+	Method: set_numberOfSteps:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025A9D90
+		Ram Offset 0x1825aaf90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_onValueChanged:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Scrollbar/ScrollEvent
+		File Offset 0x00789ED0
+		Ram Offset 0x18078b0d0
+		Virtual Method Slot: 65535
+
+	Method: set_onValueChanged:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x007859A0
+		Ram Offset 0x180786ba0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.UI.Scrollbar/ScrollEvent
+			Default Value: 
+	Method: get_stepSize:
+		Accessibility: Private
+		Return Type: System.Single
+		File Offset 0x025A9E00
+		Ram Offset 0x1825ab000
+		Virtual Method Slot: 65535
+
+	Method: Rebuild:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 48
+
+		Parameter 0:
+			Name: executing
+			Type: UnityEngine.UI.CanvasUpdate
+			Default Value: 
+	Method: LayoutComplete:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 49
+
+	Method: GraphicUpdateComplete:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 50
+
+	Method: OnEnable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x025A9E30
+		Ram Offset 0x1825ab030
+		Virtual Method Slot: 5
+
+	Method: OnDisable:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00A11DC0
+		Ram Offset 0x180a12fc0
+		Virtual Method Slot: 7
+
+	Method: Update:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x025A9F00
+		Ram Offset 0x1825ab100
+		Virtual Method Slot: 51
+
+	Method: UpdateCachedReferences:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025A9F20
+		Ram Offset 0x1825ab120
+		Virtual Method Slot: 65535
+
+	Method: Set:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025AA220
+		Ram Offset 0x1825ab420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: input
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: sendCallback
+			Type: System.Boolean
+			Default Value: True
+	Method: OnRectTransformDimensionsChange:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x025AA320
+		Ram Offset 0x1825ab520
+		Virtual Method Slot: 10
+
+	Method: get_axis:
+		Accessibility: Private
+		Return Type: UnityEngine.UI.Scrollbar/Axis
+		File Offset 0x025AA360
+		Ram Offset 0x1825ab560
+		Virtual Method Slot: 65535
+
+	Method: get_reverseValue:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x025AA380
+		Ram Offset 0x1825ab580
+		Virtual Method Slot: 65535
+
+	Method: UpdateVisuals:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025AA3A0
+		Ram Offset 0x1825ab5a0
+		Virtual Method Slot: 65535
+
+	Method: UpdateDrag:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025AA6D0
+		Ram Offset 0x1825ab8d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: DoUpdateDrag:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025AABC0
+		Ram Offset 0x1825abdc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handleCorner
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: remainingSize
+			Type: System.Single
+			Default Value: 
+	Method: MayDrag:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00A128B0
+		Ram Offset 0x180a13ab0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnBeginDrag:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025AAC80
+		Ram Offset 0x1825abe80
+		Virtual Method Slot: 52
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnDrag:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025AAFA0
+		Ram Offset 0x1825ac1a0
+		Virtual Method Slot: 53
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnPointerDown:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025AB0E0
+		Ram Offset 0x1825ac2e0
+		Virtual Method Slot: 32
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: ClickRepeat:
+		Accessibility: Family
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x025AB220
+		Ram Offset 0x1825ac420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: ClickRepeat:
+		Accessibility: Family
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x025AB2A0
+		Ram Offset 0x1825ac4a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: screenPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+	Method: OnPointerUp:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025AB3C0
+		Ram Offset 0x1825ac5c0
+		Virtual Method Slot: 33
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: OnMove:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025AB400
+		Ram Offset 0x1825ac600
+		Virtual Method Slot: 31
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.AxisEventData
+			Default Value: 
+	Method: FindSelectableOnLeft:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Selectable
+		File Offset 0x025ABA10
+		Ram Offset 0x1825acc10
+		Virtual Method Slot: 27
+
+	Method: FindSelectableOnRight:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Selectable
+		File Offset 0x025ABA40
+		Ram Offset 0x1825acc40
+		Virtual Method Slot: 28
+
+	Method: FindSelectableOnUp:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Selectable
+		File Offset 0x025ABA70
+		Ram Offset 0x1825acc70
+		Virtual Method Slot: 29
+
+	Method: FindSelectableOnDown:
+		Accessibility: Public
+		Return Type: UnityEngine.UI.Selectable
+		File Offset 0x025ABAA0
+		Ram Offset 0x1825acca0
+		Virtual Method Slot: 30
+
+	Method: OnInitializePotentialDrag:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A12C50
+		Ram Offset 0x180a13e50
+		Virtual Method Slot: 54
+
+		Parameter 0:
+			Name: eventData
+			Type: UnityEngine.EventSystems.PointerEventData
+			Default Value: 
+	Method: SetDirection:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x025ABAD0
+		Ram Offset 0x1825accd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: direction
+			Type: UnityEngine.UI.Scrollbar/Direction
+			Default Value: 
+		Parameter 1:
+			Name: includeRectLayouts
+			Type: System.Boolean
+			Default Value: 
+	Method: UnityEngine.UI.ICanvasElement.get_transform:
+		Accessibility: Private
+		Return Type: UnityEngine.Transform
+		File Offset 0x00A0EE10
+		Ram Offset 0x180a10010
+		Virtual Method Slot: 43

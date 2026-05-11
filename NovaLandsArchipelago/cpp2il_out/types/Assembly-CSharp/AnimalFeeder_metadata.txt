@@ -1,0 +1,511 @@
+Type: AnimalFeeder:
+	Base Class: 
+		BaseBuilding
+
+	Interfaces:
+
+	Nested Types:
+		AnimalFeeder/<>c
+		AnimalFeeder/<>c__DisplayClass10_0
+
+	Static Field: SAME_SETUP_COMMAND_INDEX
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Static Field: HOLD_TO_MOVE_COMMAND_INDEX
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 2
+
+	Field: contentOverlay
+		Type: ItemsContentOverlay
+		Offset in Defining Type: 0x580
+		Has Default: False
+
+	Field: inventorySize
+		Type: UnityEngine.Vector2Int
+		Offset in Defining Type: 0x588
+		Has Default: False
+
+	Field: currentFoodSprite
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x590
+		Has Default: False
+
+	Field: currentRequiredResourceFeedback
+		Type: UnityEngine.UI.Image
+		Offset in Defining Type: 0x598
+		Has Default: False
+
+	Field: intervalToUpdateLogistics
+		Type: System.Single
+		Offset in Defining Type: 0x5A0
+		Has Default: False
+
+	Field: currentRequiredResource
+		Type: BaseResourceScriptableObject
+		Offset in Defining Type: 0x5A8
+		Has Default: False
+
+	Field: currentTimeToUpdateLogistics
+		Type: System.Single
+		Offset in Defining Type: 0x5B0
+		Has Default: False
+
+	Field: possibleRequiredResources
+		Type: System.Collections.Generic.List`1<BaseResourceScriptableObject>
+		Offset in Defining Type: 0x5B8
+		Has Default: False
+
+	Field: <CurrentItem>k__BackingField
+		Type: System.Int32
+		Offset in Defining Type: 0x5C0
+		Has Default: False
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x007297D0
+		Ram Offset 0x18072a9d0
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: parentArea
+			Type: WorldArea
+			Default Value: 
+	Method: EnableOverlay:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00729D50
+		Ram Offset 0x18072af50
+		Virtual Method Slot: 33
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: LoadSkillsDependentData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00729EA0
+		Ram Offset 0x18072b0a0
+		Virtual Method Slot: 22
+
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x00729FD0
+		Ram Offset 0x18072b1d0
+		Virtual Method Slot: 97
+
+		Parameter 0:
+			Name: firstSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: Awake:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0072A530
+		Ram Offset 0x18072b730
+		Virtual Method Slot: 4
+
+	Method: GetPossibleRequiredResources:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0072A5A0
+		Ram Offset 0x18072b7a0
+		Virtual Method Slot: 65535
+
+	Method: GetLootToBeSpawned:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+		File Offset 0x0072AAF0
+		Ram Offset 0x18072bcf0
+		Virtual Method Slot: 60
+
+	Method: InitPopup:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0072AE70
+		Ram Offset 0x18072c070
+		Virtual Method Slot: 115
+
+	Method: InitInteractionFeedbacks:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0072AF30
+		Ram Offset 0x18072c130
+		Virtual Method Slot: 100
+
+	Method: UpdateInteractionLabels:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0072B790
+		Ram Offset 0x18072c990
+		Virtual Method Slot: 102
+
+	Method: CanInteractSecondary:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0072BC00
+		Ram Offset 0x18072ce00
+		Virtual Method Slot: 110
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: ExecuteSecondaryInteraction:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0072BE40
+		Ram Offset 0x18072d040
+		Virtual Method Slot: 111
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+	Method: ApplyPlayerPreviousSelectedRecipe:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0072BF30
+		Ram Offset 0x18072d130
+		Virtual Method Slot: 187
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+	Method: PlayerHasPreviousSelectedRecipe:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0072C000
+		Ram Offset 0x18072d200
+		Virtual Method Slot: 188
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+		Parameter 1:
+			Name: resource
+			Type: BaseResourceScriptableObject
+			Default Value: 
+	Method: WasHit:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0072C260
+		Ram Offset 0x18072d460
+		Virtual Method Slot: 128
+
+		Parameter 0:
+			Name: attacker
+			Type: BaseCharacter
+			Default Value: 
+		Parameter 1:
+			Name: damage
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: forceNoExtraction
+			Type: System.Boolean
+			Default Value: False
+		Parameter 3:
+			Name: forceExtraction
+			Type: System.Boolean
+			Default Value: False
+	Method: OnChangeInventory:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0072C310
+		Ram Offset 0x18072d510
+		Virtual Method Slot: 65535
+
+	Method: UpdateContentOverlay:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0072C350
+		Ram Offset 0x18072d550
+		Virtual Method Slot: 65535
+
+	Method: SetFoodSprite:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0072C4B0
+		Ram Offset 0x18072d6b0
+		Virtual Method Slot: 65535
+
+	Method: TryToConsumeItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0072C750
+		Ram Offset 0x18072d950
+		Virtual Method Slot: 118
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+		Parameter 1:
+			Name: sourceCharacter
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: dropToTheGround
+			Type: System.Boolean
+			Default Value: 
+	Method: CanAddItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0072CBE0
+		Ram Offset 0x18072dde0
+		Virtual Method Slot: 120
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: isRecipe
+			Type: System.Boolean
+			Default Value: 
+	Method: AddInventorySizeBonus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0072CC90
+		Ram Offset 0x18072de90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: extraSize
+			Type: System.Int32
+			Default Value: 
+	Method: AddItemToInventory:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0072D480
+		Ram Offset 0x18072e680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+	Method: HasResource:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0072D570
+		Ram Offset 0x18072e770
+		Virtual Method Slot: 133
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+	Method: GetResourceCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0072D610
+		Ram Offset 0x18072e810
+		Virtual Method Slot: 135
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+	Method: SpawnFood:
+		Accessibility: Public
+		Return Type: BaseResource
+		File Offset 0x0072D720
+		Ram Offset 0x18072e920
+		Virtual Method Slot: 65535
+
+	Method: RemoveContent:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x0072D9C0
+		Ram Offset 0x18072ebc0
+		Virtual Method Slot: 137
+
+		Parameter 0:
+			Name: resource
+			Type: BaseResourceScriptableObject
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+	Method: AddItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0072DBD0
+		Ram Offset 0x18072edd0
+		Virtual Method Slot: 136
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: feedbackTargetPosition
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 3:
+			Name: destroyAfterTime
+			Type: System.Single
+			Default Value: -1
+		Parameter 4:
+			Name: resourceToSpawnOnDestroy
+			Type: System.Int32
+			Default Value: -1
+	Method: EnterDestroyed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0072DD80
+		Ram Offset 0x18072ef80
+		Virtual Method Slot: 166
+
+	Method: DropContent:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0072DDB0
+		Ram Offset 0x18072efb0
+		Virtual Method Slot: 189
+
+	Method: EnableUIHighlightSprite:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0072E1F0
+		Ram Offset 0x18072f3f0
+		Virtual Method Slot: 76
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: UpdateLogisticsRequirement:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0072E7E0
+		Ram Offset 0x18072f9e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: HasLogisticsPriority:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0072E900
+		Ram Offset 0x18072fb00
+		Virtual Method Slot: 148
+
+	Method: IsLogisticsHiPriority:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0072E920
+		Ram Offset 0x18072fb20
+		Virtual Method Slot: 150
+
+	Method: UpdateLogistics:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0072EA40
+		Ram Offset 0x18072fc40
+		Virtual Method Slot: 142
+
+		Parameter 0:
+			Name: checkCurrentResources
+			Type: System.Boolean
+			Default Value: False
+	Method: ShowRequiredResourceFeedback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0072F200
+		Ram Offset 0x180730400
+		Virtual Method Slot: 190
+
+	Method: get_CurrentRequiredResource:
+		Accessibility: Public
+		Return Type: BaseResourceScriptableObject
+		File Offset 0x0072F5B0
+		Ram Offset 0x1807307b0
+		Virtual Method Slot: 65535
+
+	Method: set_CurrentRequiredResource:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0072F5C0
+		Ram Offset 0x1807307c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: BaseResourceScriptableObject
+			Default Value: 
+	Method: get_InventorySize:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2Int
+		File Offset 0x00433C60
+		Ram Offset 0x180434e60
+		Virtual Method Slot: 65535
+
+	Method: get_CurrentItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0072F710
+		Ram Offset 0x180730910
+		Virtual Method Slot: 65535
+
+	Method: set_CurrentItem:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0072F720
+		Ram Offset 0x180730920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_PossibleRequiredResources:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<BaseResourceScriptableObject>
+		File Offset 0x006E2070
+		Ram Offset 0x1806e3270
+		Virtual Method Slot: 65535
+
+	Method: get_ServesLogistics:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 185
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0072F730
+		Ram Offset 0x180730930
+		Virtual Method Slot: 65535

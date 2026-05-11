@@ -1,0 +1,143 @@
+Type: <>c__DisplayClass69_0
+
+Method: System.Void UnityEngine.UI.Extensions.AutoCompleteComboBox/<>c__DisplayClass69_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void UnityEngine.UI.Extensions.AutoCompleteComboBox/<>c__DisplayClass69_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.AutoCompleteComboBox/<>c__DisplayClass69_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean UnityEngine.UI.Extensions.AutoCompleteComboBox/<>c__DisplayClass69_0::<PruneItemsLinq>b__0(System.String):	Method Body (x86 ASM):
+		0x180A18230 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A18234 mov rax,rdx		; DEBUG: {Register}/RAX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A18237 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A1823A je short 0000000180A18255h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A1823C mov rdx,[rcx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x180A18240 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A18243 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A18246 call 00000001816CE7C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A1824B test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180A1824D sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A18250 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A18254 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180A18255 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A1825A int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean UnityEngine.UI.Extensions.AutoCompleteComboBox/<>c__DisplayClass69_0::<PruneItemsLinq>b__0(System.String):
+		End of function at 0x180A1825B
+		Absolute End is at 0x180A1825B
+		Identified Jump Destination addresses:
+
+		0x180A18234: Copies {'x' (function parameter, type System.String)} from rdx into rax
+		0x180A18237: [!] Compares {'x' (function parameter, type System.String)} and 0
+		0x180A1823A: Jumps to 0x180A18255 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x180A1823C: [!] Reads field currText from {'this' (function parameter, type UnityEngine.UI.Extensions.AutoCompleteComboBox/<>c__DisplayClass69_0)} and stores in a new local {'currText' (type System.String)}
+
+		0x180A18243: Copies {'x' (function parameter, type System.String)} from rax into rcx
+		0x180A18246: [!] Calls managed method System.Boolean System.String::Contains(System.String) on instance {'x' (function parameter, type System.String)} with arguments [{'currText' (type System.String)}] and stores the result in {'boolean' (type System.Boolean)}
+
+		0x180A1824B: [!] Compares {'boolean' (type System.Boolean)} and False
+		0x180A1824D: [!] Sets the boolean {'local5' (type System.Boolean)} in rax to true if boolean is equal to False, otherwise false.
+		0x180A18254: [!] Returns {'local5' (type System.Boolean)} from the function
+
+		0x180A18255: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.AutoCompleteComboBox/<>c__DisplayClass69_0
+	System.Boolean <PruneItemsLinq>b__0(System.String x)
+		System.String currText = this.currText
+
+		System.Boolean boolean = x.Contains(currText) //(String value)
+		System.Boolean local5 = boolean == False
+		return local5
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.String UnityEngine.UI.Extensions.AutoCompleteComboBox/<>c__DisplayClass69_0::currText
+	IL_0006: stloc.0
+	IL_0007: ldarg.1
+	IL_0008: ldloc.0
+	IL_0009: call System.Boolean System.String::Contains(System.String)
+	IL_000e: ldc.i4.0
+	IL_000f: ceq
+	IL_0011: ret
+	IL_0012: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0017: throw
+	
+
+Method: System.Boolean UnityEngine.UI.Extensions.AutoCompleteComboBox/<>c__DisplayClass69_0::<PruneItemsLinq>b__1(System.String):	Method Body (x86 ASM):
+		0x180A18260 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A18264 mov rax,rdx		; DEBUG: {Register}/RAX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A18267 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180A1826A je short 0000000180A1827Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A1826C mov rdx,[rcx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x180A18270 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180A18273 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180A18276 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180A1827A jmp near ptr 00000001816CE7C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A1827F call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180A18284 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean UnityEngine.UI.Extensions.AutoCompleteComboBox/<>c__DisplayClass69_0::<PruneItemsLinq>b__1(System.String):
+		End of function at 0x180A18285
+		Absolute End is at 0x180A18285
+		Identified Jump Destination addresses:
+
+		0x180A18264: Copies {'x' (function parameter, type System.String)} from rdx into rax
+		0x180A18267: [!] Compares {'x' (function parameter, type System.String)} and 0
+		0x180A1826A: Jumps to 0x180A1827F (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x180A1826C: [!] Reads field currText from {'this' (function parameter, type UnityEngine.UI.Extensions.AutoCompleteComboBox/<>c__DisplayClass69_0)} and stores in a new local {'currText' (type System.String)}
+
+		0x180A18273: Copies {'x' (function parameter, type System.String)} from rax into rcx
+		0x180A1827A: [!] Calls managed method System.Boolean System.String::Contains(System.String) on instance {'x' (function parameter, type System.String)} with arguments [{'currText' (type System.String)}] and stores the result in {'boolean' (type System.Boolean)}
+
+		0x180A1827A: [!] Returns {'boolean' (type System.Boolean)} from the function
+
+		0x180A1827F: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: UnityEngine.UI.Extensions.AutoCompleteComboBox/<>c__DisplayClass69_0
+	System.Boolean <PruneItemsLinq>b__1(System.String x)
+		System.String currText = this.currText
+
+		System.Boolean boolean = x.Contains(currText) //(String value)
+		return boolean
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.String UnityEngine.UI.Extensions.AutoCompleteComboBox/<>c__DisplayClass69_0::currText
+	IL_0006: stloc.0
+	IL_0007: ldarg.1
+	IL_0008: ldloc.0
+	IL_0009: call System.Boolean System.String::Contains(System.String)
+	IL_000e: ret
+	IL_000f: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0014: throw
+	
+

@@ -1,0 +1,566 @@
+Type: System.Security.Cryptography.CryptoStream:
+	Base Class: 
+		System.IO.Stream
+
+	Interfaces:
+		System.IDisposable
+
+	Nested Types:
+		System.Security.Cryptography.CryptoStream/<ReadAsyncInternal>d__37
+		System.Security.Cryptography.CryptoStream/<ReadAsyncCore>d__42
+		System.Security.Cryptography.CryptoStream/<WriteAsyncInternal>d__46
+		System.Security.Cryptography.CryptoStream/<WriteAsyncCore>d__49
+		System.Security.Cryptography.CryptoStream/<>c
+
+	Field: _stream
+		Type: System.IO.Stream
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _transform
+		Type: System.Security.Cryptography.ICryptoTransform
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _transformMode
+		Type: System.Security.Cryptography.CryptoStreamMode
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _inputBuffer
+		Type: System.Byte[]
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: _inputBufferIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: _inputBlockSize
+		Type: System.Int32
+		Offset in Defining Type: 0x4C
+		Has Default: False
+
+	Field: _outputBuffer
+		Type: System.Byte[]
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: _outputBufferIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: _outputBlockSize
+		Type: System.Int32
+		Offset in Defining Type: 0x5C
+		Has Default: False
+
+	Field: _canRead
+		Type: System.Boolean
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: _canWrite
+		Type: System.Boolean
+		Offset in Defining Type: 0x61
+		Has Default: False
+
+	Field: _finalBlockTransformed
+		Type: System.Boolean
+		Offset in Defining Type: 0x62
+		Has Default: False
+
+	Field: _lazyAsyncActiveSemaphore
+		Type: System.Threading.SemaphoreSlim
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: _leaveOpen
+		Type: System.Boolean
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016FAF30
+		Ram Offset 0x1816fc130
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stream
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 1:
+			Name: transform
+			Type: System.Security.Cryptography.ICryptoTransform
+			Default Value: 
+		Parameter 2:
+			Name: mode
+			Type: System.Security.Cryptography.CryptoStreamMode
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016FAF50
+		Ram Offset 0x1816fc150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stream
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 1:
+			Name: transform
+			Type: System.Security.Cryptography.ICryptoTransform
+			Default Value: 
+		Parameter 2:
+			Name: mode
+			Type: System.Security.Cryptography.CryptoStreamMode
+			Default Value: 
+		Parameter 3:
+			Name: leaveOpen
+			Type: System.Boolean
+			Default Value: 
+	Method: get_CanRead:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0096BD50
+		Ram Offset 0x18096cf50
+		Virtual Method Slot: 7
+
+	Method: get_CanSeek:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 8
+
+	Method: get_CanWrite:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x016FB350
+		Ram Offset 0x1816fc550
+		Virtual Method Slot: 10
+
+	Method: get_Length:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x016FB360
+		Ram Offset 0x1816fc560
+		Virtual Method Slot: 11
+
+	Method: get_Position:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x016FB3B0
+		Ram Offset 0x1816fc5b0
+		Virtual Method Slot: 12
+
+	Method: set_Position:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016FB400
+		Ram Offset 0x1816fc600
+		Virtual Method Slot: 13
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: get_HasFlushedFinalBlock:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x016FB450
+		Ram Offset 0x1816fc650
+		Virtual Method Slot: 65535
+
+	Method: FlushFinalBlock:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016FB460
+		Ram Offset 0x1816fc660
+		Virtual Method Slot: 65535
+
+	Method: Flush:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 20
+
+	Method: Seek:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x016FB630
+		Ram Offset 0x1816fc830
+		Virtual Method Slot: 29
+
+		Parameter 0:
+			Name: offset
+			Type: System.Int64
+			Default Value: 
+		Parameter 1:
+			Name: origin
+			Type: System.IO.SeekOrigin
+			Default Value: 
+	Method: SetLength:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016FB680
+		Ram Offset 0x1816fc880
+		Virtual Method Slot: 30
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: ReadAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<System.Int32>
+		File Offset 0x016FB6D0
+		Ram Offset 0x1816fc8d0
+		Virtual Method Slot: 23
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: BeginRead:
+		Accessibility: Public
+		Return Type: System.IAsyncResult
+		File Offset 0x016FB730
+		Ram Offset 0x1816fc930
+		Virtual Method Slot: 21
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: callback
+			Type: System.AsyncCallback
+			Default Value: 
+		Parameter 4:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: EndRead:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x016FB7E0
+		Ram Offset 0x1816fc9e0
+		Virtual Method Slot: 22
+
+		Parameter 0:
+			Name: asyncResult
+			Type: System.IAsyncResult
+			Default Value: 
+	Method: ReadAsyncInternal:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task`1<System.Int32>
+		File Offset 0x016FB820
+		Ram Offset 0x1816fca20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: ReadByte:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x016FBA80
+		Ram Offset 0x1816fcc80
+		Virtual Method Slot: 33
+
+	Method: WriteByte:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016FBCD0
+		Ram Offset 0x1816fced0
+		Virtual Method Slot: 36
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte
+			Default Value: 
+	Method: Read:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x016FBD90
+		Ram Offset 0x1816fcf90
+		Virtual Method Slot: 31
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: CheckReadArguments:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016FBED0
+		Ram Offset 0x1816fd0d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: ReadAsyncCore:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task`1<System.Int32>
+		File Offset 0x016FC080
+		Ram Offset 0x1816fd280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 4:
+			Name: useAsync
+			Type: System.Boolean
+			Default Value: 
+	Method: WriteAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x016FC2F0
+		Ram Offset 0x1816fd4f0
+		Virtual Method Slot: 27
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: BeginWrite:
+		Accessibility: Public
+		Return Type: System.IAsyncResult
+		File Offset 0x016FC350
+		Ram Offset 0x1816fd550
+		Virtual Method Slot: 25
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: callback
+			Type: System.AsyncCallback
+			Default Value: 
+		Parameter 4:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: EndWrite:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016FC400
+		Ram Offset 0x1816fd600
+		Virtual Method Slot: 26
+
+		Parameter 0:
+			Name: asyncResult
+			Type: System.IAsyncResult
+			Default Value: 
+	Method: WriteAsyncInternal:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x016FC410
+		Ram Offset 0x1816fd610
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: Write:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016FC670
+		Ram Offset 0x1816fd870
+		Virtual Method Slot: 34
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: CheckWriteArguments:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016FC760
+		Ram Offset 0x1816fd960
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: WriteAsyncCore:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x016FC910
+		Ram Offset 0x1816fdb10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 4:
+			Name: useAsync
+			Type: System.Boolean
+			Default Value: 
+	Method: Clear:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00F36BF0
+		Ram Offset 0x180f37df0
+		Virtual Method Slot: 65535
+
+	Method: Dispose:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x016FCB70
+		Ram Offset 0x1816fdd70
+		Virtual Method Slot: 19
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: InitializeBuffer:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016FCD90
+		Ram Offset 0x1816fdf90
+		Virtual Method Slot: 65535
+
+	Method: get_AsyncActiveSemaphore:
+		Accessibility: Private
+		Return Type: System.Threading.SemaphoreSlim
+		File Offset 0x016FCEE0
+		Ram Offset 0x1816fe0e0
+		Virtual Method Slot: 65535

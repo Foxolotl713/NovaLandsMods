@@ -1,0 +1,222 @@
+Type: SpaceStationElevatorController:
+	Base Class: 
+		UnityEngine.MonoBehaviour
+
+	Interfaces:
+
+	Field: elevatorRangeTrigger
+		Type: UnityEngine.Collider2D
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: elevatorInteriorTrigger
+		Type: UnityEngine.Collider2D
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: animator
+		Type: UnityEngine.Animator
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: arrivingSFX
+		Type: System.String
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: leavingSFX
+		Type: System.String
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: openDoorSFX
+		Type: System.String
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: closeDoorSFX
+		Type: System.String
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: arrivingAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: leavingAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0x5C
+		Has Default: False
+
+	Field: curAnimation
+		Type: System.Int32
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: player
+		Type: BasePlayer
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: animatorInitialized
+		Type: System.Boolean
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: onFinishExitAnimation
+		Type: System.Action
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: curState
+		Type: System.Int32
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: currentAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0x84
+		Has Default: False
+
+	Field: currentAnimationTargetDuration
+		Type: System.Single
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Method: Awake:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B34CB0
+		Ram Offset 0x180b35eb0
+		Virtual Method Slot: 65535
+
+	Method: InitAnimatorBehaviors:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00B34CD0
+		Ram Offset 0x180b35ed0
+		Virtual Method Slot: 4
+
+	Method: OnEnable:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B34EE0
+		Ram Offset 0x180b360e0
+		Virtual Method Slot: 65535
+
+	Method: EnableTrigger:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B35040
+		Ram Offset 0x180b36240
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: IsPlayerInsideElevator:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B350B0
+		Ram Offset 0x180b362b0
+		Virtual Method Slot: 65535
+
+	Method: IsPlayerInsideElevatorRangeTrigger:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x00B35350
+		Ram Offset 0x180b36550
+		Virtual Method Slot: 65535
+
+	Method: ElevatorEnter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B355F0
+		Ram Offset 0x180b367f0
+		Virtual Method Slot: 65535
+
+	Method: ElevatorExit:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B35A20
+		Ram Offset 0x180b36c20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: onFinishExitAnimation
+			Type: System.Action
+			Default Value: 
+	Method: PlayAnimation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B35D10
+		Ram Offset 0x180b36f10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: animation
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+	Method: Update:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B35D60
+		Ram Offset 0x180b36f60
+		Virtual Method Slot: 65535
+
+	Method: OnEnterElevatorArea:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B35F70
+		Ram Offset 0x180b37170
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: col
+			Type: UnityEngine.Collider2D
+			Default Value: 
+	Method: OnExitElevatorArea:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B36260
+		Ram Offset 0x180b37460
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: col
+			Type: UnityEngine.Collider2D
+			Default Value: 
+	Method: OnAnimatorStateChanged:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004E04F0
+		Ram Offset 0x1804e16f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: state
+			Type: System.Int32
+			Default Value: 
+	Method: OnElevatorAnimationEvent:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B36520
+		Ram Offset 0x180b37720
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eventName
+			Type: System.String
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B36730
+		Ram Offset 0x180b37930
+		Virtual Method Slot: 65535

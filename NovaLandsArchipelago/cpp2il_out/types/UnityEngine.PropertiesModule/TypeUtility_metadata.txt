@@ -1,0 +1,279 @@
+Type: Unity.Properties.TypeUtility:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		Unity.Properties.TypeUtility/ITypeConstructor
+		Unity.Properties.TypeUtility/ITypeConstructor`1
+		Unity.Properties.TypeUtility/TypeConstructor`1
+		Unity.Properties.TypeUtility/NonConstructable
+		Unity.Properties.TypeUtility/Cache`1
+		Unity.Properties.TypeUtility/TypeConstructorVisitor
+		Unity.Properties.TypeUtility/<>c
+
+	Static Field: s_TypeConstructors
+		Type: System.Collections.Concurrent.ConcurrentDictionary`2<System.Type,Unity.Properties.TypeUtility/ITypeConstructor>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: s_CreateTypeConstructor
+		Type: System.Reflection.MethodInfo
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: s_CachedResolvedName
+		Type: System.Collections.Concurrent.ConcurrentDictionary`2<System.Type,System.String>
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: s_Builders
+		Type: UnityEngine.Pool.ObjectPool`1<System.Text.StringBuilder>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: syncedPoolObject
+		Type: System.Object
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02504DF0
+		Ram Offset 0x182505ff0
+		Virtual Method Slot: 65535
+
+	Method: GetTypeDisplayName:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x02505400
+		Ram Offset 0x182506600
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+	Method: GetTypeDisplayName:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x025055D0
+		Ram Offset 0x1825067d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+		Parameter 1:
+			Name: args
+			Type: System.Collections.Generic.IReadOnlyList`1<System.Type>
+			Default Value: 
+		Parameter 2:
+			Name: argIndex
+			Type: System.Int32
+			Default Value: 
+	Method: GetRootType:
+		Accessibility: Public
+		Return Type: System.Type
+		File Offset 0x025060F0
+		Ram Offset 0x1825072f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+	Method: CreateTypeConstructor:
+		Accessibility: Private
+		Return Type: Unity.Properties.TypeUtility/ITypeConstructor
+		File Offset 0x02506210
+		Ram Offset 0x182507410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+	Method: CreateTypeConstructor:
+		Accessibility: Private
+		Return Type: Unity.Properties.TypeUtility/ITypeConstructor`1<T>
+		File Offset 0x00DEECE0
+		Ram Offset 0x180defee0
+		Virtual Method Slot: 65535
+
+	Method: GetTypeConstructor:
+		Accessibility: Private
+		Return Type: Unity.Properties.TypeUtility/ITypeConstructor
+		File Offset 0x02506490
+		Ram Offset 0x182507690
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+	Method: GetTypeConstructor:
+		Accessibility: Private
+		Return Type: Unity.Properties.TypeUtility/ITypeConstructor`1<T>
+		File Offset 0x00DEFB60
+		Ram Offset 0x180df0d60
+		Virtual Method Slot: 65535
+
+	Method: CanBeInstantiated:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x02506610
+		Ram Offset 0x182507810
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+	Method: CanBeInstantiated:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00DEEB40
+		Ram Offset 0x180defd40
+		Virtual Method Slot: 65535
+
+	Method: SetExplicitInstantiationMethod:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00DF0B60
+		Ram Offset 0x180df1d60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: constructor
+			Type: System.Func`1<T>
+			Default Value: 
+	Method: Instantiate:
+		Accessibility: Public
+		Return Type: T
+		File Offset 0x00DEFCC0
+		Ram Offset 0x180df0ec0
+		Virtual Method Slot: 65535
+
+	Method: TryInstantiate:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00DF0E00
+		Ram Offset 0x180df2000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: instance
+			Type: T
+			Default Value: 
+	Method: Instantiate:
+		Accessibility: Public
+		Return Type: T
+		File Offset 0x00DEFE20
+		Ram Offset 0x180df1020
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: derivedType
+			Type: System.Type
+			Default Value: 
+	Method: TryInstantiate:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00DF0F80
+		Ram Offset 0x180df2180
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: derivedType
+			Type: System.Type
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: T
+			Default Value: 
+	Method: InstantiateArray:
+		Accessibility: Public
+		Return Type: TArray
+		File Offset 0x00DF02E0
+		Ram Offset 0x180df14e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: count
+			Type: System.Int32
+			Default Value: 0
+	Method: TryInstantiateArray:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00DF12B0
+		Ram Offset 0x180df24b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: instance
+			Type: TArray
+			Default Value: 
+	Method: InstantiateArray:
+		Accessibility: Public
+		Return Type: TArray
+		File Offset 0x00DF0720
+		Ram Offset 0x180df1920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: derivedType
+			Type: System.Type
+			Default Value: 
+		Parameter 1:
+			Name: count
+			Type: System.Int32
+			Default Value: 0
+	Method: CheckIsAssignableFrom:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02506690
+		Ram Offset 0x182507890
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: type
+			Type: System.Type
+			Default Value: 
+		Parameter 1:
+			Name: derivedType
+			Type: System.Type
+			Default Value: 
+	Method: CheckCanBeInstantiated:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00DEEBC0
+		Ram Offset 0x180defdc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: constructor
+			Type: Unity.Properties.TypeUtility/ITypeConstructor`1<T>
+			Default Value: 
+	Method: CheckCanBeInstantiated:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02506810
+		Ram Offset 0x182507a10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: constructor
+			Type: Unity.Properties.TypeUtility/ITypeConstructor
+			Default Value: 
+		Parameter 1:
+			Name: type
+			Type: System.Type
+			Default Value: 

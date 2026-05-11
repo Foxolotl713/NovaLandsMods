@@ -1,0 +1,304 @@
+Type: Rewired.UI.ControlMapper.InputBehaviorWindow:
+	Base Class: 
+		Rewired.UI.ControlMapper.Window
+
+	Interfaces:
+
+	Nested Types:
+		Rewired.UI.ControlMapper.InputBehaviorWindow/InputBehaviorInfo
+		Rewired.UI.ControlMapper.InputBehaviorWindow/ButtonIdentifier
+		Rewired.UI.ControlMapper.InputBehaviorWindow/PropertyType
+		Rewired.UI.ControlMapper.InputBehaviorWindow/<>c__DisplayClass26_0
+
+	Static Field: minSensitivity
+		Type: System.Single
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 0,1
+
+	Field: spawnTransform
+		Type: UnityEngine.RectTransform
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: doneButton
+		Type: UnityEngine.UI.Button
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: cancelButton
+		Type: UnityEngine.UI.Button
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: defaultButton
+		Type: UnityEngine.UI.Button
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: doneButtonLabel
+		Type: TMPro.TMP_Text
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: cancelButtonLabel
+		Type: TMPro.TMP_Text
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: defaultButtonLabel
+		Type: TMPro.TMP_Text
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: uiControlSetPrefab
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: uiSliderControlPrefab
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: inputBehaviorInfo
+		Type: System.Collections.Generic.List`1<Rewired.UI.ControlMapper.InputBehaviorWindow/InputBehaviorInfo>
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: buttonCallbacks
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.Action`1<System.Int32>>
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: playerId
+		Type: System.Int32
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Method: Initialize:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009A9BA0
+		Ram Offset 0x1809aada0
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: id
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: isFocusedCallback
+			Type: System.Func`2<System.Int32, System.Boolean>
+			Default Value: 
+	Method: SetData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009AA2E0
+		Ram Offset 0x1809ab4e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: playerId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: data
+			Type: Rewired.UI.ControlMapper.ControlMapper/InputBehaviorSettings[]
+			Default Value: 
+	Method: SetButtonCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009AA900
+		Ram Offset 0x1809abb00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buttonIdentifier
+			Type: Rewired.UI.ControlMapper.InputBehaviorWindow/ButtonIdentifier
+			Default Value: 
+		Parameter 1:
+			Name: callback
+			Type: System.Action`1<System.Int32>
+			Default Value: 
+	Method: Cancel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009AAA10
+		Ram Offset 0x1809abc10
+		Virtual Method Slot: 9
+
+	Method: OnDone:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009AACD0
+		Ram Offset 0x1809abed0
+		Virtual Method Slot: 65535
+
+	Method: OnCancel:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x007A1020
+		Ram Offset 0x1807a2220
+		Virtual Method Slot: 65535
+
+	Method: OnRestoreDefault:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009AADF0
+		Ram Offset 0x1809abff0
+		Virtual Method Slot: 65535
+
+	Method: JoystickAxisSensitivityValueChanged:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009AAF60
+		Ram Offset 0x1809ac160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputBehaviorId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: controlId
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: MouseXYAxisSensitivityValueChanged:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009AAFC0
+		Ram Offset 0x1809ac1c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputBehaviorId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: controlId
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: JoystickAxisSensitivityCanceled:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009AB020
+		Ram Offset 0x1809ac220
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputBehaviorId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: controlId
+			Type: System.Int32
+			Default Value: 
+	Method: MouseXYAxisSensitivityCanceled:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009AB060
+		Ram Offset 0x1809ac260
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputBehaviorId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: controlId
+			Type: System.Int32
+			Default Value: 
+	Method: TakeInputFocus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009AB0A0
+		Ram Offset 0x1809ac2a0
+		Virtual Method Slot: 6
+
+	Method: CreateControlSet:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.UIControlSet
+		File Offset 0x009AB0B0
+		Ram Offset 0x1809ac2b0
+		Virtual Method Slot: 65535
+
+	Method: CreateSlider:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.UISliderControl
+		File Offset 0x009AB1F0
+		Ram Offset 0x1809ac3f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: set
+			Type: Rewired.UI.ControlMapper.UIControlSet
+			Default Value: 
+		Parameter 1:
+			Name: inputBehaviorId
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: defaultTitle
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: overrideTitle
+			Type: System.String
+			Default Value: 
+		Parameter 4:
+			Name: icon
+			Type: UnityEngine.Sprite
+			Default Value: 
+		Parameter 5:
+			Name: minValue
+			Type: System.Single
+			Default Value: 
+		Parameter 6:
+			Name: maxValue
+			Type: System.Single
+			Default Value: 
+		Parameter 7:
+			Name: valueChangedCallback
+			Type: System.Action`3<System.Int32, System.Int32, System.Single>
+			Default Value: 
+		Parameter 8:
+			Name: cancelCallback
+			Type: System.Action`2<System.Int32, System.Int32>
+			Default Value: 
+	Method: GetInputBehavior:
+		Accessibility: Private
+		Return Type: Rewired.InputBehavior
+		File Offset 0x009AB650
+		Ram Offset 0x1809ac850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: id
+			Type: System.Int32
+			Default Value: 
+	Method: GetInputBehaviorInfo:
+		Accessibility: Private
+		Return Type: Rewired.UI.ControlMapper.InputBehaviorWindow/InputBehaviorInfo
+		File Offset 0x009AB6C0
+		Ram Offset 0x1809ac8c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputBehaviorId
+			Type: System.Int32
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009AB790
+		Ram Offset 0x1809ac990
+		Virtual Method Slot: 65535

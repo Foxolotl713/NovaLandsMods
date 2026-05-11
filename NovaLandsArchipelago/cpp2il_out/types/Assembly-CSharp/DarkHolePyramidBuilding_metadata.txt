@@ -1,0 +1,403 @@
+Type: DarkHolePyramidBuilding:
+	Base Class: 
+		SingleRecipeSingleActionBuilding
+
+	Interfaces:
+
+	Nested Types:
+		DarkHolePyramidBuilding/<>c__DisplayClass37_0
+		DarkHolePyramidBuilding/<>c__DisplayClass50_0
+		DarkHolePyramidBuilding/<PlayPortalAnimationDelayed>d__38
+		DarkHolePyramidBuilding/<SaveGameDelayed>d__32
+
+	Field: progressBar
+		Type: DiscreteFillBar
+		Offset in Defining Type: 0x740
+		Has Default: False
+
+	Field: endGamePopupMessage
+		Type: System.String
+		Offset in Defining Type: 0x748
+		Has Default: False
+
+	Field: endGameAction
+		Type: DarkHolePyramidEndGameAction
+		Offset in Defining Type: 0x750
+		Has Default: False
+
+	Field: timeToSaveAfterShowingChallengeReward
+		Type: System.Single
+		Offset in Defining Type: 0x758
+		Has Default: False
+
+	Field: portalAnimations
+		Type: System.Collections.Generic.List`1<UnityEngine.Animator>
+		Offset in Defining Type: 0x760
+		Has Default: False
+
+	Field: darkHoleIdleSFX
+		Type: System.String
+		Offset in Defining Type: 0x768
+		Has Default: False
+
+	Field: darkHoleHolderAnimator
+		Type: UnityEngine.Animator
+		Offset in Defining Type: 0x770
+		Has Default: False
+
+	Field: increaseDarkHoleSfx
+		Type: System.String
+		Offset in Defining Type: 0x778
+		Has Default: False
+
+	Field: deactivateHolderSfx
+		Type: System.String
+		Offset in Defining Type: 0x780
+		Has Default: False
+
+	Field: darkHoleParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x788
+		Has Default: False
+
+	Field: darkHoleIncreaseDuration
+		Type: System.Single
+		Offset in Defining Type: 0x790
+		Has Default: False
+
+	Field: darkHoleIncreaseEaseType
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0x794
+		Has Default: False
+
+	Field: darkHoleScalePerProgress
+		Type: System.Collections.Generic.List`1<System.Single>
+		Offset in Defining Type: 0x798
+		Has Default: False
+
+	Field: botsSuckedParticles
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x7A0
+		Has Default: False
+
+	Field: sendingSmokeSFXInstance
+		Type: FMODUnity.StudioEventEmitter
+		Offset in Defining Type: 0x7A8
+		Has Default: False
+
+	Field: portalSendingSFXInstance
+		Type: FMODUnity.StudioEventEmitter
+		Offset in Defining Type: 0x7B0
+		Has Default: False
+
+	Field: portalIdleSFXInstance
+		Type: FMODUnity.StudioEventEmitter
+		Offset in Defining Type: 0x7B8
+		Has Default: False
+
+	Field: currentProgress
+		Type: System.Int32
+		Offset in Defining Type: 0x7C0
+		Has Default: False
+
+	Field: pyramidPopup
+		Type: DarkHolePyramidBuildingPopup
+		Offset in Defining Type: 0x7C8
+		Has Default: False
+
+	Method: ClampProgress:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AC6710
+		Ram Offset 0x180ac7910
+		Virtual Method Slot: 65535
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AC67A0
+		Ram Offset 0x180ac79a0
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: parentArea
+			Type: WorldArea
+			Default Value: 
+	Method: Start:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AC6940
+		Ram Offset 0x180ac7b40
+		Virtual Method Slot: 5
+
+	Method: OnDestroy:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AC6D70
+		Ram Offset 0x180ac7f70
+		Virtual Method Slot: 8
+
+	Method: InitProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AC6DC0
+		Ram Offset 0x180ac7fc0
+		Virtual Method Slot: 25
+
+	Method: InitComponents:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AC6DE0
+		Ram Offset 0x180ac7fe0
+		Virtual Method Slot: 26
+
+	Method: StopAllCurrentSFX:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AC6E20
+		Ram Offset 0x180ac8020
+		Virtual Method Slot: 65535
+
+	Method: GetPopup:
+		Accessibility: Private
+		Return Type: DarkHolePyramidBuildingPopup
+		File Offset 0x00AC6E60
+		Ram Offset 0x180ac8060
+		Virtual Method Slot: 65535
+
+	Method: GetLootToBeSpawned:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+		File Offset 0x00AC6FE0
+		Ram Offset 0x180ac81e0
+		Virtual Method Slot: 60
+
+	Method: CanInteract:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AC7360
+		Ram Offset 0x180ac8560
+		Virtual Method Slot: 108
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: ShowPopup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AC7410
+		Ram Offset 0x180ac8610
+		Virtual Method Slot: 116
+
+	Method: OnCancelEndGame:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AC7890
+		Ram Offset 0x180ac8a90
+		Virtual Method Slot: 65535
+
+	Method: OnConfirmEndGame:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AC7A30
+		Ram Offset 0x180ac8c30
+		Virtual Method Slot: 65535
+
+	Method: SaveGameDelayed:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00AC7E60
+		Ram Offset 0x180ac9060
+		Virtual Method Slot: 65535
+
+	Method: OnFinishSaving:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AC7EF0
+		Ram Offset 0x180ac90f0
+		Virtual Method Slot: 65535
+
+	Method: PlayActionFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AC7FD0
+		Ram Offset 0x180ac91d0
+		Virtual Method Slot: 230
+
+		Parameter 0:
+			Name: onComplete
+			Type: DG.Tweening.TweenCallback
+			Default Value: 
+	Method: IncreaseDarkHoleSize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AC8180
+		Ram Offset 0x180ac9380
+		Virtual Method Slot: 65535
+
+	Method: DisableAllPortalAnimations:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AC8430
+		Ram Offset 0x180ac9630
+		Virtual Method Slot: 65535
+
+	Method: PlayDarkHoleParticlePerProgress:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AC8590
+		Ram Offset 0x180ac9790
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: curStep
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: fromStart
+			Type: System.Boolean
+			Default Value: False
+	Method: PlayPortalAnimationDelayed:
+		Accessibility: Public
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00AC8CE0
+		Ram Offset 0x180ac9ee0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: animation
+			Type: System.Int32
+			Default Value: 
+	Method: PlayDarkHoleHoderDeactivatedAnimation:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AC8D90
+		Ram Offset 0x180ac9f90
+		Virtual Method Slot: 65535
+
+	Method: MoveDarkHoleToPosition:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AC8E20
+		Ram Offset 0x180aca020
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector3
+			Default Value: 
+		Parameter 1:
+			Name: duration
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: easeType
+			Type: DG.Tweening.Ease
+			Default Value: 
+		Parameter 3:
+			Name: onCompleteMove
+			Type: DG.Tweening.TweenCallback
+			Default Value: 
+	Method: PlayBotsSuckedParticlesAt:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AC91D0
+		Ram Offset 0x180aca3d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector3
+			Default Value: 
+	Method: GetDarkHolePosition:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector3
+		File Offset 0x00AC9470
+		Ram Offset 0x180aca670
+		Virtual Method Slot: 65535
+
+	Method: StopBotsSuckedParticles:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AC9550
+		Ram Offset 0x180aca750
+		Virtual Method Slot: 65535
+
+	Method: UpdateProgress:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AC95C0
+		Ram Offset 0x180aca7c0
+		Virtual Method Slot: 65535
+
+	Method: UpdateProgressBar:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AC9820
+		Ram Offset 0x180acaa20
+		Virtual Method Slot: 65535
+
+	Method: PlayPortalSendingFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: StopPortalSendingFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: EnableInteractionTriggerDelayed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00AC9850
+		Ram Offset 0x180acaa50
+		Virtual Method Slot: 65535
+
+	Method: HasResourcesToProduce:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AC9960
+		Ram Offset 0x180acab60
+		Virtual Method Slot: 205
+
+	Method: DropUnnecessaryResources:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AC9A80
+		Ram Offset 0x180acac80
+		Virtual Method Slot: 201
+
+	Method: get_CurrentProgress:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00ACA2F0
+		Ram Offset 0x180acb4f0
+		Virtual Method Slot: 65535
+
+	Method: CanBuildOnWildArea:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 125
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACA300
+		Ram Offset 0x180acb500
+		Virtual Method Slot: 65535

@@ -1,0 +1,263 @@
+Type: OxygenBeaconBuilding:
+	Base Class: 
+		BaseBuilding
+
+	Interfaces:
+
+	Static Field: TIME_TO_AUTO_UPDATE_LOGISTICS
+		Type: System.Single
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 2,5
+
+	Static Field: ADD_WATER_INTERACTION_INDEX
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 0
+
+	Static Field: MOVE_BUILDING_INTERACTION_INDEX
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Field: giveAllWaterString
+		Type: System.String
+		Offset in Defining Type: 0x580
+		Has Default: False
+
+	Field: hosePrefab
+		Type: OxygenHoseFeedback
+		Offset in Defining Type: 0x588
+		Has Default: False
+
+	Field: depositAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0x590
+		Has Default: False
+
+	Field: depositAnimationMaxDuration
+		Type: System.Single
+		Offset in Defining Type: 0x594
+		Has Default: False
+
+	Field: depositAnimationMaxDelay
+		Type: System.Single
+		Offset in Defining Type: 0x598
+		Has Default: False
+
+	Field: hose
+		Type: OxygenHoseFeedback
+		Offset in Defining Type: 0x5A0
+		Has Default: False
+
+	Method: LoadDependentData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B1FBA0
+		Ram Offset 0x180b20da0
+		Virtual Method Slot: 20
+
+	Method: InitHose:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00B1FCE0
+		Ram Offset 0x180b20ee0
+		Virtual Method Slot: 65535
+
+	Method: Start:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B1FFE0
+		Ram Offset 0x180b211e0
+		Virtual Method Slot: 5
+
+	Method: InitInteractionFeedbacks:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00B20120
+		Ram Offset 0x180b21320
+		Virtual Method Slot: 100
+
+	Method: UpdateInteractionLabels:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00B20780
+		Ram Offset 0x180b21980
+		Virtual Method Slot: 102
+
+	Method: CanInteract:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B209F0
+		Ram Offset 0x180b21bf0
+		Virtual Method Slot: 108
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: OnInteract:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x007315B0
+		Ram Offset 0x1807327b0
+		Virtual Method Slot: 104
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: CanAddItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B20C00
+		Ram Offset 0x180b21e00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+	Method: CanAddItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00AFE2B0
+		Ram Offset 0x180aff4b0
+		Virtual Method Slot: 120
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: isRecipe
+			Type: System.Boolean
+			Default Value: 
+	Method: TryToConsumeItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B20D40
+		Ram Offset 0x180b21f40
+		Virtual Method Slot: 118
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+		Parameter 1:
+			Name: sourceCharacter
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: dropToTheGround
+			Type: System.Boolean
+			Default Value: 
+	Method: PlayCantConsumeItemFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B20F50
+		Ram Offset 0x180b22150
+		Virtual Method Slot: 119
+
+		Parameter 0:
+			Name: itemId
+			Type: System.Int32
+			Default Value: 
+	Method: AddWaterFromBot:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B210D0
+		Ram Offset 0x180b222d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+	Method: ShowPopup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B212A0
+		Ram Offset 0x180b224a0
+		Virtual Method Slot: 116
+
+	Method: HidePopup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 117
+
+	Method: AddWaterFeedback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B21580
+		Ram Offset 0x180b22780
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: depositant
+			Type: BaseCharacter
+			Default Value: 
+	Method: EnterDestroyed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B21A60
+		Ram Offset 0x180b22c60
+		Virtual Method Slot: 166
+
+	Method: UpdateLogistics:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B21BD0
+		Ram Offset 0x180b22dd0
+		Virtual Method Slot: 142
+
+		Parameter 0:
+			Name: checkCurrentResources
+			Type: System.Boolean
+			Default Value: False
+	Method: SyncLogisticsWithOxygenator:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B21D40
+		Ram Offset 0x180b22f40
+		Virtual Method Slot: 65535
+
+	Method: HasLogisticsPriority:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00B224A0
+		Ram Offset 0x180b236a0
+		Virtual Method Slot: 148
+
+	Method: IsLogisticsHiPriority:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00B225D0
+		Ram Offset 0x180b237d0
+		Virtual Method Slot: 150
+
+	Method: IsLogisticsLoPriority:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00B22720
+		Ram Offset 0x180b23920
+		Virtual Method Slot: 149
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B22870
+		Ram Offset 0x180b23a70
+		Virtual Method Slot: 65535

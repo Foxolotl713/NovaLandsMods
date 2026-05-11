@@ -1,0 +1,107 @@
+Type: <>c__DisplayClass46_0
+
+Method: System.Void CheatsPopup/<>c__DisplayClass46_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void CheatsPopup/<>c__DisplayClass46_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: CheatsPopup/<>c__DisplayClass46_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Void CheatsPopup/<>c__DisplayClass46_0::<InitCreaturesList>b__0():	Method Body (x86 ASM):
+		0x1805612A0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1805612A2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1805612A6 mov rbx,[rcx+18h]		; DEBUG: {Register}/RBX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1805612AA mov rcx,[rcx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1805612AE test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1805612B1 je short 00000001805612E1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1805612B3 mov rdx,[rcx]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1805612B6 mov rax,[rdx+0C08h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 3080 | None ||| N/A | N/A
+		0x1805612BD mov rdx,[rdx+0C10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 3088 | None ||| N/A | N/A
+		0x1805612C4 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1805612C6 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1805612C9 je short 00000001805612E1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1805612CB mov dword ptr [rbx+1D0h],1		; DEBUG: {Memory}/None {Immediate32}/None ||| RBX | 464 | None ||| N/A | 1
+		0x1805612D5 mov [rbx+1E0h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBX | 480 | None ||| N/A | N/A
+		0x1805612DB add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1805612DF pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1805612E0 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1805612E1 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1805612E6 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void CheatsPopup/<>c__DisplayClass46_0::<InitCreaturesList>b__0():
+		End of function at 0x1805612E7
+		Absolute End is at 0x1805612E7
+		Identified Jump Destination addresses:
+
+		0x1805612A0: Saves the content of rbx to the stack
+		0x1805612A6: [!] Reads field <>4__this from {'this' (function parameter, type CheatsPopup/<>c__DisplayClass46_0)} and stores in a new local {'<>4__this' (type CheatsPopup)}
+
+		0x1805612AA: [!] Reads field c from {'this' (function parameter, type CheatsPopup/<>c__DisplayClass46_0)} and stores in a new local {'baseCharacter' (type BaseCharacter)}
+
+		0x1805612AE: [!] Compares {'baseCharacter' (type BaseCharacter)} and 0
+		0x1805612B1: Jumps to 0x1805612E1 (which throws a NRE) if baseCharacter equals 0. Implicitly present in managed code, so ignored here.
+		0x1805612B3: Loads the class pointer from baseCharacter into a constant constant2 in register rdx
+		0x1805612B6: Loads the pointer to the implementation of virtual function System.Int32 BaseCharacter::get_CharacterId() specific to BaseCharacter from the class pointer in rdx, slot 173 (from memory offset 3080) and stores in constant constant3
+		0x1805612BD: Loads the pointer to the implementation of virtual function System.Int32 BaseCharacter::get_CharacterId() specific to BaseCharacter from the class pointer in rdx, slot 173 (from memory offset 3088) and stores in constant constant4
+		0x1805612C4: [!] Calls managed method System.Int32 BaseCharacter::get_CharacterId() on instance {'baseCharacter' (type BaseCharacter)} and stores the result in {'characterId' (type System.Int32)}
+
+		0x1805612C6: [!] Compares {'<>4__this' (type CheatsPopup)} and 0
+		0x1805612C9: Jumps to 0x1805612E1 (which throws a NRE) if <>4__this equals 0. Implicitly present in managed code, so ignored here.
+		0x1805612CB: [!] Sets the field currentPlacementState (Type CheatsPopup/CheatPopupPlacementState) on local {'<>4__this' (type CheatsPopup)} to the value stored in 1
+		0x1805612D5: [!] Sets the field currentCreatureId (Type System.Int32) on local {'<>4__this' (type CheatsPopup)} to the value stored in {'characterId' (type System.Int32)}
+		0x1805612E0: [!] Returns from the function
+
+		0x1805612E1: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: CheatsPopup/<>c__DisplayClass46_0
+	System.Void <InitCreaturesList>b__0()
+		CheatsPopup <>4__this = this.<>4__this
+		BaseCharacter baseCharacter = this.c
+
+		System.Int32 characterId = baseCharacter.CharacterId
+		<>4__this.currentPlacementState = 1
+		<>4__this.currentCreatureId = characterId
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld CheatsPopup CheatsPopup/<>c__DisplayClass46_0::<>4__this
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld BaseCharacter CheatsPopup/<>c__DisplayClass46_0::c
+	IL_000d: call System.Int32 BaseCharacter::get_CharacterId()
+	IL_0012: stloc.1
+	IL_0013: ldloc.0
+	IL_0014: ldc.i4.1
+	IL_0015: conv.i8
+	IL_0016: conv.u8
+	IL_0017: stfld CheatsPopup/CheatPopupPlacementState CheatsPopup::currentPlacementState
+	IL_001c: ldloc.0
+	IL_001d: ldloc.1
+	IL_001e: stfld System.Int32 CheatsPopup::currentCreatureId
+	IL_0023: ret
+	IL_0024: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0029: throw
+	
+

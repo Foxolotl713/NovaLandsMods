@@ -1,0 +1,508 @@
+Type: System.IO.MonoIO:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: InvalidHandle
+		Type: System.IntPtr
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: dump_handles
+		Type: System.Boolean
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Method: GetException:
+		Accessibility: Public
+		Return Type: System.Exception
+		File Offset 0x01871D90
+		Ram Offset 0x181872f90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: GetException:
+		Accessibility: Public
+		Return Type: System.Exception
+		File Offset 0x01871EA0
+		Ram Offset 0x1818730a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: GetCurrentDirectory:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01872520
+		Ram Offset 0x181873720
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: SetFileAttributes:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x018725B0
+		Ram Offset 0x1818737b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.Char*
+			Default Value: 
+		Parameter 1:
+			Name: attrs
+			Type: System.IO.FileAttributes
+			Default Value: 
+		Parameter 2:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: SetFileAttributes:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x018725C0
+		Ram Offset 0x1818737c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: attrs
+			Type: System.IO.FileAttributes
+			Default Value: 
+		Parameter 2:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: GetFileType:
+		Accessibility: Private
+		Return Type: System.IO.MonoFileType
+		File Offset 0x01872640
+		Ram Offset 0x181873840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: GetFileType:
+		Accessibility: Public
+		Return Type: System.IO.MonoFileType
+		File Offset 0x01872650
+		Ram Offset 0x181873850
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: safeHandle
+			Type: System.Runtime.InteropServices.SafeHandle
+			Default Value: 
+		Parameter 1:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: FindCloseFile:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01872760
+		Ram Offset 0x181873960
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hnd
+			Type: System.IntPtr
+			Default Value: 
+	Method: Open:
+		Accessibility: Private
+		Return Type: System.IntPtr
+		File Offset 0x018728C0
+		Ram Offset 0x181873ac0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: filename
+			Type: System.Char*
+			Default Value: 
+		Parameter 1:
+			Name: mode
+			Type: System.IO.FileMode
+			Default Value: 
+		Parameter 2:
+			Name: access
+			Type: System.IO.FileAccess
+			Default Value: 
+		Parameter 3:
+			Name: share
+			Type: System.IO.FileShare
+			Default Value: 
+		Parameter 4:
+			Name: options
+			Type: System.IO.FileOptions
+			Default Value: 
+		Parameter 5:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: Open:
+		Accessibility: Public
+		Return Type: System.IntPtr
+		File Offset 0x018729D0
+		Ram Offset 0x181873bd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: filename
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: mode
+			Type: System.IO.FileMode
+			Default Value: 
+		Parameter 2:
+			Name: access
+			Type: System.IO.FileAccess
+			Default Value: 
+		Parameter 3:
+			Name: share
+			Type: System.IO.FileShare
+			Default Value: 
+		Parameter 4:
+			Name: options
+			Type: System.IO.FileOptions
+			Default Value: 
+		Parameter 5:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: Close:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01872B20
+		Ram Offset 0x181873d20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: Read:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01872B60
+		Ram Offset 0x181873d60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: dest
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: dest_offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: Read:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01872BF0
+		Ram Offset 0x181873df0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: safeHandle
+			Type: System.Runtime.InteropServices.SafeHandle
+			Default Value: 
+		Parameter 1:
+			Name: dest
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: dest_offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: Write:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01872DA0
+		Ram Offset 0x181873fa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: src
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: src_offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: Write:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01872E00
+		Ram Offset 0x181874000
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: safeHandle
+			Type: System.Runtime.InteropServices.SafeHandle
+			Default Value: 
+		Parameter 1:
+			Name: src
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: src_offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: Seek:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x01872F70
+		Ram Offset 0x181874170
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int64
+			Default Value: 
+		Parameter 2:
+			Name: origin
+			Type: System.IO.SeekOrigin
+			Default Value: 
+		Parameter 3:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: Seek:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x01872FB0
+		Ram Offset 0x1818741b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: safeHandle
+			Type: System.Runtime.InteropServices.SafeHandle
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int64
+			Default Value: 
+		Parameter 2:
+			Name: origin
+			Type: System.IO.SeekOrigin
+			Default Value: 
+		Parameter 3:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: GetLength:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x01873120
+		Ram Offset 0x181874320
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: GetLength:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x01873160
+		Ram Offset 0x181874360
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: safeHandle
+			Type: System.Runtime.InteropServices.SafeHandle
+			Default Value: 
+		Parameter 1:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: SetLength:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x018732A0
+		Ram Offset 0x1818744a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: length
+			Type: System.Int64
+			Default Value: 
+		Parameter 2:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: SetLength:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01873350
+		Ram Offset 0x181874550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: safeHandle
+			Type: System.Runtime.InteropServices.SafeHandle
+			Default Value: 
+		Parameter 1:
+			Name: length
+			Type: System.Int64
+			Default Value: 
+		Parameter 2:
+			Name: error
+			Type: System.IO.MonoIOError
+			Default Value: 
+	Method: get_ConsoleOutput:
+		Accessibility: Public
+		Return Type: System.IntPtr
+		File Offset 0x01873500
+		Ram Offset 0x181874700
+		Virtual Method Slot: 65535
+
+	Method: get_ConsoleInput:
+		Accessibility: Public
+		Return Type: System.IntPtr
+		File Offset 0x01873510
+		Ram Offset 0x181874710
+		Virtual Method Slot: 65535
+
+	Method: get_ConsoleError:
+		Accessibility: Public
+		Return Type: System.IntPtr
+		File Offset 0x01873520
+		Ram Offset 0x181874720
+		Virtual Method Slot: 65535
+
+	Method: get_VolumeSeparatorChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x01873530
+		Ram Offset 0x181874730
+		Virtual Method Slot: 65535
+
+	Method: get_DirectorySeparatorChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x01873540
+		Ram Offset 0x181874740
+		Virtual Method Slot: 65535
+
+	Method: get_AltDirectorySeparatorChar:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x01873550
+		Ram Offset 0x181874750
+		Virtual Method Slot: 65535
+
+	Method: get_PathSeparator:
+		Accessibility: Public
+		Return Type: System.Char
+		File Offset 0x01873560
+		Ram Offset 0x181874760
+		Virtual Method Slot: 65535
+
+	Method: DumpHandles:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x017C87F0
+		Ram Offset 0x1817c99f0
+		Virtual Method Slot: 65535
+
+	Method: RemapPath:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01873570
+		Ram Offset 0x181874770
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: path
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: newPath
+			Type: System.String
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01873580
+		Ram Offset 0x181874780
+		Virtual Method Slot: 65535

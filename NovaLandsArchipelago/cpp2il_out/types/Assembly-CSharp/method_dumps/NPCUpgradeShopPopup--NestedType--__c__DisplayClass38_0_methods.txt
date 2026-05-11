@@ -1,0 +1,96 @@
+Type: <>c__DisplayClass38_0
+
+Method: System.Void NPCUpgradeShopPopup/<>c__DisplayClass38_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void NPCUpgradeShopPopup/<>c__DisplayClass38_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: NPCUpgradeShopPopup/<>c__DisplayClass38_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean NPCUpgradeShopPopup/<>c__DisplayClass38_0::<InitUpgrades>b__0(NPCUpgradeShopPopupSelectionSlot):	Method Body (x86 ASM):
+		0x18063C5C0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18063C5C4 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18063C5C7 je short 000000018063C5E9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18063C5C9 mov rdx,[rdx+60h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 96 | None ||| N/A | N/A
+		0x18063C5CD test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18063C5D0 je short 000000018063C5E9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18063C5D2 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x18063C5D6 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18063C5D9 je short 000000018063C5E9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18063C5DB mov eax,[rax+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x18063C5DE cmp [rdx+18h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 24 | None ||| N/A | N/A
+		0x18063C5E1 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18063C5E4 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18063C5E8 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18063C5E9 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18063C5EE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean NPCUpgradeShopPopup/<>c__DisplayClass38_0::<InitUpgrades>b__0(NPCUpgradeShopPopupSelectionSlot):
+		End of function at 0x18063C5EF
+		Absolute End is at 0x18063C5EF
+		Identified Jump Destination addresses:
+
+		0x18063C5C4: [!] Compares {'x' (function parameter, type NPCUpgradeShopPopupSelectionSlot)} and 0
+		0x18063C5C7: Jumps to 0x18063C5E9 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x18063C5C9: [!] Reads field upgrade from {'x' (function parameter, type NPCUpgradeShopPopupSelectionSlot)} and stores in a new local {'upgrade' (type PlayerUpgradeScriptableObject)}
+
+		0x18063C5CD: [!] Compares {'upgrade' (type PlayerUpgradeScriptableObject)} and 0
+		0x18063C5D0: Jumps to 0x18063C5E9 (which throws a NRE) if upgrade equals 0. Implicitly present in managed code, so ignored here.
+		0x18063C5D2: [!] Reads field upgrade from {'this' (function parameter, type NPCUpgradeShopPopup/<>c__DisplayClass38_0)} and stores in a new local {'upgrade2' (type PlayerUpgradeScriptableObject)}
+
+		0x18063C5D6: [!] Compares {'upgrade2' (type PlayerUpgradeScriptableObject)} and 0
+		0x18063C5D9: Jumps to 0x18063C5E9 (which throws a NRE) if upgrade2 equals 0. Implicitly present in managed code, so ignored here.
+		0x18063C5DB: [!] Reads field upgradeId from {'upgrade2' (type PlayerUpgradeScriptableObject)} and stores in a new local {'upgradeId' (type System.Int32)}
+
+		0x18063C5DE: [!] Compares {field upgradeId, read from local {'upgrade' (type PlayerUpgradeScriptableObject)}} and {'upgradeId' (type System.Int32)}
+		0x18063C5E1: [!] Sets the boolean {'local5' (type System.Boolean)} in rax to true if upgrade.upgradeId is equal to upgradeId, otherwise false.
+		0x18063C5E8: [!] Returns {'local5' (type System.Boolean)} from the function
+
+		0x18063C5E9: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: NPCUpgradeShopPopup/<>c__DisplayClass38_0
+	System.Boolean <InitUpgrades>b__0(NPCUpgradeShopPopupSelectionSlot x)
+		PlayerUpgradeScriptableObject upgrade = x.upgrade
+		PlayerUpgradeScriptableObject upgrade2 = this.upgrade
+		System.Int32 upgradeId = upgrade2.upgradeId
+		System.Boolean local5 = upgrade.upgradeId == upgradeId
+		return local5
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: ldfld PlayerUpgradeScriptableObject NPCUpgradeShopPopupSelectionSlot::upgrade
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld PlayerUpgradeScriptableObject NPCUpgradeShopPopup/<>c__DisplayClass38_0::upgrade
+	IL_000d: ldfld System.Int32 PlayerUpgradeScriptableObject::upgradeId
+	IL_0012: stloc.1
+	IL_0013: ldloc.0
+	IL_0014: ldfld System.Int32 PlayerUpgradeScriptableObject::upgradeId
+	IL_0019: ldloc.1
+	IL_001a: ceq
+	IL_001c: ret
+	IL_001d: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0022: throw
+	
+

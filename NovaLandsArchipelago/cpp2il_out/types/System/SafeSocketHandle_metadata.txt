@@ -1,0 +1,68 @@
+Type: System.Net.Sockets.SafeSocketHandle:
+	Base Class: 
+		Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid
+
+	Interfaces:
+
+	Static Field: THROW_ON_ABORT_RETRIES
+		Type: System.Boolean
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: blocking_threads
+		Type: System.Collections.Generic.List`1<System.Threading.Thread>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: threads_stacktraces
+		Type: System.Collections.Generic.Dictionary`2<System.Threading.Thread,System.Diagnostics.StackTrace>
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: in_cleanup
+		Type: System.Boolean
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01FA9600
+		Ram Offset 0x181faa800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: preexistingHandle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: ownsHandle
+			Type: System.Boolean
+			Default Value: 
+	Method: ReleaseHandle:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x01FA9720
+		Ram Offset 0x181faa920
+		Virtual Method Slot: 7
+
+	Method: RegisterForBlockingSyscall:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01FA9EF0
+		Ram Offset 0x181fab0f0
+		Virtual Method Slot: 65535
+
+	Method: UnRegisterForBlockingSyscall:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01FAA350
+		Ram Offset 0x181fab550
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01FAA5D0
+		Ram Offset 0x181fab7d0
+		Virtual Method Slot: 65535

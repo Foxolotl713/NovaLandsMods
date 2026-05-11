@@ -1,0 +1,174 @@
+Type: SimpleEventOnEnable
+
+Method: System.Void SimpleEventOnEnable::OnEnable():	Method Body (x86 ASM):
+		0x1804C7440 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804C7442 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1804C7446 mov rax,[1832A9D20h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495575328 | None ||| N/A | N/A
+		0x1804C744D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804C7450 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804C7453 jne short 00000001804C746Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804C7455 lea rcx,[182979448h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939272 | None ||| N/A | N/A
+		0x1804C745C call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804C7461 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804C7464 je short 00000001804C7495h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804C7466 mov [1832A9D20h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495575328 | None ||| N/A | N/A
+		0x1804C746D mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804C7470 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804C7472 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1804C7474 je short 00000001804C748Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804C7476 mov rax,[rbx]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x1804C7479 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804C747C mov rdx,[rax+180h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 384 | None ||| N/A | N/A
+		0x1804C7483 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1804C7487 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804C7488 jmp qword ptr [rax+178h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 376 | None ||| N/A | N/A
+		0x1804C748F add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1804C7493 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804C7494 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804C7495 lea rcx,[182979448h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485939272 | None ||| N/A | N/A
+		0x1804C749C call 0000000180323A80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804C74A1 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804C74A4 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804C74A6 call 0000000180321970h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804C74AB int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SimpleEventOnEnable::OnEnable():
+		End of function at 0x1804C74AC
+		Absolute End is at 0x1804C74AC
+		Identified Jump Destination addresses:
+
+		0x1804C7440: Saves the content of rbx to the stack
+		0x1804C7446: Loads string "B" into register rax as constant UnityEngine.Behaviour.get_enabled
+		0x1804C744D: Copies {'this' (function parameter, type SimpleEventOnEnable)} from rcx into rbx
+		0x1804C7450: Compares UnityEngine.Behaviour.get_enabled and 0
+		0x1804C7453: Jumps to 0x1804C746D if UnityEngine.Behaviour.get_enabled != 0
+
+		0x1804C7455: Loads string "UnityEngine.Behaviour::get_enabled()" into register rcx as constant {'constant3' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804C745C: Looks up unity ICall by name "UnityEngine.Behaviour::get_enabled()" which resolves to System.Boolean UnityEngine.Behaviour::get_enabled()
+		0x1804C7461: Compares UnityEngine.Behaviour.get_enabled and 0
+		0x1804C7464: Jumps to 0x1804C7495 if UnityEngine.Behaviour.get_enabled equals 0
+
+		0x1804C746D: Copies {'this' (function parameter, type SimpleEventOnEnable)} from rbx into rcx
+		0x1804C7470: [!] Calls managed method System.Boolean UnityEngine.Behaviour::get_enabled() on instance {'this' (function parameter, type SimpleEventOnEnable)} and stores the result in {'enabled' (type System.Boolean)}
+
+		0x1804C7472: [!] Compares {'enabled' (type System.Boolean)} and False
+		0x1804C7474: Jumps to 0x1804C748F (which is an if statement's body) if enabled equals False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1804C7476: Loads the class pointer from this into a constant constant6 in register rax
+		0x1804C7479: Copies {'this' (function parameter, type SimpleEventOnEnable)} from rbx into rcx
+		0x1804C747C: Loads the pointer to the implementation of virtual function System.Void SimpleEventOnEnable::ExecuteEvent() specific to SimpleEventOnEnable from the class pointer in rax, slot 4 (from memory offset 384) and stores in constant constant7
+		0x1804C7488: [!] Calls managed method UnityEngine.Rendering.Universal.ScriptableRenderer UnityEngine.Rendering.Universal.ScriptableRendererData::Create() on instance {'this' (function parameter, type SimpleEventOnEnable)} and stores the result in {'scriptableRenderer' (type UnityEngine.Rendering.Universal.ScriptableRenderer)} ;  - Leftover parameters detected, but first few match.
+
+		0x1804C7488: [!] Returns from the function
+
+		0x1804C7494: [!] Returns from the function
+
+		0x1804C7495: Loads string "UnityEngine.Behaviour::get_enabled()" into register rcx as constant {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804C749C: [!] Constructs and throws an exception of kind System.MissingMethodException
+
+		0x1804C74A1: Copies {'local3' (type System.MissingMethodException)} from rax into rcx
+		0x1804C74A6: [!] Throws {'local3' (type System.MissingMethodException)}
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SimpleEventOnEnable
+	System.Void OnEnable()
+
+		System.Boolean enabled = this.enabled
+
+		if (enabled != False)
+
+		    UnityEngine.Rendering.Universal.ScriptableRenderer scriptableRenderer = base.Create()
+		    return
+		endif
+        
+		return
+		throw new System.MissingMethodException()
+		throw local3
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call System.Boolean UnityEngine.Behaviour::get_enabled()
+	IL_0006: ldc.i4.0
+	IL_0007: beq.s IL_0011
+	IL_0009: ldarg.0
+	IL_000a: call UnityEngine.Rendering.Universal.ScriptableRenderer UnityEngine.Rendering.Universal.ScriptableRendererData::Create()
+	IL_000f: stloc.0
+	IL_0010: ret
+	IL_0011: ret
+	IL_0012: newobj System.Void System.MissingMethodException::.ctor()
+	IL_0017: throw
+	IL_0018: ldloc.1
+	IL_0019: throw
+	
+
+Method: System.Void SimpleEventOnEnable::ExecuteEvent():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SimpleEventOnEnable::ExecuteEvent():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SimpleEventOnEnable
+	System.Void ExecuteEvent()
+
+
+Generated IL:
+	
+
+Method: System.Void SimpleEventOnEnable::.ctor():	Method Body (x86 ASM):
+		0x18037A630 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A634 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x18037A63B jne short 000000018037A650h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A63D lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A644 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A649 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x18037A650 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A657 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18037A65E jne short 000000018037A669h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A660 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A664 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A669 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A66D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18037A66E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SimpleEventOnEnable::.ctor():
+		End of function at 0x18037A66F
+		Absolute End is at 0x18037A66F
+		Identified Jump Destination addresses:
+
+		0x18037A634: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x18037A63B: Jumps to 0x18037A650 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x18037A63D: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A644: Initializes runtime metadata value UnityEngine.Object
+		0x18037A650: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A657: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18037A65E: Jumps to 0x18037A669 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18037A66D: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SimpleEventOnEnable
+	System.Void .ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ret
+	
+

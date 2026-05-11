@@ -1,0 +1,1166 @@
+Type: UnityEngine.TextCore.Text.TextGenerator:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		UnityEngine.TextCore.Text.TextGenerator/MissingCharacterEventCallback
+		UnityEngine.TextCore.Text.TextGenerator/SpecialCharacter
+
+	Static Field: s_TextGenerator
+		Type: UnityEngine.TextCore.Text.TextGenerator
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: m_IsTextTruncated
+		Type: System.Boolean
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Field: m_TextBackingArray
+		Type: UnityEngine.TextCore.Text.TextBackingContainer
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: OnMissingCharacter
+		Type: UnityEngine.TextCore.Text.TextGenerator/MissingCharacterEventCallback
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_TextProcessingArray
+		Type: UnityEngine.TextCore.Text.TextProcessingElement[]
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_InternalTextProcessingArraySize
+		Type: System.Int32
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_VertexBufferAutoSizeReduction
+		Type: System.Boolean
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Field: m_HtmlTag
+		Type: System.Char[]
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_HighlightState
+		Type: UnityEngine.TextCore.Text.HighlightState
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: m_IsIgnoringAlignment
+		Type: System.Boolean
+		Offset in Defining Type: 0x4C
+		Has Default: False
+
+	Field: m_RectTransformCorners
+		Type: UnityEngine.Vector3[]
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: m_MarginWidth
+		Type: System.Single
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: m_MarginHeight
+		Type: System.Single
+		Offset in Defining Type: 0x5C
+		Has Default: False
+
+	Field: m_PreferredWidth
+		Type: System.Single
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: m_PreferredHeight
+		Type: System.Single
+		Offset in Defining Type: 0x64
+		Has Default: False
+
+	Field: m_CurrentFontAsset
+		Type: UnityEngine.TextCore.Text.FontAsset
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: m_CurrentMaterial
+		Type: UnityEngine.Material
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: m_CurrentMaterialIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: m_MaterialReferenceStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<UnityEngine.TextCore.Text.MaterialReference>
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: m_Padding
+		Type: System.Single
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: m_CurrentSpriteAsset
+		Type: UnityEngine.TextCore.Text.SpriteAsset
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: m_TotalCharacterCount
+		Type: System.Int32
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: m_FontSize
+		Type: System.Single
+		Offset in Defining Type: 0xEC
+		Has Default: False
+
+	Field: m_FontScaleMultiplier
+		Type: System.Single
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: m_CurrentFontSize
+		Type: System.Single
+		Offset in Defining Type: 0xF4
+		Has Default: False
+
+	Field: m_SizeStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<System.Single>
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: m_TextStyleStacks
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<System.Int32>[]
+		Offset in Defining Type: 0x118
+		Has Default: False
+
+	Field: m_TextStyleStackDepth
+		Type: System.Int32
+		Offset in Defining Type: 0x120
+		Has Default: False
+
+	Field: m_FontStyleInternal
+		Type: UnityEngine.TextCore.Text.FontStyles
+		Offset in Defining Type: 0x124
+		Has Default: False
+
+	Field: m_FontStyleStack
+		Type: UnityEngine.TextCore.Text.FontStyleStack
+		Offset in Defining Type: 0x128
+		Has Default: False
+
+	Field: m_FontWeightInternal
+		Type: UnityEngine.TextCore.Text.TextFontWeight
+		Offset in Defining Type: 0x134
+		Has Default: False
+
+	Field: m_FontWeightStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<UnityEngine.TextCore.Text.TextFontWeight>
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: m_LineJustification
+		Type: UnityEngine.TextCore.Text.TextAlignment
+		Offset in Defining Type: 0x158
+		Has Default: False
+
+	Field: m_LineJustificationStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<UnityEngine.TextCore.Text.TextAlignment>
+		Offset in Defining Type: 0x160
+		Has Default: False
+
+	Field: m_BaselineOffset
+		Type: System.Single
+		Offset in Defining Type: 0x180
+		Has Default: False
+
+	Field: m_BaselineOffsetStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<System.Single>
+		Offset in Defining Type: 0x188
+		Has Default: False
+
+	Field: m_FontColor32
+		Type: UnityEngine.Color32
+		Offset in Defining Type: 0x1A8
+		Has Default: False
+
+	Field: m_HtmlColor
+		Type: UnityEngine.Color32
+		Offset in Defining Type: 0x1AC
+		Has Default: False
+
+	Field: m_UnderlineColor
+		Type: UnityEngine.Color32
+		Offset in Defining Type: 0x1B0
+		Has Default: False
+
+	Field: m_StrikethroughColor
+		Type: UnityEngine.Color32
+		Offset in Defining Type: 0x1B4
+		Has Default: False
+
+	Field: m_ColorStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<UnityEngine.Color32>
+		Offset in Defining Type: 0x1B8
+		Has Default: False
+
+	Field: m_UnderlineColorStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<UnityEngine.Color32>
+		Offset in Defining Type: 0x1D8
+		Has Default: False
+
+	Field: m_StrikethroughColorStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<UnityEngine.Color32>
+		Offset in Defining Type: 0x1F8
+		Has Default: False
+
+	Field: m_HighlightColorStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<UnityEngine.Color32>
+		Offset in Defining Type: 0x218
+		Has Default: False
+
+	Field: m_HighlightStateStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<UnityEngine.TextCore.Text.HighlightState>
+		Offset in Defining Type: 0x238
+		Has Default: False
+
+	Field: m_ItalicAngleStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<System.Int32>
+		Offset in Defining Type: 0x268
+		Has Default: False
+
+	Field: m_ColorGradientPreset
+		Type: UnityEngine.TextCore.Text.TextColorGradient
+		Offset in Defining Type: 0x288
+		Has Default: False
+
+	Field: m_ColorGradientStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<UnityEngine.TextCore.Text.TextColorGradient>
+		Offset in Defining Type: 0x290
+		Has Default: False
+
+	Field: m_ColorGradientPresetIsTinted
+		Type: System.Boolean
+		Offset in Defining Type: 0x2B8
+		Has Default: False
+
+	Field: m_ActionStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<System.Int32>
+		Offset in Defining Type: 0x2C0
+		Has Default: False
+
+	Field: m_LineOffset
+		Type: System.Single
+		Offset in Defining Type: 0x2E0
+		Has Default: False
+
+	Field: m_LineHeight
+		Type: System.Single
+		Offset in Defining Type: 0x2E4
+		Has Default: False
+
+	Field: m_IsDrivenLineSpacing
+		Type: System.Boolean
+		Offset in Defining Type: 0x2E8
+		Has Default: False
+
+	Field: m_CSpacing
+		Type: System.Single
+		Offset in Defining Type: 0x2EC
+		Has Default: False
+
+	Field: m_MonoSpacing
+		Type: System.Single
+		Offset in Defining Type: 0x2F0
+		Has Default: False
+
+	Field: m_XAdvance
+		Type: System.Single
+		Offset in Defining Type: 0x2F4
+		Has Default: False
+
+	Field: m_TagLineIndent
+		Type: System.Single
+		Offset in Defining Type: 0x2F8
+		Has Default: False
+
+	Field: m_TagIndent
+		Type: System.Single
+		Offset in Defining Type: 0x2FC
+		Has Default: False
+
+	Field: m_IndentStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<System.Single>
+		Offset in Defining Type: 0x300
+		Has Default: False
+
+	Field: m_TagNoParsing
+		Type: System.Boolean
+		Offset in Defining Type: 0x320
+		Has Default: False
+
+	Field: m_CharacterCount
+		Type: System.Int32
+		Offset in Defining Type: 0x324
+		Has Default: False
+
+	Field: m_FirstCharacterOfLine
+		Type: System.Int32
+		Offset in Defining Type: 0x328
+		Has Default: False
+
+	Field: m_LastCharacterOfLine
+		Type: System.Int32
+		Offset in Defining Type: 0x32C
+		Has Default: False
+
+	Field: m_FirstVisibleCharacterOfLine
+		Type: System.Int32
+		Offset in Defining Type: 0x330
+		Has Default: False
+
+	Field: m_LastVisibleCharacterOfLine
+		Type: System.Int32
+		Offset in Defining Type: 0x334
+		Has Default: False
+
+	Field: m_MaxLineAscender
+		Type: System.Single
+		Offset in Defining Type: 0x338
+		Has Default: False
+
+	Field: m_MaxLineDescender
+		Type: System.Single
+		Offset in Defining Type: 0x33C
+		Has Default: False
+
+	Field: m_LineNumber
+		Type: System.Int32
+		Offset in Defining Type: 0x340
+		Has Default: False
+
+	Field: m_LineVisibleCharacterCount
+		Type: System.Int32
+		Offset in Defining Type: 0x344
+		Has Default: False
+
+	Field: m_LineVisibleSpaceCount
+		Type: System.Int32
+		Offset in Defining Type: 0x348
+		Has Default: False
+
+	Field: m_FirstOverflowCharacterIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x34C
+		Has Default: False
+
+	Field: m_PageNumber
+		Type: System.Int32
+		Offset in Defining Type: 0x350
+		Has Default: False
+
+	Field: m_MarginLeft
+		Type: System.Single
+		Offset in Defining Type: 0x354
+		Has Default: False
+
+	Field: m_MarginRight
+		Type: System.Single
+		Offset in Defining Type: 0x358
+		Has Default: False
+
+	Field: m_Width
+		Type: System.Single
+		Offset in Defining Type: 0x35C
+		Has Default: False
+
+	Field: m_MeshExtents
+		Type: UnityEngine.TextCore.Text.Extents
+		Offset in Defining Type: 0x360
+		Has Default: False
+
+	Field: m_MaxCapHeight
+		Type: System.Single
+		Offset in Defining Type: 0x370
+		Has Default: False
+
+	Field: m_MaxAscender
+		Type: System.Single
+		Offset in Defining Type: 0x374
+		Has Default: False
+
+	Field: m_MaxDescender
+		Type: System.Single
+		Offset in Defining Type: 0x378
+		Has Default: False
+
+	Field: m_IsNewPage
+		Type: System.Boolean
+		Offset in Defining Type: 0x37C
+		Has Default: False
+
+	Field: m_IsNonBreakingSpace
+		Type: System.Boolean
+		Offset in Defining Type: 0x37D
+		Has Default: False
+
+	Field: m_SavedWordWrapState
+		Type: UnityEngine.TextCore.Text.WordWrapState
+		Offset in Defining Type: 0x380
+		Has Default: False
+
+	Field: m_SavedLineState
+		Type: UnityEngine.TextCore.Text.WordWrapState
+		Offset in Defining Type: 0x718
+		Has Default: False
+
+	Field: m_SavedEllipsisState
+		Type: UnityEngine.TextCore.Text.WordWrapState
+		Offset in Defining Type: 0xAB0
+		Has Default: False
+
+	Field: m_SavedLastValidState
+		Type: UnityEngine.TextCore.Text.WordWrapState
+		Offset in Defining Type: 0xE48
+		Has Default: False
+
+	Field: m_SavedSoftLineBreakState
+		Type: UnityEngine.TextCore.Text.WordWrapState
+		Offset in Defining Type: 0x11E0
+		Has Default: False
+
+	Field: m_TextElementType
+		Type: UnityEngine.TextCore.Text.TextElementType
+		Offset in Defining Type: 0x1578
+		Has Default: False
+
+	Field: m_isTextLayoutPhase
+		Type: System.Boolean
+		Offset in Defining Type: 0x1579
+		Has Default: False
+
+	Field: m_SpriteIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x157C
+		Has Default: False
+
+	Field: m_SpriteColor
+		Type: UnityEngine.Color32
+		Offset in Defining Type: 0x1580
+		Has Default: False
+
+	Field: m_CachedTextElement
+		Type: UnityEngine.TextCore.Text.TextElement
+		Offset in Defining Type: 0x1588
+		Has Default: False
+
+	Field: m_HighlightColor
+		Type: UnityEngine.Color32
+		Offset in Defining Type: 0x1590
+		Has Default: False
+
+	Field: m_CharWidthAdjDelta
+		Type: System.Single
+		Offset in Defining Type: 0x1594
+		Has Default: False
+
+	Field: m_MaxFontSize
+		Type: System.Single
+		Offset in Defining Type: 0x1598
+		Has Default: False
+
+	Field: m_MinFontSize
+		Type: System.Single
+		Offset in Defining Type: 0x159C
+		Has Default: False
+
+	Field: m_AutoSizeIterationCount
+		Type: System.Int32
+		Offset in Defining Type: 0x15A0
+		Has Default: False
+
+	Field: m_AutoSizeMaxIterationCount
+		Type: System.Int32
+		Offset in Defining Type: 0x15A4
+		Has Default: False
+
+	Field: m_IsAutoSizePointSizeSet
+		Type: System.Boolean
+		Offset in Defining Type: 0x15A8
+		Has Default: False
+
+	Field: m_StartOfLineAscender
+		Type: System.Single
+		Offset in Defining Type: 0x15AC
+		Has Default: False
+
+	Field: m_LineSpacingDelta
+		Type: System.Single
+		Offset in Defining Type: 0x15B0
+		Has Default: False
+
+	Field: m_IsMaskingEnabled
+		Type: System.Boolean
+		Offset in Defining Type: 0x15B4
+		Has Default: False
+
+	Field: m_MaterialReferences
+		Type: UnityEngine.TextCore.Text.MaterialReference[]
+		Offset in Defining Type: 0x15B8
+		Has Default: False
+
+	Field: m_SpriteCount
+		Type: System.Int32
+		Offset in Defining Type: 0x15C0
+		Has Default: False
+
+	Field: m_StyleStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<System.Int32>
+		Offset in Defining Type: 0x15C8
+		Has Default: False
+
+	Field: m_EllipsisInsertionCandidateStack
+		Type: UnityEngine.TextCore.Text.TextProcessingStack`1<UnityEngine.TextCore.Text.WordWrapState>
+		Offset in Defining Type: 0x15E8
+		Has Default: False
+
+	Field: m_SpriteAnimationId
+		Type: System.Int32
+		Offset in Defining Type: 0x19A0
+		Has Default: False
+
+	Field: m_ItalicAngle
+		Type: System.Int32
+		Offset in Defining Type: 0x19A4
+		Has Default: False
+
+	Field: m_FXScale
+		Type: UnityEngine.Vector3
+		Offset in Defining Type: 0x19A8
+		Has Default: False
+
+	Field: m_FXRotation
+		Type: UnityEngine.Quaternion
+		Offset in Defining Type: 0x19B4
+		Has Default: False
+
+	Field: m_LastBaseGlyphIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x19C4
+		Has Default: False
+
+	Field: m_PageAscender
+		Type: System.Single
+		Offset in Defining Type: 0x19C8
+		Has Default: False
+
+	Field: m_XmlAttribute
+		Type: UnityEngine.TextCore.Text.RichTextTagAttribute[]
+		Offset in Defining Type: 0x19D0
+		Has Default: False
+
+	Field: m_AttributeParameterValues
+		Type: System.Single[]
+		Offset in Defining Type: 0x19D8
+		Has Default: False
+
+	Field: m_MaterialReferenceIndexLookup
+		Type: System.Collections.Generic.Dictionary`2<System.Int32,System.Int32>
+		Offset in Defining Type: 0x19E0
+		Has Default: False
+
+	Field: m_IsCalculatingPreferredValues
+		Type: System.Boolean
+		Offset in Defining Type: 0x19E8
+		Has Default: False
+
+	Field: m_DefaultSpriteAsset
+		Type: UnityEngine.TextCore.Text.SpriteAsset
+		Offset in Defining Type: 0x19F0
+		Has Default: False
+
+	Field: m_TintSprite
+		Type: System.Boolean
+		Offset in Defining Type: 0x19F8
+		Has Default: False
+
+	Field: m_Ellipsis
+		Type: UnityEngine.TextCore.Text.TextGenerator/SpecialCharacter
+		Offset in Defining Type: 0x1A00
+		Has Default: False
+
+	Field: m_Underline
+		Type: UnityEngine.TextCore.Text.TextGenerator/SpecialCharacter
+		Offset in Defining Type: 0x1A20
+		Has Default: False
+
+	Field: m_IsUsingBold
+		Type: System.Boolean
+		Offset in Defining Type: 0x1A40
+		Has Default: False
+
+	Field: m_IsSdfShader
+		Type: System.Boolean
+		Offset in Defining Type: 0x1A41
+		Has Default: False
+
+	Field: m_InternalTextElementInfo
+		Type: UnityEngine.TextCore.Text.TextElementInfo[]
+		Offset in Defining Type: 0x1A48
+		Has Default: False
+
+	Method: GetTextGenerator:
+		Accessibility: Private
+		Return Type: UnityEngine.TextCore.Text.TextGenerator
+		File Offset 0x02521840
+		Ram Offset 0x182522a40
+		Virtual Method Slot: 65535
+
+	Method: GenerateText:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02521910
+		Ram Offset 0x182522b10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: settings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 1:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: GetPreferredValues:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x02521B10
+		Ram Offset 0x182522d10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: settings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 1:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: get_isTextTruncated:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x02521E80
+		Ram Offset 0x182523080
+		Virtual Method Slot: 65535
+
+	Method: Prepare:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02521EC0
+		Ram Offset 0x1825230c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 1:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: GenerateTextMesh:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025143D0
+		Ram Offset 0x1825155d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 1:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: SaveWordWrappingState:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02522110
+		Ram Offset 0x182523310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: state
+			Type: UnityEngine.TextCore.Text.WordWrapState
+			Default Value: 
+		Parameter 1:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: RestoreWordWrappingState:
+		Accessibility: Family
+		Return Type: System.Int32
+		File Offset 0x02522BD0
+		Ram Offset 0x182523dd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: state
+			Type: UnityEngine.TextCore.Text.WordWrapState
+			Default Value: 
+		Parameter 1:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: ValidateHtmlTag:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x02523670
+		Ram Offset 0x182524870
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: chars
+			Type: UnityEngine.TextCore.Text.TextProcessingElement[]
+			Default Value: 
+		Parameter 1:
+			Name: startIndex
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: endIndex
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 4:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: SaveGlyphVertexInfo:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x025291F0
+		Ram Offset 0x18252a3f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: padding
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: stylePadding
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: vertexColor
+			Type: UnityEngine.Color32
+			Default Value: 
+		Parameter 3:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 4:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: SaveSpriteVertexInfo:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0252A560
+		Ram Offset 0x18252b760
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: vertexColor
+			Type: UnityEngine.Color32
+			Default Value: 
+		Parameter 1:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 2:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: DrawUnderlineMesh:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0252B060
+		Ram Offset 0x18252c260
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: start
+			Type: UnityEngine.Vector3
+			Default Value: 
+		Parameter 1:
+			Name: end
+			Type: UnityEngine.Vector3
+			Default Value: 
+		Parameter 2:
+			Name: startScale
+			Type: System.Single
+			Default Value: 
+		Parameter 3:
+			Name: endScale
+			Type: System.Single
+			Default Value: 
+		Parameter 4:
+			Name: maxScale
+			Type: System.Single
+			Default Value: 
+		Parameter 5:
+			Name: sdfScale
+			Type: System.Single
+			Default Value: 
+		Parameter 6:
+			Name: underlineColor
+			Type: UnityEngine.Color32
+			Default Value: 
+		Parameter 7:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 8:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: DrawTextHighlight:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0252C350
+		Ram Offset 0x18252d550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: start
+			Type: UnityEngine.Vector3
+			Default Value: 
+		Parameter 1:
+			Name: end
+			Type: UnityEngine.Vector3
+			Default Value: 
+		Parameter 2:
+			Name: highlightColor
+			Type: UnityEngine.Color32
+			Default Value: 
+		Parameter 3:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 4:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: ClearMesh:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0252C9D0
+		Ram Offset 0x18252dbd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: updateMesh
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: SetArraySizes:
+		Accessibility: Assembly
+		Return Type: System.Int32
+		File Offset 0x0252CA70
+		Ram Offset 0x18252dc70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: textProcessingArray
+			Type: UnityEngine.TextCore.Text.TextProcessingElement[]
+			Default Value: 
+		Parameter 1:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 2:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: GetTextElement:
+		Accessibility: Assembly
+		Return Type: UnityEngine.TextCore.Text.TextElement
+		File Offset 0x0252E5C0
+		Ram Offset 0x18252f7c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 1:
+			Name: unicode
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: fontAsset
+			Type: UnityEngine.TextCore.Text.FontAsset
+			Default Value: 
+		Parameter 3:
+			Name: fontStyle
+			Type: UnityEngine.TextCore.Text.FontStyles
+			Default Value: 
+		Parameter 4:
+			Name: fontWeight
+			Type: UnityEngine.TextCore.Text.TextFontWeight
+			Default Value: 
+		Parameter 5:
+			Name: isUsingAlternativeTypeface
+			Type: System.Boolean
+			Default Value: 
+	Method: ComputeMarginSize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0252EB10
+		Ram Offset 0x18252fd10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rect
+			Type: UnityEngine.Rect
+			Default Value: 
+		Parameter 1:
+			Name: margins
+			Type: UnityEngine.Vector4
+			Default Value: 
+	Method: GetSpecialCharacters:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0252EC10
+		Ram Offset 0x18252fe10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+	Method: GetEllipsisSpecialCharacter:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0252EC40
+		Ram Offset 0x18252fe40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+	Method: GetUnderlineSpecialCharacter:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0252EF80
+		Ram Offset 0x182530180
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+	Method: GetPreferredValuesInternal:
+		Accessibility: Private
+		Return Type: UnityEngine.Vector2
+		File Offset 0x0252F0F0
+		Ram Offset 0x1825302f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 1:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: CalculatePreferredValues:
+		Accessibility: Family
+		Return Type: UnityEngine.Vector2
+		File Offset 0x0252F2E0
+		Ram Offset 0x1825304e0
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: fontSize
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: marginSize
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 2:
+			Name: isTextAutoSizingEnabled
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: textWrapMode
+			Type: UnityEngine.TextCore.Text.TextWrappingMode
+			Default Value: 
+		Parameter 4:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 5:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: PopulateTextBackingArray:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02532B80
+		Ram Offset 0x182533d80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sourceText
+			Type: System.String
+			Default Value: 
+	Method: PopulateTextBackingArray:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02532BB0
+		Ram Offset 0x182533db0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sourceText
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: start
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: length
+			Type: System.Int32
+			Default Value: 
+	Method: PopulateTextProcessingArray:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02532D30
+		Ram Offset 0x182533f30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+	Method: InsertNewLine:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02533D50
+		Ram Offset 0x182534f50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: i
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: baseScale
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: currentElementScale
+			Type: System.Single
+			Default Value: 
+		Parameter 3:
+			Name: currentEmScale
+			Type: System.Single
+			Default Value: 
+		Parameter 4:
+			Name: boldSpacingAdjustment
+			Type: System.Single
+			Default Value: 
+		Parameter 5:
+			Name: characterSpacingAdjustment
+			Type: System.Single
+			Default Value: 
+		Parameter 6:
+			Name: width
+			Type: System.Single
+			Default Value: 
+		Parameter 7:
+			Name: lineGap
+			Type: System.Single
+			Default Value: 
+		Parameter 8:
+			Name: isMaxVisibleDescenderSet
+			Type: System.Boolean
+			Default Value: 
+		Parameter 9:
+			Name: maxVisibleDescender
+			Type: System.Single
+			Default Value: 
+		Parameter 10:
+			Name: generationSettings
+			Type: UnityEngine.TextCore.Text.TextGenerationSettings
+			Default Value: 
+		Parameter 11:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: DoMissingGlyphCallback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x02534590
+		Ram Offset 0x182535790
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: unicode
+			Type: System.UInt32
+			Default Value: 
+		Parameter 1:
+			Name: stringIndex
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: fontAsset
+			Type: UnityEngine.TextCore.Text.FontAsset
+			Default Value: 
+		Parameter 3:
+			Name: textInfo
+			Type: UnityEngine.TextCore.Text.TextInfo
+			Default Value: 
+	Method: ClearMarkupTagAttributes:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02534610
+		Ram Offset 0x182535810
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02534680
+		Ram Offset 0x182535880
+		Virtual Method Slot: 65535

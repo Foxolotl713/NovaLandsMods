@@ -1,0 +1,43 @@
+﻿using System;
+using HarmonyLib;
+using UnityEngine.SceneManagement;
+using MelonLoader;
+
+namespace NovaLandsArchipelago
+{
+    public static class HarmonyPatches
+    {
+        public static void Apply(Harmony harmony)
+        {
+            try
+            {
+                // Patch LoadScene(string) to run a postfix whenever a scene is loaded via SceneManager.LoadScene(string)
+                var original = AccessTools.Method(typeof(SceneManager), "LoadScene", new Type[] { typeof(string) });
+                var postfix = new HarmonyMethod(typeof(HarmonyPatches).GetMethod(nameof(LoadScene_Postfix)));
+                harmony.Patch(original, postfix: postfix);
+            }
+            catch (Exception ex)
+            {
+                MelonLogger.Msg($"HarmonyPatches.Apply failed: {ex}");
+            }
+        }
+
+        public static void LoadScene_Postfix(string sceneName)
+        {
+            MelonLogger.Msg($"Scene loaded: {sceneName}");
+            // Example action: when the main game scene loads, set up firstResearchLocationChecked to false so we can trigger it again for testing
+            try
+            {
+                var core = MelonHandler.Mods.Find(m => m.Name == "NovaLandsArchipelago") as MelonMod;
+                if (core is Core c)
+                {
+                    c.firstResearchLocationChecked = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MelonLogger.Msg($"LoadScene_Postfix error: {ex}");
+            }
+        }
+    }
+}

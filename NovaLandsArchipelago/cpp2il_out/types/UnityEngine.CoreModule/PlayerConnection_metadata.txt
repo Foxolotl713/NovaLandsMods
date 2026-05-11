@@ -1,0 +1,248 @@
+Type: UnityEngine.Networking.PlayerConnection.PlayerConnection:
+	Base Class: 
+		UnityEngine.ScriptableObject
+
+	Interfaces:
+
+	Nested Types:
+		UnityEngine.Networking.PlayerConnection.PlayerConnection/<>c__DisplayClass12_0
+		UnityEngine.Networking.PlayerConnection.PlayerConnection/<>c__DisplayClass13_0
+		UnityEngine.Networking.PlayerConnection.PlayerConnection/<>c__DisplayClass20_0
+
+	Static Field: connectionNative
+		Type: UnityEngine.IPlayerEditorConnectionNative
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: s_Instance
+		Type: UnityEngine.Networking.PlayerConnection.PlayerConnection
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Field: m_PlayerEditorConnectionEvents
+		Type: UnityEngine.Networking.PlayerConnection.PlayerEditorConnectionEvents
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_connectedPlayers
+		Type: System.Collections.Generic.List`1<System.Int32>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_IsInitilized
+		Type: System.Boolean
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Method: get_instance:
+		Accessibility: Public
+		Return Type: UnityEngine.Networking.PlayerConnection.PlayerConnection
+		File Offset 0x024A4870
+		Ram Offset 0x1824a5a70
+		Virtual Method Slot: 65535
+
+	Method: get_isConnected:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x024A4A50
+		Ram Offset 0x1824a5c50
+		Virtual Method Slot: 65535
+
+	Method: CreateInstance:
+		Accessibility: Private
+		Return Type: UnityEngine.Networking.PlayerConnection.PlayerConnection
+		File Offset 0x024A4AE0
+		Ram Offset 0x1824a5ce0
+		Virtual Method Slot: 65535
+
+	Method: OnEnable:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024A4C00
+		Ram Offset 0x1824a5e00
+		Virtual Method Slot: 65535
+
+	Method: GetConnectionNativeApi:
+		Accessibility: Private
+		Return Type: UnityEngine.IPlayerEditorConnectionNative
+		File Offset 0x024A4CA0
+		Ram Offset 0x1824a5ea0
+		Virtual Method Slot: 65535
+
+	Method: Register:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024A4D00
+		Ram Offset 0x1824a5f00
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: messageId
+			Type: System.Guid
+			Default Value: 
+		Parameter 1:
+			Name: callback
+			Type: UnityEngine.Events.UnityAction`1<UnityEngine.Networking.PlayerConnection.MessageEventArgs>
+			Default Value: 
+	Method: Unregister:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024A4F30
+		Ram Offset 0x1824a6130
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: messageId
+			Type: System.Guid
+			Default Value: 
+		Parameter 1:
+			Name: callback
+			Type: UnityEngine.Events.UnityAction`1<UnityEngine.Networking.PlayerConnection.MessageEventArgs>
+			Default Value: 
+	Method: RegisterConnection:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024A51D0
+		Ram Offset 0x1824a63d0
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: callback
+			Type: UnityEngine.Events.UnityAction`1<System.Int32>
+			Default Value: 
+	Method: RegisterDisconnection:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024A53F0
+		Ram Offset 0x1824a65f0
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: callback
+			Type: UnityEngine.Events.UnityAction`1<System.Int32>
+			Default Value: 
+	Method: UnregisterConnection:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024A5450
+		Ram Offset 0x1824a6650
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: callback
+			Type: UnityEngine.Events.UnityAction`1<System.Int32>
+			Default Value: 
+	Method: UnregisterDisconnection:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024A54E0
+		Ram Offset 0x1824a66e0
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: callback
+			Type: UnityEngine.Events.UnityAction`1<System.Int32>
+			Default Value: 
+	Method: Send:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024A5570
+		Ram Offset 0x1824a6770
+		Virtual Method Slot: 10
+
+		Parameter 0:
+			Name: messageId
+			Type: System.Guid
+			Default Value: 
+		Parameter 1:
+			Name: data
+			Type: System.Byte[]
+			Default Value: 
+	Method: TrySend:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x024A5760
+		Ram Offset 0x1824a6960
+		Virtual Method Slot: 11
+
+		Parameter 0:
+			Name: messageId
+			Type: System.Guid
+			Default Value: 
+		Parameter 1:
+			Name: data
+			Type: System.Byte[]
+			Default Value: 
+	Method: BlockUntilRecvMsg:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x024A5950
+		Ram Offset 0x1824a6b50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: messageId
+			Type: System.Guid
+			Default Value: 
+		Parameter 1:
+			Name: timeout
+			Type: System.Int32
+			Default Value: 
+	Method: DisconnectAll:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024A5C40
+		Ram Offset 0x1824a6e40
+		Virtual Method Slot: 12
+
+	Method: MessageCallbackInternal:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x024A5CD0
+		Ram Offset 0x1824a6ed0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: data
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: size
+			Type: System.UInt64
+			Default Value: 
+		Parameter 2:
+			Name: guid
+			Type: System.UInt64
+			Default Value: 
+		Parameter 3:
+			Name: messageId
+			Type: System.String
+			Default Value: 
+	Method: ConnectedCallbackInternal:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x024A5F00
+		Ram Offset 0x1824a7100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: playerId
+			Type: System.Int32
+			Default Value: 
+	Method: DisconnectedCallback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x024A5FD0
+		Ram Offset 0x1824a71d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: playerId
+			Type: System.Int32
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x024A6060
+		Ram Offset 0x1824a7260
+		Virtual Method Slot: 65535

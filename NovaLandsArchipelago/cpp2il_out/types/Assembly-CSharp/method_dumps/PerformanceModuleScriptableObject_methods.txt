@@ -1,0 +1,280 @@
+Type: PerformanceModuleScriptableObject
+
+Method: System.Void PerformanceModuleScriptableObject::UpdateModule(BaseBuilding,System.Single):	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PerformanceModuleScriptableObject::UpdateModule(BaseBuilding,System.Single):
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PerformanceModuleScriptableObject
+	System.Void UpdateModule(BaseBuilding building, System.Single deltaTime)
+
+
+Generated IL:
+	
+
+Method: System.Void PerformanceModuleScriptableObject::AddBonuses(BasePlayerBot):	Method Body (x86 ASM):
+		0x18085C0E0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18085C0E4 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18085C0E7 je short 000000018085C109h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085C0E9 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x18085C0EC movss xmm1,dword ptr [rcx+90h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 144 | None ||| N/A | N/A
+		0x18085C0F4 mov rcx,rdx		; DEBUG: {Register}/RCX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18085C0F7 mov r8,[rax+0AF0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 2800 | None ||| N/A | N/A
+		0x18085C0FE add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18085C102 jmp qword ptr [rax+0AE8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 2792 | None ||| N/A | N/A
+		0x18085C109 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085C10E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PerformanceModuleScriptableObject::AddBonuses(BasePlayerBot):
+		End of function at 0x18085C10F
+		Absolute End is at 0x18085C10F
+		Identified Jump Destination addresses:
+
+		0x18085C0E4: [!] Compares {'bot' (function parameter, type BasePlayerBot)} and 0
+		0x18085C0E7: Jumps to 0x18085C109 (which throws a NRE) if bot equals 0. Implicitly present in managed code, so ignored here.
+		0x18085C0E9: Loads the class pointer from bot into a constant constant2 in register rax
+		0x18085C0F4: Copies {'bot' (function parameter, type BasePlayerBot)} from rdx into rcx
+		0x18085C0F7: Loads the pointer to the implementation of virtual function System.Void BasePlayerBot::AddSpeedBonus(System.Single) specific to BasePlayerBot from the class pointer in rax, slot 155 (from memory offset 2800) and stores in constant constant3
+		0x18085C102: [!] Calls managed method System.Int32 ISerializableGameObject::GetOriginalInstanceId() on instance {'bot' (function parameter, type BasePlayerBot)} and stores the result in {'originalInstanceId' (type System.Int32)} ;  - Leftover parameters detected, but first few match.
+
+		0x18085C102: [!] Returns from the function
+
+		0x18085C109: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PerformanceModuleScriptableObject
+	System.Void AddBonuses(BasePlayerBot bot)
+
+		System.Int32 originalInstanceId = bot.GetOriginalInstanceId()
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: call System.Int32 ISerializableGameObject::GetOriginalInstanceId()
+	IL_0006: stloc.0
+	IL_0007: ret
+	IL_0008: newobj System.Void System.NullReferenceException::.ctor()
+	IL_000d: throw
+	
+
+Method: System.Void PerformanceModuleScriptableObject::RemoveBonuses(BasePlayerBot):	Method Body (x86 ASM):
+		0x18085C110 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18085C114 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18085C117 je short 000000018085C139h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085C119 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x18085C11C movss xmm1,dword ptr [rcx+90h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 144 | None ||| N/A | N/A
+		0x18085C124 mov rcx,rdx		; DEBUG: {Register}/RCX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18085C127 mov r8,[rax+0B00h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 2816 | None ||| N/A | N/A
+		0x18085C12E add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18085C132 jmp qword ptr [rax+0AF8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 2808 | None ||| N/A | N/A
+		0x18085C139 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085C13E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PerformanceModuleScriptableObject::RemoveBonuses(BasePlayerBot):
+		End of function at 0x18085C13F
+		Absolute End is at 0x18085C13F
+		Identified Jump Destination addresses:
+
+		0x18085C114: [!] Compares {'bot' (function parameter, type BasePlayerBot)} and 0
+		0x18085C117: Jumps to 0x18085C139 (which throws a NRE) if bot equals 0. Implicitly present in managed code, so ignored here.
+		0x18085C119: Loads the class pointer from bot into a constant constant2 in register rax
+		0x18085C124: Copies {'bot' (function parameter, type BasePlayerBot)} from rdx into rcx
+		0x18085C127: Loads the pointer to the implementation of virtual function System.Void BasePlayerBot::RemoveSpeedBonus(System.Single) specific to BasePlayerBot from the class pointer in rax, slot 156 (from memory offset 2816) and stores in constant constant3
+		0x18085C132: [!] Calls managed method System.Int32 ISerializableGameObject::GetOriginalInstanceId() on instance {'bot' (function parameter, type BasePlayerBot)} and stores the result in {'originalInstanceId' (type System.Int32)} ;  - Leftover parameters detected, but first few match.
+
+		0x18085C132: [!] Returns from the function
+
+		0x18085C139: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PerformanceModuleScriptableObject
+	System.Void RemoveBonuses(BasePlayerBot bot)
+
+		System.Int32 originalInstanceId = bot.GetOriginalInstanceId()
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: call System.Int32 ISerializableGameObject::GetOriginalInstanceId()
+	IL_0006: stloc.0
+	IL_0007: ret
+	IL_0008: newobj System.Void System.NullReferenceException::.ctor()
+	IL_000d: throw
+	
+
+Method: System.Void PerformanceModuleScriptableObject::UpdateModule(BasePlayerBot,System.Single):	Method Body (x86 ASM):
+		0x18085C140 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x18085C145 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18085C146 sub rsp,40h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 64
+		0x18085C14A movaps [rsp+30h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 48 | None ||| N/A | N/A
+		0x18085C14F movaps xmm6,xmm2		; DEBUG: {Register}/XMM6 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x18085C152 mov rbx,rdx		; DEBUG: {Register}/RBX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18085C155 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18085C158 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18085C15B je short 000000018085C1BDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085C15D mov rdx,[rdx]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x18085C160 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18085C163 mov rax,[rdx+0C18h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 3096 | None ||| N/A | N/A
+		0x18085C16A mov rdx,[rdx+0C20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 3104 | None ||| N/A | N/A
+		0x18085C171 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18085C173 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x18085C175 jne short 000000018085C1ADh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085C177 movss xmm1,dword ptr [rdi+94h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RDI | 148 | None ||| N/A | N/A
+		0x18085C17F xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18085C182 comiss xmm1,xmm0		; DEBUG: {Register}/XMM1 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18085C185 jbe short 000000018085C1ADh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085C187 mov rdx,[rbx]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x18085C18A movaps xmm2,xmm1		; DEBUG: {Register}/XMM2 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x18085C18D movss xmm3,dword ptr [rdi+98h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RDI | 152 | None ||| N/A | N/A
+		0x18085C195 movaps xmm1,xmm6		; DEBUG: {Register}/XMM1 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x18085C198 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x18085C19B mov rax,[rdx+1030h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 4144 | None ||| N/A | N/A
+		0x18085C1A2 mov [rsp+20h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 32 | None ||| N/A | N/A
+		0x18085C1A7 call qword ptr [rdx+1028h]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 4136 | None ||| N/A | N/A
+		0x18085C1AD mov rbx,[rsp+50h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x18085C1B2 movaps xmm6,[rsp+30h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x18085C1B7 add rsp,40h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 64
+		0x18085C1BB pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18085C1BC ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18085C1BD call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085C1C2 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PerformanceModuleScriptableObject::UpdateModule(BasePlayerBot,System.Single):
+		End of function at 0x18085C1C3
+		Absolute End is at 0x18085C1C3
+		Identified Jump Destination addresses:
+
+		0x18085C145: Saves the content of rdi to the stack
+		0x18085C14F: Copies {'deltaTime' (function parameter, type System.Single)} from xmm2 into xmm6
+		0x18085C152: Copies {'bot' (function parameter, type BasePlayerBot)} from rdx into rbx
+		0x18085C155: Copies {'this' (function parameter, type PerformanceModuleScriptableObject)} from rcx into rdi
+		0x18085C158: [!] Compares {'bot' (function parameter, type BasePlayerBot)} and 0
+		0x18085C15B: Jumps to 0x18085C1BD (which throws a NRE) if bot equals 0. Implicitly present in managed code, so ignored here.
+		0x18085C15D: Loads the class pointer from bot into a constant constant2 in register rdx
+		0x18085C160: Copies {'bot' (function parameter, type BasePlayerBot)} from rbx into rcx
+		0x18085C163: Loads the pointer to the implementation of virtual function System.Boolean BasePlayerBot::get_IsDead() specific to BasePlayerBot from the class pointer in rdx, slot 174 (from memory offset 3096) and stores in constant constant3
+		0x18085C16A: Loads the pointer to the implementation of virtual function System.Boolean BasePlayerBot::get_IsDead() specific to BasePlayerBot from the class pointer in rdx, slot 174 (from memory offset 3104) and stores in constant constant4
+		0x18085C171: [!] Calls managed method System.Boolean BasePlayerBot::get_IsDead() on instance {'bot' (function parameter, type BasePlayerBot)} and stores the result in {'isDead' (type System.Boolean)}
+
+		0x18085C173: [!] Compares {'isDead' (type System.Boolean)} and False
+		0x18085C175: Jumps to 0x18085C1AD (which is an if statement's body) if {'isDead' (type System.Boolean)} != False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18085C177: [!] Reads field healthRecoveryAmount from {'this' (function parameter, type PerformanceModuleScriptableObject)} and stores in a new local {'healthRecoveryAmount' (type System.Single)}
+
+		0x18085C17F: Clears register xmm0, yielding zero-local {'local5' (type System.Int32)}
+		0x18085C182: [!] Compares {'healthRecoveryAmount' (type System.Single)} and {'local5' (type System.Int32)}
+		0x18085C185: Jumps to 0x18085C1AD (which is an if statement's body) if {'healthRecoveryAmount' (type System.Single)} is less than or equal to {'local5' (type System.Int32)} ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18085C187: Loads the class pointer from bot into a constant constant6 in register rdx
+		0x18085C18A: Copies {'healthRecoveryAmount' (type System.Single)} from xmm1 into xmm2
+		0x18085C18D: [!] Reads field healthRecoveryInterval from {'this' (function parameter, type PerformanceModuleScriptableObject)} and stores in a new local {'healthRecoveryInterval' (type System.Single)}
+
+		0x18085C195: Copies {'deltaTime' (function parameter, type System.Single)} from xmm6 into xmm1
+		0x18085C198: Copies {'bot' (function parameter, type BasePlayerBot)} from rbx into rcx
+		0x18085C19B: Loads the pointer to the implementation of virtual function System.Void BasePlayerBot::UpdateHealthRecoveryModule(System.Single,System.Single,System.Single) specific to BasePlayerBot from the class pointer in rdx, slot 239 (from memory offset 4144) and stores in constant constant7
+		0x18085C1A2: Moves BasePlayerBot.UpdateHealthRecoveryModule (type Mono.Cecil.MethodDefinition) from register rax to the stack at offset 32 (0x20) as a new local local7
+		0x18085C1A7: [!] Calls managed method System.Void BasePlayerBot::UpdateHealthRecoveryModule(System.Single,System.Single,System.Single) on instance {'bot' (function parameter, type BasePlayerBot)} with arguments [{'healthRecoveryAmount' (type System.Single)}, {'deltaTime' (function parameter, type System.Single)}, {'healthRecoveryInterval' (type System.Single)}]
+
+		0x18085C1AD: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register rbx as new constant constant8
+		0x18085C1B2: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register xmm6 as new constant constant9
+		0x18085C1BC: [!] Returns from the function
+
+		0x18085C1BD: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PerformanceModuleScriptableObject
+	System.Void UpdateModule(BasePlayerBot bot, System.Single deltaTime)
+
+		System.Boolean isDead = bot.IsDead
+
+		if (isDead == False)
+		    System.Single healthRecoveryAmount = this.healthRecoveryAmount
+		    ulong local5 = 0
+
+		    if (healthRecoveryAmount > local5)
+		        deltaTime = healthRecoveryAmount
+		        System.Single healthRecoveryInterval = this.healthRecoveryInterval
+		        healthRecoveryAmount = deltaTime
+
+		        bot.UpdateHealthRecoveryModule(healthRecoveryAmount, deltaTime, healthRecoveryInterval) //(Single deltaTime, Single healthAmount, Single interval)
+		    endif
+            
+		    return
+		    throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.RegToRegMoveAction at (0x18085C18A) is corrupt (Local being overwritten, {'deltaTime' (function parameter, type System.Single)} has been stripped or is a parameter) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void PerformanceModuleScriptableObject::.ctor():	Method Body (x86 ASM):
+		0x180856BD0 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180856BD2 mov dword ptr [rcx+50h],1F4h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 80 | None ||| N/A | 500
+		0x180856BD9 mov byte ptr [rcx+70h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 112 | None ||| N/A | 1
+		0x180856BDD jmp near ptr 000000018248CA30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180856BE2 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PerformanceModuleScriptableObject::.ctor():
+		End of function at 0x180856BE3
+		Absolute End is at 0x180856BE3
+		Identified Jump Destination addresses:
+
+		0x180856BD2: [!] Sets the field maxStackSize (Type System.Int32) on local {'this' (function parameter, type PerformanceModuleScriptableObject)} to the value stored in 500
+		0x180856BD9: [!] Sets the field available (Type System.Boolean) on local {'this' (function parameter, type PerformanceModuleScriptableObject)} to the value stored in True
+		0x180856BDD: [!] Calls managed method System.Void UnityEngine.ScriptableObject::.ctor() on instance {'this' (function parameter, type PerformanceModuleScriptableObject)}
+
+		0x180856BDD: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PerformanceModuleScriptableObject
+	System.Void .ctor()
+		this.maxStackSize = 500
+		this.available = True
+
+		base..ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4 500
+	IL_0006: conv.i8
+	IL_0007: conv.u8
+	IL_0008: stfld System.Int32 BaseResourceScriptableObject::maxStackSize
+	IL_000d: ldarg.0
+	IL_000e: ldc.i4.1
+	IL_000f: stfld System.Boolean BaseResourceScriptableObject::available
+	IL_0014: ldarg.0
+	IL_0015: call System.Void UnityEngine.ScriptableObject::.ctor()
+	IL_001a: ret
+	
+

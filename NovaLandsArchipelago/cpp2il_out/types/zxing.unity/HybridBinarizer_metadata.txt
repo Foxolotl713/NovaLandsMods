@@ -1,0 +1,189 @@
+Type: ZXing.Common.HybridBinarizer:
+	Base Class: 
+		ZXing.Common.GlobalHistogramBinarizer
+
+	Interfaces:
+
+	Static Field: BLOCK_SIZE_POWER
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 3
+
+	Static Field: BLOCK_SIZE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 8
+
+	Static Field: BLOCK_SIZE_MASK
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 7
+
+	Static Field: MINIMUM_DIMENSION
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 40
+
+	Static Field: MIN_DYNAMIC_RANGE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 24
+
+	Field: matrix
+		Type: ZXing.Common.BitMatrix
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x027C00C0
+		Ram Offset 0x1827c12c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: source
+			Type: ZXing.LuminanceSource
+			Default Value: 
+	Method: get_BlackMatrix:
+		Accessibility: Public
+		Return Type: ZXing.Common.BitMatrix
+		File Offset 0x027C0120
+		Ram Offset 0x1827c1320
+		Virtual Method Slot: 6
+
+	Method: createBinarizer:
+		Accessibility: Public
+		Return Type: ZXing.Binarizer
+		File Offset 0x027C0140
+		Ram Offset 0x1827c1340
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: source
+			Type: ZXing.LuminanceSource
+			Default Value: 
+	Method: binarizeEntireImage:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027C01D0
+		Ram Offset 0x1827c13d0
+		Virtual Method Slot: 65535
+
+	Method: calculateThresholdForBlock:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027C03D0
+		Ram Offset 0x1827c15d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: luminances
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: subWidth
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: subHeight
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: height
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: blackPoints
+			Type: System.Int32[][]
+			Default Value: 
+		Parameter 6:
+			Name: matrix
+			Type: ZXing.Common.BitMatrix
+			Default Value: 
+	Method: cap:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x027C06B0
+		Ram Offset 0x1827c18b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: min
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: max
+			Type: System.Int32
+			Default Value: 
+	Method: thresholdBlock:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027C06D0
+		Ram Offset 0x1827c18d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: luminances
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: xoffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: yoffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: threshold
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: stride
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: matrix
+			Type: ZXing.Common.BitMatrix
+			Default Value: 
+	Method: calculateBlackPoints:
+		Accessibility: Private
+		Return Type: System.Int32[][]
+		File Offset 0x027C07B0
+		Ram Offset 0x1827c19b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: luminances
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: subWidth
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: subHeight
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: width
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: height
+			Type: System.Int32
+			Default Value: 

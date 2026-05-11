@@ -1,0 +1,841 @@
+Type: BigIntegerLibrary.BigInteger:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.Runtime.Serialization.ISerializable
+		System.IEquatable`1<BigIntegerLibrary.BigInteger>
+		System.IComparable
+		System.IComparable`1<BigIntegerLibrary.BigInteger>
+
+	Nested Types:
+		BigIntegerLibrary.BigInteger/DigitContainer
+
+	Static Field: NumberBase
+		Type: System.Int64
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 65536
+
+	Static Field: MaxSize
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1280
+
+	Static Field: RatioToBinaryDigits
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 16
+
+	Static Field: Zero
+		Type: BigIntegerLibrary.BigInteger
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: One
+		Type: BigIntegerLibrary.BigInteger
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: Two
+		Type: BigIntegerLibrary.BigInteger
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: digits
+		Type: BigIntegerLibrary.BigInteger/DigitContainer
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: Ten
+		Type: BigIntegerLibrary.BigInteger
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: size
+		Type: System.Int32
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: sign
+		Type: BigIntegerLibrary.Sign
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x027B2530
+		Ram Offset 0x1827b3730
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x027B2600
+		Ram Offset 0x1827b3800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: n
+			Type: System.Int64
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x027B2720
+		Ram Offset 0x1827b3920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: n
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x027B2860
+		Ram Offset 0x1827b3a60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: numberString
+			Type: System.String
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x027B2B80
+		Ram Offset 0x1827b3d80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: byteArray
+			Type: System.Byte[]
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027B2D70
+		Ram Offset 0x1827b3f70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: info
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: context
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: GetObjectData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x027B3190
+		Ram Offset 0x1827b4390
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: info
+			Type: System.Runtime.Serialization.SerializationInfo
+			Default Value: 
+		Parameter 1:
+			Name: context
+			Type: System.Runtime.Serialization.StreamingContext
+			Default Value: 
+	Method: Equals:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x027B3500
+		Ram Offset 0x1827b4700
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: other
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Equals:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x027B3610
+		Ram Offset 0x1827b4810
+		Virtual Method Slot: 0
+
+		Parameter 0:
+			Name: o
+			Type: System.Object
+			Default Value: 
+	Method: GetHashCode:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x027B36A0
+		Ram Offset 0x1827b48a0
+		Virtual Method Slot: 2
+
+	Method: ToString:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x027B3720
+		Ram Offset 0x1827b4920
+		Virtual Method Slot: 3
+
+	Method: Parse:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B3940
+		Ram Offset 0x1827b4b40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: str
+			Type: System.String
+			Default Value: 
+	Method: CompareTo:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x027B39A0
+		Ram Offset 0x1827b4ba0
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: other
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: CompareTo:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x027B3A60
+		Ram Offset 0x1827b4c60
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: obj
+			Type: System.Object
+			Default Value: 
+	Method: SizeInBinaryDigits:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x027B3BB0
+		Ram Offset 0x1827b4db0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: n
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Opposite:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B3BD0
+		Ram Offset 0x1827b4dd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: n
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Greater:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x027B3C90
+		Ram Offset 0x1827b4e90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: GreaterOrEqual:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x027B3F20
+		Ram Offset 0x1827b5120
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Smaller:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x027B3FF0
+		Ram Offset 0x1827b51f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: SmallerOrEqual:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x027B4050
+		Ram Offset 0x1827b5250
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Abs:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B40B0
+		Ram Offset 0x1827b52b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: n
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Addition:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B4120
+		Ram Offset 0x1827b5320
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Subtraction:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B4440
+		Ram Offset 0x1827b5640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Multiplication:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B4760
+		Ram Offset 0x1827b5960
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Division:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B48E0
+		Ram Offset 0x1827b5ae0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Modulo:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B4BA0
+		Ram Offset 0x1827b5da0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Power:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B4D50
+		Ram Offset 0x1827b5f50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: exponent
+			Type: System.Int32
+			Default Value: 
+	Method: IntegerSqrt:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B4F20
+		Ram Offset 0x1827b6120
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: n
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Gcd:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B5210
+		Ram Offset 0x1827b6410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: ExtendedEuclidGcd:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B53A0
+		Ram Offset 0x1827b65a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 2:
+			Name: u
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 3:
+			Name: v
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: ModularInverse:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B5A90
+		Ram Offset 0x1827b6c90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: n
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: ModularExponentiation:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B5F60
+		Ram Offset 0x1827b7160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: exponent
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 2:
+			Name: n
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_Implicit:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B63E0
+		Ram Offset 0x1827b75e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: n
+			Type: System.Int64
+			Default Value: 
+	Method: op_Equality:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x017B49D0
+		Ram Offset 0x1817b5bd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_Inequality:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x017B4DD0
+		Ram Offset 0x1817b5fd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_GreaterThan:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x027B6440
+		Ram Offset 0x1827b7640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_LessThan:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x027B64A0
+		Ram Offset 0x1827b76a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_GreaterThanOrEqual:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x027B6530
+		Ram Offset 0x1827b7730
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_LessThanOrEqual:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x027B6590
+		Ram Offset 0x1827b7790
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_UnaryNegation:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B6620
+		Ram Offset 0x1827b7820
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: n
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_Addition:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B6710
+		Ram Offset 0x1827b7910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_Subtraction:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B6770
+		Ram Offset 0x1827b7970
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_Multiply:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B67D0
+		Ram Offset 0x1827b79d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_Division:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B6830
+		Ram Offset 0x1827b7a30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_Modulus:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B6890
+		Ram Offset 0x1827b7a90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_Increment:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B68F0
+		Ram Offset 0x1827b7af0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: n
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: op_Decrement:
+		Accessibility: Public
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B6990
+		Ram Offset 0x1827b7b90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: n
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Add:
+		Accessibility: Private
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B6A30
+		Ram Offset 0x1827b7c30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Subtract:
+		Accessibility: Private
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B6CB0
+		Ram Offset 0x1827b7eb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: Multiply:
+		Accessibility: Private
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B6F60
+		Ram Offset 0x1827b8160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: DivideByOneDigitNumber:
+		Accessibility: Private
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B7230
+		Ram Offset 0x1827b8430
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: System.Int64
+			Default Value: 
+	Method: DivideByBigNumber:
+		Accessibility: Private
+		Return Type: BigIntegerLibrary.BigInteger
+		File Offset 0x027B73E0
+		Ram Offset 0x1827b85e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: a
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: b
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+	Method: DivideByBigNumberSmaller:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x027B77E0
+		Ram Offset 0x1827b89e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: r
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: dq
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 2:
+			Name: k
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: m
+			Type: System.Int32
+			Default Value: 
+	Method: Difference:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027B79E0
+		Ram Offset 0x1827b8be0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: r
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: dq
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 2:
+			Name: k
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: m
+			Type: System.Int32
+			Default Value: 
+	Method: Trial:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x027B7B50
+		Ram Offset 0x1827b8d50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: r
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 1:
+			Name: d
+			Type: BigIntegerLibrary.BigInteger
+			Default Value: 
+		Parameter 2:
+			Name: k
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: m
+			Type: System.Int32
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027B7D80
+		Ram Offset 0x1827b8f80
+		Virtual Method Slot: 65535

@@ -1,0 +1,187 @@
+Type: HealthRecoveryConsumableResource
+
+Method: System.Boolean HealthRecoveryConsumableResource::OnConsume(BaseCharacter):	Method Body (x86 ASM):
+		0x180780210 sub rsp,38h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 56
+		0x180780214 mov r10,rdx		; DEBUG: {Register}/R10 {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180780217 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x18078021A je short 000000018078026Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18078021C cmp byte ptr [rcx+21Ch],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 540 | None ||| N/A | 0
+		0x180780223 jne short 000000018078023Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180780225 movss xmm0,dword ptr [rdx+2B0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 688 | None ||| N/A | N/A
+		0x18078022D ucomiss xmm0,dword ptr [rdx+2ACh]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 684 | None ||| N/A | N/A
+		0x180780234 jp short 000000018078023Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180780236 jne short 000000018078023Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180780238 xor al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x18078023A add rsp,38h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 56
+		0x18078023E ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18078023F mov rdx,[rdx]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180780242 mov r9b,1		; DEBUG: {Register}/R9L {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180780245 movss xmm1,dword ptr [rcx+218h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 536 | None ||| N/A | N/A
+		0x18078024D movzx r8d,r9b		; DEBUG: {Register}/R8D {Register}/R9L ||| None | 0 | None ||| N/A | N/A
+		0x180780251 mov rcx,r10		; DEBUG: {Register}/RCX {Register}/R10 ||| None | 0 | None ||| N/A | N/A
+		0x180780254 mov rax,[rdx+0AC0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 2752 | None ||| N/A | N/A
+		0x18078025B mov [rsp+20h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 32 | None ||| N/A | N/A
+		0x180780260 call qword ptr [rdx+0AB8h]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 2744 | None ||| N/A | N/A
+		0x180780266 mov al,1		; DEBUG: {Register}/AL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180780268 add rsp,38h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 56
+		0x18078026C ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18078026D call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180780272 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean HealthRecoveryConsumableResource::OnConsume(BaseCharacter):
+		End of function at 0x180780273
+		Absolute End is at 0x180780273
+		Identified Jump Destination addresses:
+
+		0x180780214: Copies {'character' (function parameter, type BaseCharacter)} from rdx into r10
+		0x180780217: [!] Compares {'character' (function parameter, type BaseCharacter)} and 0
+		0x18078021A: Jumps to 0x18078026D (which throws a NRE) if character equals 0. Implicitly present in managed code, so ignored here.
+		0x18078021C: [!] Compares {field canUseIfFullHealth, read from local {'this' (function parameter, type HealthRecoveryConsumableResource)}} and False
+		0x180780223: Jumps to 0x18078023F (which is an if statement's body) if {field canUseIfFullHealth, read from local {'this' (function parameter, type HealthRecoveryConsumableResource)}} != False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180780236: Jumps to 0x18078023F (which is an if statement's body) if {field canUseIfFullHealth, read from local {'this' (function parameter, type HealthRecoveryConsumableResource)}} != False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180780238: Clears register rax, yielding zero-local {'local3' (type System.Int32)}
+		0x18078023E: [!] Returns {'local3' (type System.Int32)} from the function
+
+		0x18078023F: Loads the class pointer from character into a constant constant3 in register rdx
+		0x180780242: [!] Writes the constant 0x1 into operand True (type UInt64) in register r9
+		0x180780245: [!] Reads field hpToRecover from {'this' (function parameter, type HealthRecoveryConsumableResource)} and stores in a new local {'hpToRecover' (type System.Single)}
+
+		0x18078024D: Copies True from r9 into r8
+		0x180780251: Copies {'character' (function parameter, type BaseCharacter)} from r10 into rcx
+		0x180780254: Loads the pointer to the implementation of virtual function System.Void BaseCharacter::AddHealth(System.Single,System.Boolean,System.Boolean) specific to BaseCharacter from the class pointer in rdx, slot 152 (from memory offset 2752) and stores in constant constant5
+		0x18078025B: Moves BaseCharacter.AddHealth (type Mono.Cecil.MethodDefinition) from register rax to the stack at offset 32 (0x20) as a new local local5
+		0x180780260: [!] Calls managed method System.Void BaseCharacter::AddHealth(System.Single,System.Boolean,System.Boolean) on instance {'character' (function parameter, type BaseCharacter)} with arguments [{'hpToRecover' (type System.Single)}, True, True]
+
+		0x180780266: [!] Writes the constant 0x1 into operand True (type UInt64) in register rax
+		0x18078026C: [!] Returns True from the function
+
+		0x18078026D: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: HealthRecoveryConsumableResource
+	System.Boolean OnConsume(BaseCharacter character)
+
+		if (this.canUseIfFullHealth == False)
+
+		    if (this.canUseIfFullHealth == False)
+		        ulong local3 = 0
+		        return local3
+		    endif
+            
+		    System.Single hpToRecover = this.hpToRecover
+
+		    character.AddHealth(hpToRecover, True, True) //(Single health, Boolean playHealFeedback, Boolean small)
+		    return True
+		    throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.ReturnFromFunctionAction at (0x18078023E) is corrupt (Return value has a type of System.Int32, expecting an object of type System.Boolean) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void HealthRecoveryConsumableResource::.ctor():	Method Body (x86 ASM):
+		0x180774980 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180774984 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x18077498B mov dword ptr [rcx+2Ch],1F4h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 44 | None ||| N/A | 500
+		0x180774992 mov dword ptr [rcx+70h],3E800000h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 112 | None ||| N/A | 1048576000
+		0x180774999 mov dword ptr [rcx+90h],1		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 144 | None ||| N/A | 1
+		0x1807749A3 mov dword ptr [rcx+0ACh],3DCCCCCDh		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 172 | None ||| N/A | 1036831949
+		0x1807749AD mov dword ptr [rcx+0B0h],7FFFFFFFh		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 176 | None ||| N/A | 2147483647
+		0x1807749B7 mov dword ptr [rcx+124h],0FFFFFFFFh		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 292 | None ||| N/A | 4294967295
+		0x1807749C1 mov dword ptr [rcx+168h],3DCCCCCDh		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 360 | None ||| N/A | 1036831949
+		0x1807749CB mov byte ptr [rcx+179h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 377 | None ||| N/A | 1
+		0x1807749D2 jne short 00000001807749E7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807749D4 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807749DB call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807749E0 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x1807749E7 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1807749EE cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1807749F5 jne short 0000000180774A00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1807749F7 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1807749FB jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180774A00 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180774A04 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180774A05 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void HealthRecoveryConsumableResource::.ctor():
+		End of function at 0x180774A06
+		Absolute End is at 0x180774A06
+		Identified Jump Destination addresses:
+
+		0x180774984: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x18077498B: [!] Sets the field maxStackSize (Type System.Int32) on local {'this' (function parameter, type HealthRecoveryConsumableResource)} to the value stored in 500
+		0x180774992: [!] Sets the field playerCantCollectFadeTime (Type System.Single) on local {'this' (function parameter, type HealthRecoveryConsumableResource)} to the value stored in 0,25
+		0x180774999: [!] Sets the field planeMovementEase (Type DG.Tweening.Ease) on local {'this' (function parameter, type HealthRecoveryConsumableResource)} to the value stored in 1
+		0x1807749A3: [!] Sets the field distanceToTargetToConsiderCollected (Type System.Single) on local {'this' (function parameter, type HealthRecoveryConsumableResource)} to the value stored in 0,1
+		0x1807749AD: [!] Sets the field originalInstanceId (Type System.Int32) on local {'this' (function parameter, type HealthRecoveryConsumableResource)} to the value stored in 2147483647
+		0x1807749B7: [!] Sets the field resourceToSpawnOnDestroy (Type System.Int32) on local {'this' (function parameter, type HealthRecoveryConsumableResource)} to the value stored in 4294967295
+		0x1807749C1: [!] Sets the field intervalToTryToCollect (Type System.Single) on local {'this' (function parameter, type HealthRecoveryConsumableResource)} to the value stored in 0,1
+		0x1807749CB: [!] Sets the field willStart (Type System.Boolean) on local {'this' (function parameter, type HealthRecoveryConsumableResource)} to the value stored in True
+		0x1807749D2: Jumps to 0x1807749E7 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x1807749D4: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807749DB: Initializes runtime metadata value UnityEngine.Object
+		0x1807749E7: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1807749EE: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1807749F5: Jumps to 0x180774A00 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180774A04: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: HealthRecoveryConsumableResource
+	System.Void .ctor()
+		this.maxStackSize = 500
+		this.playerCantCollectFadeTime = 0,25
+		this.planeMovementEase = 1
+		this.distanceToTargetToConsiderCollected = 0,1
+		this.originalInstanceId = 2147483647
+		this.resourceToSpawnOnDestroy = 4294967295
+		this.intervalToTryToCollect = 0,1
+		this.willStart = True
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4 500
+	IL_0006: conv.i8
+	IL_0007: conv.u8
+	IL_0008: stfld System.Int32 BaseResource::maxStackSize
+	IL_000d: ldarg.0
+	IL_000e: ldc.r4 0,25
+	IL_0013: stfld System.Single BaseResource::playerCantCollectFadeTime
+	IL_0018: ldarg.0
+	IL_0019: ldc.i4.1
+	IL_001a: conv.i8
+	IL_001b: conv.u8
+	IL_001c: stfld DG.Tweening.Ease BaseResource::planeMovementEase
+	IL_0021: ldarg.0
+	IL_0022: ldc.r4 0,1
+	IL_0027: stfld System.Single BaseResource::distanceToTargetToConsiderCollected
+	IL_002c: ldarg.0
+	IL_002d: ldc.i8 2147483647
+	IL_0036: conv.u8
+	IL_0037: stfld System.Int32 BaseResource::originalInstanceId
+	IL_003c: ldarg.0
+	IL_003d: ldc.i8 4294967295
+	IL_0046: conv.u8
+	IL_0047: stfld System.Int32 BaseResource::resourceToSpawnOnDestroy
+	IL_004c: ldarg.0
+	IL_004d: ldc.r4 0,1
+	IL_0052: stfld System.Single BaseResource::intervalToTryToCollect
+	IL_0057: ldarg.0
+	IL_0058: ldc.i4.1
+	IL_0059: stfld System.Boolean BaseResource::willStart
+	IL_005e: ret
+	
+

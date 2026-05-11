@@ -1,0 +1,388 @@
+Type: <>c__DisplayClass47_0
+
+Method: System.Void PlayerSkillDescriptor/<>c__DisplayClass47_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void PlayerSkillDescriptor/<>c__DisplayClass47_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerSkillDescriptor/<>c__DisplayClass47_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean PlayerSkillDescriptor/<>c__DisplayClass47_0::<ApplyBonusesToBuilding>b__0(BuildingFloatPair):	Method Body (x86 ASM):
+		0x180860790 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180860794 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180860797 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180860799 mov rdx,[rdx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x18086079D test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1808607A0 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607A2 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1808607A6 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1808607A9 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607AB mov eax,[rax+40h]		; DEBUG: {Register}/EAX {Memory}/None ||| RAX | 64 | None ||| N/A | N/A
+		0x1808607AE cmp [rdx+40h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 64 | None ||| N/A | N/A
+		0x1808607B1 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808607B4 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1808607B8 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808607B9 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607BE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean PlayerSkillDescriptor/<>c__DisplayClass47_0::<ApplyBonusesToBuilding>b__0(BuildingFloatPair):
+		End of function at 0x1808607BF
+		Absolute End is at 0x1808607BF
+		Identified Jump Destination addresses:
+
+		0x180860794: [!] Compares {'x' (function parameter, type BuildingFloatPair)} and 0
+		0x180860797: Jumps to 0x1808607B9 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x180860799: [!] Reads field building from {'x' (function parameter, type BuildingFloatPair)} and stores in a new local {'building' (type BaseBuilding)}
+
+		0x18086079D: [!] Compares {'building' (type BaseBuilding)} and 0
+		0x1808607A0: Jumps to 0x1808607B9 (which throws a NRE) if building equals 0. Implicitly present in managed code, so ignored here.
+		0x1808607A2: [!] Reads field building from {'this' (function parameter, type PlayerSkillDescriptor/<>c__DisplayClass47_0)} and stores in a new local {'building2' (type BaseBuilding)}
+
+		0x1808607A6: [!] Compares {'building2' (type BaseBuilding)} and 0
+		0x1808607A9: Jumps to 0x1808607B9 (which throws a NRE) if building2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1808607AB: [!] Reads field buildingId from {'building2' (type BaseBuilding)} and stores in a new local {'buildingId' (type System.Int32)}
+
+		0x1808607AE: [!] Compares {field buildingId, read from local {'building' (type BaseBuilding)}} and {'buildingId' (type System.Int32)}
+		0x1808607B1: [!] Sets the boolean {'local5' (type System.Boolean)} in rax to true if building.buildingId is equal to buildingId, otherwise false.
+		0x1808607B8: [!] Returns {'local5' (type System.Boolean)} from the function
+
+		0x1808607B9: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerSkillDescriptor/<>c__DisplayClass47_0
+	System.Boolean <ApplyBonusesToBuilding>b__0(BuildingFloatPair x)
+		BaseBuilding building = x.building
+		BaseBuilding building2 = this.building
+		System.Int32 buildingId = building2.buildingId
+		System.Boolean local5 = building.buildingId == buildingId
+		return local5
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: ldfld BaseBuilding BuildingFloatPair::building
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld BaseBuilding PlayerSkillDescriptor/<>c__DisplayClass47_0::building
+	IL_000d: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0012: stloc.1
+	IL_0013: ldloc.0
+	IL_0014: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0019: ldloc.1
+	IL_001a: ceq
+	IL_001c: ret
+	IL_001d: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0022: throw
+	
+
+Method: System.Boolean PlayerSkillDescriptor/<>c__DisplayClass47_0::<ApplyBonusesToBuilding>b__1(BuildingFloatPair):	Method Body (x86 ASM):
+		0x180860790 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180860794 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180860797 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180860799 mov rdx,[rdx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x18086079D test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1808607A0 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607A2 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1808607A6 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1808607A9 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607AB mov eax,[rax+40h]		; DEBUG: {Register}/EAX {Memory}/None ||| RAX | 64 | None ||| N/A | N/A
+		0x1808607AE cmp [rdx+40h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 64 | None ||| N/A | N/A
+		0x1808607B1 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808607B4 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1808607B8 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808607B9 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607BE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean PlayerSkillDescriptor/<>c__DisplayClass47_0::<ApplyBonusesToBuilding>b__1(BuildingFloatPair):
+		End of function at 0x1808607BF
+		Absolute End is at 0x1808607BF
+		Identified Jump Destination addresses:
+
+		0x180860794: [!] Compares {'x' (function parameter, type BuildingFloatPair)} and 0
+		0x180860797: Jumps to 0x1808607B9 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x180860799: [!] Reads field building from {'x' (function parameter, type BuildingFloatPair)} and stores in a new local {'building' (type BaseBuilding)}
+
+		0x18086079D: [!] Compares {'building' (type BaseBuilding)} and 0
+		0x1808607A0: Jumps to 0x1808607B9 (which throws a NRE) if building equals 0. Implicitly present in managed code, so ignored here.
+		0x1808607A2: [!] Reads field building from {'this' (function parameter, type PlayerSkillDescriptor/<>c__DisplayClass47_0)} and stores in a new local {'building2' (type BaseBuilding)}
+
+		0x1808607A6: [!] Compares {'building2' (type BaseBuilding)} and 0
+		0x1808607A9: Jumps to 0x1808607B9 (which throws a NRE) if building2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1808607AB: [!] Reads field buildingId from {'building2' (type BaseBuilding)} and stores in a new local {'buildingId' (type System.Int32)}
+
+		0x1808607AE: [!] Compares {field buildingId, read from local {'building' (type BaseBuilding)}} and {'buildingId' (type System.Int32)}
+		0x1808607B1: [!] Sets the boolean {'local5' (type System.Boolean)} in rax to true if building.buildingId is equal to buildingId, otherwise false.
+		0x1808607B8: [!] Returns {'local5' (type System.Boolean)} from the function
+
+		0x1808607B9: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerSkillDescriptor/<>c__DisplayClass47_0
+	System.Boolean <ApplyBonusesToBuilding>b__1(BuildingFloatPair x)
+		BaseBuilding building = x.building
+		BaseBuilding building2 = this.building
+		System.Int32 buildingId = building2.buildingId
+		System.Boolean local5 = building.buildingId == buildingId
+		return local5
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: ldfld BaseBuilding BuildingFloatPair::building
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld BaseBuilding PlayerSkillDescriptor/<>c__DisplayClass47_0::building
+	IL_000d: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0012: stloc.1
+	IL_0013: ldloc.0
+	IL_0014: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0019: ldloc.1
+	IL_001a: ceq
+	IL_001c: ret
+	IL_001d: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0022: throw
+	
+
+Method: System.Boolean PlayerSkillDescriptor/<>c__DisplayClass47_0::<ApplyBonusesToBuilding>b__2(BuildingIntPair):	Method Body (x86 ASM):
+		0x180860790 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180860794 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180860797 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180860799 mov rdx,[rdx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x18086079D test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1808607A0 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607A2 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1808607A6 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1808607A9 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607AB mov eax,[rax+40h]		; DEBUG: {Register}/EAX {Memory}/None ||| RAX | 64 | None ||| N/A | N/A
+		0x1808607AE cmp [rdx+40h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 64 | None ||| N/A | N/A
+		0x1808607B1 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808607B4 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1808607B8 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808607B9 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607BE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean PlayerSkillDescriptor/<>c__DisplayClass47_0::<ApplyBonusesToBuilding>b__2(BuildingIntPair):
+		End of function at 0x1808607BF
+		Absolute End is at 0x1808607BF
+		Identified Jump Destination addresses:
+
+		0x180860794: [!] Compares {'x' (function parameter, type BuildingIntPair)} and 0
+		0x180860797: Jumps to 0x1808607B9 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x180860799: [!] Reads field building from {'x' (function parameter, type BuildingIntPair)} and stores in a new local {'building' (type BaseBuilding)}
+
+		0x18086079D: [!] Compares {'building' (type BaseBuilding)} and 0
+		0x1808607A0: Jumps to 0x1808607B9 (which throws a NRE) if building equals 0. Implicitly present in managed code, so ignored here.
+		0x1808607A2: [!] Reads field building from {'this' (function parameter, type PlayerSkillDescriptor/<>c__DisplayClass47_0)} and stores in a new local {'building2' (type BaseBuilding)}
+
+		0x1808607A6: [!] Compares {'building2' (type BaseBuilding)} and 0
+		0x1808607A9: Jumps to 0x1808607B9 (which throws a NRE) if building2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1808607AB: [!] Reads field buildingId from {'building2' (type BaseBuilding)} and stores in a new local {'buildingId' (type System.Int32)}
+
+		0x1808607AE: [!] Compares {field buildingId, read from local {'building' (type BaseBuilding)}} and {'buildingId' (type System.Int32)}
+		0x1808607B1: [!] Sets the boolean {'local5' (type System.Boolean)} in rax to true if building.buildingId is equal to buildingId, otherwise false.
+		0x1808607B8: [!] Returns {'local5' (type System.Boolean)} from the function
+
+		0x1808607B9: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerSkillDescriptor/<>c__DisplayClass47_0
+	System.Boolean <ApplyBonusesToBuilding>b__2(BuildingIntPair x)
+		BaseBuilding building = x.building
+		BaseBuilding building2 = this.building
+		System.Int32 buildingId = building2.buildingId
+		System.Boolean local5 = building.buildingId == buildingId
+		return local5
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: ldfld BaseBuilding BuildingIntPair::building
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld BaseBuilding PlayerSkillDescriptor/<>c__DisplayClass47_0::building
+	IL_000d: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0012: stloc.1
+	IL_0013: ldloc.0
+	IL_0014: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0019: ldloc.1
+	IL_001a: ceq
+	IL_001c: ret
+	IL_001d: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0022: throw
+	
+
+Method: System.Boolean PlayerSkillDescriptor/<>c__DisplayClass47_0::<ApplyBonusesToBuilding>b__3(BuildingFloatChance):	Method Body (x86 ASM):
+		0x180860790 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180860794 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180860797 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180860799 mov rdx,[rdx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x18086079D test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1808607A0 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607A2 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1808607A6 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1808607A9 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607AB mov eax,[rax+40h]		; DEBUG: {Register}/EAX {Memory}/None ||| RAX | 64 | None ||| N/A | N/A
+		0x1808607AE cmp [rdx+40h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 64 | None ||| N/A | N/A
+		0x1808607B1 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808607B4 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1808607B8 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808607B9 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607BE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean PlayerSkillDescriptor/<>c__DisplayClass47_0::<ApplyBonusesToBuilding>b__3(BuildingFloatChance):
+		End of function at 0x1808607BF
+		Absolute End is at 0x1808607BF
+		Identified Jump Destination addresses:
+
+		0x180860794: [!] Compares {'x' (function parameter, type BuildingFloatChance)} and 0
+		0x180860797: Jumps to 0x1808607B9 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x180860799: [!] Reads field building from {'x' (function parameter, type BuildingFloatChance)} and stores in a new local {'building' (type BaseBuilding)}
+
+		0x18086079D: [!] Compares {'building' (type BaseBuilding)} and 0
+		0x1808607A0: Jumps to 0x1808607B9 (which throws a NRE) if building equals 0. Implicitly present in managed code, so ignored here.
+		0x1808607A2: [!] Reads field building from {'this' (function parameter, type PlayerSkillDescriptor/<>c__DisplayClass47_0)} and stores in a new local {'building2' (type BaseBuilding)}
+
+		0x1808607A6: [!] Compares {'building2' (type BaseBuilding)} and 0
+		0x1808607A9: Jumps to 0x1808607B9 (which throws a NRE) if building2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1808607AB: [!] Reads field buildingId from {'building2' (type BaseBuilding)} and stores in a new local {'buildingId' (type System.Int32)}
+
+		0x1808607AE: [!] Compares {field buildingId, read from local {'building' (type BaseBuilding)}} and {'buildingId' (type System.Int32)}
+		0x1808607B1: [!] Sets the boolean {'local5' (type System.Boolean)} in rax to true if building.buildingId is equal to buildingId, otherwise false.
+		0x1808607B8: [!] Returns {'local5' (type System.Boolean)} from the function
+
+		0x1808607B9: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerSkillDescriptor/<>c__DisplayClass47_0
+	System.Boolean <ApplyBonusesToBuilding>b__3(BuildingFloatChance x)
+		BaseBuilding building = x.building
+		BaseBuilding building2 = this.building
+		System.Int32 buildingId = building2.buildingId
+		System.Boolean local5 = building.buildingId == buildingId
+		return local5
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: ldfld BaseBuilding BuildingFloatChance::building
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld BaseBuilding PlayerSkillDescriptor/<>c__DisplayClass47_0::building
+	IL_000d: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0012: stloc.1
+	IL_0013: ldloc.0
+	IL_0014: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0019: ldloc.1
+	IL_001a: ceq
+	IL_001c: ret
+	IL_001d: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0022: throw
+	
+
+Method: System.Boolean PlayerSkillDescriptor/<>c__DisplayClass47_0::<ApplyBonusesToBuilding>b__4(BuildingFloatPair):	Method Body (x86 ASM):
+		0x180860790 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180860794 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180860797 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180860799 mov rdx,[rdx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 16 | None ||| N/A | N/A
+		0x18086079D test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1808607A0 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607A2 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1808607A6 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1808607A9 je short 00000001808607B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607AB mov eax,[rax+40h]		; DEBUG: {Register}/EAX {Memory}/None ||| RAX | 64 | None ||| N/A | N/A
+		0x1808607AE cmp [rdx+40h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 64 | None ||| N/A | N/A
+		0x1808607B1 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808607B4 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1808607B8 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808607B9 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808607BE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean PlayerSkillDescriptor/<>c__DisplayClass47_0::<ApplyBonusesToBuilding>b__4(BuildingFloatPair):
+		End of function at 0x1808607BF
+		Absolute End is at 0x1808607BF
+		Identified Jump Destination addresses:
+
+		0x180860794: [!] Compares {'x' (function parameter, type BuildingFloatPair)} and 0
+		0x180860797: Jumps to 0x1808607B9 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x180860799: [!] Reads field building from {'x' (function parameter, type BuildingFloatPair)} and stores in a new local {'building' (type BaseBuilding)}
+
+		0x18086079D: [!] Compares {'building' (type BaseBuilding)} and 0
+		0x1808607A0: Jumps to 0x1808607B9 (which throws a NRE) if building equals 0. Implicitly present in managed code, so ignored here.
+		0x1808607A2: [!] Reads field building from {'this' (function parameter, type PlayerSkillDescriptor/<>c__DisplayClass47_0)} and stores in a new local {'building2' (type BaseBuilding)}
+
+		0x1808607A6: [!] Compares {'building2' (type BaseBuilding)} and 0
+		0x1808607A9: Jumps to 0x1808607B9 (which throws a NRE) if building2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1808607AB: [!] Reads field buildingId from {'building2' (type BaseBuilding)} and stores in a new local {'buildingId' (type System.Int32)}
+
+		0x1808607AE: [!] Compares {field buildingId, read from local {'building' (type BaseBuilding)}} and {'buildingId' (type System.Int32)}
+		0x1808607B1: [!] Sets the boolean {'local5' (type System.Boolean)} in rax to true if building.buildingId is equal to buildingId, otherwise false.
+		0x1808607B8: [!] Returns {'local5' (type System.Boolean)} from the function
+
+		0x1808607B9: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: PlayerSkillDescriptor/<>c__DisplayClass47_0
+	System.Boolean <ApplyBonusesToBuilding>b__4(BuildingFloatPair x)
+		BaseBuilding building = x.building
+		BaseBuilding building2 = this.building
+		System.Int32 buildingId = building2.buildingId
+		System.Boolean local5 = building.buildingId == buildingId
+		return local5
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.1
+	IL_0001: ldfld BaseBuilding BuildingFloatPair::building
+	IL_0006: stloc.0
+	IL_0007: ldarg.0
+	IL_0008: ldfld BaseBuilding PlayerSkillDescriptor/<>c__DisplayClass47_0::building
+	IL_000d: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0012: stloc.1
+	IL_0013: ldloc.0
+	IL_0014: ldfld System.Int32 BaseBuilding::buildingId
+	IL_0019: ldloc.1
+	IL_001a: ceq
+	IL_001c: ret
+	IL_001d: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0022: throw
+	
+

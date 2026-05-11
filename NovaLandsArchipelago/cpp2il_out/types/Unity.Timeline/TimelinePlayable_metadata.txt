@@ -1,0 +1,283 @@
+Type: UnityEngine.Timeline.TimelinePlayable:
+	Base Class: 
+		UnityEngine.Playables.PlayableBehaviour
+
+	Interfaces:
+
+	Static Field: muteAudioScrubbing
+		Type: System.Boolean
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: m_IntervalTree
+		Type: UnityEngine.Timeline.IntervalTree`1<UnityEngine.Timeline.RuntimeElement>
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_ActiveClips
+		Type: System.Collections.Generic.List`1<UnityEngine.Timeline.RuntimeElement>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_CurrentListOfActiveClips
+		Type: System.Collections.Generic.List`1<UnityEngine.Timeline.RuntimeElement>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_ActiveBit
+		Type: System.Int32
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: m_EvaluateCallbacks
+		Type: System.Collections.Generic.List`1<UnityEngine.Timeline.ITimelineEvaluateCallback>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: m_PlayableCache
+		Type: System.Collections.Generic.Dictionary`2<UnityEngine.Timeline.TrackAsset,UnityEngine.Playables.Playable>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Method: Create:
+		Accessibility: Public
+		Return Type: UnityEngine.Playables.ScriptPlayable`1<UnityEngine.Timeline.TimelinePlayable>
+		File Offset 0x023FBCB0
+		Ram Offset 0x1823fceb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: tracks
+			Type: System.Collections.Generic.IEnumerable`1<UnityEngine.Timeline.TrackAsset>
+			Default Value: 
+		Parameter 2:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 3:
+			Name: autoRebalance
+			Type: System.Boolean
+			Default Value: 
+		Parameter 4:
+			Name: createOutputs
+			Type: System.Boolean
+			Default Value: 
+	Method: Compile:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023FC030
+		Ram Offset 0x1823fd230
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: timelinePlayable
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+		Parameter 2:
+			Name: tracks
+			Type: System.Collections.Generic.IEnumerable`1<UnityEngine.Timeline.TrackAsset>
+			Default Value: 
+		Parameter 3:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 4:
+			Name: autoRebalance
+			Type: System.Boolean
+			Default Value: 
+		Parameter 5:
+			Name: createOutputs
+			Type: System.Boolean
+			Default Value: 
+	Method: CompileTrackList:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023FC440
+		Ram Offset 0x1823fd640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: timelinePlayable
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+		Parameter 2:
+			Name: tracks
+			Type: System.Collections.Generic.IEnumerable`1<UnityEngine.Timeline.TrackAsset>
+			Default Value: 
+		Parameter 3:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 4:
+			Name: createOutputs
+			Type: System.Boolean
+			Default Value: 
+	Method: CreateTrackOutput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023FC6E0
+		Ram Offset 0x1823fd8e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: track
+			Type: UnityEngine.Timeline.TrackAsset
+			Default Value: 
+		Parameter 2:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 3:
+			Name: playable
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+		Parameter 4:
+			Name: port
+			Type: System.Int32
+			Default Value: 
+	Method: EvaluateWeightsForAnimationPlayableOutput:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023FCF10
+		Ram Offset 0x1823fe110
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: track
+			Type: UnityEngine.Timeline.TrackAsset
+			Default Value: 
+		Parameter 1:
+			Name: animOutput
+			Type: UnityEngine.Animations.AnimationPlayableOutput
+			Default Value: 
+	Method: EvaluateAnimationPreviewUpdateCallback:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023FD060
+		Ram Offset 0x1823fe260
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: track
+			Type: UnityEngine.Timeline.TrackAsset
+			Default Value: 
+		Parameter 1:
+			Name: animOutput
+			Type: UnityEngine.Animations.AnimationPlayableOutput
+			Default Value: 
+	Method: CreateTrackPlayable:
+		Accessibility: Private
+		Return Type: UnityEngine.Playables.Playable
+		File Offset 0x023FD280
+		Ram Offset 0x1823fe480
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: graph
+			Type: UnityEngine.Playables.PlayableGraph
+			Default Value: 
+		Parameter 1:
+			Name: timelinePlayable
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+		Parameter 2:
+			Name: track
+			Type: UnityEngine.Timeline.TrackAsset
+			Default Value: 
+		Parameter 3:
+			Name: go
+			Type: UnityEngine.GameObject
+			Default Value: 
+		Parameter 4:
+			Name: createOutputs
+			Type: System.Boolean
+			Default Value: 
+	Method: PrepareFrame:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023FD850
+		Ram Offset 0x1823fea50
+		Virtual Method Slot: 19
+
+		Parameter 0:
+			Name: playable
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+		Parameter 1:
+			Name: info
+			Type: UnityEngine.Playables.FrameData
+			Default Value: 
+	Method: Evaluate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023FD8A0
+		Ram Offset 0x1823feaa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: playable
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+		Parameter 1:
+			Name: frameData
+			Type: UnityEngine.Playables.FrameData
+			Default Value: 
+	Method: CacheTrack:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023FE110
+		Ram Offset 0x1823ff310
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: track
+			Type: UnityEngine.Timeline.TrackAsset
+			Default Value: 
+		Parameter 1:
+			Name: playable
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+		Parameter 2:
+			Name: port
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: parent
+			Type: UnityEngine.Playables.Playable
+			Default Value: 
+	Method: ForAOTCompilationOnly:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023FE1A0
+		Ram Offset 0x1823ff3a0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x023FE1F0
+		Ram Offset 0x1823ff3f0
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x023FE610
+		Ram Offset 0x1823ff810
+		Virtual Method Slot: 65535

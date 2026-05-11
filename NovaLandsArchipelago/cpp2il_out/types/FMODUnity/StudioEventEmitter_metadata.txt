@@ -1,0 +1,258 @@
+Type: FMODUnity.StudioEventEmitter:
+	Base Class: 
+		FMODUnity.EventHandler
+
+	Interfaces:
+
+	Nested Types:
+		FMODUnity.StudioEventEmitter/<>c__DisplayClass36_0
+		FMODUnity.StudioEventEmitter/<>c__DisplayClass37_0
+
+	Static Field: SnapshotString
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: snapshot
+
+	Field: Event
+		Type: System.String
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: PlayEvent
+		Type: FMODUnity.EmitterGameEvent
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: StopEvent
+		Type: FMODUnity.EmitterGameEvent
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Field: AllowFadeout
+		Type: System.Boolean
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: TriggerOnce
+		Type: System.Boolean
+		Offset in Defining Type: 0x39
+		Has Default: False
+
+	Field: Preload
+		Type: System.Boolean
+		Offset in Defining Type: 0x3A
+		Has Default: False
+
+	Field: Params
+		Type: FMODUnity.ParamRef[]
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: OverrideAttenuation
+		Type: System.Boolean
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: OverrideMinDistance
+		Type: System.Single
+		Offset in Defining Type: 0x4C
+		Has Default: False
+
+	Field: OverrideMaxDistance
+		Type: System.Single
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: eventDescription
+		Type: FMOD.Studio.EventDescription
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: instance
+		Type: FMOD.Studio.EventInstance
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: hasTriggered
+		Type: System.Boolean
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: isQuitting
+		Type: System.Boolean
+		Offset in Defining Type: 0x69
+		Has Default: False
+
+	Field: isOneshot
+		Type: System.Boolean
+		Offset in Defining Type: 0x6A
+		Has Default: False
+
+	Field: cachedParams
+		Type: System.Collections.Generic.List`1<FMODUnity.ParamRef>
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: <IsActive>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Method: get_EventDescription:
+		Accessibility: Public
+		Return Type: FMOD.Studio.EventDescription
+		File Offset 0x0040DAA0
+		Ram Offset 0x18040eca0
+		Virtual Method Slot: 65535
+
+	Method: get_EventInstance:
+		Accessibility: Public
+		Return Type: FMOD.Studio.EventInstance
+		File Offset 0x0063CCB0
+		Ram Offset 0x18063deb0
+		Virtual Method Slot: 65535
+
+	Method: get_IsActive:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004D59B0
+		Ram Offset 0x1804d6bb0
+		Virtual Method Slot: 65535
+
+	Method: set_IsActive:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x008FFCA0
+		Ram Offset 0x180900ea0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_MaxDistance:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00CC5400
+		Ram Offset 0x180cc6600
+		Virtual Method Slot: 65535
+
+	Method: Start:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CC54C0
+		Ram Offset 0x180cc66c0
+		Virtual Method Slot: 65535
+
+	Method: OnApplicationQuit:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CC5770
+		Ram Offset 0x180cc6970
+		Virtual Method Slot: 65535
+
+	Method: OnDestroy:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CC5780
+		Ram Offset 0x180cc6980
+		Virtual Method Slot: 65535
+
+	Method: HandleGameEvent:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00CC59B0
+		Ram Offset 0x180cc6bb0
+		Virtual Method Slot: 4
+
+		Parameter 0:
+			Name: gameEvent
+			Type: FMODUnity.EmitterGameEvent
+			Default Value: 
+	Method: Lookup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00CC59F0
+		Ram Offset 0x180cc6bf0
+		Virtual Method Slot: 65535
+
+	Method: Play:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CC5B00
+		Ram Offset 0x180cc6d00
+		Virtual Method Slot: 65535
+
+	Method: PlayInstance:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CC5EB0
+		Ram Offset 0x180cc70b0
+		Virtual Method Slot: 65535
+
+	Method: Stop:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CC6980
+		Ram Offset 0x180cc7b80
+		Virtual Method Slot: 65535
+
+	Method: StopInstance:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CC6A20
+		Ram Offset 0x180cc7c20
+		Virtual Method Slot: 65535
+
+	Method: SetParameter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CC6AB0
+		Ram Offset 0x180cc7cb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: ignoreseekspeed
+			Type: System.Boolean
+			Default Value: False
+	Method: SetParameter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CC6D00
+		Ram Offset 0x180cc7f00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: id
+			Type: FMOD.Studio.PARAMETER_ID
+			Default Value: 
+		Parameter 1:
+			Name: value
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: ignoreseekspeed
+			Type: System.Boolean
+			Default Value: False
+	Method: IsPlaying:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00CC6F10
+		Ram Offset 0x180cc8110
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00CC6FC0
+		Ram Offset 0x180cc81c0
+		Virtual Method Slot: 65535

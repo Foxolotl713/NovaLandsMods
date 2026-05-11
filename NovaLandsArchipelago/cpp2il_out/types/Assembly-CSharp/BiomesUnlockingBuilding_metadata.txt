@@ -1,0 +1,393 @@
+Type: BiomesUnlockingBuilding:
+	Base Class: 
+		BaseProductionBuilding
+
+	Interfaces:
+
+	Static Field: <Instance>k__BackingField
+		Type: BiomesUnlockingBuilding
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: resourcesCosts
+		Type: System.Collections.Generic.List`1<ResourceAmountPerLayer>
+		Offset in Defining Type: 0x6E8
+		Has Default: False
+
+	Field: zoomOutPerLayer
+		Type: System.Collections.Generic.List`1<System.Single>
+		Offset in Defining Type: 0x6F0
+		Has Default: False
+
+	Field: zoomTime
+		Type: System.Single
+		Offset in Defining Type: 0x6F8
+		Has Default: False
+
+	Field: cameraMovementTime
+		Type: System.Single
+		Offset in Defining Type: 0x6FC
+		Has Default: False
+
+	Field: zoomEaseType
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0x700
+		Has Default: False
+
+	Field: focusEaseType
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0x704
+		Has Default: False
+
+	Field: biomeUnlockAvailableFeedback
+		Type: UnityEngine.Animator
+		Offset in Defining Type: 0x708
+		Has Default: False
+
+	Field: biomeUnlockAvailableRadarScreenFeedback
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x710
+		Has Default: False
+
+	Field: layerUnlockingDelayZoomOut
+		Type: System.Single
+		Offset in Defining Type: 0x718
+		Has Default: False
+
+	Field: layerUnlockingZoomOutDuration
+		Type: System.Single
+		Offset in Defining Type: 0x71C
+		Has Default: False
+
+	Field: layerUnlockingAnimationDelay
+		Type: System.Single
+		Offset in Defining Type: 0x720
+		Has Default: False
+
+	Field: layerUnlockingAnimationTotalTime
+		Type: System.Single
+		Offset in Defining Type: 0x724
+		Has Default: False
+
+	Field: layerUnlockingDelayPostLastAreaAnimation
+		Type: System.Single
+		Offset in Defining Type: 0x728
+		Has Default: False
+
+	Field: currentCostIndexPerLayer
+		Type: System.Collections.Generic.List`1<System.Int32>
+		Offset in Defining Type: 0x730
+		Has Default: False
+
+	Field: currentBiomeUnlockAvailableFeedbackState
+		Type: System.Int32
+		Offset in Defining Type: 0x738
+		Has Default: False
+
+	Field: currentUnlockedAreasLayer
+		Type: System.Int32
+		Offset in Defining Type: 0x73C
+		Has Default: False
+
+	Field: onCompleteUnlockAreaLayerFeedback
+		Type: DG.Tweening.TweenCallback
+		Offset in Defining Type: 0x740
+		Has Default: False
+
+	Method: get_Instance:
+		Accessibility: Public
+		Return Type: BiomesUnlockingBuilding
+		File Offset 0x00950D90
+		Ram Offset 0x180951f90
+		Virtual Method Slot: 65535
+
+	Method: set_Instance:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00950DD0
+		Ram Offset 0x180951fd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: BiomesUnlockingBuilding
+			Default Value: 
+	Method: Awake:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00950E60
+		Ram Offset 0x180952060
+		Virtual Method Slot: 4
+
+	Method: Start:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00951030
+		Ram Offset 0x180952230
+		Virtual Method Slot: 5
+
+	Method: LoadDependentData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00951090
+		Ram Offset 0x180952290
+		Virtual Method Slot: 20
+
+	Method: CheckShowBiomeUnlockAvailableFeedbackOnLoadDelayed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00951140
+		Ram Offset 0x180952340
+		Virtual Method Slot: 65535
+
+	Method: TryToConsumeItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x007306C0
+		Ram Offset 0x1807318c0
+		Virtual Method Slot: 118
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+		Parameter 1:
+			Name: sourceCharacter
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: dropToTheGround
+			Type: System.Boolean
+			Default Value: 
+	Method: InitCosts:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00951150
+		Ram Offset 0x180952350
+		Virtual Method Slot: 65535
+
+	Method: UpdateCost:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00951320
+		Ram Offset 0x180952520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: layer
+			Type: System.Int32
+			Default Value: 
+	Method: GetBiomeUnlockPrice:
+		Accessibility: Public
+		Return Type: ResourceAmountPairList
+		File Offset 0x009513B0
+		Ram Offset 0x1809525b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: area
+			Type: WorldArea
+			Default Value: 
+		Parameter 1:
+			Name: layer
+			Type: System.Int32
+			Default Value: 
+	Method: CheckShowBiomeUnlockAvailableFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009514B0
+		Ram Offset 0x1809526b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: immediateAnimation
+			Type: System.Boolean
+			Default Value: False
+	Method: ShowBiomeUnlockAvailableFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00951A80
+		Ram Offset 0x180952c80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: show
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: immediate
+			Type: System.Boolean
+			Default Value: False
+	Method: HasResourcesToUnlock:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00951CA0
+		Ram Offset 0x180952ea0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: area
+			Type: WorldArea
+			Default Value: 
+		Parameter 1:
+			Name: layer
+			Type: System.Int32
+			Default Value: 
+	Method: ConsumeResourcesOnUnlock:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00951E30
+		Ram Offset 0x180953030
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: area
+			Type: WorldArea
+			Default Value: 
+		Parameter 1:
+			Name: layer
+			Type: System.Int32
+			Default Value: 
+	Method: ConsumeResource:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00951FF0
+		Ram Offset 0x1809531f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resourceAmount
+			Type: ResourceAmountPair
+			Default Value: 
+	Method: ShowPopup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009520F0
+		Ram Offset 0x1809532f0
+		Virtual Method Slot: 116
+
+	Method: SetDismantling:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00952160
+		Ram Offset 0x180953360
+		Virtual Method Slot: 92
+
+		Parameter 0:
+			Name: dismantling
+			Type: System.Boolean
+			Default Value: 
+	Method: HideDismantleFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009522A0
+		Ram Offset 0x1809534a0
+		Virtual Method Slot: 95
+
+	Method: GetZoomOut:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00952430
+		Ram Offset 0x180953630
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: layer
+			Type: System.Int32
+			Default Value: 
+	Method: PlayNewLayerUnlockedFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x009524C0
+		Ram Offset 0x1809536c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: newLayer
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: onCompleteUnlockedFeedback
+			Type: DG.Tweening.TweenCallback
+			Default Value: 
+	Method: OnCompleteAreaLayerUnlockZoomOut:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x009526A0
+		Ram Offset 0x1809538a0
+		Virtual Method Slot: 65535
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00952B30
+		Ram Offset 0x180953d30
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: parentArea
+			Type: WorldArea
+			Default Value: 
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x00952EE0
+		Ram Offset 0x1809540e0
+		Virtual Method Slot: 97
+
+		Parameter 0:
+			Name: firstSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: get_ZoomTime:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x009531D0
+		Ram Offset 0x1809543d0
+		Virtual Method Slot: 65535
+
+	Method: get_CameraMovementTime:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x009531E0
+		Ram Offset 0x1809543e0
+		Virtual Method Slot: 65535
+
+	Method: get_ZoomEaseType:
+		Accessibility: Public
+		Return Type: DG.Tweening.Ease
+		File Offset 0x009531F0
+		Ram Offset 0x1809543f0
+		Virtual Method Slot: 65535
+
+	Method: get_FocusEaseType:
+		Accessibility: Public
+		Return Type: DG.Tweening.Ease
+		File Offset 0x00953200
+		Ram Offset 0x180954400
+		Virtual Method Slot: 65535
+
+	Method: get_CurrentUnlockedAreasLayer:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00953210
+		Ram Offset 0x180954410
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00953220
+		Ram Offset 0x180954420
+		Virtual Method Slot: 65535
+
+	Method: <PlayNewLayerUnlockedFeedback>b__38_0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009532A0
+		Ram Offset 0x1809544a0
+		Virtual Method Slot: 65535

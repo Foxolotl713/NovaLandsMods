@@ -1,0 +1,513 @@
+Type: Rewired.HardwareControllerMap_Game:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Field: controllerName
+		Type: System.String
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: hardwareMapIdentifier
+		Type: Rewired.HardwareControllerMapIdentifier
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: customControllerSourceId
+		Type: System.Int32
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Field: elementIdentifiers
+		Type: Rewired.Utils.Classes.Data.ADictionary`2<System.Int32,Rewired.ControllerElementIdentifier>
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: elementIdentifiers_cache
+		Type: Rewired.ControllerElementIdentifier[]
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: buttonElementIdentifiers_cache
+		Type: Rewired.ControllerElementIdentifier[]
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: axisElementIdentifiers_cache
+		Type: Rewired.ControllerElementIdentifier[]
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: axis2DElementIdentifiers_cache
+		Type: Rewired.ControllerElementIdentifier[]
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: hatElementIdentifiers_cache
+		Type: Rewired.ControllerElementIdentifier[]
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: elementIdentifiers_readOnly
+		Type: System.Collections.Generic.IList`1<Rewired.ControllerElementIdentifier>
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: buttonElementIdentifiers_readOnly
+		Type: System.Collections.Generic.IList`1<Rewired.ControllerElementIdentifier>
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: axisElementIdentifiers_readOnly
+		Type: System.Collections.Generic.IList`1<Rewired.ControllerElementIdentifier>
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: axis2DElementIdentifiers_readOnly
+		Type: System.Collections.Generic.IList`1<Rewired.ControllerElementIdentifier>
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: hatElementIdentifiers_readOnly
+		Type: System.Collections.Generic.IList`1<Rewired.ControllerElementIdentifier>
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: buttonElementIdentifierIds
+		Type: System.Int32[]
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: axisElementIdentifierIds
+		Type: System.Int32[]
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: axis2DElementIdentifierIds
+		Type: System.Int32[]
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: hatElementIdentifierIds
+		Type: System.Int32[]
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: elementIdentifierCount
+		Type: System.Int32
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: axisCount
+		Type: System.Int32
+		Offset in Defining Type: 0xB4
+		Has Default: False
+
+	Field: buttonCount
+		Type: System.Int32
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: compoundElementCount
+		Type: System.Int32
+		Offset in Defining Type: 0xBC
+		Has Default: False
+
+	Field: axis2DCount
+		Type: System.Int32
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: hatCount
+		Type: System.Int32
+		Offset in Defining Type: 0xC4
+		Has Default: False
+
+	Field: joystickTypes
+		Type: Rewired.JoystickType[]
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: hwAxisCalibrationData
+		Type: Rewired.AxisCalibrationData[]
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: hwAxisRanges
+		Type: Rewired.AxisRange[]
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: hwAxisInfo
+		Type: Rewired.Data.Mapping.HardwareAxisInfo[]
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: hwButtonInfo
+		Type: Rewired.Data.Mapping.HardwareButtonInfo[]
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: compoundElements
+		Type: Rewired.Data.Mapping.HardwareJoystickMap/CompoundElement[]
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00386E50
+		Ram Offset 0x180388050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.String
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01B5A2E0
+		Ram Offset 0x181b5b4e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: 
+			Type: Rewired.ControllerElementIdentifier[]
+			Default Value: 
+		Parameter 3:
+			Name: 
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 4:
+			Name: 
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 5:
+			Name: 
+			Type: Rewired.AxisCalibrationData[]
+			Default Value: 
+		Parameter 6:
+			Name: 
+			Type: Rewired.AxisRange[]
+			Default Value: 
+		Parameter 7:
+			Name: 
+			Type: Rewired.Data.Mapping.HardwareAxisInfo[]
+			Default Value: 
+		Parameter 8:
+			Name: 
+			Type: Rewired.Data.Mapping.HardwareButtonInfo[]
+			Default Value: 
+		Parameter 9:
+			Name: 
+			Type: Rewired.Data.Mapping.HardwareJoystickMap/CompoundElement[]
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01B5A370
+		Ram Offset 0x181b5b570
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: Rewired.HardwareControllerMapIdentifier
+			Default Value: 
+		Parameter 2:
+			Name: 
+			Type: Rewired.JoystickType[]
+			Default Value: 
+		Parameter 3:
+			Name: 
+			Type: Rewired.ControllerElementIdentifier[]
+			Default Value: 
+		Parameter 4:
+			Name: 
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 5:
+			Name: 
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 6:
+			Name: 
+			Type: Rewired.AxisCalibrationData[]
+			Default Value: 
+		Parameter 7:
+			Name: 
+			Type: Rewired.AxisRange[]
+			Default Value: 
+		Parameter 8:
+			Name: 
+			Type: Rewired.Data.Mapping.HardwareAxisInfo[]
+			Default Value: 
+		Parameter 9:
+			Name: 
+			Type: Rewired.Data.Mapping.HardwareButtonInfo[]
+			Default Value: 
+		Parameter 10:
+			Name: 
+			Type: Rewired.Data.Mapping.HardwareJoystickMap/CompoundElement[]
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01B5A550
+		Ram Offset 0x181b5b750
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: Rewired.HardwareControllerMapIdentifier
+			Default Value: 
+		Parameter 2:
+			Name: 
+			Type: Rewired.ControllerElementIdentifier[]
+			Default Value: 
+		Parameter 3:
+			Name: 
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 4:
+			Name: 
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 5:
+			Name: 
+			Type: Rewired.AxisCalibrationData[]
+			Default Value: 
+		Parameter 6:
+			Name: 
+			Type: Rewired.AxisRange[]
+			Default Value: 
+		Parameter 7:
+			Name: 
+			Type: Rewired.Data.Mapping.HardwareAxisInfo[]
+			Default Value: 
+		Parameter 8:
+			Name: 
+			Type: Rewired.Data.Mapping.HardwareButtonInfo[]
+			Default Value: 
+		Parameter 9:
+			Name: 
+			Type: Rewired.Data.Mapping.HardwareJoystickMap/CompoundElement[]
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01B5A5F0
+		Ram Offset 0x181b5b7f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: Rewired.ControllerElementIdentifier[]
+			Default Value: 
+		Parameter 2:
+			Name: 
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 3:
+			Name: 
+			Type: System.Int32[]
+			Default Value: 
+		Parameter 4:
+			Name: 
+			Type: Rewired.AxisCalibrationData[]
+			Default Value: 
+		Parameter 5:
+			Name: 
+			Type: Rewired.AxisRange[]
+			Default Value: 
+		Parameter 6:
+			Name: 
+			Type: Rewired.Data.Mapping.HardwareAxisInfo[]
+			Default Value: 
+		Parameter 7:
+			Name: 
+			Type: Rewired.Data.Mapping.HardwareButtonInfo[]
+			Default Value: 
+		Parameter 8:
+			Name: 
+			Type: Rewired.Data.Mapping.HardwareJoystickMap/CompoundElement[]
+			Default Value: 
+	Method: GetElementIdentifierName:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01B5B700
+		Ram Offset 0x181b5c900
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: elementIdentifierId
+			Type: System.Int32
+			Default Value: 
+	Method: GetElementIdentifierPositiveName:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01B5B7C0
+		Ram Offset 0x181b5c9c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: elementIdentifierId
+			Type: System.Int32
+			Default Value: 
+	Method: GetElementIdentifierNegativeName:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x01B5B880
+		Ram Offset 0x181b5ca80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: elementIdentifierId
+			Type: System.Int32
+			Default Value: 
+	Method: GetAxisIndex:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01B5B940
+		Ram Offset 0x181b5cb40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: elementIdentifierId
+			Type: System.Int32
+			Default Value: 
+	Method: GetAxisIndex:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01B5B9A0
+		Ram Offset 0x181b5cba0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: elementIdentifierName
+			Type: System.String
+			Default Value: 
+	Method: GetButtonIndex:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01B5BB90
+		Ram Offset 0x181b5cd90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: elementIdentifierId
+			Type: System.Int32
+			Default Value: 
+	Method: GetButtonIndex:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01B5BBF0
+		Ram Offset 0x181b5cdf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: elementIdentifierName
+			Type: System.String
+			Default Value: 
+	Method: GetElementIdentifierById:
+		Accessibility: Public
+		Return Type: Rewired.ControllerElementIdentifier
+		File Offset 0x01B5BDE0
+		Ram Offset 0x181b5cfe0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: id
+			Type: System.Int32
+			Default Value: 
+	Method: GetButtonElementIdentifierById:
+		Accessibility: Public
+		Return Type: Rewired.ControllerElementIdentifier
+		File Offset 0x01B5BE80
+		Ram Offset 0x181b5d080
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: id
+			Type: System.Int32
+			Default Value: 
+	Method: GetAxisElementIdentifierById:
+		Accessibility: Public
+		Return Type: Rewired.ControllerElementIdentifier
+		File Offset 0x01B5BEF0
+		Ram Offset 0x181b5d0f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: id
+			Type: System.Int32
+			Default Value: 
+	Method: GetAxis2DData:
+		Accessibility: Public
+		Return Type: Rewired.Data.Mapping.HardwareJoystickMap/CompoundElement
+		File Offset 0x01B5BF60
+		Ram Offset 0x181b5d160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: GetHatData:
+		Accessibility: Public
+		Return Type: Rewired.Data.Mapping.HardwareJoystickMap/CompoundElement
+		File Offset 0x01B5BFF0
+		Ram Offset 0x181b5d1f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: GetElementType:
+		Accessibility: Public
+		Return Type: Rewired.ControllerElementType
+		File Offset 0x01B5C080
+		Ram Offset 0x181b5d280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: elementIdentifierId
+			Type: System.Int32
+			Default Value: 
+	Method: PKDxAXhMdpvkXWbLVGyiQkDJivSbA:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01B5C130
+		Ram Offset 0x181b5d330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: 
+			Type: Rewired.ControllerElementIdentifier[]
+			Default Value: 
+		Parameter 1:
+			Name: 
+			Type: System.Int32
+			Default Value: 

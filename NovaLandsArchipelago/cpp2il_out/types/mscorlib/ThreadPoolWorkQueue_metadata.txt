@@ -1,0 +1,117 @@
+Type: System.Threading.ThreadPoolWorkQueue:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		System.Threading.ThreadPoolWorkQueue/SparseArray`1
+		System.Threading.ThreadPoolWorkQueue/WorkStealingQueue
+		System.Threading.ThreadPoolWorkQueue/QueueSegment
+
+	Static Field: allThreadQueues
+		Type: System.Threading.ThreadPoolWorkQueue/SparseArray`1<System.Threading.ThreadPoolWorkQueue/WorkStealingQueue>
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: queueHead
+		Type: System.Threading.ThreadPoolWorkQueue/QueueSegment
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: queueTail
+		Type: System.Threading.ThreadPoolWorkQueue/QueueSegment
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: numOutstandingThreadRequests
+		Type: System.Int32
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01923150
+		Ram Offset 0x181924350
+		Virtual Method Slot: 65535
+
+	Method: EnsureCurrentThreadHasQueue:
+		Accessibility: Public
+		Return Type: System.Threading.ThreadPoolWorkQueueThreadLocals
+		File Offset 0x01923250
+		Ram Offset 0x181924450
+		Virtual Method Slot: 65535
+
+	Method: EnsureThreadRequested:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x019233E0
+		Ram Offset 0x1819245e0
+		Virtual Method Slot: 65535
+
+	Method: MarkThreadRequestSatisfied:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01923480
+		Ram Offset 0x181924680
+		Virtual Method Slot: 65535
+
+	Method: Enqueue:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x019234B0
+		Ram Offset 0x1819246b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: System.Threading.IThreadPoolWorkItem
+			Default Value: 
+		Parameter 1:
+			Name: forceGlobal
+			Type: System.Boolean
+			Default Value: 
+	Method: LocalFindAndPop:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01923750
+		Ram Offset 0x181924950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: System.Threading.IThreadPoolWorkItem
+			Default Value: 
+	Method: Dequeue:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01923800
+		Ram Offset 0x181924a00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tl
+			Type: System.Threading.ThreadPoolWorkQueueThreadLocals
+			Default Value: 
+		Parameter 1:
+			Name: callback
+			Type: System.Threading.IThreadPoolWorkItem
+			Default Value: 
+		Parameter 2:
+			Name: missedSteal
+			Type: System.Boolean
+			Default Value: 
+	Method: Dispatch:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x01923AB0
+		Ram Offset 0x181924cb0
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x019240B0
+		Ram Offset 0x1819252b0
+		Virtual Method Slot: 65535

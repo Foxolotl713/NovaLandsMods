@@ -1,0 +1,188 @@
+Type: ICSharpCode.SharpZipLib.Encryption.ZipAESTransform:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.Security.Cryptography.ICryptoTransform
+		System.IDisposable
+
+	Static Field: PWD_VER_LENGTH
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 2
+
+	Static Field: KEY_ROUNDS
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1000
+
+	Static Field: ENCRYPT_BLOCK
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 16
+
+	Field: _blockSize
+		Type: System.Int32
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: _encryptor
+		Type: System.Security.Cryptography.ICryptoTransform
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _counterNonce
+		Type: System.Byte[]
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _encryptBuffer
+		Type: System.Byte[]
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _encrPos
+		Type: System.Int32
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _pwdVerifier
+		Type: System.Byte[]
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _hmacsha1
+		Type: System.Security.Cryptography.HMACSHA1
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: _finalised
+		Type: System.Boolean
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: _writeMode
+		Type: System.Boolean
+		Offset in Defining Type: 0x49
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0160CD50
+		Ram Offset 0x18160df50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: key
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: saltBytes
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: blockSize
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: writeMode
+			Type: System.Boolean
+			Default Value: 
+	Method: TransformBlock:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0160D300
+		Ram Offset 0x18160e500
+		Virtual Method Slot: 7
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: outputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 4:
+			Name: outputOffset
+			Type: System.Int32
+			Default Value: 
+	Method: get_PwdVerifier:
+		Accessibility: Public
+		Return Type: System.Byte[]
+		File Offset 0x004E1440
+		Ram Offset 0x1804e2640
+		Virtual Method Slot: 65535
+
+	Method: GetAuthCode:
+		Accessibility: Public
+		Return Type: System.Byte[]
+		File Offset 0x0160D4F0
+		Ram Offset 0x18160e6f0
+		Virtual Method Slot: 65535
+
+	Method: TransformFinalBlock:
+		Accessibility: Public
+		Return Type: System.Byte[]
+		File Offset 0x0160D580
+		Ram Offset 0x18160e780
+		Virtual Method Slot: 8
+
+		Parameter 0:
+			Name: inputBuffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: inputOffset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: inputCount
+			Type: System.Int32
+			Default Value: 
+	Method: get_InputBlockSize:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00397E40
+		Ram Offset 0x180399040
+		Virtual Method Slot: 4
+
+	Method: get_OutputBlockSize:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00397E40
+		Ram Offset 0x180399040
+		Virtual Method Slot: 5
+
+	Method: get_CanTransformMultipleBlocks:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 6
+
+	Method: get_CanReuseTransform:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 10
+
+	Method: Dispose:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0160D5D0
+		Ram Offset 0x18160e7d0
+		Virtual Method Slot: 9

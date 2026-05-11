@@ -1,0 +1,419 @@
+Type: System.Net.WebResponseStream:
+	Base Class: 
+		System.Net.WebConnectionStream
+
+	Interfaces:
+
+	Nested Types:
+		System.Net.WebResponseStream/<ReadAsync>d__40
+		System.Net.WebResponseStream/<>c__DisplayClass41_0
+		System.Net.WebResponseStream/<ReadAllAsyncInner>d__47
+		System.Net.WebResponseStream/<ReadAllAsync>d__48
+		System.Net.WebResponseStream/<InitReadAsync>d__52
+
+	Field: innerStream
+		Type: System.Net.WebReadStream
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: nextReadCalled
+		Type: System.Boolean
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: bufferedEntireContent
+		Type: System.Boolean
+		Offset in Defining Type: 0x61
+		Has Default: False
+
+	Field: pendingRead
+		Type: System.Net.WebCompletionSource
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: locker
+		Type: System.Object
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: nestedRead
+		Type: System.Int32
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: read_eof
+		Type: System.Boolean
+		Offset in Defining Type: 0x7C
+		Has Default: False
+
+	Field: <RequestStream>k__BackingField
+		Type: System.Net.WebRequestStream
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: <Headers>k__BackingField
+		Type: System.Net.WebHeaderCollection
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: <StatusCode>k__BackingField
+		Type: System.Net.HttpStatusCode
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: <StatusDescription>k__BackingField
+		Type: System.String
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: <Version>k__BackingField
+		Type: System.Version
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: <KeepAlive>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: <ChunkedRead>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0xA9
+		Has Default: False
+
+	Method: get_RequestStream:
+		Accessibility: Public
+		Return Type: System.Net.WebRequestStream
+		File Offset 0x00616D20
+		Ram Offset 0x180617f20
+		Virtual Method Slot: 65535
+
+	Method: get_Headers:
+		Accessibility: Public
+		Return Type: System.Net.WebHeaderCollection
+		File Offset 0x00530430
+		Ram Offset 0x180531630
+		Virtual Method Slot: 65535
+
+	Method: set_Headers:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x003ED5D0
+		Ram Offset 0x1803ee7d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Net.WebHeaderCollection
+			Default Value: 
+	Method: get_StatusCode:
+		Accessibility: Public
+		Return Type: System.Net.HttpStatusCode
+		File Offset 0x006816A0
+		Ram Offset 0x1806828a0
+		Virtual Method Slot: 65535
+
+	Method: set_StatusCode:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00680610
+		Ram Offset 0x180681810
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Net.HttpStatusCode
+			Default Value: 
+	Method: get_StatusDescription:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x0040E2C0
+		Ram Offset 0x18040f4c0
+		Virtual Method Slot: 65535
+
+	Method: set_StatusDescription:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F1BF0
+		Ram Offset 0x1809f2df0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: get_Version:
+		Accessibility: Public
+		Return Type: System.Version
+		File Offset 0x005D7520
+		Ram Offset 0x1805d8720
+		Virtual Method Slot: 65535
+
+	Method: set_Version:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x009F1C50
+		Ram Offset 0x1809f2e50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Version
+			Default Value: 
+	Method: get_KeepAlive:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x005AA1B0
+		Ram Offset 0x1805ab3b0
+		Virtual Method Slot: 65535
+
+	Method: set_KeepAlive:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005AA1C0
+		Ram Offset 0x1805ab3c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01F8A860
+		Ram Offset 0x181f8ba60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: request
+			Type: System.Net.WebRequestStream
+			Default Value: 
+	Method: get_CanRead:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 7
+
+	Method: get_CanWrite:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 10
+
+	Method: get_ChunkedRead:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x005AA190
+		Ram Offset 0x1805ab390
+		Virtual Method Slot: 65535
+
+	Method: set_ChunkedRead:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x005AA1A0
+		Ram Offset 0x1805ab3a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: ReadAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<System.Int32>
+		File Offset 0x01F8A980
+		Ram Offset 0x181f8bb80
+		Virtual Method Slot: 23
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: ProcessRead:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task`1<System.Int32>
+		File Offset 0x01F8ABF0
+		Ram Offset 0x181f8bdf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: TryReadFromBufferedContent:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x01F8AF60
+		Ram Offset 0x181f8c160
+		Virtual Method Slot: 37
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: result
+			Type: System.Int32
+			Default Value: 
+	Method: get_ExpectContent:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F8B080
+		Ram Offset 0x181f8c280
+		Virtual Method Slot: 65535
+
+	Method: Initialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01F8B140
+		Ram Offset 0x181f8c340
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Net.BufferOffsetSize
+			Default Value: 
+	Method: ReadAllAsyncInner:
+		Accessibility: Private
+		Return Type: System.Threading.Tasks.Task`1<System.Byte[]>
+		File Offset 0x01F8C080
+		Ram Offset 0x181f8d280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: ReadAllAsync:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01F8C270
+		Ram Offset 0x181f8d470
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resending
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: WriteAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01F8C480
+		Ram Offset 0x181f8d680
+		Virtual Method Slot: 27
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: Close_internal:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01F8C550
+		Ram Offset 0x181f8d750
+		Virtual Method Slot: 38
+
+		Parameter 0:
+			Name: disposed
+			Type: System.Boolean
+			Default Value: 
+	Method: GetReadException:
+		Accessibility: Private
+		Return Type: System.Net.WebException
+		File Offset 0x01F8C640
+		Ram Offset 0x181f8d840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: status
+			Type: System.Net.WebExceptionStatus
+			Default Value: 
+		Parameter 1:
+			Name: error
+			Type: System.Exception
+			Default Value: 
+		Parameter 2:
+			Name: where
+			Type: System.String
+			Default Value: 
+	Method: InitReadAsync:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x01F8C8F0
+		Ram Offset 0x181f8daf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+	Method: GetResponse:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01F8CAE0
+		Ram Offset 0x181f8dce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Net.BufferOffsetSize
+			Default Value: 
+		Parameter 1:
+			Name: pos
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: state
+			Type: System.Net.ReadState
+			Default Value: 

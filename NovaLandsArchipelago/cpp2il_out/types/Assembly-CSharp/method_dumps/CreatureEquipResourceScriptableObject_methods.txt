@@ -1,0 +1,295 @@
+Type: CreatureEquipResourceScriptableObject
+
+Method: System.Boolean CreatureEquipResourceScriptableObject::CanEquipOnCreature(BaseEnemy):	Method Body (x86 ASM):
+		0x1808587F0 mov [rsp+10h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 16 | None ||| N/A | N/A
+		0x1808587F5 mov [rsp+18h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 24 | None ||| N/A | N/A
+		0x1808587FA push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808587FB sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1808587FF cmp byte ptr [18329B78Eh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516558 | None ||| N/A | 0
+		0x180858806 mov rdi,rdx		; DEBUG: {Register}/RDI {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180858809 mov rbp,rcx		; DEBUG: {Register}/RBP {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18085880C jne short 0000000180858851h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085880E lea rcx,[1830FBBB0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813680 | None ||| N/A | N/A
+		0x180858815 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085881A lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180858821 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180858826 lea rcx,[1830FBB98h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813656 | None ||| N/A | N/A
+		0x18085882D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180858832 lea rcx,[1830EBCD8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493748440 | None ||| N/A | N/A
+		0x180858839 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085883E lea rcx,[1830EBCC8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493748424 | None ||| N/A | N/A
+		0x180858845 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085884A mov byte ptr [18329B78Eh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516558 | None ||| N/A | 1
+		0x180858851 mov rcx,[1830EBCC8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493748424 | None ||| N/A | N/A
+		0x180858858 mov [rsp+30h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 48 | None ||| N/A | N/A
+		0x18085885D call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180858862 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180858865 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180858868 je near ptr 00000001808589C5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085886E cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180858875 mov [rax+10h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RAX | 16 | None ||| N/A | N/A
+		0x180858879 je short 00000001808588C1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085887B lea r8,[rax+10h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x18085887F shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180858883 lea rax,[1832F4840h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x18085888A and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180858891 mov ecx,r8d		; DEBUG: {Register}/ECX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180858894 shr rcx,6		; DEBUG: {Register}/RCX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180858898 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x18085889C lea rdx,[rax+rcx*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 0 | RCX ||| N/A | N/A
+		0x1808588A0 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1808588A3 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1808588A7 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x1808588B0 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1808588B3 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1808588B6 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1808588BA lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x1808588BF jne short 00000001808588B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808588C1 mov rcx,[1830FBB98h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813656 | None ||| N/A | N/A
+		0x1808588C8 mov rdi,[rbp+98h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBP | 152 | None ||| N/A | N/A
+		0x1808588CF call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808588D4 mov r8,[1830EBCD8h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493748440 | None ||| N/A | N/A
+		0x1808588DB xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1808588DE mov rdx,rbx		; DEBUG: {Register}/RDX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1808588E1 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1808588E4 mov rsi,rax		; DEBUG: {Register}/RSI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1808588E7 call 0000000181180430h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808588EC test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1808588EF je near ptr 00000001808589C5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808588F5 mov r8,[1830FBBB0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493813680 | None ||| N/A | N/A
+		0x1808588FC mov rdx,rsi		; DEBUG: {Register}/RDX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1808588FF mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180858902 call 000000018126CAD0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180858907 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18085890E mov rdi,rax		; DEBUG: {Register}/RDI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180858911 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180858918 jne short 000000018085891Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085891A call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085891F cmp byte ptr [1832A9F58h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575896 | None ||| N/A | 0
+		0x180858926 jne short 000000018085893Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180858928 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18085892F call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180858934 mov byte ptr [1832A9F58h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575896 | None ||| N/A | 1
+		0x18085893B mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180858942 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180858949 jne short 0000000180858950h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085894B call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180858950 cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x180858957 jne short 000000018085896Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180858959 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180858960 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180858965 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x18085896C test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18085896F je short 00000001808589C1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180858971 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180858978 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18085897F jne short 0000000180858986h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180858981 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180858986 cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x18085898B je short 00000001808589C1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18085898D mov rcx,[rbx+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x180858991 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180858994 je short 00000001808589C5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180858996 mov r8,[rcx]		; DEBUG: {Register}/R8 {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x180858999 mov rdx,rbp		; DEBUG: {Register}/RDX {Register}/RBP ||| None | 0 | None ||| N/A | N/A
+		0x18085899C mov rax,[r8+0ED8h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 3800 | None ||| N/A | N/A
+		0x1808589A3 mov r8,[r8+0EE0h]		; DEBUG: {Register}/R8 {Memory}/None ||| R8 | 3808 | None ||| N/A | N/A
+		0x1808589AA call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808589AC mov rsi,[rsp+30h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1808589B1 mov rbx,[rsp+38h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1808589B6 mov rbp,[rsp+40h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1808589BB add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1808589BF pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808589C0 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808589C1 xor al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1808589C3 jmp short 00000001808589ACh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808589C5 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808589CA int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean CreatureEquipResourceScriptableObject::CanEquipOnCreature(BaseEnemy):
+		End of function at 0x1808589CB
+		Absolute End is at 0x1808589CB
+		Identified Jump Destination addresses:
+
+		0x1808587FA: Saves the content of rdi to the stack
+		0x1808587FF: Compares {Unknown Global at 0x18329B78E, first ten bytes are [234 2 96 76 4 0 190 76 4 0], or as chars "ê`L ¾L "} and 0
+		0x180858806: Copies {'creature' (function parameter, type BaseEnemy)} from rdx into rdi
+		0x180858809: Copies {'this' (function parameter, type CreatureEquipResourceScriptableObject)} from rcx into rbp
+		0x18085880C: Jumps to 0x180858851 if {Unknown Global at 0x18329B78E, first ten bytes are [234 2 96 76 4 0 190 76 4 0], or as chars "ê`L ¾L "} != 0
+
+		0x18085880E: Loads the global generic method reference for method T System.Collections.Generic.List`1::Find(System.Predicate`1<T>) on type System.Collections.Generic.List`1<BaseEnemy> and stores the result in constant {'Find' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180858815: Initializes runtime metadata value 
+		0x18085881A: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180858821: Initializes runtime metadata value UnityEngine.Object
+		0x180858826: Loads the type definition for managed type System.Predicate`1<BaseEnemy> as a constant "Predicate`1" in rcx
+		0x18085882D: Initializes runtime metadata value System.Predicate`1<BaseEnemy>
+		0x180858832: Loads the method definition for managed method System.Boolean CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0::<CanEquipOnCreature>b__0(BaseEnemy) as a constant "<CanEquipOnCreature>b__0"
+		0x180858839: Initializes runtime metadata value System.Boolean CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0::<CanEquipOnCreature>b__0(BaseEnemy)
+		0x18085883E: Loads the type definition for managed type CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0 as a constant "<>c__DisplayClass2_0" in rcx
+		0x180858845: Initializes runtime metadata value CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0
+		0x180858851: Loads the type definition for managed type CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0 as a constant "<>c__DisplayClass2_0" in rcx
+		0x18085885D: [!] Allocates an instance of type CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0 and stores it as enumeratorInstance in rax.
+
+		0x180858862: Copies {'enumeratorInstance' (type CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0)} from rax into rbx
+		0x180858865: [!] Compares {'enumeratorInstance' (type CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0)} and 0
+		0x180858868: Jumps to 0x1808589C5 (which throws a NRE) if enumeratorInstance equals 0. Implicitly present in managed code, so ignored here.
+		0x18085886E: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180858875: [!] Sets the field creature (Type BaseEnemy) on local {'enumeratorInstance' (type CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0)} to the value stored in {'creature' (function parameter, type BaseEnemy)}
+		0x180858879: Jumps to 0x1808588C1 if constant10 equals 0
+
+		0x18085887B: Loads the pointer to the field creature on {'enumeratorInstance' (type CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0)} into register r8
+		0x180858883: Loads string "¡
+m" into register rax as constant {'constant13' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180858891: Copies {'constant12' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rcx
+		0x1808588B0: Loads the class pointer from creature into a constant constant14 in register rax
+		0x1808588B3: Copies {'constant14' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x1808588BF: Jumps to 0x1808588B0 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x1808588C1: Loads the type definition for managed type System.Predicate`1<BaseEnemy> as a constant "Predicate`1" in rcx
+		0x1808588C8: [!] Reads field targetCreatures from {'this' (function parameter, type CreatureEquipResourceScriptableObject)} and stores in a new local {'targetCreatures' (type System.Collections.Generic.List`1<BaseEnemy>)}
+
+		0x1808588CF: [!] Allocates an instance of type System.Predicate`1<BaseEnemy> and stores it as predicate in rax.
+
+		0x1808588D4: Loads the method definition for managed method System.Boolean CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0::<CanEquipOnCreature>b__0(BaseEnemy) as a constant "<CanEquipOnCreature>b__0"
+		0x1808588DE: Copies {'enumeratorInstance' (type CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0)} from rbx into rdx
+		0x1808588E1: Copies {'predicate' (type System.Predicate`1<BaseEnemy>)} from rax into rcx
+		0x1808588E4: Copies {'predicate' (type System.Predicate`1<BaseEnemy>)} from rax into rsi
+		0x1808588E7: [!] Calls managed method  on instance {'predicate' (type System.Predicate`1<BaseEnemy>)} ;  - Could not find any callable methods. Bailing out.
+
+		0x1808588EC: [!] Compares {'targetCreatures' (type System.Collections.Generic.List`1<BaseEnemy>)} and 0
+		0x1808588EF: Jumps to 0x1808589C5 (which throws a NRE) if targetCreatures equals 0. Implicitly present in managed code, so ignored here.
+		0x1808588F5: Loads the global generic method reference for method T System.Collections.Generic.List`1::Find(System.Predicate`1<T>) on type System.Collections.Generic.List`1<BaseEnemy> and stores the result in constant {'Find' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in r8
+		0x1808588FC: Copies {'predicate' (type System.Predicate`1<BaseEnemy>)} from rsi into rdx
+		0x1808588FF: Copies {'targetCreatures' (type System.Collections.Generic.List`1<BaseEnemy>)} from rdi into rcx
+		0x180858902: [!] Calls managed method T System.Collections.Generic.List`1::Find(System.Predicate`1<T>) on instance {'targetCreatures' (type System.Collections.Generic.List`1<BaseEnemy>)} with arguments [{'predicate' (type System.Predicate`1<BaseEnemy>)}] and stores the result in {'baseEnemy' (type BaseEnemy)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180858907: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18085890E: Copies {'baseEnemy' (type BaseEnemy)} from rax into rdi
+		0x180858911: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180858918: Jumps to 0x18085891F if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18085891A: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x18085891F: Compares {Unknown Global at 0x1832A9F58, first ten bytes are [128 23 238 2 240 161 14 0 234 162], or as chars "îð¡ ê¢"} and 0
+		0x180858926: Jumps to 0x18085893B if {Unknown Global at 0x1832A9F58, first ten bytes are [128 23 238 2 240 161 14 0 234 162], or as chars "îð¡ ê¢"} != 0
+
+		0x180858928: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18085892F: Initializes runtime metadata value UnityEngine.Object
+		0x18085893B: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180858942: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180858949: Jumps to 0x180858950 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18085894B: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180858950: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x180858957: Jumps to 0x18085896C if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x180858959: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180858960: Initializes runtime metadata value UnityEngine.Object
+		0x18085896C: [!] Compares {'baseEnemy' (type BaseEnemy)} and 0
+		0x18085896F: Jumps to 0x1808589C1 (which is an if statement's body) if baseEnemy equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180858971: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180858978: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18085897F: Jumps to 0x180858986 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180858981: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x180858986: [!] Compares  and 0
+		0x18085898B: Jumps to 0x1808589C1 (which is an if statement's body) if  equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18085898D: [!] Reads field creature from {'enumeratorInstance' (type CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0)} and stores in a new local {'creature' (type BaseEnemy)}
+
+		0x180858991: [!] Compares {'creature' (type BaseEnemy)} and 0
+		0x180858994: Jumps to 0x1808589C5 (which throws a NRE) if creature equals 0. Implicitly present in managed code, so ignored here.
+		0x180858996: Loads the class pointer from creature into a constant constant37 in register r8
+		0x180858999: Copies {'this' (function parameter, type CreatureEquipResourceScriptableObject)} from rbp into rdx
+		0x18085899C: Loads the pointer to the implementation of virtual function System.Boolean BaseEnemy::CanEquip(CreatureEquipResourceScriptableObject) specific to BaseEnemy from the class pointer in r8, slot 218 (from memory offset 3800) and stores in constant constant38
+		0x1808589A3: Loads the pointer to the implementation of virtual function System.Boolean BaseEnemy::CanEquip(CreatureEquipResourceScriptableObject) specific to BaseEnemy from the class pointer in r8, slot 218 (from memory offset 3808) and stores in constant constant39
+		0x1808589AA: [!] Calls managed method System.Boolean BaseEnemy::CanEquip(CreatureEquipResourceScriptableObject) on instance {'creature' (type BaseEnemy)} with arguments [{'this' (function parameter, type CreatureEquipResourceScriptableObject)}] and stores the result in {'boolean' (type System.Boolean)}
+
+
+		Potential Loop Start (0x1808589AC):
+		0x1808589AC: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rsi as new constant constant40
+		0x1808589B1: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rbx as new constant constant41
+		0x1808589B6: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbp as new constant constant42
+		0x1808589C0: [!] Returns {'boolean' (type System.Boolean)} from the function
+
+		0x1808589C3: Jumps to 0x1808589AC - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x1808589C5: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: CreatureEquipResourceScriptableObject
+	System.Boolean CanEquipOnCreature(BaseEnemy creature)
+		CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0 enumeratorInstance = new CreatureEquipResourceScriptableObject/<>c__DisplayClass2_0()
+		enumeratorInstance.creature = creature
+		System.Collections.Generic.List`1<BaseEnemy> targetCreatures = this.targetCreatures
+		System.Predicate`1<BaseEnemy> predicate = new System.Predicate`1<BaseEnemy>()
+
+		[instruction error - managed method being called is null]
+
+		BaseEnemy baseEnemy = targetCreatures.Find(predicate) //(Predicate`1 match)
+
+		if (baseEnemy != 0)
+
+		    if ( != 0)
+		        BaseEnemy creature = enumeratorInstance.creature
+
+		        System.Boolean boolean = creature.CanEquip(this) //(CreatureEquipResourceScriptableObject equip)
+		        return boolean
+		    endif
+            
+		    throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.AllocateInstanceAction at (0x18085885D) is corrupt (Managed method being called is , not a ctor.) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void CreatureEquipResourceScriptableObject::.ctor():	Method Body (x86 ASM):
+		0x180856BD0 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180856BD2 mov dword ptr [rcx+50h],1F4h		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 80 | None ||| N/A | 500
+		0x180856BD9 mov byte ptr [rcx+70h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RCX | 112 | None ||| N/A | 1
+		0x180856BDD jmp near ptr 000000018248CA30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180856BE2 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void CreatureEquipResourceScriptableObject::.ctor():
+		End of function at 0x180856BE3
+		Absolute End is at 0x180856BE3
+		Identified Jump Destination addresses:
+
+		0x180856BD2: [!] Sets the field maxStackSize (Type System.Int32) on local {'this' (function parameter, type CreatureEquipResourceScriptableObject)} to the value stored in 500
+		0x180856BD9: [!] Sets the field available (Type System.Boolean) on local {'this' (function parameter, type CreatureEquipResourceScriptableObject)} to the value stored in True
+		0x180856BDD: [!] Calls managed method System.Void UnityEngine.ScriptableObject::.ctor() on instance {'this' (function parameter, type CreatureEquipResourceScriptableObject)}
+
+		0x180856BDD: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: CreatureEquipResourceScriptableObject
+	System.Void .ctor()
+		this.maxStackSize = 500
+		this.available = True
+
+		base..ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4 500
+	IL_0006: conv.i8
+	IL_0007: conv.u8
+	IL_0008: stfld System.Int32 BaseResourceScriptableObject::maxStackSize
+	IL_000d: ldarg.0
+	IL_000e: ldc.i4.1
+	IL_000f: stfld System.Boolean BaseResourceScriptableObject::available
+	IL_0014: ldarg.0
+	IL_0015: call System.Void UnityEngine.ScriptableObject::.ctor()
+	IL_001a: ret
+	
+

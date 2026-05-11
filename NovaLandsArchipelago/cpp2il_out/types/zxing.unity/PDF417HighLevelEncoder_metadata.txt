@@ -1,0 +1,358 @@
+Type: ZXing.PDF417.Internal.PDF417HighLevelEncoder:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: TEXT_COMPACTION
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 0
+
+	Static Field: TEXT_MIXED_RAW
+		Type: System.SByte[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: ECI_CHARSET
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 927
+
+	Static Field: ECI_GENERAL_PURPOSE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 926
+
+	Static Field: ECI_USER_DEFINED
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 925
+
+	Static Field: LATCH_TO_BYTE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 924
+
+	Static Field: SHIFT_TO_BYTE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 913
+
+	Static Field: LATCH_TO_BYTE_PADDED
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 901
+
+	Static Field: LATCH_TO_NUMERIC
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 902
+
+	Static Field: SUBMODE_PUNCTUATION
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 3
+
+	Static Field: SUBMODE_MIXED
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 2
+
+	Static Field: SUBMODE_LOWER
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Static Field: SUBMODE_ALPHA
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 0
+
+	Static Field: NUMERIC_COMPACTION
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 2
+
+	Static Field: BYTE_COMPACTION
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Static Field: LATCH_TO_TEXT
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 900
+
+	Static Field: TEXT_PUNCTUATION_RAW
+		Type: System.SByte[]
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: MIXED
+		Type: System.SByte[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: PUNCTUATION
+		Type: System.SByte[]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: DEFAULT_ENCODING
+		Type: System.Text.Encoding
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02825B10
+		Ram Offset 0x182826d10
+		Virtual Method Slot: 65535
+
+	Method: encodeHighLevel:
+		Accessibility: Assembly
+		Return Type: System.String
+		File Offset 0x028260B0
+		Ram Offset 0x1828272b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: compaction
+			Type: ZXing.PDF417.Internal.Compaction
+			Default Value: 
+		Parameter 2:
+			Name: encoding
+			Type: System.Text.Encoding
+			Default Value: 
+		Parameter 3:
+			Name: disableEci
+			Type: System.Boolean
+			Default Value: 
+	Method: encodeText:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x028267E0
+		Ram Offset 0x1828279e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: startpos
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: sb
+			Type: System.Text.StringBuilder
+			Default Value: 
+		Parameter 4:
+			Name: initialSubmode
+			Type: System.Int32
+			Default Value: 
+	Method: encodeBinary:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02827120
+		Ram Offset 0x182828320
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bytes
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: startpos
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: startmode
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: sb
+			Type: System.Text.StringBuilder
+			Default Value: 
+	Method: encodeNumeric:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02827390
+		Ram Offset 0x182828590
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: startpos
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: sb
+			Type: System.Text.StringBuilder
+			Default Value: 
+	Method: isDigit:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x027D60A0
+		Ram Offset 0x1827d72a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ch
+			Type: System.Char
+			Default Value: 
+	Method: isAlphaUpper:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x028276E0
+		Ram Offset 0x1828288e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ch
+			Type: System.Char
+			Default Value: 
+	Method: isAlphaLower:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x02827700
+		Ram Offset 0x182828900
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ch
+			Type: System.Char
+			Default Value: 
+	Method: isMixed:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x02827720
+		Ram Offset 0x182828920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ch
+			Type: System.Char
+			Default Value: 
+	Method: isPunctuation:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x028277A0
+		Ram Offset 0x1828289a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ch
+			Type: System.Char
+			Default Value: 
+	Method: isText:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x02827820
+		Ram Offset 0x182828a20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: ch
+			Type: System.Char
+			Default Value: 
+	Method: determineConsecutiveDigitCount:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x02827850
+		Ram Offset 0x182828a50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: startpos
+			Type: System.Int32
+			Default Value: 
+	Method: determineConsecutiveTextCount:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x02827950
+		Ram Offset 0x182828b50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: startpos
+			Type: System.Int32
+			Default Value: 
+	Method: determineConsecutiveBinaryCount:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x02827AE0
+		Ram Offset 0x182828ce0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: msg
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: bytes
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: startpos
+			Type: System.Int32
+			Default Value: 
+	Method: encodingECI:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02827EE0
+		Ram Offset 0x1828290e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eci
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: sb
+			Type: System.Text.StringBuilder
+			Default Value: 

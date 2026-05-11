@@ -1,0 +1,243 @@
+Type: UnityEngine.Rendering.Universal.MotionVectorRenderPass:
+	Base Class: 
+		UnityEngine.Rendering.Universal.ScriptableRenderPass
+
+	Interfaces:
+
+	Nested Types:
+		UnityEngine.Rendering.Universal.MotionVectorRenderPass/PassData
+		UnityEngine.Rendering.Universal.MotionVectorRenderPass/<>c
+
+	Static Field: kPreviousViewProjectionNoJitter
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: _PrevViewProjMatrix
+
+	Static Field: kViewProjectionNoJitter
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: _NonJitteredViewProjMatrix
+
+	Static Field: kPreviousViewProjectionNoJitterStereo
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: _PrevViewProjMatrixStereo
+
+	Static Field: kViewProjectionNoJitterStereo
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: _NonJitteredViewProjMatrixStereo
+
+	Static Field: k_TargetFormat
+		Type: UnityEngine.Experimental.Rendering.GraphicsFormat
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 46
+
+	Static Field: s_ShaderTags
+		Type: System.String[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Field: m_Color
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: m_Depth
+		Type: UnityEngine.Rendering.RTHandle
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: m_CameraMaterial
+		Type: UnityEngine.Material
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: m_ObjectMaterial
+		Type: UnityEngine.Material
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: m_PassData
+		Type: UnityEngine.Rendering.Universal.MotionVectorRenderPass/PassData
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02294740
+		Ram Offset 0x182295940
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cameraMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 1:
+			Name: objectMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: Setup:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02294950
+		Ram Offset 0x182295b50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: color
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+		Parameter 1:
+			Name: depth
+			Type: UnityEngine.Rendering.RTHandle
+			Default Value: 
+	Method: Configure:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02294A10
+		Ram Offset 0x182295c10
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 1:
+			Name: cameraTextureDescriptor
+			Type: UnityEngine.RenderTextureDescriptor
+			Default Value: 
+	Method: ExecutePass:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02294B00
+		Ram Offset 0x182295d00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: passData
+			Type: UnityEngine.Rendering.Universal.MotionVectorRenderPass/PassData
+			Default Value: 
+		Parameter 2:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: Execute:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x02295220
+		Ram Offset 0x182296420
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: GetDrawingSettings:
+		Accessibility: Private
+		Return Type: UnityEngine.Rendering.DrawingSettings
+		File Offset 0x02295380
+		Ram Offset 0x182296580
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+		Parameter 1:
+			Name: objectMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: DrawCameraMotionVectors:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x022957C0
+		Ram Offset 0x1822969c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 2:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+		Parameter 3:
+			Name: cameraMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: DrawObjectMotionVectors:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02295920
+		Ram Offset 0x182296b20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+		Parameter 2:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+		Parameter 3:
+			Name: objectMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: Render:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x02295BF0
+		Ram Offset 0x182296df0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: renderGraph
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.RenderGraph
+			Default Value: 
+		Parameter 1:
+			Name: cameraDepthTexture
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle
+			Default Value: 
+		Parameter 2:
+			Name: motionVectorColor
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle
+			Default Value: 
+		Parameter 3:
+			Name: motionVectorDepth
+			Type: UnityEngine.Experimental.Rendering.RenderGraphModule.TextureHandle
+			Default Value: 
+		Parameter 4:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x02296170
+		Ram Offset 0x182297370
+		Virtual Method Slot: 65535

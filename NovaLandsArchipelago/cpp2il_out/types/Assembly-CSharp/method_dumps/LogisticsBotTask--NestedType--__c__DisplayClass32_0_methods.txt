@@ -1,0 +1,226 @@
+Type: <>c__DisplayClass32_0
+
+Method: System.Void LogisticsBotTask/<>c__DisplayClass32_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void LogisticsBotTask/<>c__DisplayClass32_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: LogisticsBotTask/<>c__DisplayClass32_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean LogisticsBotTask/<>c__DisplayClass32_0::<Setup>b__0(BaseBuilding):	Method Body (x86 ASM):
+		0x1803B63F0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1803B63F4 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1803B63F7 je short 00000001803B640Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803B63F9 mov eax,[rcx+10h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1803B63FC cmp [rdx+360h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 864 | None ||| N/A | N/A
+		0x1803B6402 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803B6405 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1803B6409 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803B640A call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803B640F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean LogisticsBotTask/<>c__DisplayClass32_0::<Setup>b__0(BaseBuilding):
+		End of function at 0x1803B6410
+		Absolute End is at 0x1803B6410
+		Identified Jump Destination addresses:
+
+		0x1803B63F4: [!] Compares {'x' (function parameter, type BaseBuilding)} and 0
+		0x1803B63F7: Jumps to 0x1803B640A (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x1803B63F9: [!] Reads field targetBuildingId from {'this' (function parameter, type LogisticsBotTask/<>c__DisplayClass32_0)} and stores in a new local {'targetBuildingId' (type System.Int32)}
+
+		0x1803B63FC: [!] Compares {field originalInstanceId, read from local {'x' (function parameter, type BaseBuilding)}} and {'targetBuildingId' (type System.Int32)}
+		0x1803B6402: [!] Sets the boolean {'local3' (type System.Boolean)} in rax to true if x.originalInstanceId is equal to targetBuildingId, otherwise false.
+		0x1803B6409: [!] Returns {'local3' (type System.Boolean)} from the function
+
+		0x1803B640A: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: LogisticsBotTask/<>c__DisplayClass32_0
+	System.Boolean <Setup>b__0(BaseBuilding x)
+		System.Int32 targetBuildingId = this.targetBuildingId
+		System.Boolean local3 = x.originalInstanceId == targetBuildingId
+		return local3
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Int32 LogisticsBotTask/<>c__DisplayClass32_0::targetBuildingId
+	IL_0006: stloc.0
+	IL_0007: ldarg.1
+	IL_0008: ldfld System.Int32 BaseBuilding::originalInstanceId
+	IL_000d: ldloc.0
+	IL_000e: ceq
+	IL_0010: ret
+	IL_0011: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0016: throw
+	
+
+Method: System.Boolean LogisticsBotTask/<>c__DisplayClass32_0::<Setup>b__1(BaseBuilding):	Method Body (x86 ASM):
+		0x1803C8050 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1803C8054 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1803C8057 je short 00000001803C806Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803C8059 mov eax,[rcx+14h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 20 | None ||| N/A | N/A
+		0x1803C805C cmp [rdx+360h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 864 | None ||| N/A | N/A
+		0x1803C8062 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803C8065 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1803C8069 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803C806A call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803C806F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean LogisticsBotTask/<>c__DisplayClass32_0::<Setup>b__1(BaseBuilding):
+		End of function at 0x1803C8070
+		Absolute End is at 0x1803C8070
+		Identified Jump Destination addresses:
+
+		0x1803C8054: [!] Compares {'x' (function parameter, type BaseBuilding)} and 0
+		0x1803C8057: Jumps to 0x1803C806A (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x1803C8059: [!] Reads field originContainerId from {'this' (function parameter, type LogisticsBotTask/<>c__DisplayClass32_0)} and stores in a new local {'originContainerId' (type System.Int32)}
+
+		0x1803C805C: [!] Compares {field originalInstanceId, read from local {'x' (function parameter, type BaseBuilding)}} and {'originContainerId' (type System.Int32)}
+		0x1803C8062: [!] Sets the boolean {'local3' (type System.Boolean)} in rax to true if x.originalInstanceId is equal to originContainerId, otherwise false.
+		0x1803C8069: [!] Returns {'local3' (type System.Boolean)} from the function
+
+		0x1803C806A: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: LogisticsBotTask/<>c__DisplayClass32_0
+	System.Boolean <Setup>b__1(BaseBuilding x)
+		System.Int32 originContainerId = this.originContainerId
+		System.Boolean local3 = x.originalInstanceId == originContainerId
+		return local3
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Int32 LogisticsBotTask/<>c__DisplayClass32_0::originContainerId
+	IL_0006: stloc.0
+	IL_0007: ldarg.1
+	IL_0008: ldfld System.Int32 BaseBuilding::originalInstanceId
+	IL_000d: ldloc.0
+	IL_000e: ceq
+	IL_0010: ret
+	IL_0011: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0016: throw
+	
+
+Method: System.Boolean LogisticsBotTask/<>c__DisplayClass32_0::<Setup>b__2(BaseResource):	Method Body (x86 ASM):
+		0x1803C8070 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1803C8074 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1803C8077 je short 00000001803C808Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803C8079 mov eax,[rcx+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 24 | None ||| N/A | N/A
+		0x1803C807C cmp [rdx+0B0h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 176 | None ||| N/A | N/A
+		0x1803C8082 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803C8085 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1803C8089 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803C808A call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803C808F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean LogisticsBotTask/<>c__DisplayClass32_0::<Setup>b__2(BaseResource):
+		End of function at 0x1803C8090
+		Absolute End is at 0x1803C8090
+		Identified Jump Destination addresses:
+
+		0x1803C8074: [!] Compares {'x' (function parameter, type BaseResource)} and 0
+		0x1803C8077: Jumps to 0x1803C808A (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x1803C8079: [!] Reads field targetCollectableResourceId from {'this' (function parameter, type LogisticsBotTask/<>c__DisplayClass32_0)} and stores in a new local {'targetCollectableResourceId' (type System.Int32)}
+
+		0x1803C807C: [!] Compares {field originalInstanceId, read from local {'x' (function parameter, type BaseResource)}} and {'targetCollectableResourceId' (type System.Int32)}
+		0x1803C8082: [!] Sets the boolean {'local3' (type System.Boolean)} in rax to true if x.originalInstanceId is equal to targetCollectableResourceId, otherwise false.
+		0x1803C8089: [!] Returns {'local3' (type System.Boolean)} from the function
+
+		0x1803C808A: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: LogisticsBotTask/<>c__DisplayClass32_0
+	System.Boolean <Setup>b__2(BaseResource x)
+		System.Int32 targetCollectableResourceId = this.targetCollectableResourceId
+		System.Boolean local3 = x.originalInstanceId == targetCollectableResourceId
+		return local3
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Int32 LogisticsBotTask/<>c__DisplayClass32_0::targetCollectableResourceId
+	IL_0006: stloc.0
+	IL_0007: ldarg.1
+	IL_0008: ldfld System.Int32 BaseResource::originalInstanceId
+	IL_000d: ldloc.0
+	IL_000e: ceq
+	IL_0010: ret
+	IL_0011: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0016: throw
+	
+
+Method: System.Boolean LogisticsBotTask/<>c__DisplayClass32_0::<Setup>b__3(BasePlayerBot):	Method Body (x86 ASM):
+		0x1803C8090 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1803C8094 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1803C8097 je short 00000001803C80AAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803C8099 mov eax,[rcx+1Ch]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 28 | None ||| N/A | N/A
+		0x1803C809C cmp [rdx+2A0h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 672 | None ||| N/A | N/A
+		0x1803C80A2 sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803C80A5 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1803C80A9 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803C80AA call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803C80AF int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean LogisticsBotTask/<>c__DisplayClass32_0::<Setup>b__3(BasePlayerBot):
+		End of function at 0x1803C80B0
+		Absolute End is at 0x1803C80B0
+		Identified Jump Destination addresses:
+
+		0x1803C8094: [!] Compares {'x' (function parameter, type BasePlayerBot)} and 0
+		0x1803C8097: Jumps to 0x1803C80AA (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x1803C8099: [!] Reads field botId from {'this' (function parameter, type LogisticsBotTask/<>c__DisplayClass32_0)} and stores in a new local {'botId' (type System.Int32)}
+
+		0x1803C809C: [!] Compares  and {'botId' (type System.Int32)}
+		0x1803C80A2: [!] Sets the boolean {'local3' (type System.Boolean)} in rax to true if  is equal to botId, otherwise false.
+		0x1803C80A9: [!] Returns {'local3' (type System.Boolean)} from the function
+
+		0x1803C80AA: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: LogisticsBotTask/<>c__DisplayClass32_0
+	System.Boolean <Setup>b__3(BasePlayerBot x)
+		System.Int32 botId = this.botId
+		System.Boolean local3 =  == botId
+		return local3
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.EqualRegisterSetAction at (0x1803C80A2) is corrupt (Missing a comparison argument) and cannot be created as IL. Aborting here.
+
+

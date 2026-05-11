@@ -1,0 +1,528 @@
+Type: ControllerAssignmentSaveInfo
+
+Method: System.Int32 Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo::get_playerCount():	Method Body (x86 ASM):
+		0x18083B280 cmp qword ptr [rcx+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RCX | 16 | None ||| N/A | 0
+		0x18083B285 je short 000000018083B28Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B287 mov rax,[rcx+10h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x18083B28B mov eax,[rax+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x18083B28E ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18083B28F xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18083B291 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18083B292 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Int32 Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo::get_playerCount():
+		End of function at 0x18083B293
+		Absolute End is at 0x18083B293
+		Identified Jump Destination addresses:
+
+		0x18083B280: [!] Compares {field players, read from local {'this' (function parameter, type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo)}} and 0
+		0x18083B285: Jumps to 0x18083B28F (which is an if statement's body) if this.players equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18083B28B: Reads the length of the array "{'local1' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}" and stores it in new local {'length' (type System.Int32)} in register rax
+		0x18083B28E: [!] Returns {'length' (type System.Int32)} from the function
+
+		0x18083B28F: Clears register rax, yielding zero-local {'local3' (type System.Int32)}
+		0x18083B291: [!] Returns {'local3' (type System.Int32)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo
+	System.Int32 get_playerCount()
+
+		if (this.players != 0)
+		    System.Int32 length = local1.Length
+		    return length
+		endif
+        
+		ulong local3 = 0
+		return local3
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.ArrayLengthPropertyToLocalAction at (0x18083B28B) is corrupt (Local local1 is a variable but it has been stripped out. Are you missing a call to RegisterUsedLocal?) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Void Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo::.ctor(System.Int32):	Method Body (x86 ASM):
+		0x18096B6D0 mov [rsp+18h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 24 | None ||| N/A | N/A
+		0x18096B6D5 push rbp		; DEBUG: {Register}/RBP {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18096B6D6 push r14		; DEBUG: {Register}/R14 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18096B6D8 push r15		; DEBUG: {Register}/R15 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18096B6DA sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18096B6DE cmp byte ptr [18329BBC1h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495517633 | None ||| N/A | 0
+		0x18096B6E5 mov r14,rcx		; DEBUG: {Register}/R14 {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18096B6E8 mov ebp,edx		; DEBUG: {Register}/EBP {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18096B6EA jne short 000000018096B70Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B6EC lea rcx,[1830F9480h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493803648 | None ||| N/A | N/A
+		0x18096B6F3 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B6F8 lea rcx,[1830F9488h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493803656 | None ||| N/A | N/A
+		0x18096B6FF call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B704 mov byte ptr [18329BBC1h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495517633 | None ||| N/A | 1
+		0x18096B70B mov rcx,[1830F9480h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493803648 | None ||| N/A | N/A
+		0x18096B712 mov rdx,rbp		; DEBUG: {Register}/RDX {Register}/RBP ||| None | 0 | None ||| N/A | N/A
+		0x18096B715 call 00000001802EDE60h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B71A cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x18096B721 lea r15,[1832AE560h]		; DEBUG: {Register}/R15 {Memory}/None ||| RIP | 6495593824 | None ||| N/A | N/A
+		0x18096B728 mov [r14+10h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| R14 | 16 | None ||| N/A | N/A
+		0x18096B72C je short 000000018096B779h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B72E lea r8,[r14+10h]		; DEBUG: {Register}/R8 {Memory}/None ||| R14 | 16 | None ||| N/A | N/A
+		0x18096B732 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x18096B736 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x18096B73D mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18096B740 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x18096B744 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x18096B748 lea rdx,[r15+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| R15 | 0 | RAX ||| N/A | N/A
+		0x18096B74C prefetchw [rdx+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x18096B753 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x18096B757 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x18096B760 mov rax,[rdx+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x18096B767 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18096B76A bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18096B76E lock cmpxchg [rdx+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 287456 | None ||| N/A | N/A
+		0x18096B777 jne short 000000018096B760h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B779 xor ebx,ebx		; DEBUG: {Register}/EBX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x18096B77B test ebp,ebp		; DEBUG: {Register}/EBP {Register}/EBP ||| None | 0 | None ||| N/A | N/A
+		0x18096B77D jle near ptr 000000018096B83Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B783 mov [rsp+40h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 64 | None ||| N/A | N/A
+		0x18096B788 mov [rsp+48h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RSP | 72 | None ||| N/A | N/A
+		0x18096B78D nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x18096B790 mov rcx,[1830F9488h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493803656 | None ||| N/A | N/A
+		0x18096B797 mov rdi,[r14+10h]		; DEBUG: {Register}/RDI {Memory}/None ||| R14 | 16 | None ||| N/A | N/A
+		0x18096B79B call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B7A0 mov rsi,rax		; DEBUG: {Register}/RSI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18096B7A3 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18096B7A6 je near ptr 000000018096B84Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B7AC test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18096B7AF je short 000000018096B7C9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B7B1 mov rcx,[rdi]		; DEBUG: {Register}/RCX {Memory}/None ||| RDI | 0 | None ||| N/A | N/A
+		0x18096B7B4 mov rdx,[rcx+40h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 64 | None ||| N/A | N/A
+		0x18096B7B8 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18096B7BB call 00000001802EE8D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B7C0 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18096B7C3 je near ptr 000000018096B854h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B7C9 movsxd rax,ebx		; DEBUG: {Register}/RAX {Register}/EBX ||| None | 0 | None ||| N/A | N/A
+		0x18096B7CC cmp ebx,[rdi+18h]		; DEBUG: {Register}/EBX {Memory}/None ||| RDI | 24 | None ||| N/A | N/A
+		0x18096B7CF jae near ptr 000000018096B864h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B7D5 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x18096B7DC mov [rdi+rax*8+20h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RDI | 32 | RAX ||| N/A | N/A
+		0x18096B7E1 je short 000000018096B82Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B7E3 lea r8,[rdi+20h]		; DEBUG: {Register}/R8 {Memory}/None ||| RDI | 32 | None ||| N/A | N/A
+		0x18096B7E7 lea r8,[r8+rax*8]		; DEBUG: {Register}/R8 {Memory}/None ||| R8 | 0 | RAX ||| N/A | N/A
+		0x18096B7EB shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x18096B7EF and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x18096B7F6 mov ecx,r8d		; DEBUG: {Register}/ECX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x18096B7F9 shr rcx,6		; DEBUG: {Register}/RCX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x18096B7FD and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x18096B801 prefetchw [r15+rcx*8+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| R15 | 287456 | RCX ||| N/A | N/A
+		0x18096B80A nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x18096B810 mov rax,[r15+rcx*8+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| R15 | 287456 | RCX ||| N/A | N/A
+		0x18096B818 mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18096B81B bts rdx,r8		; DEBUG: {Register}/RDX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18096B81F lock cmpxchg [r15+rcx*8+462E0h],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| R15 | 287456 | RCX ||| N/A | N/A
+		0x18096B829 jne short 000000018096B810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B82B inc ebx		; DEBUG: {Register}/EBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18096B82D cmp ebx,ebp		; DEBUG: {Register}/EBX {Register}/EBP ||| None | 0 | None ||| N/A | N/A
+		0x18096B82F jl near ptr 000000018096B790h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B835 mov rsi,[rsp+40h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x18096B83A mov rdi,[rsp+48h]		; DEBUG: {Register}/RDI {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x18096B83F mov rbx,[rsp+50h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x18096B844 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x18096B848 pop r15		; DEBUG: {Register}/R15 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18096B84A pop r14		; DEBUG: {Register}/R14 {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18096B84C pop rbp		; DEBUG: {Register}/RBP {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18096B84D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18096B84E call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18096B853 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo::.ctor(System.Int32):
+		End of function at 0x18096B854
+		Absolute End is at 0x18096B854
+		Identified Jump Destination addresses:
+
+		0x18096B6D5: Saves the content of rbp to the stack
+		0x18096B6D6: Saves the content of r14 to the stack
+		0x18096B6D8: Saves the content of r15 to the stack
+		0x18096B6DE: Compares {Unknown Global at 0x18329BBC1, first ten bytes are [132 4 0 8 134 234 2 240 132 4], or as chars " êð"} and 0
+		0x18096B6E5: Copies {'this' (function parameter, type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo)} from rcx into r14
+		0x18096B6E8: Copies {'playerCount' (function parameter, type System.Int32)} from rdx into rbp
+		0x18096B6EA: Jumps to 0x18096B70B if {Unknown Global at 0x18329BBC1, first ten bytes are [132 4 0 8 134 234 2 240 132 4], or as chars " êð"} != 0
+
+		0x18096B6EC: Loads the type definition for managed type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[] as a constant "PlayerInfo[]" in rcx
+		0x18096B6F3: Initializes runtime metadata value Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[]
+		0x18096B6F8: Loads the type definition for managed type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo as a constant "PlayerInfo" in rcx
+		0x18096B6FF: Initializes runtime metadata value Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo
+		0x18096B70B: Loads the type definition for managed type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[] as a constant "PlayerInfo[]" in rcx
+		0x18096B712: Copies {'playerCount' (function parameter, type System.Int32)} from rbp into rdx
+		0x18096B715: [!] Allocates an array of type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[] of size playerCount and stores the result as local2 in register rax
+
+		0x18096B71A: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x18096B721: Reads {Unknown Global at 0x1832AE560, first ten bytes are [20 59 240 2 208 31 18 0 228 32], or as chars ";ðÐ ä "} into register r15 as a constant constant8
+		0x18096B728: [!] Sets the field players (Type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[]) on local {'this' (function parameter, type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo)} to the value stored in {'local2' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}
+		0x18096B72C: Jumps to 0x18096B779 if constant6 equals 0
+
+		0x18096B72E: Loads the pointer to the field players on {'this' (function parameter, type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo)} into register r8
+		0x18096B73D: Copies {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x18096B760: [!] Reads field  from {'playerCount' (function parameter, type System.Int32)} and stores in a new local 
+
+		0x18096B767: Copies {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from rax into rcx
+		0x18096B777: Jumps to 0x18096B760 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x18096B779: Clears register rbx, yielding zero-local {'local3' (type System.Int32)}
+		0x18096B77B: [!] Compares {'playerCount' (function parameter, type System.Int32)} and 0
+		0x18096B77D: Jumps to 0x18096B83F (which is an if statement's body) if {'playerCount' (function parameter, type System.Int32)} is less than or equal to 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18096B790: Loads the type definition for managed type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo as a constant "PlayerInfo" in rcx
+		0x18096B797: [!] Reads field players from {'this' (function parameter, type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo)} and stores in a new local {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}
+
+		0x18096B79B: [!] Allocates an instance of type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo and stores it as playerInfo in rax.
+
+		0x18096B7A0: Copies {'playerInfo' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo)} from rax into rsi
+		0x18096B7A3: [!] Compares {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])} and 0
+		0x18096B7A6: Jumps to 0x18096B84E (which throws a NRE) if players equals 0. Implicitly present in managed code, so ignored here.
+		0x18096B7AC: [!] Compares {'playerInfo' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo)} and 0
+		0x18096B7AF: Jumps to 0x18096B7C9 (which is an if statement's body) if playerInfo equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18096B7B1: Loads the class pointer from players into a constant constant14 in register rcx
+		0x18096B7B4: Reads the element type from the class pointer Il2CppTypeDefinition[namespace='', name='PlayerInfo', parentType=System.Object] and stores in register rdx
+		0x18096B7B8: Copies {'playerInfo' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo)} from rax into rcx
+		0x18096B7C0: [!] Compares {'playerInfo' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo)} and 0
+		0x18096B7C3: Jumps to 0x18096B854 (which throws a NRE) if playerInfo equals 0. Implicitly present in managed code, so ignored here.
+		0x18096B7C9: Copies {'local3' (type System.Int32)} from rbx into rax
+		0x18096B7CC: [!] Compares {'local3' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}}
+		0x18096B7CF: Jumps to 0x18096B864 (which throws a NRE) if {'local3' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}}. Implicitly present in managed code, so ignored here.
+		0x18096B7D5: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x18096B7DC: Sets the value at offset 0 in array players to {'playerInfo' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo)}
+		0x18096B7E1: Jumps to 0x18096B82B if constant16 equals 0 ;  - This is probably a goto, jumping to 0x18096B82B which is after end of current block @ 0x18096B7C9 (started at 0x18096B7B1)
+
+		0x18096B7E3: Reads the pointer to the value in the array {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])} at index 0, into a new constant {'constant18' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppArrayOffsetPointer`1[[Iced.Intel.Instruction, Iced, Version=1.11.1.0, Culture=neutral, PublicKeyToken=5baba79f4264913b]])} in r8
+		0x18096B7F6: Copies {'constant18' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppArrayOffsetPointer`1[[Iced.Intel.Instruction, Iced, Version=1.11.1.0, Culture=neutral, PublicKeyToken=5baba79f4264913b]])} from r8 into rcx
+		0x18096B818: Copies {'local3' (type System.Int32)} from rax into rdx
+		0x18096B829: Jumps to 0x18096B810 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0 ;  - This is probably a goto, jumping to 0x18096B810 which is after end of current block @ 0x18096B7C9 (started at 0x18096B7B1)
+
+		0x18096B82B: [!] Adds 1 to the value {'local3' (type System.Int32)}, stored in rbx
+		0x18096B82D: [!] Compares {'local3' (type System.Int32)} and {'playerCount' (function parameter, type System.Int32)}
+		0x18096B835: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rsi as new constant constant19
+		0x18096B83A: Reads unknown value in stack, offset 72 (0x48) and stores the pointer in register rdi as new constant constant20
+		0x18096B83F: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register rbx as new constant constant21
+		0x18096B84D: [!] Returns from the function
+
+		0x18096B84E: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo
+	System.Void .ctor(System.Int32 playerCount)
+		Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[] local2 = new Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[playerCount]
+		this.players = local2
+		  = playerCount.
+		ulong local3 = 0
+
+		if (playerCount > 0)
+		    Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[] players = this.players
+		    Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo playerInfo = new Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo()
+
+		    if (playerInfo != 0)
+		    endif
+            
+		    players[0] = playerInfo
+		    local3 += 1
+		endif
+        
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.FieldToLocalAction at (0x18096B760) is corrupt (No further info) and cannot be created as IL. Aborting here.
+
+
+Method: System.Int32 Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo::IndexOfPlayer(System.Int32):	Method Body (x86 ASM):
+		0x18083B440 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18083B444 mov r8,[rcx+10h]		; DEBUG: {Register}/R8 {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x18083B448 mov r9d,edx		; DEBUG: {Register}/R9D {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18083B44B nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x18083B450 xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18083B452 test r8,r8		; DEBUG: {Register}/R8 {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18083B455 je short 000000018083B485h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B457 cmp eax,[r8+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| R8 | 24 | None ||| N/A | N/A
+		0x18083B45B jge short 000000018083B485h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B45D test r8,r8		; DEBUG: {Register}/R8 {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18083B460 je short 000000018083B495h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B462 cmp eax,[r8+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| R8 | 24 | None ||| N/A | N/A
+		0x18083B466 jae short 000000018083B48Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B468 movsxd rcx,eax		; DEBUG: {Register}/RCX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18083B46B cmp qword ptr [r8+rcx*8+20h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| R8 | 32 | RCX ||| N/A | 0
+		0x18083B471 je short 000000018083B481h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B473 movsxd rcx,eax		; DEBUG: {Register}/RCX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18083B476 mov rdx,[r8+rcx*8+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| R8 | 32 | RCX ||| N/A | N/A
+		0x18083B47B cmp [rdx+10h],r9d		; DEBUG: {Memory}/None {Register}/R9D ||| RDX | 16 | None ||| N/A | N/A
+		0x18083B47F je short 000000018083B48Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B481 inc eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18083B483 jmp short 000000018083B457h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B485 mov eax,0FFFFFFFFh		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 4294967295
+		0x18083B48A add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18083B48E ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18083B48F call 00000001802CDD90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B494 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Int32 Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo::IndexOfPlayer(System.Int32):
+		End of function at 0x18083B495
+		Absolute End is at 0x18083B495
+		Identified Jump Destination addresses:
+
+		0x18083B444: [!] Reads field players from {'this' (function parameter, type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo)} and stores in a new local {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}
+
+		0x18083B448: Copies {'playerId' (function parameter, type System.Int32)} from rdx into r9
+		0x18083B450: Clears register rax, yielding zero-local {'local3' (type System.Int32)}
+		0x18083B452: [!] Compares {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])} and 0
+		0x18083B455: Jumps to 0x18083B485 (which is an if statement's body) if players equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+
+		Potential Loop Start (0x18083B457):
+		0x18083B457: [!] Compares {'local3' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}}
+		0x18083B45B: Jumps to 0x18083B485 if {'local3' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}} ;  - Increasing indentation - is while loop, unimportant is False
+
+		0x18083B45D: [!] Compares {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])} and 0
+		0x18083B460: Jumps to 0x18083B495 (which throws a NRE) if players equals 0. Implicitly present in managed code, so ignored here.
+		0x18083B462: [!] Compares {'local3' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}}
+		0x18083B466: Jumps to 0x18083B48F (which throws a NRE) if {'local3' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}}. Implicitly present in managed code, so ignored here.
+		0x18083B468: Copies {'local3' (type System.Int32)} from rax into rcx
+		0x18083B46B: [!] Compares "{il2cpp array field local2->}" and 0
+		0x18083B471: Jumps to 0x18083B481 (which is an if statement's body) if "{il2cpp array field local2->}" equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18083B473: Copies {'local3' (type System.Int32)} from rax into rcx
+		0x18083B476: Copies the element in the array {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])} at the index specified by {'local3' (type System.Int32)} into new local {'playerInfo' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo)}
+		0x18083B47B: [!] Compares {field id, read from local {'playerInfo' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo)}} and {'playerId' (function parameter, type System.Int32)}
+		0x18083B47F: Jumps to 0x18083B48A if playerInfo.id equals playerId ;  - This is probably a goto, jumping to 0x18083B48A which is after end of current block @ 0x18083B481 (started at 0x18083B473)
+
+		0x18083B481: [!] Adds 1 to the value {'local3' (type System.Int32)}, stored in rax
+		0x18083B483: Jumps to 0x18083B457 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x18083B485: [!] Writes the constant 0xFFFFFFFF into operand -1 (type UInt64) in register rax
+		0x18083B48E: [!] Returns -1 from the function
+
+		0x18083B48F: [!] Constructs and throws an exception of kind System.IndexOutOfRangeException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo
+	System.Int32 IndexOfPlayer(System.Int32 playerId)
+		Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[] players = this.players
+		ulong local3 = 0
+
+		if (players != 0)
+
+		    while (local3 < players.Length)
+
+		        if ("{il2cpp array field local2->}" != 0)
+		            Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo playerInfo = players[local3]
+
+		            if (playerInfo.id == playerId)
+                        goto INSN_18083B48A
+                    endif
+		        endif
+                
+		        local3 += 1
+		    endwhile
+            
+
+		    INSN_18083B48A:
+		    return -1
+		    throw new System.IndexOutOfRangeException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[] Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo::players
+	IL_0006: stloc.0
+	IL_0007: ldc.i4.0
+	IL_0008: stloc.1
+	IL_0009: ldloc.0
+	IL_000a: ldc.i4.0
+	IL_000b: beq.s IL_0033
+	IL_000d: ldloc.1
+	IL_000e: ldloc.0
+	IL_000f: call System.Int32 System.Array::get_Length()
+	IL_0014: bge.s IL_0033
+	IL_0016: ldstr "{il2cpp array field local2->}"
+	IL_001b: ldc.i4.0
+	IL_001c: conv.i8
+	IL_001d: conv.u8
+	IL_001e: beq.s IL_002f
+	IL_0020: ldloc.0
+	IL_0021: ldloc.1
+	IL_0022: ldelem.any Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo
+	IL_0027: ldfld System.Int32 Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo::id
+	IL_002c: ldarg.1
+	IL_002d: beq.s IL_0033
+	IL_002f: ldloc.1
+	IL_0030: ldc.i4.1
+	IL_0031: add
+	IL_0032: stloc.1
+	IL_0033: ldc.i4.m1
+	IL_0034: ret
+	IL_0035: newobj System.Void System.IndexOutOfRangeException::.ctor()
+	IL_003a: throw
+	
+
+Method: System.Boolean Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo::ContainsPlayer(System.Int32):	Method Body (x86 ASM):
+		0x18083B4A0 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18083B4A4 mov r8,[rcx+10h]		; DEBUG: {Register}/R8 {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x18083B4A8 mov r9d,edx		; DEBUG: {Register}/R9D {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x18083B4AB nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x18083B4B0 xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18083B4B2 test r8,r8		; DEBUG: {Register}/R8 {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18083B4B5 je short 000000018083B4E5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B4B7 cmp eax,[r8+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| R8 | 24 | None ||| N/A | N/A
+		0x18083B4BB jge short 000000018083B4E5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B4BD test r8,r8		; DEBUG: {Register}/R8 {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18083B4C0 je short 000000018083B4FAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B4C2 cmp eax,[r8+18h]		; DEBUG: {Register}/EAX {Memory}/None ||| R8 | 24 | None ||| N/A | N/A
+		0x18083B4C6 jae short 000000018083B4F4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B4C8 movsxd rcx,eax		; DEBUG: {Register}/RCX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18083B4CB cmp qword ptr [r8+rcx*8+20h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| R8 | 32 | RCX ||| N/A | 0
+		0x18083B4D1 je short 000000018083B4E1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B4D3 movsxd rcx,eax		; DEBUG: {Register}/RCX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18083B4D6 mov rdx,[r8+rcx*8+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| R8 | 32 | RCX ||| N/A | N/A
+		0x18083B4DB cmp [rdx+10h],r9d		; DEBUG: {Memory}/None {Register}/R9D ||| RDX | 16 | None ||| N/A | N/A
+		0x18083B4DF je short 000000018083B4EAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B4E1 inc eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18083B4E3 jmp short 000000018083B4B7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B4E5 mov eax,0FFFFFFFFh		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 4294967295
+		0x18083B4EA shr eax,1Fh		; DEBUG: {Register}/EAX {Immediate8}/None ||| None | 0 | None ||| N/A | 31
+		0x18083B4ED xor al,1		; DEBUG: {Register}/AL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x18083B4EF add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18083B4F3 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18083B4F4 call 00000001802CDD90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18083B4F9 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo::ContainsPlayer(System.Int32):
+		End of function at 0x18083B4FA
+		Absolute End is at 0x18083B4FA
+		Identified Jump Destination addresses:
+
+		0x18083B4A4: [!] Reads field players from {'this' (function parameter, type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo)} and stores in a new local {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}
+
+		0x18083B4A8: Copies {'playerId' (function parameter, type System.Int32)} from rdx into r9
+		0x18083B4B0: Clears register rax, yielding zero-local {'local3' (type System.Int32)}
+		0x18083B4B2: [!] Compares {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])} and 0
+		0x18083B4B5: Jumps to 0x18083B4E5 (which is an if statement's body) if players equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+
+		Potential Loop Start (0x18083B4B7):
+		0x18083B4B7: [!] Compares {'local3' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}}
+		0x18083B4BB: Jumps to 0x18083B4E5 if {'local3' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}} ;  - Increasing indentation - is while loop, unimportant is False
+
+		0x18083B4BD: [!] Compares {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])} and 0
+		0x18083B4C0: Jumps to 0x18083B4FA (which throws a NRE) if players equals 0. Implicitly present in managed code, so ignored here.
+		0x18083B4C2: [!] Compares {'local3' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}}
+		0x18083B4C6: Jumps to 0x18083B4F4 (which throws a NRE) if {'local3' (type System.Int32)} is greater than or equal to {Property System.Int32 System.Array::Length() on {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])}}. Implicitly present in managed code, so ignored here.
+		0x18083B4C8: Copies {'local3' (type System.Int32)} from rax into rcx
+		0x18083B4CB: [!] Compares "{il2cpp array field local2->}" and 0
+		0x18083B4D1: Jumps to 0x18083B4E1 (which is an if statement's body) if "{il2cpp array field local2->}" equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18083B4D3: Copies {'local3' (type System.Int32)} from rax into rcx
+		0x18083B4D6: Copies the element in the array {'players' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[])} at the index specified by {'local3' (type System.Int32)} into new local {'playerInfo' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo)}
+		0x18083B4DB: [!] Compares {field id, read from local {'playerInfo' (type Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo)}} and {'playerId' (function parameter, type System.Int32)}
+		0x18083B4DF: Jumps to 0x18083B4EA if playerInfo.id equals playerId ;  - This is probably a goto, jumping to 0x18083B4EA which is after end of current block @ 0x18083B4E1 (started at 0x18083B4D3)
+
+		0x18083B4E1: [!] Adds 1 to the value {'local3' (type System.Int32)}, stored in rax
+		0x18083B4E3: Jumps to 0x18083B4B7 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x18083B4E5: [!] Writes the constant 0xFFFFFFFF into operand True (type UInt64) in register rax
+		0x18083B4F3: [!] Returns True from the function
+
+		0x18083B4F4: [!] Constructs and throws an exception of kind System.IndexOutOfRangeException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo
+	System.Boolean ContainsPlayer(System.Int32 playerId)
+		Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[] players = this.players
+		ulong local3 = 0
+
+		if (players != 0)
+
+		    while (local3 < players.Length)
+
+		        if ("{il2cpp array field local2->}" != 0)
+		            Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo playerInfo = players[local3]
+
+		            if (playerInfo.id == playerId)
+                        goto INSN_18083B4EA
+                    endif
+		        endif
+                
+		        local3 += 1
+		    endwhile
+            
+
+		    INSN_18083B4EA:
+		    return True
+		    throw new System.IndexOutOfRangeException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo[] Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo::players
+	IL_0006: stloc.0
+	IL_0007: ldc.i4.0
+	IL_0008: stloc.1
+	IL_0009: ldloc.0
+	IL_000a: ldc.i4.0
+	IL_000b: beq.s IL_0033
+	IL_000d: ldloc.1
+	IL_000e: ldloc.0
+	IL_000f: call System.Int32 System.Array::get_Length()
+	IL_0014: bge.s IL_0033
+	IL_0016: ldstr "{il2cpp array field local2->}"
+	IL_001b: ldc.i4.0
+	IL_001c: conv.i8
+	IL_001d: conv.u8
+	IL_001e: beq.s IL_002f
+	IL_0020: ldloc.0
+	IL_0021: ldloc.1
+	IL_0022: ldelem.any Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo
+	IL_0027: ldfld System.Int32 Rewired.Data.UserDataStore_PlayerPrefs/ControllerAssignmentSaveInfo/PlayerInfo::id
+	IL_002c: ldarg.1
+	IL_002d: beq.s IL_0033
+	IL_002f: ldloc.1
+	IL_0030: ldc.i4.1
+	IL_0031: add
+	IL_0032: stloc.1
+	IL_0033: ldc.i4.1
+	IL_0034: ret
+	IL_0035: newobj System.Void System.IndexOutOfRangeException::.ctor()
+	IL_003a: throw
+	
+

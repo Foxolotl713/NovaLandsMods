@@ -1,0 +1,309 @@
+Type: UnityEngine.Rendering.Universal.Render2DLightingPass:
+	Base Class: 
+		UnityEngine.Rendering.Universal.ScriptableRenderPass
+
+	Interfaces:
+		UnityEngine.Rendering.Universal.IRenderPass2D
+
+	Nested Types:
+		UnityEngine.Rendering.Universal.Render2DLightingPass/<>c
+
+	Static Field: k_HDREmulationScaleID
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: k_InverseHDREmulationScaleID
+		Type: System.Int32
+		Offset in Defining Type: 0x4
+		Has Default: False
+
+	Static Field: k_UseSceneLightingID
+		Type: System.Int32
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: k_RendererColorID
+		Type: System.Int32
+		Offset in Defining Type: 0xC
+		Has Default: False
+
+	Static Field: k_ShapeLightTextureIDs
+		Type: System.Int32[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: k_CombinedRenderingPassName
+		Type: UnityEngine.Rendering.ShaderTagId
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: k_NormalsRenderingPassName
+		Type: UnityEngine.Rendering.ShaderTagId
+		Offset in Defining Type: 0x1C
+		Has Default: False
+
+	Static Field: k_LegacyPassName
+		Type: UnityEngine.Rendering.ShaderTagId
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: k_ShaderTags
+		Type: System.Collections.Generic.List`1<UnityEngine.Rendering.ShaderTagId>
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: m_ProfilingDrawLights
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Static Field: m_ProfilingDrawLightTextures
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Static Field: m_ProfilingDrawRenderers
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Static Field: m_ProfilingDrawLayerBatch
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Static Field: m_ProfilingSamplerUnlit
+		Type: UnityEngine.Rendering.ProfilingSampler
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: m_BlitMaterial
+		Type: UnityEngine.Material
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: m_SamplingMaterial
+		Type: UnityEngine.Material
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: m_Renderer2DData
+		Type: UnityEngine.Rendering.Universal.Renderer2DData
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: m_NeedsDepth
+		Type: System.Boolean
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: m_CameraSortingLayerBoundsIndex
+		Type: System.Int16
+		Offset in Defining Type: 0xFA
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0222C040
+		Ram Offset 0x18222d240
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: rendererData
+			Type: UnityEngine.Rendering.Universal.Renderer2DData
+			Default Value: 
+		Parameter 1:
+			Name: blitMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+		Parameter 2:
+			Name: samplingMaterial
+			Type: UnityEngine.Material
+			Default Value: 
+	Method: Setup:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0222C1D0
+		Ram Offset 0x18222d3d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: useDepth
+			Type: System.Boolean
+			Default Value: 
+	Method: GetTransparencySortingMode:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0222C1E0
+		Ram Offset 0x18222d3e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: camera
+			Type: UnityEngine.Camera
+			Default Value: 
+		Parameter 1:
+			Name: sortingSettings
+			Type: UnityEngine.Rendering.SortingSettings
+			Default Value: 
+	Method: CopyCameraSortingLayerRenderTexture:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0222C2E0
+		Ram Offset 0x18222d4e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+		Parameter 2:
+			Name: mainTargetStoreAction
+			Type: UnityEngine.Rendering.RenderBufferStoreAction
+			Default Value: 
+	Method: GetCameraSortingLayerBoundsIndex:
+		Accessibility: Private
+		Return Type: System.Int16
+		File Offset 0x0222C960
+		Ram Offset 0x18222db60
+		Virtual Method Slot: 65535
+
+	Method: DetermineWhenToResolve:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0222CA10
+		Ram Offset 0x18222dc10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: startIndex
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: batchesDrawn
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: batchCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: layerBatches
+			Type: UnityEngine.Rendering.Universal.LayerBatch[]
+			Default Value: 
+		Parameter 4:
+			Name: resolveDuringBatch
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: resolveIsAfterCopy
+			Type: System.Boolean
+			Default Value: 
+	Method: Render:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0222CC60
+		Ram Offset 0x18222de60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 2:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+		Parameter 3:
+			Name: filterSettings
+			Type: UnityEngine.Rendering.FilteringSettings
+			Default Value: 
+		Parameter 4:
+			Name: drawSettings
+			Type: UnityEngine.Rendering.DrawingSettings
+			Default Value: 
+	Method: DrawLayerBatches:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0222CF50
+		Ram Offset 0x18222e150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: layerBatches
+			Type: UnityEngine.Rendering.Universal.LayerBatch[]
+			Default Value: 
+		Parameter 1:
+			Name: batchCount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: startIndex
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: cmd
+			Type: UnityEngine.Rendering.CommandBuffer
+			Default Value: 
+		Parameter 4:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 5:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+		Parameter 6:
+			Name: filterSettings
+			Type: UnityEngine.Rendering.FilteringSettings
+			Default Value: 
+		Parameter 7:
+			Name: normalsDrawSettings
+			Type: UnityEngine.Rendering.DrawingSettings
+			Default Value: 
+		Parameter 8:
+			Name: drawSettings
+			Type: UnityEngine.Rendering.DrawingSettings
+			Default Value: 
+		Parameter 9:
+			Name: desc
+			Type: UnityEngine.RenderTextureDescriptor
+			Default Value: 
+	Method: Execute:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0222E6E0
+		Ram Offset 0x18222f8e0
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: context
+			Type: UnityEngine.Rendering.ScriptableRenderContext
+			Default Value: 
+		Parameter 1:
+			Name: renderingData
+			Type: UnityEngine.Rendering.Universal.RenderingData
+			Default Value: 
+	Method: UnityEngine.Rendering.Universal.IRenderPass2D.get_rendererData:
+		Accessibility: Private
+		Return Type: UnityEngine.Rendering.Universal.Renderer2DData
+		File Offset 0x007DBD80
+		Ram Offset 0x1807dcf80
+		Virtual Method Slot: 11
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0222FA80
+		Ram Offset 0x182230c80
+		Virtual Method Slot: 65535

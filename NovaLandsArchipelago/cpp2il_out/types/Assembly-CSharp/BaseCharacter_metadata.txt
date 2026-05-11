@@ -1,0 +1,3930 @@
+Type: BaseCharacter:
+	Base Class: 
+		MuttAI.BaseGameEntity
+
+	Interfaces:
+		ISerializableGameObject
+
+	Nested Types:
+		BaseCharacter/<>c__DisplayClass264_0
+
+	Static Field: MAX_ACCELERATION
+		Type: System.Single
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 150
+
+	Static Field: CharacterIdleType
+		Type: System.Type
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: CharacterWaitingType
+		Type: System.Type
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: BotDepositingType
+		Type: System.Type
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: CharacterCollectingType
+		Type: System.Type
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: CharacterMovingType
+		Type: System.Type
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: CharacterWanderingType
+		Type: System.Type
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: CharacterChasingType
+		Type: System.Type
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: characterId
+		Type: System.Int32
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: creatureGroup
+		Type: CreatureGroup
+		Offset in Defining Type: 0x44
+		Has Default: False
+
+	Field: sprite
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: hurtSprite
+		Type: UnityEngine.Sprite
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: uiIcon
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: animator
+		Type: UnityEngine.Animator
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: shadow
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: healParticles
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: healParticlesSmall
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: healthBar
+		Type: HealthBar
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: timeToHideHealthBarOnFullHealth
+		Type: System.Single
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: movementCollider
+		Type: UnityEngine.CircleCollider2D
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: detectExtractorTrigger
+		Type: UnityEngine.Collider2D
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: beingRideLoopSFXMultiplier
+		Type: System.Single
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: isFlyingCreature
+		Type: System.Boolean
+		Offset in Defining Type: 0xA4
+		Has Default: False
+
+	Field: attackSFX
+		Type: System.String
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: attackSFXDelay
+		Type: System.Single
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: interactSFX
+		Type: System.String
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: dieSFX
+		Type: System.String
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: walkLoopSFX
+		Type: System.String
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: idleLoopSFX
+		Type: System.String
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: playSpawnAnimation
+		Type: System.Boolean
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: spawnColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0xDC
+		Has Default: False
+
+	Field: spawnAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0xEC
+		Has Default: False
+
+	Field: spawnStateDuration
+		Type: System.Single
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: hasAlternateSpawn
+		Type: System.Boolean
+		Offset in Defining Type: 0xF4
+		Has Default: False
+
+	Field: alternateSpawnAnimation
+		Type: System.String
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: alternateSpawnDuration
+		Type: System.Single
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Field: maxHealth
+		Type: System.Single
+		Offset in Defining Type: 0x104
+		Has Default: False
+
+	Field: movementSpeed
+		Type: System.Single
+		Offset in Defining Type: 0x108
+		Has Default: False
+
+	Field: acceleration
+		Type: System.Single
+		Offset in Defining Type: 0x10C
+		Has Default: False
+
+	Field: movementHaltThreshold
+		Type: System.Single
+		Offset in Defining Type: 0x110
+		Has Default: False
+
+	Field: distanceToStatDeacceleration
+		Type: System.Single
+		Offset in Defining Type: 0x114
+		Has Default: False
+
+	Field: attackPower
+		Type: System.Single
+		Offset in Defining Type: 0x118
+		Has Default: False
+
+	Field: attackPropPower
+		Type: System.Single
+		Offset in Defining Type: 0x11C
+		Has Default: False
+
+	Field: secondaryAttackPower
+		Type: System.Single
+		Offset in Defining Type: 0x120
+		Has Default: False
+
+	Field: secondaryAttackPropPower
+		Type: System.Single
+		Offset in Defining Type: 0x124
+		Has Default: False
+
+	Field: tertiaryAttackPower
+		Type: System.Single
+		Offset in Defining Type: 0x128
+		Has Default: False
+
+	Field: tertiaryAttackPropPower
+		Type: System.Single
+		Offset in Defining Type: 0x12C
+		Has Default: False
+
+	Field: removeBodyAfterDead
+		Type: System.Boolean
+		Offset in Defining Type: 0x130
+		Has Default: False
+
+	Field: timeToRemoveBodyAfterDead
+		Type: System.Single
+		Offset in Defining Type: 0x134
+		Has Default: False
+
+	Field: removeBodyAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: arriveDistance
+		Type: System.Single
+		Offset in Defining Type: 0x13C
+		Has Default: False
+
+	Field: movementRaycastInterval
+		Type: System.Single
+		Offset in Defining Type: 0x140
+		Has Default: False
+
+	Field: hasRunAnimation
+		Type: System.Boolean
+		Offset in Defining Type: 0x144
+		Has Default: False
+
+	Field: wildIslandSpeedPenalty
+		Type: System.Single
+		Offset in Defining Type: 0x148
+		Has Default: False
+
+	Field: maxWanderingDistanceFromOrigin
+		Type: System.Single
+		Offset in Defining Type: 0x14C
+		Has Default: False
+
+	Field: riderAnchor
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x150
+		Has Default: False
+
+	Field: beingRiddenSpeed
+		Type: System.Single
+		Offset in Defining Type: 0x158
+		Has Default: False
+
+	Field: jumpToRideDuration
+		Type: System.Single
+		Offset in Defining Type: 0x15C
+		Has Default: False
+
+	Field: jumpToRideEaseType
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0x160
+		Has Default: False
+
+	Field: rideReferencePosition
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x168
+		Has Default: False
+
+	Field: intervalToCheckIfShouldStopWaiting
+		Type: System.Single
+		Offset in Defining Type: 0x170
+		Has Default: False
+
+	Field: sufferKnockback
+		Type: System.Boolean
+		Offset in Defining Type: 0x174
+		Has Default: False
+
+	Field: sufferKnockbackWhileAttacking
+		Type: System.Boolean
+		Offset in Defining Type: 0x175
+		Has Default: False
+
+	Field: knockbackMultiplier
+		Type: System.Single
+		Offset in Defining Type: 0x178
+		Has Default: False
+
+	Field: knockbackDurationMultiplier
+		Type: System.Single
+		Offset in Defining Type: 0x17C
+		Has Default: False
+
+	Field: knockbackDrag
+		Type: System.Single
+		Offset in Defining Type: 0x180
+		Has Default: False
+
+	Field: damageColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x184
+		Has Default: False
+
+	Field: shieldDamageColor
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x194
+		Has Default: False
+
+	Field: hitAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0x1A4
+		Has Default: False
+
+	Field: hitMergeColorAmount
+		Type: System.Single
+		Offset in Defining Type: 0x1A8
+		Has Default: False
+
+	Field: chaseSpeed
+		Type: System.Single
+		Offset in Defining Type: 0x1AC
+		Has Default: False
+
+	Field: distanceToTargetToLeaveChasing
+		Type: System.Single
+		Offset in Defining Type: 0x1B0
+		Has Default: False
+
+	Field: minChaseTime
+		Type: System.Single
+		Offset in Defining Type: 0x1B4
+		Has Default: False
+
+	Field: fleeSpeed
+		Type: System.Single
+		Offset in Defining Type: 0x1B8
+		Has Default: False
+
+	Field: distanceToTargetToLeaveFleeing
+		Type: System.Single
+		Offset in Defining Type: 0x1BC
+		Has Default: False
+
+	Field: minFleeingTime
+		Type: System.Single
+		Offset in Defining Type: 0x1C0
+		Has Default: False
+
+	Field: idleDuration
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x1C4
+		Has Default: False
+
+	Field: hasIdleAlternate
+		Type: System.Boolean
+		Offset in Defining Type: 0x1CC
+		Has Default: False
+
+	Field: timeToShowIdleAlternate
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x1D0
+		Has Default: False
+
+	Field: checkTargetsMask
+		Type: UnityEngine.LayerMask
+		Offset in Defining Type: 0x1D8
+		Has Default: False
+
+	Field: dealDamageMask
+		Type: UnityEngine.LayerMask
+		Offset in Defining Type: 0x1DC
+		Has Default: False
+
+	Field: targetDetectionTrigger
+		Type: UnityEngine.CircleCollider2D
+		Offset in Defining Type: 0x1E0
+		Has Default: False
+
+	Field: targetDetectionRange
+		Type: System.Single
+		Offset in Defining Type: 0x1E8
+		Has Default: False
+
+	Field: attackController
+		Type: BaseAttack
+		Offset in Defining Type: 0x1F0
+		Has Default: False
+
+	Field: secondaryAttackController
+		Type: BaseAttack
+		Offset in Defining Type: 0x1F8
+		Has Default: False
+
+	Field: tertiaryAttackController
+		Type: BaseAttack
+		Offset in Defining Type: 0x200
+		Has Default: False
+
+	Field: propInteractionAttackController
+		Type: BaseAttack
+		Offset in Defining Type: 0x208
+		Has Default: False
+
+	Field: damageProps
+		Type: System.Boolean
+		Offset in Defining Type: 0x210
+		Has Default: False
+
+	Field: hasAttackPropAlternate
+		Type: System.Boolean
+		Offset in Defining Type: 0x211
+		Has Default: False
+
+	Field: attackPropAlternateChance
+		Type: System.Single
+		Offset in Defining Type: 0x214
+		Has Default: False
+
+	Field: obstacleEvasionDistance
+		Type: System.Single
+		Offset in Defining Type: 0x218
+		Has Default: False
+
+	Field: obstacleEvasionForce
+		Type: System.Single
+		Offset in Defining Type: 0x21C
+		Has Default: False
+
+	Field: charactersEvasionForce
+		Type: System.Single
+		Offset in Defining Type: 0x220
+		Has Default: False
+
+	Field: canBreakLevel2Props
+		Type: System.Boolean
+		Offset in Defining Type: 0x224
+		Has Default: False
+
+	Field: closeObjectDistanceToInteract
+		Type: System.Single
+		Offset in Defining Type: 0x228
+		Has Default: False
+
+	Field: closeObjectInteractionAttack
+		Type: System.Single
+		Offset in Defining Type: 0x22C
+		Has Default: False
+
+	Field: closeObjectInteractionAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0x230
+		Has Default: False
+
+	Field: closeObjectAnimationDistOffset
+		Type: System.Single
+		Offset in Defining Type: 0x234
+		Has Default: False
+
+	Field: closeObjectInteractionAnimationDelay
+		Type: System.Single
+		Offset in Defining Type: 0x238
+		Has Default: False
+
+	Field: closeObjectInteractionInEase
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0x23C
+		Has Default: False
+
+	Field: closeObjectInteractionOutEase
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0x240
+		Has Default: False
+
+	Field: closeObjectInteractionDamageInstant
+		Type: System.Single
+		Offset in Defining Type: 0x244
+		Has Default: False
+
+	Field: timeToStartReducingAggro
+		Type: System.Single
+		Offset in Defining Type: 0x248
+		Has Default: False
+
+	Field: aggroReductionRate
+		Type: System.Single
+		Offset in Defining Type: 0x24C
+		Has Default: False
+
+	Field: aggroPercentDiffToChangeTarget
+		Type: System.Single
+		Offset in Defining Type: 0x250
+		Has Default: False
+
+	Field: baseAggro
+		Type: System.Collections.Generic.List`1<CreatureAggroPerTarget>
+		Offset in Defining Type: 0x258
+		Has Default: False
+
+	Field: capturable
+		Type: System.Boolean
+		Offset in Defining Type: 0x260
+		Has Default: False
+
+	Field: captureFeedback
+		Type: ProducedResourceProgressFeedback
+		Offset in Defining Type: 0x268
+		Has Default: False
+
+	Field: captureResistance
+		Type: System.Single
+		Offset in Defining Type: 0x270
+		Has Default: False
+
+	Field: speedToResetCapture
+		Type: System.Single
+		Offset in Defining Type: 0x274
+		Has Default: False
+
+	Field: captureStateDuration
+		Type: System.Single
+		Offset in Defining Type: 0x278
+		Has Default: False
+
+	Field: capturedXp
+		Type: System.Int32
+		Offset in Defining Type: 0x27C
+		Has Default: False
+
+	Field: capturedOrbResource
+		Type: CreatureOrbResourceScriptableObject
+		Offset in Defining Type: 0x280
+		Has Default: False
+
+	Field: raceMovementSpeed
+		Type: System.Single
+		Offset in Defining Type: 0x288
+		Has Default: False
+
+	Field: raceDashSpeed
+		Type: System.Single
+		Offset in Defining Type: 0x28C
+		Has Default: False
+
+	Field: raceStamina
+		Type: System.Single
+		Offset in Defining Type: 0x290
+		Has Default: False
+
+	Field: raceStaminaRecoveryRate
+		Type: System.Single
+		Offset in Defining Type: 0x294
+		Has Default: False
+
+	Field: raceStaminaConsumedPerDash
+		Type: System.Single
+		Offset in Defining Type: 0x298
+		Has Default: False
+
+	Field: raceRestDuration
+		Type: System.Single
+		Offset in Defining Type: 0x29C
+		Has Default: False
+
+	Field: originalInstanceId
+		Type: System.Int32
+		Offset in Defining Type: 0x2A0
+		Has Default: False
+
+	Field: contentDataIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x2A4
+		Has Default: False
+
+	Field: useAlternateSpawnAnimation
+		Type: System.Boolean
+		Offset in Defining Type: 0x2A8
+		Has Default: False
+
+	Field: currentMaxHealth
+		Type: System.Single
+		Offset in Defining Type: 0x2AC
+		Has Default: False
+
+	Field: currentHealth
+		Type: System.Single
+		Offset in Defining Type: 0x2B0
+		Has Default: False
+
+	Field: currentDirection
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x2B4
+		Has Default: False
+
+	Field: currentAnimation
+		Type: System.Int32
+		Offset in Defining Type: 0x2BC
+		Has Default: False
+
+	Field: alternateSpawnAnimationId
+		Type: System.Int32
+		Offset in Defining Type: 0x2C0
+		Has Default: False
+
+	Field: idleLoopSFXInstance
+		Type: FMODUnity.StudioEventEmitter
+		Offset in Defining Type: 0x2C8
+		Has Default: False
+
+	Field: walkLoopSFXInstance
+		Type: FMODUnity.StudioEventEmitter
+		Offset in Defining Type: 0x2D0
+		Has Default: False
+
+	Field: spriteRenderOrder
+		Type: SpriteRenderOrder
+		Offset in Defining Type: 0x2D8
+		Has Default: False
+
+	Field: idleLoopOriginalVolume
+		Type: System.Single
+		Offset in Defining Type: 0x2E0
+		Has Default: False
+
+	Field: walkLoopOriginalVolume
+		Type: System.Single
+		Offset in Defining Type: 0x2E4
+		Has Default: False
+
+	Field: currentSpawnDuration
+		Type: System.Single
+		Offset in Defining Type: 0x2E8
+		Has Default: False
+
+	Field: currentIdleTime
+		Type: System.Single
+		Offset in Defining Type: 0x2EC
+		Has Default: False
+
+	Field: currentIdleDuration
+		Type: System.Single
+		Offset in Defining Type: 0x2F0
+		Has Default: False
+
+	Field: currentIdleAlternateInterval
+		Type: System.Single
+		Offset in Defining Type: 0x2F4
+		Has Default: False
+
+	Field: currentIdleAlternateTime
+		Type: System.Single
+		Offset in Defining Type: 0x2F8
+		Has Default: False
+
+	Field: wanderTarget
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x2FC
+		Has Default: False
+
+	Field: currentWanderingMaxDuration
+		Type: System.Single
+		Offset in Defining Type: 0x304
+		Has Default: False
+
+	Field: currentWanderingTime
+		Type: System.Single
+		Offset in Defining Type: 0x308
+		Has Default: False
+
+	Field: forcedWander
+		Type: System.Boolean
+		Offset in Defining Type: 0x30C
+		Has Default: False
+
+	Field: currentKnockbackTime
+		Type: System.Single
+		Offset in Defining Type: 0x310
+		Has Default: False
+
+	Field: currentChaseTime
+		Type: System.Single
+		Offset in Defining Type: 0x314
+		Has Default: False
+
+	Field: originalSufferKnockback
+		Type: System.Boolean
+		Offset in Defining Type: 0x318
+		Has Default: False
+
+	Field: currentFleeTime
+		Type: System.Single
+		Offset in Defining Type: 0x31C
+		Has Default: False
+
+	Field: originalPosition
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x320
+		Has Default: False
+
+	Field: currentTimeToRaycastMoving
+		Type: System.Single
+		Offset in Defining Type: 0x328
+		Has Default: False
+
+	Field: currentObstacleEvasionDirection
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x32C
+		Has Default: False
+
+	Field: currentKnockbackForce
+		Type: System.Single
+		Offset in Defining Type: 0x334
+		Has Default: False
+
+	Field: currentWaitTime
+		Type: System.Single
+		Offset in Defining Type: 0x338
+		Has Default: False
+
+	Field: onUpdateWait
+		Type: System.Action
+		Offset in Defining Type: 0x340
+		Has Default: False
+
+	Field: damageColorToUse
+		Type: UnityEngine.Color
+		Offset in Defining Type: 0x348
+		Has Default: False
+
+	Field: visible
+		Type: System.Boolean
+		Offset in Defining Type: 0x358
+		Has Default: False
+
+	Field: sortingGroup
+		Type: UnityEngine.Rendering.SortingGroup
+		Offset in Defining Type: 0x360
+		Has Default: False
+
+	Field: rigidbody
+		Type: UnityEngine.Rigidbody2D
+		Offset in Defining Type: 0x368
+		Has Default: False
+
+	Field: characterCollider
+		Type: UnityEngine.CapsuleCollider2D
+		Offset in Defining Type: 0x370
+		Has Default: False
+
+	Field: currentTarget
+		Type: BaseCharacter
+		Offset in Defining Type: 0x378
+		Has Default: False
+
+	Field: targetBuildingToIgnore
+		Type: BaseBuilding
+		Offset in Defining Type: 0x380
+		Has Default: False
+
+	Field: currentTargetBuilding
+		Type: BaseBuilding
+		Offset in Defining Type: 0x388
+		Has Default: False
+
+	Field: currentMaxWanderingDistanceFromOrigin
+		Type: System.Single
+		Offset in Defining Type: 0x390
+		Has Default: False
+
+	Field: steeringHits
+		Type: UnityEngine.RaycastHit2D[]
+		Offset in Defining Type: 0x398
+		Has Default: False
+
+	Field: keepDirforce
+		Type: System.Single
+		Offset in Defining Type: 0x3A0
+		Has Default: False
+
+	Field: homeArea
+		Type: WorldArea
+		Offset in Defining Type: 0x3A8
+		Has Default: False
+
+	Field: currentArea
+		Type: WorldArea
+		Offset in Defining Type: 0x3B0
+		Has Default: False
+
+	Field: onDie
+		Type: System.Action`1<BaseCharacter>
+		Offset in Defining Type: 0x3B8
+		Has Default: False
+
+	Field: emitters
+		Type: FMODEmittersManager
+		Offset in Defining Type: 0x3C0
+		Has Default: False
+
+	Field: currentSFX
+		Type: FMODUnity.StudioEventEmitter
+		Offset in Defining Type: 0x3C8
+		Has Default: False
+
+	Field: currentMovementSpeed
+		Type: System.Single
+		Offset in Defining Type: 0x3D0
+		Has Default: False
+
+	Field: currentAcceleratedSpeed
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x3D4
+		Has Default: False
+
+	Field: speedMultiplier
+		Type: System.Single
+		Offset in Defining Type: 0x3DC
+		Has Default: False
+
+	Field: loadData
+		Type: SimpleJSON.JSONNode
+		Offset in Defining Type: 0x3E0
+		Has Default: False
+
+	Field: currentStatuses
+		Type: System.Collections.Generic.Dictionary`2<System.Type,System.Collections.Generic.List`1<BaseStatus>>
+		Offset in Defining Type: 0x3E8
+		Has Default: False
+
+	Field: hasStatus
+		Type: System.Boolean
+		Offset in Defining Type: 0x3F0
+		Has Default: False
+
+	Field: baseAggroDict
+		Type: System.Collections.Generic.Dictionary`2<TargetAggroType,System.Single>
+		Offset in Defining Type: 0x3F8
+		Has Default: False
+
+	Field: currentAggro
+		Type: System.Collections.Generic.Dictionary`2<BaseCharacter,System.Single>
+		Offset in Defining Type: 0x400
+		Has Default: False
+
+	Field: currentAggroReductionTime
+		Type: System.Collections.Generic.Dictionary`2<BaseCharacter,System.Single>
+		Offset in Defining Type: 0x408
+		Has Default: False
+
+	Field: currentStuckTime
+		Type: System.Single
+		Offset in Defining Type: 0x410
+		Has Default: False
+
+	Field: stuckTime
+		Type: System.Single
+		Offset in Defining Type: 0x414
+		Has Default: False
+
+	Field: previousPosition
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x418
+		Has Default: False
+
+	Field: speedBonus
+		Type: System.Single
+		Offset in Defining Type: 0x420
+		Has Default: False
+
+	Field: attackBonus
+		Type: System.Single
+		Offset in Defining Type: 0x424
+		Has Default: False
+
+	Field: attackSpeedBonus
+		Type: System.Single
+		Offset in Defining Type: 0x428
+		Has Default: False
+
+	Field: maxHealthBonus
+		Type: System.Single
+		Offset in Defining Type: 0x42C
+		Has Default: False
+
+	Field: movementEvasionMask
+		Type: UnityEngine.LayerMask
+		Offset in Defining Type: 0x430
+		Has Default: False
+
+	Field: dashAttackMask
+		Type: UnityEngine.LayerMask
+		Offset in Defining Type: 0x434
+		Has Default: False
+
+	Field: findTargetsBuffer
+		Type: UnityEngine.Collider2D[]
+		Offset in Defining Type: 0x438
+		Has Default: False
+
+	Field: updater
+		Type: MuttAI.GameEntityUpdater
+		Offset in Defining Type: 0x440
+		Has Default: False
+
+	Field: fixedUpdater
+		Type: MuttAI.GameEntityFixedUpdater
+		Offset in Defining Type: 0x448
+		Has Default: False
+
+	Field: rider
+		Type: BaseCharacter
+		Offset in Defining Type: 0x450
+		Has Default: False
+
+	Field: shadowOriginalPosition
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x458
+		Has Default: False
+
+	Field: riderAnchorOriginalPosition
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x460
+		Has Default: False
+
+	Field: ownedBullets
+		Type: System.Collections.Generic.List`1<BaseBullet>
+		Offset in Defining Type: 0x468
+		Has Default: False
+
+	Field: ownedMinions
+		Type: System.Collections.Generic.List`1<BaseCharacter>
+		Offset in Defining Type: 0x470
+		Has Default: False
+
+	Field: ownedEffects
+		Type: System.Collections.Generic.List`1<BaseGroundEffect>
+		Offset in Defining Type: 0x478
+		Has Default: False
+
+	Field: ownedBuildings
+		Type: System.Collections.Generic.List`1<BaseBuilding>
+		Offset in Defining Type: 0x480
+		Has Default: False
+
+	Field: capturing
+		Type: System.Boolean
+		Offset in Defining Type: 0x488
+		Has Default: False
+
+	Field: hasCaptureFeedback
+		Type: System.Boolean
+		Offset in Defining Type: 0x489
+		Has Default: False
+
+	Field: previousCaptureForce
+		Type: System.Single
+		Offset in Defining Type: 0x48C
+		Has Default: False
+
+	Field: currentCaptureDamage
+		Type: System.Single
+		Offset in Defining Type: 0x490
+		Has Default: False
+
+	Field: currentCapturedTime
+		Type: System.Single
+		Offset in Defining Type: 0x494
+		Has Default: False
+
+	Field: beingDestroyed
+		Type: System.Boolean
+		Offset in Defining Type: 0x498
+		Has Default: False
+
+	Field: raceSpeedBonus
+		Type: System.Single
+		Offset in Defining Type: 0x49C
+		Has Default: False
+
+	Field: currentRaceStamina
+		Type: System.Single
+		Offset in Defining Type: 0x4A0
+		Has Default: False
+
+	Field: raceStaminaBonus
+		Type: System.Single
+		Offset in Defining Type: 0x4A4
+		Has Default: False
+
+	Field: currentRaceRestTime
+		Type: System.Single
+		Offset in Defining Type: 0x4A8
+		Has Default: False
+
+	Field: transformTween
+		Type: DG.Tweening.Tween
+		Offset in Defining Type: 0x4B0
+		Has Default: False
+
+	Field: spriteTween
+		Type: DG.Tweening.Tween
+		Offset in Defining Type: 0x4B8
+		Has Default: False
+
+	Field: spriteTransformTween
+		Type: DG.Tweening.Tween
+		Offset in Defining Type: 0x4C0
+		Has Default: False
+
+	Field: spriteMaterialFloatTween
+		Type: DG.Tweening.Tween
+		Offset in Defining Type: 0x4C8
+		Has Default: False
+
+	Field: spriteMaterialColorTween
+		Type: DG.Tweening.Tween
+		Offset in Defining Type: 0x4D0
+		Has Default: False
+
+	Field: <CanHit>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x4D8
+		Has Default: False
+
+	Field: <KnockbackDirection>k__BackingField
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x4DC
+		Has Default: False
+
+	Field: <KnockbackForce>k__BackingField
+		Type: System.Single
+		Offset in Defining Type: 0x4E4
+		Has Default: False
+
+	Field: <KnockbackDuration>k__BackingField
+		Type: System.Single
+		Offset in Defining Type: 0x4E8
+		Has Default: False
+
+	Field: <PreviousAttacker>k__BackingField
+		Type: BaseCharacter
+		Offset in Defining Type: 0x4F0
+		Has Default: False
+
+	Field: <CancelableKnockback>k__BackingField
+		Type: System.Boolean
+		Offset in Defining Type: 0x4F8
+		Has Default: False
+
+	Method: Awake:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003F6280
+		Ram Offset 0x1803f7480
+		Virtual Method Slot: 4
+
+	Method: Start:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003F62F0
+		Ram Offset 0x1803f74f0
+		Virtual Method Slot: 5
+
+	Method: OnDestroy:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003F6320
+		Ram Offset 0x1803f7520
+		Virtual Method Slot: 8
+
+	Method: FixAnimationOnGetVisible:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003F63E0
+		Ram Offset 0x1803f75e0
+		Virtual Method Slot: 16
+
+	Method: BecameVisibleCallback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003F6760
+		Ram Offset 0x1803f7960
+		Virtual Method Slot: 17
+
+	Method: BecameInvisibleCallback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003F68C0
+		Ram Offset 0x1803f7ac0
+		Virtual Method Slot: 18
+
+	Method: AddOnDieEvent:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003F69C0
+		Ram Offset 0x1803f7bc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: onDie
+			Type: System.Action`1<BaseCharacter>
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003F6B50
+		Ram Offset 0x1803f7d50
+		Virtual Method Slot: 19
+
+		Parameter 0:
+			Name: homeArea
+			Type: WorldArea
+			Default Value: 
+		Parameter 1:
+			Name: currentArea
+			Type: WorldArea
+			Default Value: 
+		Parameter 2:
+			Name: onDie
+			Type: System.Action`1<BaseCharacter>
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003F6C80
+		Ram Offset 0x1803f7e80
+		Virtual Method Slot: 20
+
+		Parameter 0:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: homeArea
+			Type: WorldArea
+			Default Value: 
+		Parameter 2:
+			Name: onDie
+			Type: System.Action`1<BaseCharacter>
+			Default Value: 
+	Method: LoadDependentData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003F7190
+		Ram Offset 0x1803f8390
+		Virtual Method Slot: 21
+
+	Method: LoadSkillsDependentData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 22
+
+	Method: ShowHealthBarDelayed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: GetStateFromStateName:
+		Accessibility: Family
+		Return Type: MuttAI.FSM.State
+		File Offset 0x003F7210
+		Ram Offset 0x1803f8410
+		Virtual Method Slot: 23
+
+		Parameter 0:
+			Name: stateName
+			Type: System.String
+			Default Value: 
+	Method: InitId:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003F7CA0
+		Ram Offset 0x1803f8ea0
+		Virtual Method Slot: 24
+
+	Method: InitComponents:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003F7CD0
+		Ram Offset 0x1803f8ed0
+		Virtual Method Slot: 25
+
+	Method: InitAnimatorBehaviors:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003F84A0
+		Ram Offset 0x1803f96a0
+		Virtual Method Slot: 65535
+
+	Method: InitHealthBar:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003F8730
+		Ram Offset 0x1803f9930
+		Virtual Method Slot: 65535
+
+	Method: ShowHealthBar:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003F8840
+		Ram Offset 0x1803f9a40
+		Virtual Method Slot: 65535
+
+	Method: UpdateHealthBar:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003F8880
+		Ram Offset 0x1803f9a80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: hideOnFull
+			Type: System.Boolean
+			Default Value: False
+		Parameter 1:
+			Name: hideTime
+			Type: System.Single
+			Default Value: -1
+	Method: UpdateHealthBarRotation:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003F89D0
+		Ram Offset 0x1803f9bd0
+		Virtual Method Slot: 65535
+
+	Method: InitProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003F8EB0
+		Ram Offset 0x1803fa0b0
+		Virtual Method Slot: 26
+
+	Method: EnableRenderer:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003F9870
+		Ram Offset 0x1803faa70
+		Virtual Method Slot: 27
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: EnableSpriteRenderOrderScript:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003F9A00
+		Ram Offset 0x1803fac00
+		Virtual Method Slot: 28
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: OverrideSortingOrder:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003F9B30
+		Ram Offset 0x1803fad30
+		Virtual Method Slot: 29
+
+		Parameter 0:
+			Name: sortingOrder
+			Type: System.Int32
+			Default Value: 
+	Method: OverrideSortingLayer:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003F9BA0
+		Ram Offset 0x1803fada0
+		Virtual Method Slot: 30
+
+		Parameter 0:
+			Name: layerName
+			Type: System.String
+			Default Value: 
+	Method: OverrideShadowSortingLayer:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003F9E00
+		Ram Offset 0x1803fb000
+		Virtual Method Slot: 31
+
+		Parameter 0:
+			Name: layerName
+			Type: System.String
+			Default Value: 
+	Method: ResetOriginalSortingLayers:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003F9F40
+		Ram Offset 0x1803fb140
+		Virtual Method Slot: 32
+
+	Method: ResetOriginalPosition:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FA230
+		Ram Offset 0x1803fb430
+		Virtual Method Slot: 65535
+
+	Method: ResetOriginalPosition:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FA310
+		Ram Offset 0x1803fb510
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: SetStateToSpawning:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FA320
+		Ram Offset 0x1803fb520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+		Parameter 1:
+			Name: useAlternateSpawnAnimation
+			Type: System.Boolean
+			Default Value: False
+	Method: SetStateToIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FA3B0
+		Ram Offset 0x1803fb5b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+	Method: NormalizeEvasionForces:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x003FA4D0
+		Ram Offset 0x1803fb6d0
+		Virtual Method Slot: 65535
+
+	Method: EnableCharacterCollider:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FA530
+		Ram Offset 0x1803fb730
+		Virtual Method Slot: 33
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: EnableColliders:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FA5A0
+		Ram Offset 0x1803fb7a0
+		Virtual Method Slot: 34
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+	Method: EnableTargetDetection:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FA770
+		Ram Offset 0x1803fb970
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: EnableShadow:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FA790
+		Ram Offset 0x1803fb990
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: PlayHitFeedback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003FA800
+		Ram Offset 0x1803fba00
+		Virtual Method Slot: 35
+
+	Method: ResetHitFeedback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003FAD40
+		Ram Offset 0x1803fbf40
+		Virtual Method Slot: 36
+
+	Method: SetEnabled:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FAFB0
+		Ram Offset 0x1803fc1b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enabled
+			Type: System.Boolean
+			Default Value: 
+	Method: GetCurrentArea:
+		Accessibility: Public
+		Return Type: WorldArea
+		File Offset 0x003FB380
+		Ram Offset 0x1803fc580
+		Virtual Method Slot: 37
+
+	Method: SetCurrentArea:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FB390
+		Ram Offset 0x1803fc590
+		Virtual Method Slot: 38
+
+		Parameter 0:
+			Name: area
+			Type: WorldArea
+			Default Value: 
+		Parameter 1:
+			Name: newSave
+			Type: System.Boolean
+			Default Value: False
+	Method: AnimationEventHandler:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FB5D0
+		Ram Offset 0x1803fc7d0
+		Virtual Method Slot: 39
+
+		Parameter 0:
+			Name: eventName
+			Type: System.String
+			Default Value: 
+	Method: SetCurrentHealth:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FB670
+		Ram Offset 0x1803fc870
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: health
+			Type: System.Single
+			Default Value: 
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x003FB680
+		Ram Offset 0x1803fc880
+		Virtual Method Slot: 40
+
+		Parameter 0:
+			Name: firstSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: SetOriginalInstanceId:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FC090
+		Ram Offset 0x1803fd290
+		Virtual Method Slot: 14
+
+		Parameter 0:
+			Name: instanceId
+			Type: System.Int32
+			Default Value: 
+	Method: GetOriginalInstanceId:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x003FC0A0
+		Ram Offset 0x1803fd2a0
+		Virtual Method Slot: 13
+
+	Method: AddMinion:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FC0B0
+		Ram Offset 0x1803fd2b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: minion
+			Type: BaseCharacter
+			Default Value: 
+	Method: RemoveMinion:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FC100
+		Ram Offset 0x1803fd300
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: minion
+			Type: BaseCharacter
+			Default Value: 
+	Method: AddBullets:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FC160
+		Ram Offset 0x1803fd360
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bullets
+			Type: BaseBullet[]
+			Default Value: 
+	Method: RemoveBullet:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FC1D0
+		Ram Offset 0x1803fd3d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bullet
+			Type: BaseBullet
+			Default Value: 
+	Method: AddGroundEffect:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FC230
+		Ram Offset 0x1803fd430
+		Virtual Method Slot: 41
+
+		Parameter 0:
+			Name: effect
+			Type: BaseGroundEffect
+			Default Value: 
+	Method: RemoveGroundEffect:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FC2D0
+		Ram Offset 0x1803fd4d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: effect
+			Type: BaseGroundEffect
+			Default Value: 
+	Method: AddOwnedBuilding:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FC330
+		Ram Offset 0x1803fd530
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+	Method: DestroyAllAttacks:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FC380
+		Ram Offset 0x1803fd580
+		Virtual Method Slot: 42
+
+	Method: AddStatus:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003FC990
+		Ram Offset 0x1803fdb90
+		Virtual Method Slot: 43
+
+		Parameter 0:
+			Name: status
+			Type: BaseStatus
+			Default Value: 
+		Parameter 1:
+			Name: sumIfExistent
+			Type: System.Boolean
+			Default Value: True
+	Method: RemoveStatus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FCCD0
+		Ram Offset 0x1803fded0
+		Virtual Method Slot: 44
+
+		Parameter 0:
+			Name: status
+			Type: BaseStatus
+			Default Value: 
+	Method: UpdateStatus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FCFA0
+		Ram Offset 0x1803fe1a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: GetStatusCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x003FD2F0
+		Ram Offset 0x1803fe4f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: statusType
+			Type: System.Type
+			Default Value: 
+	Method: ClearStatus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FD3B0
+		Ram Offset 0x1803fe5b0
+		Virtual Method Slot: 65535
+
+	Method: PlayAttackSFX:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FD6D0
+		Ram Offset 0x1803fe8d0
+		Virtual Method Slot: 65535
+
+	Method: PlaySFXNoReference:
+		Accessibility: Public
+		Return Type: FMODUnity.StudioEventEmitter
+		File Offset 0x003FD710
+		Ram Offset 0x1803fe910
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sfx
+			Type: System.String
+			Default Value: 
+	Method: PlaySFX:
+		Accessibility: Public
+		Return Type: FMODUnity.StudioEventEmitter
+		File Offset 0x003FD790
+		Ram Offset 0x1803fe990
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sfx
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: stopCurrent
+			Type: System.Boolean
+			Default Value: True
+	Method: PlaySFX2D:
+		Accessibility: Public
+		Return Type: FMODUnity.StudioEventEmitter
+		File Offset 0x003FD940
+		Ram Offset 0x1803feb40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sfx
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: stopCurrent
+			Type: System.Boolean
+			Default Value: True
+	Method: PlaySFX:
+		Accessibility: Public
+		Return Type: FMODUnity.StudioEventEmitter
+		File Offset 0x003FDAF0
+		Ram Offset 0x1803fecf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sfx
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: position
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 2:
+			Name: stopCurrent
+			Type: System.Boolean
+			Default Value: True
+	Method: PlaySFX:
+		Accessibility: Public
+		Return Type: FMODUnity.StudioEventEmitter
+		File Offset 0x003FDCA0
+		Ram Offset 0x1803feea0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sfx
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: parent
+			Type: UnityEngine.Transform
+			Default Value: 
+		Parameter 2:
+			Name: stopCurrent
+			Type: System.Boolean
+			Default Value: True
+	Method: StopCurrentSFX:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FDE50
+		Ram Offset 0x1803ff050
+		Virtual Method Slot: 65535
+
+	Method: StopSFX:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FDF90
+		Ram Offset 0x1803ff190
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: sfx
+			Type: System.String
+			Default Value: 
+	Method: PauseIdleSFX:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FE060
+		Ram Offset 0x1803ff260
+		Virtual Method Slot: 65535
+
+	Method: ResumeIdleSFX:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FE1E0
+		Ram Offset 0x1803ff3e0
+		Virtual Method Slot: 65535
+
+	Method: UpdateBeingRiddenVolumes:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x003FE390
+		Ram Offset 0x1803ff590
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: emitter
+			Type: FMODUnity.StudioEventEmitter
+			Default Value: 
+		Parameter 1:
+			Name: originalVolumeVariable
+			Type: System.Single
+			Default Value: 
+	Method: CanConsumeResource:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 45
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+	Method: CollectResource:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 46
+
+		Parameter 0:
+			Name: resource
+			Type: BaseResource
+			Default Value: 
+	Method: EnterCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FE620
+		Ram Offset 0x1803ff820
+		Virtual Method Slot: 47
+
+	Method: UpdateCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 48
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 49
+
+	Method: ExitCollecting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 50
+
+	Method: PlayAttackAnimation:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FE660
+		Ram Offset 0x1803ff860
+		Virtual Method Slot: 51
+
+	Method: PlayRunAnimation:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FE760
+		Ram Offset 0x1803ff960
+		Virtual Method Slot: 52
+
+	Method: OnAnimatorStateChanged:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003FE800
+		Ram Offset 0x1803ffa00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: animationHash
+			Type: System.Int32
+			Default Value: 
+	Method: PlayAnimation:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FE810
+		Ram Offset 0x1803ffa10
+		Virtual Method Slot: 53
+
+		Parameter 0:
+			Name: animation
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: force
+			Type: System.Boolean
+			Default Value: False
+		Parameter 2:
+			Name: speed
+			Type: System.Single
+			Default Value: 1
+	Method: SetAnimatorUpdateMode:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FE970
+		Ram Offset 0x1803ffb70
+		Virtual Method Slot: 54
+
+		Parameter 0:
+			Name: animatorUpdateMode
+			Type: UnityEngine.AnimatorUpdateMode
+			Default Value: 
+	Method: SetAnimationSpeed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FE9E0
+		Ram Offset 0x1803ffbe0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: speed
+			Type: System.Single
+			Default Value: 
+	Method: EnableAnimator:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x003FEAA0
+		Ram Offset 0x1803ffca0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: Move:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FEB70
+		Ram Offset 0x1803ffd70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: raycastPath
+			Type: System.Boolean
+			Default Value: False
+	Method: Move:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FEBB0
+		Ram Offset 0x1803ffdb0
+		Virtual Method Slot: 55
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: direction
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 2:
+			Name: raycastPath
+			Type: System.Boolean
+			Default Value: False
+	Method: Move:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003FED50
+		Ram Offset 0x1803fff50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: direction
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: speed
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: immediate
+			Type: System.Boolean
+			Default Value: False
+	Method: MoveTo:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003FF020
+		Ram Offset 0x180400220
+		Virtual Method Slot: 56
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: position
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 2:
+			Name: raycastPath
+			Type: System.Boolean
+			Default Value: False
+	Method: MoveToAccelerated:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x003FF160
+		Ram Offset 0x180400360
+		Virtual Method Slot: 57
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: raycastPath
+			Type: System.Boolean
+			Default Value: False
+		Parameter 2:
+			Name: immediate
+			Type: System.Boolean
+			Default Value: False
+	Method: ApplyEvasionForce:
+		Accessibility: Family
+		Return Type: UnityEngine.Vector2
+		File Offset 0x003FF7F0
+		Ram Offset 0x1804009f0
+		Virtual Method Slot: 58
+
+		Parameter 0:
+			Name: direction
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: ResetEvasionForce:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00400910
+		Ram Offset 0x180401b10
+		Virtual Method Slot: 65535
+
+	Method: TweenToPosition:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00400970
+		Ram Offset 0x180401b70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: time
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: onComplete
+			Type: DG.Tweening.TweenCallback
+			Default Value: 
+		Parameter 3:
+			Name: jump
+			Type: System.Boolean
+			Default Value: 
+	Method: TurnToDirection:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00400CE0
+		Ram Offset 0x180401ee0
+		Virtual Method Slot: 59
+
+		Parameter 0:
+			Name: direction
+			Type: System.Single
+			Default Value: 
+	Method: TurnToDirection:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00400FD0
+		Ram Offset 0x1804021d0
+		Virtual Method Slot: 60
+
+		Parameter 0:
+			Name: direction
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: UpdateStuckTime:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00400FF0
+		Ram Offset 0x1804021f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: ResetStuckTime:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00401010
+		Ram Offset 0x180402210
+		Virtual Method Slot: 65535
+
+	Method: IsStuck:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00401020
+		Ram Offset 0x180402220
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: InitAggro:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00401300
+		Ram Offset 0x180402500
+		Virtual Method Slot: 61
+
+	Method: AddAggro:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004016B0
+		Ram Offset 0x1804028b0
+		Virtual Method Slot: 62
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+		Parameter 1:
+			Name: aggro
+			Type: System.Single
+			Default Value: 
+	Method: SetBaseAggro:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00401A70
+		Ram Offset 0x180402c70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: UpdateAggro:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00401D80
+		Ram Offset 0x180402f80
+		Virtual Method Slot: 63
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: mayUpdateTarget
+			Type: System.Boolean
+			Default Value: True
+	Method: ResetAggro:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004029C0
+		Ram Offset 0x180403bc0
+		Virtual Method Slot: 65535
+
+	Method: ResetAggro:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00402A40
+		Ram Offset 0x180403c40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: GetAggroType:
+		Accessibility: Family
+		Return Type: TargetAggroType
+		File Offset 0x00402CC0
+		Ram Offset 0x180403ec0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: IsAggroedTowards:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00402DB0
+		Ram Offset 0x180403fb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: attacker
+			Type: BaseCharacter
+			Default Value: 
+	Method: IsAggroBiggerThanCurrentTarget:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00402E20
+		Ram Offset 0x180404020
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: GetAggroData:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.List`1<System.String>
+		File Offset 0x004030B0
+		Ram Offset 0x1804042b0
+		Virtual Method Slot: 65535
+
+	Method: UpdateTriggerDetectionAreaActive:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004035C0
+		Ram Offset 0x1804047c0
+		Virtual Method Slot: 64
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: False
+	Method: ResetTarget:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004036F0
+		Ram Offset 0x1804048f0
+		Virtual Method Slot: 65
+
+	Method: SetTargetAndChase:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004037B0
+		Ram Offset 0x1804049b0
+		Virtual Method Slot: 66
+
+		Parameter 0:
+			Name: target
+			Type: BaseCharacter
+			Default Value: 
+	Method: SetTarget:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00403800
+		Ram Offset 0x180404a00
+		Virtual Method Slot: 67
+
+		Parameter 0:
+			Name: character
+			Type: BaseCharacter
+			Default Value: 
+	Method: SetTarget:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004039D0
+		Ram Offset 0x180404bd0
+		Virtual Method Slot: 68
+
+		Parameter 0:
+			Name: building
+			Type: BaseBuilding
+			Default Value: 
+	Method: GetNextTarget:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00403A90
+		Ram Offset 0x180404c90
+		Virtual Method Slot: 69
+
+	Method: GetTargetsInRadius:
+		Accessibility: Public
+		Return Type: UnityEngine.Collider2D[]
+		File Offset 0x00404200
+		Ram Offset 0x180405400
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 1:
+			Name: radius
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: forDamage
+			Type: System.Boolean
+			Default Value: False
+	Method: PlaySpawnFeedback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00404550
+		Ram Offset 0x180405750
+		Virtual Method Slot: 70
+
+	Method: PlayAlternateSpawn:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004049D0
+		Ram Offset 0x180405bd0
+		Virtual Method Slot: 71
+
+	Method: EnterSpawning:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00404A50
+		Ram Offset 0x180405c50
+		Virtual Method Slot: 72
+
+	Method: FinishSpawnState:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00404C70
+		Ram Offset 0x180405e70
+		Virtual Method Slot: 73
+
+	Method: UpdateSpawning:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 74
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateSpawning:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003B1720
+		Ram Offset 0x1803b2920
+		Virtual Method Slot: 75
+
+	Method: ExitSpawning:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00404CB0
+		Ram Offset 0x180405eb0
+		Virtual Method Slot: 76
+
+	Method: OnMessageSpawning:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00404D50
+		Ram Offset 0x180405f50
+		Virtual Method Slot: 77
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: ChaseOnCurrentTargetOnIdle:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00404DD0
+		Ram Offset 0x180405fd0
+		Virtual Method Slot: 78
+
+	Method: EnterIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00404EE0
+		Ram Offset 0x1804060e0
+		Virtual Method Slot: 79
+
+	Method: UpdateIdle:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00405490
+		Ram Offset 0x180406690
+		Virtual Method Slot: 80
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003B1720
+		Ram Offset 0x1803b2920
+		Virtual Method Slot: 81
+
+	Method: ExitIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 82
+
+	Method: OnMessageIdle:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00405660
+		Ram Offset 0x180406860
+		Virtual Method Slot: 83
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: GetWanderTarget:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00405790
+		Ram Offset 0x180406990
+		Virtual Method Slot: 84
+
+	Method: EnterWandering:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00405D50
+		Ram Offset 0x180406f50
+		Virtual Method Slot: 85
+
+	Method: UpdateWandering:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004062A0
+		Ram Offset 0x1804074a0
+		Virtual Method Slot: 86
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateWandering:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003E5630
+		Ram Offset 0x1803e6830
+		Virtual Method Slot: 87
+
+	Method: ExitWandering:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004064B0
+		Ram Offset 0x1804076b0
+		Virtual Method Slot: 65535
+
+	Method: OnMessageWandering:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004064C0
+		Ram Offset 0x1804076c0
+		Virtual Method Slot: 88
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: EnterMoving:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004065D0
+		Ram Offset 0x1804077d0
+		Virtual Method Slot: 89
+
+	Method: UpdateMoving:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 90
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateMoving:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00406670
+		Ram Offset 0x180407870
+		Virtual Method Slot: 91
+
+	Method: ExitMoving:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 92
+
+	Method: OnMessageMoving:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00406700
+		Ram Offset 0x180407900
+		Virtual Method Slot: 93
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: GetMovementPenalty:
+		Accessibility: Family
+		Return Type: System.Single
+		File Offset 0x004068C0
+		Ram Offset 0x180407ac0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: speed
+			Type: System.Single
+			Default Value: 
+	Method: SetRider:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004069D0
+		Ram Offset 0x180407bd0
+		Virtual Method Slot: 94
+
+		Parameter 0:
+			Name: rider
+			Type: BaseCharacter
+			Default Value: 
+	Method: ResetShadowPositionRidden:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00406BB0
+		Ram Offset 0x180407db0
+		Virtual Method Slot: 65535
+
+	Method: UpdatePositionRidden:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00406CB0
+		Ram Offset 0x180407eb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: flying
+			Type: System.Boolean
+			Default Value: 
+	Method: EnterBeingRidden:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004072C0
+		Ram Offset 0x1804084c0
+		Virtual Method Slot: 65535
+
+	Method: UpdateBeingRidden:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00407310
+		Ram Offset 0x180408510
+		Virtual Method Slot: 65535
+
+	Method: FixedUpdateBeingRidden:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 65535
+
+	Method: ExitBeingRidden:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004076A0
+		Ram Offset 0x1804088a0
+		Virtual Method Slot: 65535
+
+	Method: EnterMountingRide:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 95
+
+	Method: UpdateMountingRide:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 96
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateMountingRide:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 97
+
+	Method: ExitMountingRide:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 98
+
+	Method: OnMessageMountingRide:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 99
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: EnterUnmountingRide:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 100
+
+	Method: UpdateUnmountingRide:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 101
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateUnmountingRide:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 102
+
+	Method: ExitUnmountingRide:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 103
+
+	Method: OnMessageUnmountingRide:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 104
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: UpdateChasingAnimation:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004076C0
+		Ram Offset 0x1804088c0
+		Virtual Method Slot: 65535
+
+	Method: TryToAttack:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00407810
+		Ram Offset 0x180408a10
+		Virtual Method Slot: 105
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: EnterChasing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00407AE0
+		Ram Offset 0x180408ce0
+		Virtual Method Slot: 106
+
+	Method: UpdateChasing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00407E20
+		Ram Offset 0x180409020
+		Virtual Method Slot: 107
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateChasing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00408510
+		Ram Offset 0x180409710
+		Virtual Method Slot: 108
+
+	Method: ExitChasing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 109
+
+	Method: OnMessageChasing:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x004087A0
+		Ram Offset 0x1804099a0
+		Virtual Method Slot: 110
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: DisableKnockback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00408920
+		Ram Offset 0x180409b20
+		Virtual Method Slot: 111
+
+	Method: ResetKnockbackState:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00408930
+		Ram Offset 0x180409b30
+		Virtual Method Slot: 112
+
+	Method: OnFinishAttack:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00408940
+		Ram Offset 0x180409b40
+		Virtual Method Slot: 113
+
+	Method: IsInAttackRange:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00408B80
+		Ram Offset 0x180409d80
+		Virtual Method Slot: 114
+
+		Parameter 0:
+			Name: range
+			Type: System.Single
+			Default Value: 
+	Method: EnterAttacking:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00408E10
+		Ram Offset 0x18040a010
+		Virtual Method Slot: 115
+
+	Method: UpdateAttacking:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00408F10
+		Ram Offset 0x18040a110
+		Virtual Method Slot: 116
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateAttacking:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 117
+
+	Method: ExitAttacking:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00408930
+		Ram Offset 0x180409b30
+		Virtual Method Slot: 118
+
+	Method: OnMessageAttacking:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00408F80
+		Ram Offset 0x18040a180
+		Virtual Method Slot: 119
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: EnterKnockback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00409340
+		Ram Offset 0x18040a540
+		Virtual Method Slot: 120
+
+	Method: UpdateKnockback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00409460
+		Ram Offset 0x18040a660
+		Virtual Method Slot: 121
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateKnockback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00409520
+		Ram Offset 0x18040a720
+		Virtual Method Slot: 122
+
+	Method: ExitKnockback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 123
+
+	Method: SufferKnockback:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00409530
+		Ram Offset 0x18040a730
+		Virtual Method Slot: 65535
+
+	Method: ApplyKnockback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004095B0
+		Ram Offset 0x18040a7b0
+		Virtual Method Slot: 65535
+
+	Method: ShouldChangeTargetOnHit:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x004096F0
+		Ram Offset 0x18040a8f0
+		Virtual Method Slot: 124
+
+	Method: OnFinishKnockback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00409910
+		Ram Offset 0x18040ab10
+		Virtual Method Slot: 125
+
+	Method: EnterWaiting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00409CD0
+		Ram Offset 0x18040aed0
+		Virtual Method Slot: 126
+
+	Method: UpdateWaiting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00409CE0
+		Ram Offset 0x18040aee0
+		Virtual Method Slot: 127
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateWaiting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 128
+
+	Method: ExitWaiting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 129
+
+	Method: OnMessageWaiting:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00409D60
+		Ram Offset 0x18040af60
+		Virtual Method Slot: 130
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: FreezeRigidbody:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00409E70
+		Ram Offset 0x18040b070
+		Virtual Method Slot: 131
+
+		Parameter 0:
+			Name: freeze
+			Type: System.Boolean
+			Default Value: 
+	Method: EnterDead:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00409EE0
+		Ram Offset 0x18040b0e0
+		Virtual Method Slot: 132
+
+	Method: UpdateDead:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 133
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: OnMessageDead:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 134
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: PlayRemoveBodyAnimation:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0040A3D0
+		Ram Offset 0x18040b5d0
+		Virtual Method Slot: 135
+
+	Method: DestroyMe:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0040A5E0
+		Ram Offset 0x18040b7e0
+		Virtual Method Slot: 136
+
+	Method: EnterFleeing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040A700
+		Ram Offset 0x18040b900
+		Virtual Method Slot: 137
+
+	Method: UpdateFleeing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040A730
+		Ram Offset 0x18040b930
+		Virtual Method Slot: 138
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateFleeing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 139
+
+	Method: ExitFleeing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 140
+
+	Method: EnterFlyUp:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 141
+
+	Method: UpdateFlyUp:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 142
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateFlyUp:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 143
+
+	Method: ExitFlyUp:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 144
+
+	Method: OnMessageFlyUp:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 145
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: EnterFlyDown:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 146
+
+	Method: UpdateFlyDown:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 147
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateFlyDown:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 148
+
+	Method: ExitFlyDown:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 149
+
+	Method: OnMessageFlyDown:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 150
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: WasHit:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040A770
+		Ram Offset 0x18040b970
+		Virtual Method Slot: 151
+
+		Parameter 0:
+			Name: attacker
+			Type: BaseCharacter
+			Default Value: 
+		Parameter 1:
+			Name: damage
+			Type: System.Single
+			Default Value: 
+		Parameter 2:
+			Name: direction
+			Type: UnityEngine.Vector2
+			Default Value: 
+		Parameter 3:
+			Name: knockbackForce
+			Type: System.Single
+			Default Value: 
+		Parameter 4:
+			Name: knockbackDuration
+			Type: System.Single
+			Default Value: 
+		Parameter 5:
+			Name: customDamageColor
+			Type: UnityEngine.Color
+			Default Value: 
+		Parameter 6:
+			Name: cancelableKnockback
+			Type: System.Boolean
+			Default Value: True
+	Method: AddHealth:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040ACB0
+		Ram Offset 0x18040beb0
+		Virtual Method Slot: 152
+
+		Parameter 0:
+			Name: health
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: playHealFeedback
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: small
+			Type: System.Boolean
+			Default Value: False
+	Method: RemoveHealth:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040B080
+		Ram Offset 0x18040c280
+		Virtual Method Slot: 153
+
+		Parameter 0:
+			Name: health
+			Type: System.Single
+			Default Value: 
+	Method: AttackTargetSimpleMelee:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040B1C0
+		Ram Offset 0x18040c3c0
+		Virtual Method Slot: 154
+
+	Method: AddSpeedBonus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040B910
+		Ram Offset 0x18040cb10
+		Virtual Method Slot: 155
+
+		Parameter 0:
+			Name: bonus
+			Type: System.Single
+			Default Value: 
+	Method: RemoveSpeedBonus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040B930
+		Ram Offset 0x18040cb30
+		Virtual Method Slot: 156
+
+		Parameter 0:
+			Name: bonus
+			Type: System.Single
+			Default Value: 
+	Method: AddAttackBonus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040B950
+		Ram Offset 0x18040cb50
+		Virtual Method Slot: 157
+
+		Parameter 0:
+			Name: bonus
+			Type: System.Single
+			Default Value: 
+	Method: AddAttackSpeedBonus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040B970
+		Ram Offset 0x18040cb70
+		Virtual Method Slot: 158
+
+		Parameter 0:
+			Name: bonus
+			Type: System.Single
+			Default Value: 
+	Method: AddMaxHealthBonus:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040B990
+		Ram Offset 0x18040cb90
+		Virtual Method Slot: 159
+
+		Parameter 0:
+			Name: bonus
+			Type: System.Single
+			Default Value: 
+	Method: CheckUnlockedRelics:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 160
+
+	Method: OnUnlockRelic:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 161
+
+		Parameter 0:
+			Name: relic
+			Type: RelicScriptableObject
+			Default Value: 
+	Method: PlayCapturedFeedback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0040BAC0
+		Ram Offset 0x18040ccc0
+		Virtual Method Slot: 162
+
+	Method: SpawnCapturedOrb:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0040BFC0
+		Ram Offset 0x18040d1c0
+		Virtual Method Slot: 163
+
+	Method: EnterCaptured:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040C350
+		Ram Offset 0x18040d550
+		Virtual Method Slot: 164
+
+	Method: UpdateCaptured:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040C4E0
+		Ram Offset 0x18040d6e0
+		Virtual Method Slot: 165
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateCaptured:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x003B1720
+		Ram Offset 0x1803b2920
+		Virtual Method Slot: 166
+
+	Method: ExitCaptured:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 167
+
+	Method: OnMessageCaptured:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 168
+
+		Parameter 0:
+			Name: message
+			Type: MuttAI.Messaging.Telegram
+			Default Value: 
+	Method: Capture:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0040C560
+		Ram Offset 0x18040d760
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: capturer
+			Type: BasePlayer
+			Default Value: 
+	Method: ShowCaptureFeedback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0040C910
+		Ram Offset 0x18040db10
+		Virtual Method Slot: 169
+
+	Method: HideCaptureFeedback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0040C960
+		Ram Offset 0x18040db60
+		Virtual Method Slot: 170
+
+	Method: SetCapturing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040C990
+		Ram Offset 0x18040db90
+		Virtual Method Slot: 171
+
+		Parameter 0:
+			Name: capturing
+			Type: System.Boolean
+			Default Value: 
+	Method: UpdateCapture:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0040C9A0
+		Ram Offset 0x18040dba0
+		Virtual Method Slot: 172
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+		Parameter 1:
+			Name: attacker
+			Type: BaseCharacter
+			Default Value: 
+		Parameter 2:
+			Name: captureForce
+			Type: System.Single
+			Default Value: 0
+		Parameter 3:
+			Name: simulateDamage
+			Type: System.Boolean
+			Default Value: False
+	Method: ResetCapture:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040CCC0
+		Ram Offset 0x18040dec0
+		Virtual Method Slot: 65535
+
+	Method: GetEntityDebugInfo:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x0040CD50
+		Ram Offset 0x18040df50
+		Virtual Method Slot: 12
+
+	Method: get_CharacterId:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0040CF70
+		Ram Offset 0x18040e170
+		Virtual Method Slot: 173
+
+	Method: get_TurnDirection:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x0040CF80
+		Ram Offset 0x18040e180
+		Virtual Method Slot: 65535
+
+	Method: get_OriginalPosition:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x0040D050
+		Ram Offset 0x18040e250
+		Virtual Method Slot: 65535
+
+	Method: get_ContentDataIndex:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0040D070
+		Ram Offset 0x18040e270
+		Virtual Method Slot: 65535
+
+	Method: set_ContentDataIndex:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040D080
+		Ram Offset 0x18040e280
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_IsDead:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0040D090
+		Ram Offset 0x18040e290
+		Virtual Method Slot: 174
+
+	Method: get_IsMaxHealth:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0040D0A0
+		Ram Offset 0x18040e2a0
+		Virtual Method Slot: 65535
+
+	Method: get_MaxHealth:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D0C0
+		Ram Offset 0x18040e2c0
+		Virtual Method Slot: 65535
+
+	Method: get_CurrentMaxHealth:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D0D0
+		Ram Offset 0x18040e2d0
+		Virtual Method Slot: 65535
+
+	Method: get_CurrentHealth:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D0E0
+		Ram Offset 0x18040e2e0
+		Virtual Method Slot: 65535
+
+	Method: get_IsFullHealth:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0040D0F0
+		Ram Offset 0x18040e2f0
+		Virtual Method Slot: 65535
+
+	Method: get_CurrentHealthPercentage:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D110
+		Ram Offset 0x18040e310
+		Virtual Method Slot: 65535
+
+	Method: get_FleeSpeed:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D130
+		Ram Offset 0x18040e330
+		Virtual Method Slot: 175
+
+	Method: get_MovementSpeed:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D180
+		Ram Offset 0x18040e380
+		Virtual Method Slot: 176
+
+	Method: get_RaceMovementSpeed:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D1D0
+		Ram Offset 0x18040e3d0
+		Virtual Method Slot: 177
+
+	Method: get_RaceDashSpeed:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D1F0
+		Ram Offset 0x18040e3f0
+		Virtual Method Slot: 178
+
+	Method: get_MaxRaceStamina:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D210
+		Ram Offset 0x18040e410
+		Virtual Method Slot: 179
+
+	Method: get_CurrentRaceStamina:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D230
+		Ram Offset 0x18040e430
+		Virtual Method Slot: 180
+
+	Method: get_RaceStaminaRecoveryRate:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D240
+		Ram Offset 0x18040e440
+		Virtual Method Slot: 181
+
+	Method: get_RaceStaminaConsumedPerDash:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D250
+		Ram Offset 0x18040e450
+		Virtual Method Slot: 182
+
+	Method: get_RaceRestDuration:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D260
+		Ram Offset 0x18040e460
+		Virtual Method Slot: 183
+
+	Method: get_CurrentMovementSpeed:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D270
+		Ram Offset 0x18040e470
+		Virtual Method Slot: 184
+
+	Method: get_CurrentActualSpeed:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D280
+		Ram Offset 0x18040e480
+		Virtual Method Slot: 65535
+
+	Method: get_CanHit:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0040D300
+		Ram Offset 0x18040e500
+		Virtual Method Slot: 65535
+
+	Method: set_CanHit:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0040D310
+		Ram Offset 0x18040e510
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_CurrentDirection:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x0040D320
+		Ram Offset 0x18040e520
+		Virtual Method Slot: 65535
+
+	Method: get_TargetPosition:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x0040D340
+		Ram Offset 0x18040e540
+		Virtual Method Slot: 185
+
+	Method: get_AttackPower:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D510
+		Ram Offset 0x18040e710
+		Virtual Method Slot: 65535
+
+	Method: get_AttackPropPower:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D530
+		Ram Offset 0x18040e730
+		Virtual Method Slot: 65535
+
+	Method: get_SecondaryAttackPower:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D550
+		Ram Offset 0x18040e750
+		Virtual Method Slot: 65535
+
+	Method: get_SecondaryAttackPropPower:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D570
+		Ram Offset 0x18040e770
+		Virtual Method Slot: 65535
+
+	Method: get_TertiaryAttackPower:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D590
+		Ram Offset 0x18040e790
+		Virtual Method Slot: 65535
+
+	Method: get_TertiaryAttackPropPower:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D5B0
+		Ram Offset 0x18040e7b0
+		Virtual Method Slot: 65535
+
+	Method: get_AttackSpeedBonus:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040D5D0
+		Ram Offset 0x18040e7d0
+		Virtual Method Slot: 65535
+
+	Method: get_KnockbackDirection:
+		Accessibility: Family
+		Return Type: UnityEngine.Vector2
+		File Offset 0x0040D5E0
+		Ram Offset 0x18040e7e0
+		Virtual Method Slot: 65535
+
+	Method: set_KnockbackDirection:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0040D600
+		Ram Offset 0x18040e800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: UnityEngine.Vector2
+			Default Value: 
+	Method: get_KnockbackForce:
+		Accessibility: Family
+		Return Type: System.Single
+		File Offset 0x0040D610
+		Ram Offset 0x18040e810
+		Virtual Method Slot: 65535
+
+	Method: set_KnockbackForce:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0040D620
+		Ram Offset 0x18040e820
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_KnockbackDuration:
+		Accessibility: Family
+		Return Type: System.Single
+		File Offset 0x0040D630
+		Ram Offset 0x18040e830
+		Virtual Method Slot: 65535
+
+	Method: set_KnockbackDuration:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0040D640
+		Ram Offset 0x18040e840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: get_PreviousAttacker:
+		Accessibility: Public
+		Return Type: BaseCharacter
+		File Offset 0x0040D650
+		Ram Offset 0x18040e850
+		Virtual Method Slot: 65535
+
+	Method: set_PreviousAttacker:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040D660
+		Ram Offset 0x18040e860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: BaseCharacter
+			Default Value: 
+	Method: get_CancelableKnockback:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0040D6C0
+		Ram Offset 0x18040e8c0
+		Virtual Method Slot: 65535
+
+	Method: set_CancelableKnockback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0040D6D0
+		Ram Offset 0x18040e8d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_CurrentTarget:
+		Accessibility: Public
+		Return Type: UnityEngine.GameObject
+		File Offset 0x0040D6E0
+		Ram Offset 0x18040e8e0
+		Virtual Method Slot: 186
+
+	Method: get_CurrentTargetBuilding:
+		Accessibility: Public
+		Return Type: BaseBuilding
+		File Offset 0x0040D8E0
+		Ram Offset 0x18040eae0
+		Virtual Method Slot: 187
+
+	Method: get_IsTargetDead:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0040D8F0
+		Ram Offset 0x18040eaf0
+		Virtual Method Slot: 65535
+
+	Method: get_Sprite:
+		Accessibility: Public
+		Return Type: UnityEngine.SpriteRenderer
+		File Offset 0x003F4770
+		Ram Offset 0x1803f5970
+		Virtual Method Slot: 65535
+
+	Method: get_HurtSprite:
+		Accessibility: Public
+		Return Type: UnityEngine.Sprite
+		File Offset 0x003C6290
+		Ram Offset 0x1803c7490
+		Virtual Method Slot: 65535
+
+	Method: get_UiIcon:
+		Accessibility: Public
+		Return Type: UnityEngine.SpriteRenderer
+		File Offset 0x0040DAA0
+		Ram Offset 0x18040eca0
+		Virtual Method Slot: 65535
+
+	Method: get_MovementCollider:
+		Accessibility: Public
+		Return Type: UnityEngine.CircleCollider2D
+		File Offset 0x0040DAB0
+		Ram Offset 0x18040ecb0
+		Virtual Method Slot: 65535
+
+	Method: get_CharacterCollider:
+		Accessibility: Public
+		Return Type: UnityEngine.Collider2D
+		File Offset 0x0040DAC0
+		Ram Offset 0x18040ecc0
+		Virtual Method Slot: 65535
+
+	Method: get_CharacterColliderRadius:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040DAD0
+		Ram Offset 0x18040ecd0
+		Virtual Method Slot: 65535
+
+	Method: get_DamageProps:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0040DC70
+		Ram Offset 0x18040ee70
+		Virtual Method Slot: 65535
+
+	Method: get_CloseObjectInteractionAnimationDuration:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040DC80
+		Ram Offset 0x18040ee80
+		Virtual Method Slot: 65535
+
+	Method: get_CloseObjectInteractionDamageInstant:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040DC90
+		Ram Offset 0x18040ee90
+		Virtual Method Slot: 65535
+
+	Method: get_CloseObjectInteractionAttack:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040DCA0
+		Ram Offset 0x18040eea0
+		Virtual Method Slot: 65535
+
+	Method: get_CloseObjectInteractionAnimationDelay:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040DCB0
+		Ram Offset 0x18040eeb0
+		Virtual Method Slot: 65535
+
+	Method: get_FleeTimeOver:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0040DCC0
+		Ram Offset 0x18040eec0
+		Virtual Method Slot: 188
+
+	Method: get_IsOverWater:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0040DCE0
+		Ram Offset 0x18040eee0
+		Virtual Method Slot: 189
+
+	Method: get_RiderAnchor:
+		Accessibility: Public
+		Return Type: UnityEngine.Transform
+		File Offset 0x0040DE70
+		Ram Offset 0x18040f070
+		Virtual Method Slot: 65535
+
+	Method: get_BeingRiddenSpeed:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x0040DE80
+		Ram Offset 0x18040f080
+		Virtual Method Slot: 65535
+
+	Method: get_RiderSortingOrder:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0040DEB0
+		Ram Offset 0x18040f0b0
+		Virtual Method Slot: 190
+
+	Method: get_RideReferencePosition:
+		Accessibility: Public
+		Return Type: UnityEngine.Transform
+		File Offset 0x003D59B0
+		Ram Offset 0x1803d6bb0
+		Virtual Method Slot: 65535
+
+	Method: get_RiderAnchorPositionOffset:
+		Accessibility: Public
+		Return Type: UnityEngine.Vector2
+		File Offset 0x0040DF10
+		Ram Offset 0x18040f110
+		Virtual Method Slot: 65535
+
+	Method: get_Rider:
+		Accessibility: Public
+		Return Type: BaseCharacter
+		File Offset 0x0040E100
+		Ram Offset 0x18040f300
+		Virtual Method Slot: 65535
+
+	Method: get_IsCapturable:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0040E110
+		Ram Offset 0x18040f310
+		Virtual Method Slot: 65535
+
+	Method: get_IsCaptured:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0040E1E0
+		Ram Offset 0x18040f3e0
+		Virtual Method Slot: 65535
+
+	Method: get_IsCapturing:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0040E2B0
+		Ram Offset 0x18040f4b0
+		Virtual Method Slot: 65535
+
+	Method: get_CanCaptureCreatures:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 191
+
+	Method: get_DetectExtractorTrigger:
+		Accessibility: Public
+		Return Type: UnityEngine.Collider2D
+		File Offset 0x0040E2C0
+		Ram Offset 0x18040f4c0
+		Virtual Method Slot: 65535
+
+	Method: get_CreatureGroup:
+		Accessibility: Public
+		Return Type: CreatureGroup
+		File Offset 0x0040E2D0
+		Ram Offset 0x18040f4d0
+		Virtual Method Slot: 65535
+
+	Method: get_CaptureOrbType:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0040E2E0
+		Ram Offset 0x18040f4e0
+		Virtual Method Slot: 65535
+
+	Method: get_CanBreakLevel2Props:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0040E3D0
+		Ram Offset 0x18040f5d0
+		Virtual Method Slot: 65535
+
+	Method: get_Paralyzed:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0040E3E0
+		Ram Offset 0x18040f5e0
+		Virtual Method Slot: 65535
+
+	Method: set_Paralyzed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040E400
+		Ram Offset 0x18040f600
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0040E430
+		Ram Offset 0x18040f630
+		Virtual Method Slot: 65535
+
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0040E680
+		Ram Offset 0x18040f880
+		Virtual Method Slot: 65535

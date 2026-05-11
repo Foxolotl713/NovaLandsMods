@@ -1,0 +1,156 @@
+Type: ZXing.OneD.CodaBarReader:
+	Base Class: 
+		ZXing.OneD.OneDReader
+
+	Interfaces:
+
+	Static Field: MAX_ACCEPTABLE
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: ALPHABET_STRING
+		Type: System.String
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 0123456789-$:/.+ABCD
+
+	Static Field: MIN_CHARACTER_LENGTH
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 3
+
+	Static Field: PADDING
+		Type: System.Int32
+		Offset in Defining Type: 0x4
+		Has Default: False
+
+	Static Field: ALPHABET
+		Type: System.Char[]
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: CHARACTER_ENCODINGS
+		Type: System.Int32[]
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: decodeRowResult
+		Type: System.Text.StringBuilder
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: STARTEND_ENCODING
+		Type: System.Char[]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: counters
+		Type: System.Int32[]
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: counterLength
+		Type: System.Int32
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x027E3BC0
+		Ram Offset 0x1827e4dc0
+		Virtual Method Slot: 65535
+
+	Method: decodeRow:
+		Accessibility: Public
+		Return Type: ZXing.Result
+		File Offset 0x027E3D40
+		Ram Offset 0x1827e4f40
+		Virtual Method Slot: 9
+
+		Parameter 0:
+			Name: rowNumber
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+		Parameter 2:
+			Name: hints
+			Type: System.Collections.Generic.IDictionary`2<ZXing.DecodeHintType, System.Object>
+			Default Value: 
+	Method: validatePattern:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x027E47A0
+		Ram Offset 0x1827e59a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: start
+			Type: System.Int32
+			Default Value: 
+	Method: setCounters:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x027E4C20
+		Ram Offset 0x1827e5e20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: row
+			Type: ZXing.Common.BitArray
+			Default Value: 
+	Method: counterAppend:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027E4CF0
+		Ram Offset 0x1827e5ef0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: e
+			Type: System.Int32
+			Default Value: 
+	Method: findStartPattern:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x027E4DF0
+		Ram Offset 0x1827e5ff0
+		Virtual Method Slot: 65535
+
+	Method: arrayContains:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x027E4F50
+		Ram Offset 0x1827e6150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: array
+			Type: System.Char[]
+			Default Value: 
+		Parameter 1:
+			Name: key
+			Type: System.Char
+			Default Value: 
+	Method: toNarrowWidePattern:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x027E4FA0
+		Ram Offset 0x1827e61a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: position
+			Type: System.Int32
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x027E5190
+		Ram Offset 0x1827e6390
+		Virtual Method Slot: 65535

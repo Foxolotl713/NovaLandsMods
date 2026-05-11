@@ -1,0 +1,288 @@
+Type: NovaGatewayBuilding:
+	Base Class: 
+		SingleRecipeSingleActionBuilding
+
+	Interfaces:
+
+	Nested Types:
+		NovaGatewayBuilding/<>c
+		NovaGatewayBuilding/<>c__DisplayClass39_0
+		NovaGatewayBuilding/<CheckShouldPlayIdlePortalFeedback>d__37
+		NovaGatewayBuilding/<SaveGameDelayed>d__27
+
+	Field: progressBar
+		Type: DiscreteFillBar
+		Offset in Defining Type: 0x740
+		Has Default: False
+
+	Field: endGamePopupMessage
+		Type: System.String
+		Offset in Defining Type: 0x748
+		Has Default: False
+
+	Field: endGameAction
+		Type: NovaGatewayEndGameAction
+		Offset in Defining Type: 0x750
+		Has Default: False
+
+	Field: timeToSaveAfterShowingChallengeReward
+		Type: System.Single
+		Offset in Defining Type: 0x758
+		Has Default: False
+
+	Field: containerSprite
+		Type: UnityEngine.SpriteRenderer
+		Offset in Defining Type: 0x760
+		Has Default: False
+
+	Field: sendingSmokeParticles
+		Type: System.Collections.Generic.List`1<UnityEngine.ParticleSystem>
+		Offset in Defining Type: 0x768
+		Has Default: False
+
+	Field: portalSendingParticles
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x770
+		Has Default: False
+
+	Field: portalIdleParticles
+		Type: UnityEngine.ParticleSystem
+		Offset in Defining Type: 0x778
+		Has Default: False
+
+	Field: sendingSmokeParticlesSFX
+		Type: System.String
+		Offset in Defining Type: 0x780
+		Has Default: False
+
+	Field: portalSendingSFX
+		Type: System.String
+		Offset in Defining Type: 0x788
+		Has Default: False
+
+	Field: portalIdleSFX
+		Type: System.String
+		Offset in Defining Type: 0x790
+		Has Default: False
+
+	Field: sendingSmokeSFXInstance
+		Type: FMODUnity.StudioEventEmitter
+		Offset in Defining Type: 0x798
+		Has Default: False
+
+	Field: portalSendingSFXInstance
+		Type: FMODUnity.StudioEventEmitter
+		Offset in Defining Type: 0x7A0
+		Has Default: False
+
+	Field: portalIdleSFXInstance
+		Type: FMODUnity.StudioEventEmitter
+		Offset in Defining Type: 0x7A8
+		Has Default: False
+
+	Field: currentProgress
+		Type: System.Int32
+		Offset in Defining Type: 0x7B0
+		Has Default: False
+
+	Field: novaGatewayPopup
+		Type: NovaGatewayBuildingPopup
+		Offset in Defining Type: 0x7B8
+		Has Default: False
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B172E0
+		Ram Offset 0x180b184e0
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: parentArea
+			Type: WorldArea
+			Default Value: 
+	Method: Start:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B17480
+		Ram Offset 0x180b18680
+		Virtual Method Slot: 5
+
+	Method: OnDestroy:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00B17850
+		Ram Offset 0x180b18a50
+		Virtual Method Slot: 8
+
+	Method: InitProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00B17A80
+		Ram Offset 0x180b18c80
+		Virtual Method Slot: 25
+
+	Method: InitComponents:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AC6DE0
+		Ram Offset 0x180ac7fe0
+		Virtual Method Slot: 26
+
+	Method: GetPopup:
+		Accessibility: Private
+		Return Type: NovaGatewayBuildingPopup
+		File Offset 0x00B17AA0
+		Ram Offset 0x180b18ca0
+		Virtual Method Slot: 65535
+
+	Method: GetLootToBeSpawned:
+		Accessibility: Public
+		Return Type: System.Collections.Generic.Dictionary`2<System.Int32, System.Int32>
+		File Offset 0x00B17C20
+		Ram Offset 0x180b18e20
+		Virtual Method Slot: 60
+
+	Method: CheckShowContainer:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B17FA0
+		Ram Offset 0x180b191a0
+		Virtual Method Slot: 65535
+
+	Method: ShowPopup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B18350
+		Ram Offset 0x180b19550
+		Virtual Method Slot: 116
+
+	Method: OnCancelEndGame:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B187D0
+		Ram Offset 0x180b199d0
+		Virtual Method Slot: 65535
+
+	Method: OnConfirmEndGame:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B18970
+		Ram Offset 0x180b19b70
+		Virtual Method Slot: 65535
+
+	Method: SaveGameDelayed:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00B18D60
+		Ram Offset 0x180b19f60
+		Virtual Method Slot: 65535
+
+	Method: OnFinishSaving:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B18DF0
+		Ram Offset 0x180b19ff0
+		Virtual Method Slot: 65535
+
+	Method: UpdateProgress:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B18ED0
+		Ram Offset 0x180b1a0d0
+		Virtual Method Slot: 65535
+
+	Method: UpdateProgressBar:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B19130
+		Ram Offset 0x180b1a330
+		Virtual Method Slot: 65535
+
+	Method: PlayPortalSendingFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B19160
+		Ram Offset 0x180b1a360
+		Virtual Method Slot: 65535
+
+	Method: StopPortalSendingFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B194F0
+		Ram Offset 0x180b1a6f0
+		Virtual Method Slot: 65535
+
+	Method: PlayIdlePortalFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B197F0
+		Ram Offset 0x180b1a9f0
+		Virtual Method Slot: 65535
+
+	Method: StopIdlePortalFeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B19910
+		Ram Offset 0x180b1ab10
+		Virtual Method Slot: 65535
+
+	Method: EnableInteractionTriggerDelayed:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00B19A50
+		Ram Offset 0x180b1ac50
+		Virtual Method Slot: 65535
+
+	Method: OnEnergyChanged:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00B19B60
+		Ram Offset 0x180b1ad60
+		Virtual Method Slot: 131
+
+	Method: CheckShouldPlayIdlePortalFeedback:
+		Accessibility: Family
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x00B19CB0
+		Ram Offset 0x180b1aeb0
+		Virtual Method Slot: 65535
+
+	Method: HasResourcesToProduce:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B19D40
+		Ram Offset 0x180b1af40
+		Virtual Method Slot: 205
+
+	Method: DropUnnecessaryResources:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B19E60
+		Ram Offset 0x180b1b060
+		Virtual Method Slot: 201
+
+	Method: get_CurrentProgress:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B1A6D0
+		Ram Offset 0x180b1b8d0
+		Virtual Method Slot: 65535
+
+	Method: CanBuildOnWildArea:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0037A910
+		Ram Offset 0x18037bb10
+		Virtual Method Slot: 125
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00ACA300
+		Ram Offset 0x180acb500
+		Virtual Method Slot: 65535

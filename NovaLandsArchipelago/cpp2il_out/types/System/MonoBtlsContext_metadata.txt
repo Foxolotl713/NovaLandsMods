@@ -1,0 +1,368 @@
+Type: Mono.Btls.MonoBtlsContext:
+	Base Class: 
+		Mono.Net.Security.MobileTlsContext
+
+	Interfaces:
+		Mono.Btls.IMonoBtlsBioMono
+
+	Field: remoteCertificate
+		Type: System.Security.Cryptography.X509Certificates.X509Certificate2
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: clientCertificate
+		Type: System.Security.Cryptography.X509Certificates.X509Certificate
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: nativeServerCertificate
+		Type: Mono.Btls.X509CertificateImplBtls
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: nativeClientCertificate
+		Type: Mono.Btls.X509CertificateImplBtls
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: ctx
+		Type: Mono.Btls.MonoBtlsSslCtx
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: ssl
+		Type: Mono.Btls.MonoBtlsSsl
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: bio
+		Type: Mono.Btls.MonoBtlsBio
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: errbio
+		Type: Mono.Btls.MonoBtlsBio
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: connectionInfo
+		Type: Mono.Security.Interface.MonoTlsConnectionInfo
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: certificateValidated
+		Type: System.Boolean
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: isAuthenticated
+		Type: System.Boolean
+		Offset in Defining Type: 0xA1
+		Has Default: False
+
+	Field: connected
+		Type: System.Boolean
+		Offset in Defining Type: 0xA2
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CD6480
+		Ram Offset 0x181cd7680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: parent
+			Type: Mono.Net.Security.MobileAuthenticatedStream
+			Default Value: 
+		Parameter 1:
+			Name: options
+			Type: Mono.Net.Security.MonoSslAuthenticationOptions
+			Default Value: 
+	Method: GetPrivateCertificate:
+		Accessibility: Private
+		Return Type: Mono.Btls.X509CertificateImplBtls
+		File Offset 0x01CD6500
+		Ram Offset 0x181cd7700
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: certificate
+			Type: System.Security.Cryptography.X509Certificates.X509Certificate
+			Default Value: 
+	Method: VerifyCallback:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01CD6780
+		Ram Offset 0x181cd7980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: storeCtx
+			Type: Mono.Btls.MonoBtlsX509StoreCtx
+			Default Value: 
+	Method: SelectCallback:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01CD6990
+		Ram Offset 0x181cd7b90
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: acceptableIssuers
+			Type: System.String[]
+			Default Value: 
+	Method: ServerNameCallback:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01CD6B00
+		Ram Offset 0x181cd7d00
+		Virtual Method Slot: 65535
+
+	Method: StartHandshake:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CD6BC0
+		Ram Offset 0x181cd7dc0
+		Virtual Method Slot: 6
+
+	Method: SetPrivateCertificate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01CD6F60
+		Ram Offset 0x181cd8160
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: privateCert
+			Type: Mono.Btls.X509CertificateImplBtls
+			Default Value: 
+	Method: GetException:
+		Accessibility: Private
+		Return Type: System.Exception
+		File Offset 0x01CD7590
+		Ram Offset 0x181cd8790
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: status
+			Type: Mono.Btls.MonoBtlsSslError
+			Default Value: 
+	Method: ProcessHandshake:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01CD7BA0
+		Ram Offset 0x181cd8da0
+		Virtual Method Slot: 7
+
+	Method: DoProcessHandshake:
+		Accessibility: Private
+		Return Type: Mono.Btls.MonoBtlsSslError
+		File Offset 0x01CD7CD0
+		Ram Offset 0x181cd8ed0
+		Virtual Method Slot: 65535
+
+	Method: FinishHandshake:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CD7ED0
+		Ram Offset 0x181cd90d0
+		Virtual Method Slot: 8
+
+	Method: InitializeConnection:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01CD7EF0
+		Ram Offset 0x181cd90f0
+		Virtual Method Slot: 65535
+
+	Method: GetPeerCertificate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01CD89B0
+		Ram Offset 0x181cd9bb0
+		Virtual Method Slot: 65535
+
+	Method: InitializeSession:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01CD8C50
+		Ram Offset 0x181cd9e50
+		Virtual Method Slot: 65535
+
+	Method: GetProtocol:
+		Accessibility: Private
+		Return Type: Mono.Security.Interface.TlsProtocols
+		File Offset 0x01CD9020
+		Ram Offset 0x181cda220
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: protocol
+			Type: Mono.Security.Interface.TlsProtocolCode
+			Default Value: 
+	Method: Flush:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CD90A0
+		Ram Offset 0x181cda2a0
+		Virtual Method Slot: 11
+
+	Method: Read:
+		Accessibility: Public
+		Return Type: System.ValueTuple`2<System.Int32, System.Boolean>
+		File Offset 0x01CD90E0
+		Ram Offset 0x181cda2e0
+		Virtual Method Slot: 12
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: Write:
+		Accessibility: Public
+		Return Type: System.ValueTuple`2<System.Int32, System.Boolean>
+		File Offset 0x01CD9450
+		Ram Offset 0x181cda650
+		Virtual Method Slot: 13
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: Renegotiate:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CD9770
+		Ram Offset 0x181cda970
+		Virtual Method Slot: 16
+
+	Method: Shutdown:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01CD97B0
+		Ram Offset 0x181cda9b0
+		Virtual Method Slot: 14
+
+	Method: PendingRenegotiation:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01CD9960
+		Ram Offset 0x181cdab60
+		Virtual Method Slot: 15
+
+	Method: Dispose:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00D80220
+		Ram Offset 0x180d81420
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: disposable
+			Type: T
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01CD9A10
+		Ram Offset 0x181cdac10
+		Virtual Method Slot: 17
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: Mono.Btls.IMonoBtlsBioMono.Read:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01CD9B70
+		Ram Offset 0x181cdad70
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: wantMore
+			Type: System.Boolean
+			Default Value: 
+	Method: Mono.Btls.IMonoBtlsBioMono.Write:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01CD9BA0
+		Ram Offset 0x181cdada0
+		Virtual Method Slot: 19
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: size
+			Type: System.Int32
+			Default Value: 
+	Method: Mono.Btls.IMonoBtlsBioMono.Flush:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 20
+
+	Method: Mono.Btls.IMonoBtlsBioMono.Close:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 21
+
+	Method: get_IsAuthenticated:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0097DE20
+		Ram Offset 0x18097f020
+		Virtual Method Slot: 5
+
+	Method: get_LocalClientCertificate:
+		Accessibility: Assembly
+		Return Type: System.Security.Cryptography.X509Certificates.X509Certificate
+		File Offset 0x0063CCB0
+		Ram Offset 0x18063deb0
+		Virtual Method Slot: 9
+
+	Method: get_RemoteCertificate:
+		Accessibility: Public
+		Return Type: System.Security.Cryptography.X509Certificates.X509Certificate2
+		File Offset 0x0040DAA0
+		Ram Offset 0x18040eca0
+		Virtual Method Slot: 10

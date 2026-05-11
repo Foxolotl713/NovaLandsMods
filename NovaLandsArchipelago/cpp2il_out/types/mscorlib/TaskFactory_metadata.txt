@@ -1,0 +1,315 @@
+Type: System.Threading.Tasks.TaskFactory:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		System.Threading.Tasks.TaskFactory/CompleteOnInvokePromise
+
+	Field: m_defaultCancellationToken
+		Type: System.Threading.CancellationToken
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: m_defaultScheduler
+		Type: System.Threading.Tasks.TaskScheduler
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: m_defaultCreationOptions
+		Type: System.Threading.Tasks.TaskCreationOptions
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: m_defaultContinuationOptions
+		Type: System.Threading.Tasks.TaskContinuationOptions
+		Offset in Defining Type: 0x24
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0143ADE0
+		Ram Offset 0x18143bfe0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0143AE90
+		Ram Offset 0x18143c090
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 1:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+		Parameter 2:
+			Name: continuationOptions
+			Type: System.Threading.Tasks.TaskContinuationOptions
+			Default Value: 
+		Parameter 3:
+			Name: scheduler
+			Type: System.Threading.Tasks.TaskScheduler
+			Default Value: 
+	Method: CheckCreationOptions:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0193A130
+		Ram Offset 0x18193b330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+	Method: StartNew:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x0193A1A0
+		Ram Offset 0x18193b3a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: System.Action
+			Default Value: 
+		Parameter 1:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 2:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+		Parameter 3:
+			Name: scheduler
+			Type: System.Threading.Tasks.TaskScheduler
+			Default Value: 
+	Method: StartNew:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x0193A270
+		Ram Offset 0x18193b470
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: action
+			Type: System.Action`1<System.Object>
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 3:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+		Parameter 4:
+			Name: scheduler
+			Type: System.Threading.Tasks.TaskScheduler
+			Default Value: 
+	Method: StartNew:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<TResult>
+		File Offset 0x00DA8660
+		Ram Offset 0x180da9860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: function
+			Type: System.Func`1<TResult>
+			Default Value: 
+		Parameter 1:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 2:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+		Parameter 3:
+			Name: scheduler
+			Type: System.Threading.Tasks.TaskScheduler
+			Default Value: 
+	Method: StartNew:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task`1<TResult>
+		File Offset 0x00DA8840
+		Ram Offset 0x180da9a40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: function
+			Type: System.Func`2<System.Object, TResult>
+			Default Value: 
+		Parameter 1:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: cancellationToken
+			Type: System.Threading.CancellationToken
+			Default Value: 
+		Parameter 3:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+		Parameter 4:
+			Name: scheduler
+			Type: System.Threading.Tasks.TaskScheduler
+			Default Value: 
+	Method: FromAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x00DA7EA0
+		Ram Offset 0x180da90a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: beginMethod
+			Type: System.Func`4<TArg1, System.AsyncCallback, System.Object, System.IAsyncResult>
+			Default Value: 
+		Parameter 1:
+			Name: endMethod
+			Type: System.Action`1<System.IAsyncResult>
+			Default Value: 
+		Parameter 2:
+			Name: arg1
+			Type: TArg1
+			Default Value: 
+		Parameter 3:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: FromAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x00DA8060
+		Ram Offset 0x180da9260
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: beginMethod
+			Type: System.Func`4<TArg1, System.AsyncCallback, System.Object, System.IAsyncResult>
+			Default Value: 
+		Parameter 1:
+			Name: endMethod
+			Type: System.Action`1<System.IAsyncResult>
+			Default Value: 
+		Parameter 2:
+			Name: arg1
+			Type: TArg1
+			Default Value: 
+		Parameter 3:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 4:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+	Method: FromAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x00DA81F0
+		Ram Offset 0x180da93f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: beginMethod
+			Type: System.Func`5<TArg1, TArg2, System.AsyncCallback, System.Object, System.IAsyncResult>
+			Default Value: 
+		Parameter 1:
+			Name: endMethod
+			Type: System.Action`1<System.IAsyncResult>
+			Default Value: 
+		Parameter 2:
+			Name: arg1
+			Type: TArg1
+			Default Value: 
+		Parameter 3:
+			Name: arg2
+			Type: TArg2
+			Default Value: 
+		Parameter 4:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: FromAsync:
+		Accessibility: Public
+		Return Type: System.Threading.Tasks.Task
+		File Offset 0x00DA8440
+		Ram Offset 0x180da9640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: beginMethod
+			Type: System.Func`5<TArg1, TArg2, System.AsyncCallback, System.Object, System.IAsyncResult>
+			Default Value: 
+		Parameter 1:
+			Name: endMethod
+			Type: System.Action`1<System.IAsyncResult>
+			Default Value: 
+		Parameter 2:
+			Name: arg1
+			Type: TArg1
+			Default Value: 
+		Parameter 3:
+			Name: arg2
+			Type: TArg2
+			Default Value: 
+		Parameter 4:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 5:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+	Method: CheckFromAsyncOptions:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0193A350
+		Ram Offset 0x18193b550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: creationOptions
+			Type: System.Threading.Tasks.TaskCreationOptions
+			Default Value: 
+		Parameter 1:
+			Name: hasBeginMethod
+			Type: System.Boolean
+			Default Value: 
+	Method: CommonCWAnyLogic:
+		Accessibility: Assembly
+		Return Type: System.Threading.Tasks.Task`1<System.Threading.Tasks.Task>
+		File Offset 0x0193A480
+		Ram Offset 0x18193b680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tasks
+			Type: System.Collections.Generic.IList`1<System.Threading.Tasks.Task>
+			Default Value: 
+	Method: CheckMultiTaskContinuationOptions:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0193A730
+		Ram Offset 0x18193b930
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: continuationOptions
+			Type: System.Threading.Tasks.TaskContinuationOptions
+			Default Value: 

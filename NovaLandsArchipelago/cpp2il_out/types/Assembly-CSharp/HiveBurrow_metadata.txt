@@ -1,0 +1,189 @@
+Type: HiveBurrow:
+	Base Class: 
+		TimeProductionBurrow
+
+	Interfaces:
+
+	Nested Types:
+		HiveBurrow/<>c__DisplayClass8_0
+
+	Field: maxNumberOfHivesPerIsland
+		Type: System.Int32
+		Offset in Defining Type: 0x638
+		Has Default: False
+
+	Field: maxNumberOfConcurrentWorkers
+		Type: System.Int32
+		Offset in Defining Type: 0x63C
+		Has Default: False
+
+	Field: delayToSpawnNewWorker
+		Type: System.Single
+		Offset in Defining Type: 0x640
+		Has Default: False
+
+	Field: timeToCheckResourceAvailability
+		Type: System.Single
+		Offset in Defining Type: 0x644
+		Has Default: False
+
+	Field: currentTimeToSpawnWorker
+		Type: System.Single
+		Offset in Defining Type: 0x648
+		Has Default: False
+
+	Field: currentTimeToCheckResourceAvailability
+		Type: System.Single
+		Offset in Defining Type: 0x64C
+		Has Default: False
+
+	Field: currentWorkers
+		Type: System.Collections.Generic.List`1<BaseEnemy>
+		Offset in Defining Type: 0x650
+		Has Default: False
+
+	Field: firstTargetResourceCheckDone
+		Type: System.Boolean
+		Offset in Defining Type: 0x658
+		Has Default: False
+
+	Method: LoadDependentData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AB1DE0
+		Ram Offset 0x180ab2fe0
+		Virtual Method Slot: 20
+
+	Method: InitProperties:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AB22F0
+		Ram Offset 0x180ab34f0
+		Virtual Method Slot: 25
+
+	Method: UpdateIdle:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AB23C0
+		Ram Offset 0x180ab35c0
+		Virtual Method Slot: 161
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: UpdateWorkerSpawningTime:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AB24F0
+		Ram Offset 0x180ab36f0
+		Virtual Method Slot: 208
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: CheckResourceAvailability:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00AB2590
+		Ram Offset 0x180ab3790
+		Virtual Method Slot: 209
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: CreatureDied:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AB25D0
+		Ram Offset 0x180ab37d0
+		Virtual Method Slot: 188
+
+		Parameter 0:
+			Name: creature
+			Type: BaseEnemy
+			Default Value: 
+	Method: CreatureHit:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AB26B0
+		Ram Offset 0x180ab38b0
+		Virtual Method Slot: 189
+
+		Parameter 0:
+			Name: creature
+			Type: BaseEnemy
+			Default Value: 
+	Method: OnDamaged:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AB2710
+		Ram Offset 0x180ab3910
+		Virtual Method Slot: 197
+
+		Parameter 0:
+			Name: attacker
+			Type: BaseCharacter
+			Default Value: 
+	Method: NotifyAllCreatures:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AB2760
+		Ram Offset 0x180ab3960
+		Virtual Method Slot: 195
+
+		Parameter 0:
+			Name: attacker
+			Type: BaseCharacter
+			Default Value: 
+	Method: ReceiveCreature:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AB28C0
+		Ram Offset 0x180ab3ac0
+		Virtual Method Slot: 196
+
+		Parameter 0:
+			Name: creature
+			Type: BaseEnemy
+			Default Value: 
+	Method: SpawnWorker:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00AB2C80
+		Ram Offset 0x180ab3e80
+		Virtual Method Slot: 210
+
+	Method: CanSpawnWorker:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00AB2EB0
+		Ram Offset 0x180ab40b0
+		Virtual Method Slot: 65535
+
+	Method: CanGenerateFullStorageObject:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00AB3140
+		Ram Offset 0x180ab4340
+		Virtual Method Slot: 200
+
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x00AB31A0
+		Ram Offset 0x180ab43a0
+		Virtual Method Slot: 97
+
+		Parameter 0:
+			Name: firstSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AB34E0
+		Ram Offset 0x180ab46e0
+		Virtual Method Slot: 65535

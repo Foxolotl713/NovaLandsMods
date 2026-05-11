@@ -1,0 +1,1261 @@
+Type: ICSharpCode.SharpZipLib.Zip.ZipFile:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+		System.Collections.IEnumerable
+		System.IDisposable
+
+	Nested Types:
+		ICSharpCode.SharpZipLib.Zip.ZipFile/KeysRequiredEventHandler
+		ICSharpCode.SharpZipLib.Zip.ZipFile/HeaderTest
+		ICSharpCode.SharpZipLib.Zip.ZipFile/UpdateCommand
+		ICSharpCode.SharpZipLib.Zip.ZipFile/UpdateComparer
+		ICSharpCode.SharpZipLib.Zip.ZipFile/ZipUpdate
+		ICSharpCode.SharpZipLib.Zip.ZipFile/ZipString
+		ICSharpCode.SharpZipLib.Zip.ZipFile/ZipEntryEnumerator
+		ICSharpCode.SharpZipLib.Zip.ZipFile/UncompressedStream
+		ICSharpCode.SharpZipLib.Zip.ZipFile/PartialInputStream
+
+	Static Field: DefaultBufferSize
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 4096
+
+	Field: KeysRequired
+		Type: ICSharpCode.SharpZipLib.Zip.ZipFile/KeysRequiredEventHandler
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: isDisposed_
+		Type: System.Boolean
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: name_
+		Type: System.String
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: comment_
+		Type: System.String
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: rawPassword_
+		Type: System.String
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: baseStream_
+		Type: System.IO.Stream
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: isStreamOwner
+		Type: System.Boolean
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: offsetOfFirstEntry
+		Type: System.Int64
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: entries_
+		Type: ICSharpCode.SharpZipLib.Zip.ZipEntry[]
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: key
+		Type: System.Byte[]
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: isNewArchive_
+		Type: System.Boolean
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: useZip64_
+		Type: ICSharpCode.SharpZipLib.Zip.UseZip64
+		Offset in Defining Type: 0x64
+		Has Default: False
+
+	Field: updates_
+		Type: System.Collections.ArrayList
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: updateCount_
+		Type: System.Int64
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: updateIndex_
+		Type: System.Collections.Hashtable
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: archiveStorage_
+		Type: ICSharpCode.SharpZipLib.Zip.IArchiveStorage
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: updateDataSource_
+		Type: ICSharpCode.SharpZipLib.Zip.IDynamicDataSource
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: contentsEdited_
+		Type: System.Boolean
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: bufferSize_
+		Type: System.Int32
+		Offset in Defining Type: 0x94
+		Has Default: False
+
+	Field: copyBuffer_
+		Type: System.Byte[]
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: newComment_
+		Type: ICSharpCode.SharpZipLib.Zip.ZipFile/ZipString
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: commentEdited_
+		Type: System.Boolean
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: updateEntryFactory_
+		Type: ICSharpCode.SharpZipLib.Zip.IEntryFactory
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Method: OnKeysRequired:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01630E50
+		Ram Offset 0x181632050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fileName
+			Type: System.String
+			Default Value: 
+	Method: get_Key:
+		Accessibility: Private
+		Return Type: System.Byte[]
+		File Offset 0x0040DAA0
+		Ram Offset 0x18040eca0
+		Virtual Method Slot: 65535
+
+	Method: set_Key:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00906550
+		Ram Offset 0x180907750
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Byte[]
+			Default Value: 
+	Method: set_Password:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01631000
+		Ram Offset 0x181632200
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.String
+			Default Value: 
+	Method: get_HaveKeys:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x016311A0
+		Ram Offset 0x1816323a0
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016311B0
+		Ram Offset 0x1816323b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016313E0
+		Ram Offset 0x1816325e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: file
+			Type: System.IO.FileStream
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01631670
+		Ram Offset 0x181632870
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stream
+			Type: System.IO.Stream
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x016318F0
+		Ram Offset 0x181632af0
+		Virtual Method Slot: 65535
+
+	Method: Finalize:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01614B60
+		Ram Offset 0x181615d60
+		Virtual Method Slot: 1
+
+	Method: Close:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01631A20
+		Ram Offset 0x181632c20
+		Virtual Method Slot: 65535
+
+	Method: Create:
+		Accessibility: Public
+		Return Type: ICSharpCode.SharpZipLib.Zip.ZipFile
+		File Offset 0x01631A80
+		Ram Offset 0x181632c80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fileName
+			Type: System.String
+			Default Value: 
+	Method: Create:
+		Accessibility: Public
+		Return Type: ICSharpCode.SharpZipLib.Zip.ZipFile
+		File Offset 0x01631BF0
+		Ram Offset 0x181632df0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: outStream
+			Type: System.IO.Stream
+			Default Value: 
+	Method: get_IsStreamOwner:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x009B2240
+		Ram Offset 0x1809b3440
+		Virtual Method Slot: 65535
+
+	Method: set_IsStreamOwner:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0134DEB0
+		Ram Offset 0x18134f0b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: get_IsEmbeddedArchive:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01631DA0
+		Ram Offset 0x181632fa0
+		Virtual Method Slot: 65535
+
+	Method: get_IsNewArchive:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x0096BD50
+		Ram Offset 0x18096cf50
+		Virtual Method Slot: 65535
+
+	Method: get_ZipFileComment:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x003A7D00
+		Ram Offset 0x1803a8f00
+		Virtual Method Slot: 65535
+
+	Method: get_Name:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x00395870
+		Ram Offset 0x180396a70
+		Virtual Method Slot: 65535
+
+	Method: get_Size:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01631DB0
+		Ram Offset 0x181632fb0
+		Virtual Method Slot: 65535
+
+	Method: get_Count:
+		Accessibility: Public
+		Return Type: System.Int64
+		File Offset 0x01631DD0
+		Ram Offset 0x181632fd0
+		Virtual Method Slot: 65535
+
+	Method: get_EntryByIndex:
+		Accessibility: Public
+		Return Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+		File Offset 0x01631DF0
+		Ram Offset 0x181632ff0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: index
+			Type: System.Int32
+			Default Value: 
+	Method: GetEnumerator:
+		Accessibility: Public
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x01631EA0
+		Ram Offset 0x1816330a0
+		Virtual Method Slot: 4
+
+	Method: FindEntry:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x01631F90
+		Ram Offset 0x181633190
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: ignoreCase
+			Type: System.Boolean
+			Default Value: 
+	Method: GetEntry:
+		Accessibility: Public
+		Return Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+		File Offset 0x016321B0
+		Ram Offset 0x1816333b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: GetInputStream:
+		Accessibility: Public
+		Return Type: System.IO.Stream
+		File Offset 0x016322E0
+		Ram Offset 0x1816334e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: entry
+			Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+			Default Value: 
+	Method: GetInputStream:
+		Accessibility: Public
+		Return Type: System.IO.Stream
+		File Offset 0x016324C0
+		Ram Offset 0x1816336c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: entryIndex
+			Type: System.Int64
+			Default Value: 
+	Method: TestArchive:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01632880
+		Ram Offset 0x181633a80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: testData
+			Type: System.Boolean
+			Default Value: 
+	Method: TestArchive:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x016328A0
+		Ram Offset 0x181633aa0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: testData
+			Type: System.Boolean
+			Default Value: 
+		Parameter 1:
+			Name: strategy
+			Type: ICSharpCode.SharpZipLib.Zip.TestStrategy
+			Default Value: 
+		Parameter 2:
+			Name: resultHandler
+			Type: ICSharpCode.SharpZipLib.Zip.ZipTestResultHandler
+			Default Value: 
+	Method: TestLocalHeader:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x016330F0
+		Ram Offset 0x1816342f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: entry
+			Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+			Default Value: 
+		Parameter 1:
+			Name: tests
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile/HeaderTest
+			Default Value: 
+	Method: get_NameTransform:
+		Accessibility: Public
+		Return Type: ICSharpCode.SharpZipLib.Core.INameTransform
+		File Offset 0x01634260
+		Ram Offset 0x181635460
+		Virtual Method Slot: 65535
+
+	Method: set_NameTransform:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x016342B0
+		Ram Offset 0x1816354b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: ICSharpCode.SharpZipLib.Core.INameTransform
+			Default Value: 
+	Method: get_EntryFactory:
+		Accessibility: Public
+		Return Type: ICSharpCode.SharpZipLib.Zip.IEntryFactory
+		File Offset 0x004FAF60
+		Ram Offset 0x1804fc160
+		Virtual Method Slot: 65535
+
+	Method: set_EntryFactory:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01634310
+		Ram Offset 0x181635510
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: ICSharpCode.SharpZipLib.Zip.IEntryFactory
+			Default Value: 
+	Method: get_BufferSize:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00695D20
+		Ram Offset 0x180696f20
+		Virtual Method Slot: 65535
+
+	Method: set_BufferSize:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01634440
+		Ram Offset 0x181635640
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: get_IsUpdating:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01634530
+		Ram Offset 0x181635730
+		Virtual Method Slot: 65535
+
+	Method: get_UseZip64:
+		Accessibility: Public
+		Return Type: ICSharpCode.SharpZipLib.Zip.UseZip64
+		File Offset 0x0097DA80
+		Ram Offset 0x18097ec80
+		Virtual Method Slot: 65535
+
+	Method: set_UseZip64:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01634540
+		Ram Offset 0x181635740
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: ICSharpCode.SharpZipLib.Zip.UseZip64
+			Default Value: 
+	Method: BeginUpdate:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01634550
+		Ram Offset 0x181635750
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: archiveStorage
+			Type: ICSharpCode.SharpZipLib.Zip.IArchiveStorage
+			Default Value: 
+		Parameter 1:
+			Name: dataSource
+			Type: ICSharpCode.SharpZipLib.Zip.IDynamicDataSource
+			Default Value: 
+	Method: BeginUpdate:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01634BA0
+		Ram Offset 0x181635da0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: archiveStorage
+			Type: ICSharpCode.SharpZipLib.Zip.IArchiveStorage
+			Default Value: 
+	Method: BeginUpdate:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01634C00
+		Ram Offset 0x181635e00
+		Virtual Method Slot: 65535
+
+	Method: CommitUpdate:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01634D50
+		Ram Offset 0x181635f50
+		Virtual Method Slot: 65535
+
+	Method: AbortUpdate:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01635030
+		Ram Offset 0x181636230
+		Virtual Method Slot: 65535
+
+	Method: SetComment:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01635040
+		Ram Offset 0x181636240
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: comment
+			Type: System.String
+			Default Value: 
+	Method: AddUpdate:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01635240
+		Ram Offset 0x181636440
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: update
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile/ZipUpdate
+			Default Value: 
+	Method: Add:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01635380
+		Ram Offset 0x181636580
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fileName
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: compressionMethod
+			Type: ICSharpCode.SharpZipLib.Zip.CompressionMethod
+			Default Value: 
+		Parameter 2:
+			Name: useUnicodeText
+			Type: System.Boolean
+			Default Value: 
+	Method: Add:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01635580
+		Ram Offset 0x181636780
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fileName
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: compressionMethod
+			Type: ICSharpCode.SharpZipLib.Zip.CompressionMethod
+			Default Value: 
+	Method: Add:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01635700
+		Ram Offset 0x181636900
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fileName
+			Type: System.String
+			Default Value: 
+	Method: Add:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01635800
+		Ram Offset 0x181636a00
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fileName
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: entryName
+			Type: System.String
+			Default Value: 
+	Method: Add:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01635960
+		Ram Offset 0x181636b60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dataSource
+			Type: ICSharpCode.SharpZipLib.Zip.IStaticDataSource
+			Default Value: 
+		Parameter 1:
+			Name: entryName
+			Type: System.String
+			Default Value: 
+	Method: Add:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01635AC0
+		Ram Offset 0x181636cc0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dataSource
+			Type: ICSharpCode.SharpZipLib.Zip.IStaticDataSource
+			Default Value: 
+		Parameter 1:
+			Name: entryName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: compressionMethod
+			Type: ICSharpCode.SharpZipLib.Zip.CompressionMethod
+			Default Value: 
+	Method: Add:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01635C40
+		Ram Offset 0x181636e40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dataSource
+			Type: ICSharpCode.SharpZipLib.Zip.IStaticDataSource
+			Default Value: 
+		Parameter 1:
+			Name: entryName
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: compressionMethod
+			Type: ICSharpCode.SharpZipLib.Zip.CompressionMethod
+			Default Value: 
+		Parameter 3:
+			Name: useUnicodeText
+			Type: System.Boolean
+			Default Value: 
+	Method: Add:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01635DE0
+		Ram Offset 0x181636fe0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: entry
+			Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+			Default Value: 
+	Method: AddDirectory:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01635F20
+		Ram Offset 0x181637120
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: directoryName
+			Type: System.String
+			Default Value: 
+	Method: Delete:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x01636020
+		Ram Offset 0x181637220
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fileName
+			Type: System.String
+			Default Value: 
+	Method: Delete:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01636160
+		Ram Offset 0x181637360
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: entry
+			Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+			Default Value: 
+	Method: WriteLEShort:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01636310
+		Ram Offset 0x181637510
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: WriteLEUshort:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01636370
+		Ram Offset 0x181637570
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt16
+			Default Value: 
+	Method: WriteLEInt:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016363D0
+		Ram Offset 0x1816375d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: WriteLEUint:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01636470
+		Ram Offset 0x181637670
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt32
+			Default Value: 
+	Method: WriteLeLong:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01636510
+		Ram Offset 0x181637710
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int64
+			Default Value: 
+	Method: WriteLEUlong:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01636550
+		Ram Offset 0x181637750
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.UInt64
+			Default Value: 
+	Method: WriteLocalEntryHeader:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01636590
+		Ram Offset 0x181637790
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: update
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile/ZipUpdate
+			Default Value: 
+	Method: WriteCentralDirectoryHeader:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01636C60
+		Ram Offset 0x181637e60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: entry
+			Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+			Default Value: 
+	Method: PostUpdateCleanup:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01637230
+		Ram Offset 0x181638430
+		Virtual Method Slot: 65535
+
+	Method: GetTransformedFileName:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x016373E0
+		Ram Offset 0x1816385e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: GetTransformedDirectoryName:
+		Accessibility: Private
+		Return Type: System.String
+		File Offset 0x01637480
+		Ram Offset 0x181638680
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: name
+			Type: System.String
+			Default Value: 
+	Method: GetBuffer:
+		Accessibility: Private
+		Return Type: System.Byte[]
+		File Offset 0x01637520
+		Ram Offset 0x181638720
+		Virtual Method Slot: 65535
+
+	Method: CopyDescriptorBytes:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016375C0
+		Ram Offset 0x1816387c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: update
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile/ZipUpdate
+			Default Value: 
+		Parameter 1:
+			Name: dest
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 2:
+			Name: source
+			Type: System.IO.Stream
+			Default Value: 
+	Method: CopyBytes:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01637780
+		Ram Offset 0x181638980
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: update
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile/ZipUpdate
+			Default Value: 
+		Parameter 1:
+			Name: destination
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 2:
+			Name: source
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 3:
+			Name: bytesToCopy
+			Type: System.Int64
+			Default Value: 
+		Parameter 4:
+			Name: updateCrc
+			Type: System.Boolean
+			Default Value: 
+	Method: GetDescriptorSize:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01637A20
+		Ram Offset 0x181638c20
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: update
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile/ZipUpdate
+			Default Value: 
+	Method: CopyDescriptorBytesDirect:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01637AA0
+		Ram Offset 0x181638ca0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: update
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile/ZipUpdate
+			Default Value: 
+		Parameter 1:
+			Name: stream
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 2:
+			Name: destinationPosition
+			Type: System.Int64
+			Default Value: 
+		Parameter 3:
+			Name: sourcePosition
+			Type: System.Int64
+			Default Value: 
+	Method: CopyEntryDataDirect:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01637C60
+		Ram Offset 0x181638e60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: update
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile/ZipUpdate
+			Default Value: 
+		Parameter 1:
+			Name: stream
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 2:
+			Name: updateCrc
+			Type: System.Boolean
+			Default Value: 
+		Parameter 3:
+			Name: destinationPosition
+			Type: System.Int64
+			Default Value: 
+		Parameter 4:
+			Name: sourcePosition
+			Type: System.Int64
+			Default Value: 
+	Method: FindExistingUpdate:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01637F00
+		Ram Offset 0x181639100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: entry
+			Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+			Default Value: 
+	Method: FindExistingUpdate:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01637FE0
+		Ram Offset 0x1816391e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: fileName
+			Type: System.String
+			Default Value: 
+	Method: GetOutputStream:
+		Accessibility: Private
+		Return Type: System.IO.Stream
+		File Offset 0x016380B0
+		Ram Offset 0x1816392b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: entry
+			Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+			Default Value: 
+	Method: AddEntry:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01638260
+		Ram Offset 0x181639460
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: workFile
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile
+			Default Value: 
+		Parameter 1:
+			Name: update
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile/ZipUpdate
+			Default Value: 
+	Method: ModifyEntry:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01638750
+		Ram Offset 0x181639950
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: workFile
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile
+			Default Value: 
+		Parameter 1:
+			Name: update
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile/ZipUpdate
+			Default Value: 
+	Method: CopyEntryDirect:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x016389D0
+		Ram Offset 0x181639bd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: workFile
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile
+			Default Value: 
+		Parameter 1:
+			Name: update
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile/ZipUpdate
+			Default Value: 
+		Parameter 2:
+			Name: destinationPosition
+			Type: System.Int64
+			Default Value: 
+	Method: CopyEntry:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01638C30
+		Ram Offset 0x181639e30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: workFile
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile
+			Default Value: 
+		Parameter 1:
+			Name: update
+			Type: ICSharpCode.SharpZipLib.Zip.ZipFile/ZipUpdate
+			Default Value: 
+	Method: Reopen:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01638D80
+		Ram Offset 0x181639f80
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: source
+			Type: System.IO.Stream
+			Default Value: 
+	Method: Reopen:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01638E50
+		Ram Offset 0x18163a050
+		Virtual Method Slot: 65535
+
+	Method: UpdateCommentOnly:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01638F90
+		Ram Offset 0x18163a190
+		Virtual Method Slot: 65535
+
+	Method: RunUpdates:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01639630
+		Ram Offset 0x18163a830
+		Virtual Method Slot: 65535
+
+	Method: CheckUpdating:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0163A680
+		Ram Offset 0x18163b880
+		Virtual Method Slot: 65535
+
+	Method: System.IDisposable.Dispose:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01631A20
+		Ram Offset 0x181632c20
+		Virtual Method Slot: 5
+
+	Method: DisposeInternal:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0163A6F0
+		Ram Offset 0x18163b8f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: Dispose:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x0163A860
+		Ram Offset 0x18163ba60
+		Virtual Method Slot: 6
+
+		Parameter 0:
+			Name: disposing
+			Type: System.Boolean
+			Default Value: 
+	Method: ReadLEUshort:
+		Accessibility: Private
+		Return Type: System.UInt16
+		File Offset 0x0163A870
+		Ram Offset 0x18163ba70
+		Virtual Method Slot: 65535
+
+	Method: ReadLEUint:
+		Accessibility: Private
+		Return Type: System.UInt32
+		File Offset 0x0163A970
+		Ram Offset 0x18163bb70
+		Virtual Method Slot: 65535
+
+	Method: ReadLEUlong:
+		Accessibility: Private
+		Return Type: System.UInt64
+		File Offset 0x0163A9B0
+		Ram Offset 0x18163bbb0
+		Virtual Method Slot: 65535
+
+	Method: LocateBlockWithSignature:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x0163AA30
+		Ram Offset 0x18163bc30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: signature
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: endLocation
+			Type: System.Int64
+			Default Value: 
+		Parameter 2:
+			Name: minimumBlockSize
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: maximumVariableData
+			Type: System.Int32
+			Default Value: 
+	Method: ReadEntries:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0163AB70
+		Ram Offset 0x18163bd70
+		Virtual Method Slot: 65535
+
+	Method: LocateEntry:
+		Accessibility: Private
+		Return Type: System.Int64
+		File Offset 0x0163B5F0
+		Ram Offset 0x18163c7f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: entry
+			Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+			Default Value: 
+	Method: CreateAndInitDecryptionStream:
+		Accessibility: Private
+		Return Type: System.IO.Stream
+		File Offset 0x0163B600
+		Ram Offset 0x18163c800
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: baseStream
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 1:
+			Name: entry
+			Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+			Default Value: 
+	Method: CreateAndInitEncryptionStream:
+		Accessibility: Private
+		Return Type: System.IO.Stream
+		File Offset 0x0163BD40
+		Ram Offset 0x18163cf40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: baseStream
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 1:
+			Name: entry
+			Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+			Default Value: 
+	Method: CheckClassicPassword:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0163BF00
+		Ram Offset 0x18163d100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: classicCryptoStream
+			Type: System.Security.Cryptography.CryptoStream
+			Default Value: 
+		Parameter 1:
+			Name: entry
+			Type: ICSharpCode.SharpZipLib.Zip.ZipEntry
+			Default Value: 
+	Method: WriteEncryptionHeader:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0163BFF0
+		Ram Offset 0x18163d1f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: stream
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 1:
+			Name: crcValue
+			Type: System.Int64
+			Default Value: 

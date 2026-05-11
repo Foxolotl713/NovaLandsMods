@@ -1,0 +1,297 @@
+Type: ICSharpCode.SharpZipLib.Tar.TarBuffer:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: BlockSize
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 512
+
+	Static Field: DefaultBlockFactor
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 20
+
+	Static Field: DefaultRecordSize
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 10240
+
+	Field: inputStream
+		Type: System.IO.Stream
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Field: outputStream
+		Type: System.IO.Stream
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: recordBuffer
+		Type: System.Byte[]
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: currentBlockIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: currentRecordIndex
+		Type: System.Int32
+		Offset in Defining Type: 0x2C
+		Has Default: False
+
+	Field: recordSize
+		Type: System.Int32
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: blockFactor
+		Type: System.Int32
+		Offset in Defining Type: 0x34
+		Has Default: False
+
+	Field: isStreamOwner_
+		Type: System.Boolean
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Method: get_RecordSize:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x005ED0C0
+		Ram Offset 0x1805ee2c0
+		Virtual Method Slot: 65535
+
+	Method: GetRecordSize:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x005ED0C0
+		Ram Offset 0x1805ee2c0
+		Virtual Method Slot: 65535
+
+	Method: get_BlockFactor:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00773C00
+		Ram Offset 0x180774e00
+		Virtual Method Slot: 65535
+
+	Method: GetBlockFactor:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00773C00
+		Ram Offset 0x180774e00
+		Virtual Method Slot: 65535
+
+	Method: .ctor:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01614E60
+		Ram Offset 0x181616060
+		Virtual Method Slot: 65535
+
+	Method: CreateInputTarBuffer:
+		Accessibility: Public
+		Return Type: ICSharpCode.SharpZipLib.Tar.TarBuffer
+		File Offset 0x01614E80
+		Ram Offset 0x181616080
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputStream
+			Type: System.IO.Stream
+			Default Value: 
+	Method: CreateInputTarBuffer:
+		Accessibility: Public
+		Return Type: ICSharpCode.SharpZipLib.Tar.TarBuffer
+		File Offset 0x01614EF0
+		Ram Offset 0x1816160f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: inputStream
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 1:
+			Name: blockFactor
+			Type: System.Int32
+			Default Value: 
+	Method: CreateOutputTarBuffer:
+		Accessibility: Public
+		Return Type: ICSharpCode.SharpZipLib.Tar.TarBuffer
+		File Offset 0x016150C0
+		Ram Offset 0x1816162c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: outputStream
+			Type: System.IO.Stream
+			Default Value: 
+	Method: CreateOutputTarBuffer:
+		Accessibility: Public
+		Return Type: ICSharpCode.SharpZipLib.Tar.TarBuffer
+		File Offset 0x01615130
+		Ram Offset 0x181616330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: outputStream
+			Type: System.IO.Stream
+			Default Value: 
+		Parameter 1:
+			Name: blockFactor
+			Type: System.Int32
+			Default Value: 
+	Method: Initialize:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01615300
+		Ram Offset 0x181616500
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: archiveBlockFactor
+			Type: System.Int32
+			Default Value: 
+	Method: IsEOFBlock:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x016153C0
+		Ram Offset 0x1816165c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: block
+			Type: System.Byte[]
+			Default Value: 
+	Method: IsEndOfArchiveBlock:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x016154A0
+		Ram Offset 0x1816166a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: block
+			Type: System.Byte[]
+			Default Value: 
+	Method: SkipBlock:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01615590
+		Ram Offset 0x181616790
+		Virtual Method Slot: 65535
+
+	Method: ReadBlock:
+		Accessibility: Public
+		Return Type: System.Byte[]
+		File Offset 0x01615650
+		Ram Offset 0x181616850
+		Virtual Method Slot: 65535
+
+	Method: ReadRecord:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x01615780
+		Ram Offset 0x181616980
+		Virtual Method Slot: 65535
+
+	Method: get_CurrentBlock:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0077D120
+		Ram Offset 0x18077e320
+		Virtual Method Slot: 65535
+
+	Method: get_IsStreamOwner:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00773C10
+		Ram Offset 0x180774e10
+		Virtual Method Slot: 65535
+
+	Method: set_IsStreamOwner:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00A00810
+		Ram Offset 0x180a01a10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Boolean
+			Default Value: 
+	Method: GetCurrentBlockNum:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x0077D120
+		Ram Offset 0x18077e320
+		Virtual Method Slot: 65535
+
+	Method: get_CurrentRecord:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00477B00
+		Ram Offset 0x180478d00
+		Virtual Method Slot: 65535
+
+	Method: GetCurrentRecordNum:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00477B00
+		Ram Offset 0x180478d00
+		Virtual Method Slot: 65535
+
+	Method: WriteBlock:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01615860
+		Ram Offset 0x181616a60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: block
+			Type: System.Byte[]
+			Default Value: 
+	Method: WriteBlock:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01615A10
+		Ram Offset 0x181616c10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: buffer
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: offset
+			Type: System.Int32
+			Default Value: 
+	Method: WriteRecord:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01615C60
+		Ram Offset 0x181616e60
+		Virtual Method Slot: 65535
+
+	Method: WriteFinalRecord:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01615D10
+		Ram Offset 0x181616f10
+		Virtual Method Slot: 65535
+
+	Method: Close:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01615DC0
+		Ram Offset 0x181616fc0
+		Virtual Method Slot: 65535

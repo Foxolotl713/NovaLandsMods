@@ -1,0 +1,320 @@
+Type: SashaBuildStoreAction:
+	Base Class: 
+		BaseNPCAction
+
+	Interfaces:
+
+	Nested Types:
+		SashaBuildStoreAction/<InvokeRealtimeCoroutine>d__48
+
+	Field: storeBuildingPrefab
+		Type: BaseBuilding
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: storePositionTag
+		Type: System.String
+		Offset in Defining Type: 0x50
+		Has Default: False
+
+	Field: playerPositionOnFinishBuilding
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x58
+		Has Default: False
+
+	Field: buildBuildingAnimator
+		Type: UnityEngine.Animator
+		Offset in Defining Type: 0x60
+		Has Default: False
+
+	Field: buildBuildingAnimatorOffset
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x68
+		Has Default: False
+
+	Field: focusStorePositionOffset
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x70
+		Has Default: False
+
+	Field: delayToFocusStorePosition
+		Type: System.Single
+		Offset in Defining Type: 0x78
+		Has Default: False
+
+	Field: timeToFocusStorePosition
+		Type: System.Single
+		Offset in Defining Type: 0x7C
+		Has Default: False
+
+	Field: focusStorePositionEase
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0x80
+		Has Default: False
+
+	Field: step1AnimationName
+		Type: System.String
+		Offset in Defining Type: 0x88
+		Has Default: False
+
+	Field: step1Duration
+		Type: System.Single
+		Offset in Defining Type: 0x90
+		Has Default: False
+
+	Field: step2AnimationName
+		Type: System.String
+		Offset in Defining Type: 0x98
+		Has Default: False
+
+	Field: step2FadeOutDuration
+		Type: System.Single
+		Offset in Defining Type: 0xA0
+		Has Default: False
+
+	Field: step2FadeInDuration
+		Type: System.Single
+		Offset in Defining Type: 0xA4
+		Has Default: False
+
+	Field: delayToFadeOut
+		Type: System.Single
+		Offset in Defining Type: 0xA8
+		Has Default: False
+
+	Field: fadeOutDuration
+		Type: System.Single
+		Offset in Defining Type: 0xAC
+		Has Default: False
+
+	Field: constructDuration
+		Type: System.Single
+		Offset in Defining Type: 0xB0
+		Has Default: False
+
+	Field: buildStoreSfx
+		Type: System.String
+		Offset in Defining Type: 0xB8
+		Has Default: False
+
+	Field: fadeInDuration
+		Type: System.Single
+		Offset in Defining Type: 0xC0
+		Has Default: False
+
+	Field: delayToFocusPlayer
+		Type: System.Single
+		Offset in Defining Type: 0xC4
+		Has Default: False
+
+	Field: timeToFocusPlayer
+		Type: System.Single
+		Offset in Defining Type: 0xC8
+		Has Default: False
+
+	Field: focusPlayerEase
+		Type: DG.Tweening.Ease
+		Offset in Defining Type: 0xCC
+		Has Default: False
+
+	Field: delayToEnableInput
+		Type: System.Single
+		Offset in Defining Type: 0xD0
+		Has Default: False
+
+	Field: originalPlayerParent
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0xD8
+		Has Default: False
+
+	Field: buildBuildingAnimatorInstance
+		Type: UnityEngine.Animator
+		Offset in Defining Type: 0xE0
+		Has Default: False
+
+	Field: foundationBuilding
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0xE8
+		Has Default: False
+
+	Field: workingCharacters
+		Type: BaseNPC[]
+		Offset in Defining Type: 0xF0
+		Has Default: False
+
+	Field: playerPositionTransform
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0xF8
+		Has Default: False
+
+	Field: storePosition
+		Type: UnityEngine.GameObject
+		Offset in Defining Type: 0x100
+		Has Default: False
+
+	Method: ExecuteAction:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x0071F940
+		Ram Offset 0x180720b40
+		Virtual Method Slot: 5
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+	Method: FocusStorePosition:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00720060
+		Ram Offset 0x180721260
+		Virtual Method Slot: 65535
+
+	Method: OnCompleteFocusStorePosition:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00720210
+		Ram Offset 0x180721410
+		Virtual Method Slot: 65535
+
+	Method: FadeScreenOutStep0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x007202A0
+		Ram Offset 0x1807214a0
+		Virtual Method Slot: 65535
+
+	Method: AnimationEventHandlerAction:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00720380
+		Ram Offset 0x180721580
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: animationEvent
+			Type: System.String
+			Default Value: 
+	Method: EnableCharacters:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00720530
+		Ram Offset 0x180721730
+		Virtual Method Slot: 65535
+
+	Method: PlayCharactersBuildingAnimations:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x007206A0
+		Ram Offset 0x1807218a0
+		Virtual Method Slot: 65535
+
+	Method: SetIslandNPCVisible:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x007207E0
+		Ram Offset 0x1807219e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: enable
+			Type: System.Boolean
+			Default Value: 
+	Method: OnCompleteFadeOutStep0:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00720850
+		Ram Offset 0x180721a50
+		Virtual Method Slot: 65535
+
+	Method: PlayStep1Animation:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x007211C0
+		Ram Offset 0x1807223c0
+		Virtual Method Slot: 65535
+
+	Method: OnCompleteFadeInStep1:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00721210
+		Ram Offset 0x180722410
+		Virtual Method Slot: 65535
+
+	Method: Step2:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x007212D0
+		Ram Offset 0x1807224d0
+		Virtual Method Slot: 65535
+
+	Method: OnCompleteFadeOut:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x007213B0
+		Ram Offset 0x1807225b0
+		Virtual Method Slot: 65535
+
+	Method: DestroyBoxes:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00721930
+		Ram Offset 0x180722b30
+		Virtual Method Slot: 65535
+
+	Method: FadeInScreen:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00721DB0
+		Ram Offset 0x180722fb0
+		Virtual Method Slot: 65535
+
+	Method: OnCompleteFadeIn:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00721E90
+		Ram Offset 0x180723090
+		Virtual Method Slot: 65535
+
+	Method: FocusPlayer:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00721F20
+		Ram Offset 0x180723120
+		Virtual Method Slot: 65535
+
+	Method: OnCompleteFocusPlayer:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00722000
+		Ram Offset 0x180723200
+		Virtual Method Slot: 65535
+
+	Method: FinishAction:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00722090
+		Ram Offset 0x180723290
+		Virtual Method Slot: 65535
+
+	Method: InvokeRealtimeCoroutine:
+		Accessibility: Private
+		Return Type: System.Collections.IEnumerator
+		File Offset 0x007223F0
+		Ram Offset 0x1807235f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: System.Action
+			Default Value: 
+		Parameter 1:
+			Name: duration
+			Type: System.Single
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x007224B0
+		Ram Offset 0x1807236b0
+		Virtual Method Slot: 65535

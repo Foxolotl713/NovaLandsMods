@@ -1,0 +1,632 @@
+Type: SleepPopupResourceProductionItem
+
+Method: System.Void SleepPopupResourceProductionItem::Setup(UnityEngine.Sprite,System.Int32,System.Int32,System.Int32,System.Int32):	Method Body (x86 ASM):
+		0x1806A0120 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1806A0125 mov [rsp+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 16 | None ||| N/A | N/A
+		0x1806A012A push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806A012B sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1806A012F mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1806A0132 mov edi,r9d		; DEBUG: {Register}/EDI {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1806A0135 mov rcx,[rcx+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x1806A0139 mov esi,r8d		; DEBUG: {Register}/ESI {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1806A013C test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1806A013F je short 00000001806A0178h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0141 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1806A0144 call 0000000182581060h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0149 mov r9d,[rsp+68h]		; DEBUG: {Register}/R9D {Memory}/None ||| RSP | 104 | None ||| N/A | N/A
+		0x1806A014E mov edx,edi		; DEBUG: {Register}/EDX {Register}/EDI ||| None | 0 | None ||| N/A | N/A
+		0x1806A0150 mov r8d,[rsp+60h]		; DEBUG: {Register}/R8D {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x1806A0155 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1806A0158 mov [rbx+48h],esi		; DEBUG: {Memory}/None {Register}/ESI ||| RBX | 72 | None ||| N/A | N/A
+		0x1806A015B mov qword ptr [rsp+60h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 96 | None ||| N/A | 0
+		0x1806A0164 mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1806A0169 mov rsi,[rsp+48h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x1806A016E add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1806A0172 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806A0173 jmp near ptr 00000001806A02A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0178 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A017D int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SleepPopupResourceProductionItem::Setup(UnityEngine.Sprite,System.Int32,System.Int32,System.Int32,System.Int32):
+		End of function at 0x1806A017E
+		Absolute End is at 0x1806A017E
+		Identified Jump Destination addresses:
+
+		0x1806A012A: Saves the content of rdi to the stack
+		0x1806A012F: Copies {'this' (function parameter, type SleepPopupResourceProductionItem)} from rcx into rbx
+		0x1806A0132: Copies {'currentProducedResources' (function parameter, type System.Int32)} from r9 into rdi
+		0x1806A0135: [!] Reads field resourceIcon from {'this' (function parameter, type SleepPopupResourceProductionItem)} and stores in a new local {'resourceIcon' (type UnityEngine.UI.Image)}
+
+		0x1806A0139: Copies {'numberOfResourcesToProduceBonus' (function parameter, type System.Int32)} from r8 into rsi
+		0x1806A013C: [!] Compares {'resourceIcon' (type UnityEngine.UI.Image)} and 0
+		0x1806A013F: Jumps to 0x1806A0178 (which throws a NRE) if resourceIcon equals 0. Implicitly present in managed code, so ignored here.
+		0x1806A0144: [!] Calls managed method System.Void UnityEngine.UI.Image::set_sprite(UnityEngine.Sprite) on instance {'resourceIcon' (type UnityEngine.UI.Image)} with arguments [{'icon' (function parameter, type UnityEngine.Sprite)}]
+
+		0x1806A0149: Reads unknown value in stack, offset 104 (0x68) and stores the pointer in register r9 as new constant constant2
+		0x1806A014E: Copies {'currentProducedResources' (function parameter, type System.Int32)} from rdi into rdx
+		0x1806A0150: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register r8 as new constant constant3
+		0x1806A0155: Copies {'this' (function parameter, type SleepPopupResourceProductionItem)} from rbx into rcx
+		0x1806A0158: [!] Sets the field numberOfResourcesToProduceBonus (Type System.Int32) on local {'this' (function parameter, type SleepPopupResourceProductionItem)} to the value stored in {'numberOfResourcesToProduceBonus' (function parameter, type System.Int32)}
+		0x1806A015B: Moves 0 (immediate ulong value) to the stack at offset 96 as a new local local8
+		0x1806A0164: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant4
+		0x1806A0169: Reads unknown value in stack, offset 72 (0x48) and stores the pointer in register rsi as new constant constant5
+		0x1806A0173: [!] Calls managed method System.Void SleepPopupResourceProductionItem::UpdateProductionResources(System.Int32,System.Int32,System.Int32) on instance {'this' (function parameter, type SleepPopupResourceProductionItem)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x1806A0173: [!] Returns from the function
+
+		0x1806A0178: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SleepPopupResourceProductionItem
+	System.Void Setup(UnityEngine.Sprite icon, System.Int32 numberOfResourcesToProduceBonus, System.Int32 currentProducedResources, System.Int32 currentProducedBonus, System.Int32 currentBonusProgress)
+		UnityEngine.UI.Image resourceIcon = this.resourceIcon
+
+		resourceIcon.sprite = icon
+		this.numberOfResourcesToProduceBonus = numberOfResourcesToProduceBonus
+
+		this.UpdateProductionResources()
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionAction at (0x1806A0173) is corrupt (Couldn't get arguments, or actual count (-1) is not equal to expected count (3)) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void SleepPopupResourceProductionItem::SetCurrentProducedAmount(System.Int32):	Method Body (x86 ASM):
+		0x1806A0180 mov [rsp+10h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RSP | 16 | None ||| N/A | N/A
+		0x1806A0184 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806A0185 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1806A0189 mov rbx,[rcx+28h]		; DEBUG: {Register}/RBX {Memory}/None ||| RCX | 40 | None ||| N/A | N/A
+		0x1806A018D mov [rcx+4Ch],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RCX | 76 | None ||| N/A | N/A
+		0x1806A0190 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1806A0192 lea rcx,[rsp+38h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1806A0197 call 0000000181899170h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A019C test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1806A019F je short 00000001806A01BDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A01A1 mov r9,[rbx]		; DEBUG: {Register}/R9 {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x1806A01A4 mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1806A01A7 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1806A01AA mov r8,[r9+560h]		; DEBUG: {Register}/R8 {Memory}/None ||| R9 | 1376 | None ||| N/A | N/A
+		0x1806A01B1 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1806A01B5 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806A01B6 jmp qword ptr [r9+558h]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 1368 | None ||| N/A | N/A
+		0x1806A01BD call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A01C2 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SleepPopupResourceProductionItem::SetCurrentProducedAmount(System.Int32):
+		End of function at 0x1806A01C3
+		Absolute End is at 0x1806A01C3
+		Identified Jump Destination addresses:
+
+		0x1806A0180: Moves amount (type System.Int32) from register rdx to the stack at offset 16 (0x10)
+		0x1806A0184: Saves the content of rbx to the stack
+		0x1806A0189: [!] Reads field currentProducedAmountLabel from {'this' (function parameter, type SleepPopupResourceProductionItem)} and stores in a new local {'currentProducedAmountLabel' (type TMPro.TextMeshProUGUI)}
+
+		0x1806A018D: [!] Sets the field currentTotalResources (Type System.Int32) on local {'this' (function parameter, type SleepPopupResourceProductionItem)} to the value stored in {'amount' (function parameter, type System.Int32)}
+		0x1806A0192: Loads a pointer to stack offset 0x38 into register rcx as new constant constant1
+		0x1806A0197: [!] Calls managed method System.String System.Int32::ToString() on instance  and stores the result in {'string' (type System.String)}
+
+		0x1806A019C: [!] Compares {'currentProducedAmountLabel' (type TMPro.TextMeshProUGUI)} and 0
+		0x1806A019F: Jumps to 0x1806A01BD (which throws a NRE) if currentProducedAmountLabel equals 0. Implicitly present in managed code, so ignored here.
+		0x1806A01A1: Loads the class pointer from currentProducedAmountLabel into a constant constant3 in register r9
+		0x1806A01A4: Copies {'string' (type System.String)} from rax into rdx
+		0x1806A01A7: Copies {'currentProducedAmountLabel' (type TMPro.TextMeshProUGUI)} from rbx into rcx
+		0x1806A01AA: Loads the pointer to the implementation of virtual function System.Void TMPro.TMP_Text::set_text(System.String) specific to TMPro.TextMeshProUGUI from the class pointer in r9, slot 66 (from memory offset 1376) and stores in constant constant4
+		0x1806A01B6: [!] Calls managed method System.Xml.XmlNameTable System.Xml.IDtdParserAdapter::get_NameTable() on instance {'currentProducedAmountLabel' (type TMPro.TextMeshProUGUI)} and stores the result in {'nameTable' (type System.Xml.XmlNameTable)} ;  - Leftover parameters detected, but first few match.
+
+		0x1806A01B6: [!] Returns from the function
+
+		0x1806A01BD: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SleepPopupResourceProductionItem
+	System.Void SetCurrentProducedAmount(System.Int32 amount)
+		TMPro.TextMeshProUGUI currentProducedAmountLabel = this.currentProducedAmountLabel
+		this.currentTotalResources = amount
+
+		System.String string = .ToString()
+
+		System.Xml.XmlNameTable nameTable = currentProducedAmountLabel.NameTable
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionAction at (0x1806A0197) is corrupt (Method is non-static but don't have an instance) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void SleepPopupResourceProductionItem::SetCurrenBonusAmount(System.Int32):	Method Body (x86 ASM):
+		0x1806A01D0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1806A01D5 mov [rsp+10h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RSP | 16 | None ||| N/A | N/A
+		0x1806A01D9 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806A01DA sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1806A01DE cmp byte ptr [18329AE17h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514135 | None ||| N/A | 0
+		0x1806A01E5 mov edi,edx		; DEBUG: {Register}/EDI {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1806A01E7 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1806A01EA jne short 00000001806A0217h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A01EC lea rcx,[1830FBA48h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813320 | None ||| N/A | N/A
+		0x1806A01F3 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A01F8 lea rcx,[1831028C8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493841608 | None ||| N/A | N/A
+		0x1806A01FF call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0204 lea rcx,[1830F7258h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493794904 | None ||| N/A | N/A
+		0x1806A020B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0210 mov byte ptr [18329AE17h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514135 | None ||| N/A | 1
+		0x1806A0217 mov [rbx+50h],edi		; DEBUG: {Memory}/None {Register}/EDI ||| RBX | 80 | None ||| N/A | N/A
+		0x1806A021A mov rcx,[1830FBA48h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813320 | None ||| N/A | N/A
+		0x1806A0221 mov rdi,[rbx+38h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 56 | None ||| N/A | N/A
+		0x1806A0225 mov rbx,[rbx+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RBX | 48 | None ||| N/A | N/A
+		0x1806A0229 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1806A0230 jne short 00000001806A0237h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0232 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0237 mov rdx,[1830F7258h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493794904 | None ||| N/A | N/A
+		0x1806A023E xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1806A0241 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1806A0244 call 0000000180842350h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0249 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1806A024B lea rcx,[rsp+38h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1806A0250 mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1806A0253 call 0000000181899170h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0258 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1806A025B je short 00000001806A0298h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A025D mov rdx,[1831028C8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493841608 | None ||| N/A | N/A
+		0x1806A0264 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1806A0267 mov r8,rax		; DEBUG: {Register}/R8 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1806A026A mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1806A026D call 00000001816CB970h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0272 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1806A0275 je short 00000001806A0298h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0277 mov r9,[rdi]		; DEBUG: {Register}/R9 {Memory}/None ||| RDI | 0 | None ||| N/A | N/A
+		0x1806A027A mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1806A027D mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1806A0280 mov r8,[r9+560h]		; DEBUG: {Register}/R8 {Memory}/None ||| R9 | 1376 | None ||| N/A | N/A
+		0x1806A0287 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1806A028C add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1806A0290 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806A0291 jmp qword ptr [r9+558h]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 1368 | None ||| N/A | N/A
+		0x1806A0298 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A029D int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SleepPopupResourceProductionItem::SetCurrenBonusAmount(System.Int32):
+		End of function at 0x1806A029E
+		Absolute End is at 0x1806A029E
+		Identified Jump Destination addresses:
+
+		0x1806A01D5: Moves amount (type System.Int32) from register rdx to the stack at offset 16 (0x10)
+		0x1806A01D9: Saves the content of rdi to the stack
+		0x1806A01DE: Compares {Unknown Global at 0x18329AE17, first ten bytes are [2 80 175 3 0 217 175 3 0 132], or as chars "P¯ Ù¯ "} and 0
+		0x1806A01E5: Copies {'amount' (function parameter, type System.Int32)} from rdx into rdi
+		0x1806A01E7: Copies {'this' (function parameter, type SleepPopupResourceProductionItem)} from rcx into rbx
+		0x1806A01EA: Jumps to 0x1806A0217 if {Unknown Global at 0x18329AE17, first ten bytes are [2 80 175 3 0 217 175 3 0 132], or as chars "P¯ Ù¯ "} != 0
+
+		0x1806A01EC: Loads the type definition for managed type StringTable as a constant "StringTable" in rcx
+		0x1806A01F3: Initializes runtime metadata value StringTable
+		0x1806A01F8: Loads the string literal "{0}" as a constant "constant4" in rcx
+		0x1806A01FF: Initializes runtime metadata value {0}
+		0x1806A0204: Loads the string literal "" as a constant "constant5" in rcx
+		0x1806A020B: Initializes runtime metadata value 
+		0x1806A0217: [!] Sets the field currentTotalBonus (Type System.Int32) on local {'this' (function parameter, type SleepPopupResourceProductionItem)} to the value stored in {'amount' (function parameter, type System.Int32)}
+		0x1806A021A: Loads the type definition for managed type StringTable as a constant "StringTable" in rcx
+		0x1806A0221: [!] Reads field currentBonusAmountLabel from {'this' (function parameter, type SleepPopupResourceProductionItem)} and stores in a new local {'currentBonusAmountLabel' (type TMPro.TextMeshProUGUI)}
+
+		0x1806A0225: [!] Reads field currentBonusAmountMask from {'this' (function parameter, type SleepPopupResourceProductionItem)} and stores in a new local {'currentBonusAmountMask' (type System.String)}
+
+		0x1806A0229: Compares "{il2cpp field StringTable->cctor_finished}" and 0
+		0x1806A0230: Jumps to 0x1806A0237 if "{il2cpp field StringTable->cctor_finished}" != 0
+
+		0x1806A0232: Calls the il2cpp cctor for the type StringTable
+		0x1806A0237: Loads the string literal "" as a constant "constant9" in rdx
+		0x1806A0241: Copies {'currentBonusAmountMask' (type System.String)} from rbx into rcx
+		0x1806A0244: [!] Calls static managed method System.String StringTable::GetText(System.String,System.String) with arguments [{'currentBonusAmountMask' (type System.String)}, ""] and stores the result in {'text' (type System.String)}
+
+		0x1806A024B: Loads a pointer to stack offset 0x38 into register rcx as new constant constant10
+		0x1806A0250: Copies {'text' (type System.String)} from rax into rbx
+		0x1806A0253: [!] Calls managed method System.String System.Int32::ToString() on instance  and stores the result in {'string' (type System.String)}
+
+		0x1806A0258: [!] Compares {'text' (type System.String)} and 0
+		0x1806A025B: Jumps to 0x1806A0298 (which throws a NRE) if text equals 0. Implicitly present in managed code, so ignored here.
+		0x1806A025D: Loads the string literal "{0}" as a constant "constant12" in rdx
+		0x1806A0267: Copies {'string' (type System.String)} from rax into r8
+		0x1806A026A: Copies {'text' (type System.String)} from rbx into rcx
+		0x1806A026D: [!] Calls managed method System.String System.String::Replace(System.String,System.String) on instance {'text' (type System.String)} with arguments ["{0}", {'string' (type System.String)}] and stores the result in {'string2' (type System.String)}
+
+		0x1806A0272: [!] Compares {'currentBonusAmountLabel' (type TMPro.TextMeshProUGUI)} and 0
+		0x1806A0275: Jumps to 0x1806A0298 (which throws a NRE) if currentBonusAmountLabel equals 0. Implicitly present in managed code, so ignored here.
+		0x1806A0277: Loads the class pointer from currentBonusAmountLabel into a constant constant14 in register r9
+		0x1806A027A: Copies {'string2' (type System.String)} from rax into rdx
+		0x1806A027D: Copies {'currentBonusAmountLabel' (type TMPro.TextMeshProUGUI)} from rdi into rcx
+		0x1806A0280: Loads the pointer to the implementation of virtual function System.Void TMPro.TMP_Text::set_text(System.String) specific to TMPro.TextMeshProUGUI from the class pointer in r9, slot 66 (from memory offset 1376) and stores in constant constant15
+		0x1806A0287: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant16
+		0x1806A0291: [!] Calls managed method System.Xml.XmlNameTable System.Xml.IDtdParserAdapter::get_NameTable() on instance {'currentBonusAmountLabel' (type TMPro.TextMeshProUGUI)} and stores the result in {'nameTable' (type System.Xml.XmlNameTable)} ;  - Leftover parameters detected, but first few match.
+
+		0x1806A0291: [!] Returns from the function
+
+		0x1806A0298: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SleepPopupResourceProductionItem
+	System.Void SetCurrenBonusAmount(System.Int32 amount)
+		this.currentTotalBonus = amount
+		TMPro.TextMeshProUGUI currentBonusAmountLabel = this.currentBonusAmountLabel
+		System.String currentBonusAmountMask = this.currentBonusAmountMask
+
+		System.String text = StringTable.GetText(currentBonusAmountMask, "") //(String textId, String language)
+
+		System.String string = .ToString()
+
+		System.String string2 = text.Replace("{0}", string) //(String oldValue, String newValue)
+
+		System.Xml.XmlNameTable nameTable = currentBonusAmountLabel.NameTable
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionAction at (0x1806A0253) is corrupt (Method is non-static but don't have an instance) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void SleepPopupResourceProductionItem::UpdateProductionResources(System.Int32,System.Int32,System.Int32):	Method Body (x86 ASM):
+		0x1806A02A0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1806A02A5 mov [rsp+18h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 24 | None ||| N/A | N/A
+		0x1806A02AA mov [rsp+20h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 32 | None ||| N/A | N/A
+		0x1806A02AF push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806A02B0 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1806A02B4 mov rdi,[rcx+28h]		; DEBUG: {Register}/RDI {Memory}/None ||| RCX | 40 | None ||| N/A | N/A
+		0x1806A02B8 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1806A02BB mov [rcx+4Ch],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RCX | 76 | None ||| N/A | N/A
+		0x1806A02BE mov ebp,r9d		; DEBUG: {Register}/EBP {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1806A02C1 mov [rsp+38h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RSP | 56 | None ||| N/A | N/A
+		0x1806A02C5 lea rcx,[rsp+38h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1806A02CA xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1806A02CC mov esi,r8d		; DEBUG: {Register}/ESI {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1806A02CF call 0000000181899170h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A02D4 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1806A02D7 je near ptr 00000001806A03DBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A02DD mov r9,[rdi]		; DEBUG: {Register}/R9 {Memory}/None ||| RDI | 0 | None ||| N/A | N/A
+		0x1806A02E0 mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1806A02E3 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1806A02E6 mov r8,[r9+560h]		; DEBUG: {Register}/R8 {Memory}/None ||| R9 | 1376 | None ||| N/A | N/A
+		0x1806A02ED call qword ptr [r9+558h]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 1368 | None ||| N/A | N/A
+		0x1806A02F4 cmp byte ptr [18329AE17h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514135 | None ||| N/A | 0
+		0x1806A02FB mov [rsp+38h],esi		; DEBUG: {Memory}/None {Register}/ESI ||| RSP | 56 | None ||| N/A | N/A
+		0x1806A02FF jne short 00000001806A032Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0301 lea rcx,[1830FBA48h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813320 | None ||| N/A | N/A
+		0x1806A0308 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A030D lea rcx,[1831028C8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493841608 | None ||| N/A | N/A
+		0x1806A0314 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0319 lea rcx,[1830F7258h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493794904 | None ||| N/A | N/A
+		0x1806A0320 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0325 mov byte ptr [18329AE17h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514135 | None ||| N/A | 1
+		0x1806A032C mov rdi,[rbx+38h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 56 | None ||| N/A | N/A
+		0x1806A0330 mov [rbx+50h],esi		; DEBUG: {Memory}/None {Register}/ESI ||| RBX | 80 | None ||| N/A | N/A
+		0x1806A0333 mov rcx,[1830FBA48h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813320 | None ||| N/A | N/A
+		0x1806A033A mov rsi,[rbx+30h]		; DEBUG: {Register}/RSI {Memory}/None ||| RBX | 48 | None ||| N/A | N/A
+		0x1806A033E cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1806A0345 jne short 00000001806A034Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0347 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A034C mov rdx,[1830F7258h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493794904 | None ||| N/A | N/A
+		0x1806A0353 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1806A0356 mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1806A0359 call 0000000180842350h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A035E xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1806A0360 lea rcx,[rsp+38h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1806A0365 mov rsi,rax		; DEBUG: {Register}/RSI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1806A0368 call 0000000181899170h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A036D test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1806A0370 je short 00000001806A03DBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0372 mov rdx,[1831028C8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493841608 | None ||| N/A | N/A
+		0x1806A0379 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1806A037C mov r8,rax		; DEBUG: {Register}/R8 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1806A037F mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1806A0382 call 00000001816CB970h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0387 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1806A038A je short 00000001806A03DBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A038C mov r9,[rdi]		; DEBUG: {Register}/R9 {Memory}/None ||| RDI | 0 | None ||| N/A | N/A
+		0x1806A038F mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1806A0392 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1806A0395 mov r8,[r9+560h]		; DEBUG: {Register}/R8 {Memory}/None ||| R9 | 1376 | None ||| N/A | N/A
+		0x1806A039C call qword ptr [r9+558h]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 1368 | None ||| N/A | N/A
+		0x1806A03A3 mov rcx,[rbx+40h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 64 | None ||| N/A | N/A
+		0x1806A03A7 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1806A03AA je short 00000001806A03DBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A03AC movd xmm0,dword ptr [rbx+48h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 72 | None ||| N/A | N/A
+		0x1806A03B1 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1806A03B4 movd xmm1,ebp		; DEBUG: {Register}/XMM1 {Register}/EBP ||| None | 0 | None ||| N/A | N/A
+		0x1806A03B8 cvtdq2ps xmm1,xmm1		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x1806A03BB cvtdq2ps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1806A03BE divss xmm1,xmm0		; DEBUG: {Register}/XMM1 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1806A03C2 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1806A03C7 mov rbp,[rsp+40h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1806A03CC mov rsi,[rsp+48h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x1806A03D1 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1806A03D5 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806A03D6 jmp near ptr 0000000182581F10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A03DB call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A03E0 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SleepPopupResourceProductionItem::UpdateProductionResources(System.Int32,System.Int32,System.Int32):
+		End of function at 0x1806A03E1
+		Absolute End is at 0x1806A03E1
+		Identified Jump Destination addresses:
+
+		0x1806A02AF: Saves the content of rdi to the stack
+		0x1806A02B4: [!] Reads field currentProducedAmountLabel from {'this' (function parameter, type SleepPopupResourceProductionItem)} and stores in a new local {'currentProducedAmountLabel' (type TMPro.TextMeshProUGUI)}
+
+		0x1806A02B8: Copies {'this' (function parameter, type SleepPopupResourceProductionItem)} from rcx into rbx
+		0x1806A02BB: [!] Sets the field currentTotalResources (Type System.Int32) on local {'this' (function parameter, type SleepPopupResourceProductionItem)} to the value stored in {'producedResources' (function parameter, type System.Int32)}
+		0x1806A02BE: Copies {'currentBonusProgress' (function parameter, type System.Int32)} from r9 into rbp
+		0x1806A02C1: Moves producedResources (type System.Int32) from register rdx to the stack at offset 56 (0x38)
+		0x1806A02C5: Loads a pointer to stack offset 0x38 into register rcx as new constant constant1
+		0x1806A02CC: Copies {'currentBonusAmount' (function parameter, type System.Int32)} from r8 into rsi
+		0x1806A02CF: [!] Calls managed method System.String System.Int32::ToString() on instance  and stores the result in {'string' (type System.String)}
+
+		0x1806A02D4: [!] Compares {'currentProducedAmountLabel' (type TMPro.TextMeshProUGUI)} and 0
+		0x1806A02D7: Jumps to 0x1806A03DB (which throws a NRE) if currentProducedAmountLabel equals 0. Implicitly present in managed code, so ignored here.
+		0x1806A02DD: Loads the class pointer from currentProducedAmountLabel into a constant constant3 in register r9
+		0x1806A02E0: Copies {'string' (type System.String)} from rax into rdx
+		0x1806A02E3: Copies {'currentProducedAmountLabel' (type TMPro.TextMeshProUGUI)} from rdi into rcx
+		0x1806A02E6: Loads the pointer to the implementation of virtual function System.Void TMPro.TMP_Text::set_text(System.String) specific to TMPro.TextMeshProUGUI from the class pointer in r9, slot 66 (from memory offset 1376) and stores in constant constant4
+		0x1806A02ED: [!] Calls managed method System.Void TMPro.TMP_Text::set_text(System.String) on instance {'currentProducedAmountLabel' (type TMPro.TextMeshProUGUI)} with arguments [{'string' (type System.String)}]
+
+		0x1806A02F4: Compares {Unknown Global at 0x18329AE17, first ten bytes are [2 80 175 3 0 217 175 3 0 132], or as chars "P¯ Ù¯ "} and 0
+		0x1806A02FB: Moves currentBonusAmount (type System.Int32) from register rsi to the stack at offset 56 (0x38)
+		0x1806A02FF: Jumps to 0x1806A032C if {Unknown Global at 0x18329AE17, first ten bytes are [2 80 175 3 0 217 175 3 0 132], or as chars "P¯ Ù¯ "} != 0
+
+		0x1806A0301: Loads the type definition for managed type StringTable as a constant "StringTable" in rcx
+		0x1806A0308: Initializes runtime metadata value StringTable
+		0x1806A030D: Loads the string literal "{0}" as a constant "constant8" in rcx
+		0x1806A0314: Initializes runtime metadata value {0}
+		0x1806A0319: Loads the string literal "" as a constant "constant9" in rcx
+		0x1806A0320: Initializes runtime metadata value 
+		0x1806A032C: [!] Reads field currentBonusAmountLabel from {'this' (function parameter, type SleepPopupResourceProductionItem)} and stores in a new local {'currentBonusAmountLabel' (type TMPro.TextMeshProUGUI)}
+
+		0x1806A0330: [!] Sets the field currentTotalBonus (Type System.Int32) on local {'this' (function parameter, type SleepPopupResourceProductionItem)} to the value stored in {'currentBonusAmount' (function parameter, type System.Int32)}
+		0x1806A0333: Loads the type definition for managed type StringTable as a constant "StringTable" in rcx
+		0x1806A033A: [!] Reads field currentBonusAmountMask from {'this' (function parameter, type SleepPopupResourceProductionItem)} and stores in a new local {'currentBonusAmountMask' (type System.String)}
+
+		0x1806A033E: Compares "{il2cpp field StringTable->cctor_finished}" and 0
+		0x1806A0345: Jumps to 0x1806A034C if "{il2cpp field StringTable->cctor_finished}" != 0
+
+		0x1806A0347: Calls the il2cpp cctor for the type StringTable
+		0x1806A034C: Loads the string literal "" as a constant "constant13" in rdx
+		0x1806A0356: Copies {'currentBonusAmountMask' (type System.String)} from rsi into rcx
+		0x1806A0359: [!] Calls static managed method System.String StringTable::GetText(System.String,System.String) with arguments [{'currentBonusAmountMask' (type System.String)}, ""] and stores the result in {'text' (type System.String)}
+
+		0x1806A0360: Loads a pointer to stack offset 0x38 into register rcx as new constant constant14
+		0x1806A0365: Copies {'text' (type System.String)} from rax into rsi
+		0x1806A0368: [!] Calls managed method System.String System.Int32::ToString() on instance  and stores the result in {'string2' (type System.String)}
+
+		0x1806A036D: [!] Compares {'text' (type System.String)} and 0
+		0x1806A0370: Jumps to 0x1806A03DB (which throws a NRE) if text equals 0. Implicitly present in managed code, so ignored here.
+		0x1806A0372: Loads the string literal "{0}" as a constant "constant16" in rdx
+		0x1806A037C: Copies {'string2' (type System.String)} from rax into r8
+		0x1806A037F: Copies {'text' (type System.String)} from rsi into rcx
+		0x1806A0382: [!] Calls managed method System.String System.String::Replace(System.String,System.String) on instance {'text' (type System.String)} with arguments ["{0}", {'string2' (type System.String)}] and stores the result in {'string3' (type System.String)}
+
+		0x1806A0387: [!] Compares {'currentBonusAmountLabel' (type TMPro.TextMeshProUGUI)} and 0
+		0x1806A038A: Jumps to 0x1806A03DB (which throws a NRE) if currentBonusAmountLabel equals 0. Implicitly present in managed code, so ignored here.
+		0x1806A038C: Loads the class pointer from currentBonusAmountLabel into a constant constant18 in register r9
+		0x1806A038F: Copies {'string3' (type System.String)} from rax into rdx
+		0x1806A0392: Copies {'currentBonusAmountLabel' (type TMPro.TextMeshProUGUI)} from rdi into rcx
+		0x1806A0395: Loads the pointer to the implementation of virtual function System.Void TMPro.TMP_Text::set_text(System.String) specific to TMPro.TextMeshProUGUI from the class pointer in r9, slot 66 (from memory offset 1376) and stores in constant constant19
+		0x1806A039C: [!] Calls managed method System.Void TMPro.TMP_Text::set_text(System.String) on instance {'currentBonusAmountLabel' (type TMPro.TextMeshProUGUI)} with arguments [{'string3' (type System.String)}]
+
+		0x1806A03A3: [!] Reads field bonusProgressBar from {'this' (function parameter, type SleepPopupResourceProductionItem)} and stores in a new local {'bonusProgressBar' (type UnityEngine.UI.Image)}
+
+		0x1806A03A7: [!] Compares {'bonusProgressBar' (type UnityEngine.UI.Image)} and 0
+		0x1806A03AA: Jumps to 0x1806A03DB (which throws a NRE) if bonusProgressBar equals 0. Implicitly present in managed code, so ignored here.
+		0x1806A03C2: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant21
+		0x1806A03C7: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbp as new constant constant22
+		0x1806A03CC: Reads unknown value in stack, offset 72 (0x48) and stores the pointer in register rsi as new constant constant23
+		0x1806A03D6: [!] Calls managed method System.Void UnityEngine.UI.Image::set_fillAmount(System.Single) on instance {'bonusProgressBar' (type UnityEngine.UI.Image)} ;  - parameters do not match, but there is only one function at this address.
+
+		0x1806A03D6: [!] Returns from the function
+
+		0x1806A03DB: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SleepPopupResourceProductionItem
+	System.Void UpdateProductionResources(System.Int32 producedResources, System.Int32 currentBonusAmount, System.Int32 currentBonusProgress)
+		TMPro.TextMeshProUGUI currentProducedAmountLabel = this.currentProducedAmountLabel
+		this.currentTotalResources = producedResources
+
+		System.String string = .ToString()
+
+		currentProducedAmountLabel.text = string
+		TMPro.TextMeshProUGUI currentBonusAmountLabel = this.currentBonusAmountLabel
+		this.currentTotalBonus = currentBonusAmount
+		System.String currentBonusAmountMask = this.currentBonusAmountMask
+
+		System.String text = StringTable.GetText(currentBonusAmountMask, "") //(String textId, String language)
+
+		System.String string2 = .ToString()
+
+		System.String string3 = text.Replace("{0}", string2) //(String oldValue, String newValue)
+
+		currentBonusAmountLabel.text = string3
+		UnityEngine.UI.Image bonusProgressBar = this.bonusProgressBar
+
+		bonusProgressBar.set_fillAmount()
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.CallManagedFunctionAction at (0x1806A02CF) is corrupt (Method is non-static but don't have an instance) and cannot be created as IL. Aborting here.
+
+
+Method: System.Int32 SleepPopupResourceProductionItem::get_CurrentTotalResources():	Method Body (x86 ASM):
+		0x180561FB0 mov eax,[rcx+4Ch]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 76 | None ||| N/A | N/A
+		0x180561FB3 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180561FB4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Int32 SleepPopupResourceProductionItem::get_CurrentTotalResources():
+		End of function at 0x180561FB5
+		Absolute End is at 0x180561FB5
+		Identified Jump Destination addresses:
+
+		0x180561FB0: [!] Reads field currentTotalResources from {'this' (function parameter, type SleepPopupResourceProductionItem)} and stores in a new local {'currentTotalResources' (type System.Int32)}
+
+		0x180561FB3: [!] Returns {'currentTotalResources' (type System.Int32)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SleepPopupResourceProductionItem
+	System.Int32 get_CurrentTotalResources()
+		System.Int32 currentTotalResources = this.currentTotalResources
+		return currentTotalResources
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Int32 SleepPopupResourceProductionItem::currentTotalResources
+	IL_0006: ret
+	
+
+Method: System.Int32 SleepPopupResourceProductionItem::get_CurrentTotalBonus():	Method Body (x86 ASM):
+		0x1806A03F0 mov eax,[rcx+50h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 80 | None ||| N/A | N/A
+		0x1806A03F3 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806A03F4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Int32 SleepPopupResourceProductionItem::get_CurrentTotalBonus():
+		End of function at 0x1806A03F5
+		Absolute End is at 0x1806A03F5
+		Identified Jump Destination addresses:
+
+		0x1806A03F0: [!] Reads field currentTotalBonus from {'this' (function parameter, type SleepPopupResourceProductionItem)} and stores in a new local {'currentTotalBonus' (type System.Int32)}
+
+		0x1806A03F3: [!] Returns {'currentTotalBonus' (type System.Int32)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SleepPopupResourceProductionItem
+	System.Int32 get_CurrentTotalBonus()
+		System.Int32 currentTotalBonus = this.currentTotalBonus
+		return currentTotalBonus
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Int32 SleepPopupResourceProductionItem::currentTotalBonus
+	IL_0006: ret
+	
+
+Method: System.Void SleepPopupResourceProductionItem::.ctor():	Method Body (x86 ASM):
+		0x1806A0400 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806A0402 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1806A0406 cmp byte ptr [18329AE18h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514136 | None ||| N/A | 0
+		0x1806A040D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1806A0410 jne short 00000001806A0425h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0412 lea rcx,[1830CC598h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493619608 | None ||| N/A | N/A
+		0x1806A0419 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A041E mov byte ptr [18329AE18h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495514136 | None ||| N/A | 1
+		0x1806A0425 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1806A042C mov rax,[1830CC598h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493619608 | None ||| N/A | N/A
+		0x1806A0433 mov [rbx+30h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBX | 48 | None ||| N/A | N/A
+		0x1806A0437 je short 00000001806A0472h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0439 lea r8,[rbx+30h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 48 | None ||| N/A | N/A
+		0x1806A043D shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1806A0441 lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x1806A0448 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1806A044F mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1806A0452 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1806A0456 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1806A045A lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x1806A045E prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1806A0461 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1806A0464 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1806A0467 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1806A046B lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x1806A0470 jne short 00000001806A0461h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0472 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x1806A0479 jne short 00000001806A048Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A047B lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1806A0482 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A0487 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x1806A048E mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1806A0495 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1806A049C jne short 00000001806A04A8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A049E add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1806A04A2 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806A04A3 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1806A04A8 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1806A04AC pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806A04AD ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1806A04AE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void SleepPopupResourceProductionItem::.ctor():
+		End of function at 0x1806A04AF
+		Absolute End is at 0x1806A04AF
+		Identified Jump Destination addresses:
+
+		0x1806A0400: Saves the content of rbx to the stack
+		0x1806A0406: Compares {Unknown Global at 0x18329AE18, first ten bytes are [80 175 3 0 217 175 3 0 132 7], or as chars "P¯ Ù¯ "} and 0
+		0x1806A040D: Copies {'this' (function parameter, type SleepPopupResourceProductionItem)} from rcx into rbx
+		0x1806A0410: Jumps to 0x1806A0425 if {Unknown Global at 0x18329AE18, first ten bytes are [80 175 3 0 217 175 3 0 132 7], or as chars "P¯ Ù¯ "} != 0
+
+		0x1806A0412: Loads the string literal "SLEEP_BONUS_LABEL" as a constant "constant3" in rcx
+		0x1806A0419: Initializes runtime metadata value SLEEP_BONUS_LABEL
+		0x1806A0425: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1806A042C: Loads the string literal "SLEEP_BONUS_LABEL" as a constant "constant6" in rax
+		0x1806A0433: [!] Sets the field currentBonusAmountMask (Type System.String) on local {'this' (function parameter, type SleepPopupResourceProductionItem)} to the value stored in "SLEEP_BONUS_LABEL"
+		0x1806A0437: Jumps to 0x1806A0472 if constant4 equals 0
+
+		0x1806A0439: Loads the pointer to the field currentBonusAmountMask on {'this' (function parameter, type SleepPopupResourceProductionItem)} into register r8
+		0x1806A0441: Loads string "¡
+m" into register rcx as constant {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1806A044F: Copies {'constant7' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x1806A0461: Loads the class pointer from il2cppMethodInfo into a constant constant9 in register rax
+		0x1806A0464: Copies {'constant9' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x1806A0470: Jumps to 0x1806A0461 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x1806A0472: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x1806A0479: Jumps to 0x1806A048E if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x1806A047B: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1806A0482: Initializes runtime metadata value UnityEngine.Object
+		0x1806A048E: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1806A0495: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1806A049C: Jumps to 0x1806A04A8 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1806A04AD: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: SleepPopupResourceProductionItem
+	System.Void .ctor()
+		this.currentBonusAmountMask = "SLEEP_BONUS_LABEL"
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldstr "SLEEP_BONUS_LABEL"
+	IL_0006: stfld System.String SleepPopupResourceProductionItem::currentBonusAmountMask
+	IL_000b: ret
+	
+

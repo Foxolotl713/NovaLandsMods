@@ -1,0 +1,323 @@
+Type: BaseBulletPatternAttack:
+	Base Class: 
+		BaseAttack
+
+	Interfaces:
+
+	Field: patternPrefab
+		Type: BulletPattern
+		Offset in Defining Type: 0x130
+		Has Default: False
+
+	Field: shootingRangeVariation
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x138
+		Has Default: False
+
+	Field: shootingInterval
+		Type: System.Single
+		Offset in Defining Type: 0x140
+		Has Default: False
+
+	Field: randomShootingInterval
+		Type: UnityEngine.Vector2
+		Offset in Defining Type: 0x144
+		Has Default: False
+
+	Field: shootingMaxErrorAngle
+		Type: System.Single
+		Offset in Defining Type: 0x14C
+		Has Default: False
+
+	Field: numberOfBullets
+		Type: UnityEngine.Vector2Int
+		Offset in Defining Type: 0x150
+		Has Default: False
+
+	Field: shootingSpawnPosition
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x158
+		Has Default: False
+
+	Field: shootingSpawnHeightRef
+		Type: UnityEngine.Transform
+		Offset in Defining Type: 0x160
+		Has Default: False
+
+	Field: ownerShortAttackAnimation
+		Type: System.String
+		Offset in Defining Type: 0x168
+		Has Default: False
+
+	Field: ownerShortAttackAnimationDuration
+		Type: System.Single
+		Offset in Defining Type: 0x170
+		Has Default: False
+
+	Field: ownerShortAttackAnimationId
+		Type: System.Int32
+		Offset in Defining Type: 0x174
+		Has Default: False
+
+	Field: currentNumberOfBullets
+		Type: System.Int32
+		Offset in Defining Type: 0x178
+		Has Default: False
+
+	Field: currentShootingTime
+		Type: System.Single
+		Offset in Defining Type: 0x17C
+		Has Default: False
+
+	Field: numberOfBulletsThisAttack
+		Type: System.Int32
+		Offset in Defining Type: 0x180
+		Has Default: False
+
+	Field: disableVariation
+		Type: System.Boolean
+		Offset in Defining Type: 0x184
+		Has Default: False
+
+	Field: currentShootingInterval
+		Type: System.Single
+		Offset in Defining Type: 0x188
+		Has Default: False
+
+	Field: playedAttackAnimationThisAttack
+		Type: System.Boolean
+		Offset in Defining Type: 0x18C
+		Has Default: False
+
+	Field: onSetNumberOfBullets
+		Type: System.Action`1<System.Int32>
+		Offset in Defining Type: 0x190
+		Has Default: False
+
+	Field: projectileSpeed
+		Type: System.Single
+		Offset in Defining Type: 0x198
+		Has Default: False
+
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00496EA0
+		Ram Offset 0x1804980a0
+		Virtual Method Slot: 13
+
+		Parameter 0:
+			Name: owner
+			Type: BaseCharacter
+			Default Value: 
+		Parameter 1:
+			Name: attackTypeOrder
+			Type: System.Int32
+			Default Value: 0
+	Method: SetPattern:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00496F50
+		Ram Offset 0x180498150
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pattern
+			Type: BulletPattern
+			Default Value: 
+	Method: SetOnSetNumberOfBulletsCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00496FB0
+		Ram Offset 0x1804981b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: callback
+			Type: System.Action`1<System.Int32>
+			Default Value: 
+	Method: ActivateAttack:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00497010
+		Ram Offset 0x180498210
+		Virtual Method Slot: 16
+
+		Parameter 0:
+			Name: disableVariation
+			Type: System.Boolean
+			Default Value: False
+		Parameter 1:
+			Name: onActivateAttack
+			Type: System.Action`1<System.Boolean>
+			Default Value: 
+	Method: UpdateExecuting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00497020
+		Ram Offset 0x180498220
+		Virtual Method Slot: 32
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: PrepareExecute:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004970A0
+		Ram Offset 0x1804982a0
+		Virtual Method Slot: 29
+
+	Method: ResetExecute:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 30
+
+	Method: UpdateExecutingActionEnabled:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004970C0
+		Ram Offset 0x1804982c0
+		Virtual Method Slot: 33
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: UpdateShooting:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004972B0
+		Ram Offset 0x1804984b0
+		Virtual Method Slot: 50
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: UpdateExecutingActionDisabled:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00379480
+		Ram Offset 0x18037a680
+		Virtual Method Slot: 34
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: FixedUpdateExecutingActionEnabled:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00495E70
+		Ram Offset 0x180497070
+		Virtual Method Slot: 36
+
+	Method: FixedUpdateExecutingActionDisabled:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00495E70
+		Ram Offset 0x180497070
+		Virtual Method Slot: 37
+
+	Method: OnDamageExecuting:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x004976A0
+		Ram Offset 0x1804988a0
+		Virtual Method Slot: 39
+
+	Method: OnSetNumberOfBullets:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004976B0
+		Ram Offset 0x1804988b0
+		Virtual Method Slot: 51
+
+		Parameter 0:
+			Name: numberOfBullets
+			Type: System.Int32
+			Default Value: 
+	Method: StartShooting:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x004976D0
+		Ram Offset 0x1804988d0
+		Virtual Method Slot: 52
+
+	Method: GetShootingInterval:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00497820
+		Ram Offset 0x180498a20
+		Virtual Method Slot: 53
+
+	Method: Shoot:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00497870
+		Ram Offset 0x180498a70
+		Virtual Method Slot: 54
+
+	Method: CanAttackHitTarget:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00497EF0
+		Ram Offset 0x1804990f0
+		Virtual Method Slot: 23
+
+	Method: CastHitTarget:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x003B0090
+		Ram Offset 0x1803b1290
+		Virtual Method Slot: 24
+
+	Method: DestroyMe:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00497F10
+		Ram Offset 0x180499110
+		Virtual Method Slot: 65535
+
+	Method: get_IsRanged:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00497FA0
+		Ram Offset 0x1804991a0
+		Virtual Method Slot: 65535
+
+	Method: get_NumberOfBulletsThisAttack:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00498060
+		Ram Offset 0x180499260
+		Virtual Method Slot: 65535
+
+	Method: get_ProjectileSpeed:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00498070
+		Ram Offset 0x180499270
+		Virtual Method Slot: 48
+
+	Method: set_ProjectileSpeed:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00498080
+		Ram Offset 0x180499280
+		Virtual Method Slot: 49
+
+		Parameter 0:
+			Name: value
+			Type: System.Single
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00498090
+		Ram Offset 0x180499290
+		Virtual Method Slot: 65535

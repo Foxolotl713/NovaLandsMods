@@ -1,0 +1,420 @@
+Type: LubricantEnabledProductionBuilding:
+	Base Class: 
+		BaseProductionBuilding
+
+	Interfaces:
+
+	Nested Types:
+		LubricantEnabledProductionBuilding/<>c
+
+	Field: lubricantConsumptionFeedback
+		Type: ProducedResourceProgressFeedback
+		Offset in Defining Type: 0x6E8
+		Has Default: False
+
+	Field: lubricant
+		Type: LubricantScriptableObject
+		Offset in Defining Type: 0x6F0
+		Has Default: False
+
+	Field: lubricantDurationTotal
+		Type: System.Single
+		Offset in Defining Type: 0x6F8
+		Has Default: False
+
+	Field: lubricantDurationCurrent
+		Type: System.Single
+		Offset in Defining Type: 0x6FC
+		Has Default: False
+
+	Field: lubricantSpeedMultiplier
+		Type: System.Single
+		Offset in Defining Type: 0x700
+		Has Default: False
+
+	Field: lubricantEnabledBuildingPopup
+		Type: LubricantEnabledOverTimeProductionBuildingPopup
+		Offset in Defining Type: 0x708
+		Has Default: False
+
+	Field: <CurrentRequiredLubricant>k__BackingField
+		Type: BaseResourceScriptableObject
+		Offset in Defining Type: 0x710
+		Has Default: False
+
+	Method: GetSerializationData:
+		Accessibility: Public
+		Return Type: SimpleJSON.JSONNode
+		File Offset 0x00B0C890
+		Ram Offset 0x180b0da90
+		Virtual Method Slot: 97
+
+		Parameter 0:
+			Name: firstSpawn
+			Type: System.Boolean
+			Default Value: False
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B0D140
+		Ram Offset 0x180b0e340
+		Virtual Method Slot: 18
+
+		Parameter 0:
+			Name: data
+			Type: SimpleJSON.JSONNode
+			Default Value: 
+		Parameter 1:
+			Name: parentArea
+			Type: WorldArea
+			Default Value: 
+	Method: Setup:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B0D6F0
+		Ram Offset 0x180b0e8f0
+		Virtual Method Slot: 17
+
+		Parameter 0:
+			Name: parentArea
+			Type: WorldArea
+			Default Value: 
+	Method: InitComponents:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00B0D7D0
+		Ram Offset 0x180b0e9d0
+		Virtual Method Slot: 26
+
+	Method: PlayerHasPreviousSelectedRecipe:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00AD35E0
+		Ram Offset 0x180ad47e0
+		Virtual Method Slot: 192
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+		Parameter 1:
+			Name: recipe
+			Type: BaseRecipe
+			Default Value: 
+		Parameter 2:
+			Name: boostResource
+			Type: BaseResourceScriptableObject
+			Default Value: 
+	Method: ApplyPlayerPreviousSelectedRecipe:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00B0D840
+		Ram Offset 0x180b0ea40
+		Virtual Method Slot: 193
+
+		Parameter 0:
+			Name: player
+			Type: BasePlayer
+			Default Value: 
+	Method: UpdateLubricantFeeedback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B0D930
+		Ram Offset 0x180b0eb30
+		Virtual Method Slot: 65535
+
+	Method: BecameVisibleCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AD3B30
+		Ram Offset 0x180ad4d30
+		Virtual Method Slot: 54
+
+	Method: BecameInvisibleCallback:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00AD3B70
+		Ram Offset 0x180ad4d70
+		Virtual Method Slot: 55
+
+	Method: UpdateProducing:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B0DC90
+		Ram Offset 0x180b0ee90
+		Virtual Method Slot: 214
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: SetCurrentRecipe:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B0E1B0
+		Ram Offset 0x180b0f3b0
+		Virtual Method Slot: 197
+
+		Parameter 0:
+			Name: recipe
+			Type: BaseRecipe
+			Default Value: 
+		Parameter 1:
+			Name: startProduction
+			Type: System.Boolean
+			Default Value: 
+		Parameter 2:
+			Name: fromLoad
+			Type: System.Boolean
+			Default Value: False
+	Method: IsLogisticsHiPriority:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x0094F750
+		Ram Offset 0x180950950
+		Virtual Method Slot: 150
+
+	Method: IsLogisticsLoPriority:
+		Accessibility: Family
+		Return Type: System.Boolean
+		File Offset 0x00B0E1E0
+		Ram Offset 0x180b0f3e0
+		Virtual Method Slot: 149
+
+	Method: UpdateLogistics:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B0E240
+		Ram Offset 0x180b0f440
+		Virtual Method Slot: 142
+
+		Parameter 0:
+			Name: checkCurrentResources
+			Type: System.Boolean
+			Default Value: False
+	Method: CanBeLogisticsOriginAndTarget:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B0F030
+		Ram Offset 0x180b10230
+		Virtual Method Slot: 155
+
+		Parameter 0:
+			Name: requiredResource
+			Type: BaseResourceScriptableObject
+			Default Value: 
+	Method: CanAddItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B0F090
+		Ram Offset 0x180b10290
+		Virtual Method Slot: 120
+
+		Parameter 0:
+			Name: resourceId
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: isRecipe
+			Type: System.Boolean
+			Default Value: 
+	Method: TryToConsumeItem:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B0F1B0
+		Ram Offset 0x180b103b0
+		Virtual Method Slot: 118
+
+		Parameter 0:
+			Name: item
+			Type: MuttInventory.InventoryItem
+			Default Value: 
+		Parameter 1:
+			Name: sourceCharacter
+			Type: System.Object
+			Default Value: 
+		Parameter 2:
+			Name: dropToTheGround
+			Type: System.Boolean
+			Default Value: 
+	Method: AddItemToInventory:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B0F720
+		Ram Offset 0x180b10920
+		Virtual Method Slot: 220
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: playOutputFeedback
+			Type: System.Boolean
+			Default Value: True
+	Method: AddItemToInventoryOnDrag:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B0F940
+		Ram Offset 0x180b10b40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: remaining
+			Type: System.Int32
+			Default Value: 
+	Method: AddLubricant:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B0F9B0
+		Ram Offset 0x180b10bb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: resource
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: amount
+			Type: System.Int32
+			Default Value: 
+	Method: CanAddLubricant:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B10050
+		Ram Offset 0x180b11250
+		Virtual Method Slot: 65535
+
+	Method: IsLubricantItem:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B10070
+		Ram Offset 0x180b11270
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: itemId
+			Type: System.Int32
+			Default Value: 
+	Method: ConsumeLubricant:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B10130
+		Ram Offset 0x180b11330
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: deltaTime
+			Type: System.Single
+			Default Value: 
+	Method: UpdateProductionFeedbackState:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B10320
+		Ram Offset 0x180b11520
+		Virtual Method Slot: 216
+
+		Parameter 0:
+			Name: stoppedProducing
+			Type: System.Boolean
+			Default Value: False
+	Method: UpdateProducingFeedback:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x00B10960
+		Ram Offset 0x180b11b60
+		Virtual Method Slot: 215
+
+		Parameter 0:
+			Name: immediate
+			Type: System.Boolean
+			Default Value: False
+	Method: get_LubricantProductionSpeedMultiplier:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00B10AE0
+		Ram Offset 0x180b11ce0
+		Virtual Method Slot: 65535
+
+	Method: get_ProductionSpeed:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x00B10B10
+		Ram Offset 0x180b11d10
+		Virtual Method Slot: 229
+
+	Method: get_NeedLubricant:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B10B70
+		Ram Offset 0x180b11d70
+		Virtual Method Slot: 65535
+
+	Method: get_Lubricant:
+		Accessibility: Public
+		Return Type: LubricantScriptableObject
+		File Offset 0x003C19F0
+		Ram Offset 0x1803c2bf0
+		Virtual Method Slot: 65535
+
+	Method: get_LubricantDurationCurrent:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x009531E0
+		Ram Offset 0x1809543e0
+		Virtual Method Slot: 65535
+
+	Method: get_LubricantDurationTotal:
+		Accessibility: Public
+		Return Type: System.Single
+		File Offset 0x009531D0
+		Ram Offset 0x1809543d0
+		Virtual Method Slot: 65535
+
+	Method: get_HasLubricant:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B10C40
+		Ram Offset 0x180b11e40
+		Virtual Method Slot: 65535
+
+	Method: get_CurrentRequiredLubricant:
+		Accessibility: Public
+		Return Type: BaseResourceScriptableObject
+		File Offset 0x00B10D00
+		Ram Offset 0x180b11f00
+		Virtual Method Slot: 65535
+
+	Method: set_CurrentRequiredLubricant:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B10D10
+		Ram Offset 0x180b11f10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: BaseResourceScriptableObject
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00950D80
+		Ram Offset 0x180951f80
+		Virtual Method Slot: 65535

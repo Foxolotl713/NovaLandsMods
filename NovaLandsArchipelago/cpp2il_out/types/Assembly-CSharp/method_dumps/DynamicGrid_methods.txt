@@ -1,0 +1,1954 @@
+Type: DynamicGrid
+
+Method: System.Void DynamicGrid::Awake():	Method Body (x86 ASM):
+		0x1808751B0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808751B2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1808751B6 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1808751B8 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1808751BB call 00000001808751E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808751C0 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1808751C2 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1808751C5 call 00000001808753E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808751CA xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1808751CD mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1808751CF mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1808751D2 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1808751D6 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808751D7 jmp near ptr 00000001808754E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808751DC int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DynamicGrid::Awake():
+		End of function at 0x1808751DD
+		Absolute End is at 0x1808751DD
+		Identified Jump Destination addresses:
+
+		0x1808751B0: Saves the content of rbx to the stack
+		0x1808751B8: Copies {'this' (function parameter, type DynamicGrid)} from rcx into rbx
+		0x1808751BB: [!] Calls managed method System.Void DynamicGrid::InitComponents() on instance {'this' (function parameter, type DynamicGrid)}
+
+		0x1808751C2: Copies {'this' (function parameter, type DynamicGrid)} from rbx into rcx
+		0x1808751C5: [!] Calls managed method System.Void DynamicGrid::CalcRowsAndColumns() on instance {'this' (function parameter, type DynamicGrid)}
+
+		0x1808751CD: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x1808751CF: Copies {'this' (function parameter, type DynamicGrid)} from rbx into rcx
+		0x1808751D7: [!] Calls managed method System.Void DynamicGrid::UpdateGridCellSize(System.Boolean) on instance {'this' (function parameter, type DynamicGrid)} with arguments [True]
+
+		0x1808751D7: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Void Awake()
+
+		this.InitComponents()
+
+		this.CalcRowsAndColumns()
+
+		this.UpdateGridCellSize(True) //(Boolean applyCascadeEffects)
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call System.Void DynamicGrid::InitComponents()
+	IL_0006: ldarg.0
+	IL_0007: call System.Void DynamicGrid::CalcRowsAndColumns()
+	IL_000c: ldarg.0
+	IL_000d: ldc.i4.1
+	IL_000e: call System.Void DynamicGrid::UpdateGridCellSize(System.Boolean)
+	IL_0013: ret
+	
+
+Method: System.Void DynamicGrid::InitComponents():	Method Body (x86 ASM):
+		0x1808751E0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1808751E5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808751E6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1808751EA cmp byte ptr [18329B82Eh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516718 | None ||| N/A | 0
+		0x1808751F1 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1808751F4 jne short 0000000180875221h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808751F6 lea rcx,[183114E08h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493916680 | None ||| N/A | N/A
+		0x1808751FD call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875202 lea rcx,[1830FBAF0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813488 | None ||| N/A | N/A
+		0x180875209 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087520E lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180875215 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087521A mov byte ptr [18329B82Eh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516718 | None ||| N/A | 1
+		0x180875221 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180875228 mov rdi,[rbx+48h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 72 | None ||| N/A | N/A
+		0x18087522C cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180875233 jne short 000000018087523Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875235 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087523A cmp byte ptr [1832A9FABh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 0
+		0x180875241 jne short 0000000180875256h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875243 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18087524A call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087524F mov byte ptr [1832A9FABh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575979 | None ||| N/A | 1
+		0x180875256 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18087525D cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x180875264 jne short 000000018087526Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875266 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087526B cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x180875272 jne short 0000000180875287h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875274 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18087527B call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875280 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x180875287 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18087528A je short 00000001808752ACh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087528C mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x180875293 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18087529A jne short 00000001808752A1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087529C call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808752A1 cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x1808752A6 jne near ptr 00000001808753AEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808752AC mov rdx,[1830FBAF0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493813488 | None ||| N/A | N/A
+		0x1808752B3 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1808752B6 call 0000000180D40810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808752BB cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1808752C2 lea rdi,[1832AE560h]		; DEBUG: {Register}/RDI {Memory}/None ||| RIP | 6495593824 | None ||| N/A | N/A
+		0x1808752C9 mov [rbx+48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBX | 72 | None ||| N/A | N/A
+		0x1808752CD je short 0000000180875319h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808752CF lea r8,[rbx+48h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 72 | None ||| N/A | N/A
+		0x1808752D3 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1808752D7 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1808752DE mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1808752E1 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1808752E5 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1808752E9 lea rdx,[rdi+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RDI | 0 | RAX ||| N/A | N/A
+		0x1808752ED prefetchw [rdx+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x1808752F4 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1808752F8 nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180875300 mov rax,[rdx+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x180875307 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18087530A bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18087530E lock cmpxchg [rdx+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 287456 | None ||| N/A | N/A
+		0x180875317 jne short 0000000180875300h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875319 mov rdx,[183114E08h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493916680 | None ||| N/A | N/A
+		0x180875320 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180875323 call 0000000180D40810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875328 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x18087532F mov [rbx+50h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBX | 80 | None ||| N/A | N/A
+		0x180875333 je short 0000000180875379h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875335 lea r8,[rbx+50h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 80 | None ||| N/A | N/A
+		0x180875339 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x18087533D and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180875344 mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180875347 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x18087534B and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x18087534F lea rdx,[rdi+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RDI | 0 | RAX ||| N/A | N/A
+		0x180875353 prefetchw [rdx+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x18087535A nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180875360 mov rax,[rdx+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 287456 | None ||| N/A | N/A
+		0x180875367 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18087536A bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18087536E lock cmpxchg [rdx+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 287456 | None ||| N/A | N/A
+		0x180875377 jne short 0000000180875360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875379 mov rdi,[rbx+48h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 72 | None ||| N/A | N/A
+		0x18087537D test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180875380 je short 00000001808753B9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875382 mov rax,[1832AA350h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576912 | None ||| N/A | N/A
+		0x180875389 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18087538C jne short 00000001808753A6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087538E lea rcx,[18297BEE8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485950184 | None ||| N/A | N/A
+		0x180875395 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087539A test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18087539D je short 00000001808753BFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087539F mov [1832AA350h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576912 | None ||| N/A | N/A
+		0x1808753A6 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1808753A9 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808753AB mov [rbx+60h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBX | 96 | None ||| N/A | N/A
+		0x1808753AE mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1808753B3 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1808753B7 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808753B8 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808753B9 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808753BE int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DynamicGrid::InitComponents():
+		End of function at 0x1808753BF
+		Absolute End is at 0x1808753BF
+		Identified Jump Destination addresses:
+
+		0x1808751E5: Saves the content of rdi to the stack
+		0x1808751EA: Compares {Unknown Global at 0x18329B82E, first ten bytes are [4 0 213 86 4 0 100 80 239 2], or as chars " ÕV dPï"} and 0
+		0x1808751F1: Copies {'this' (function parameter, type DynamicGrid)} from rcx into rbx
+		0x1808751F4: Jumps to 0x180875221 if {Unknown Global at 0x18329B82E, first ten bytes are [4 0 213 86 4 0 100 80 239 2], or as chars " ÕV dPï"} != 0
+
+		0x1808751F6: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.UI.GridLayoutGroup>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1808751FD: Initializes runtime metadata value 
+		0x180875202: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.RectTransform>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180875209: Initializes runtime metadata value 
+		0x18087520E: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180875215: Initializes runtime metadata value UnityEngine.Object
+		0x180875221: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180875228: [!] Reads field parent from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'parent' (type UnityEngine.RectTransform)}
+
+		0x18087522C: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180875233: Jumps to 0x18087523A if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180875235: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x18087523A: Compares {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} and 0
+		0x180875241: Jumps to 0x180875256 if {Unknown Global at 0x1832A9FAB, first ten bytes are [0 220 47 235 2 128 166 14 0 171], or as chars " Ü/ë¦ «"} != 0
+
+		0x180875243: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18087524A: Initializes runtime metadata value UnityEngine.Object
+		0x180875256: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18087525D: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x180875264: Jumps to 0x18087526B if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x180875266: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x18087526B: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x180875272: Jumps to 0x180875287 if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x180875274: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18087527B: Initializes runtime metadata value UnityEngine.Object
+		0x180875287: [!] Compares {'parent' (type UnityEngine.RectTransform)} and 0
+		0x18087528A: Jumps to 0x1808752AC (which is an if statement's body) if parent equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18087528C: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x180875293: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18087529A: Jumps to 0x1808752A1 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18087529C: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1808752A1: [!] Compares  and 0
+		0x1808752A6: Jumps to 0x1808753AE if  != 0 ;  - This is probably a goto, jumping to 0x1808753AE which is after end of current block @ 0x1808752AC (started at 0x18087528C)
+
+		0x1808752AC: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.RectTransform>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x1808752B3: Copies {'this' (function parameter, type DynamicGrid)} from rbx into rcx
+		0x1808752B6: [!] Calls managed method T UnityEngine.Component::GetComponent<UnityEngine.RectTransform>() on instance {'this' (function parameter, type DynamicGrid)} and stores the result in {'component' (type UnityEngine.RectTransform)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x1808752BB: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1808752C2: Reads {Unknown Global at 0x1832AE560, first ten bytes are [20 59 240 2 208 31 18 0 228 32], or as chars ";ðÐ ä "} into register rdi as a constant constant26
+		0x1808752C9: [!] Sets the field parent (Type UnityEngine.RectTransform) on local {'this' (function parameter, type DynamicGrid)} to the value stored in {'component' (type UnityEngine.RectTransform)}
+		0x1808752CD: Jumps to 0x180875319 if constant24 equals 0 ;  - This is probably a goto, jumping to 0x180875319 which is after end of current block @ 0x1808752AC (started at 0x18087528C)
+
+		0x1808752CF: Loads the pointer to the field parent on {'this' (function parameter, type DynamicGrid)} into register r8
+		0x1808752DE: Copies {'constant27' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x180875307: Copies {'constant27' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from rax into rcx
+		0x180875317: Jumps to 0x180875300 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0 ;  - This is probably a goto, jumping to 0x180875300 which is after end of current block @ 0x1808752AC (started at 0x18087528C)
+
+		0x180875319: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.UI.GridLayoutGroup>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x180875320: Copies {'this' (function parameter, type DynamicGrid)} from rbx into rcx
+		0x180875323: [!] Calls managed method T UnityEngine.Component::GetComponent<UnityEngine.UI.GridLayoutGroup>() on instance {'this' (function parameter, type DynamicGrid)} and stores the result in {'component2' (type UnityEngine.UI.GridLayoutGroup)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x180875328: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x18087532F: [!] Sets the field grid (Type UnityEngine.UI.GridLayoutGroup) on local {'this' (function parameter, type DynamicGrid)} to the value stored in {'component2' (type UnityEngine.UI.GridLayoutGroup)}
+		0x180875333: Jumps to 0x180875379 if constant29 equals 0 ;  - This is probably a goto, jumping to 0x180875379 which is after end of current block @ 0x1808752AC (started at 0x18087528C)
+
+		0x180875335: Loads the pointer to the field grid on {'this' (function parameter, type DynamicGrid)} into register r8
+		0x180875344: Copies {'constant31' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x180875367: Copies {'constant31' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from rax into rcx
+		0x180875377: Jumps to 0x180875360 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0 ;  - This is probably a goto, jumping to 0x180875360 which is after end of current block @ 0x1808752AC (started at 0x18087528C)
+
+		0x180875379: [!] Reads field parent from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'parent2' (type UnityEngine.RectTransform)}
+
+		0x18087537D: [!] Compares {'parent2' (type UnityEngine.RectTransform)} and 0
+		0x180875380: Jumps to 0x1808753B9 (which throws a NRE) if parent2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180875382: Reads {Unknown Global at 0x1832AA350, first ten bytes are [130 213 14 0 224 60 245 2 144 213], or as chars "Õ à<õÕ"} into register rax as a constant constant33
+		0x180875389: Compares UnityEngine.Transform.get_childCount and 0
+		0x18087538C: Jumps to 0x1808753A6 if UnityEngine.Transform.get_childCount != 0 ;  - This is probably a goto, jumping to 0x1808753A6 which is after end of current block @ 0x1808752AC (started at 0x18087528C)
+
+		0x18087538E: Loads string "UnityEngine.Transform::get_childCount()" into register rcx as constant {'constant35' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180875395: Looks up unity ICall by name "UnityEngine.Transform::get_childCount()" which resolves to System.Int32 UnityEngine.Transform::get_childCount()
+		0x18087539A: Compares UnityEngine.Transform.get_childCount and 0
+		0x18087539D: Jumps to 0x1808753BF if UnityEngine.Transform.get_childCount equals 0 ;  - This is probably a goto, jumping to 0x1808753BF which is after end of current block @ 0x1808752AC (started at 0x18087528C)
+
+		0x1808753A6: Copies {'parent2' (type UnityEngine.RectTransform)} from rdi into rcx
+		0x1808753A9: [!] Calls managed method System.Int32 UnityEngine.Transform::get_childCount() on instance {'parent2' (type UnityEngine.RectTransform)} and stores the result in {'childCount' (type System.Int32)}
+
+		0x1808753AB: [!] Sets the field previousChildCount (Type System.Int32) on local {'this' (function parameter, type DynamicGrid)} to the value stored in {'childCount' (type System.Int32)}
+		0x1808753AE: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant37
+		0x1808753B8: [!] Returns from the function
+
+		0x1808753B9: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Void InitComponents()
+		UnityEngine.RectTransform parent = this.parent
+
+		if (parent != 0)
+
+		    if ( != 0)
+                goto INSN_1808753AE
+            endif
+		endif
+        
+
+		UnityEngine.RectTransform component = base.GetComponent<UnityEngine.RectTransform>()
+		this.parent = component
+
+		UnityEngine.UI.GridLayoutGroup component2 = base.GetComponent<UnityEngine.UI.GridLayoutGroup>()
+		this.grid = component2
+		UnityEngine.RectTransform parent2 = this.parent
+
+		System.Int32 childCount = parent2.childCount
+		this.previousChildCount = childCount
+
+		INSN_1808753AE:
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.JumpIfNonZeroOrNonNullAction at (0x1808752A6) is corrupt (One of the arguments is null) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void DynamicGrid::CalcRowsAndColumns():	Method Body (x86 ASM):
+		0x1808753E0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1808753E5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808753E6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1808753EA cmp dword ptr [rcx+28h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 40 | None ||| N/A | 0
+		0x1808753EE mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1808753F1 jg short 00000001808753FAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808753F3 mov dword ptr [rcx+28h],1		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 40 | None ||| N/A | 1
+		0x1808753FA cmp dword ptr [rcx+24h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 36 | None ||| N/A | 0
+		0x1808753FE jg short 0000000180875407h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875400 mov dword ptr [rcx+24h],1		; DEBUG: {Memory}/None {Immediate32}/None ||| RCX | 36 | None ||| N/A | 1
+		0x180875407 mov rdi,[rcx+48h]		; DEBUG: {Register}/RDI {Memory}/None ||| RCX | 72 | None ||| N/A | N/A
+		0x18087540B test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18087540E je near ptr 00000001808754C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875414 mov rax,[1832AA350h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576912 | None ||| N/A | N/A
+		0x18087541B test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18087541E jne short 000000018087543Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875420 lea rcx,[18297BEE8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485950184 | None ||| N/A | N/A
+		0x180875427 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087542C test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18087542F je near ptr 00000001808754C6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875435 mov [1832AA350h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576912 | None ||| N/A | N/A
+		0x18087543C mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18087543F call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875441 cmp byte ptr [rbx+20h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 32 | None ||| N/A | 0
+		0x180875445 jne short 0000000180875473h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875447 cmp eax,[rbx+28h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x18087544A jle short 0000000180875451h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087544C mov ecx,[rbx+28h]		; DEBUG: {Register}/ECX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x18087544F jmp short 0000000180875453h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875451 mov ecx,eax		; DEBUG: {Register}/ECX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180875453 mov [rbx+5Ch],ecx		; DEBUG: {Memory}/None {Register}/ECX ||| RBX | 92 | None ||| N/A | N/A
+		0x180875456 movd xmm1,dword ptr [rbx+28h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x18087545B movd xmm0,eax		; DEBUG: {Register}/XMM0 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18087545F cvtdq2ps xmm1,xmm1		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180875462 cvtdq2ps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180875465 divss xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180875469 call 0000000180477450h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087546E mov [rbx+58h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBX | 88 | None ||| N/A | N/A
+		0x180875471 jmp short 000000018087549Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875473 cmp eax,[rbx+24h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBX | 36 | None ||| N/A | N/A
+		0x180875476 jle short 000000018087547Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875478 mov ecx,[rbx+24h]		; DEBUG: {Register}/ECX {Memory}/None ||| RBX | 36 | None ||| N/A | N/A
+		0x18087547B jmp short 000000018087547Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087547D mov ecx,eax		; DEBUG: {Register}/ECX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18087547F mov [rbx+58h],ecx		; DEBUG: {Memory}/None {Register}/ECX ||| RBX | 88 | None ||| N/A | N/A
+		0x180875482 movd xmm1,dword ptr [rbx+24h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBX | 36 | None ||| N/A | N/A
+		0x180875487 movd xmm0,eax		; DEBUG: {Register}/XMM0 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18087548B cvtdq2ps xmm1,xmm1		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x18087548E cvtdq2ps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180875491 divss xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180875495 call 0000000180477450h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087549A mov [rbx+5Ch],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBX | 92 | None ||| N/A | N/A
+		0x18087549D cmp byte ptr [rbx+2Ch],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 44 | None ||| N/A | 0
+		0x1808754A1 je short 00000001808754A9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808754A3 mov eax,[rbx+24h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBX | 36 | None ||| N/A | N/A
+		0x1808754A6 mov [rbx+58h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBX | 88 | None ||| N/A | N/A
+		0x1808754A9 cmp byte ptr [rbx+2Dh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 45 | None ||| N/A | 0
+		0x1808754AD je short 00000001808754B5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808754AF mov eax,[rbx+28h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1808754B2 mov [rbx+5Ch],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBX | 92 | None ||| N/A | N/A
+		0x1808754B5 mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1808754BA add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1808754BE pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808754BF ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808754C0 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808754C5 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DynamicGrid::CalcRowsAndColumns():
+		End of function at 0x1808754C6
+		Absolute End is at 0x1808754C6
+		Identified Jump Destination addresses:
+			0x180875453
+			0x18087549D
+			0x18087547F
+		0x1808753E5: Saves the content of rdi to the stack
+		0x1808753EA: [!] Compares {field rows, read from local {'this' (function parameter, type DynamicGrid)}} and 0
+		0x1808753EE: Copies {'this' (function parameter, type DynamicGrid)} from rcx into rbx
+		0x1808753F3: [!] Sets the field rows (Type System.Int32) on local {'this' (function parameter, type DynamicGrid)} to the value stored in 1
+		0x1808753FA: [!] Compares {field columns, read from local {'this' (function parameter, type DynamicGrid)}} and 0
+		0x180875400: [!] Sets the field columns (Type System.Int32) on local {'this' (function parameter, type DynamicGrid)} to the value stored in 1
+		0x180875407: [!] Reads field parent from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'parent' (type UnityEngine.RectTransform)}
+
+		0x18087540B: [!] Compares {'parent' (type UnityEngine.RectTransform)} and 0
+		0x18087540E: Jumps to 0x1808754C0 (which throws a NRE) if parent equals 0. Implicitly present in managed code, so ignored here.
+		0x180875414: Reads {Unknown Global at 0x1832AA350, first ten bytes are [130 213 14 0 224 60 245 2 144 213], or as chars "Õ à<õÕ"} into register rax as a constant constant4
+		0x18087541B: Compares UnityEngine.Transform.get_childCount and 0
+		0x18087541E: Jumps to 0x18087543C if UnityEngine.Transform.get_childCount != 0
+
+		0x180875420: Loads string "UnityEngine.Transform::get_childCount()" into register rcx as constant {'constant6' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180875427: Looks up unity ICall by name "UnityEngine.Transform::get_childCount()" which resolves to System.Int32 UnityEngine.Transform::get_childCount()
+		0x18087542C: Compares UnityEngine.Transform.get_childCount and 0
+		0x18087542F: Jumps to 0x1808754C6 if UnityEngine.Transform.get_childCount equals 0
+
+		0x18087543C: Copies {'parent' (type UnityEngine.RectTransform)} from rdi into rcx
+		0x18087543F: [!] Calls managed method System.Int32 UnityEngine.Transform::get_childCount() on instance {'parent' (type UnityEngine.RectTransform)} and stores the result in {'childCount' (type System.Int32)}
+
+		0x180875441: [!] Compares {field columnsControlSize, read from local {'this' (function parameter, type DynamicGrid)}} and False
+		0x180875445: Jumps to 0x180875473 if {field columnsControlSize, read from local {'this' (function parameter, type DynamicGrid)}} != False ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180875447: [!] Compares {'childCount' (type System.Int32)} and {field rows, read from local {'this' (function parameter, type DynamicGrid)}}
+		0x18087544A: Jumps to 0x180875451 if {'childCount' (type System.Int32)} is less than or equal to {field rows, read from local {'this' (function parameter, type DynamicGrid)}} ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x18087544F: Jumps to 0x180875453 (which is an function-local jump destination)
+
+		0x180875451: Copies {'childCount' (type System.Int32)} from rax into rcx
+
+		End Of If-Else Block (at 0x180875453) where the else started at 0x180875451
+		0x180875453: [!] Sets the field desiredRows (Type System.Int32) on local {'this' (function parameter, type DynamicGrid)} to the value stored in {'childCount' (type System.Int32)}
+		0x18087546E: [!] Sets the field desiredColumns (Type System.Int32) on local {'this' (function parameter, type DynamicGrid)} to the value stored in {'childCount' (type System.Int32)}
+		0x180875471: Jumps to 0x18087549D (which is an function-local jump destination)
+
+		0x180875473: [!] Compares {'childCount' (type System.Int32)} and {field columns, read from local {'this' (function parameter, type DynamicGrid)}}
+		0x180875476: Jumps to 0x18087547D if {'childCount' (type System.Int32)} is less than or equal to {field columns, read from local {'this' (function parameter, type DynamicGrid)}} ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x18087547B: Jumps to 0x18087547F (which is an function-local jump destination)
+
+		0x18087547D: Copies {'childCount' (type System.Int32)} from rax into rcx
+
+		End Of If-Else Block (at 0x18087547F) where the else started at 0x18087547D
+		0x18087547F: [!] Sets the field desiredColumns (Type System.Int32) on local {'this' (function parameter, type DynamicGrid)} to the value stored in {'childCount' (type System.Int32)}
+		0x18087549A: [!] Sets the field desiredRows (Type System.Int32) on local {'this' (function parameter, type DynamicGrid)} to the value stored in {'childCount' (type System.Int32)}
+
+		End Of If-Else Block (at 0x18087549D) where the else started at 0x180875473
+		0x18087549D: [!] Compares {field desiredColumnsIsColumns, read from local {'this' (function parameter, type DynamicGrid)}} and False
+		0x1808754A1: Jumps to 0x1808754A9 if this.desiredColumnsIsColumns equals False ;  - This is probably a goto, jumping to 0x1808754A9 which is after end of current block @ 0x18087547F (started at 0x18087547D)
+
+		0x1808754A3: [!] Reads field columns from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'columns' (type System.Int32)}
+
+		0x1808754A6: [!] Sets the field desiredColumns (Type System.Int32) on local {'this' (function parameter, type DynamicGrid)} to the value stored in {'columns' (type System.Int32)}
+		0x1808754A9: [!] Compares {field desiredRowsIsRows, read from local {'this' (function parameter, type DynamicGrid)}} and False
+		0x1808754AD: Jumps to 0x1808754B5 if this.desiredRowsIsRows equals False ;  - This is probably a goto, jumping to 0x1808754B5 which is after end of current block @ 0x18087547F (started at 0x18087547D)
+
+		0x1808754AF: [!] Reads field rows from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'rows' (type System.Int32)}
+
+		0x1808754B2: [!] Sets the field desiredRows (Type System.Int32) on local {'this' (function parameter, type DynamicGrid)} to the value stored in {'rows' (type System.Int32)}
+		0x1808754B5: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant11
+		0x1808754BF: [!] Returns from the function
+
+		0x1808754C0: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Void CalcRowsAndColumns()
+		this.rows = 1
+		this.columns = 1
+		UnityEngine.RectTransform parent = this.parent
+
+		System.Int32 childCount = parent.childCount
+
+		if (this.columnsControlSize == False)
+
+		    if (childCount > this.rows)
+		    else
+		    endif
+            
+		    this.desiredRows = childCount
+		    this.desiredColumns = childCount
+		else
+
+		    if (childCount > this.columns)
+		    else
+		    endif
+            
+		    this.desiredColumns = childCount
+		    this.desiredRows = childCount
+		endif
+        
+
+		if (this.desiredColumnsIsColumns == False)
+            goto INSN_1808754A9
+        endif
+		System.Int32 columns = this.columns
+		this.desiredColumns = columns
+
+		INSN_1808754A9:
+
+		if (this.desiredRowsIsRows == False)
+            goto INSN_1808754B5
+        endif
+		System.Int32 rows = this.rows
+		this.desiredRows = rows
+
+		INSN_1808754B5:
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldc.i4.1
+	IL_0002: conv.i8
+	IL_0003: conv.u8
+	IL_0004: stfld System.Int32 DynamicGrid::rows
+	IL_0009: ldarg.0
+	IL_000a: ldc.i4.1
+	IL_000b: conv.i8
+	IL_000c: conv.u8
+	IL_000d: stfld System.Int32 DynamicGrid::columns
+	IL_0012: ldarg.0
+	IL_0013: ldfld UnityEngine.RectTransform DynamicGrid::parent
+	IL_0018: call System.Int32 UnityEngine.Transform::get_childCount()
+	IL_001d: stloc.0
+	IL_001e: ldarg.0
+	IL_001f: ldfld System.Boolean DynamicGrid::columnsControlSize
+	IL_0024: ldc.i4.0
+	IL_0025: bne.un.s IL_003e
+	IL_0027: ldloc.0
+	IL_0028: ldarg.0
+	IL_0029: ldfld System.Int32 DynamicGrid::rows
+	IL_002e: ble.s IL_0030
+	IL_0030: ldarg.0
+	IL_0031: ldloc.0
+	IL_0032: stfld System.Int32 DynamicGrid::desiredRows
+	IL_0037: ldarg.0
+	IL_0038: ldloc.0
+	IL_0039: stfld System.Int32 DynamicGrid::desiredColumns
+	IL_003e: ldloc.0
+	IL_003f: ldarg.0
+	IL_0040: ldfld System.Int32 DynamicGrid::columns
+	IL_0045: ble.s IL_0047
+	IL_0047: ldarg.0
+	IL_0048: ldloc.0
+	IL_0049: stfld System.Int32 DynamicGrid::desiredColumns
+	IL_004e: ldarg.0
+	IL_004f: ldloc.0
+	IL_0050: stfld System.Int32 DynamicGrid::desiredRows
+	IL_0055: ldarg.0
+	IL_0056: ldfld System.Boolean DynamicGrid::desiredColumnsIsColumns
+	IL_005b: ldc.i4.0
+	IL_005c: beq.s IL_006c
+	IL_005e: ldarg.0
+	IL_005f: ldfld System.Int32 DynamicGrid::columns
+	IL_0064: stloc.1
+	IL_0065: ldarg.0
+	IL_0066: ldloc.1
+	IL_0067: stfld System.Int32 DynamicGrid::desiredColumns
+	IL_006c: ldarg.0
+	IL_006d: ldfld System.Boolean DynamicGrid::desiredRowsIsRows
+	IL_0072: ldc.i4.0
+	IL_0073: beq.s IL_0083
+	IL_0075: ldarg.0
+	IL_0076: ldfld System.Int32 DynamicGrid::rows
+	IL_007b: stloc.2
+	IL_007c: ldarg.0
+	IL_007d: ldloc.2
+	IL_007e: stfld System.Int32 DynamicGrid::desiredRows
+	IL_0083: ret
+	IL_0084: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0089: throw
+	
+
+Method: System.Void DynamicGrid::UpdateGridCellSize(System.Boolean):	Method Body (x86 ASM):
+		0x1808754E0 mov [rsp+10h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 16 | None ||| N/A | N/A
+		0x1808754E5 mov [rsp+18h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 24 | None ||| N/A | N/A
+		0x1808754EA mov [rsp+20h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 32 | None ||| N/A | N/A
+		0x1808754EF push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808754F0 sub rsp,70h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 112
+		0x1808754F4 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1808754F7 movaps [rsp+60h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 96 | None ||| N/A | N/A
+		0x1808754FC mov rcx,[rcx+50h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 80 | None ||| N/A | N/A
+		0x180875500 movzx ebp,dl		; DEBUG: {Register}/EBP {Register}/DL ||| None | 0 | None ||| N/A | N/A
+		0x180875503 movaps [rsp+50h],xmm7		; DEBUG: {Memory}/None {Register}/XMM7 ||| RSP | 80 | None ||| N/A | N/A
+		0x180875508 movaps [rsp+40h],xmm8		; DEBUG: {Memory}/None {Register}/XMM8 ||| RSP | 64 | None ||| N/A | N/A
+		0x18087550E cmp byte ptr [rbx+2Eh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 46 | None ||| N/A | 0
+		0x180875512 jne near ptr 000000018087563Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875518 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18087551B je near ptr 00000001808757E1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875521 mov eax,[rbx+58h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x180875524 movd xmm7,dword ptr [rbx+5Ch]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RBX | 92 | None ||| N/A | N/A
+		0x180875529 dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18087552B mov rdi,[rbx+48h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 72 | None ||| N/A | N/A
+		0x18087552F cvtdq2ps xmm7,xmm7		; DEBUG: {Register}/XMM7 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180875532 movd xmm6,eax		; DEBUG: {Register}/XMM6 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180875536 mulss xmm7,dword ptr [rcx+74h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RCX | 116 | None ||| N/A | N/A
+		0x18087553B cvtdq2ps xmm6,xmm6		; DEBUG: {Register}/XMM6 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x18087553E mulss xmm6,dword ptr [rcx+70h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RCX | 112 | None ||| N/A | N/A
+		0x180875543 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180875546 je near ptr 00000001808757E1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087554C mov rax,[1832AA2D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576784 | None ||| N/A | N/A
+		0x180875553 xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180875556 movups [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x18087555B test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18087555E jne short 000000018087557Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875560 lea rcx,[18297BA80h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485949056 | None ||| N/A | N/A
+		0x180875567 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087556C test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18087556F je near ptr 00000001808757E7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875575 mov [1832AA2D0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576784 | None ||| N/A | N/A
+		0x18087557C lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x180875581 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180875584 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875586 mov rdi,[rbx+48h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 72 | None ||| N/A | N/A
+		0x18087558A mov esi,[rbx+58h]		; DEBUG: {Register}/ESI {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x18087558D test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180875590 je near ptr 00000001808757E1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875596 mov rax,[1832AA2D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576784 | None ||| N/A | N/A
+		0x18087559D xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1808755A0 movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x1808755A5 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1808755A8 jne short 00000001808755C6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808755AA lea rcx,[18297BA80h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485949056 | None ||| N/A | N/A
+		0x1808755B1 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808755B6 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1808755B9 je near ptr 00000001808757FEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808755BF mov [1832AA2D0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576784 | None ||| N/A | N/A
+		0x1808755C6 lea rdx,[rsp+30h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1808755CB mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1808755CE call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808755D0 movss xmm3,dword ptr [rsp+28h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RSP | 40 | None ||| N/A | N/A
+		0x1808755D6 xorps xmm4,xmm4		; DEBUG: {Register}/XMM4 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x1808755D9 movss xmm2,dword ptr [rsp+3Ch]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RSP | 60 | None ||| N/A | N/A
+		0x1808755DF subss xmm3,xmm6		; DEBUG: {Register}/XMM3 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x1808755E3 movss xmm1,dword ptr [rbx+40h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBX | 64 | None ||| N/A | N/A
+		0x1808755E8 subss xmm2,xmm7		; DEBUG: {Register}/XMM2 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x1808755EC comiss xmm1,xmm4		; DEBUG: {Register}/XMM1 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x1808755EF movd xmm0,esi		; DEBUG: {Register}/XMM0 {Register}/ESI ||| None | 0 | None ||| N/A | N/A
+		0x1808755F3 cvtdq2ps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1808755F6 divss xmm3,xmm0		; DEBUG: {Register}/XMM3 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1808755FA movd xmm0,dword ptr [rbx+5Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 92 | None ||| N/A | N/A
+		0x1808755FF cvtdq2ps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180875602 divss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180875606 jbe short 0000000180875612h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875608 movaps xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x18087560B maxss xmm0,xmm3		; DEBUG: {Register}/XMM0 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x18087560F movaps xmm3,xmm0		; DEBUG: {Register}/XMM3 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180875612 movss xmm0,dword ptr [rbx+44h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 68 | None ||| N/A | N/A
+		0x180875617 comiss xmm0,xmm4		; DEBUG: {Register}/XMM0 {Register}/XMM4 ||| None | 0 | None ||| N/A | N/A
+		0x18087561A jbe short 0000000180875623h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087561C maxss xmm0,xmm2		; DEBUG: {Register}/XMM0 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180875620 movaps xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180875623 movss dword ptr [rsp+80h],xmm3		; DEBUG: {Memory}/None {Register}/XMM3 ||| RSP | 128 | None ||| N/A | N/A
+		0x18087562C movss dword ptr [rsp+84h],xmm2		; DEBUG: {Memory}/None {Register}/XMM2 ||| RSP | 132 | None ||| N/A | N/A
+		0x180875635 jmp near ptr 0000000180875774h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087563A test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x18087563D je near ptr 00000001808757E1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875643 mov eax,[rbx+58h]		; DEBUG: {Register}/EAX {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x180875646 mov rdi,[rbx+48h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 72 | None ||| N/A | N/A
+		0x18087564A dec eax		; DEBUG: {Register}/EAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18087564C movd xmm7,eax		; DEBUG: {Register}/XMM7 {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180875650 mov rax,rcx		; DEBUG: {Register}/RAX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180875653 cvtdq2ps xmm7,xmm7		; DEBUG: {Register}/XMM7 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x180875656 mulss xmm7,dword ptr [rcx+70h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RCX | 112 | None ||| N/A | N/A
+		0x18087565B mov ecx,[rbx+5Ch]		; DEBUG: {Register}/ECX {Memory}/None ||| RBX | 92 | None ||| N/A | N/A
+		0x18087565E dec ecx		; DEBUG: {Register}/ECX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875660 movd xmm8,ecx		; DEBUG: {Register}/XMM8 {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180875665 cvtdq2ps xmm8,xmm8		; DEBUG: {Register}/XMM8 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180875669 mulss xmm8,dword ptr [rax+74h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RAX | 116 | None ||| N/A | N/A
+		0x18087566F test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180875672 je near ptr 00000001808757E1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875678 mov rax,[1832AA2D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576784 | None ||| N/A | N/A
+		0x18087567F xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180875682 movups [rsp+30h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 48 | None ||| N/A | N/A
+		0x180875687 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18087568A jne short 00000001808756A8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087568C lea rcx,[18297BA80h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485949056 | None ||| N/A | N/A
+		0x180875693 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875698 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x18087569B je near ptr 0000000180875815h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808756A1 mov [1832AA2D0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576784 | None ||| N/A | N/A
+		0x1808756A8 lea rdx,[rsp+30h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1808756AD mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1808756B0 call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808756B2 movd xmm0,dword ptr [rbx+58h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x1808756B7 movss xmm6,dword ptr [rsp+38h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1808756BD mov rdi,[rbx+48h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 72 | None ||| N/A | N/A
+		0x1808756C1 subss xmm6,xmm7		; DEBUG: {Register}/XMM6 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x1808756C5 cvtdq2ps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1808756C8 divss xmm6,xmm0		; DEBUG: {Register}/XMM6 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1808756CC test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1808756CF je near ptr 00000001808757E1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808756D5 mov rax,[1832AA2D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576784 | None ||| N/A | N/A
+		0x1808756DC xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1808756DF movups [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x1808756E4 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1808756E7 jne short 0000000180875705h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808756E9 lea rcx,[18297BA80h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485949056 | None ||| N/A | N/A
+		0x1808756F0 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808756F5 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1808756F8 je near ptr 000000018087582Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808756FE mov [1832AA2D0h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576784 | None ||| N/A | N/A
+		0x180875705 lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x18087570A mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18087570D call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18087570F movd xmm0,dword ptr [rbx+5Ch]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 92 | None ||| N/A | N/A
+		0x180875714 xorps xmm3,xmm3		; DEBUG: {Register}/XMM3 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180875717 movss xmm2,dword ptr [rsp+2Ch]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RSP | 44 | None ||| N/A | N/A
+		0x18087571D movss xmm1,dword ptr [rbx+40h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RBX | 64 | None ||| N/A | N/A
+		0x180875722 subss xmm2,xmm8		; DEBUG: {Register}/XMM2 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x180875727 comiss xmm1,xmm3		; DEBUG: {Register}/XMM1 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x18087572A cvtdq2ps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18087572D divss xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x180875731 jbe short 000000018087573Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875733 movaps xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180875736 maxss xmm0,xmm6		; DEBUG: {Register}/XMM0 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x18087573A movaps xmm6,xmm0		; DEBUG: {Register}/XMM6 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18087573D movss xmm0,dword ptr [rbx+44h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 68 | None ||| N/A | N/A
+		0x180875742 comiss xmm0,xmm3		; DEBUG: {Register}/XMM0 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x180875745 jbe short 000000018087574Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875747 maxss xmm0,xmm2		; DEBUG: {Register}/XMM0 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x18087574B movaps xmm2,xmm0		; DEBUG: {Register}/XMM2 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18087574E cmp byte ptr [rbx+2Fh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RBX | 47 | None ||| N/A | 0
+		0x180875752 movaps xmm0,xmm6		; DEBUG: {Register}/XMM0 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180875755 maxss xmm0,xmm2		; DEBUG: {Register}/XMM0 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x180875759 je short 0000000180875762h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087575B movaps xmm0,xmm2		; DEBUG: {Register}/XMM0 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x18087575E minss xmm0,xmm6		; DEBUG: {Register}/XMM0 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x180875762 movss dword ptr [rsp+80h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 128 | None ||| N/A | N/A
+		0x18087576B movss dword ptr [rsp+84h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 132 | None ||| N/A | N/A
+		0x180875774 mov rdi,[rbx+50h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 80 | None ||| N/A | N/A
+		0x180875778 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x18087577B je short 00000001808757E1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087577D cmp byte ptr [1832ABFFAh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584250 | None ||| N/A | 0
+		0x180875784 jne short 0000000180875799h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875786 lea rcx,[1830FE7F0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493825008 | None ||| N/A | N/A
+		0x18087578D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875792 mov byte ptr [1832ABFFAh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495584250 | None ||| N/A | 1
+		0x180875799 mov r8,[rsp+80h]		; DEBUG: {Register}/R8 {Memory}/None ||| RSP | 128 | None ||| N/A | N/A
+		0x1808757A1 lea rdx,[rdi+68h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDI | 104 | None ||| N/A | N/A
+		0x1808757A5 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1808757A8 call 0000000180266150h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808757AD test bpl,bpl		; DEBUG: {Register}/BPL {Register}/BPL ||| None | 0 | None ||| N/A | N/A
+		0x1808757B0 je short 00000001808757BCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808757B2 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1808757B4 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1808757B7 call 0000000180875850h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808757BC movaps xmm6,[rsp+60h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x1808757C1 lea r11,[rsp+70h]		; DEBUG: {Register}/R11 {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x1808757C6 mov rbx,[r11+18h]		; DEBUG: {Register}/RBX {Memory}/None ||| R11 | 24 | None ||| N/A | N/A
+		0x1808757CA mov rbp,[r11+20h]		; DEBUG: {Register}/RBP {Memory}/None ||| R11 | 32 | None ||| N/A | N/A
+		0x1808757CE mov rsi,[r11+28h]		; DEBUG: {Register}/RSI {Memory}/None ||| R11 | 40 | None ||| N/A | N/A
+		0x1808757D2 movaps xmm8,[r11-30h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| R11 | 18446744073709551568 | None ||| N/A | N/A
+		0x1808757D7 movaps xmm7,[rsp+50h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1808757DC mov rsp,r11		; DEBUG: {Register}/RSP {Register}/R11 ||| None | 0 | None ||| N/A | N/A
+		0x1808757DF pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808757E0 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808757E1 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808757E6 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DynamicGrid::UpdateGridCellSize(System.Boolean):
+		End of function at 0x1808757E7
+		Absolute End is at 0x1808757E7
+		Identified Jump Destination addresses:
+			0x180875774
+		0x1808754EF: Saves the content of rdi to the stack
+		0x1808754F4: Copies {'this' (function parameter, type DynamicGrid)} from rcx into rbx
+		0x1808754FC: [!] Reads field grid from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'grid' (type UnityEngine.UI.GridLayoutGroup)}
+
+		0x180875500: Copies {'applyCascadeEffects' (function parameter, type System.Boolean)} from rdx into rbp
+		0x18087550E: [!] Compares {field forceSquare, read from local {'this' (function parameter, type DynamicGrid)}} and False
+		0x180875512: Jumps to 0x18087563A if {field forceSquare, read from local {'this' (function parameter, type DynamicGrid)}} != False ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x180875518: [!] Compares {'grid' (type UnityEngine.UI.GridLayoutGroup)} and 0
+		0x18087551B: Jumps to 0x1808757E1 (which throws a NRE) if grid equals 0. Implicitly present in managed code, so ignored here.
+		0x18087552B: [!] Reads field parent from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'parent' (type UnityEngine.RectTransform)}
+
+		0x180875536: Multiplies  by the field m_Spacing.y from {'grid' (type UnityEngine.UI.GridLayoutGroup)}, and stores the result in new local {'local5' (type System.Single)} in register xmm7
+		0x18087553E: Multiplies  by the field m_Spacing from {'grid' (type UnityEngine.UI.GridLayoutGroup)}, and stores the result in new local {'local6' (type UnityEngine.Vector2)} in register xmm6
+		0x180875543: [!] Compares {'parent' (type UnityEngine.RectTransform)} and 0
+		0x180875546: Jumps to 0x1808757E1 (which throws a NRE) if parent equals 0. Implicitly present in managed code, so ignored here.
+		0x18087554C: Loads string "hpêpÐ" into register rax as constant UnityEngine.RectTransform.get_rect
+		0x180875553: Clears register xmm0, yielding zero-local {'local7' (type System.Int32)}
+		0x180875556: Moves local7 (type System.Int32) from register xmm0 to the stack at offset 32 (0x20)
+		0x18087555B: Compares UnityEngine.RectTransform.get_rect and 0
+		0x18087555E: Jumps to 0x18087557C if UnityEngine.RectTransform.get_rect != 0
+
+		0x180875560: Loads string "UnityEngine.RectTransform::get_rect_Injected(UnityEngine.Rect&)" into register rcx as constant {'constant6' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180875567: Looks up unity ICall by name "UnityEngine.RectTransform::get_rect_Injected(UnityEngine.Rect&)" which resolves to UnityEngine.Rect UnityEngine.RectTransform::get_rect()
+		0x18087556C: Compares UnityEngine.RectTransform.get_rect and 0
+		0x18087556F: Jumps to 0x1808757E7 if UnityEngine.RectTransform.get_rect equals 0 ;  - This is probably a goto, jumping to 0x1808757E7 which is after end of current block @ 0x18087563A (started at 0x180875518)
+
+		0x18087557C: Loads a pointer to stack offset 0x20 into register rdx as new constant constant8
+		0x180875581: Copies {'parent' (type UnityEngine.RectTransform)} from rdi into rcx
+		0x180875584: [!] Calls managed method UnityEngine.Rect UnityEngine.RectTransform::get_rect() on instance {'parent' (type UnityEngine.RectTransform)} and stores the result in {'rect' (type UnityEngine.Rect)}
+
+		0x180875586: [!] Reads field parent from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'parent2' (type UnityEngine.RectTransform)}
+
+		0x18087558D: [!] Compares {'parent2' (type UnityEngine.RectTransform)} and 0
+		0x180875590: Jumps to 0x1808757E1 (which throws a NRE) if parent2 equals 0. Implicitly present in managed code, so ignored here.
+		0x180875596: Loads string "hpêpÐ" into register rax as constant UnityEngine.RectTransform.get_rect
+		0x18087559D: Clears register xmm0, yielding zero-local {'local11' (type System.Int32)}
+		0x1808755A0: Moves local11 (type System.Int32) from register xmm0 to the stack at offset 48 (0x30)
+		0x1808755A5: Compares UnityEngine.RectTransform.get_rect and 0
+		0x1808755A8: Jumps to 0x1808755C6 if UnityEngine.RectTransform.get_rect != 0
+
+		0x1808755AA: Loads string "UnityEngine.RectTransform::get_rect_Injected(UnityEngine.Rect&)" into register rcx as constant {'constant12' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1808755B1: Looks up unity ICall by name "UnityEngine.RectTransform::get_rect_Injected(UnityEngine.Rect&)" which resolves to UnityEngine.Rect UnityEngine.RectTransform::get_rect()
+		0x1808755B6: Compares UnityEngine.RectTransform.get_rect and 0
+		0x1808755B9: Jumps to 0x1808757FE if UnityEngine.RectTransform.get_rect equals 0 ;  - This is probably a goto, jumping to 0x1808757FE which is after end of current block @ 0x18087563A (started at 0x180875518)
+
+		0x1808755C6: Loads a pointer to stack offset 0x30 into register rdx as new constant constant14
+		0x1808755CB: Copies {'parent2' (type UnityEngine.RectTransform)} from rdi into rcx
+		0x1808755CE: [!] Calls managed method UnityEngine.Rect UnityEngine.RectTransform::get_rect() on instance {'parent2' (type UnityEngine.RectTransform)} and stores the result in {'rect2' (type UnityEngine.Rect)}
+
+		0x1808755D0: Reads unknown value in stack, offset 40 (0x28) and stores the pointer in register xmm3 as new constant constant15
+		0x1808755D6: Clears register xmm4, yielding zero-local {'local13' (type System.Int32)}
+		0x1808755D9: Reads unknown value in stack, offset 60 (0x3C) and stores the pointer in register xmm2 as new constant constant16
+		0x1808755E3: [!] Reads field minGridSize from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'minGridSize' (type UnityEngine.Vector2)}
+
+		0x1808755EC: [!] Compares {'minGridSize' (type UnityEngine.Vector2)} and {'local13' (type System.Int32)}
+		0x180875606: Jumps to 0x180875612 (which is an if statement's body) if {'minGridSize' (type UnityEngine.Vector2)} is less than or equal to {'local13' (type System.Int32)} ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180875608: Copies {'minGridSize' (type UnityEngine.Vector2)} from xmm1 into xmm0
+		0x18087560F: Copies {'minGridSize' (type UnityEngine.Vector2)} from xmm0 into xmm3
+		0x180875612: [!] Reads field minGridSize.y from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'single' (type System.Single)}
+
+		0x180875617: [!] Compares {'single' (type System.Single)} and {'local13' (type System.Int32)}
+		0x18087561A: Jumps to 0x180875623 if {'single' (type System.Single)} is less than or equal to {'local13' (type System.Int32)} ;  - This is probably a goto, jumping to 0x180875623 which is after end of current block @ 0x180875612 (started at 0x180875608)
+
+		0x180875620: Copies {'single' (type System.Single)} from xmm0 into xmm2
+		0x180875623: Moves constant15 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register xmm3 to the stack at offset 128 (0x80) as a new local local16
+		0x18087562C: Moves single (type System.Single) from register xmm2 to the stack at offset 132 (0x84)
+		0x180875635: Jumps to 0x180875774 (which is an function-local jump destination)
+
+		0x18087563A: [!] Compares {'grid' (type UnityEngine.UI.GridLayoutGroup)} and 0
+		0x18087563D: Jumps to 0x1808757E1 (which throws a NRE) if grid equals 0. Implicitly present in managed code, so ignored here.
+		0x180875646: [!] Reads field parent from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'parent3' (type UnityEngine.RectTransform)}
+
+		0x180875650: Copies {'grid' (type UnityEngine.UI.GridLayoutGroup)} from rcx into rax
+		0x180875656: Multiplies  by the field m_Spacing from {'grid' (type UnityEngine.UI.GridLayoutGroup)}, and stores the result in new local {'local19' (type UnityEngine.Vector2)} in register xmm7
+		0x180875669: Multiplies  by the field m_Spacing.y from {'grid' (type UnityEngine.UI.GridLayoutGroup)}, and stores the result in new local {'local21' (type System.Single)} in register xmm8
+		0x18087566F: [!] Compares {'parent3' (type UnityEngine.RectTransform)} and 0
+		0x180875672: Jumps to 0x1808757E1 (which throws a NRE) if parent3 equals 0. Implicitly present in managed code, so ignored here.
+		0x180875678: Loads string "hpêpÐ" into register rax as constant UnityEngine.RectTransform.get_rect
+		0x18087567F: Clears register xmm0, yielding zero-local {'local22' (type System.Int32)}
+		0x180875682: Moves local22 (type System.Int32) from register xmm0 to the stack at offset 48 (0x30)
+		0x180875687: Compares UnityEngine.RectTransform.get_rect and 0
+		0x18087568A: Jumps to 0x1808756A8 if UnityEngine.RectTransform.get_rect != 0
+
+		0x18087568C: Loads string "UnityEngine.RectTransform::get_rect_Injected(UnityEngine.Rect&)" into register rcx as constant {'constant21' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180875693: Looks up unity ICall by name "UnityEngine.RectTransform::get_rect_Injected(UnityEngine.Rect&)" which resolves to UnityEngine.Rect UnityEngine.RectTransform::get_rect()
+		0x180875698: Compares UnityEngine.RectTransform.get_rect and 0
+		0x18087569B: Jumps to 0x180875815 if UnityEngine.RectTransform.get_rect equals 0 ;  - This is probably a goto, jumping to 0x180875815 which is after end of current block @ 0x180875774 (started at 0x18087563A)
+
+		0x1808756A8: Loads a pointer to stack offset 0x30 into register rdx as new constant constant23
+		0x1808756AD: Copies {'parent3' (type UnityEngine.RectTransform)} from rdi into rcx
+		0x1808756B0: [!] Calls managed method UnityEngine.Rect UnityEngine.RectTransform::get_rect() on instance {'parent3' (type UnityEngine.RectTransform)} and stores the result in {'rect3' (type UnityEngine.Rect)}
+
+		0x1808756B7: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register xmm6 as new constant constant24
+		0x1808756BD: [!] Reads field parent from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'parent4' (type UnityEngine.RectTransform)}
+
+		0x1808756CC: [!] Compares {'parent4' (type UnityEngine.RectTransform)} and 0
+		0x1808756CF: Jumps to 0x1808757E1 (which throws a NRE) if parent4 equals 0. Implicitly present in managed code, so ignored here.
+		0x1808756D5: Loads string "hpêpÐ" into register rax as constant UnityEngine.RectTransform.get_rect
+		0x1808756DC: Clears register xmm0, yielding zero-local {'local25' (type System.Int32)}
+		0x1808756DF: Moves local25 (type System.Int32) from register xmm0 to the stack at offset 32 (0x20)
+		0x1808756E4: Compares UnityEngine.RectTransform.get_rect and 0
+		0x1808756E7: Jumps to 0x180875705 if UnityEngine.RectTransform.get_rect != 0
+
+		0x1808756E9: Loads string "UnityEngine.RectTransform::get_rect_Injected(UnityEngine.Rect&)" into register rcx as constant {'constant28' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1808756F0: Looks up unity ICall by name "UnityEngine.RectTransform::get_rect_Injected(UnityEngine.Rect&)" which resolves to UnityEngine.Rect UnityEngine.RectTransform::get_rect()
+		0x1808756F5: Compares UnityEngine.RectTransform.get_rect and 0
+		0x1808756F8: Jumps to 0x18087582C if UnityEngine.RectTransform.get_rect equals 0 ;  - This is probably a goto, jumping to 0x18087582C which is after end of current block @ 0x180875774 (started at 0x18087563A)
+
+		0x180875705: Loads a pointer to stack offset 0x20 into register rdx as new constant constant30
+		0x18087570A: Copies {'parent4' (type UnityEngine.RectTransform)} from rdi into rcx
+		0x18087570D: [!] Calls managed method UnityEngine.Rect UnityEngine.RectTransform::get_rect() on instance {'parent4' (type UnityEngine.RectTransform)} and stores the result in {'rect4' (type UnityEngine.Rect)}
+
+		0x180875714: Clears register xmm3, yielding zero-local {'local27' (type System.Int32)}
+		0x180875717: Reads unknown value in stack, offset 44 (0x2C) and stores the pointer in register xmm2 as new constant constant31
+		0x18087571D: [!] Reads field minGridSize from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'minGridSize2' (type UnityEngine.Vector2)}
+
+		0x180875727: [!] Compares {'minGridSize2' (type UnityEngine.Vector2)} and {'local27' (type System.Int32)}
+		0x180875731: Jumps to 0x18087573D (which is an if statement's body) if {'minGridSize2' (type UnityEngine.Vector2)} is less than or equal to {'local27' (type System.Int32)} ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180875733: Copies {'minGridSize2' (type UnityEngine.Vector2)} from xmm1 into xmm0
+		0x18087573A: Copies {'minGridSize2' (type UnityEngine.Vector2)} from xmm0 into xmm6
+		0x18087573D: [!] Reads field minGridSize.y from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'single2' (type System.Single)}
+
+		0x180875742: [!] Compares {'single2' (type System.Single)} and {'local27' (type System.Int32)}
+		0x180875745: Jumps to 0x18087574E if {'single2' (type System.Single)} is less than or equal to {'local27' (type System.Int32)} ;  - This is probably a goto, jumping to 0x18087574E which is after end of current block @ 0x18087573D (started at 0x180875733)
+
+		0x18087574B: Copies {'single2' (type System.Single)} from xmm0 into xmm2
+		0x18087574E: [!] Compares {field useSmallestDimensionOnForceSquare, read from local {'this' (function parameter, type DynamicGrid)}} and False
+		0x180875752: Copies {'constant24' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm6 into xmm0
+		0x180875759: Jumps to 0x180875762 if this.useSmallestDimensionOnForceSquare equals False ;  - This is probably a goto, jumping to 0x180875762 which is after end of current block @ 0x18087573D (started at 0x180875733)
+
+		0x18087575B: Copies {'single2' (type System.Single)} from xmm2 into xmm0
+		0x180875762: Moves single2 (type System.Single) from register xmm0 to the stack at offset 128 (0x80)
+		0x18087576B: Moves single2 (type System.Single) from register xmm0 to the stack at offset 132 (0x84)
+
+		End Of If-Else Block (at 0x180875774) where the else started at 0x18087563A
+		0x180875774: [!] Reads field grid from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'grid2' (type UnityEngine.UI.GridLayoutGroup)}
+
+		0x180875778: [!] Compares {'grid2' (type UnityEngine.UI.GridLayoutGroup)} and 0
+		0x18087577B: Jumps to 0x1808757E1 (which throws a NRE) if grid2 equals 0. Implicitly present in managed code, so ignored here.
+		0x18087577D: Compares {Unknown Global at 0x1832ABFFA, first ten bytes are [234 2 240 78 16 0 83 79 16 0], or as chars "êðN SO "} and 0
+		0x180875784: Jumps to 0x180875799 if {Unknown Global at 0x1832ABFFA, first ten bytes are [234 2 240 78 16 0 83 79 16 0], or as chars "êðN SO "} != 0 ;  - This is probably a goto, jumping to 0x180875799 which is after end of current block @ 0x18087573D (started at 0x180875733)
+
+		0x180875786: Loads the global generic method reference for method System.Void UnityEngine.UI.LayoutGroup::SetProperty<UnityEngine.Vector2>(T,T) on type UnityEngine.UI.LayoutGroup and stores the result in constant {'SetProperty' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18087578D: Initializes runtime metadata value 
+		0x180875799: Reads local {'single2' (type System.Single)} from stack offset 128 (0x80) into register r8
+		0x1808757A1: Loads the pointer to the field m_CellSize on {'grid2' (type UnityEngine.UI.GridLayoutGroup)} into register rdx
+		0x1808757A5: Copies {'grid2' (type UnityEngine.UI.GridLayoutGroup)} from rdi into rcx
+		0x1808757AD: [!] Compares {'applyCascadeEffects' (function parameter, type System.Boolean)} and False
+		0x1808757B0: Jumps to 0x1808757BC if applyCascadeEffects equals False ;  - This is probably a goto, jumping to 0x1808757BC which is after end of current block @ 0x18087573D (started at 0x180875733)
+
+		0x1808757B4: Copies {'this' (function parameter, type DynamicGrid)} from rbx into rcx
+		0x1808757B7: [!] Calls managed method System.Void DynamicGrid::ApplyCascadeEffect() on instance {'this' (function parameter, type DynamicGrid)}
+
+		0x1808757BC: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register xmm6 as new constant constant39
+		0x1808757C1: Loads a pointer to stack offset 0x70 into register r11 as new constant constant40
+		0x1808757D7: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register xmm7 as new constant constant41
+		0x1808757DC: Copies {'constant40' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r11 into rsp
+		0x1808757E0: [!] Returns from the function
+
+		0x1808757E1: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Void UpdateGridCellSize(System.Boolean applyCascadeEffects)
+		UnityEngine.UI.GridLayoutGroup grid = this.grid
+
+		if (this.forceSquare == False)
+		    UnityEngine.RectTransform parent = this.parent
+		    System.Single local5 =  * grid.m_Spacing.y
+		    UnityEngine.Vector2 local6 =  * grid.m_Spacing
+		    ulong local7 = 0
+
+		    UnityEngine.Rect rect = parent.rect
+		    UnityEngine.RectTransform parent2 = this.parent
+		    ulong local11 = 0
+
+		    UnityEngine.Rect rect2 = parent2.rect
+		    ulong local13 = 0
+		    UnityEngine.Vector2 minGridSize = this.minGridSize
+
+		    if (minGridSize > local13)
+		    endif
+            
+		    System.Single single = this.minGridSize.y
+
+		    if (single <= local13)
+                goto INSN_180875623
+            endif
+
+		    INSN_180875623:
+		else
+		    UnityEngine.RectTransform parent3 = this.parent
+		    UnityEngine.Vector2 local19 =  * grid.m_Spacing
+		    System.Single local21 =  * grid.m_Spacing.y
+		    ulong local22 = 0
+
+		    UnityEngine.Rect rect3 = parent3.rect
+		    UnityEngine.RectTransform parent4 = this.parent
+		    ulong local25 = 0
+
+		    UnityEngine.Rect rect4 = parent4.rect
+		    ulong local27 = 0
+		    UnityEngine.Vector2 minGridSize2 = this.minGridSize
+
+		    if (minGridSize2 > local27)
+		    endif
+            
+		    System.Single single2 = this.minGridSize.y
+
+		    if (single2 <= local27)
+                goto INSN_18087574E
+            endif
+
+		    INSN_18087574E:
+
+		    if (this.useSmallestDimensionOnForceSquare == False)
+                goto INSN_180875762
+            endif
+
+		    INSN_180875762:
+		endif
+        
+		UnityEngine.UI.GridLayoutGroup grid2 = this.grid
+
+		if (applyCascadeEffects == False)
+            goto INSN_1808757BC
+        endif
+
+		this.ApplyCascadeEffect()
+
+		INSN_1808757BC:
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.MultiplyRegByFieldAction at (0x180875536) is corrupt (Operand we were multiplying by is null or local made was stripped) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void DynamicGrid::ApplyCascadeEffect():	Method Body (x86 ASM):
+		0x180875850 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180875855 mov [rsp+10h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 16 | None ||| N/A | N/A
+		0x18087585A push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18087585B sub rsp,70h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 112
+		0x18087585F mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180875862 cmp byte ptr [18329B82Fh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516719 | None ||| N/A | 0
+		0x180875869 jne short 00000001808758C6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087586B lea rcx,[1830EB248h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493745736 | None ||| N/A | N/A
+		0x180875872 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875877 lea rcx,[1830EB238h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493745720 | None ||| N/A | N/A
+		0x18087587E call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875883 lea rcx,[183124BC0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493981632 | None ||| N/A | N/A
+		0x18087588A call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087588F lea rcx,[183124BB8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493981624 | None ||| N/A | N/A
+		0x180875896 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087589B lea rcx,[183124BB0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493981616 | None ||| N/A | N/A
+		0x1808758A2 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808758A7 lea rcx,[1830EB240h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493745728 | None ||| N/A | N/A
+		0x1808758AE call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808758B3 lea rcx,[183124BA8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493981608 | None ||| N/A | N/A
+		0x1808758BA call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808758BF mov byte ptr [18329B82Fh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516719 | None ||| N/A | 1
+		0x1808758C6 cmp dword ptr [rdi+30h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RDI | 48 | None ||| N/A | 0
+		0x1808758CA je near ptr 0000000180875A1Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808758D0 mov rcx,[1830EB240h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493745728 | None ||| N/A | N/A
+		0x1808758D7 cmp dword ptr [rdi+30h],1		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RDI | 48 | None ||| N/A | 1
+		0x1808758DB je short 00000001808758EBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808758DD call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808758E2 mov r8,[1830EB238h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493745720 | None ||| N/A | N/A
+		0x1808758E9 jmp short 00000001808758F7h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808758EB call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808758F0 mov r8,[1830EB248h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493745736 | None ||| N/A | N/A
+		0x1808758F7 mov rsi,rax		; DEBUG: {Register}/RSI {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1808758FA mov rdx,rdi		; DEBUG: {Register}/RDX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1808758FD mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180875900 call 0000000180009C40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875905 test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x180875908 je near ptr 0000000180875A1Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087590E mov r9,[rdi+38h]		; DEBUG: {Register}/R9 {Memory}/None ||| RDI | 56 | None ||| N/A | N/A
+		0x180875912 test r9,r9		; DEBUG: {Register}/R9 {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x180875915 je near ptr 0000000180875A42h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18087591B xorps xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18087591E movdqu [rsp+40h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 64 | None ||| N/A | N/A
+		0x180875924 mov [rsp+38h],r9		; DEBUG: {Memory}/None {Register}/R9 ||| RSP | 56 | None ||| N/A | N/A
+		0x180875929 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180875930 je short 0000000180875971h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875932 lea r8,[rsp+38h]		; DEBUG: {Register}/R8 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x180875937 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x18087593B and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180875942 mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180875945 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180875949 lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x180875950 lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x180875954 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180875958 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x18087595B nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x180875960 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180875963 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180875966 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x18087596A lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x18087596F jne short 0000000180875960h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875971 xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x180875973 mov [rsp+40h],ecx		; DEBUG: {Memory}/None {Register}/ECX ||| RSP | 64 | None ||| N/A | N/A
+		0x180875977 mov eax,[r9+1Ch]		; DEBUG: {Register}/EAX {Memory}/None ||| R9 | 28 | None ||| N/A | N/A
+		0x18087597B mov [rsp+44h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RSP | 68 | None ||| N/A | N/A
+		0x18087597F xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x180875981 mov [rsp+48h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 72 | None ||| N/A | N/A
+		0x180875986 movups xmm0,[rsp+38h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x18087598B movups [rsp+50h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 80 | None ||| N/A | N/A
+		0x180875990 movsd xmm1,qword ptr [rsp+48h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x180875996 movsd qword ptr [rsp+60h],xmm1		; DEBUG: {Memory}/None {Register}/XMM1 ||| RSP | 96 | None ||| N/A | N/A
+		0x18087599C mov [rsp+28h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RSP | 40 | None ||| N/A | N/A
+		0x1808759A1 lea rax,[rsp+50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1808759A6 mov [rsp+30h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 48 | None ||| N/A | N/A
+		0x1808759AB nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x1808759B0 mov rdx,[183124BB8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493981624 | None ||| N/A | N/A
+		0x1808759B7 lea rcx,[rsp+50h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1808759BC call 0000000181058730h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808759C1 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1808759C3 je short 0000000180875A12h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808759C5 mov rbx,[rsp+60h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x1808759CA test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1808759CD je short 0000000180875A36h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808759CF mov rax,[rsi+18h]		; DEBUG: {Register}/RAX {Memory}/None ||| RSI | 24 | None ||| N/A | N/A
+		0x1808759D3 mov r8,[rsi+28h]		; DEBUG: {Register}/R8 {Memory}/None ||| RSI | 40 | None ||| N/A | N/A
+		0x1808759D7 mov edx,[rbx+24h]		; DEBUG: {Register}/EDX {Memory}/None ||| RBX | 36 | None ||| N/A | N/A
+		0x1808759DA mov rcx,[rsi+40h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSI | 64 | None ||| N/A | N/A
+		0x1808759DE call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808759E0 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1808759E2 je short 00000001808759B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808759E4 mov eax,[rdi+24h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDI | 36 | None ||| N/A | N/A
+		0x1808759E7 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1808759EA je short 0000000180875A30h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808759EC mov [rbx+24h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBX | 36 | None ||| N/A | N/A
+		0x1808759EF xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1808759F1 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1808759F4 call 00000001808751E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808759F9 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1808759FB mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1808759FE call 00000001808753E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875A03 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180875A06 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180875A08 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180875A0B call 00000001808754E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875A10 jmp short 00000001808759B0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875A12 jmp short 0000000180875A1Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875A14 mov rcx,[rsp+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RSP | 40 | None ||| N/A | N/A
+		0x180875A19 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180875A1C jne short 0000000180875A3Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875A1E lea r11,[rsp+70h]		; DEBUG: {Register}/R11 {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x180875A23 mov rbx,[r11+10h]		; DEBUG: {Register}/RBX {Memory}/None ||| R11 | 16 | None ||| N/A | N/A
+		0x180875A27 mov rsi,[r11+18h]		; DEBUG: {Register}/RSI {Memory}/None ||| R11 | 24 | None ||| N/A | N/A
+		0x180875A2B mov rsp,r11		; DEBUG: {Register}/RSP {Register}/R11 ||| None | 0 | None ||| N/A | N/A
+		0x180875A2E pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875A2F ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875A30 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875A35 nop		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875A36 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875A3B nop		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875A3C call 00000001802C4E80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875A41 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DynamicGrid::ApplyCascadeEffect():
+		End of function at 0x180875A42
+		Absolute End is at 0x180875A42
+		Identified Jump Destination addresses:
+			0x1808758F7
+			0x180875A1E
+		0x18087585A: Saves the content of rdi to the stack
+		0x18087585F: Copies {'this' (function parameter, type DynamicGrid)} from rcx into rdi
+		0x180875862: Compares {Unknown Global at 0x18329B82F, first ten bytes are [0 213 86 4 0 100 80 239 2 128], or as chars " ÕV dPï"} and 0
+		0x180875869: Jumps to 0x1808758C6 if {Unknown Global at 0x18329B82F, first ten bytes are [0 213 86 4 0 100 80 239 2 128], or as chars " ÕV dPï"} != 0
+
+		0x18087586B: Loads the method definition for managed method System.Boolean DynamicGrid::<ApplyCascadeEffect>b__19_0(System.Int32) as a constant "<ApplyCascadeEffect>b__19_0"
+		0x180875872: Initializes runtime metadata value System.Boolean DynamicGrid::<ApplyCascadeEffect>b__19_0(System.Int32)
+		0x180875877: Loads the method definition for managed method System.Boolean DynamicGrid::<ApplyCascadeEffect>b__19_1(System.Int32) as a constant "<ApplyCascadeEffect>b__19_1"
+		0x18087587E: Initializes runtime metadata value System.Boolean DynamicGrid::<ApplyCascadeEffect>b__19_1(System.Int32)
+		0x180875883: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1/Enumerator::Dispose() on type System.Collections.Generic.List`1/Enumerator<DynamicGrid> and stores the result in constant {'Dispose' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x18087588A: Initializes runtime metadata value 
+		0x18087588F: Loads the global generic method reference for method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on type System.Collections.Generic.List`1/Enumerator<DynamicGrid> and stores the result in constant {'MoveNext' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x180875896: Initializes runtime metadata value 
+		0x18087589B: Loads the global generic method reference for method T System.Collections.Generic.List`1/Enumerator::get_Current() on type System.Collections.Generic.List`1/Enumerator<DynamicGrid> and stores the result in constant {'get_Current' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1808758A2: Initializes runtime metadata value 
+		0x1808758A7: Loads the type definition for managed type System.Func`2<System.Int32,System.Boolean> as a constant "Func`2" in rcx
+		0x1808758AE: Initializes runtime metadata value System.Func`2<System.Int32,System.Boolean>
+		0x1808758B3: Loads the global generic method reference for method System.Collections.Generic.List`1/Enumerator<T> System.Collections.Generic.List`1::GetEnumerator() on type System.Collections.Generic.List`1<DynamicGrid> and stores the result in constant {'GetEnumerator' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1808758BA: Initializes runtime metadata value 
+		0x1808758C6: [!] Compares {field cascadeEffect, read from local {'this' (function parameter, type DynamicGrid)}} and 0
+		0x1808758CA: Jumps to 0x180875A1E (which is an if statement's body) if this.cascadeEffect equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1808758D0: Loads the type definition for managed type System.Func`2<System.Int32,System.Boolean> as a constant "Func`2" in rcx
+		0x1808758D7: [!] Compares {field cascadeEffect, read from local {'this' (function parameter, type DynamicGrid)}} and 1
+		0x1808758DB: Jumps to 0x1808758EB if this.cascadeEffect equals 1 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x1808758DD: [!] Allocates an instance of type System.Func`2<System.Int32,System.Boolean> and stores it as func in rax.
+
+		0x1808758E2: Loads the method definition for managed method System.Boolean DynamicGrid::<ApplyCascadeEffect>b__19_1(System.Int32) as a constant "<ApplyCascadeEffect>b__19_1"
+		0x1808758E9: Jumps to 0x1808758F7 (which is an function-local jump destination)
+
+		0x1808758EB: [!] Allocates an instance of type System.Func`2<System.Int32,System.Boolean> and stores it as func2 in rax.
+
+		0x1808758F0: Loads the method definition for managed method System.Boolean DynamicGrid::<ApplyCascadeEffect>b__19_0(System.Int32) as a constant "<ApplyCascadeEffect>b__19_0"
+
+		End Of If-Else Block (at 0x1808758F7) where the else started at 0x1808758EB
+		0x1808758F7: Copies {'func2' (type System.Func`2<System.Int32,System.Boolean>)} from rax into rsi
+		0x1808758FA: Copies {'this' (function parameter, type DynamicGrid)} from rdi into rdx
+		0x1808758FD: Copies {'func2' (type System.Func`2<System.Int32,System.Boolean>)} from rax into rcx
+		0x180875905: [!] Compares {'func2' (type System.Func`2<System.Int32,System.Boolean>)} and 0
+		0x180875908: Jumps to 0x180875A1E if func2 equals 0 ;  - This is probably a goto, jumping to 0x180875A1E which is after end of current block @ 0x1808758F7 (started at 0x1808758EB)
+
+		0x18087590E: [!] Reads field cascadeAffectedGridLayouts from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'cascadeAffectedGridLayouts' (type System.Collections.Generic.List`1<DynamicGrid>)}
+
+		0x180875912: [!] Compares {'cascadeAffectedGridLayouts' (type System.Collections.Generic.List`1<DynamicGrid>)} and 0
+		0x180875915: Jumps to 0x180875A42 (which throws a NRE) if cascadeAffectedGridLayouts equals 0. Implicitly present in managed code, so ignored here.
+		0x180875924: Moves cascadeAffectedGridLayouts (type System.Collections.Generic.List`1<DynamicGrid>) from register r9 to the stack at offset 56 (0x38)
+		0x180875929: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180875930: Jumps to 0x180875971 if constant17 equals 0 ;  - This is probably a goto, jumping to 0x180875971 which is after end of current block @ 0x1808758F7 (started at 0x1808758EB)
+
+		0x180875932: Loads a pointer to stack offset 0x38 into register r8 as new constant constant19
+		0x180875942: Copies {'constant19' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r8 into rax
+		0x180875949: Loads string "¡
+m" into register rcx as constant {'constant20' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180875960: Loads the class pointer from this into a constant constant21 in register rax
+		0x180875963: Copies {'constant21' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x18087596F: Jumps to 0x180875960 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0 ;  - This is probably a goto, jumping to 0x180875960 which is after end of current block @ 0x1808758F7 (started at 0x1808758EB)
+
+		0x180875971: Clears register rcx, yielding zero-local {'local5' (type System.Int32)}
+		0x180875973: Moves local5 (type System.Int32) from register rcx to the stack at offset 64 (0x40)
+		0x180875977: [!] Reads field _version from {'cascadeAffectedGridLayouts' (type System.Collections.Generic.List`1<DynamicGrid>)} and stores in a new local {'_version' (type System.Int32)}
+
+		0x18087597B: Moves _version (type System.Int32) from register rax to the stack at offset 68 (0x44)
+		0x18087597F: Clears register rax, yielding zero-local {'local7' (type System.Int32)}
+		0x180875981: Moves local7 (type System.Int32) from register rax to the stack at offset 72 (0x48)
+		0x180875986: Reads local {'cascadeAffectedGridLayouts' (type System.Collections.Generic.List`1<DynamicGrid>)} from stack offset 56 (0x38) into register xmm0
+		0x18087598B: Moves cascadeAffectedGridLayouts (type System.Collections.Generic.List`1<DynamicGrid>) from register xmm0 to the stack at offset 80 (0x50)
+		0x18087599C: Moves local5 (type System.Int32) from register rcx to the stack at offset 40 (0x28)
+		0x1808759A1: Loads a pointer to stack offset 0x50 into register rax as new constant constant22
+		0x1808759A6: Moves constant22 (type Cpp2IL.Core.Analysis.ResultModels.StackPointer) from register rax to the stack at offset 48 (0x30) as a new local local8
+
+		Potential Loop Start (0x1808759B0):
+		0x1808759B0: Loads the global generic method reference for method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on type System.Collections.Generic.List`1/Enumerator<DynamicGrid> and stores the result in constant {'MoveNext' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x1808759B7: Loads a pointer to stack offset 0x50 into register rcx as new constant constant24
+		0x1808759BC: [!] Calls managed method System.Boolean System.Collections.Generic.List`1/Enumerator::MoveNext() on instance  and stores the result in {'boolean' (type System.Boolean)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x1808759C1: [!] Compares {'boolean' (type System.Boolean)} and False
+		0x1808759C3: Jumps to 0x180875A12 if boolean equals False ;  - This is probably a goto, jumping to 0x180875A12 which is after end of current block @ 0x1808758F7 (started at 0x1808758EB)
+
+		0x1808759C5: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register rbx as new constant constant26
+		0x1808759CA: [!] Compares {'constant26' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and 0
+		0x1808759CD: Jumps to 0x180875A36 (which throws a NRE) if constant26 equals 0. Implicitly present in managed code, so ignored here.
+		0x1808759CF: [!] Reads field  from {'func2' (type System.Func`2<System.Int32,System.Boolean>)} and stores in a new local 
+
+		0x1808759D3: [!] Reads field  from {'func2' (type System.Func`2<System.Int32,System.Boolean>)} and stores in a new local 
+
+		0x1808759DA: [!] Reads field  from {'func2' (type System.Func`2<System.Int32,System.Boolean>)} and stores in a new local 
+
+		0x1808759E0: [!] Compares {'boolean' (type System.Boolean)} and False
+		0x1808759E2: Jumps to 0x1808759B0 if boolean equals False ;  - This is probably a goto, jumping to 0x1808759B0 which is after end of current block @ 0x1808758F7 (started at 0x1808758EB)
+
+		0x1808759E7: [!] Compares {'constant26' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and 0
+		0x1808759EA: Jumps to 0x180875A30 (which throws a NRE) if constant26 equals 0. Implicitly present in managed code, so ignored here.
+		0x1808759F1: Copies {'constant26' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rbx into rcx
+		0x1808759F4: [!] Calls managed method System.Void DynamicGrid::InitComponents() on instance 
+
+		0x1808759FB: Copies {'constant26' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rbx into rcx
+		0x1808759FE: [!] Calls managed method System.Void DynamicGrid::CalcRowsAndColumns() on instance 
+
+		0x180875A06: Clears register rdx, yielding zero-local {'local14' (type System.Int32)}
+		0x180875A08: Copies {'constant26' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rbx into rcx
+		0x180875A0B: [!] Calls managed method System.Void DynamicGrid::UpdateGridCellSize(System.Boolean) on instance  with arguments [{'local14' (type System.Int32)}]
+
+		0x180875A10: Jumps to 0x1808759B0 - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x180875A12: Jumps to 0x180875A1E (which is an function-local jump destination)
+
+		0x180875A14: Reads local {'local5' (type System.Int32)} from stack offset 40 (0x28) into register rcx
+		0x180875A19: [!] Compares {'local5' (type System.Int32)} and 0
+		0x180875A1C: Jumps to 0x180875A3C if {'local5' (type System.Int32)} != 0 ;  - This is probably a goto, jumping to 0x180875A3C which is after end of current block @ 0x1808758F7 (started at 0x1808758EB)
+
+
+		End Of If Block (at 0x180875A1E) where the if started at 0x1808758D0
+		0x180875A1E: Loads a pointer to stack offset 0x70 into register r11 as new constant constant31
+		0x180875A2B: Copies {'constant31' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from r11 into rsp
+		0x180875A2F: [!] Returns from the function
+
+		0x180875A30: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x180875A36: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Void ApplyCascadeEffect()
+
+		if (this.cascadeEffect != 0)
+
+		    if (this.cascadeEffect != 1)
+		        System.Func`2<System.Int32,System.Boolean> func = new System.Func`2<System.Int32,System.Boolean>()
+		    else
+		        System.Func`2<System.Int32,System.Boolean> func2 = new System.Func`2<System.Int32,System.Boolean>()
+		    endif
+            
+
+		    if (func2 == 0)
+                goto INSN_180875A1E
+            endif
+		    System.Collections.Generic.List`1<DynamicGrid> cascadeAffectedGridLayouts = this.cascadeAffectedGridLayouts
+		    ulong local5 = 0
+		    System.Int32 _version = cascadeAffectedGridLayouts._version
+		    ulong local7 = 0
+
+		    System.Boolean boolean = .MoveNext()
+
+		    if (boolean == False)
+                goto INSN_180875A12
+            endif
+		      = func2.
+		      = func2.
+		      = func2.
+
+		    if (boolean == False)
+                goto INSN_1808759B0
+            endif
+
+		    .InitComponents()
+
+		    .CalcRowsAndColumns()
+		    ulong local14 = 0
+
+		    .UpdateGridCellSize(local14) //(Boolean applyCascadeEffects)
+
+		    INSN_180875A12:
+
+		    if (local5 != 0)
+                goto INSN_180875A3C
+            endif
+		endif
+        
+		return
+		throw new System.NullReferenceException()
+		throw new System.NullReferenceException()
+
+		INSN_180875A3C:
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.AllocateInstanceAction at (0x1808758DD) is corrupt (Managed method being called is MoveNext, not a ctor.) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void DynamicGrid::UpdateGrid(System.Boolean):	Method Body (x86 ASM):
+		0x180875A50 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x180875A55 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875A56 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180875A5A movzx ebx,dl		; DEBUG: {Register}/EBX {Register}/DL ||| None | 0 | None ||| N/A | N/A
+		0x180875A5D mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180875A60 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180875A62 call 00000001808751E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875A67 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180875A69 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180875A6C call 00000001808753E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875A71 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180875A74 movzx edx,bl		; DEBUG: {Register}/EDX {Register}/BL ||| None | 0 | None ||| N/A | N/A
+		0x180875A77 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x180875A7A mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x180875A7F add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180875A83 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875A84 jmp near ptr 00000001808754E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875A89 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DynamicGrid::UpdateGrid(System.Boolean):
+		End of function at 0x180875A8A
+		Absolute End is at 0x180875A8A
+		Identified Jump Destination addresses:
+
+		0x180875A55: Saves the content of rdi to the stack
+		0x180875A5A: Copies {'applyCascadeEffects' (function parameter, type System.Boolean)} from rdx into rbx
+		0x180875A5D: Copies {'this' (function parameter, type DynamicGrid)} from rcx into rdi
+		0x180875A62: [!] Calls managed method System.Void DynamicGrid::InitComponents() on instance {'this' (function parameter, type DynamicGrid)}
+
+		0x180875A69: Copies {'this' (function parameter, type DynamicGrid)} from rdi into rcx
+		0x180875A6C: [!] Calls managed method System.Void DynamicGrid::CalcRowsAndColumns() on instance {'this' (function parameter, type DynamicGrid)}
+
+		0x180875A74: Copies {'applyCascadeEffects' (function parameter, type System.Boolean)} from rbx into rdx
+		0x180875A77: Copies {'this' (function parameter, type DynamicGrid)} from rdi into rcx
+		0x180875A7A: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant1
+		0x180875A84: [!] Calls managed method System.Void DynamicGrid::UpdateGridCellSize(System.Boolean) on instance {'this' (function parameter, type DynamicGrid)} with arguments [{'applyCascadeEffects' (function parameter, type System.Boolean)}]
+
+		0x180875A84: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Void UpdateGrid(System.Boolean applyCascadeEffects)
+
+		this.InitComponents()
+
+		this.CalcRowsAndColumns()
+
+		this.UpdateGridCellSize(applyCascadeEffects) //(Boolean applyCascadeEffects)
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call System.Void DynamicGrid::InitComponents()
+	IL_0006: ldarg.0
+	IL_0007: call System.Void DynamicGrid::CalcRowsAndColumns()
+	IL_000c: ldarg.0
+	IL_000d: ldarg.1
+	IL_000e: call System.Void DynamicGrid::UpdateGridCellSize(System.Boolean)
+	IL_0013: ret
+	
+
+Method: System.Void DynamicGrid::UpdateGridOnFrameEnded():	Method Body (x86 ASM):
+		0x180875A90 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875A92 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180875A96 cmp byte ptr [18329B830h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516720 | None ||| N/A | 0
+		0x180875A9D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180875AA0 jne short 0000000180875AB5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875AA2 lea rcx,[1830EB230h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493745712 | None ||| N/A | N/A
+		0x180875AA9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875AAE mov byte ptr [18329B830h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516720 | None ||| N/A | 1
+		0x180875AB5 mov rcx,[1830EB230h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493745712 | None ||| N/A | N/A
+		0x180875ABC call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875AC1 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180875AC8 mov r9,rax		; DEBUG: {Register}/R9 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180875ACB mov dword ptr [rax+10h],0		; DEBUG: {Memory}/None {Immediate32}/None ||| RAX | 16 | None ||| N/A | 0
+		0x180875AD2 mov [rax+20h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RAX | 32 | None ||| N/A | N/A
+		0x180875AD6 je short 0000000180875B11h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875AD8 lea r8,[rax+20h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 32 | None ||| N/A | N/A
+		0x180875ADC shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180875AE0 lea rax,[1832F4840h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x180875AE7 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180875AEE mov ecx,r8d		; DEBUG: {Register}/ECX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180875AF1 shr rcx,6		; DEBUG: {Register}/RCX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180875AF5 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180875AF9 lea rdx,[rax+rcx*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 0 | RCX ||| N/A | N/A
+		0x180875AFD prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180875B00 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180875B03 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180875B06 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180875B0A lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x180875B0F jne short 0000000180875B00h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875B11 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180875B13 mov rcx,r9		; DEBUG: {Register}/RCX {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x180875B16 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180875B1A pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875B1B jmp near ptr 000000018086D760h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DynamicGrid::UpdateGridOnFrameEnded():
+		End of function at 0x180875B20
+		Absolute End is at 0x180875B20
+		Identified Jump Destination addresses:
+
+		0x180875A90: Saves the content of rbx to the stack
+		0x180875A96: Compares {Unknown Global at 0x18329B830, first ten bytes are [213 86 4 0 100 80 239 2 128 87], or as chars "ÕV dPïW"} and 0
+		0x180875A9D: Copies {'this' (function parameter, type DynamicGrid)} from rcx into rbx
+		0x180875AA0: Jumps to 0x180875AB5 if {Unknown Global at 0x18329B830, first ten bytes are [213 86 4 0 100 80 239 2 128 87], or as chars "ÕV dPïW"} != 0
+
+		0x180875AA2: Loads the type definition for managed type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22 as a constant "<UpdateGridOnFrameEndedCoroutine>d__22" in rcx
+		0x180875AA9: Initializes runtime metadata value DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22
+		0x180875AB5: Loads the type definition for managed type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22 as a constant "<UpdateGridOnFrameEndedCoroutine>d__22" in rcx
+		0x180875ABC: [!] Allocates an instance of type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22 and stores it as enumeratorInstance in rax.
+
+		0x180875AC1: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180875AC8: Copies {'enumeratorInstance' (type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22)} from rax into r9
+		0x180875ACB: [!] Sets the field <>1__state (Type System.Int32) on local {'enumeratorInstance' (type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22)} to the value stored in 0
+		0x180875AD2: [!] Sets the field <>4__this (Type DynamicGrid) on local {'enumeratorInstance' (type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22)} to the value stored in {'this' (function parameter, type DynamicGrid)}
+		0x180875AD6: Jumps to 0x180875B11 if constant5 equals 0
+
+		0x180875AD8: Loads the pointer to the field <>4__this on {'enumeratorInstance' (type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22)} into register r8
+		0x180875AE0: Loads string "¡
+m" into register rax as constant {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180875AEE: Copies {'constant7' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rcx
+		0x180875B00: Loads the class pointer from il2cppMethodInfo into a constant constant9 in register rax
+		0x180875B03: Copies {'constant9' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x180875B0F: Jumps to 0x180875B00 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x180875B13: Copies {'enumeratorInstance' (type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22)} from r9 into rcx
+		0x180875B1B: [!] Calls static managed method System.Void CoroutineRunner::RunCoroutine(System.Collections.IEnumerator) with arguments [{'enumeratorInstance' (type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22)}]
+
+		0x180875B1B: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Void UpdateGridOnFrameEnded()
+		DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22 enumeratorInstance = new DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22()
+		enumeratorInstance.<>1__state = 0
+		enumeratorInstance.<>4__this = this
+
+		CoroutineRunner.RunCoroutine(enumeratorInstance) //(IEnumerator coroutine)
+		return
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.AllocateInstanceAction at (0x180875ABC) is corrupt (Managed method being called is RunCoroutine, not a ctor.) and cannot be created as IL. Aborting here.
+
+
+Method: System.Collections.IEnumerator DynamicGrid::UpdateGridOnFrameEndedCoroutine():	Method Body (x86 ASM):
+		0x180875B20 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875B22 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180875B26 cmp byte ptr [18329B830h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516720 | None ||| N/A | 0
+		0x180875B2D mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180875B30 jne short 0000000180875B45h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875B32 lea rcx,[1830EB230h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493745712 | None ||| N/A | N/A
+		0x180875B39 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875B3E mov byte ptr [18329B830h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495516720 | None ||| N/A | 1
+		0x180875B45 mov rcx,[1830EB230h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493745712 | None ||| N/A | N/A
+		0x180875B4C call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875B51 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x180875B58 mov r9,rax		; DEBUG: {Register}/R9 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180875B5B mov dword ptr [rax+10h],0		; DEBUG: {Memory}/None {Immediate32}/None ||| RAX | 16 | None ||| N/A | 0
+		0x180875B62 mov [rax+20h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RAX | 32 | None ||| N/A | N/A
+		0x180875B66 je short 0000000180875BA4h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875B68 lea r8,[rax+20h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 32 | None ||| N/A | N/A
+		0x180875B6C shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x180875B70 lea rax,[1832F4840h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x180875B77 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x180875B7E mov ecx,r8d		; DEBUG: {Register}/ECX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180875B81 shr rcx,6		; DEBUG: {Register}/RCX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x180875B85 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x180875B89 lea rdx,[rax+rcx*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 0 | RCX ||| N/A | N/A
+		0x180875B8D prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180875B90 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x180875B93 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x180875B96 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x180875B9A lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x180875B9F jne short 0000000180875B90h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875BA1 mov rax,r9		; DEBUG: {Register}/RAX {Register}/R9 ||| None | 0 | None ||| N/A | N/A
+		0x180875BA4 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180875BA8 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875BA9 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875BAA int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Collections.IEnumerator DynamicGrid::UpdateGridOnFrameEndedCoroutine():
+		End of function at 0x180875BAB
+		Absolute End is at 0x180875BAB
+		Identified Jump Destination addresses:
+
+		0x180875B20: Saves the content of rbx to the stack
+		0x180875B26: Compares {Unknown Global at 0x18329B830, first ten bytes are [213 86 4 0 100 80 239 2 128 87], or as chars "ÕV dPïW"} and 0
+		0x180875B2D: Copies {'this' (function parameter, type DynamicGrid)} from rcx into rbx
+		0x180875B30: Jumps to 0x180875B45 if {Unknown Global at 0x18329B830, first ten bytes are [213 86 4 0 100 80 239 2 128 87], or as chars "ÕV dPïW"} != 0
+
+		0x180875B32: Loads the type definition for managed type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22 as a constant "<UpdateGridOnFrameEndedCoroutine>d__22" in rcx
+		0x180875B39: Initializes runtime metadata value DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22
+		0x180875B45: Loads the type definition for managed type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22 as a constant "<UpdateGridOnFrameEndedCoroutine>d__22" in rcx
+		0x180875B4C: [!] Allocates an instance of type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22 and stores it as enumeratorInstance in rax.
+
+		0x180875B51: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x180875B58: Copies {'enumeratorInstance' (type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22)} from rax into r9
+		0x180875B5B: [!] Sets the field <>1__state (Type System.Int32) on local {'enumeratorInstance' (type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22)} to the value stored in 0
+		0x180875B62: [!] Sets the field <>4__this (Type DynamicGrid) on local {'enumeratorInstance' (type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22)} to the value stored in {'this' (function parameter, type DynamicGrid)}
+		0x180875B66: Jumps to 0x180875BA4 if constant5 equals 0
+
+		0x180875B68: Loads the pointer to the field <>4__this on {'enumeratorInstance' (type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22)} into register r8
+		0x180875B70: Loads string "¡
+m" into register rax as constant {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x180875B7E: Copies {'constant7' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rcx
+		0x180875B90: Loads the class pointer from il2cppMethodInfo into a constant constant9 in register rax
+		0x180875B93: Copies {'constant9' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x180875B9F: Jumps to 0x180875B90 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x180875BA1: Copies {'enumeratorInstance' (type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22)} from r9 into rax
+		0x180875BA9: [!] Returns {'enumeratorInstance' (type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Collections.IEnumerator UpdateGridOnFrameEndedCoroutine()
+		DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22 enumeratorInstance = new DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22()
+		enumeratorInstance.<>1__state = 0
+		enumeratorInstance.<>4__this = this
+		return enumeratorInstance
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.AllocateInstanceAction at (0x180875B4C) is corrupt (Cannot find the call to the constructor for instance allocation, of type DynamicGrid/<UpdateGridOnFrameEndedCoroutine>d__22 (Is Value: False)) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void DynamicGrid::OnTransformChildrenChanged():	Method Body (x86 ASM):
+		0x1808751B0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808751B2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1808751B6 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1808751B8 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1808751BB call 00000001808751E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808751C0 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1808751C2 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1808751C5 call 00000001808753E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808751CA xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1808751CD mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1808751CF mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1808751D2 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1808751D6 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1808751D7 jmp near ptr 00000001808754E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1808751DC int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DynamicGrid::OnTransformChildrenChanged():
+		End of function at 0x1808751DD
+		Absolute End is at 0x1808751DD
+		Identified Jump Destination addresses:
+
+		0x1808751B0: Saves the content of rbx to the stack
+		0x1808751B8: Copies {'this' (function parameter, type DynamicGrid)} from rcx into rbx
+		0x1808751BB: [!] Calls managed method System.Void DynamicGrid::InitComponents() on instance {'this' (function parameter, type DynamicGrid)}
+
+		0x1808751C2: Copies {'this' (function parameter, type DynamicGrid)} from rbx into rcx
+		0x1808751C5: [!] Calls managed method System.Void DynamicGrid::CalcRowsAndColumns() on instance {'this' (function parameter, type DynamicGrid)}
+
+		0x1808751CD: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x1808751CF: Copies {'this' (function parameter, type DynamicGrid)} from rbx into rcx
+		0x1808751D7: [!] Calls managed method System.Void DynamicGrid::UpdateGridCellSize(System.Boolean) on instance {'this' (function parameter, type DynamicGrid)} with arguments [True]
+
+		0x1808751D7: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Void OnTransformChildrenChanged()
+
+		this.InitComponents()
+
+		this.CalcRowsAndColumns()
+
+		this.UpdateGridCellSize(True) //(Boolean applyCascadeEffects)
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: call System.Void DynamicGrid::InitComponents()
+	IL_0006: ldarg.0
+	IL_0007: call System.Void DynamicGrid::CalcRowsAndColumns()
+	IL_000c: ldarg.0
+	IL_000d: ldc.i4.1
+	IL_000e: call System.Void DynamicGrid::UpdateGridCellSize(System.Boolean)
+	IL_0013: ret
+	
+
+Method: System.Int32 DynamicGrid::get_Columns():	Method Body (x86 ASM):
+		0x180860DC0 mov eax,[rcx+24h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 36 | None ||| N/A | N/A
+		0x180860DC3 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180860DC4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Int32 DynamicGrid::get_Columns():
+		End of function at 0x180860DC5
+		Absolute End is at 0x180860DC5
+		Identified Jump Destination addresses:
+
+		0x180860DC0: [!] Reads field columns from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'columns' (type System.Int32)}
+
+		0x180860DC3: [!] Returns {'columns' (type System.Int32)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Int32 get_Columns()
+		System.Int32 columns = this.columns
+		return columns
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Int32 DynamicGrid::columns
+	IL_0006: ret
+	
+
+Method: System.Void DynamicGrid::set_Columns(System.Int32):	Method Body (x86 ASM):
+		0x180875BB0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875BB2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180875BB6 mov [rcx+24h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RCX | 36 | None ||| N/A | N/A
+		0x180875BB9 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180875BBC xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180875BBE call 00000001808751E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875BC3 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180875BC5 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180875BC8 call 00000001808753E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875BCD xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180875BD0 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180875BD2 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180875BD5 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180875BD9 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875BDA jmp near ptr 00000001808754E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875BDF int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DynamicGrid::set_Columns(System.Int32):
+		End of function at 0x180875BE0
+		Absolute End is at 0x180875BE0
+		Identified Jump Destination addresses:
+
+		0x180875BB0: Saves the content of rbx to the stack
+		0x180875BB6: [!] Sets the field columns (Type System.Int32) on local {'this' (function parameter, type DynamicGrid)} to the value stored in {'value' (function parameter, type System.Int32)}
+		0x180875BB9: Copies {'this' (function parameter, type DynamicGrid)} from rcx into rbx
+		0x180875BBE: [!] Calls managed method System.Void DynamicGrid::InitComponents() on instance {'this' (function parameter, type DynamicGrid)}
+
+		0x180875BC5: Copies {'this' (function parameter, type DynamicGrid)} from rbx into rcx
+		0x180875BC8: [!] Calls managed method System.Void DynamicGrid::CalcRowsAndColumns() on instance {'this' (function parameter, type DynamicGrid)}
+
+		0x180875BD0: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x180875BD2: Copies {'this' (function parameter, type DynamicGrid)} from rbx into rcx
+		0x180875BDA: [!] Calls managed method System.Void DynamicGrid::UpdateGridCellSize(System.Boolean) on instance {'this' (function parameter, type DynamicGrid)} with arguments [True]
+
+		0x180875BDA: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Void set_Columns(System.Int32 value)
+		this.columns = value
+
+		this.InitComponents()
+
+		this.CalcRowsAndColumns()
+
+		this.UpdateGridCellSize(True) //(Boolean applyCascadeEffects)
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldarg.1
+	IL_0002: stfld System.Int32 DynamicGrid::columns
+	IL_0007: ldarg.0
+	IL_0008: call System.Void DynamicGrid::InitComponents()
+	IL_000d: ldarg.0
+	IL_000e: call System.Void DynamicGrid::CalcRowsAndColumns()
+	IL_0013: ldarg.0
+	IL_0014: ldc.i4.1
+	IL_0015: call System.Void DynamicGrid::UpdateGridCellSize(System.Boolean)
+	IL_001a: ret
+	
+
+Method: System.Int32 DynamicGrid::get_Rows():	Method Body (x86 ASM):
+		0x18077E320 mov eax,[rcx+28h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 40 | None ||| N/A | N/A
+		0x18077E323 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18077E324 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Int32 DynamicGrid::get_Rows():
+		End of function at 0x18077E325
+		Absolute End is at 0x18077E325
+		Identified Jump Destination addresses:
+
+		0x18077E320: [!] Reads field rows from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'rows' (type System.Int32)}
+
+		0x18077E323: [!] Returns {'rows' (type System.Int32)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Int32 get_Rows()
+		System.Int32 rows = this.rows
+		return rows
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Int32 DynamicGrid::rows
+	IL_0006: ret
+	
+
+Method: System.Void DynamicGrid::set_Rows(System.Int32):	Method Body (x86 ASM):
+		0x180875BE0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875BE2 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180875BE6 mov [rcx+28h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RCX | 40 | None ||| N/A | N/A
+		0x180875BE9 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x180875BEC xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180875BEE call 00000001808751E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875BF3 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x180875BF5 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180875BF8 call 00000001808753E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875BFD xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x180875C00 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x180875C02 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x180875C05 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x180875C09 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875C0A jmp near ptr 00000001808754E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180875C0F int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DynamicGrid::set_Rows(System.Int32):
+		End of function at 0x180875C10
+		Absolute End is at 0x180875C10
+		Identified Jump Destination addresses:
+
+		0x180875BE0: Saves the content of rbx to the stack
+		0x180875BE6: [!] Sets the field rows (Type System.Int32) on local {'this' (function parameter, type DynamicGrid)} to the value stored in {'value' (function parameter, type System.Int32)}
+		0x180875BE9: Copies {'this' (function parameter, type DynamicGrid)} from rcx into rbx
+		0x180875BEE: [!] Calls managed method System.Void DynamicGrid::InitComponents() on instance {'this' (function parameter, type DynamicGrid)}
+
+		0x180875BF5: Copies {'this' (function parameter, type DynamicGrid)} from rbx into rcx
+		0x180875BF8: [!] Calls managed method System.Void DynamicGrid::CalcRowsAndColumns() on instance {'this' (function parameter, type DynamicGrid)}
+
+		0x180875C00: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x180875C02: Copies {'this' (function parameter, type DynamicGrid)} from rbx into rcx
+		0x180875C0A: [!] Calls managed method System.Void DynamicGrid::UpdateGridCellSize(System.Boolean) on instance {'this' (function parameter, type DynamicGrid)} with arguments [True]
+
+		0x180875C0A: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Void set_Rows(System.Int32 value)
+		this.rows = value
+
+		this.InitComponents()
+
+		this.CalcRowsAndColumns()
+
+		this.UpdateGridCellSize(True) //(Boolean applyCascadeEffects)
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldarg.1
+	IL_0002: stfld System.Int32 DynamicGrid::rows
+	IL_0007: ldarg.0
+	IL_0008: call System.Void DynamicGrid::InitComponents()
+	IL_000d: ldarg.0
+	IL_000e: call System.Void DynamicGrid::CalcRowsAndColumns()
+	IL_0013: ldarg.0
+	IL_0014: ldc.i4.1
+	IL_0015: call System.Void DynamicGrid::UpdateGridCellSize(System.Boolean)
+	IL_001a: ret
+	
+
+Method: System.Boolean DynamicGrid::get_DesiredRowsIsRows():	Method Body (x86 ASM):
+		0x180875C10 movzx eax,byte ptr [rcx+2Dh]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 45 | None ||| N/A | N/A
+		0x180875C14 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875C15 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean DynamicGrid::get_DesiredRowsIsRows():
+		End of function at 0x180875C16
+		Absolute End is at 0x180875C16
+		Identified Jump Destination addresses:
+
+		0x180875C10: [!] Reads field desiredRowsIsRows from {'this' (function parameter, type DynamicGrid)} and stores in a new local {'desiredRowsIsRows' (type System.Boolean)}
+
+		0x180875C14: [!] Returns {'desiredRowsIsRows' (type System.Boolean)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Boolean get_DesiredRowsIsRows()
+		System.Boolean desiredRowsIsRows = this.desiredRowsIsRows
+		return desiredRowsIsRows
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Boolean DynamicGrid::desiredRowsIsRows
+	IL_0006: ret
+	
+
+Method: System.Void DynamicGrid::.ctor():	Method Body (x86 ASM):
+		0x18037A630 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A634 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x18037A63B jne short 000000018037A650h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A63D lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A644 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A649 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x18037A650 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A657 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18037A65E jne short 000000018037A669h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A660 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A664 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A669 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A66D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18037A66E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DynamicGrid::.ctor():
+		End of function at 0x18037A66F
+		Absolute End is at 0x18037A66F
+		Identified Jump Destination addresses:
+
+		0x18037A634: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x18037A63B: Jumps to 0x18037A650 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x18037A63D: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A644: Initializes runtime metadata value UnityEngine.Object
+		0x18037A650: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A657: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18037A65E: Jumps to 0x18037A669 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18037A66D: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Void .ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ret
+	
+
+Method: System.Boolean DynamicGrid::<ApplyCascadeEffect>b__19_0(System.Int32):	Method Body (x86 ASM):
+		0x180875C20 cmp [rcx+24h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RCX | 36 | None ||| N/A | N/A
+		0x180875C23 setg al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875C26 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875C27 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean DynamicGrid::<ApplyCascadeEffect>b__19_0(System.Int32):
+		End of function at 0x180875C28
+		Absolute End is at 0x180875C28
+		Identified Jump Destination addresses:
+
+		0x180875C20: [!] Compares {field columns, read from local {'this' (function parameter, type DynamicGrid)}} and {'columns' (function parameter, type System.Int32)}
+		0x180875C23: [!] Sets the boolean {'local2' (type System.Boolean)} in rax to true if this.columns is greater than columns, otherwise false.
+		0x180875C26: [!] Returns {'local2' (type System.Boolean)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Boolean <ApplyCascadeEffect>b__19_0(System.Int32 columns)
+		System.Boolean local2 = this.columns > columns
+		return local2
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Int32 DynamicGrid::columns
+	IL_0006: ldarg.1
+	IL_0007: cgt
+	IL_0009: ret
+	
+
+Method: System.Boolean DynamicGrid::<ApplyCascadeEffect>b__19_1(System.Int32):	Method Body (x86 ASM):
+		0x180875C30 cmp [rcx+24h],edx		; DEBUG: {Memory}/None {Register}/EDX ||| RCX | 36 | None ||| N/A | N/A
+		0x180875C33 setl al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875C36 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180875C37 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean DynamicGrid::<ApplyCascadeEffect>b__19_1(System.Int32):
+		End of function at 0x180875C38
+		Absolute End is at 0x180875C38
+		Identified Jump Destination addresses:
+
+		0x180875C30: [!] Compares {field columns, read from local {'this' (function parameter, type DynamicGrid)}} and {'columns' (function parameter, type System.Int32)}
+		0x180875C33: [!] Sets the boolean {'local2' (type System.Boolean)} in rax to true if this.columns is less than columns, otherwise false.
+		0x180875C36: [!] Returns {'local2' (type System.Boolean)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DynamicGrid
+	System.Boolean <ApplyCascadeEffect>b__19_1(System.Int32 columns)
+		System.Boolean local2 = this.columns < columns
+		return local2
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld System.Int32 DynamicGrid::columns
+	IL_0006: ldarg.1
+	IL_0007: clt
+	IL_0009: ret
+	
+

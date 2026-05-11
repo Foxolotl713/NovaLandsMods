@@ -1,0 +1,182 @@
+Type: Mono.Btls.MonoBtlsX509Lookup:
+	Base Class: 
+		Mono.Btls.MonoBtlsObject
+
+	Interfaces:
+
+	Nested Types:
+		Mono.Btls.MonoBtlsX509Lookup/BoringX509LookupHandle
+
+	Field: store
+		Type: Mono.Btls.MonoBtlsX509Store
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: type
+		Type: Mono.Btls.MonoBtlsX509LookupType
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: monoLookups
+		Type: System.Collections.Generic.List`1<Mono.Btls.MonoBtlsX509LookupMono>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Method: get_Handle:
+		Accessibility: Assembly
+		Return Type: Mono.Btls.MonoBtlsX509Lookup/BoringX509LookupHandle
+		File Offset 0x01ECC060
+		Ram Offset 0x181ecd260
+		Virtual Method Slot: 65535
+
+	Method: mono_btls_x509_lookup_new:
+		Accessibility: Private
+		Return Type: System.IntPtr
+		File Offset 0x01ECC0E0
+		Ram Offset 0x181ecd2e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: store
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: type
+			Type: Mono.Btls.MonoBtlsX509LookupType
+			Default Value: 
+	Method: mono_btls_x509_lookup_add_dir:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01ECC170
+		Ram Offset 0x181ecd370
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: dir
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 2:
+			Name: type
+			Type: Mono.Btls.MonoBtlsX509FileType
+			Default Value: 
+	Method: mono_btls_x509_lookup_add_mono:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x01ECC210
+		Ram Offset 0x181ecd410
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+		Parameter 1:
+			Name: monoLookup
+			Type: System.IntPtr
+			Default Value: 
+	Method: mono_btls_x509_lookup_free:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x01ECC2A0
+		Ram Offset 0x181ecd4a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+	Method: mono_btls_x509_lookup_peek_lookup:
+		Accessibility: Private
+		Return Type: System.IntPtr
+		File Offset 0x01ECC320
+		Ram Offset 0x181ecd520
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: handle
+			Type: System.IntPtr
+			Default Value: 
+	Method: Create_internal:
+		Accessibility: Private
+		Return Type: Mono.Btls.MonoBtlsX509Lookup/BoringX509LookupHandle
+		File Offset 0x01ECC3A0
+		Ram Offset 0x181ecd5a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: store
+			Type: Mono.Btls.MonoBtlsX509Store
+			Default Value: 
+		Parameter 1:
+			Name: type
+			Type: Mono.Btls.MonoBtlsX509LookupType
+			Default Value: 
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01ECC4F0
+		Ram Offset 0x181ecd6f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: store
+			Type: Mono.Btls.MonoBtlsX509Store
+			Default Value: 
+		Parameter 1:
+			Name: type
+			Type: Mono.Btls.MonoBtlsX509LookupType
+			Default Value: 
+	Method: GetNativeLookup:
+		Accessibility: Assembly
+		Return Type: System.IntPtr
+		File Offset 0x01ECC710
+		Ram Offset 0x181ecd910
+		Virtual Method Slot: 65535
+
+	Method: AddDirectory:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x01ECC7B0
+		Ram Offset 0x181ecd9b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dir
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: type
+			Type: Mono.Btls.MonoBtlsX509FileType
+			Default Value: 
+	Method: AddMono:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01ECC950
+		Ram Offset 0x181ecdb50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: monoLookup
+			Type: Mono.Btls.MonoBtlsX509LookupMono
+			Default Value: 
+	Method: AddCertificate:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01ECCC40
+		Ram Offset 0x181ecde40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: certificate
+			Type: Mono.Btls.MonoBtlsX509
+			Default Value: 
+	Method: Close:
+		Accessibility: Family
+		Return Type: System.Void
+		File Offset 0x01ECCD50
+		Ram Offset 0x181ecdf50
+		Virtual Method Slot: 5

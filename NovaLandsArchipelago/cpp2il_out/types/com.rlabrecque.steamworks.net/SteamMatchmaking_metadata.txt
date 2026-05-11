@@ -1,0 +1,632 @@
+Type: Steamworks.SteamMatchmaking:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Method: GetFavoriteGameCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B8A980
+		Ram Offset 0x180b8bb80
+		Virtual Method Slot: 65535
+
+	Method: GetFavoriteGame:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8AA30
+		Ram Offset 0x180b8bc30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: iGame
+			Type: System.Int32
+			Default Value: 
+		Parameter 1:
+			Name: pnAppID
+			Type: Steamworks.AppId_t
+			Default Value: 
+		Parameter 2:
+			Name: pnIP
+			Type: System.UInt32
+			Default Value: 
+		Parameter 3:
+			Name: pnConnPort
+			Type: System.UInt16
+			Default Value: 
+		Parameter 4:
+			Name: pnQueryPort
+			Type: System.UInt16
+			Default Value: 
+		Parameter 5:
+			Name: punFlags
+			Type: System.UInt32
+			Default Value: 
+		Parameter 6:
+			Name: pRTime32LastPlayedOnServer
+			Type: System.UInt32
+			Default Value: 
+	Method: AddFavoriteGame:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B8AB50
+		Ram Offset 0x180b8bd50
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nAppID
+			Type: Steamworks.AppId_t
+			Default Value: 
+		Parameter 1:
+			Name: nIP
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: nConnPort
+			Type: System.UInt16
+			Default Value: 
+		Parameter 3:
+			Name: nQueryPort
+			Type: System.UInt16
+			Default Value: 
+		Parameter 4:
+			Name: unFlags
+			Type: System.UInt32
+			Default Value: 
+		Parameter 5:
+			Name: rTime32LastPlayedOnServer
+			Type: System.UInt32
+			Default Value: 
+	Method: RemoveFavoriteGame:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8AC60
+		Ram Offset 0x180b8be60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nAppID
+			Type: Steamworks.AppId_t
+			Default Value: 
+		Parameter 1:
+			Name: nIP
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: nConnPort
+			Type: System.UInt16
+			Default Value: 
+		Parameter 3:
+			Name: nQueryPort
+			Type: System.UInt16
+			Default Value: 
+		Parameter 4:
+			Name: unFlags
+			Type: System.UInt32
+			Default Value: 
+	Method: RequestLobbyList:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00B8AD60
+		Ram Offset 0x180b8bf60
+		Virtual Method Slot: 65535
+
+	Method: AddRequestLobbyListStringFilter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B8AE50
+		Ram Offset 0x180b8c050
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pchKeyToMatch
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: pchValueToMatch
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: eComparisonType
+			Type: Steamworks.ELobbyComparison
+			Default Value: 
+	Method: AddRequestLobbyListNumericalFilter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B8B100
+		Ram Offset 0x180b8c300
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pchKeyToMatch
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: nValueToMatch
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: eComparisonType
+			Type: Steamworks.ELobbyComparison
+			Default Value: 
+	Method: AddRequestLobbyListNearValueFilter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B8B2E0
+		Ram Offset 0x180b8c4e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: pchKeyToMatch
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: nValueToBeCloseTo
+			Type: System.Int32
+			Default Value: 
+	Method: AddRequestLobbyListFilterSlotsAvailable:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B8B4C0
+		Ram Offset 0x180b8c6c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: nSlotsAvailable
+			Type: System.Int32
+			Default Value: 
+	Method: AddRequestLobbyListDistanceFilter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B8B580
+		Ram Offset 0x180b8c780
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eLobbyDistanceFilter
+			Type: Steamworks.ELobbyDistanceFilter
+			Default Value: 
+	Method: AddRequestLobbyListResultCountFilter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B8B640
+		Ram Offset 0x180b8c840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: cMaxResults
+			Type: System.Int32
+			Default Value: 
+	Method: AddRequestLobbyListCompatibleMembersFilter:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B8B700
+		Ram Offset 0x180b8c900
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: GetLobbyByIndex:
+		Accessibility: Public
+		Return Type: Steamworks.CSteamID
+		File Offset 0x00B8B7C0
+		Ram Offset 0x180b8c9c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: iLobby
+			Type: System.Int32
+			Default Value: 
+	Method: CreateLobby:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00B8B8B0
+		Ram Offset 0x180b8cab0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: eLobbyType
+			Type: Steamworks.ELobbyType
+			Default Value: 
+		Parameter 1:
+			Name: cMaxMembers
+			Type: System.Int32
+			Default Value: 
+	Method: JoinLobby:
+		Accessibility: Public
+		Return Type: Steamworks.SteamAPICall_t
+		File Offset 0x00B8B9B0
+		Ram Offset 0x180b8cbb0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: LeaveLobby:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B8BAA0
+		Ram Offset 0x180b8cca0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: InviteUserToLobby:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8BB60
+		Ram Offset 0x180b8cd60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: steamIDInvitee
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: GetNumLobbyMembers:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B8BC30
+		Ram Offset 0x180b8ce30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: GetLobbyMemberByIndex:
+		Accessibility: Public
+		Return Type: Steamworks.CSteamID
+		File Offset 0x00B8BCF0
+		Ram Offset 0x180b8cef0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: iMember
+			Type: System.Int32
+			Default Value: 
+	Method: GetLobbyData:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x00B8BDF0
+		Ram Offset 0x180b8cff0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: pchKey
+			Type: System.String
+			Default Value: 
+	Method: SetLobbyData:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8BFF0
+		Ram Offset 0x180b8d1f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: pchKey
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: pchValue
+			Type: System.String
+			Default Value: 
+	Method: GetLobbyDataCount:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B8C2C0
+		Ram Offset 0x180b8d4c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: GetLobbyDataByIndex:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8C380
+		Ram Offset 0x180b8d580
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: iLobbyData
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: pchKey
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: cchKeyBufferSize
+			Type: System.Int32
+			Default Value: 
+		Parameter 4:
+			Name: pchValue
+			Type: System.String
+			Default Value: 
+		Parameter 5:
+			Name: cchValueBufferSize
+			Type: System.Int32
+			Default Value: 
+	Method: DeleteLobbyData:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8C640
+		Ram Offset 0x180b8d840
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: pchKey
+			Type: System.String
+			Default Value: 
+	Method: GetLobbyMemberData:
+		Accessibility: Public
+		Return Type: System.String
+		File Offset 0x00B8C830
+		Ram Offset 0x180b8da30
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: steamIDUser
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 2:
+			Name: pchKey
+			Type: System.String
+			Default Value: 
+	Method: SetLobbyMemberData:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B8CA40
+		Ram Offset 0x180b8dc40
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: pchKey
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: pchValue
+			Type: System.String
+			Default Value: 
+	Method: SendLobbyChatMsg:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8CCF0
+		Ram Offset 0x180b8def0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: pvMsgBody
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 2:
+			Name: cubMsgBody
+			Type: System.Int32
+			Default Value: 
+	Method: GetLobbyChatEntry:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B8CDE0
+		Ram Offset 0x180b8dfe0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: iChatID
+			Type: System.Int32
+			Default Value: 
+		Parameter 2:
+			Name: pSteamIDUser
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 3:
+			Name: pvData
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 4:
+			Name: cubData
+			Type: System.Int32
+			Default Value: 
+		Parameter 5:
+			Name: peChatEntryType
+			Type: Steamworks.EChatEntryType
+			Default Value: 
+	Method: RequestLobbyData:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8CF00
+		Ram Offset 0x180b8e100
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: SetLobbyGameServer:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00B8CFC0
+		Ram Offset 0x180b8e1c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: unGameServerIP
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: unGameServerPort
+			Type: System.UInt16
+			Default Value: 
+		Parameter 3:
+			Name: steamIDGameServer
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: GetLobbyGameServer:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8D0C0
+		Ram Offset 0x180b8e2c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: punGameServerIP
+			Type: System.UInt32
+			Default Value: 
+		Parameter 2:
+			Name: punGameServerPort
+			Type: System.UInt16
+			Default Value: 
+		Parameter 3:
+			Name: psteamIDGameServer
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: SetLobbyMemberLimit:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8D1C0
+		Ram Offset 0x180b8e3c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: cMaxMembers
+			Type: System.Int32
+			Default Value: 
+	Method: GetLobbyMemberLimit:
+		Accessibility: Public
+		Return Type: System.Int32
+		File Offset 0x00B8D290
+		Ram Offset 0x180b8e490
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: SetLobbyType:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8D350
+		Ram Offset 0x180b8e550
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: eLobbyType
+			Type: Steamworks.ELobbyType
+			Default Value: 
+	Method: SetLobbyJoinable:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8D420
+		Ram Offset 0x180b8e620
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: bLobbyJoinable
+			Type: System.Boolean
+			Default Value: 
+	Method: GetLobbyOwner:
+		Accessibility: Public
+		Return Type: Steamworks.CSteamID
+		File Offset 0x00B8D4F0
+		Ram Offset 0x180b8e6f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: SetLobbyOwner:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8D5E0
+		Ram Offset 0x180b8e7e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: steamIDNewOwner
+			Type: Steamworks.CSteamID
+			Default Value: 
+	Method: SetLinkedLobby:
+		Accessibility: Public
+		Return Type: System.Boolean
+		File Offset 0x00B8D6B0
+		Ram Offset 0x180b8e8b0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: steamIDLobby
+			Type: Steamworks.CSteamID
+			Default Value: 
+		Parameter 1:
+			Name: steamIDLobbyDependent
+			Type: Steamworks.CSteamID
+			Default Value: 

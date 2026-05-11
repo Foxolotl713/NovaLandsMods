@@ -1,0 +1,179 @@
+Type: ZXing.QrCode.Internal.DecodedBitStreamParser:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Static Field: ALPHANUMERIC_CHARS
+		Type: System.Char[]
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: GB2312_SUBSET
+		Type: System.Int32
+		Offset in Defining Type: 0x0
+		Has Default: True
+		Default Value: 1
+
+	Method: decode:
+		Accessibility: Assembly
+		Return Type: ZXing.Common.DecoderResult
+		File Offset 0x0282C6F0
+		Ram Offset 0x18282d8f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bytes
+			Type: System.Byte[]
+			Default Value: 
+		Parameter 1:
+			Name: version
+			Type: ZXing.QrCode.Internal.Version
+			Default Value: 
+		Parameter 2:
+			Name: ecLevel
+			Type: ZXing.QrCode.Internal.ErrorCorrectionLevel
+			Default Value: 
+		Parameter 3:
+			Name: hints
+			Type: System.Collections.Generic.IDictionary`2<ZXing.DecodeHintType, System.Object>
+			Default Value: 
+	Method: decodeHanziSegment:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0282D1F0
+		Ram Offset 0x18282e3f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bits
+			Type: ZXing.Common.BitSource
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.Text.StringBuilder
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: decodeKanjiSegment:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0282D3E0
+		Ram Offset 0x18282e5e0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bits
+			Type: ZXing.Common.BitSource
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.Text.StringBuilder
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: decodeByteSegment:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0282D5D0
+		Ram Offset 0x18282e7d0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bits
+			Type: ZXing.Common.BitSource
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.Text.StringBuilder
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: currentCharacterSetECI
+			Type: ZXing.Common.CharacterSetECI
+			Default Value: 
+		Parameter 4:
+			Name: byteSegments
+			Type: System.Collections.Generic.IList`1<System.Byte[]>
+			Default Value: 
+		Parameter 5:
+			Name: hints
+			Type: System.Collections.Generic.IDictionary`2<ZXing.DecodeHintType, System.Object>
+			Default Value: 
+	Method: toAlphaNumericChar:
+		Accessibility: Private
+		Return Type: System.Char
+		File Offset 0x0282D790
+		Ram Offset 0x18282e990
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: value
+			Type: System.Int32
+			Default Value: 
+	Method: decodeAlphanumericSegment:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0282D860
+		Ram Offset 0x18282ea60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bits
+			Type: ZXing.Common.BitSource
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.Text.StringBuilder
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+		Parameter 3:
+			Name: fc1InEffect
+			Type: System.Boolean
+			Default Value: 
+	Method: decodeNumericSegment:
+		Accessibility: Private
+		Return Type: System.Boolean
+		File Offset 0x0282DAD0
+		Ram Offset 0x18282ecd0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bits
+			Type: ZXing.Common.BitSource
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: System.Text.StringBuilder
+			Default Value: 
+		Parameter 2:
+			Name: count
+			Type: System.Int32
+			Default Value: 
+	Method: parseECIValue:
+		Accessibility: Private
+		Return Type: System.Int32
+		File Offset 0x0282DD70
+		Ram Offset 0x18282ef70
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: bits
+			Type: ZXing.Common.BitSource
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0282DE90
+		Ram Offset 0x18282f090
+		Virtual Method Slot: 65535

@@ -1,0 +1,1398 @@
+Type: AntennaPopupBotAssignInventorySlot
+
+Method: System.Void AntennaPopupBotAssignInventorySlot::Setup(MuttInventory.InventoryItem,System.Action`1<AntennaPopupBotAssignInventorySlot>):	Method Body (x86 ASM):
+		0x1804FE770 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1804FE775 mov [rsp+10h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 16 | None ||| N/A | N/A
+		0x1804FE77A mov [rsp+18h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 24 | None ||| N/A | N/A
+		0x1804FE77F push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804FE780 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1804FE784 cmp byte ptr [18329A65Ah],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512154 | None ||| N/A | 0
+		0x1804FE78B mov rsi,r8		; DEBUG: {Register}/RSI {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1804FE78E mov rdi,rdx		; DEBUG: {Register}/RDI {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE791 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE794 jne short 00000001804FE7B5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE796 lea rcx,[183114B50h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493915984 | None ||| N/A | N/A
+		0x1804FE79D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE7A2 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804FE7A9 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE7AE mov byte ptr [18329A65Ah],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512154 | None ||| N/A | 1
+		0x1804FE7B5 mov eax,[1832990E4h]		; DEBUG: {Register}/EAX {Memory}/None ||| RIP | 6495506660 | None ||| N/A | N/A
+		0x1804FE7BB lea rbp,[1832AE560h]		; DEBUG: {Register}/RBP {Memory}/None ||| RIP | 6495593824 | None ||| N/A | N/A
+		0x1804FE7C2 mov [rbx+50h],rdi		; DEBUG: {Memory}/None {Register}/RDI ||| RBX | 80 | None ||| N/A | N/A
+		0x1804FE7C6 test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE7C8 je short 00000001804FE811h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE7CA lea r8,[rbx+50h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 80 | None ||| N/A | N/A
+		0x1804FE7CE shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1804FE7D2 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1804FE7D9 mov edx,r8d		; DEBUG: {Register}/EDX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FE7DC shr rdx,6		; DEBUG: {Register}/RDX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1804FE7E0 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1804FE7E4 prefetchw [rbp+rdx*8+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| RBP | 287456 | RDX ||| N/A | N/A
+		0x1804FE7EC nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1804FE7F0 mov rax,[rbp+rdx*8+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBP | 287456 | RDX ||| N/A | N/A
+		0x1804FE7F8 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE7FB bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1804FE7FF lock cmpxchg [rbp+rdx*8+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RBP | 287456 | RDX ||| N/A | N/A
+		0x1804FE809 jne short 00000001804FE7F0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE80B mov eax,[1832990E4h]		; DEBUG: {Register}/EAX {Memory}/None ||| RIP | 6495506660 | None ||| N/A | N/A
+		0x1804FE811 mov [rbx+60h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RBX | 96 | None ||| N/A | N/A
+		0x1804FE815 test eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE817 je short 00000001804FE85Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE819 lea r8,[rbx+60h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 96 | None ||| N/A | N/A
+		0x1804FE81D shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1804FE821 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1804FE828 mov edx,r8d		; DEBUG: {Register}/EDX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FE82B shr rdx,6		; DEBUG: {Register}/RDX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1804FE82F and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1804FE833 prefetchw [rbp+rdx*8+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| RBP | 287456 | RDX ||| N/A | N/A
+		0x1804FE83B nop dword ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x1804FE840 mov rax,[rbp+rdx*8+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBP | 287456 | RDX ||| N/A | N/A
+		0x1804FE848 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE84B bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1804FE84F lock cmpxchg [rbp+rdx*8+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RBP | 287456 | RDX ||| N/A | N/A
+		0x1804FE859 jne short 00000001804FE840h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE85B mov rdx,[183114B50h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493915984 | None ||| N/A | N/A
+		0x1804FE862 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE865 call 0000000180D40810h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE86A cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1804FE871 mov [rbx+58h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBX | 88 | None ||| N/A | N/A
+		0x1804FE875 je short 00000001804FE8BBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE877 lea r8,[rbx+58h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x1804FE87B shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1804FE87F and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1804FE886 mov edx,r8d		; DEBUG: {Register}/EDX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FE889 shr rdx,6		; DEBUG: {Register}/RDX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1804FE88D and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1804FE891 prefetchw [rbp+rdx*8+462E0h]		; DEBUG: {Memory}/None {Register}/None ||| RBP | 287456 | RDX ||| N/A | N/A
+		0x1804FE899 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1804FE8A0 mov rax,[rbp+rdx*8+462E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBP | 287456 | RDX ||| N/A | N/A
+		0x1804FE8A8 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE8AB bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1804FE8AF lock cmpxchg [rbp+rdx*8+462E0h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RBP | 287456 | RDX ||| N/A | N/A
+		0x1804FE8B9 jne short 00000001804FE8A0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE8BB mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804FE8C2 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1804FE8C9 jne short 00000001804FE8D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE8CB call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE8D0 cmp byte ptr [1832A9F58h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575896 | None ||| N/A | 0
+		0x1804FE8D7 jne short 00000001804FE8ECh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE8D9 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804FE8E0 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE8E5 mov byte ptr [1832A9F58h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575896 | None ||| N/A | 1
+		0x1804FE8EC mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804FE8F3 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1804FE8FA jne short 00000001804FE901h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE8FC call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE901 cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x1804FE908 jne short 00000001804FE91Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE90A lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804FE911 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE916 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x1804FE91D test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1804FE920 je near ptr 00000001804FEA40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE926 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804FE92D cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1804FE934 jne short 00000001804FE93Bh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE936 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE93B cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x1804FE940 je near ptr 00000001804FEA40h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE946 mov rcx,[rbx+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1804FE94A movaps xmm0,[182E6F3E0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491141088 | None ||| N/A | N/A
+		0x1804FE951 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE954 je near ptr 00000001804FEAAAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE95A mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1804FE95D lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FE962 movdqa [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FE968 mov r8,[rax+2B0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 688 | None ||| N/A | N/A
+		0x1804FE96F call qword ptr [rax+2A8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 680 | None ||| N/A | N/A
+		0x1804FE975 cmp dword ptr [rdi+48h],1		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RDI | 72 | None ||| N/A | 1
+		0x1804FE979 je short 00000001804FE9B1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE97B cmp dword ptr [rdi+48h],8		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RDI | 72 | None ||| N/A | 8
+		0x1804FE97F je short 00000001804FE9B1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE981 cmp dword ptr [rdi+48h],16h		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RDI | 72 | None ||| N/A | 22
+		0x1804FE985 je short 00000001804FE9B1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE987 mov rcx,[rbx+58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x1804FE98B test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE98E je near ptr 00000001804FEAAAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE994 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FE997 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE999 call 00000001825B41D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE99E mov rcx,[rbx+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x1804FE9A2 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE9A5 je near ptr 00000001804FEAAAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE9AB movups xmm0,[rbx+40h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 64 | None ||| N/A | N/A
+		0x1804FE9AF jmp short 00000001804FE9D9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE9B1 mov rcx,[rbx+58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x1804FE9B5 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE9B8 je near ptr 00000001804FEAAAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE9BE xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FE9C1 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1804FE9C3 call 00000001825B41D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE9C8 mov rcx,[rbx+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x1804FE9CC test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE9CF je near ptr 00000001804FEAAAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FE9D5 movups xmm0,[rbx+30h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 48 | None ||| N/A | N/A
+		0x1804FE9D9 mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1804FE9DC lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FE9E1 movaps [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FE9E6 mov r8,[rax+2B0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 688 | None ||| N/A | N/A
+		0x1804FE9ED call qword ptr [rax+2A8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 680 | None ||| N/A | N/A
+		0x1804FE9F3 mov rdx,[rdi+28h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDI | 40 | None ||| N/A | N/A
+		0x1804FE9F7 mov rcx,[rbx+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1804FE9FB test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1804FE9FE je near ptr 00000001804FEAAAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEA04 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEA07 je near ptr 00000001804FEAAAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEA0D mov rdx,[rdx+0E0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 224 | None ||| N/A | N/A
+		0x1804FEA14 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FEA17 call 0000000182581060h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEA1C mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1804FEA21 mov rbp,[rsp+48h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 72 | None ||| N/A | N/A
+		0x1804FEA26 mov rsi,[rsp+50h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x1804FEA2B add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1804FEA2F pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804FEA30 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804FEA31 nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1804FEA35 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x1804FEA40 mov rcx,[rbx+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1804FEA44 movaps xmm0,[182E6F040h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491140160 | None ||| N/A | N/A
+		0x1804FEA4B test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEA4E je short 00000001804FEAAAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEA50 mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1804FEA53 lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FEA58 movdqa [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FEA5E mov r8,[rax+2B0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 688 | None ||| N/A | N/A
+		0x1804FEA65 call qword ptr [rax+2A8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 680 | None ||| N/A | N/A
+		0x1804FEA6B mov rcx,[rbx+58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x1804FEA6F test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEA72 je short 00000001804FEAAAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEA74 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FEA77 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEA79 call 00000001825B41D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEA7E mov rcx,[rbx+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x1804FEA82 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEA85 je short 00000001804FEAAAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEA87 mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1804FEA8A lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FEA8F movups xmm0,[rbx+40h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 64 | None ||| N/A | N/A
+		0x1804FEA93 mov r8,[rax+2B0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 688 | None ||| N/A | N/A
+		0x1804FEA9A movaps [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FEA9F call qword ptr [rax+2A8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 680 | None ||| N/A | N/A
+		0x1804FEAA5 jmp near ptr 00000001804FEA1Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEAAA call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEAAF int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void AntennaPopupBotAssignInventorySlot::Setup(MuttInventory.InventoryItem,System.Action`1<AntennaPopupBotAssignInventorySlot>):
+		End of function at 0x1804FEAB0
+		Absolute End is at 0x1804FEAB0
+		Identified Jump Destination addresses:
+			0x1804FE9D9
+		0x1804FE77F: Saves the content of rdi to the stack
+		0x1804FE784: Compares {Unknown Global at 0x18329A65A, first ten bytes are [238 2 96 74 3 0 242 74 3 0], or as chars "î`J òJ "} and 0
+		0x1804FE78B: Copies {'onClickMe' (function parameter, type System.Action`1<AntennaPopupBotAssignInventorySlot>)} from r8 into rsi
+		0x1804FE78E: Copies {'item' (function parameter, type MuttInventory.InventoryItem)} from rdx into rdi
+		0x1804FE791: Copies {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} from rcx into rbx
+		0x1804FE794: Jumps to 0x1804FE7B5 if {Unknown Global at 0x18329A65A, first ten bytes are [238 2 96 74 3 0 242 74 3 0], or as chars "î`J òJ "} != 0
+
+		0x1804FE796: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.UI.Button>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1804FE79D: Initializes runtime metadata value 
+		0x1804FE7A2: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804FE7A9: Initializes runtime metadata value UnityEngine.Object
+		0x1804FE7B5: Loads string "YB" into register rax as constant {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804FE7BB: Reads {Unknown Global at 0x1832AE560, first ten bytes are [20 59 240 2 208 31 18 0 228 32], or as chars ";ðÐ ä "} into register rbp as a constant constant6
+		0x1804FE7C2: [!] Sets the field item (Type MuttInventory.InventoryItem) on local {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} to the value stored in {'item' (function parameter, type MuttInventory.InventoryItem)}
+		0x1804FE7C6: Compares {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} and 0
+		0x1804FE7C8: Jumps to 0x1804FE811 if constant5 equals 0
+
+		0x1804FE7CA: Loads the pointer to the field item on {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} into register r8
+		0x1804FE7D9: Copies {'constant8' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rdx
+		0x1804FE7F8: Copies {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} from rax into rcx
+		0x1804FE809: Jumps to 0x1804FE7F0 if {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} != 0
+
+		0x1804FE80B: Loads string "YB" into register rax as constant {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804FE811: [!] Sets the field onClickMe (Type System.Action`1<AntennaPopupBotAssignInventorySlot>) on local {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} to the value stored in {'onClickMe' (function parameter, type System.Action`1<AntennaPopupBotAssignInventorySlot>)}
+		0x1804FE815: Compares {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} and 0
+		0x1804FE817: Jumps to 0x1804FE85B if constant9 equals 0
+
+		0x1804FE819: Loads the pointer to the field onClickMe on {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} into register r8
+		0x1804FE828: Copies {'constant11' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rdx
+		0x1804FE848: Copies {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} from rax into rcx
+		0x1804FE859: Jumps to 0x1804FE840 if {'constant9' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)} != 0
+
+		0x1804FE85B: Loads the global generic method reference for method T UnityEngine.Component::GetComponent<UnityEngine.UI.Button>() on type UnityEngine.Component and stores the result in constant {'GetComponent' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x1804FE862: Copies {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} from rbx into rcx
+		0x1804FE865: [!] Calls managed method T UnityEngine.Component::GetComponent<UnityEngine.UI.Button>() on instance {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores the result in {'component' (type UnityEngine.UI.Button)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x1804FE86A: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1804FE871: [!] Sets the field buttonComponent (Type UnityEngine.UI.Button) on local {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} to the value stored in {'component' (type UnityEngine.UI.Button)}
+		0x1804FE875: Jumps to 0x1804FE8BB if constant13 equals 0
+
+		0x1804FE877: Loads the pointer to the field buttonComponent on {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} into register r8
+		0x1804FE886: Copies {'constant15' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rdx
+		0x1804FE8A8: Copies {'component' (type UnityEngine.UI.Button)} from rax into rcx
+		0x1804FE8B9: Jumps to 0x1804FE8A0 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x1804FE8BB: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804FE8C2: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1804FE8C9: Jumps to 0x1804FE8D0 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1804FE8CB: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1804FE8D0: Compares {Unknown Global at 0x1832A9F58, first ten bytes are [128 23 238 2 240 161 14 0 234 162], or as chars "îð¡ ê¢"} and 0
+		0x1804FE8D7: Jumps to 0x1804FE8EC if {Unknown Global at 0x1832A9F58, first ten bytes are [128 23 238 2 240 161 14 0 234 162], or as chars "îð¡ ê¢"} != 0
+
+		0x1804FE8D9: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804FE8E0: Initializes runtime metadata value UnityEngine.Object
+		0x1804FE8EC: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804FE8F3: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1804FE8FA: Jumps to 0x1804FE901 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1804FE8FC: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1804FE901: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x1804FE908: Jumps to 0x1804FE91D if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x1804FE90A: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804FE911: Initializes runtime metadata value UnityEngine.Object
+		0x1804FE91D: [!] Compares {'item' (function parameter, type MuttInventory.InventoryItem)} and 0
+		0x1804FE920: Jumps to 0x1804FEA40 (which is an if statement's body) if item equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1804FE926: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804FE92D: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1804FE934: Jumps to 0x1804FE93B if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1804FE936: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1804FE93B: [!] Compares  and 0
+		0x1804FE940: Jumps to 0x1804FEA40 (which is an if statement's body) if  equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1804FE946: [!] Reads field itemIcon from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'itemIcon' (type UnityEngine.UI.Image)}
+
+		0x1804FE94A: Reads {Unknown Global at 0x182E6F3E0, first ten bytes are [0 0 128 63 0 0 128 63 0 0], or as chars "  ?  ?  "} into register xmm0 as a constant constant33
+		0x1804FE951: [!] Compares {'itemIcon' (type UnityEngine.UI.Image)} and 0
+		0x1804FE954: Jumps to 0x1804FEAAA (which throws a NRE) if itemIcon equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FE95A: Loads the class pointer from itemIcon into a constant constant35 in register rax
+		0x1804FE95D: Loads a pointer to stack offset 0x20 into register rdx as new constant constant36
+		0x1804FE962: Moves constant33 (type Cpp2IL.Core.Analysis.ResultModels.UnknownGlobalAddr) from register xmm0 to the stack at offset 32 (0x20) as a new local local5
+		0x1804FE968: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) specific to UnityEngine.UI.Image from the class pointer in rax, slot 23 (from memory offset 688) and stores in constant constant37
+		0x1804FE96F: [!] Calls managed method System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) on instance {'itemIcon' (type UnityEngine.UI.Image)} ;  - Arguments are incorrect?
+
+		0x1804FE975: [!] Compares {field ItemTypeId, read from local {'item' (function parameter, type MuttInventory.InventoryItem)}} and 1
+		0x1804FE979: Jumps to 0x1804FE9B1 if item.ItemTypeId equals 1 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x1804FE97B: [!] Compares {field ItemTypeId, read from local {'item' (function parameter, type MuttInventory.InventoryItem)}} and 8
+		0x1804FE97F: Jumps to 0x1804FE9B1 if item.ItemTypeId equals 8 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x1804FE981: [!] Compares {field ItemTypeId, read from local {'item' (function parameter, type MuttInventory.InventoryItem)}} and 22
+		0x1804FE985: Jumps to 0x1804FE9B1 if item.ItemTypeId equals 22 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x1804FE987: [!] Reads field buttonComponent from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'buttonComponent' (type UnityEngine.UI.Button)}
+
+		0x1804FE98B: [!] Compares {'buttonComponent' (type UnityEngine.UI.Button)} and 0
+		0x1804FE98E: Jumps to 0x1804FEAAA (which throws a NRE) if buttonComponent equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FE997: Clears register rdx, yielding zero-local {'local8' (type System.Int32)}
+		0x1804FE999: [!] Calls managed method System.Void UnityEngine.UI.Selectable::set_interactable(System.Boolean) on instance {'buttonComponent' (type UnityEngine.UI.Button)} with arguments [{'local8' (type System.Int32)}]
+
+		0x1804FE99E: [!] Reads field itemBackground from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'itemBackground' (type UnityEngine.UI.Image)}
+
+		0x1804FE9A2: [!] Compares {'itemBackground' (type UnityEngine.UI.Image)} and 0
+		0x1804FE9A5: Jumps to 0x1804FEAAA (which throws a NRE) if itemBackground equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FE9AF: Jumps to 0x1804FE9D9 (which is an function-local jump destination)
+
+		0x1804FE9B1: [!] Reads field buttonComponent from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'buttonComponent2' (type UnityEngine.UI.Button)}
+
+		0x1804FE9B5: [!] Compares {'buttonComponent2' (type UnityEngine.UI.Button)} and 0
+		0x1804FE9B8: Jumps to 0x1804FEAAA (which throws a NRE) if buttonComponent2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FE9C1: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x1804FE9C3: [!] Calls managed method System.Void UnityEngine.UI.Selectable::set_interactable(System.Boolean) on instance {'buttonComponent2' (type UnityEngine.UI.Button)} with arguments [True]
+
+		0x1804FE9C8: [!] Reads field itemBackground from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'itemBackground2' (type UnityEngine.UI.Image)}
+
+		0x1804FE9CC: [!] Compares {'itemBackground2' (type UnityEngine.UI.Image)} and 0
+		0x1804FE9CF: Jumps to 0x1804FEAAA (which throws a NRE) if itemBackground2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FE9D5: [!] Reads field botBgColor from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'botBgColor' (type UnityEngine.Color)}
+
+
+		End Of If-Else Block (at 0x1804FE9D9) where the else started at 0x1804FE9B1
+		0x1804FE9D9: Loads the class pointer from itemBackground2 into a constant constant46 in register rax
+		0x1804FE9DC: Loads a pointer to stack offset 0x20 into register rdx as new constant constant47
+		0x1804FE9E1: Moves botBgColor (type UnityEngine.Color) from register xmm0 to the stack at offset 32 (0x20)
+		0x1804FE9E6: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) specific to UnityEngine.UI.Image from the class pointer in rax, slot 23 (from memory offset 688) and stores in constant constant48
+		0x1804FE9ED: [!] Calls managed method System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) on instance {'itemBackground2' (type UnityEngine.UI.Image)} with arguments [{'botBgColor' (type UnityEngine.Color)}]
+
+		0x1804FE9F3: [!] Reads field itemIcon from {'item' (function parameter, type MuttInventory.InventoryItem)} and stores in a new local {'itemIcon2' (type UnityEngine.UI.Image)}
+
+		0x1804FE9F7: [!] Reads field itemIcon from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'itemIcon3' (type UnityEngine.UI.Image)}
+
+		0x1804FE9FB: [!] Compares {'itemIcon2' (type UnityEngine.UI.Image)} and 0
+		0x1804FE9FE: Jumps to 0x1804FEAAA (which throws a NRE) if itemIcon2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEA04: [!] Compares {'itemIcon3' (type UnityEngine.UI.Image)} and 0
+		0x1804FEA07: Jumps to 0x1804FEAAA (which throws a NRE) if itemIcon3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEA0D: [!] Reads field m_Sprite from {'itemIcon2' (type UnityEngine.UI.Image)} and stores in a new local {'m_Sprite' (type UnityEngine.Sprite)}
+
+		0x1804FEA17: [!] Calls managed method System.Void UnityEngine.UI.Image::set_sprite(UnityEngine.Sprite) on instance {'itemIcon3' (type UnityEngine.UI.Image)} with arguments [{'m_Sprite' (type UnityEngine.Sprite)}]
+
+
+		Potential Loop Start (0x1804FEA1C):
+		0x1804FEA1C: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant51
+		0x1804FEA21: Reads unknown value in stack, offset 72 (0x48) and stores the pointer in register rbp as new constant constant52
+		0x1804FEA26: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register rsi as new constant constant53
+		0x1804FEA30: [!] Returns from the function
+
+		0x1804FEA40: [!] Reads field itemIcon from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'itemIcon4' (type UnityEngine.UI.Image)}
+
+		0x1804FEA44: Reads {Unknown Global at 0x182E6F040, first ten bytes are [0 0 128 63 0 0 128 63 0 0], or as chars "  ?  ?  "} into register xmm0 as a constant constant54
+		0x1804FEA4B: [!] Compares {'itemIcon4' (type UnityEngine.UI.Image)} and 0
+		0x1804FEA4E: Jumps to 0x1804FEAAA (which throws a NRE) if itemIcon4 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEA50: Loads the class pointer from itemIcon4 into a constant constant56 in register rax
+		0x1804FEA53: Loads a pointer to stack offset 0x20 into register rdx as new constant constant57
+		0x1804FEA58: Moves constant54 (type Cpp2IL.Core.Analysis.ResultModels.UnknownGlobalAddr) from register xmm0 to the stack at offset 32 (0x20) as a new local local20
+		0x1804FEA5E: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) specific to UnityEngine.UI.Image from the class pointer in rax, slot 23 (from memory offset 688) and stores in constant constant58
+		0x1804FEA65: [!] Calls managed method System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) on instance {'itemIcon4' (type UnityEngine.UI.Image)} ;  - Arguments are incorrect?
+
+		0x1804FEA6B: [!] Reads field buttonComponent from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'buttonComponent3' (type UnityEngine.UI.Button)}
+
+		0x1804FEA6F: [!] Compares {'buttonComponent3' (type UnityEngine.UI.Button)} and 0
+		0x1804FEA72: Jumps to 0x1804FEAAA (which throws a NRE) if buttonComponent3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEA77: Clears register rdx, yielding zero-local {'local23' (type System.Int32)}
+		0x1804FEA79: [!] Calls managed method System.Void UnityEngine.UI.Selectable::set_interactable(System.Boolean) on instance {'buttonComponent3' (type UnityEngine.UI.Button)} with arguments [{'local23' (type System.Int32)}]
+
+		0x1804FEA7E: [!] Reads field itemBackground from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'itemBackground3' (type UnityEngine.UI.Image)}
+
+		0x1804FEA82: [!] Compares {'itemBackground3' (type UnityEngine.UI.Image)} and 0
+		0x1804FEA85: Jumps to 0x1804FEAAA (which throws a NRE) if itemBackground3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEA87: Loads the class pointer from itemBackground3 into a constant constant61 in register rax
+		0x1804FEA8A: Loads a pointer to stack offset 0x20 into register rdx as new constant constant62
+		0x1804FEA8F: [!] Reads field noBotBgColor from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'noBotBgColor' (type UnityEngine.Color)}
+
+		0x1804FEA93: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) specific to UnityEngine.UI.Image from the class pointer in rax, slot 23 (from memory offset 688) and stores in constant constant63
+		0x1804FEA9A: Moves noBotBgColor (type UnityEngine.Color) from register xmm0 to the stack at offset 32 (0x20)
+		0x1804FEA9F: [!] Calls managed method System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) on instance {'itemBackground3' (type UnityEngine.UI.Image)} with arguments [{'noBotBgColor' (type UnityEngine.Color)}]
+
+		0x1804FEAA5: Jumps to 0x1804FEA1C - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x1804FEAAA: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: AntennaPopupBotAssignInventorySlot
+	System.Void Setup(MuttInventory.InventoryItem item, System.Action`1<AntennaPopupBotAssignInventorySlot> onClickMe)
+		this.item = item
+		this.onClickMe = onClickMe
+
+		UnityEngine.UI.Button component = base.GetComponent<UnityEngine.UI.Button>()
+		this.buttonComponent = component
+
+		if (item != 0)
+
+		    if ( != 0)
+		        UnityEngine.UI.Image itemIcon = this.itemIcon
+
+		        itemIcon.set_color()
+
+		        if (item.ItemTypeId != 1)
+
+		            if (item.ItemTypeId != 8)
+
+		                if (item.ItemTypeId != 22)
+		                    UnityEngine.UI.Button buttonComponent = this.buttonComponent
+		                    ulong local8 = 0
+
+		                    buttonComponent.interactable = local8
+		                    UnityEngine.UI.Image itemBackground = this.itemBackground
+		                else
+		                    UnityEngine.UI.Button buttonComponent2 = this.buttonComponent
+
+		                    buttonComponent2.interactable = True
+		                    UnityEngine.UI.Image itemBackground2 = this.itemBackground
+		                    UnityEngine.Color botBgColor = this.botBgColor
+		                endif
+                        
+
+		                itemBackground2.color = botBgColor
+		                UnityEngine.UI.Image itemIcon2 = item.itemIcon
+		                UnityEngine.UI.Image itemIcon3 = this.itemIcon
+		                UnityEngine.Sprite m_Sprite = itemIcon2.m_Sprite
+
+		                itemIcon3.sprite = m_Sprite
+		                return
+		            endif
+                    
+		            UnityEngine.UI.Image itemIcon4 = this.itemIcon
+
+		            itemIcon4.set_color()
+		            UnityEngine.UI.Button buttonComponent3 = this.buttonComponent
+		            ulong local23 = 0
+
+		            buttonComponent3.interactable = local23
+		            UnityEngine.UI.Image itemBackground3 = this.itemBackground
+		            UnityEngine.Color noBotBgColor = this.noBotBgColor
+
+		            itemBackground3.color = noBotBgColor
+		            throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.JumpIfZeroOrNullAction at (0x1804FE940) is corrupt (One of the arguments is null) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void AntennaPopupBotAssignInventorySlot::SetupWithItem():	Method Body (x86 ASM):
+		0x1804FEAB0 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1804FEAB5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804FEAB6 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1804FEABA cmp byte ptr [18329A65Bh],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512155 | None ||| N/A | 0
+		0x1804FEAC1 mov rbx,rcx		; DEBUG: {Register}/RBX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEAC4 jne short 00000001804FEAD9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEAC6 lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804FEACD call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEAD2 mov byte ptr [18329A65Bh],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512155 | None ||| N/A | 1
+		0x1804FEAD9 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804FEAE0 mov rdi,[rbx+50h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 80 | None ||| N/A | N/A
+		0x1804FEAE4 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1804FEAEB jne short 00000001804FEAF2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEAED call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEAF2 cmp byte ptr [1832A9F58h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575896 | None ||| N/A | 0
+		0x1804FEAF9 jne short 00000001804FEB0Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEAFB lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804FEB02 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEB07 mov byte ptr [1832A9F58h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575896 | None ||| N/A | 1
+		0x1804FEB0E mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804FEB15 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1804FEB1C jne short 00000001804FEB23h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEB1E call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEB23 cmp byte ptr [1832A9F59h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 0
+		0x1804FEB2A jne short 00000001804FEB3Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEB2C lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804FEB33 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEB38 mov byte ptr [1832A9F59h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575897 | None ||| N/A | 1
+		0x1804FEB3F test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1804FEB42 je near ptr 00000001804FEC62h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEB48 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x1804FEB4F cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x1804FEB56 jne short 00000001804FEB5Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEB58 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEB5D cmp qword ptr [rdi+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RDI | 16 | None ||| N/A | 0
+		0x1804FEB62 mov rcx,[rbx+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1804FEB66 je near ptr 00000001804FEC66h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEB6C movaps xmm0,[182E6F3E0h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491141088 | None ||| N/A | N/A
+		0x1804FEB73 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEB76 je near ptr 00000001804FECE5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEB7C mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1804FEB7F lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FEB84 movdqa [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FEB8A mov r8,[rax+2B0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 688 | None ||| N/A | N/A
+		0x1804FEB91 call qword ptr [rax+2A8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 680 | None ||| N/A | N/A
+		0x1804FEB97 mov rax,[rbx+50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 80 | None ||| N/A | N/A
+		0x1804FEB9B test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEB9E je near ptr 00000001804FECE5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEBA4 cmp dword ptr [rax+48h],1		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 72 | None ||| N/A | 1
+		0x1804FEBA8 je short 00000001804FEBE0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEBAA cmp dword ptr [rax+48h],8		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 72 | None ||| N/A | 8
+		0x1804FEBAE je short 00000001804FEBE0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEBB0 cmp dword ptr [rax+48h],16h		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 72 | None ||| N/A | 22
+		0x1804FEBB4 je short 00000001804FEBE0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEBB6 mov rcx,[rbx+58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x1804FEBBA test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEBBD je near ptr 00000001804FECE5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEBC3 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FEBC6 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEBC8 call 00000001825B41D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEBCD mov rcx,[rbx+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x1804FEBD1 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEBD4 je near ptr 00000001804FECE5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEBDA movups xmm0,[rbx+40h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 64 | None ||| N/A | N/A
+		0x1804FEBDE jmp short 00000001804FEC08h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEBE0 mov rcx,[rbx+58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x1804FEBE4 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEBE7 je near ptr 00000001804FECE5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEBED xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FEBF0 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1804FEBF2 call 00000001825B41D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEBF7 mov rcx,[rbx+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x1804FEBFB test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEBFE je near ptr 00000001804FECE5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEC04 movups xmm0,[rbx+30h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 48 | None ||| N/A | N/A
+		0x1804FEC08 mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1804FEC0B lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FEC10 movaps [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FEC15 mov r8,[rax+2B0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 688 | None ||| N/A | N/A
+		0x1804FEC1C call qword ptr [rax+2A8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 680 | None ||| N/A | N/A
+		0x1804FEC22 mov rax,[rbx+50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 80 | None ||| N/A | N/A
+		0x1804FEC26 mov rcx,[rbx+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1804FEC2A test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEC2D je near ptr 00000001804FECE5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEC33 mov rdx,[rax+28h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 40 | None ||| N/A | N/A
+		0x1804FEC37 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEC3A je near ptr 00000001804FECE5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEC40 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEC43 je near ptr 00000001804FECE5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEC49 mov rdx,[rdx+0E0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 224 | None ||| N/A | N/A
+		0x1804FEC50 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FEC53 mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1804FEC58 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1804FEC5C pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804FEC5D jmp near ptr 0000000182581060h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEC62 mov rcx,[rbx+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1804FEC66 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEC69 je short 00000001804FECE5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEC6B xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FEC6E xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEC70 call 0000000182581060h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEC75 mov rcx,[rbx+28h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 40 | None ||| N/A | N/A
+		0x1804FEC79 movaps xmm0,[182E6F040h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491140160 | None ||| N/A | N/A
+		0x1804FEC80 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEC83 je short 00000001804FECE5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEC85 mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1804FEC88 lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FEC8D movdqa [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FEC93 mov r8,[rax+2B0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 688 | None ||| N/A | N/A
+		0x1804FEC9A call qword ptr [rax+2A8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 680 | None ||| N/A | N/A
+		0x1804FECA0 mov rcx,[rbx+58h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 88 | None ||| N/A | N/A
+		0x1804FECA4 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FECA7 je short 00000001804FECE5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FECA9 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FECAC xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804FECAE call 00000001825B41D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FECB3 mov rcx,[rbx+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 32 | None ||| N/A | N/A
+		0x1804FECB7 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FECBA je short 00000001804FECE5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FECBC mov rax,[rcx]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 0 | None ||| N/A | N/A
+		0x1804FECBF lea rdx,[rsp+20h]		; DEBUG: {Register}/RDX {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FECC4 movups xmm0,[rbx+40h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 64 | None ||| N/A | N/A
+		0x1804FECC8 mov r8,[rax+2B0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 688 | None ||| N/A | N/A
+		0x1804FECCF movaps [rsp+20h],xmm0		; DEBUG: {Memory}/None {Register}/XMM0 ||| RSP | 32 | None ||| N/A | N/A
+		0x1804FECD4 call qword ptr [rax+2A8h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 680 | None ||| N/A | N/A
+		0x1804FECDA mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1804FECDF add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1804FECE3 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804FECE4 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804FECE5 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FECEA int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void AntennaPopupBotAssignInventorySlot::SetupWithItem():
+		End of function at 0x1804FECEB
+		Absolute End is at 0x1804FECEB
+		Identified Jump Destination addresses:
+			0x1804FEC08
+		0x1804FEAB5: Saves the content of rdi to the stack
+		0x1804FEABA: Compares {Unknown Global at 0x18329A65B, first ten bytes are [2 96 74 3 0 242 74 3 0 160], or as chars "`J òJ  "} and 0
+		0x1804FEAC1: Copies {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} from rcx into rbx
+		0x1804FEAC4: Jumps to 0x1804FEAD9 if {Unknown Global at 0x18329A65B, first ten bytes are [2 96 74 3 0 242 74 3 0 160], or as chars "`J òJ  "} != 0
+
+		0x1804FEAC6: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804FEACD: Initializes runtime metadata value UnityEngine.Object
+		0x1804FEAD9: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804FEAE0: [!] Reads field item from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'item' (type MuttInventory.InventoryItem)}
+
+		0x1804FEAE4: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1804FEAEB: Jumps to 0x1804FEAF2 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1804FEAED: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1804FEAF2: Compares {Unknown Global at 0x1832A9F58, first ten bytes are [128 23 238 2 240 161 14 0 234 162], or as chars "îð¡ ê¢"} and 0
+		0x1804FEAF9: Jumps to 0x1804FEB0E if {Unknown Global at 0x1832A9F58, first ten bytes are [128 23 238 2 240 161 14 0 234 162], or as chars "îð¡ ê¢"} != 0
+
+		0x1804FEAFB: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804FEB02: Initializes runtime metadata value UnityEngine.Object
+		0x1804FEB0E: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804FEB15: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1804FEB1C: Jumps to 0x1804FEB23 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1804FEB1E: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1804FEB23: Compares {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} and 0
+		0x1804FEB2A: Jumps to 0x1804FEB3F if {Unknown Global at 0x1832A9F59, first ten bytes are [23 238 2 240 161 14 0 234 162 14], or as chars "îð¡ ê¢"} != 0
+
+		0x1804FEB2C: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804FEB33: Initializes runtime metadata value UnityEngine.Object
+		0x1804FEB3F: [!] Compares {'item' (type MuttInventory.InventoryItem)} and 0
+		0x1804FEB42: Jumps to 0x1804FEC62 (which is an if statement's body) if item equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1804FEB48: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x1804FEB4F: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x1804FEB56: Jumps to 0x1804FEB5D if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x1804FEB58: Calls the il2cpp cctor for the type UnityEngine.Object
+		0x1804FEB5D: [!] Compares  and 0
+		0x1804FEB62: [!] Reads field itemIcon from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'itemIcon' (type UnityEngine.UI.Image)}
+
+		0x1804FEB66: Jumps to 0x1804FEC66 if  equals 0 ;  - This is probably a goto, jumping to 0x1804FEC66 which is after end of current block @ 0x1804FEC62 (started at 0x1804FEB48)
+
+		0x1804FEB6C: Reads {Unknown Global at 0x182E6F3E0, first ten bytes are [0 0 128 63 0 0 128 63 0 0], or as chars "  ?  ?  "} into register xmm0 as a constant constant21
+		0x1804FEB73: [!] Compares {'itemIcon' (type UnityEngine.UI.Image)} and 0
+		0x1804FEB76: Jumps to 0x1804FECE5 (which throws a NRE) if itemIcon equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEB7C: Loads the class pointer from itemIcon into a constant constant23 in register rax
+		0x1804FEB7F: Loads a pointer to stack offset 0x20 into register rdx as new constant constant24
+		0x1804FEB84: Moves constant21 (type Cpp2IL.Core.Analysis.ResultModels.UnknownGlobalAddr) from register xmm0 to the stack at offset 32 (0x20) as a new local local3
+		0x1804FEB8A: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) specific to UnityEngine.UI.Image from the class pointer in rax, slot 23 (from memory offset 688) and stores in constant constant25
+		0x1804FEB91: [!] Calls managed method System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) on instance {'itemIcon' (type UnityEngine.UI.Image)} ;  - Arguments are incorrect?
+
+		0x1804FEB97: [!] Reads field item from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'item2' (type MuttInventory.InventoryItem)}
+
+		0x1804FEB9B: [!] Compares {'item2' (type MuttInventory.InventoryItem)} and 0
+		0x1804FEB9E: Jumps to 0x1804FECE5 (which throws a NRE) if item2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEBA4: [!] Compares {field ItemTypeId, read from local {'item2' (type MuttInventory.InventoryItem)}} and 1
+		0x1804FEBA8: Jumps to 0x1804FEBE0 if item2.ItemTypeId equals 1 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x1804FEBAA: [!] Compares {field ItemTypeId, read from local {'item2' (type MuttInventory.InventoryItem)}} and 8
+		0x1804FEBAE: Jumps to 0x1804FEBE0 if item2.ItemTypeId equals 8 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x1804FEBB0: [!] Compares {field ItemTypeId, read from local {'item2' (type MuttInventory.InventoryItem)}} and 22
+		0x1804FEBB4: Jumps to 0x1804FEBE0 if item2.ItemTypeId equals 22 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x1804FEBB6: [!] Reads field buttonComponent from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'buttonComponent' (type UnityEngine.UI.Button)}
+
+		0x1804FEBBA: [!] Compares {'buttonComponent' (type UnityEngine.UI.Button)} and 0
+		0x1804FEBBD: Jumps to 0x1804FECE5 (which throws a NRE) if buttonComponent equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEBC6: Clears register rdx, yielding zero-local {'local7' (type System.Int32)}
+		0x1804FEBC8: [!] Calls managed method System.Void UnityEngine.UI.Selectable::set_interactable(System.Boolean) on instance {'buttonComponent' (type UnityEngine.UI.Button)} with arguments [{'local7' (type System.Int32)}]
+
+		0x1804FEBCD: [!] Reads field itemBackground from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'itemBackground' (type UnityEngine.UI.Image)}
+
+		0x1804FEBD1: [!] Compares {'itemBackground' (type UnityEngine.UI.Image)} and 0
+		0x1804FEBD4: Jumps to 0x1804FECE5 (which throws a NRE) if itemBackground equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEBDE: Jumps to 0x1804FEC08 (which is an function-local jump destination)
+
+		0x1804FEBE0: [!] Reads field buttonComponent from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'buttonComponent2' (type UnityEngine.UI.Button)}
+
+		0x1804FEBE4: [!] Compares {'buttonComponent2' (type UnityEngine.UI.Button)} and 0
+		0x1804FEBE7: Jumps to 0x1804FECE5 (which throws a NRE) if buttonComponent2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEBF0: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x1804FEBF2: [!] Calls managed method System.Void UnityEngine.UI.Selectable::set_interactable(System.Boolean) on instance {'buttonComponent2' (type UnityEngine.UI.Button)} with arguments [True]
+
+		0x1804FEBF7: [!] Reads field itemBackground from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'itemBackground2' (type UnityEngine.UI.Image)}
+
+		0x1804FEBFB: [!] Compares {'itemBackground2' (type UnityEngine.UI.Image)} and 0
+		0x1804FEBFE: Jumps to 0x1804FECE5 (which throws a NRE) if itemBackground2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEC04: [!] Reads field botBgColor from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'botBgColor' (type UnityEngine.Color)}
+
+
+		End Of If-Else Block (at 0x1804FEC08) where the else started at 0x1804FEBE0
+		0x1804FEC08: Loads the class pointer from itemBackground2 into a constant constant35 in register rax
+		0x1804FEC0B: Loads a pointer to stack offset 0x20 into register rdx as new constant constant36
+		0x1804FEC10: Moves botBgColor (type UnityEngine.Color) from register xmm0 to the stack at offset 32 (0x20)
+		0x1804FEC15: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) specific to UnityEngine.UI.Image from the class pointer in rax, slot 23 (from memory offset 688) and stores in constant constant37
+		0x1804FEC1C: [!] Calls managed method System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) on instance {'itemBackground2' (type UnityEngine.UI.Image)} with arguments [{'botBgColor' (type UnityEngine.Color)}]
+
+		0x1804FEC22: [!] Reads field item from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'item3' (type MuttInventory.InventoryItem)}
+
+		0x1804FEC26: [!] Reads field itemIcon from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'itemIcon2' (type UnityEngine.UI.Image)}
+
+		0x1804FEC2A: [!] Compares {'item3' (type MuttInventory.InventoryItem)} and 0
+		0x1804FEC2D: Jumps to 0x1804FECE5 (which throws a NRE) if item3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEC33: [!] Reads field itemIcon from {'item3' (type MuttInventory.InventoryItem)} and stores in a new local {'itemIcon3' (type UnityEngine.UI.Image)}
+
+		0x1804FEC37: [!] Compares {'itemIcon3' (type UnityEngine.UI.Image)} and 0
+		0x1804FEC3A: Jumps to 0x1804FECE5 (which throws a NRE) if itemIcon3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEC40: [!] Compares {'itemIcon2' (type UnityEngine.UI.Image)} and 0
+		0x1804FEC43: Jumps to 0x1804FECE5 (which throws a NRE) if itemIcon2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEC49: [!] Reads field m_Sprite from {'itemIcon3' (type UnityEngine.UI.Image)} and stores in a new local {'m_Sprite' (type UnityEngine.Sprite)}
+
+		0x1804FEC53: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant41
+		0x1804FEC5D: [!] Calls managed method System.Void UnityEngine.UI.Image::set_sprite(UnityEngine.Sprite) on instance {'itemIcon2' (type UnityEngine.UI.Image)} with arguments [{'m_Sprite' (type UnityEngine.Sprite)}]
+
+		0x1804FEC5D: [!] Returns from the function
+
+		0x1804FEC62: [!] Reads field itemIcon from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'itemIcon4' (type UnityEngine.UI.Image)}
+
+		0x1804FEC66: [!] Compares {'itemIcon4' (type UnityEngine.UI.Image)} and 0
+		0x1804FEC69: Jumps to 0x1804FECE5 (which throws a NRE) if itemIcon4 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEC6E: Clears register rdx, yielding zero-local {'local21' (type System.Int32)}
+		0x1804FEC70: [!] Calls managed method System.Void UnityEngine.UI.Image::set_sprite(UnityEngine.Sprite) on instance {'itemIcon4' (type UnityEngine.UI.Image)} with arguments [{'local21' (type System.Int32)}]
+
+		0x1804FEC75: [!] Reads field itemIcon from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'itemIcon5' (type UnityEngine.UI.Image)}
+
+		0x1804FEC79: Reads {Unknown Global at 0x182E6F040, first ten bytes are [0 0 128 63 0 0 128 63 0 0], or as chars "  ?  ?  "} into register xmm0 as a constant constant43
+		0x1804FEC80: [!] Compares {'itemIcon5' (type UnityEngine.UI.Image)} and 0
+		0x1804FEC83: Jumps to 0x1804FECE5 (which throws a NRE) if itemIcon5 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEC85: Loads the class pointer from itemIcon5 into a constant constant45 in register rax
+		0x1804FEC88: Loads a pointer to stack offset 0x20 into register rdx as new constant constant46
+		0x1804FEC8D: Moves constant43 (type Cpp2IL.Core.Analysis.ResultModels.UnknownGlobalAddr) from register xmm0 to the stack at offset 32 (0x20) as a new local local23
+		0x1804FEC93: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) specific to UnityEngine.UI.Image from the class pointer in rax, slot 23 (from memory offset 688) and stores in constant constant47
+		0x1804FEC9A: [!] Calls managed method System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) on instance {'itemIcon5' (type UnityEngine.UI.Image)} ;  - Arguments are incorrect?
+
+		0x1804FECA0: [!] Reads field buttonComponent from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'buttonComponent3' (type UnityEngine.UI.Button)}
+
+		0x1804FECA4: [!] Compares {'buttonComponent3' (type UnityEngine.UI.Button)} and 0
+		0x1804FECA7: Jumps to 0x1804FECE5 (which throws a NRE) if buttonComponent3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FECAC: Clears register rdx, yielding zero-local {'local26' (type System.Int32)}
+		0x1804FECAE: [!] Calls managed method System.Void UnityEngine.UI.Selectable::set_interactable(System.Boolean) on instance {'buttonComponent3' (type UnityEngine.UI.Button)} with arguments [{'local26' (type System.Int32)}]
+
+		0x1804FECB3: [!] Reads field itemBackground from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'itemBackground3' (type UnityEngine.UI.Image)}
+
+		0x1804FECB7: [!] Compares {'itemBackground3' (type UnityEngine.UI.Image)} and 0
+		0x1804FECBA: Jumps to 0x1804FECE5 (which throws a NRE) if itemBackground3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FECBC: Loads the class pointer from itemBackground3 into a constant constant50 in register rax
+		0x1804FECBF: Loads a pointer to stack offset 0x20 into register rdx as new constant constant51
+		0x1804FECC4: [!] Reads field noBotBgColor from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'noBotBgColor' (type UnityEngine.Color)}
+
+		0x1804FECC8: Loads the pointer to the implementation of virtual function System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) specific to UnityEngine.UI.Image from the class pointer in rax, slot 23 (from memory offset 688) and stores in constant constant52
+		0x1804FECCF: Moves noBotBgColor (type UnityEngine.Color) from register xmm0 to the stack at offset 32 (0x20)
+		0x1804FECD4: [!] Calls managed method System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) on instance {'itemBackground3' (type UnityEngine.UI.Image)} with arguments [{'noBotBgColor' (type UnityEngine.Color)}]
+
+		0x1804FECDA: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant53
+		0x1804FECE4: [!] Returns from the function
+
+		0x1804FECE5: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: AntennaPopupBotAssignInventorySlot
+	System.Void SetupWithItem()
+		MuttInventory.InventoryItem item = this.item
+
+		if (item != 0)
+		    UnityEngine.UI.Image itemIcon = this.itemIcon
+
+		    if ( == 0)
+                goto INSN_1804FEC66
+            endif
+
+		    itemIcon.set_color()
+		    MuttInventory.InventoryItem item2 = this.item
+
+		    if (item2.ItemTypeId != 1)
+
+		        if (item2.ItemTypeId != 8)
+
+		            if (item2.ItemTypeId != 22)
+		                UnityEngine.UI.Button buttonComponent = this.buttonComponent
+		                ulong local7 = 0
+
+		                buttonComponent.interactable = local7
+		                UnityEngine.UI.Image itemBackground = this.itemBackground
+		            else
+		                UnityEngine.UI.Button buttonComponent2 = this.buttonComponent
+
+		                buttonComponent2.interactable = True
+		                UnityEngine.UI.Image itemBackground2 = this.itemBackground
+		                UnityEngine.Color botBgColor = this.botBgColor
+		            endif
+                    
+
+		            itemBackground2.color = botBgColor
+		            MuttInventory.InventoryItem item3 = this.item
+		            UnityEngine.UI.Image itemIcon2 = this.itemIcon
+		            UnityEngine.UI.Image itemIcon3 = item3.itemIcon
+		            UnityEngine.Sprite m_Sprite = itemIcon3.m_Sprite
+
+		            itemIcon2.sprite = m_Sprite
+		            return
+		        endif
+                
+		        UnityEngine.UI.Image itemIcon4 = this.itemIcon
+
+		        INSN_1804FEC66:
+		        ulong local21 = 0
+
+		        itemIcon4.sprite = local21
+		        UnityEngine.UI.Image itemIcon5 = this.itemIcon
+
+		        itemIcon5.set_color()
+		        UnityEngine.UI.Button buttonComponent3 = this.buttonComponent
+		        ulong local26 = 0
+
+		        buttonComponent3.interactable = local26
+		        UnityEngine.UI.Image itemBackground3 = this.itemBackground
+		        UnityEngine.Color noBotBgColor = this.noBotBgColor
+
+		        itemBackground3.color = noBotBgColor
+		        return
+		        throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.JumpIfZeroOrNullAction at (0x1804FEB66) is corrupt (One of the arguments is null) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void AntennaPopupBotAssignInventorySlot::RemoveItem():	Method Body (x86 ASM):
+		0x1804FECF0 mov [rsp+18h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 24 | None ||| N/A | N/A
+		0x1804FECF5 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804FECF6 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1804FECFA cmp byte ptr [18329A65Ch],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512156 | None ||| N/A | 0
+		0x1804FED01 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FED04 jne short 00000001804FED49h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FED06 lea rcx,[183108790h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493865872 | None ||| N/A | N/A
+		0x1804FED0D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FED12 lea rcx,[1831085A8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493865384 | None ||| N/A | N/A
+		0x1804FED19 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FED1E lea rcx,[183108760h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493865824 | None ||| N/A | N/A
+		0x1804FED25 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FED2A lea rcx,[1830FBBA0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813664 | None ||| N/A | N/A
+		0x1804FED31 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FED36 lea rcx,[183108758h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493865816 | None ||| N/A | N/A
+		0x1804FED3D call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FED42 mov byte ptr [18329A65Ch],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495512156 | None ||| N/A | 1
+		0x1804FED49 mov rcx,[183108758h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493865816 | None ||| N/A | N/A
+		0x1804FED50 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FED55 mov rdx,[183108760h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493865824 | None ||| N/A | N/A
+		0x1804FED5C mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FED5F mov rbx,rax		; DEBUG: {Register}/RBX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FED62 call 0000000181219840h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FED67 cmp byte ptr [183298864h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504484 | None ||| N/A | 0
+		0x1804FED6E jne short 00000001804FED83h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FED70 lea rcx,[1830FB6B0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493812400 | None ||| N/A | N/A
+		0x1804FED77 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FED7C mov byte ptr [183298864h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504484 | None ||| N/A | 1
+		0x1804FED83 mov rcx,[1830FB6B0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493812400 | None ||| N/A | N/A
+		0x1804FED8A mov [rsp+30h],rbp		; DEBUG: {Memory}/None {Register}/RBP ||| RSP | 48 | None ||| N/A | N/A
+		0x1804FED8F mov [rsp+38h],rsi		; DEBUG: {Memory}/None {Register}/RSI ||| RSP | 56 | None ||| N/A | N/A
+		0x1804FED94 mov rdx,[rcx+0B8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 184 | None ||| N/A | N/A
+		0x1804FED9B mov rax,[rdx+8]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 8 | None ||| N/A | N/A
+		0x1804FED9F test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEDA2 je near ptr 00000001804FEFAFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEDA8 mov rax,[rax+0C8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RAX | 200 | None ||| N/A | N/A
+		0x1804FEDAF test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEDB2 je near ptr 00000001804FEFAFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEDB8 cmp dword ptr [rax+18h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 24 | None ||| N/A | 0
+		0x1804FEDBC jbe near ptr 00000001804FEFBBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEDC2 mov rcx,[rax+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x1804FEDC6 test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEDC9 je near ptr 00000001804FEFAFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEDCF cmp dword ptr [rcx+18h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 24 | None ||| N/A | 0
+		0x1804FEDD3 jbe near ptr 00000001804FEFB5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEDD9 mov rcx,[rcx+20h]		; DEBUG: {Register}/RCX {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x1804FEDDD test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEDE0 je near ptr 00000001804FEFAFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEDE6 mov rdx,[rdi+50h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDI | 80 | None ||| N/A | N/A
+		0x1804FEDEA xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FEDED call 0000000180450690h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEDF2 test al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1804FEDF4 jne near ptr 00000001804FEF43h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEDFA test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEDFD je near ptr 00000001804FEFAFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEE03 mov r8,[183108790h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493865872 | None ||| N/A | N/A
+		0x1804FEE0A inc dword ptr [rbx+1Ch]		; DEBUG: {Memory}/None {Register}/None ||| RBX | 28 | None ||| N/A | N/A
+		0x1804FEE0D mov rdx,[rbx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x1804FEE11 movsxd rcx,dword ptr [rbx+18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 24 | None ||| N/A | N/A
+		0x1804FEE15 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEE18 je near ptr 00000001804FEFAFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEE1E cmp ecx,[rdx+18h]		; DEBUG: {Register}/ECX {Memory}/None ||| RDX | 24 | None ||| N/A | N/A
+		0x1804FEE21 jb short 00000001804FEE3Eh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEE23 mov rax,[r8+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 32 | None ||| N/A | N/A
+		0x1804FEE27 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEE29 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEE2C mov r8,[rax+0C0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x1804FEE33 mov r8,[r8+70h]		; DEBUG: {Register}/R8 {Memory}/None ||| R8 | 112 | None ||| N/A | N/A
+		0x1804FEE37 call 000000018126A780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEE3C jmp short 00000001804FEE55h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEE3E lea eax,[rcx+1]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 1 | None ||| N/A | N/A
+		0x1804FEE41 mov [rbx+18h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBX | 24 | None ||| N/A | N/A
+		0x1804FEE44 cmp ecx,[rdx+18h]		; DEBUG: {Register}/ECX {Memory}/None ||| RDX | 24 | None ||| N/A | N/A
+		0x1804FEE47 jae near ptr 00000001804FEFB5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEE4D mov dword ptr [rdx+rcx*4+20h],0		; DEBUG: {Memory}/None {Immediate32}/None ||| RDX | 32 | RCX ||| N/A | 0
+		0x1804FEE55 mov r8,[183108790h]		; DEBUG: {Register}/R8 {Memory}/None ||| RIP | 6493865872 | None ||| N/A | N/A
+		0x1804FEE5C inc dword ptr [rbx+1Ch]		; DEBUG: {Memory}/None {Register}/None ||| RBX | 28 | None ||| N/A | N/A
+		0x1804FEE5F mov rdx,[rbx+10h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 16 | None ||| N/A | N/A
+		0x1804FEE63 movsxd rcx,dword ptr [rbx+18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RBX | 24 | None ||| N/A | N/A
+		0x1804FEE67 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEE6A je near ptr 00000001804FEFAFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEE70 cmp ecx,[rdx+18h]		; DEBUG: {Register}/ECX {Memory}/None ||| RDX | 24 | None ||| N/A | N/A
+		0x1804FEE73 jb short 00000001804FEE93h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEE75 mov rax,[r8+20h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 32 | None ||| N/A | N/A
+		0x1804FEE79 mov edx,1		; DEBUG: {Register}/EDX {Immediate32}/None ||| None | 0 | None ||| N/A | 1
+		0x1804FEE7E mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEE81 mov r8,[rax+0C0h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 192 | None ||| N/A | N/A
+		0x1804FEE88 mov r8,[r8+70h]		; DEBUG: {Register}/R8 {Memory}/None ||| R8 | 112 | None ||| N/A | N/A
+		0x1804FEE8C call 000000018126A780h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEE91 jmp short 00000001804FEEAAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEE93 lea eax,[rcx+1]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 1 | None ||| N/A | N/A
+		0x1804FEE96 mov [rbx+18h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RBX | 24 | None ||| N/A | N/A
+		0x1804FEE99 cmp ecx,[rdx+18h]		; DEBUG: {Register}/ECX {Memory}/None ||| RDX | 24 | None ||| N/A | N/A
+		0x1804FEE9C jae near ptr 00000001804FEFB5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEEA2 mov dword ptr [rdx+rcx*4+20h],1		; DEBUG: {Memory}/None {Immediate32}/None ||| RDX | 32 | RCX ||| N/A | 1
+		0x1804FEEAA cmp byte ptr [183298864h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504484 | None ||| N/A | 0
+		0x1804FEEB1 jne short 00000001804FEEC6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEEB3 lea rcx,[1830FB6B0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493812400 | None ||| N/A | N/A
+		0x1804FEEBA call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEEBF mov byte ptr [183298864h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504484 | None ||| N/A | 1
+		0x1804FEEC6 mov rax,[1830FB6B0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493812400 | None ||| N/A | N/A
+		0x1804FEECD mov rcx,[rax+0B8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1804FEED4 mov rax,[rcx+8]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 8 | None ||| N/A | N/A
+		0x1804FEED8 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEEDB je near ptr 00000001804FEFAFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEEE1 mov rax,[rax+0C8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RAX | 200 | None ||| N/A | N/A
+		0x1804FEEE8 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEEEB je near ptr 00000001804FEFAFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEEF1 cmp dword ptr [rax+18h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RAX | 24 | None ||| N/A | 0
+		0x1804FEEF5 jbe near ptr 00000001804FEFBBh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEEFB mov rcx,[rax+10h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 16 | None ||| N/A | N/A
+		0x1804FEEFF test rcx,rcx		; DEBUG: {Register}/RCX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEF02 je near ptr 00000001804FEFAFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEF08 cmp dword ptr [rcx+18h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 24 | None ||| N/A | 0
+		0x1804FEF0C jbe near ptr 00000001804FEFB5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEF12 mov rsi,[rcx+20h]		; DEBUG: {Register}/RSI {Memory}/None ||| RCX | 32 | None ||| N/A | N/A
+		0x1804FEF16 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEF19 mov rdx,[1831085A8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493865384 | None ||| N/A | N/A
+		0x1804FEF20 mov rbp,[rdi+50h]		; DEBUG: {Register}/RBP {Memory}/None ||| RDI | 80 | None ||| N/A | N/A
+		0x1804FEF24 call 000000018121C4E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEF29 test rsi,rsi		; DEBUG: {Register}/RSI {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1804FEF2C je near ptr 00000001804FEFAFh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEF32 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1804FEF35 mov r8,rax		; DEBUG: {Register}/R8 {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEF38 mov rdx,rbp		; DEBUG: {Register}/RDX {Register}/RBP ||| None | 0 | None ||| N/A | N/A
+		0x1804FEF3B mov rcx,rsi		; DEBUG: {Register}/RCX {Register}/RSI ||| None | 0 | None ||| N/A | N/A
+		0x1804FEF3E call 0000000180450B50h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEF43 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1804FEF4A mov qword ptr [rdi+50h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RDI | 80 | None ||| N/A | 0
+		0x1804FEF52 je short 00000001804FEF91h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEF54 lea r8,[rdi+50h]		; DEBUG: {Register}/R8 {Memory}/None ||| RDI | 80 | None ||| N/A | N/A
+		0x1804FEF58 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1804FEF5C lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x1804FEF63 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1804FEF6A mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804FEF6D shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1804FEF71 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1804FEF75 lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x1804FEF79 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1804FEF7C nop dword ptr [rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | None ||| N/A | N/A
+		0x1804FEF80 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1804FEF83 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEF86 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1804FEF8A lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x1804FEF8F jne short 00000001804FEF80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEF91 xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEF93 mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1804FEF96 mov rsi,[rsp+38h]		; DEBUG: {Register}/RSI {Memory}/None ||| RSP | 56 | None ||| N/A | N/A
+		0x1804FEF9B mov rbp,[rsp+30h]		; DEBUG: {Register}/RBP {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1804FEFA0 mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1804FEFA5 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1804FEFA9 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804FEFAA jmp near ptr 00000001804FEAB0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEFAF call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEFB4 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804FEFBB xor ecx,ecx		; DEBUG: {Register}/ECX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEFBD call 00000001818C0590h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEFC2 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void AntennaPopupBotAssignInventorySlot::RemoveItem():
+		End of function at 0x1804FEFC3
+		Absolute End is at 0x1804FEFC3
+		Identified Jump Destination addresses:
+			0x1804FEE55
+			0x1804FEEAA
+		0x1804FECF5: Saves the content of rdi to the stack
+		0x1804FECFA: Compares {Unknown Global at 0x18329A65C, first ten bytes are [96 74 3 0 242 74 3 0 160 210], or as chars "`J òJ  Ò"} and 0
+		0x1804FED01: Copies {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} from rcx into rdi
+		0x1804FED04: Jumps to 0x1804FED49 if {Unknown Global at 0x18329A65C, first ten bytes are [96 74 3 0 242 74 3 0 160 210], or as chars "`J òJ  Ò"} != 0
+
+		0x1804FED06: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::Add(T) on type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType> and stores the result in constant {'Add' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1804FED0D: Initializes runtime metadata value 
+		0x1804FED12: Loads the global generic method reference for method T[] System.Collections.Generic.List`1::ToArray() on type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType> and stores the result in constant {'ToArray' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1804FED19: Initializes runtime metadata value 
+		0x1804FED1E: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::.ctor() on type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType> and stores the result in constant {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1804FED25: Initializes runtime metadata value 
+		0x1804FED2A: Loads the global generic method reference for method T System.Collections.Generic.List`1::get_Item(System.Int32) on type System.Collections.Generic.List`1<BasePlayer> and stores the result in constant {'get_Item' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rcx
+		0x1804FED31: Initializes runtime metadata value 
+		0x1804FED36: Loads the type definition for managed type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType> as a constant "List`1" in rcx
+		0x1804FED3D: Initializes runtime metadata value System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>
+		0x1804FED49: Loads the type definition for managed type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType> as a constant "List`1" in rcx
+		0x1804FED50: [!] Allocates an instance of type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType> and stores it as list in rax.
+
+		0x1804FED55: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::.ctor() on type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType> and stores the result in constant {'.ctor' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x1804FED5C: Copies {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} from rax into rcx
+		0x1804FED5F: Copies {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} from rax into rbx
+		0x1804FED62: [!] Calls managed method System.Void System.Collections.Generic.List`1::.ctor() on instance {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x1804FED67: Compares {Unknown Global at 0x183298864, first ten bytes are [152 104 234 2 96 228 0 0 137 228], or as chars "hê`ä  ä"} and 0
+		0x1804FED6E: Jumps to 0x1804FED83 if {Unknown Global at 0x183298864, first ten bytes are [152 104 234 2 96 228 0 0 137 228], or as chars "hê`ä  ä"} != 0
+
+		0x1804FED70: Loads the type definition for managed type WorldManager as a constant "WorldManager" in rcx
+		0x1804FED77: Initializes runtime metadata value WorldManager
+		0x1804FED83: Loads the type definition for managed type WorldManager as a constant "WorldManager" in rcx
+		0x1804FED94: Loads the pointer to the static fields for WorldManager and stores it in constant14 in register rdx
+		0x1804FED9B: [!] Reads the static field WorldManager WorldManager::<Instance>k__BackingField into new local Instance
+		0x1804FED9F: [!] Compares {'Instance' (type WorldManager)} and 0
+		0x1804FEDA2: Jumps to 0x1804FEFAF (which throws a NRE) if Instance equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEDA8: [!] Reads field players from {'Instance' (type WorldManager)} and stores in a new local {'players' (type System.Collections.Generic.List`1<BasePlayer>)}
+
+		0x1804FEDAF: [!] Compares {'players' (type System.Collections.Generic.List`1<BasePlayer>)} and 0
+		0x1804FEDB2: Jumps to 0x1804FEFAF (which throws a NRE) if players equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEDB8: [!] Compares  and 0
+		0x1804FEDBC: Jumps to 0x1804FEFBB (which is an if statement's body) if  is less than or equal to 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1804FEDC2: [!] Reads field _items from {'players' (type System.Collections.Generic.List`1<BasePlayer>)} and stores in a new local {'_items' (type T[])}
+
+		0x1804FEDC6: [!] Compares {'_items' (type T[])} and 0
+		0x1804FEDC9: Jumps to 0x1804FEFAF (which throws a NRE) if _items equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEDCF: [!] Compares {Property System.Int32 System.Array::Length() on {'_items' (type T[])}} and 0
+		0x1804FEDD3: Jumps to 0x1804FEFB5 (which throws a NRE) if {Property System.Int32 System.Array::Length() on {'_items' (type T[])}} is less than or equal to 0. Implicitly present in managed code, so ignored here.
+		0x1804FEDD9: [!] Reads a value from the array {'_items' (type T[])} at index 0, into a new local {'local5' (type T)}
+
+		0x1804FEDDD: [!] Compares {'local5' (type T)} and 0
+		0x1804FEDE0: Jumps to 0x1804FEFAF (which throws a NRE) if local5 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEDE6: [!] Reads field item from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'item' (type MuttInventory.InventoryItem)}
+
+		0x1804FEDED: [!] Calls managed method System.Boolean BasePlayer::RemoveItemFromExtaInventory(MuttInventory.InventoryItem) on instance {'local5' (type T)} with arguments [{'item' (type MuttInventory.InventoryItem)}] and stores the result in {'boolean' (type System.Boolean)} ;  - This is an instance method, but the type of the 'this' parameter is mismatched. Expecting BasePlayer, actually T
+
+		0x1804FEDF2: [!] Compares {'boolean' (type System.Boolean)} and False
+		0x1804FEDF4: Jumps to 0x1804FEF43 (which is an if statement's body) if {'boolean' (type System.Boolean)} != False ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1804FEDFA: [!] Compares {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} and 0
+		0x1804FEDFD: Jumps to 0x1804FEFAF (which throws a NRE) if list equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEE03: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::Add(T) on type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType> and stores the result in constant {'Add' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in r8
+		0x1804FEE0D: [!] Reads field _items from {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} and stores in a new local {'_items2' (type T[])}
+
+		0x1804FEE11: [!] Reads field _size from {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} and stores in a new local {'_size' (type System.Int32)}
+
+		0x1804FEE15: [!] Compares {'_items2' (type T[])} and 0
+		0x1804FEE18: Jumps to 0x1804FEFAF (which throws a NRE) if _items2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEE1E: [!] Compares {'_size' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items2' (type T[])}}
+		0x1804FEE27: Clears register rdx, yielding zero-local {'local11' (type System.Int32)}
+		0x1804FEE29: Copies {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} from rbx into rcx
+		0x1804FEE2C: [!] Reads field  from {'boolean' (type System.Boolean)} and stores in a new local 
+
+		0x1804FEE37: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1804FEE3C: Jumps to 0x1804FEE55 (which is an function-local jump destination)
+
+		0x1804FEE3E: Loads the pointer to the field  on {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} into register rax
+		0x1804FEE41: [!] Sets the field _size (Type System.Int32) on local {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} to the value stored in {'local12' (type System.NullReferenceException)}
+		0x1804FEE44: [!] Compares {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} against itself
+		0x1804FEE47: Jumps to 0x1804FEFB5 (which throws a NRE) if {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} is greater than or equal to . Implicitly present in managed code, so ignored here.
+		0x1804FEE4D: [!] Sets the field  (Type ) on local {'local11' (type System.Int32)} to the value stored in 0
+
+		Jump Destination (0x1804FEE55):
+		0x1804FEE55: Loads the global generic method reference for method System.Void System.Collections.Generic.List`1::Add(T) on type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType> and stores the result in constant {'Add' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in r8
+		0x1804FEE5F: [!] Reads field _items from {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} and stores in a new local {'_items3' (type T[])}
+
+		0x1804FEE63: [!] Reads field _size from {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} and stores in a new local {'_size2' (type System.Int32)}
+
+		0x1804FEE67: [!] Compares {'_items3' (type T[])} and 0
+		0x1804FEE6A: Jumps to 0x1804FEFAF (which throws a NRE) if _items3 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEE70: [!] Compares {'_size2' (type System.Int32)} and {Property System.Int32 System.Array::Length() on {'_items3' (type T[])}}
+		0x1804FEE79: [!] Writes the constant 0x1 into operand 1 (type UInt64) in register rdx
+		0x1804FEE7E: Copies {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} from rbx into rcx
+		0x1804FEE81: [!] Reads field  from {'local12' (type System.NullReferenceException)} and stores in a new local 
+
+		0x1804FEE8C: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1804FEE91: Jumps to 0x1804FEEAA (which is an function-local jump destination)
+
+		0x1804FEE93: Loads the pointer to the field  on {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} into register rax
+		0x1804FEE96: [!] Sets the field _size (Type System.Int32) on local {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} to the value stored in {'local15' (type System.NullReferenceException)}
+		0x1804FEE99: Compares {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} and "{il2cpp field on 1, offset 0x18}"
+		0x1804FEE9C: Jumps to 0x1804FEFB5 (which throws a NRE) if {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} is greater than or equal to "{il2cpp field on 1, offset 0x18}". Implicitly present in managed code, so ignored here.
+		0x1804FEEA2: [!] Sets the field  (Type ) on local  to the value stored in 1
+
+		Jump Destination (0x1804FEEAA):
+		0x1804FEEAA: Compares {Unknown Global at 0x183298864, first ten bytes are [152 104 234 2 96 228 0 0 137 228], or as chars "hê`ä  ä"} and 0
+		0x1804FEEB1: Jumps to 0x1804FEEC6 if {Unknown Global at 0x183298864, first ten bytes are [152 104 234 2 96 228 0 0 137 228], or as chars "hê`ä  ä"} != 0
+
+		0x1804FEEB3: Loads the type definition for managed type WorldManager as a constant "WorldManager" in rcx
+		0x1804FEEBA: Initializes runtime metadata value WorldManager
+		0x1804FEEC6: Loads the type definition for managed type WorldManager as a constant "WorldManager" in rax
+		0x1804FEECD: Loads the pointer to the static fields for WorldManager and stores it in constant33 in register rcx
+		0x1804FEED4: [!] Reads the static field WorldManager WorldManager::<Instance>k__BackingField into new local Instance2
+		0x1804FEED8: [!] Compares {'Instance2' (type WorldManager)} and 0
+		0x1804FEEDB: Jumps to 0x1804FEFAF (which throws a NRE) if Instance2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEEE1: [!] Reads field players from {'Instance2' (type WorldManager)} and stores in a new local {'players2' (type System.Collections.Generic.List`1<BasePlayer>)}
+
+		0x1804FEEE8: [!] Compares {'players2' (type System.Collections.Generic.List`1<BasePlayer>)} and 0
+		0x1804FEEEB: Jumps to 0x1804FEFAF (which throws a NRE) if players2 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEEF1: [!] Compares  and 0
+		0x1804FEEF5: Jumps to 0x1804FEFBB if  is less than or equal to 0 ;  - This is probably a goto, jumping to 0x1804FEFBB which is after end of current block @ 0x1804FEF43 (started at 0x1804FEDFA)
+
+		0x1804FEEFB: [!] Reads field _items from {'players2' (type System.Collections.Generic.List`1<BasePlayer>)} and stores in a new local {'_items4' (type T[])}
+
+		0x1804FEEFF: [!] Compares {'_items4' (type T[])} and 0
+		0x1804FEF02: Jumps to 0x1804FEFAF (which throws a NRE) if _items4 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEF08: [!] Compares {Property System.Int32 System.Array::Length() on {'_items4' (type T[])}} and 0
+		0x1804FEF0C: Jumps to 0x1804FEFB5 (which throws a NRE) if {Property System.Int32 System.Array::Length() on {'_items4' (type T[])}} is less than or equal to 0. Implicitly present in managed code, so ignored here.
+		0x1804FEF12: [!] Reads a value from the array {'_items4' (type T[])} at index 0, into a new local {'local19' (type T)}
+
+		0x1804FEF16: Copies {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} from rbx into rcx
+		0x1804FEF19: Loads the global generic method reference for method T[] System.Collections.Generic.List`1::ToArray() on type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType> and stores the result in constant {'ToArray' (constant value of type Cpp2IL.Core.Analysis.ResultModels.GenericMethodReference)} in rdx
+		0x1804FEF20: [!] Reads field item from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'item2' (type MuttInventory.InventoryItem)}
+
+		0x1804FEF24: [!] Calls managed method T[] System.Collections.Generic.List`1::ToArray() on instance {'list' (type System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>)} and stores the result in {'inventoryWindowTypeArray' (type MuttInventory.InventoryWindowType[])} ;  - Method resolved from concrete implementations at this address, with the help of a constant value to identify which concrete implementation.
+
+		0x1804FEF29: [!] Compares {'local19' (type T)} and 0
+		0x1804FEF2C: Jumps to 0x1804FEFAF (which throws a NRE) if local19 equals 0. Implicitly present in managed code, so ignored here.
+		0x1804FEF35: Copies {'inventoryWindowTypeArray' (type MuttInventory.InventoryWindowType[])} from rax into r8
+		0x1804FEF38: Copies {'item2' (type MuttInventory.InventoryItem)} from rbp into rdx
+		0x1804FEF3B: Copies {'local19' (type T)} from rsi into rcx
+		0x1804FEF3E: [!] Calls managed method System.Void BasePlayer::RemoveItem(MuttInventory.InventoryItem,MuttInventory.InventoryWindowType[]) on instance {'local19' (type T)} with arguments [{'item2' (type MuttInventory.InventoryItem)}, {'inventoryWindowTypeArray' (type MuttInventory.InventoryWindowType[])}] ;  - This is an instance method, but the type of the 'this' parameter is mismatched. Expecting BasePlayer, actually T
+
+		0x1804FEF43: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1804FEF4A: [!] Sets the field item (Type MuttInventory.InventoryItem) on local {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} to the value stored in 0
+		0x1804FEF52: Jumps to 0x1804FEF91 if constant41 equals 0 ;  - This is probably a goto, jumping to 0x1804FEF91 which is after end of current block @ 0x1804FEF43 (started at 0x1804FEDFA)
+
+		0x1804FEF54: Loads the pointer to the field item on {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} into register r8
+		0x1804FEF5C: Loads string "¡
+m" into register rcx as constant {'constant44' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804FEF6A: Copies {'constant43' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x1804FEF80: Loads the class pointer from item into a constant constant45 in register rax
+		0x1804FEF83: Copies {'constant45' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x1804FEF8F: Jumps to 0x1804FEF80 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0 ;  - This is probably a goto, jumping to 0x1804FEF80 which is after end of current block @ 0x1804FEF43 (started at 0x1804FEDFA)
+
+		0x1804FEF93: Copies {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} from rdi into rcx
+		0x1804FEF96: Reads unknown value in stack, offset 56 (0x38) and stores the pointer in register rsi as new constant constant46
+		0x1804FEF9B: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbp as new constant constant47
+		0x1804FEFA0: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant48
+		0x1804FEFAA: [!] Calls managed method System.Void AntennaPopupBotAssignInventorySlot::SetupWithItem() on instance {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)}
+
+		0x1804FEFAA: [!] Returns from the function
+
+		0x1804FEFAF: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+		0x1804FEFBB: Clears register rcx, yielding zero-local {'local25' (type System.Int32)}
+		0x1804FEFBD: [!] Calls static managed method System.Void System.ThrowHelper::ThrowArgumentOutOfRange_IndexException()
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: AntennaPopupBotAssignInventorySlot
+	System.Void RemoveItem()
+		System.Collections.Generic.List`1<MuttInventory.InventoryWindowType> list = new System.Collections.Generic.List`1<MuttInventory.InventoryWindowType>()
+
+		list..ctor()
+		WorldManager Instance = WorldManager.<Instance>k__BackingField
+		System.Collections.Generic.List`1<BasePlayer> players = Instance.players
+
+		if ( > 0)
+		    T[] _items = players._items
+		    T local5 = _items[0]
+		    MuttInventory.InventoryItem item = this.item
+
+		    System.Boolean boolean = local5.RemoveItemFromExtaInventory(item) //(InventoryItem item)
+
+		    if (boolean == False)
+		        T[] _items2 = list._items
+		        System.Int32 _size = list._size
+		        ulong local11 = 0
+		          = boolean.
+		        throw new System.NullReferenceException()
+		        list._size = local12
+		        local11. = 0
+		        T[] _items3 = list._items
+		        System.Int32 _size2 = list._size
+		          = local12.
+		        throw new System.NullReferenceException()
+		        list._size = local15
+		        . = 1
+		        WorldManager Instance2 = WorldManager.<Instance>k__BackingField
+		        System.Collections.Generic.List`1<BasePlayer> players2 = Instance2.players
+
+		        if ( <= 0)
+                    goto INSN_1804FEFBB
+                endif
+		        T[] _items4 = players2._items
+		        T local19 = _items4[0]
+		        MuttInventory.InventoryItem item2 = this.item
+
+		        MuttInventory.InventoryWindowType[] inventoryWindowTypeArray = list.ToArray()
+
+		        local19.RemoveItem(item2, inventoryWindowTypeArray) //(InventoryItem item, InventoryWindowType[] windowTypes)
+		    endif
+            
+		    this.item = 0
+
+		    this.SetupWithItem()
+		    return
+		    throw new System.NullReferenceException()
+		endif
+        
+		ulong local25 = 0
+
+		System.ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+
+
+Generated IL:
+	IL Generation Skipped due to invalid local _items of type T[]
+	
+
+Method: System.Void AntennaPopupBotAssignInventorySlot::OnClickMe():	Method Body (x86 ASM):
+		0x1804FEFD0 cmp qword ptr [rcx+60h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RCX | 96 | None ||| N/A | 0
+		0x1804FEFD5 je short 00000001804FEFEAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804FEFD7 mov rax,[rcx+60h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 96 | None ||| N/A | N/A
+		0x1804FEFDB mov rdx,rcx		; DEBUG: {Register}/RDX {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804FEFDE mov r8,[rax+28h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 40 | None ||| N/A | N/A
+		0x1804FEFE2 mov rcx,[rax+40h]		; DEBUG: {Register}/RCX {Memory}/None ||| RAX | 64 | None ||| N/A | N/A
+		0x1804FEFE6 jmp qword ptr [rax+18h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 24 | None ||| N/A | N/A
+		0x1804FEFEA ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804FEFEB int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void AntennaPopupBotAssignInventorySlot::OnClickMe():
+		End of function at 0x1804FEFEC
+		Absolute End is at 0x1804FEFEC
+		Identified Jump Destination addresses:
+
+		0x1804FEFD0: [!] Compares {field onClickMe, read from local {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)}} and 0
+		0x1804FEFD5: Jumps to 0x1804FEFEA (which is an if statement's body) if this.onClickMe equals 0 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1804FEFD7: [!] Reads field onClickMe from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'onClickMe' (type System.Action`1<AntennaPopupBotAssignInventorySlot>)}
+
+		0x1804FEFDB: Copies {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} from rcx into rdx
+		0x1804FEFDE: [!] Reads field  from {'onClickMe' (type System.Action`1<AntennaPopupBotAssignInventorySlot>)} and stores in a new local 
+
+		0x1804FEFE2: [!] Reads field  from {'onClickMe' (type System.Action`1<AntennaPopupBotAssignInventorySlot>)} and stores in a new local 
+
+		0x1804FEFE6: [!] Calls managed method UnityEngine.Rendering.Universal.ScriptableRenderer UnityEngine.Rendering.Universal.ScriptableRendererData::Create() on instance {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores the result in {'scriptableRenderer' (type UnityEngine.Rendering.Universal.ScriptableRenderer)} ;  - Leftover parameters detected, but first few match.
+
+		0x1804FEFE6: [!] Returns from the function
+
+		0x1804FEFEA: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: AntennaPopupBotAssignInventorySlot
+	System.Void OnClickMe()
+
+		if (this.onClickMe != 0)
+		    System.Action`1<AntennaPopupBotAssignInventorySlot> onClickMe = this.onClickMe
+		      = onClickMe.
+		      = onClickMe.
+
+		    UnityEngine.Rendering.Universal.ScriptableRenderer scriptableRenderer = base.Create()
+		    return
+		endif
+        
+		return
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.FieldToLocalAction at (0x1804FEFDE) is corrupt (No further info) and cannot be created as IL. Aborting here.
+
+
+Method: MuttInventory.InventoryItem AntennaPopupBotAssignInventorySlot::get_InventoryItem():	Method Body (x86 ASM):
+		0x1803C7490 mov rax,[rcx+50h]		; DEBUG: {Register}/RAX {Memory}/None ||| RCX | 80 | None ||| N/A | N/A
+		0x1803C7494 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803C7495 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method MuttInventory.InventoryItem AntennaPopupBotAssignInventorySlot::get_InventoryItem():
+		End of function at 0x1803C7496
+		Absolute End is at 0x1803C7496
+		Identified Jump Destination addresses:
+
+		0x1803C7490: [!] Reads field item from {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} and stores in a new local {'item' (type MuttInventory.InventoryItem)}
+
+		0x1803C7494: [!] Returns {'item' (type MuttInventory.InventoryItem)} from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: AntennaPopupBotAssignInventorySlot
+	MuttInventory.InventoryItem get_InventoryItem()
+		MuttInventory.InventoryItem item = this.item
+		return item
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld MuttInventory.InventoryItem AntennaPopupBotAssignInventorySlot::item
+	IL_0006: ret
+	
+
+Method: System.Void AntennaPopupBotAssignInventorySlot::set_InventoryItem(MuttInventory.InventoryItem):	Method Body (x86 ASM):
+		0x1803C74A0 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1803C74A7 mov [rcx+50h],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| RCX | 80 | None ||| N/A | N/A
+		0x1803C74AB je short 00000001803C74F1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803C74AD lea r8,[rcx+50h]		; DEBUG: {Register}/R8 {Memory}/None ||| RCX | 80 | None ||| N/A | N/A
+		0x1803C74B1 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1803C74B5 lea rcx,[1832F4840h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x1803C74BC and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1803C74C3 mov eax,r8d		; DEBUG: {Register}/EAX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1803C74C6 shr rax,6		; DEBUG: {Register}/RAX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1803C74CA and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1803C74CE lea rdx,[rcx+rax*8]		; DEBUG: {Register}/RDX {Memory}/None ||| RCX | 0 | RAX ||| N/A | N/A
+		0x1803C74D2 prefetchw [rdx]		; DEBUG: {Memory}/None {Register}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1803C74D5 nop word ptr [rax+rax]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 0 | RAX ||| N/A | N/A
+		0x1803C74E0 mov rax,[rdx]		; DEBUG: {Register}/RAX {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1803C74E3 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1803C74E6 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1803C74EA lock cmpxchg [rdx],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RDX | 0 | None ||| N/A | N/A
+		0x1803C74EF jne short 00000001803C74E0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1803C74F1 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1803C74F2 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void AntennaPopupBotAssignInventorySlot::set_InventoryItem(MuttInventory.InventoryItem):
+		End of function at 0x1803C74F3
+		Absolute End is at 0x1803C74F3
+		Identified Jump Destination addresses:
+
+		0x1803C74A0: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1803C74A7: [!] Sets the field item (Type MuttInventory.InventoryItem) on local {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} to the value stored in {'value' (function parameter, type MuttInventory.InventoryItem)}
+		0x1803C74AB: Jumps to 0x1803C74F1 if constant1 equals 0
+
+		0x1803C74AD: Loads the pointer to the field item on {'this' (function parameter, type AntennaPopupBotAssignInventorySlot)} into register r8
+		0x1803C74B5: Loads string "¡
+m" into register rcx as constant {'constant4' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1803C74C3: Copies {'constant3' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rax
+		0x1803C74E0: Loads the class pointer from value into a constant constant5 in register rax
+		0x1803C74E3: Copies {'constant5' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)} from rax into rcx
+		0x1803C74EF: Jumps to 0x1803C74E0 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x1803C74F1: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: AntennaPopupBotAssignInventorySlot
+	System.Void set_InventoryItem(MuttInventory.InventoryItem value)
+		this.item = value
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldarg.1
+	IL_0002: stfld MuttInventory.InventoryItem AntennaPopupBotAssignInventorySlot::item
+	IL_0007: ret
+	
+
+Method: System.Void AntennaPopupBotAssignInventorySlot::.ctor():	Method Body (x86 ASM):
+		0x18037A630 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A634 cmp byte ptr [1832A9D68h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 0
+		0x18037A63B jne short 000000018037A650h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A63D lea rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A644 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A649 mov byte ptr [1832A9D68h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495575400 | None ||| N/A | 1
+		0x18037A650 mov rcx,[1830F69D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493792728 | None ||| N/A | N/A
+		0x18037A657 cmp dword ptr [rcx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RCX | 224 | None ||| N/A | 0
+		0x18037A65E jne short 000000018037A669h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A660 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A664 jmp near ptr 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18037A669 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x18037A66D ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18037A66E int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void AntennaPopupBotAssignInventorySlot::.ctor():
+		End of function at 0x18037A66F
+		Absolute End is at 0x18037A66F
+		Identified Jump Destination addresses:
+
+		0x18037A634: Compares {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} and 0
+		0x18037A63B: Jumps to 0x18037A650 if {Unknown Global at 0x1832A9D68, first ten bytes are [210 135 14 0 84 13 245 2 224 135], or as chars "Ò Tõà"} != 0
+
+		0x18037A63D: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A644: Initializes runtime metadata value UnityEngine.Object
+		0x18037A650: Loads the type definition for managed type UnityEngine.Object as a constant "Object" in rcx
+		0x18037A657: Compares "{il2cpp field UnityEngine.Object->cctor_finished}" and 0
+		0x18037A65E: Jumps to 0x18037A669 if "{il2cpp field UnityEngine.Object->cctor_finished}" != 0
+
+		0x18037A66D: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: AntennaPopupBotAssignInventorySlot
+	System.Void .ctor()
+		return
+
+
+Generated IL:
+	IL_0000: ret
+	
+

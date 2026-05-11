@@ -1,0 +1,100 @@
+Type: System.Threading.RegisteredWaitHandle:
+	Base Class: 
+		System.MarshalByRefObject
+
+	Interfaces:
+
+	Field: _waitObject
+		Type: System.Threading.WaitHandle
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Field: _callback
+		Type: System.Threading.WaitOrTimerCallback
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Field: _state
+		Type: System.Object
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Field: _finalEvent
+		Type: System.Threading.WaitHandle
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Field: _cancelEvent
+		Type: System.Threading.ManualResetEvent
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Field: _timeout
+		Type: System.TimeSpan
+		Offset in Defining Type: 0x40
+		Has Default: False
+
+	Field: _callsInProcess
+		Type: System.Int32
+		Offset in Defining Type: 0x48
+		Has Default: False
+
+	Field: _executeOnlyOnce
+		Type: System.Boolean
+		Offset in Defining Type: 0x4C
+		Has Default: False
+
+	Field: _unregistered
+		Type: System.Boolean
+		Offset in Defining Type: 0x4D
+		Has Default: False
+
+	Method: .ctor:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x01929DE0
+		Ram Offset 0x18192afe0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: waitObject
+			Type: System.Threading.WaitHandle
+			Default Value: 
+		Parameter 1:
+			Name: callback
+			Type: System.Threading.WaitOrTimerCallback
+			Default Value: 
+		Parameter 2:
+			Name: state
+			Type: System.Object
+			Default Value: 
+		Parameter 3:
+			Name: timeout
+			Type: System.TimeSpan
+			Default Value: 
+		Parameter 4:
+			Name: executeOnlyOnce
+			Type: System.Boolean
+			Default Value: 
+	Method: Wait:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x0192A010
+		Ram Offset 0x18192b210
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: state
+			Type: System.Object
+			Default Value: 
+	Method: DoCallBack:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x0192A790
+		Ram Offset 0x18192b990
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: timedOut
+			Type: System.Object
+			Default Value: 

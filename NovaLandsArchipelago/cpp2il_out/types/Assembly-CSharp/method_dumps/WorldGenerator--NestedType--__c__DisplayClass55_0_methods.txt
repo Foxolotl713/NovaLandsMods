@@ -1,0 +1,88 @@
+Type: <>c__DisplayClass55_0
+
+Method: System.Void WorldGenerator/<>c__DisplayClass55_0::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void WorldGenerator/<>c__DisplayClass55_0::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: WorldGenerator/<>c__DisplayClass55_0
+	System.Void .ctor()
+
+
+Generated IL:
+	
+
+Method: System.Boolean WorldGenerator/<>c__DisplayClass55_0::<PopulateBiomesAsync>b__1(PremadeAreaCoordinate):	Method Body (x86 ASM):
+		0x180801060 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180801064 test rdx,rdx		; DEBUG: {Register}/RDX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x180801067 je short 0000000180801086h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180801069 mov eax,[rcx+10h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x18080106C cmp [rdx+10h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 16 | None ||| N/A | N/A
+		0x18080106F je short 0000000180801078h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x180801071 xor al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x180801073 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180801077 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180801078 mov eax,[rcx+14h]		; DEBUG: {Register}/EAX {Memory}/None ||| RCX | 20 | None ||| N/A | N/A
+		0x18080107B cmp [rdx+14h],eax		; DEBUG: {Memory}/None {Register}/EAX ||| RDX | 20 | None ||| N/A | N/A
+		0x18080107E sete al		; DEBUG: {Register}/AL {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180801081 add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x180801085 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180801086 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18080108B int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean WorldGenerator/<>c__DisplayClass55_0::<PopulateBiomesAsync>b__1(PremadeAreaCoordinate):
+		End of function at 0x18080108C
+		Absolute End is at 0x18080108C
+		Identified Jump Destination addresses:
+
+		0x180801064: [!] Compares {'x' (function parameter, type PremadeAreaCoordinate)} and 0
+		0x180801067: Jumps to 0x180801086 (which throws a NRE) if x equals 0. Implicitly present in managed code, so ignored here.
+		0x180801069: [!] Reads field layer from {'this' (function parameter, type WorldGenerator/<>c__DisplayClass55_0)} and stores in a new local {'layer' (type System.Int32)}
+
+		0x18080106C: [!] Compares {field layer, read from local {'x' (function parameter, type PremadeAreaCoordinate)}} and {'layer' (type System.Int32)}
+		0x18080106F: Jumps to 0x180801078 (which is an if statement's body) if x.layer equals layer ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x180801071: Clears register rax, yielding zero-local {'local3' (type System.Int32)}
+		0x180801077: [!] Returns {'local3' (type System.Int32)} from the function
+
+		0x180801078: [!] Reads field currentAreaIndex from {'this' (function parameter, type WorldGenerator/<>c__DisplayClass55_0)} and stores in a new local {'currentAreaIndex' (type System.Int32)}
+
+		0x18080107B: [!] Compares {field index, read from local {'x' (function parameter, type PremadeAreaCoordinate)}} and {'currentAreaIndex' (type System.Int32)}
+		0x18080107E: [!] Sets the boolean {'local5' (type System.Boolean)} in rax to true if x.index is equal to currentAreaIndex, otherwise false.
+		0x180801085: [!] Returns {'local5' (type System.Boolean)} from the function
+
+		0x180801086: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: WorldGenerator/<>c__DisplayClass55_0
+	System.Boolean <PopulateBiomesAsync>b__1(PremadeAreaCoordinate x)
+		System.Int32 layer = this.layer
+
+		if (x.layer != layer)
+		    ulong local3 = 0
+		    return local3
+		endif
+        
+		System.Int32 currentAreaIndex = this.currentAreaIndex
+		System.Boolean local5 = x.index == currentAreaIndex
+		return local5
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.ReturnFromFunctionAction at (0x180801077) is corrupt (Return value has a type of System.Int32, expecting an object of type System.Boolean) and cannot be created as IL. Aborting here.
+
+

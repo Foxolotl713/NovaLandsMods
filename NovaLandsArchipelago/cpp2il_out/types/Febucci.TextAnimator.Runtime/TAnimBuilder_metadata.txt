@@ -1,0 +1,258 @@
+Type: Febucci.UI.Core.TAnimBuilder:
+	Base Class: 
+		System.Object
+
+	Interfaces:
+
+	Nested Types:
+		Febucci.UI.Core.TAnimBuilder/TagFormatting
+		Febucci.UI.Core.TAnimBuilder/<>c
+
+	Static Field: tag_behaviors
+		Type: Febucci.UI.Core.TAnimBuilder/TagFormatting
+		Offset in Defining Type: 0x0
+		Has Default: False
+
+	Static Field: tag_appearances
+		Type: Febucci.UI.Core.TAnimBuilder/TagFormatting
+		Offset in Defining Type: 0x4
+		Has Default: False
+
+	Static Field: _data
+		Type: Febucci.UI.Core.TAnimGlobalDataScriptable
+		Offset in Defining Type: 0x8
+		Has Default: False
+
+	Static Field: hasData
+		Type: System.Boolean
+		Offset in Defining Type: 0x10
+		Has Default: False
+
+	Static Field: behaviorsData
+		Type: System.Collections.Generic.Dictionary`2<System.String,System.Type>
+		Offset in Defining Type: 0x18
+		Has Default: False
+
+	Static Field: appearancesData
+		Type: System.Collections.Generic.Dictionary`2<System.String,System.Type>
+		Offset in Defining Type: 0x20
+		Has Default: False
+
+	Static Field: globalDefaultActions
+		Type: System.Collections.Generic.HashSet`1<System.String>
+		Offset in Defining Type: 0x28
+		Has Default: False
+
+	Static Field: globalCustomActions
+		Type: System.Collections.Generic.HashSet`1<System.String>
+		Offset in Defining Type: 0x30
+		Has Default: False
+
+	Static Field: globalDatabaseInitialized
+		Type: System.Boolean
+		Offset in Defining Type: 0x38
+		Has Default: False
+
+	Method: get_data:
+		Accessibility: Assembly
+		Return Type: Febucci.UI.Core.TAnimGlobalDataScriptable
+		File Offset 0x00C61240
+		Ram Offset 0x180c62440
+		Virtual Method Slot: 65535
+
+	Method: GetAllBehaviorsTags:
+		Accessibility: Public
+		Return Type: System.String[]
+		File Offset 0x00C61290
+		Ram Offset 0x180c62490
+		Virtual Method Slot: 65535
+
+	Method: GetAllApppearancesTags:
+		Accessibility: Public
+		Return Type: System.String[]
+		File Offset 0x00C61440
+		Ram Offset 0x180c62640
+		Virtual Method Slot: 65535
+
+	Method: InitializeGlobalDatabase:
+		Accessibility: Public
+		Return Type: System.Void
+		File Offset 0x00C615F0
+		Ram Offset 0x180c627f0
+		Virtual Method Slot: 65535
+
+	Method: TryGetGlobalPresetBehavior:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C62240
+		Ram Offset 0x180c63440
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tag
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: Febucci.UI.Core.PresetBehaviorValues
+			Default Value: 
+	Method: TryGetGlobalPresetAppearance:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C623F0
+		Ram Offset 0x180c635f0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tag
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: result
+			Type: Febucci.UI.Core.PresetAppearanceValues
+			Default Value: 
+	Method: GetPresetFromArray:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00DA5910
+		Ram Offset 0x180da6b10
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tag
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: presets
+			Type: T[]
+			Default Value: 
+		Parameter 2:
+			Name: result
+			Type: T
+			Default Value: 
+	Method: IsDefaultAction:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C625A0
+		Ram Offset 0x180c637a0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tag
+			Type: System.String
+			Default Value: 
+	Method: IsCustomAction:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C62660
+		Ram Offset 0x180c63860
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: tag
+			Type: System.String
+			Default Value: 
+	Method: TryGetGlobalBehaviorFromTag:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C62720
+		Ram Offset 0x180c63920
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: effectTag
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: entireRichTextTag
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: effectClass
+			Type: Febucci.UI.Core.BehaviorBase
+			Default Value: 
+	Method: TryGetGlobalAppearanceFromTag:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00C627C0
+		Ram Offset 0x180c639c0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: effectTag
+			Type: System.String
+			Default Value: 
+		Parameter 1:
+			Name: entireRichTextTag
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: effectClass
+			Type: Febucci.UI.Core.AppearanceBase
+			Default Value: 
+	Method: TryGetEffectClassFromTag:
+		Accessibility: Assembly
+		Return Type: System.Boolean
+		File Offset 0x00DA59F0
+		Ram Offset 0x180da6bf0
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: dictionary
+			Type: System.Collections.Generic.Dictionary`2<System.String, System.Type>
+			Default Value: 
+		Parameter 1:
+			Name: effectTag
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: entireRichTextTag
+			Type: System.String
+			Default Value: 
+		Parameter 3:
+			Name: effectClass
+			Type: T
+			Default Value: 
+	Method: TryAddingPresetToDictionary:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00C62860
+		Ram Offset 0x180c63a60
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: database
+			Type: System.Collections.Generic.Dictionary`2<System.String, System.Type>
+			Default Value: 
+		Parameter 1:
+			Name: tag
+			Type: System.String
+			Default Value: 
+		Parameter 2:
+			Name: type
+			Type: System.Type
+			Default Value: 
+	Method: .cctor:
+		Accessibility: Private
+		Return Type: System.Void
+		File Offset 0x00C62A00
+		Ram Offset 0x180c63c00
+		Virtual Method Slot: 65535
+
+	Method: <InitializeGlobalDatabase>g__PopulateEffectsFromAssembly|14_0:
+		Accessibility: Assembly
+		Return Type: System.Void
+		File Offset 0x00DA5550
+		Ram Offset 0x180da6750
+		Virtual Method Slot: 65535
+
+		Parameter 0:
+			Name: effectsList
+			Type: System.Collections.Generic.Dictionary`2<System.String, System.Type>
+			Default Value: 
+	Method: <InitializeGlobalDatabase>g__GetAssemblyClasses|14_1:
+		Accessibility: Assembly
+		Return Type: System.Collections.Generic.List`1<System.Type>
+		File Offset 0x00DA5260
+		Ram Offset 0x180da6460
+		Virtual Method Slot: 65535

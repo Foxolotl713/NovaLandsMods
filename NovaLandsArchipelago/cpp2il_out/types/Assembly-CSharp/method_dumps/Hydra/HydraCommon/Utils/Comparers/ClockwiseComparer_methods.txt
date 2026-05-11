@@ -1,0 +1,366 @@
+Type: ClockwiseComparer
+
+Method: UnityEngine.Vector2 Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer::get_origin():	Method Body (x86 ASM):
+		0x180917500 movss xmm0,dword ptr [rcx+14h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RCX | 20 | None ||| N/A | N/A
+		0x180917505 movss xmm1,dword ptr [rcx+10h]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x18091750A unpcklps xmm1,xmm0		; DEBUG: {Register}/XMM1 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18091750D movq rax,xmm1		; DEBUG: {Register}/RAX {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x180917512 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x180917513 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method UnityEngine.Vector2 Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer::get_origin():
+		End of function at 0x180917514
+		Absolute End is at 0x180917514
+		Identified Jump Destination addresses:
+
+		0x180917512: [!] Returns  from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer
+	UnityEngine.Vector2 get_origin()
+		return 
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.ReturnFromFunctionAction at (0x180917512) is corrupt (Return value is missing) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer::set_origin(UnityEngine.Vector2):	Method Body (x86 ASM):
+		0x18095C090 mov [rcx+10h],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| RCX | 16 | None ||| N/A | N/A
+		0x18095C094 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18095C095 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer::set_origin(UnityEngine.Vector2):
+		End of function at 0x18095C096
+		Absolute End is at 0x18095C096
+		Identified Jump Destination addresses:
+
+		0x18095C090: [!] Sets the field m_Origin (Type UnityEngine.Vector2) on local {'this' (function parameter, type Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer)} to the value stored in {'value' (function parameter, type UnityEngine.Vector2)}
+		0x18095C094: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer
+	System.Void set_origin(UnityEngine.Vector2 value)
+		this.m_Origin = value
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldarg.1
+	IL_0002: stfld UnityEngine.Vector2 Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer::m_Origin
+	IL_0007: ret
+	
+
+Method: System.Void Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer::.ctor(UnityEngine.Vector2):	Method Body (x86 ASM):
+		0x18095C090 mov [rcx+10h],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| RCX | 16 | None ||| N/A | N/A
+		0x18095C094 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18095C095 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer::.ctor(UnityEngine.Vector2):
+		End of function at 0x18095C096
+		Absolute End is at 0x18095C096
+		Identified Jump Destination addresses:
+
+		0x18095C090: [!] Sets the field m_Origin (Type UnityEngine.Vector2) on local {'this' (function parameter, type Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer)} to the value stored in {'origin' (function parameter, type UnityEngine.Vector2)}
+		0x18095C094: [!] Returns from the function
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer
+	System.Void .ctor(UnityEngine.Vector2 origin)
+		this.m_Origin = origin
+		return
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldarg.1
+	IL_0002: stfld UnityEngine.Vector2 Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer::m_Origin
+	IL_0007: ret
+	
+
+Method: System.Int32 Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer::Compare(UnityEngine.Vector2,UnityEngine.Vector2):	Method Body (x86 ASM):
+		0x18095C0A0 sub rsp,88h		; DEBUG: {Register}/RSP {Immediate32to64}/None ||| None | 0 | None ||| N/A | 136
+		0x18095C0A7 movss xmm2,dword ptr [rcx+10h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x18095C0AC movss xmm3,dword ptr [rcx+14h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RCX | 20 | None ||| N/A | N/A
+		0x18095C0B1 movaps [rsp+70h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 112 | None ||| N/A | N/A
+		0x18095C0B6 movaps [rsp+60h],xmm7		; DEBUG: {Memory}/None {Register}/XMM7 ||| RSP | 96 | None ||| N/A | N/A
+		0x18095C0BB mov [rsp+90h],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| RSP | 144 | None ||| N/A | N/A
+		0x18095C0C3 movss xmm6,dword ptr [rsp+94h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 148 | None ||| N/A | N/A
+		0x18095C0CC movaps [rsp+50h],xmm8		; DEBUG: {Memory}/None {Register}/XMM8 ||| RSP | 80 | None ||| N/A | N/A
+		0x18095C0D2 movaps xmm1,xmm6		; DEBUG: {Register}/XMM1 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x18095C0D5 movss xmm8,dword ptr [rsp+90h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RSP | 144 | None ||| N/A | N/A
+		0x18095C0DF mov [rsp+20h],r8		; DEBUG: {Memory}/None {Register}/R8 ||| RSP | 32 | None ||| N/A | N/A
+		0x18095C0E4 movaps xmm0,xmm8		; DEBUG: {Register}/XMM0 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x18095C0E8 movss xmm7,dword ptr [rsp+24h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RSP | 36 | None ||| N/A | N/A
+		0x18095C0EE movaps [rsp+40h],xmm9		; DEBUG: {Memory}/None {Register}/XMM9 ||| RSP | 64 | None ||| N/A | N/A
+		0x18095C0F4 subss xmm1,xmm7		; DEBUG: {Register}/XMM1 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x18095C0F8 movss xmm9,dword ptr [rsp+20h]		; DEBUG: {Register}/XMM9 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x18095C0FF subss xmm0,xmm9		; DEBUG: {Register}/XMM0 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x18095C104 mulss xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18095C108 mulss xmm1,xmm1		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x18095C10C addss xmm1,xmm0		; DEBUG: {Register}/XMM1 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18095C110 movss xmm0,dword ptr [182E6E338h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491136824 | None ||| N/A | N/A
+		0x18095C118 comiss xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x18095C11B ja near ptr 000000018095C1B8h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C121 movaps [rsp+30h],xmm10		; DEBUG: {Memory}/None {Register}/XMM10 ||| RSP | 48 | None ||| N/A | N/A
+		0x18095C127 subss xmm8,xmm2		; DEBUG: {Register}/XMM8 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x18095C12C subss xmm6,xmm3		; DEBUG: {Register}/XMM6 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x18095C130 subss xmm9,xmm2		; DEBUG: {Register}/XMM9 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x18095C135 subss xmm7,xmm3		; DEBUG: {Register}/XMM7 {Register}/XMM3 ||| None | 0 | None ||| N/A | N/A
+		0x18095C139 movaps xmm1,xmm6		; DEBUG: {Register}/XMM1 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x18095C13C movaps xmm0,xmm8		; DEBUG: {Register}/XMM0 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x18095C140 call 000000018036E8CCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C145 movaps xmm10,xmm0		; DEBUG: {Register}/XMM10 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18095C149 movaps xmm1,xmm7		; DEBUG: {Register}/XMM1 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x18095C14C movaps xmm0,xmm9		; DEBUG: {Register}/XMM0 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x18095C150 call 000000018036E8CCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C155 comiss xmm0,xmm10		; DEBUG: {Register}/XMM0 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x18095C159 ja short 000000018095C1B1h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C15B comiss xmm10,xmm0		; DEBUG: {Register}/XMM10 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18095C15F mov eax,1		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 1
+		0x18095C164 ja short 000000018095C18Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C166 mulss xmm6,xmm6		; DEBUG: {Register}/XMM6 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x18095C16A mov ecx,0FFFFFFFFh		; DEBUG: {Register}/ECX {Immediate32}/None ||| None | 0 | None ||| N/A | 4294967295
+		0x18095C16F mulss xmm8,xmm8		; DEBUG: {Register}/XMM8 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x18095C174 mulss xmm7,xmm7		; DEBUG: {Register}/XMM7 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x18095C178 mulss xmm9,xmm9		; DEBUG: {Register}/XMM9 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x18095C17D addss xmm6,xmm8		; DEBUG: {Register}/XMM6 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x18095C182 addss xmm7,xmm9		; DEBUG: {Register}/XMM7 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x18095C187 comiss xmm7,xmm6		; DEBUG: {Register}/XMM7 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x18095C18A cmova eax,ecx		; DEBUG: {Register}/EAX {Register}/ECX ||| None | 0 | None ||| N/A | N/A
+		0x18095C18D movaps xmm10,[rsp+30h]		; DEBUG: {Register}/XMM10 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x18095C193 movaps xmm6,[rsp+70h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x18095C198 movaps xmm7,[rsp+60h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x18095C19D movaps xmm8,[rsp+50h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x18095C1A3 movaps xmm9,[rsp+40h]		; DEBUG: {Register}/XMM9 {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x18095C1A9 add rsp,88h		; DEBUG: {Register}/RSP {Immediate32to64}/None ||| None | 0 | None ||| N/A | 136
+		0x18095C1B0 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18095C1B1 mov eax,0FFFFFFFFh		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 4294967295
+		0x18095C1B6 jmp short 000000018095C18Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C1B8 xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18095C1BA jmp short 000000018095C193h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C1BC int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Int32 Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer::Compare(UnityEngine.Vector2,UnityEngine.Vector2):
+		End of function at 0x18095C1BD
+		Absolute End is at 0x18095C1BD
+		Identified Jump Destination addresses:
+
+		0x18095C0BB: Moves first (type UnityEngine.Vector2) from register rdx to the stack at offset 144 (0x90)
+		0x18095C0C3: Reads unknown value in stack, offset 148 (0x94) and stores the pointer in register xmm6 as new constant constant1
+		0x18095C0D2: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm6 into xmm1
+		0x18095C0D5: Reads local {'first' (function parameter, type UnityEngine.Vector2)} from stack offset 144 (0x90) into register xmm8
+		0x18095C0DF: Moves second (type UnityEngine.Vector2) from register r8 to the stack at offset 32 (0x20)
+		0x18095C0E4: Copies {'first' (function parameter, type UnityEngine.Vector2)} from xmm8 into xmm0
+		0x18095C0E8: Reads unknown value in stack, offset 36 (0x24) and stores the pointer in register xmm7 as new constant constant2
+		0x18095C0F8: Reads local {'second' (function parameter, type UnityEngine.Vector2)} from stack offset 32 (0x20) into register xmm9
+		0x18095C110: Reads {Unknown Global at 0x182E6E338, first ten bytes are [254 230 219 46 255 230 219 46 0 0], or as chars "þæÛ.ÿæÛ.  "} into register xmm0 as a constant constant3
+		0x18095C118: Compares {Unknown Global at 0x182E6E338, first ten bytes are [254 230 219 46 255 230 219 46 0 0], or as chars "þæÛ.ÿæÛ.  "} and {'constant1' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}
+		0x18095C11B: Jumps to 0x18095C1B8 if {Unknown Global at 0x182E6E338, first ten bytes are [254 230 219 46 255 230 219 46 0 0], or as chars "þæÛ.ÿæÛ.  "} is greater than {'constant1' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}
+
+		0x18095C139: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm6 into xmm1
+		0x18095C13C: Copies {'first' (function parameter, type UnityEngine.Vector2)} from xmm8 into xmm0
+		0x18095C145: Copies {'first' (function parameter, type UnityEngine.Vector2)} from xmm0 into xmm10
+		0x18095C149: Copies {'constant2' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm7 into xmm1
+		0x18095C14C: Copies {'second' (function parameter, type UnityEngine.Vector2)} from xmm9 into xmm0
+		0x18095C155: [!] Compares {'second' (function parameter, type UnityEngine.Vector2)} and {'first' (function parameter, type UnityEngine.Vector2)}
+		0x18095C159: Jumps to 0x18095C1B1 (which is an if statement's body) if {'second' (function parameter, type UnityEngine.Vector2)} is greater than {'first' (function parameter, type UnityEngine.Vector2)} ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18095C15B: [!] Compares {'first' (function parameter, type UnityEngine.Vector2)} and {'second' (function parameter, type UnityEngine.Vector2)}
+		0x18095C15F: [!] Writes the constant 0x1 into operand 1 (type UInt64) in register rax
+		0x18095C164: Jumps to 0x18095C18D (which is an if statement's body) if {'first' (function parameter, type UnityEngine.Vector2)} is greater than {'second' (function parameter, type UnityEngine.Vector2)} ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18095C16A: [!] Writes the constant 0xFFFFFFFF into operand 0xFFFFFFFF (type UInt64) in register rcx
+		0x18095C187: [!] Compares {'constant2' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and {'constant1' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}
+		0x18095C18A: [!] Copies 0xFFFFFFFF from rcx into rax based on previous comparison
+
+		Potential Loop Start (0x18095C18D):
+		0x18095C18D: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register xmm10 as new constant constant6
+
+		Potential Loop Start (0x18095C193):
+		0x18095C193: Reads unknown value in stack, offset 112 (0x70) and stores the pointer in register xmm6 as new constant constant7
+		0x18095C198: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register xmm7 as new constant constant8
+		0x18095C19D: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register xmm8 as new constant constant9
+		0x18095C1A3: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register xmm9 as new constant constant10
+		0x18095C1B0: [!] Returns 1 from the function
+
+		0x18095C1B1: [!] Writes the constant 0xFFFFFFFF into operand 0xFFFFFFFF (type UInt64) in register rax
+		0x18095C1B6: Jumps to 0x18095C18D - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x18095C1BA: Jumps to 0x18095C193 - which is still in this function, but further up. Probably indicative that this is a loop.
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer
+	System.Int32 Compare(UnityEngine.Vector2 first, UnityEngine.Vector2 second)
+
+		if (second <= first)
+
+		    if (first <= second)
+		    endif
+            
+		    return 1
+		endif
+        
+
+
+Generated IL:
+	IL_0000: ldarg.2
+	IL_0001: ldarg.1
+	IL_0002: bgt.s IL_0000
+	IL_0004: ldarg.1
+	IL_0005: ldarg.2
+	IL_0006: bgt.s IL_0008
+	IL_0008: ldc.i4.1
+	IL_0009: ret
+	
+
+Method: System.Int32 Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer::IsClockwise(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2):	Method Body (x86 ASM):
+		0x18095C1C0 mov rax,rsp		; DEBUG: {Register}/RAX {Register}/RSP ||| None | 0 | None ||| N/A | N/A
+		0x18095C1C3 sub rsp,98h		; DEBUG: {Register}/RSP {Immediate32to64}/None ||| None | 0 | None ||| N/A | 152
+		0x18095C1CA movaps [rax-18h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RAX | 18446744073709551592 | None ||| N/A | N/A
+		0x18095C1CE movaps [rax-28h],xmm7		; DEBUG: {Memory}/None {Register}/XMM7 ||| RAX | 18446744073709551576 | None ||| N/A | N/A
+		0x18095C1D2 mov [rsp+20h],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| RSP | 32 | None ||| N/A | N/A
+		0x18095C1D7 movss xmm6,dword ptr [rsp+24h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 36 | None ||| N/A | N/A
+		0x18095C1DD movaps [rax-38h],xmm8		; DEBUG: {Memory}/None {Register}/XMM8 ||| RAX | 18446744073709551560 | None ||| N/A | N/A
+		0x18095C1E2 movaps xmm1,xmm6		; DEBUG: {Register}/XMM1 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x18095C1E5 movss xmm8,dword ptr [rsp+20h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RSP | 32 | None ||| N/A | N/A
+		0x18095C1EC mov [rsp+28h],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| RSP | 40 | None ||| N/A | N/A
+		0x18095C1F1 movaps xmm0,xmm8		; DEBUG: {Register}/XMM0 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x18095C1F5 movss xmm7,dword ptr [rsp+2Ch]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RSP | 44 | None ||| N/A | N/A
+		0x18095C1FB movaps [rax-48h],xmm9		; DEBUG: {Memory}/None {Register}/XMM9 ||| RAX | 18446744073709551544 | None ||| N/A | N/A
+		0x18095C200 subss xmm1,xmm7		; DEBUG: {Register}/XMM1 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x18095C204 movss xmm9,dword ptr [rsp+28h]		; DEBUG: {Register}/XMM9 {Memory}/None ||| RSP | 40 | None ||| N/A | N/A
+		0x18095C20B subss xmm0,xmm9		; DEBUG: {Register}/XMM0 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x18095C210 mov [rsp+30h],r8		; DEBUG: {Memory}/None {Register}/R8 ||| RSP | 48 | None ||| N/A | N/A
+		0x18095C215 mulss xmm0,xmm0		; DEBUG: {Register}/XMM0 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18095C219 mulss xmm1,xmm1		; DEBUG: {Register}/XMM1 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x18095C21D addss xmm1,xmm0		; DEBUG: {Register}/XMM1 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18095C221 movss xmm0,dword ptr [182E6E338h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RIP | 6491136824 | None ||| N/A | N/A
+		0x18095C229 comiss xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x18095C22C ja near ptr 000000018095C2CDh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C232 movaps [rax-58h],xmm10		; DEBUG: {Memory}/None {Register}/XMM10 ||| RAX | 18446744073709551528 | None ||| N/A | N/A
+		0x18095C237 subss xmm8,dword ptr [rsp+30h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x18095C23E subss xmm6,dword ptr [rsp+34h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 52 | None ||| N/A | N/A
+		0x18095C244 subss xmm9,dword ptr [rsp+30h]		; DEBUG: {Register}/XMM9 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x18095C24B subss xmm7,dword ptr [rsp+34h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RSP | 52 | None ||| N/A | N/A
+		0x18095C251 movaps xmm1,xmm6		; DEBUG: {Register}/XMM1 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x18095C254 movaps xmm0,xmm8		; DEBUG: {Register}/XMM0 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x18095C258 call 000000018036E8CCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C25D movaps xmm10,xmm0		; DEBUG: {Register}/XMM10 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18095C261 movaps xmm1,xmm7		; DEBUG: {Register}/XMM1 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x18095C264 movaps xmm0,xmm9		; DEBUG: {Register}/XMM0 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x18095C268 call 000000018036E8CCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C26D comiss xmm0,xmm10		; DEBUG: {Register}/XMM0 {Register}/XMM10 ||| None | 0 | None ||| N/A | N/A
+		0x18095C271 ja short 000000018095C2C6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C273 comiss xmm10,xmm0		; DEBUG: {Register}/XMM10 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x18095C277 ja short 000000018095C29Ah		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C279 mulss xmm6,xmm6		; DEBUG: {Register}/XMM6 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x18095C27D mulss xmm8,xmm8		; DEBUG: {Register}/XMM8 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x18095C282 mulss xmm7,xmm7		; DEBUG: {Register}/XMM7 {Register}/XMM7 ||| None | 0 | None ||| N/A | N/A
+		0x18095C286 mulss xmm9,xmm9		; DEBUG: {Register}/XMM9 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x18095C28B addss xmm6,xmm8		; DEBUG: {Register}/XMM6 {Register}/XMM8 ||| None | 0 | None ||| N/A | N/A
+		0x18095C290 addss xmm7,xmm9		; DEBUG: {Register}/XMM7 {Register}/XMM9 ||| None | 0 | None ||| N/A | N/A
+		0x18095C295 comiss xmm7,xmm6		; DEBUG: {Register}/XMM7 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x18095C298 ja short 000000018095C2C6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C29A mov eax,1		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 1
+		0x18095C29F movaps xmm10,[rsp+40h]		; DEBUG: {Register}/XMM10 {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x18095C2A5 movaps xmm6,[rsp+80h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 128 | None ||| N/A | N/A
+		0x18095C2AD movaps xmm7,[rsp+70h]		; DEBUG: {Register}/XMM7 {Memory}/None ||| RSP | 112 | None ||| N/A | N/A
+		0x18095C2B2 movaps xmm8,[rsp+60h]		; DEBUG: {Register}/XMM8 {Memory}/None ||| RSP | 96 | None ||| N/A | N/A
+		0x18095C2B8 movaps xmm9,[rsp+50h]		; DEBUG: {Register}/XMM9 {Memory}/None ||| RSP | 80 | None ||| N/A | N/A
+		0x18095C2BE add rsp,98h		; DEBUG: {Register}/RSP {Immediate32to64}/None ||| None | 0 | None ||| N/A | 152
+		0x18095C2C5 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x18095C2C6 mov eax,0FFFFFFFFh		; DEBUG: {Register}/EAX {Immediate32}/None ||| None | 0 | None ||| N/A | 4294967295
+		0x18095C2CB jmp short 000000018095C29Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C2CD xor eax,eax		; DEBUG: {Register}/EAX {Register}/EAX ||| None | 0 | None ||| N/A | N/A
+		0x18095C2CF jmp short 000000018095C2A5h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x18095C2D1 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Static Method System.Int32 Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer::IsClockwise(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2):
+		End of function at 0x18095C2D2
+		Absolute End is at 0x18095C2D2
+		Identified Jump Destination addresses:
+
+		0x18095C1D2: Moves first (type UnityEngine.Vector2) from register rcx to the stack at offset 32 (0x20)
+		0x18095C1D7: Reads unknown value in stack, offset 36 (0x24) and stores the pointer in register xmm6 as new constant constant1
+		0x18095C1E2: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm6 into xmm1
+		0x18095C1E5: Reads local {'first' (function parameter, type UnityEngine.Vector2)} from stack offset 32 (0x20) into register xmm8
+		0x18095C1EC: Moves second (type UnityEngine.Vector2) from register rdx to the stack at offset 40 (0x28)
+		0x18095C1F1: Copies {'first' (function parameter, type UnityEngine.Vector2)} from xmm8 into xmm0
+		0x18095C1F5: Reads unknown value in stack, offset 44 (0x2C) and stores the pointer in register xmm7 as new constant constant2
+		0x18095C204: Reads local {'second' (function parameter, type UnityEngine.Vector2)} from stack offset 40 (0x28) into register xmm9
+		0x18095C210: Moves origin (type UnityEngine.Vector2) from register r8 to the stack at offset 48 (0x30)
+		0x18095C221: Reads {Unknown Global at 0x182E6E338, first ten bytes are [254 230 219 46 255 230 219 46 0 0], or as chars "þæÛ.ÿæÛ.  "} into register xmm0 as a constant constant3
+		0x18095C229: Compares {Unknown Global at 0x182E6E338, first ten bytes are [254 230 219 46 255 230 219 46 0 0], or as chars "þæÛ.ÿæÛ.  "} and {'constant1' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}
+		0x18095C22C: Jumps to 0x18095C2CD if {Unknown Global at 0x182E6E338, first ten bytes are [254 230 219 46 255 230 219 46 0 0], or as chars "þæÛ.ÿæÛ.  "} is greater than {'constant1' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}
+
+		0x18095C251: Copies {'constant1' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm6 into xmm1
+		0x18095C254: Copies {'first' (function parameter, type UnityEngine.Vector2)} from xmm8 into xmm0
+		0x18095C25D: Copies {'first' (function parameter, type UnityEngine.Vector2)} from xmm0 into xmm10
+		0x18095C261: Copies {'constant2' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from xmm7 into xmm1
+		0x18095C264: Copies {'second' (function parameter, type UnityEngine.Vector2)} from xmm9 into xmm0
+		0x18095C26D: [!] Compares {'second' (function parameter, type UnityEngine.Vector2)} and {'first' (function parameter, type UnityEngine.Vector2)}
+		0x18095C271: Jumps to 0x18095C2C6 (which is an if statement's body) if {'second' (function parameter, type UnityEngine.Vector2)} is greater than {'first' (function parameter, type UnityEngine.Vector2)} ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18095C273: [!] Compares {'first' (function parameter, type UnityEngine.Vector2)} and {'second' (function parameter, type UnityEngine.Vector2)}
+		0x18095C277: Jumps to 0x18095C29A (which is an if statement's body) if {'first' (function parameter, type UnityEngine.Vector2)} is greater than {'second' (function parameter, type UnityEngine.Vector2)} ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x18095C295: [!] Compares {'constant2' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} and {'constant1' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)}
+		0x18095C298: Jumps to 0x18095C2C6 if {'constant2' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} is greater than {'constant1' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} ;  - This is probably a goto, jumping to 0x18095C2C6 which is after end of current block @ 0x18095C29A (started at 0x18095C279)
+
+		0x18095C29A: [!] Writes the constant 0x1 into operand 1 (type UInt64) in register rax
+
+		Potential Loop Start (0x18095C29F):
+		0x18095C29F: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register xmm10 as new constant constant5
+
+		Potential Loop Start (0x18095C2A5):
+		0x18095C2A5: Reads unknown value in stack, offset 128 (0x80) and stores the pointer in register xmm6 as new constant constant6
+		0x18095C2AD: Reads unknown value in stack, offset 112 (0x70) and stores the pointer in register xmm7 as new constant constant7
+		0x18095C2B2: Reads unknown value in stack, offset 96 (0x60) and stores the pointer in register xmm8 as new constant constant8
+		0x18095C2B8: Reads unknown value in stack, offset 80 (0x50) and stores the pointer in register xmm9 as new constant constant9
+		0x18095C2C5: [!] Returns 1 from the function
+
+		0x18095C2C6: [!] Writes the constant 0xFFFFFFFF into operand 0xFFFFFFFF (type UInt64) in register rax
+		0x18095C2CB: Jumps to 0x18095C29F - which is still in this function, but further up. Probably indicative that this is a loop.
+		0x18095C2CF: Jumps to 0x18095C2A5 - which is still in this function, but further up. Probably indicative that this is a loop.
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: Hydra.HydraCommon.Utils.Comparers.ClockwiseComparer
+	static System.Int32 IsClockwise(UnityEngine.Vector2 first, UnityEngine.Vector2 second, UnityEngine.Vector2 origin)
+
+		if (second <= first)
+
+		    if (first <= second)
+
+		        if (constant2 > constant1)
+                    goto INSN_18095C2C6
+                endif
+		    endif
+            
+		    return 1
+		endif
+        
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.JumpIfGreaterThanAction at (0x18095C298) is corrupt (ConstantDefinition: Don't know how to get IL to load a Cpp2IL.Core.Analysis.ResultModels.StackPointer) and cannot be created as IL. Aborting here.
+
+

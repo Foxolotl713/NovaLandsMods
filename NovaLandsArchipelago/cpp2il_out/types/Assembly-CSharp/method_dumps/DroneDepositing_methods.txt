@@ -1,0 +1,689 @@
+Type: DroneDepositing
+
+Method: System.Void DroneDepositing::Enter(MuttAI.BaseGameEntity):	Method Body (x86 ASM):
+		0x1804B4190 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1804B4195 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B4196 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1804B419A cmp byte ptr [18329A4D7h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495511767 | None ||| N/A | 0
+		0x1804B41A1 mov rbx,rdx		; DEBUG: {Register}/RBX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1804B41A4 mov rdi,rcx		; DEBUG: {Register}/RDI {Register}/RCX ||| None | 0 | None ||| N/A | N/A
+		0x1804B41A7 jne short 00000001804B41BCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B41A9 lea rcx,[18310E8D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493890768 | None ||| N/A | N/A
+		0x1804B41B0 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B41B5 mov byte ptr [18329A4D7h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495511767 | None ||| N/A | 1
+		0x1804B41BC mov rdx,[18310E8D0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493890768 | None ||| N/A | N/A
+		0x1804B41C3 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804B41C6 jne short 00000001804B41CEh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B41C8 mov [rdi+10h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RDI | 16 | None ||| N/A | N/A
+		0x1804B41CC jmp short 00000001804B4231h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B41CE mov r8,[rbx]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x1804B41D1 movzx eax,byte ptr [rdx+130h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDX | 304 | None ||| N/A | N/A
+		0x1804B41D8 cmp [r8+130h],al		; DEBUG: {Memory}/None {Register}/AL ||| R8 | 304 | None ||| N/A | N/A
+		0x1804B41DF jb near ptr 00000001804B4370h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B41E5 movzx ecx,al		; DEBUG: {Register}/ECX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1804B41E8 mov rax,[r8+0C8h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 200 | None ||| N/A | N/A
+		0x1804B41EF cmp [rax+rcx*8-8],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| RAX | 18446744073709551608 | RCX ||| N/A | N/A
+		0x1804B41F4 jne near ptr 00000001804B4370h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B41FA mov [rdi+10h],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RDI | 16 | None ||| N/A | N/A
+		0x1804B41FE mov rdx,[18310E8D0h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493890768 | None ||| N/A | N/A
+		0x1804B4205 mov r8,[rbx]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x1804B4208 movzx eax,byte ptr [rdx+130h]		; DEBUG: {Register}/EAX {Memory}/None ||| RDX | 304 | None ||| N/A | N/A
+		0x1804B420F cmp [r8+130h],al		; DEBUG: {Memory}/None {Register}/AL ||| R8 | 304 | None ||| N/A | N/A
+		0x1804B4216 jb near ptr 00000001804B4396h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B421C movzx ecx,al		; DEBUG: {Register}/ECX {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1804B421F mov rax,[r8+0C8h]		; DEBUG: {Register}/RAX {Memory}/None ||| R8 | 200 | None ||| N/A | N/A
+		0x1804B4226 cmp [rax+rcx*8-8],rdx		; DEBUG: {Memory}/None {Register}/RDX ||| RAX | 18446744073709551608 | RCX ||| N/A | N/A
+		0x1804B422B jne near ptr 00000001804B4396h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4231 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1804B4238 je short 00000001804B4273h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B423A lea r8,[rdi+10h]		; DEBUG: {Register}/R8 {Memory}/None ||| RDI | 16 | None ||| N/A | N/A
+		0x1804B423E shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1804B4242 lea r9,[1832F4840h]		; DEBUG: {Register}/R9 {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x1804B4249 and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1804B4250 mov edx,r8d		; DEBUG: {Register}/EDX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804B4253 shr rdx,6		; DEBUG: {Register}/RDX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1804B4257 and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1804B425B prefetchw [r9+rdx*8]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 0 | RDX ||| N/A | N/A
+		0x1804B4260 mov rax,[r9+rdx*8]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 0 | RDX ||| N/A | N/A
+		0x1804B4264 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804B4267 bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1804B426B lock cmpxchg [r9+rdx*8],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| R9 | 0 | RDX ||| N/A | N/A
+		0x1804B4271 jne short 00000001804B4260h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4273 mov rbx,[rdi+10h]		; DEBUG: {Register}/RBX {Memory}/None ||| RDI | 16 | None ||| N/A | N/A
+		0x1804B4277 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804B427A je near ptr 00000001804B4390h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4280 cmp byte ptr [18329A587h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495511943 | None ||| N/A | 0
+		0x1804B4287 jne short 00000001804B429Ch		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4289 lea rcx,[1830FBB18h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493813528 | None ||| N/A | N/A
+		0x1804B4290 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4295 mov byte ptr [18329A587h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495511943 | None ||| N/A | 1
+		0x1804B429C mov rdx,[rbx+518h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 1304 | None ||| N/A | N/A
+		0x1804B42A3 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1804B42A6 mov r8b,1		; DEBUG: {Register}/R8L {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1804B42A9 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804B42AC call 00000001803FE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B42B1 mov rdi,[rbx+520h]		; DEBUG: {Register}/RDI {Memory}/None ||| RBX | 1312 | None ||| N/A | N/A
+		0x1804B42B8 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1804B42BB je near ptr 00000001804B4390h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B42C1 mov rax,[1832AB680h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495581824 | None ||| N/A | N/A
+		0x1804B42C8 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804B42CB jne short 00000001804B42E9h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B42CD lea rcx,[1829881A8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6486000040 | None ||| N/A | N/A
+		0x1804B42D4 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B42D9 test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804B42DC je near ptr 00000001804B4379h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B42E2 mov [1832AB680h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495581824 | None ||| N/A | N/A
+		0x1804B42E9 mov dl,1		; DEBUG: {Register}/DL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1804B42EB mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1804B42EE call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B42F0 mov rdx,[1830FBB18h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493813528 | None ||| N/A | N/A
+		0x1804B42F7 cmp dword ptr [rdx+0E0h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RDX | 224 | None ||| N/A | 0
+		0x1804B42FE jne short 00000001804B430Fh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4300 mov rcx,rdx		; DEBUG: {Register}/RCX {Register}/RDX ||| None | 0 | None ||| N/A | N/A
+		0x1804B4303 call 00000001802CB360h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4308 mov rdx,[1830FBB18h]		; DEBUG: {Register}/RDX {Memory}/None ||| RIP | 6493813528 | None ||| N/A | N/A
+		0x1804B430F mov r9,[rbx]		; DEBUG: {Register}/R9 {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x1804B4312 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804B4315 mov rdx,[rdx+0B8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RDX | 184 | None ||| N/A | N/A
+		0x1804B431C mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804B431F movss xmm3,dword ptr [182E6E600h]		; DEBUG: {Register}/XMM3 {Memory}/None ||| RIP | 6491137536 | None ||| N/A | N/A
+		0x1804B4327 mov rax,[r9+490h]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 1168 | None ||| N/A | N/A
+		0x1804B432E mov edx,[rdx+84h]		; DEBUG: {Register}/EDX {Memory}/None ||| RDX | 132 | None ||| N/A | N/A
+		0x1804B4334 mov [rsp+20h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 32 | None ||| N/A | N/A
+		0x1804B4339 call qword ptr [r9+488h]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 1160 | None ||| N/A | N/A
+		0x1804B4340 mov rdx,[rbx+578h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 1400 | None ||| N/A | N/A
+		0x1804B4347 xor r8d,r8d		; DEBUG: {Register}/R8D {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804B434A mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804B434D mov dword ptr [rbx+5B0h],0		; DEBUG: {Memory}/None {Immediate32}/None ||| RBX | 1456 | None ||| N/A | 0
+		0x1804B4357 call 00000001804CF4C0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B435C xor edx,edx		; DEBUG: {Register}/EDX {Register}/EDX ||| None | 0 | None ||| N/A | N/A
+		0x1804B435E mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804B4361 mov rbx,[rsp+40h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 64 | None ||| N/A | N/A
+		0x1804B4366 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1804B436A pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B436B jmp near ptr 00000001804CE860h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4370 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804B4373 call 00000001802CE4D0h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4378 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DroneDepositing::Enter(MuttAI.BaseGameEntity):
+		End of function at 0x1804B4379
+		Absolute End is at 0x1804B4379
+		Identified Jump Destination addresses:
+			0x1804B4231
+		0x1804B4195: Saves the content of rdi to the stack
+		0x1804B419A: Compares {Unknown Global at 0x18329A4D7, first ten bytes are [0 32 61 235 2 176 54 3 0 56], or as chars "  =ë°6 8"} and 0
+		0x1804B41A1: Copies {'entity' (function parameter, type MuttAI.BaseGameEntity)} from rdx into rbx
+		0x1804B41A4: Copies {'this' (function parameter, type DroneDepositing)} from rcx into rdi
+		0x1804B41A7: Jumps to 0x1804B41BC if {Unknown Global at 0x18329A4D7, first ten bytes are [0 32 61 235 2 176 54 3 0 56], or as chars "  =ë°6 8"} != 0
+
+		0x1804B41A9: Loads the type definition for managed type TransportDrone as a constant "TransportDrone" in rcx
+		0x1804B41B0: Initializes runtime metadata value TransportDrone
+		0x1804B41BC: Loads the type definition for managed type TransportDrone as a constant "TransportDrone" in rdx
+		0x1804B41C3: [!] Compares {'entity' (function parameter, type MuttAI.BaseGameEntity)} and 0
+		0x1804B41C6: Jumps to 0x1804B41CE if {'entity' (function parameter, type MuttAI.BaseGameEntity)} != 0 ;  - Increasing indentation - is if-else, unimportant is False
+
+		0x1804B41C8: [!] Sets the field drone (Type TransportDrone) on local {'this' (function parameter, type DroneDepositing)} to the value stored in {'entity' (function parameter, type MuttAI.BaseGameEntity)}
+		0x1804B41CC: Jumps to 0x1804B4231 (which is an function-local jump destination)
+
+		0x1804B41CE: Loads the class pointer from entity into a constant constant6 in register r8
+		0x1804B41D8: Compares "{il2cpp field on {'constant6' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x130}" and {'TransportDrone' (constant value of type Mono.Cecil.TypeReference)}
+		0x1804B41E5: Copies {'TransportDrone' (constant value of type Mono.Cecil.TypeReference)} from rax into rcx
+		0x1804B41E8: [!!] Reads value at unknown offset 200 (0xC8) on a klass pointer
+		0x1804B41EF: Compares "{il2cpp field on {'TransportDrone' (constant value of type Mono.Cecil.TypeReference)}, offset 0xFFFFFFFFFFFFFFF8}" and {'TransportDrone' (constant value of type Mono.Cecil.TypeReference)}
+		0x1804B41F4: Jumps to 0x1804B4370 if "{il2cpp field on {'TransportDrone' (constant value of type Mono.Cecil.TypeReference)}, offset 0xFFFFFFFFFFFFFFF8}" != {'TransportDrone' (constant value of type Mono.Cecil.TypeReference)} ;  - This is probably a goto, jumping to 0x1804B4370 which is after end of current block @ 0x1804B4231 (started at 0x1804B41CE)
+
+		0x1804B41FA: [!] Sets the field drone (Type TransportDrone) on local {'this' (function parameter, type DroneDepositing)} to the value stored in {'entity' (function parameter, type MuttAI.BaseGameEntity)}
+		0x1804B41FE: Loads the type definition for managed type TransportDrone as a constant "TransportDrone" in rdx
+		0x1804B4205: Loads the class pointer from entity into a constant constant10 in register r8
+		0x1804B420F: Compares "{il2cpp field on {'constant10' (constant value of type Cpp2IL.Core.Analysis.Il2CppClassIdentifier)}, offset 0x130}" and {'TransportDrone' (constant value of type Mono.Cecil.TypeReference)}
+		0x1804B421C: Copies {'TransportDrone' (constant value of type Mono.Cecil.TypeReference)} from rax into rcx
+		0x1804B421F: [!!] Reads value at unknown offset 200 (0xC8) on a klass pointer
+		0x1804B4226: Compares "{il2cpp field on {'TransportDrone' (constant value of type Mono.Cecil.TypeReference)}, offset 0xFFFFFFFFFFFFFFF8}" and {'TransportDrone' (constant value of type Mono.Cecil.TypeReference)}
+		0x1804B422B: Jumps to 0x1804B4396 if "{il2cpp field on {'TransportDrone' (constant value of type Mono.Cecil.TypeReference)}, offset 0xFFFFFFFFFFFFFFF8}" != {'TransportDrone' (constant value of type Mono.Cecil.TypeReference)} ;  - This is probably a goto, jumping to 0x1804B4396 which is after end of current block @ 0x1804B4231 (started at 0x1804B41CE)
+
+
+		End Of If-Else Block (at 0x1804B4231) where the else started at 0x1804B41CE
+		0x1804B4231: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1804B4238: Jumps to 0x1804B4273 if constant13 equals 0 ;  - This is probably a goto, jumping to 0x1804B4273 which is after end of current block @ 0x1804B4231 (started at 0x1804B41CE)
+
+		0x1804B423A: Loads the pointer to the field drone on {'this' (function parameter, type DroneDepositing)} into register r8
+		0x1804B4242: Loads string "¡
+m" into register r9 as constant {'constant16' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804B4250: Copies {'constant15' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rdx
+		0x1804B4264: Copies {'TransportDrone' (constant value of type Mono.Cecil.TypeReference)} from rax into rcx
+		0x1804B4271: Jumps to 0x1804B4260 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0 ;  - This is probably a goto, jumping to 0x1804B4260 which is after end of current block @ 0x1804B4231 (started at 0x1804B41CE)
+
+		0x1804B4273: [!] Reads field drone from {'this' (function parameter, type DroneDepositing)} and stores in a new local {'drone' (type TransportDrone)}
+
+		0x1804B4277: [!] Compares {'drone' (type TransportDrone)} and 0
+		0x1804B427A: Jumps to 0x1804B4390 (which throws a NRE) if drone equals 0. Implicitly present in managed code, so ignored here.
+		0x1804B4280: Compares {Unknown Global at 0x18329A587, first ten bytes are [0 147 63 3 0 56 128 235 2 160], or as chars " ? 8ë "} and 0
+		0x1804B4287: Jumps to 0x1804B429C if {Unknown Global at 0x18329A587, first ten bytes are [0 147 63 3 0 56 128 235 2 160], or as chars " ? 8ë "} != 0 ;  - This is probably a goto, jumping to 0x1804B429C which is after end of current block @ 0x1804B4231 (started at 0x1804B41CE)
+
+		0x1804B4289: Loads the type definition for managed type AnimationName as a constant "AnimationName" in rcx
+		0x1804B4290: Initializes runtime metadata value AnimationName
+		0x1804B429C: [!] Reads field depositItemsSFX from {'drone' (type TransportDrone)} and stores in a new local {'depositItemsSFX' (type System.String)}
+
+		0x1804B42A6: [!] Writes the constant 0x1 into operand True (type UInt64) in register r8
+		0x1804B42A9: Copies {'drone' (type TransportDrone)} from rbx into rcx
+		0x1804B42AC: [!] Calls managed method FMODUnity.StudioEventEmitter BaseCharacter::PlaySFX(System.String,System.Boolean) on instance {'drone' (type TransportDrone)} with arguments [{'depositItemsSFX' (type System.String)}, True] and stores the result in {'studioEventEmitter' (type FMODUnity.StudioEventEmitter)}
+
+		0x1804B42B1: [!] Reads field jetpackParticles from {'drone' (type TransportDrone)} and stores in a new local {'jetpackParticles' (type UnityEngine.ParticleSystem)}
+
+		0x1804B42B8: [!] Compares {'jetpackParticles' (type UnityEngine.ParticleSystem)} and 0
+		0x1804B42BB: Jumps to 0x1804B4390 (which throws a NRE) if jetpackParticles equals 0. Implicitly present in managed code, so ignored here.
+		0x1804B42C1: Loads string "°iêpÃ" into register rax as constant UnityEngine.ParticleSystem.Play
+		0x1804B42C8: Compares UnityEngine.ParticleSystem.Play and 0
+		0x1804B42CB: Jumps to 0x1804B42E9 if UnityEngine.ParticleSystem.Play != 0 ;  - This is probably a goto, jumping to 0x1804B42E9 which is after end of current block @ 0x1804B4231 (started at 0x1804B41CE)
+
+		0x1804B42CD: Loads string "UnityEngine.ParticleSystem::Play(System.Boolean)" into register rcx as constant {'constant25' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804B42D4: Looks up unity ICall by name "UnityEngine.ParticleSystem::Play(System.Boolean)" which resolves to System.Void UnityEngine.ParticleSystem::Play(System.Boolean)
+		0x1804B42D9: Compares UnityEngine.ParticleSystem.Play and 0
+		0x1804B42DC: Jumps to 0x1804B4379 if UnityEngine.ParticleSystem.Play equals 0 ;  - This is probably a goto, jumping to 0x1804B4379 which is after end of current block @ 0x1804B4231 (started at 0x1804B41CE)
+
+		0x1804B42E9: [!] Writes the constant 0x1 into operand True (type UInt64) in register rdx
+		0x1804B42EB: Copies {'jetpackParticles' (type UnityEngine.ParticleSystem)} from rdi into rcx
+		0x1804B42EE: [!] Calls managed method System.Void UnityEngine.ParticleSystem::Play(System.Boolean) on instance {'jetpackParticles' (type UnityEngine.ParticleSystem)} with arguments [True]
+
+		0x1804B42F0: Loads the type definition for managed type AnimationName as a constant "AnimationName" in rdx
+		0x1804B42F7: Compares "{il2cpp field AnimationName->cctor_finished}" and 0
+		0x1804B42FE: Jumps to 0x1804B430F if "{il2cpp field AnimationName->cctor_finished}" != 0 ;  - This is probably a goto, jumping to 0x1804B430F which is after end of current block @ 0x1804B4231 (started at 0x1804B41CE)
+
+		0x1804B4300: Copies {'AnimationName' (constant value of type Mono.Cecil.TypeReference)} from rdx into rcx
+		0x1804B4303: Calls the il2cpp cctor for the type AnimationName
+		0x1804B4308: Loads the type definition for managed type AnimationName as a constant "AnimationName" in rdx
+		0x1804B430F: Loads the class pointer from drone into a constant constant32 in register r9
+		0x1804B4312: Clears register r8, yielding zero-local {'local7' (type System.Int32)}
+		0x1804B4315: Loads the pointer to the static fields for AnimationName and stores it in constant33 in register rdx
+		0x1804B431C: Copies {'drone' (type TransportDrone)} from rbx into rcx
+		0x1804B431F: Reads {Unknown Global at 0x182E6E600, first ten bytes are [0 0 128 63 84 0 128 63 146 65], or as chars "  ?T ?A"} into register xmm3 as a constant constant34
+		0x1804B4327: Loads the pointer to the implementation of virtual function System.Void BaseCharacter::PlayAnimation(System.Int32,System.Boolean,System.Single) specific to TransportDrone from the class pointer in r9, slot 53 (from memory offset 1168) and stores in constant constant35
+		0x1804B432E: [!] Reads the static field System.Int32 AnimationName::DELIVERY into new local dELIVERY
+		0x1804B4334: Moves BaseCharacter.PlayAnimation (type Mono.Cecil.MethodDefinition) from register rax to the stack at offset 32 (0x20) as a new local local9
+		0x1804B4339: [!] Calls managed method System.Void BaseCharacter::PlayAnimation(System.Int32,System.Boolean,System.Single) on instance {'drone' (type TransportDrone)} with arguments [{'dELIVERY' (type System.Int32)}, {'local7' (type System.Int32)}, 1]
+
+		0x1804B4340: [!] Reads field currentTargetContainer from {'drone' (type TransportDrone)} and stores in a new local {'currentTargetContainer' (type DepositAreaContainer)}
+
+		0x1804B434A: Copies {'drone' (type TransportDrone)} from rbx into rcx
+		0x1804B434D: [!] Sets the field currentActTime (Type System.Single) on local {'drone' (type TransportDrone)} to the value stored in 0
+		0x1804B4357: [!] Calls managed method System.Void TransportDrone::DeliverItems(DepositAreaContainer) on instance {'drone' (type TransportDrone)} with arguments [{'currentTargetContainer' (type DepositAreaContainer)}]
+
+		0x1804B435E: Copies {'drone' (type TransportDrone)} from rbx into rcx
+		0x1804B4361: Reads unknown value in stack, offset 64 (0x40) and stores the pointer in register rbx as new constant constant36
+		0x1804B436B: [!] Calls managed method System.Void TransportDrone::UpdateTransportedItemsVisuals() on instance {'drone' (type TransportDrone)}
+
+		0x1804B436B: [!] Returns from the function
+
+		0x1804B4370: Copies {'constant36' (constant value of type Cpp2IL.Core.Analysis.ResultModels.StackPointer)} from rbx into rcx
+		0x1804B4373: [!] Constructs and throws an exception of kind System.InvalidCastException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DroneDepositing
+	System.Void Enter(MuttAI.BaseGameEntity entity)
+
+		if (entity == 0)
+		    this.drone = entity
+		else
+		    //UNKNOWN CLASS OFFSET READ HERE
+		    this.drone = entity
+		    //UNKNOWN CLASS OFFSET READ HERE
+		endif
+        
+		TransportDrone drone = this.drone
+		System.String depositItemsSFX = drone.depositItemsSFX
+
+		FMODUnity.StudioEventEmitter studioEventEmitter = drone.PlaySFX(depositItemsSFX, True) //(String sfx, Boolean stopCurrent)
+		UnityEngine.ParticleSystem jetpackParticles = drone.jetpackParticles
+
+		jetpackParticles.Play(True) //(Boolean withChildren)
+		ulong local7 = 0
+		System.Int32 dELIVERY = AnimationName.DELIVERY
+
+		drone.PlayAnimation(dELIVERY, local7, 1) //(Int32 animation, Boolean force, Single speed)
+		DepositAreaContainer currentTargetContainer = drone.currentTargetContainer
+		drone.currentActTime = 0
+
+		drone.DeliverItems(currentTargetContainer) //(DepositAreaContainer targetContainer)
+
+		drone.UpdateTransportedItemsVisuals()
+		return
+		throw new System.InvalidCastException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.UnknownClassOffsetReadAction at (0x1804B41E8) is corrupt (Unknown class offset read) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void DroneDepositing::Execute(MuttAI.BaseGameEntity,System.Single):	Method Body (x86 ASM):
+		0x1804B43A0 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B43A2 sub rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1804B43A6 mov rbx,[rcx+10h]		; DEBUG: {Register}/RBX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1804B43AA test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804B43AD je near ptr 00000001804B4477h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B43B3 addss xmm2,dword ptr [rbx+5B0h]		; DEBUG: {Register}/XMM2 {Memory}/None ||| RBX | 1456 | None ||| N/A | N/A
+		0x1804B43BB movss xmm0,dword ptr [rbx+554h]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RBX | 1364 | None ||| N/A | N/A
+		0x1804B43C3 comiss xmm0,xmm2		; DEBUG: {Register}/XMM0 {Register}/XMM2 ||| None | 0 | None ||| N/A | N/A
+		0x1804B43C6 movss dword ptr [rbx+5B0h],xmm2		; DEBUG: {Memory}/None {Register}/XMM2 ||| RBX | 1456 | None ||| N/A | N/A
+		0x1804B43CE ja near ptr 00000001804B4471h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B43D4 cmp dword ptr [1832990E4h],0		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RIP | 6495506660 | None ||| N/A | 0
+		0x1804B43DB mov rax,[rbx+568h]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 1384 | None ||| N/A | N/A
+		0x1804B43E2 mov [rbx+578h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RBX | 1400 | None ||| N/A | N/A
+		0x1804B43E9 je short 00000001804B4427h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B43EB lea r8,[rbx+578h]		; DEBUG: {Register}/R8 {Memory}/None ||| RBX | 1400 | None ||| N/A | N/A
+		0x1804B43F2 shr r8,0Ch		; DEBUG: {Register}/R8 {Immediate8}/None ||| None | 0 | None ||| N/A | 12
+		0x1804B43F6 lea r9,[1832F4840h]		; DEBUG: {Register}/R9 {Memory}/None ||| RIP | 6495881280 | None ||| N/A | N/A
+		0x1804B43FD and r8d,1FFFFFh		; DEBUG: {Register}/R8D {Immediate32}/None ||| None | 0 | None ||| N/A | 2097151
+		0x1804B4404 mov edx,r8d		; DEBUG: {Register}/EDX {Register}/R8D ||| None | 0 | None ||| N/A | N/A
+		0x1804B4407 shr rdx,6		; DEBUG: {Register}/RDX {Immediate8}/None ||| None | 0 | None ||| N/A | 6
+		0x1804B440B and r8d,3Fh		; DEBUG: {Register}/R8D {Immediate8to32}/None ||| None | 0 | None ||| N/A | 63
+		0x1804B440F prefetchw [r9+rdx*8]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 0 | RDX ||| N/A | N/A
+		0x1804B4414 mov rax,[r9+rdx*8]		; DEBUG: {Register}/RAX {Memory}/None ||| R9 | 0 | RDX ||| N/A | N/A
+		0x1804B4418 mov rcx,rax		; DEBUG: {Register}/RCX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804B441B bts rcx,r8		; DEBUG: {Register}/RCX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1804B441F lock cmpxchg [r9+rdx*8],rcx		; DEBUG: {Memory}/None {Register}/RCX ||| R9 | 0 | RDX ||| N/A | N/A
+		0x1804B4425 jne short 00000001804B4414h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4427 mov rax,[rbx]		; DEBUG: {Register}/RAX {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x1804B442A mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804B442D mov rdx,[rbx+568h]		; DEBUG: {Register}/RDX {Memory}/None ||| RBX | 1384 | None ||| N/A | N/A
+		0x1804B4434 mov r8,[rax+580h]		; DEBUG: {Register}/R8 {Memory}/None ||| RAX | 1408 | None ||| N/A | N/A
+		0x1804B443B call qword ptr [rax+578h]		; DEBUG: {Memory}/None {Register}/None ||| RAX | 1400 | None ||| N/A | N/A
+		0x1804B4441 mov r10,[rbx]		; DEBUG: {Register}/R10 {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x1804B4444 mov r9d,0FFFFFFFFh		; DEBUG: {Register}/R9D {Immediate32}/None ||| None | 0 | None ||| N/A | 4294967295
+		0x1804B444A mov edx,9		; DEBUG: {Register}/EDX {Immediate32}/None ||| None | 0 | None ||| N/A | 9
+		0x1804B444F mov r8d,r9d		; DEBUG: {Register}/R8D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1804B4452 mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804B4455 mov rax,[r10+1E0h]		; DEBUG: {Register}/RAX {Memory}/None ||| R10 | 480 | None ||| N/A | N/A
+		0x1804B445C mov [rsp+28h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 40 | None ||| N/A | N/A
+		0x1804B4461 mov qword ptr [rsp+20h],0		; DEBUG: {Memory}/None {Immediate32to64}/None ||| RSP | 32 | None ||| N/A | 0
+		0x1804B446A call qword ptr [r10+1D8h]		; DEBUG: {Memory}/None {Register}/None ||| R10 | 472 | None ||| N/A | N/A
+		0x1804B4471 add rsp,30h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 48
+		0x1804B4475 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B4476 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B4477 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B447C int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DroneDepositing::Execute(MuttAI.BaseGameEntity,System.Single):
+		End of function at 0x1804B447D
+		Absolute End is at 0x1804B447D
+		Identified Jump Destination addresses:
+
+		0x1804B43A0: Saves the content of rbx to the stack
+		0x1804B43A6: [!] Reads field drone from {'this' (function parameter, type DroneDepositing)} and stores in a new local {'drone' (type TransportDrone)}
+
+		0x1804B43AA: [!] Compares {'drone' (type TransportDrone)} and 0
+		0x1804B43AD: Jumps to 0x1804B4477 (which throws a NRE) if drone equals 0. Implicitly present in managed code, so ignored here.
+		0x1804B43BB: [!] Reads field timeWaitingOnAct from {'drone' (type TransportDrone)} and stores in a new local {'timeWaitingOnAct' (type System.Single)}
+
+		0x1804B43C3: [!] Compares {'timeWaitingOnAct' (type System.Single)} and {'deltaTime' (function parameter, type System.Single)}
+		0x1804B43C6: [!] Sets the field currentActTime (Type System.Single) on local {'drone' (type TransportDrone)} to the value stored in {'deltaTime' (function parameter, type System.Single)}
+		0x1804B43CE: Jumps to 0x1804B4471 (which is an if statement's body) if {'timeWaitingOnAct' (type System.Single)} is greater than {'deltaTime' (function parameter, type System.Single)} ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1804B43D4: Compares {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} and 0
+		0x1804B43DB: [!] Reads field droneBase from {'drone' (type TransportDrone)} and stores in a new local {'droneBase' (type DroneBase)}
+
+		0x1804B43E2: [!] Sets the field currentTargetContainer (Type DepositAreaContainer) on local {'drone' (type TransportDrone)} to the value stored in {'droneBase' (type DroneBase)}
+		0x1804B43E9: Jumps to 0x1804B4427 if constant2 equals 0
+
+		0x1804B43EB: Loads the pointer to the field currentTargetContainer on {'drone' (type TransportDrone)} into register r8
+		0x1804B43F6: Loads string "¡
+m" into register r9 as constant {'constant5' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804B4404: Copies {'constant4' (constant value of type Cpp2IL.Core.Analysis.ResultModels.FieldPointer)} from r8 into rdx
+		0x1804B4418: Copies {'droneBase' (type DroneBase)} from rax into rcx
+		0x1804B4425: Jumps to 0x1804B4414 if {Unknown Global at 0x1832990E4, first ten bytes are [89 66 1 0 86 68 1 0 244 211], or as chars "YB VD ôÓ"} != 0
+
+		0x1804B4427: Loads the class pointer from drone into a constant constant6 in register rax
+		0x1804B442A: Copies {'drone' (type TransportDrone)} from rbx into rcx
+		0x1804B442D: [!] Reads field droneBase from {'drone' (type TransportDrone)} and stores in a new local {'droneBase2' (type DroneBase)}
+
+		0x1804B4434: Loads the pointer to the implementation of virtual function System.Void BaseCharacter::SetTarget(BaseBuilding) specific to TransportDrone from the class pointer in rax, slot 68 (from memory offset 1408) and stores in constant constant7
+		0x1804B443B: [!] Calls managed method System.Void BaseCharacter::SetTarget(BaseBuilding) on instance {'drone' (type TransportDrone)} with arguments [{'droneBase2' (type DroneBase)}]
+
+		0x1804B4441: Loads the class pointer from drone into a constant constant8 in register r10
+		0x1804B4444: [!] Writes the constant 0xFFFFFFFF into operand -1 (type UInt64) in register r9
+		0x1804B444A: [!] Writes the constant 0x9 into operand 9 (type UInt64) in register rdx
+		0x1804B444F: Copies -1 from r9 into r8
+		0x1804B4452: Copies {'drone' (type TransportDrone)} from rbx into rcx
+		0x1804B4455: Loads the pointer to the implementation of virtual function System.Boolean MuttAI.BaseGameEntity::HandleMessage(MuttAI.Messaging.MessageType,System.Int32,System.Int32,System.Object) specific to TransportDrone from the class pointer in r10, slot 10 (from memory offset 480) and stores in constant constant11
+		0x1804B445C: Moves MuttAI.BaseGameEntity.HandleMessage (type Mono.Cecil.MethodDefinition) from register rax to the stack at offset 40 (0x28) as a new local local7
+		0x1804B4461: Moves 0 (immediate ulong value) to the stack at offset 32 as a new local local8
+		0x1804B446A: [!] Calls managed method System.Boolean MuttAI.BaseGameEntity::HandleMessage(MuttAI.Messaging.MessageType,System.Int32,System.Int32,System.Object) on instance {'drone' (type TransportDrone)} with arguments [9, -1, -1, {'local8' (type System.UInt64)}] and stores the result in {'boolean' (type System.Boolean)}
+
+		0x1804B4476: [!] Returns from the function
+
+		0x1804B4477: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DroneDepositing
+	System.Void Execute(MuttAI.BaseGameEntity entity, System.Single deltaTime)
+		TransportDrone drone = this.drone
+		System.Single timeWaitingOnAct = drone.timeWaitingOnAct
+		drone.currentActTime = deltaTime
+
+		if (timeWaitingOnAct <= deltaTime)
+		    DroneBase droneBase = drone.droneBase
+		    drone.currentTargetContainer = droneBase
+		    DroneBase droneBase2 = drone.droneBase
+
+		    drone.SetTarget(droneBase2) //(BaseBuilding building)
+
+		    System.Boolean boolean = drone.HandleMessage(9, -1, -1, local8) //(MessageType msgType, Int32 receiver, Int32 sender, Object extraInfo)
+		endif
+        
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ldarg.0
+	IL_0001: ldfld TransportDrone DroneDepositing::drone
+	IL_0006: stloc.0
+	IL_0007: ldloc.0
+	IL_0008: ldfld System.Single TransportDrone::timeWaitingOnAct
+	IL_000d: stloc.1
+	IL_000e: ldloc.0
+	IL_000f: ldarg.2
+	IL_0010: stfld System.Single TransportDrone::currentActTime
+	IL_0015: ldloc.1
+	IL_0016: ldarg.2
+	IL_0017: bgt.s IL_0044
+	IL_0019: ldloc.0
+	IL_001a: ldfld DroneBase TransportDrone::droneBase
+	IL_001f: stloc.2
+	IL_0020: ldloc.0
+	IL_0021: ldloc.2
+	IL_0022: stfld DepositAreaContainer TransportDrone::currentTargetContainer
+	IL_0027: ldloc.0
+	IL_0028: ldfld DroneBase TransportDrone::droneBase
+	IL_002d: stloc.3
+	IL_002e: ldloc.0
+	IL_002f: ldloc.3
+	IL_0030: callvirt System.Void BaseCharacter::SetTarget(BaseBuilding)
+	IL_0035: ldloc.0
+	IL_0036: ldc.i4.s 9
+	IL_0038: conv.u4
+	IL_0039: ldc.i4.m1
+	IL_003a: ldc.i4.m1
+	IL_003b: ldloc.s V_4
+	IL_003d: callvirt System.Boolean MuttAI.BaseGameEntity::HandleMessage(MuttAI.Messaging.MessageType,System.Int32,System.Int32,System.Object)
+	IL_0042: stloc.s V_5
+	IL_0044: ret
+	IL_0045: newobj System.Void System.NullReferenceException::.ctor()
+	IL_004a: throw
+	
+
+Method: System.Void DroneDepositing::ExecuteInFixedUpdate(MuttAI.BaseGameEntity):	Method Body (x86 ASM):
+		0x1804B4010 push rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B4012 sub rsp,40h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 64
+		0x1804B4016 mov rbx,[rcx+10h]		; DEBUG: {Register}/RBX {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1804B401A test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804B401D je near ptr 00000001804B40B6h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4023 mov rax,[1832AA1F8h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6495576568 | None ||| N/A | N/A
+		0x1804B402A test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804B402D jne short 00000001804B4047h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B402F lea rcx,[18297B9D8h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6485948888 | None ||| N/A | N/A
+		0x1804B4036 call 0000000180323E10h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B403B test rax,rax		; DEBUG: {Register}/RAX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804B403E je short 00000001804B40BCh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4040 mov [1832AA1F8h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RIP | 6495576568 | None ||| N/A | N/A
+		0x1804B4047 movaps [rsp+30h],xmm6		; DEBUG: {Memory}/None {Register}/XMM6 ||| RSP | 48 | None ||| N/A | N/A
+		0x1804B404C call rax		; DEBUG: {Register}/RAX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B404E cmp byte ptr [183298856h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 0
+		0x1804B4055 movaps xmm6,xmm0		; DEBUG: {Register}/XMM6 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1804B4058 jne short 00000001804B406Dh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B405A lea rcx,[1830F62D0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x1804B4061 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4066 mov byte ptr [183298856h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495504470 | None ||| N/A | 1
+		0x1804B406D mov rax,[1830F62D0h]		; DEBUG: {Register}/RAX {Memory}/None ||| RIP | 6493790928 | None ||| N/A | N/A
+		0x1804B4074 mov rdx,[rax+0B8h]		; DEBUG: {Register}/RDX {Memory}/None ||| RAX | 184 | None ||| N/A | N/A
+		0x1804B407B movss xmm1,dword ptr [rdx+4]		; DEBUG: {Register}/XMM1 {Memory}/None ||| RDX | 4 | None ||| N/A | N/A
+		0x1804B4080 mov r10,[rbx]		; DEBUG: {Register}/R10 {Memory}/None ||| RBX | 0 | None ||| N/A | N/A
+		0x1804B4083 xor r9d,r9d		; DEBUG: {Register}/R9D {Register}/R9D ||| None | 0 | None ||| N/A | N/A
+		0x1804B4086 movss xmm0,dword ptr [rdx]		; DEBUG: {Register}/XMM0 {Memory}/None ||| RDX | 0 | None ||| N/A | N/A
+		0x1804B408A mov rcx,rbx		; DEBUG: {Register}/RCX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804B408D unpcklps xmm0,xmm1		; DEBUG: {Register}/XMM0 {Register}/XMM1 ||| None | 0 | None ||| N/A | N/A
+		0x1804B4090 movaps xmm1,xmm6		; DEBUG: {Register}/XMM1 {Register}/XMM6 ||| None | 0 | None ||| N/A | N/A
+		0x1804B4093 movq r8,xmm0		; DEBUG: {Register}/R8 {Register}/XMM0 ||| None | 0 | None ||| N/A | N/A
+		0x1804B4098 mov rax,[r10+4B0h]		; DEBUG: {Register}/RAX {Memory}/None ||| R10 | 1200 | None ||| N/A | N/A
+		0x1804B409F mov [rsp+20h],rax		; DEBUG: {Memory}/None {Register}/RAX ||| RSP | 32 | None ||| N/A | N/A
+		0x1804B40A4 call qword ptr [r10+4A8h]		; DEBUG: {Memory}/None {Register}/None ||| R10 | 1192 | None ||| N/A | N/A
+		0x1804B40AB movaps xmm6,[rsp+30h]		; DEBUG: {Register}/XMM6 {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1804B40B0 add rsp,40h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 64
+		0x1804B40B4 pop rbx		; DEBUG: {Register}/RBX {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B40B5 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B40B6 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B40BB int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DroneDepositing::ExecuteInFixedUpdate(MuttAI.BaseGameEntity):
+		End of function at 0x1804B40BC
+		Absolute End is at 0x1804B40BC
+		Identified Jump Destination addresses:
+
+		0x1804B4010: Saves the content of rbx to the stack
+		0x1804B4016: [!] Reads field drone from {'this' (function parameter, type DroneDepositing)} and stores in a new local {'drone' (type TransportDrone)}
+
+		0x1804B401A: [!] Compares {'drone' (type TransportDrone)} and 0
+		0x1804B401D: Jumps to 0x1804B40B6 (which throws a NRE) if drone equals 0. Implicitly present in managed code, so ignored here.
+		0x1804B4023: Loads string "È;õçÃ" into register rax as constant UnityEngine.Time.get_fixedDeltaTime
+		0x1804B402A: Compares UnityEngine.Time.get_fixedDeltaTime and 0
+		0x1804B402D: Jumps to 0x1804B4047 if UnityEngine.Time.get_fixedDeltaTime != 0
+
+		0x1804B402F: Loads string "UnityEngine.Time::get_fixedDeltaTime()" into register rcx as constant {'constant4' (constant value of type Cpp2IL.Core.Analysis.ResultModels.Il2CppString)}
+		0x1804B4036: Looks up unity ICall by name "UnityEngine.Time::get_fixedDeltaTime()" which resolves to System.Single UnityEngine.Time::get_fixedDeltaTime()
+		0x1804B403B: Compares UnityEngine.Time.get_fixedDeltaTime and 0
+		0x1804B403E: Jumps to 0x1804B40BC if UnityEngine.Time.get_fixedDeltaTime equals 0
+
+		0x1804B404C: [!] Calls static managed method System.Single UnityEngine.Time::get_fixedDeltaTime() and stores the result in {'fixedDeltaTime' (type System.Single)}
+
+		0x1804B404E: Compares {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} and 0
+		0x1804B4055: Copies {'fixedDeltaTime' (type System.Single)} from xmm0 into xmm6
+		0x1804B4058: Jumps to 0x1804B406D if {Unknown Global at 0x183298856, first ten bytes are [0 0 152 104 234 2 128 227 0 0], or as chars "  hêã  "} != 0
+
+		0x1804B405A: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rcx
+		0x1804B4061: Initializes runtime metadata value UnityEngine.Vector2
+		0x1804B406D: Loads the type definition for managed type UnityEngine.Vector2 as a constant "Vector2" in rax
+		0x1804B4074: Loads the pointer to the static fields for UnityEngine.Vector2 and stores it in constant10 in register rdx
+		0x1804B407B: [!] Reads the static field  into new local 
+		0x1804B4080: Loads the class pointer from drone into a constant constant11 in register r10
+		0x1804B4086: [!] Reads the static field UnityEngine.Vector2 UnityEngine.Vector2::zeroVector into new local zeroVector
+		0x1804B408A: Copies {'drone' (type TransportDrone)} from rbx into rcx
+		0x1804B4090: Copies {'fixedDeltaTime' (type System.Single)} from xmm6 into xmm1
+		0x1804B4098: Loads the pointer to the implementation of virtual function System.Void BaseCharacter::Move(System.Single,UnityEngine.Vector2,System.Boolean) specific to TransportDrone from the class pointer in r10, slot 55 (from memory offset 1200) and stores in constant constant12
+		0x1804B409F: Moves BaseCharacter.Move (type Mono.Cecil.MethodDefinition) from register rax to the stack at offset 32 (0x20) as a new local local6
+		0x1804B40A4: [!] Calls managed method System.Void BaseCharacter::Move(System.Single,UnityEngine.Vector2,System.Boolean) on instance {'drone' (type TransportDrone)} ;  - Arguments are incorrect?
+
+		0x1804B40AB: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register xmm6 as new constant constant13
+		0x1804B40B5: [!] Returns from the function
+
+		0x1804B40B6: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DroneDepositing
+	System.Void ExecuteInFixedUpdate(MuttAI.BaseGameEntity entity)
+		TransportDrone drone = this.drone
+
+		System.Single fixedDeltaTime = UnityEngine.Time.fixedDeltaTime
+		  = .
+		UnityEngine.Vector2 zeroVector = UnityEngine.Vector2.zeroVector
+
+		drone.Move()
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.StaticFieldToRegAction at (0x1804B407B) is corrupt (Couldn't identify the field being read (or its type).) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void DroneDepositing::Exit(MuttAI.BaseGameEntity):	Method Body (x86 ASM):
+		0x1804B0880 sub rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1804B0884 cmp qword ptr [rcx+10h],0		; DEBUG: {Memory}/None {Immediate8to64}/None ||| RCX | 16 | None ||| N/A | 0
+		0x1804B0889 je short 00000001804B0890h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B088B add rsp,28h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 40
+		0x1804B088F ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B0890 call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B0895 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DroneDepositing::Exit(MuttAI.BaseGameEntity):
+		End of function at 0x1804B0896
+		Absolute End is at 0x1804B0896
+		Identified Jump Destination addresses:
+
+		0x1804B0884: [!] Compares {field drone, read from local {'this' (function parameter, type DroneDepositing)}} and 0
+		0x1804B0889: Jumps to 0x1804B0890 (which throws a NRE) if this.drone equals 0. Implicitly present in managed code, so ignored here.
+		0x1804B088F: [!] Returns from the function
+
+		0x1804B0890: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DroneDepositing
+	System.Void Exit(MuttAI.BaseGameEntity entity)
+		return
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	IL_0000: ret
+	IL_0001: newobj System.Void System.NullReferenceException::.ctor()
+	IL_0006: throw
+	
+
+Method: System.Boolean DroneDepositing::OnMessage(MuttAI.BaseGameEntity,MuttAI.Messaging.Telegram):	Method Body (x86 ASM):
+		0x1804B4480 mov [rsp+8],rbx		; DEBUG: {Memory}/None {Register}/RBX ||| RSP | 8 | None ||| N/A | N/A
+		0x1804B4485 push rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B4486 sub rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1804B448A mov rdi,[rcx+10h]		; DEBUG: {Register}/RDI {Memory}/None ||| RCX | 16 | None ||| N/A | N/A
+		0x1804B448E mov rbx,r8		; DEBUG: {Register}/RBX {Register}/R8 ||| None | 0 | None ||| N/A | N/A
+		0x1804B4491 test rdi,rdi		; DEBUG: {Register}/RDI {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1804B4494 je short 00000001804B44FAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B4496 cmp byte ptr [18329A588h],0		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495511944 | None ||| N/A | 0
+		0x1804B449D jne short 00000001804B44B2h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B449F lea rcx,[183111ED0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493904592 | None ||| N/A | N/A
+		0x1804B44A6 call 00000001802A8560h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B44AB mov byte ptr [18329A588h],1		; DEBUG: {Memory}/None {Immediate8}/None ||| RIP | 6495511944 | None ||| N/A | 1
+		0x1804B44B2 test rbx,rbx		; DEBUG: {Register}/RBX {Register}/RBX ||| None | 0 | None ||| N/A | N/A
+		0x1804B44B5 je short 00000001804B44FAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B44B7 cmp dword ptr [rbx+18h],9		; DEBUG: {Memory}/None {Immediate8to32}/None ||| RBX | 24 | None ||| N/A | 9
+		0x1804B44BB je short 00000001804B44CAh		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B44BD xor al,al		; DEBUG: {Register}/AL {Register}/AL ||| None | 0 | None ||| N/A | N/A
+		0x1804B44BF mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1804B44C4 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1804B44C8 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B44C9 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B44CA mov rcx,[183111ED0h]		; DEBUG: {Register}/RCX {Memory}/None ||| RIP | 6493904592 | None ||| N/A | N/A
+		0x1804B44D1 call 00000001802EE990h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B44D6 mov r9,[rdi]		; DEBUG: {Register}/R9 {Memory}/None ||| RDI | 0 | None ||| N/A | N/A
+		0x1804B44D9 mov rdx,rax		; DEBUG: {Register}/RDX {Register}/RAX ||| None | 0 | None ||| N/A | N/A
+		0x1804B44DC mov rcx,rdi		; DEBUG: {Register}/RCX {Register}/RDI ||| None | 0 | None ||| N/A | N/A
+		0x1804B44DF mov r8,[r9+1F0h]		; DEBUG: {Register}/R8 {Memory}/None ||| R9 | 496 | None ||| N/A | N/A
+		0x1804B44E6 call qword ptr [r9+1E8h]		; DEBUG: {Memory}/None {Register}/None ||| R9 | 488 | None ||| N/A | N/A
+		0x1804B44ED mov rbx,[rsp+30h]		; DEBUG: {Register}/RBX {Memory}/None ||| RSP | 48 | None ||| N/A | N/A
+		0x1804B44F2 mov al,1		; DEBUG: {Register}/AL {Immediate8}/None ||| None | 0 | None ||| N/A | 1
+		0x1804B44F4 add rsp,20h		; DEBUG: {Register}/RSP {Immediate8to64}/None ||| None | 0 | None ||| N/A | 32
+		0x1804B44F8 pop rdi		; DEBUG: {Register}/RDI {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B44F9 ret		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+		0x1804B44FA call 00000001802CDD80h		; DEBUG: {NearBranch64}/None {Register}/None ||| None | 1 | None ||| N/A | N/A
+		0x1804B44FF int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Boolean DroneDepositing::OnMessage(MuttAI.BaseGameEntity,MuttAI.Messaging.Telegram):
+		End of function at 0x1804B4500
+		Absolute End is at 0x1804B4500
+		Identified Jump Destination addresses:
+
+		0x1804B4485: Saves the content of rdi to the stack
+		0x1804B448A: [!] Reads field drone from {'this' (function parameter, type DroneDepositing)} and stores in a new local {'drone' (type TransportDrone)}
+
+		0x1804B448E: Copies {'message' (function parameter, type MuttAI.Messaging.Telegram)} from r8 into rbx
+		0x1804B4491: [!] Compares {'drone' (type TransportDrone)} and 0
+		0x1804B4494: Jumps to 0x1804B44FA (which throws a NRE) if drone equals 0. Implicitly present in managed code, so ignored here.
+		0x1804B4496: Compares {Unknown Global at 0x18329A588, first ten bytes are [147 63 3 0 56 128 235 2 160 63], or as chars "? 8ë ?"} and 0
+		0x1804B449D: Jumps to 0x1804B44B2 if {Unknown Global at 0x18329A588, first ten bytes are [147 63 3 0 56 128 235 2 160 63], or as chars "? 8ë ?"} != 0
+
+		0x1804B449F: Loads the type definition for managed type DroneMovingUp as a constant "DroneMovingUp" in rcx
+		0x1804B44A6: Initializes runtime metadata value DroneMovingUp
+		0x1804B44B2: [!] Compares {'message' (function parameter, type MuttAI.Messaging.Telegram)} and 0
+		0x1804B44B5: Jumps to 0x1804B44FA (which throws a NRE) if message equals 0. Implicitly present in managed code, so ignored here.
+		0x1804B44B7: [!] Compares {field message, read from local {'message' (function parameter, type MuttAI.Messaging.Telegram)}} and 9
+		0x1804B44BB: Jumps to 0x1804B44CA (which is an if statement's body) if message.message equals 9 ;  - Increasing indentation - is standard if, unimportant is False
+
+		0x1804B44BD: Clears register rax, yielding zero-local {'local4' (type System.Int32)}
+		0x1804B44BF: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant7
+		0x1804B44C9: [!] Returns {'local4' (type System.Int32)} from the function
+
+		0x1804B44CA: Loads the type definition for managed type DroneMovingUp as a constant "DroneMovingUp" in rcx
+		0x1804B44D1: [!] Allocates an instance of type DroneMovingUp and stores it as droneMovingUp in rax.
+
+		0x1804B44D6: Loads the class pointer from drone into a constant constant9 in register r9
+		0x1804B44D9: Copies {'droneMovingUp' (type DroneMovingUp)} from rax into rdx
+		0x1804B44DC: Copies {'drone' (type TransportDrone)} from rdi into rcx
+		0x1804B44DF: Loads the pointer to the implementation of virtual function System.Void MuttAI.BaseGameEntity::ChangeState(MuttAI.FSM.State) specific to TransportDrone from the class pointer in r9, slot 11 (from memory offset 496) and stores in constant constant10
+		0x1804B44E6: [!] Calls managed method System.Void MuttAI.BaseGameEntity::ChangeState(MuttAI.FSM.State) on instance {'drone' (type TransportDrone)} with arguments [{'droneMovingUp' (type DroneMovingUp)}]
+
+		0x1804B44ED: Reads unknown value in stack, offset 48 (0x30) and stores the pointer in register rbx as new constant constant11
+		0x1804B44F2: [!] Writes the constant 0x1 into operand True (type UInt64) in register rax
+		0x1804B44F9: [!] Returns True from the function
+
+		0x1804B44FA: [!] Constructs and throws an exception of kind System.NullReferenceException
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DroneDepositing
+	System.Boolean OnMessage(MuttAI.BaseGameEntity entity, MuttAI.Messaging.Telegram message)
+		TransportDrone drone = this.drone
+
+		if (message.message != 9)
+		    ulong local4 = 0
+		    return local4
+		endif
+        
+		DroneMovingUp droneMovingUp = new DroneMovingUp()
+
+		drone.ChangeState(droneMovingUp) //(State newState)
+		return True
+		throw new System.NullReferenceException()
+
+
+Generated IL:
+	Action of type Cpp2IL.Core.Analysis.Actions.x86.Important.ReturnFromFunctionAction at (0x1804B44C9) is corrupt (Return value has a type of System.Int32, expecting an object of type System.Boolean) and cannot be created as IL. Aborting here.
+
+
+Method: System.Void DroneDepositing::.ctor():	Method Body (x86 ASM):
+		0x18037A680 ret 0		; DEBUG: {Immediate16}/None {Register}/None ||| None | 0 | None ||| 0 | N/A
+		0x18037A683 int 3		; DEBUG: {Register}/None {Register}/None ||| None | 0 | None ||| N/A | N/A
+
+	Method Synopsis For Method System.Void DroneDepositing::.ctor():
+		End of function at 0x18037A684
+		Absolute End is at 0x18037A684
+		Identified Jump Destination addresses:
+
+
+
+
+	Generated Pseudocode:
+
+	Declaring Type: DroneDepositing
+	System.Void .ctor()
+
+
+Generated IL:
+	
+

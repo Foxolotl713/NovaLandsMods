@@ -1,0 +1,206 @@
+﻿using System;
+using System.Reflection;
+using System.Linq;
+using HarmonyLib;
+using MelonLoader;
+
+namespace NovaLandsArchipelago
+{
+    public static class HarmonyPatches
+    {
+        // Apply Harmony patches used by this mod
+        public static void Apply(global::HarmonyLib.Harmony harmony)
+        {
+            try
+            {
+                var targetType = AccessTools.TypeByName("SaveToFileManager");
+                if (targetType == null)
+                {
+                    MelonLogger.Error("HarmonyPatches: Unable to find type 'SaveToFileManager'.");
+                }
+                else
+                {
+                    var targetMethod = AccessTools.Method(targetType, "Load", new Type[] { typeof(string) });
+                    if (targetMethod == null)
+                    {
+                        MelonLogger.Error("HarmonyPatches: Unable to find method 'Load(string)'.");
+                    }
+                    else
+                    {
+                        var prefix = typeof(HarmonyPatches).GetMethod(nameof(Load_Prefix), BindingFlags.Static | BindingFlags.NonPublic);
+                        harmony.Patch(targetMethod, prefix: new HarmonyMethod(prefix));
+                        MelonLogger.Msg("HarmonyPatches: Patched SaveToFileManager.Load(string).");
+                    }
+                }
+
+                // Patch ResearchesList.OnUnlock (call OnResearchPurchased after unlock)
+                try
+                {
+                var researchesType = AccessTools.TypeByName("ResearchesList");
+                if (researchesType == null)
+                {
+                    MelonLogger.Msg("HarmonyPatches: ResearchesList type not found; skipping research patches.");
+                }
+                else
+                {
+                    // Patch OnResearched if present (called when a research completes)
+                    var onResearched = researchesType.GetMethod("OnResearched", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                    if (onResearched != null)
+                    {
+                        var prefix = typeof(HarmonyPatches).GetMethod(nameof(OnResearch_Prefix), BindingFlags.Static | BindingFlags.NonPublic);
+                        harmony.Patch(onResearched, prefix: new HarmonyMethod(prefix));
+                        MelonLogger.Msg("HarmonyPatches: Patched ResearchesList.OnResearched with prefix.");
+                    }
+                    else
+                    {
+                        MelonLogger.Msg("HarmonyPatches: ResearchesList.OnResearched not found; skipping.");
+                    }
+                }
+
+                // Patch general Unlock-style actions (island/store/house unlocks) by looking for types containing "Unlock"
+                try
+                {
+                    var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+                    foreach (var asm in assemblies)
+                    {
+                        Type[] types = null;
+                        try { types = asm.GetTypes(); } catch { continue; }
+                        foreach (var t in types)
+                        {
+                            if (t.Name.IndexOf("Unlock", StringComparison.OrdinalIgnoreCase) >= 0)
+                            {
+                                // try to patch Setup or InitialSetup methods to intercept purchases/unlocks
+                                var setup = t.GetMethod("Setup", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                                var initial = t.GetMethod("InitialSetup", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                                MethodInfo m = setup ?? initial;
+                                if (m != null)
+                                {
+                                    var prefix = typeof(HarmonyPatches).GetMethod(nameof(OnUnlockGeneric_Prefix), BindingFlags.Static | BindingFlags.NonPublic);
+                                    harmony.Patch(m, prefix: new HarmonyMethod(prefix));
+                                    MelonLogger.Msg($"HarmonyPatches: Patched {t.FullName}.{m.Name} to intercept unlock/purchase.");
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MelonLogger.Error($"HarmonyPatches: Failed while scanning unlock types: {ex}");
+                }
+                }
+                catch (Exception ex)
+                {
+                    MelonLogger.Error($"HarmonyPatches: Failed to patch ResearchesList.OnUnlock: {ex}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MelonLogger.Error($"HarmonyPatches: Failed to apply patch: {ex}");
+            }
+        }
+
+        // Prefix runs before SaveToFileManager.Load(string fileName).
+        // Returning true allows the original method to run; returning false would skip it.
+        static bool Load_Prefix(string fileName)
+        {
+            MelonLogger.Msg($"SaveToFileManager.Load called with fileName: {fileName}");
+            return true;
+        }
+
+        // Prefix for research completion. Attempts to extract the research name and send a location check
+        // Returning false skips the original method (preventing local reward grants).
+        static bool OnResearch_Prefix(object descriptor)
+        {
+            try
+            {
+                string name = null;
+                if (descriptor != null)
+                {
+                    var t = descriptor.GetType();
+                    // Try common property/method names discovered in method dumps
+                    var mn = t.GetMethod("get_ResearchName", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                    if (mn != null)
+                    {
+                        name = mn.Invoke(descriptor, null) as string;
+                    }
+                    else
+                    {
+                        var prop = t.GetProperty("ResearchName", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                        if (prop != null) name = prop.GetValue(descriptor) as string;
+                    }
+                    if (name == null)
+                    {
+                        // fallback to UnityEngine.Object.name via get_name
+                        var gn = t.GetMethod("get_name", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                        if (gn != null) name = gn.Invoke(descriptor, null) as string;
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(name) && Core.Instance != null)
+                {
+                    Core.Instance.CheckLocation(name);
+                    return false; // skip original to avoid granting local reward
+                }
+            }
+            catch (Exception ex)
+            {
+                MelonLogger.Error($"HarmonyPatches: Exception in OnResearch_Prefix: {ex}");
+            }
+            // If we couldn't handle it, let original method run.
+            return true;
+        }
+
+        // Generic prefix used for Unlock-style actions (islands/stores/houses). Tries to extract a name
+        // and send a location check instead of letting the original grant the reward.
+        static bool OnUnlockGeneric_Prefix(object __instance, object[] __args)
+        {
+            try
+            {
+                string name = null;
+                // try to find a string argument
+                if (__args != null)
+                {
+                    foreach (var a in __args)
+                    {
+                        if (a is string s && !string.IsNullOrEmpty(s))
+                        {
+                            name = s;
+                            break;
+                        }
+                        if (a != null)
+                        {
+                            var t = a.GetType();
+                            var mn = t.GetMethod("get_Name", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+                                     ?? t.GetMethod("get_name", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                            if (mn != null)
+                            {
+                                var val = mn.Invoke(a, null) as string;
+                                if (!string.IsNullOrEmpty(val)) { name = val; break; }
+                            }
+                        }
+                    }
+                }
+
+                // fallback: inspect instance fields/properties for name-like members
+                if (name == null && __instance != null)
+                {
+                    var t = __instance.GetType();
+                    var prop = t.GetProperty("Name", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic)
+                               ?? t.GetProperty("name", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                    if (prop != null) name = prop.GetValue(__instance) as string;
+                }
+
+                if (!string.IsNullOrEmpty(name) && Core.Instance != null)
+                {
+                    Core.Instance.CheckLocation(name);
+                    return false; // skip original
+                }
+            }
+            catch (Exception ex)
+            {
+                MelonLogger.Error($"HarmonyPatches: Exception in OnUnlockGeneric_Prefix: {ex}");
+            }
+            return true;
+        }
+    }
+}
