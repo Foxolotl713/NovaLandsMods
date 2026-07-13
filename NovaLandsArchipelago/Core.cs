@@ -10,6 +10,7 @@ using AwesomeNamespace;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
+using UnityEngine.UI;
 
 [assembly: MelonInfo(typeof(NovaLandsArchipelago.Core), "NovaLandsArchipelago", "0.1.0", "Gott", null)]
 [assembly: MelonGame("BEHEMUTT", "Nova Lands")]
@@ -138,7 +139,7 @@ namespace NovaLandsArchipelago
                 }
             }
 
-            if (!connected || 1 == 1)
+            if (!connected)
             {
                 // Background box covering all fields
                 GUI.Box(new Rect(x - 6, y - 8, width + 16, height * 3 + spacing * 2 + 16), "");
@@ -189,64 +190,12 @@ namespace NovaLandsArchipelago
                         LoggerInstance.Error($"Failed to connect: {result}");
                     }
                 }
-                y += spacing;
-                if (GUI.Button(new Rect(x, y, 120, height), new GUIContent("Research"), buttonStyle))
-                {
-                    // Obtain a live Il2Cpp ResearchesList instance (cannot be null or a managed object)
-                    var researchesListType = AccessTools.TypeByName("ResearchesList");
-                    if (researchesListType == null)
-                    {
-                        LoggerInstance.Msg("ResearchesList type not found in game assemblies.");
-                        Instance.CheckLocation("MASS_PRODUCTION_I_NAME");
-                        return;
-                    }
-
-                    var researchesListInstance = UnityEngine.Object.FindObjectOfType(researchesListType, false);
-                    if (researchesListInstance == null)
-                    {
-                        LoggerInstance.Msg("No ResearchesList instance found in scene.");
-                        Instance.CheckLocation("MASS_PRODUCTION_I_NAME");
-                        return;
-                    }
-
-                    // Create the game's descriptor type (Il2Cpp-backed) instead of the local managed ResearchDescriptor.
-                    var descriptorType = AccessTools.TypeByName("ResearchDescriptor") ?? AccessTools.TypeByName("ResearchesList+ResearchDescriptor");
-                    object descriptor = null;
-                    if (descriptorType != null)
-                    {
-                        try
-                        {
-                            descriptor = Activator.CreateInstance(descriptorType);
-                            var field = descriptorType.GetField("researchName", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                            if (field != null)
-                                field.SetValue(descriptor, "MASS_PRODUCTION_I_NAME");
-                            else
-                            {
-                                var prop = descriptorType.GetProperty("researchName", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                                if (prop != null)
-                                    prop.SetValue(descriptor, "MASS_PRODUCTION_I_NAME");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            LoggerInstance.Msg($"Failed to create Il2Cpp descriptor instance: {ex}");
-                            descriptor = null;
-                        }
-                    }
-
-                    if (descriptor == null)
-                    {
-                        // Fallback to safe path to avoid Il2CppInterop exceptions.
-                        LoggerInstance.Msg("Descriptor unavailable — calling CheckLocation directly.");
-                        Instance.CheckLocation("MASS_PRODUCTION_I_NAME");
-                        return;
-                    }
-
-                    // Call ReversePatch with a valid Il2Cpp __instance and Il2Cpp descriptor
-                    ResearchesList_OnResearched.ReversePatch(researchesListInstance, descriptor);
-                }
             }
-
+            y += spacing;
+            if (GUI.Button(new Rect(x + 130, y, 120, height), new GUIContent("Zoom"), buttonStyle))
+            {
+                Traverse.Create(typeof(MainMenu)).Field("discordPermanentInviteLink").SetValue("https://google.com");
+            }
         }
         public void CheckLocation(string location)
         {
@@ -262,11 +211,101 @@ namespace NovaLandsArchipelago
                 case "MASS_PRODUCTION_I_NAME":
                     check = "Research Mass Production I";
                     break;
+                case "MASS_PRODUCTION_II_NAME":
+                    check = "Research Mass Production II";
+                    break;
                 case "JETPACK_I_NAME":
                     check = "Research Jetpack";
                     break;
                 case "3D_PRINTING_I_NAME":
                     check = "Research Explorer Needs I";
+                    break;
+                case "AUTOMATION_I_NAME":
+                    check = "Research Automation I";
+                    break;
+                case "AUTOMATION_II_NAME":
+                    check = "Research Automation II";
+                    break;
+                case "CONTAINERS_I_NAME":
+                    check = "Research Deposits I";
+                    break;
+                case "CONTAINERS_II_NAME":
+                    check = "Research Deposits II";
+                    break;
+                case "ENERGY_RIFLE_I_NAME":
+                    check = "Research Energy Rifle";
+                    break;
+                case "EXPLORER_NEEDS_II_NAME":
+                    check = "Research Explorer Needs II";
+                    break;
+                case "ADVANCED_PRODUCTION_I_NAME":
+                    check = "Research Advanced Production I";
+                    break;
+                case "FARMING_I_NAME":
+                    check = "Research Farming I";
+                    break;
+                case "FARMING_II_NAME":
+                    check = "Research Farming II";
+                    break;
+                case "ADVANCED_PRODUCTION_II_NAME":
+                    check = "Research Advanced Production II";
+                    break;
+                case "RANCHING_I_NAME":
+                    check = "Research Ranching I";
+                    break;
+                case "MODULES_I_NAME":
+                    check = "Research Modules I";
+                    break;
+                case "RANCHING_II_NAME":
+                    check = "Research Ranching II";
+                    break;
+                case "RANCHING_III_NAME":
+                    check = "Research Ranching III";
+                    break;
+                case "EXPLORER_NEEDS_III_NAME":
+                    check = "Research Explorer Needs III";
+                    break;
+                case "POWER_III_NAME":
+                    check = "Research Power III";
+                    break;
+                case "ADVANCED_PRODUCTION_III_NAME":
+                    check = "Research Advanced Production III";
+                    break;
+                case "LIQUIDS_I_NAME":
+                    check = "Research Liquids I";
+                    break;
+                case "COMPLEX_PRODUCTION_I_NAME":
+                    check = "Research Complex Production I";
+                    break;
+                case "FARMING_III_NAME":
+                    check = "Research Farming III";
+                    break;
+                case "SHIELD_ARMOR_NAME":
+                    check = "Research Suit Armor";
+                    break;
+                case "EXPLORER_NEEDS_IV_NAME":
+                    check = "Research Explorer Needs IV";
+                    break;
+                case "SUPERHARD_MINERALS_NAME":
+                    check = "Research Superhard Minerals";
+                    break;
+                case "COMPLEX_PRODUCTION_II_NAME":
+                    check = "Research Complex Production II";
+                    break;
+                case "GLASS_WORKS_NAME":
+                    check = "Research Glass Works";
+                    break;
+                case "SUPERCOMPUTER_RESEARCH_NAME":
+                    check = "Research Supercomputer";
+                    break;
+                case "DRONES_NAME":
+                    check = "Research Mass Transport";
+                    break;
+                case "NUCLEAR_TECH_NAME":
+                    check = "Research Nuclear Tech";
+                    break;
+                case "HYPERCOMPUTER_NAME":
+                    check = "Research Hypercomputer";
                     break;
                 default:
                     LoggerInstance.Msg($"Unknown location checked: {location}");

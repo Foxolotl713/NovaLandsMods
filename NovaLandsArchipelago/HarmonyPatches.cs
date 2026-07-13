@@ -8,9 +8,9 @@ namespace NovaLandsArchipelago
     public class HarmonyPatches
     {
         public static Core core = Core.Instance;
-        public static string[] Types = ["ResearchesList", "ResearchesList"];
-        public static string[] Methods = ["OnResearched", "AddExtraContentResearch"];
-        public static Type[] classes = [typeof(ResearchesList_OnResearched), typeof(ResearchesList_SetTechState)];
+        public static string[] Types = ["ResearchesList", "ResearchesList", "PlayerCamera"];
+        public static string[] Methods = ["OnResearched", "AddExtraContentResearch", "SetZoom"];
+        public static Type[] classes = [typeof(ResearchesList_OnResearched), typeof(ResearchesList_SetTechState), typeof(PlayerCameraSetZoom)];
         public static void PatchAll()
         {
             // Create a new Harmony instance with a unique ID.
@@ -141,6 +141,21 @@ namespace NovaLandsArchipelago
         public static void ReversePatch(object __instance, object research)
         {
             Core.Instance.LoggerInstance.Msg("ResearchesList.SetTechState ReversePatch called on " + research);
+        }
+    }
+    public static class PlayerCameraSetZoom
+    {
+        public static void Prefix(object __instance, Single zoom)
+        {
+            Core.Instance.LoggerInstance.Msg("PlayerCamera.SetZoom Prefix called with zoom: " + zoom);
+        }
+        public static void Postfix(object __instance, Single zoom)
+        {
+            Core.Instance.LoggerInstance.Msg("PlayerCamera.SetZoom Postfix called with zoom: " + zoom);
+        }
+        public static void ReversePatch(object __instance, Single zoom)
+        {
+            Core.Instance.LoggerInstance.Msg("PlayerCamera.SetZoom ReversePatch called with zoom: " + zoom);
         }
     }
 }
