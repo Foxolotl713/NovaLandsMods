@@ -83,6 +83,11 @@ namespace NovaLandsArchipelago
         private enum FocusField { None, Server, Name, Password }
         private FocusField focused = FocusField.None;
 
+        private float zoomValue = 1f;
+        private const float ZoomMin = -1f;
+        private const float ZoomMax = 4f;
+        private float lastZoomValue = 4.125f;
+
         private void DrawMenu()
         {
             // Allow drawing UI even when connected so we can provide a test button for research purchase.
@@ -193,14 +198,41 @@ namespace NovaLandsArchipelago
                 }
             }
             y += spacing;
-            if (GUI.Button(new Rect(x + 130, y, 120, height), new GUIContent("Zoom in"), buttonStyle))
+
+            // Label for slider
+            GUI.Label(new Rect(x + 130, y, 120, height), $"Zoom: {zoomValue:0.00}");
+            y += height;
+
+            // Slider (adjusts orthographic size)
+            float newZoom = GUI.HorizontalSlider(new Rect(x + 130, y, 120, height), zoomValue, ZoomMin, ZoomMax);
+
+            // Apply change when slider moved
+            if (Math.Abs(newZoom - zoomValue) > 0.001f)
             {
-                UnityEngine.Camera.main.orthographicSize = 2f; // Adjust the zoom level as needed
+                zoomValue = newZoom;
+                foreach (var cam in UnityEngine.Camera.allCameras)
+                {
+                    if(cam!=UnityEngine.Camera.main)
+                    {
+                        cam.orthographic = true;
+                        cam.orthographicSize = (float)Math.Pow(4.125f, zoomValue);
+                    }
+                }
             }
             y += spacing;
-            if (GUI.Button(new Rect(x + 130, y, 120, height), new GUIContent("Zoom back"), buttonStyle))
+
+            // Keep reset button
+            if (GUI.Button(new Rect(x + 130, y, 120, height), new GUIContent("Reset zoom"), buttonStyle))
             {
-                UnityEngine.Camera.main.orthographicSize = 4.125f; // Adjust the zoom level as needed
+                zoomValue = 4.125f;
+                foreach (var cam in UnityEngine.Camera.allCameras)
+                {
+                    if(cam!=UnityEngine.Camera.main)
+                    {
+                        cam.orthographic = true;
+                        cam.orthographicSize = 4.125f;
+                    }
+                }
             }
         }
         public void CheckLocation(string location)
