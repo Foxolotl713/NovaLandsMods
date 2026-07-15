@@ -5,12 +5,12 @@ using HarmonyLib;
 using MelonLoader;
 using UnityEngine;
 using MelonLoader.Utils;
-using Il2Cpp;
-using AwesomeNamespace;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 [assembly: MelonInfo(typeof(NovaLandsArchipelago.Core), "NovaLandsArchipelago", "0.1.0", "Gott", null)]
 [assembly: MelonGame("BEHEMUTT", "Nova Lands")]
@@ -24,7 +24,8 @@ namespace NovaLandsArchipelago
         private MelonPreferences_Entry<string> Server;
         private MelonPreferences_Entry<string> PlayerName;
         private MelonPreferences_Entry<string> Password;
-        public static bool connected = false;
+        public static bool connected = true;
+        public static HarmonyLib.Harmony harmony;
         public Dictionary<string, int> LocationIDs = new()
         {
             {"Research Mass Production I", 1},
@@ -65,17 +66,17 @@ namespace NovaLandsArchipelago
             {"Research Nuclear Tech", 36},
             {"Research Hypercomputer", 37},
         };
-        public HarmonyPatches HarmonyPatches = new();
         public override void OnInitializeMelon()
         {
             Instance = this;
+            harmony = this.HarmonyInstance;
             LoggerInstance.Msg("Initialized.");
             MelonEvents.OnGUI.Subscribe(DrawMenu, 100); // The higher the value, the lower the priority.
             ConnectionData = MelonPreferences.CreateCategory("ConnectionData");
             Server = ConnectionData.CreateEntry("Server", "archipelago.gg:40000");
             PlayerName = ConnectionData.CreateEntry("PlayerName", "Player1");
             Password = ConnectionData.CreateEntry("Password", "");
-            HarmonyPatches.PatchAll();
+            Patches.Init();
         }
 
         public ArchipelagoSession archipelagoSession;
@@ -177,7 +178,7 @@ namespace NovaLandsArchipelago
                     var version = Version.Parse("0.6.7");
                     LoginResult result;
                     // Call TryConnectAndLogin with an empty string[] for the fifth parameter and the password as the sixth
-                    result = session.TryConnectAndLogin("Nova Lands", PlayerName.Value, ItemsHandlingFlags.AllItems, version, [], Password.Value);
+                    result = session.TryConnectAndLogin("Nova Lands", PlayerName.Value, ItemsHandlingFlags.AllItems, version, System.Array.Empty<string>(), Password.Value);
                     if (result.Successful)
                     {
                         LoggerInstance.Msg("Successfully connected to Archipelago server!");
@@ -192,9 +193,14 @@ namespace NovaLandsArchipelago
                 }
             }
             y += spacing;
-            if (GUI.Button(new Rect(x + 130, y, 120, height), new GUIContent("Zoom"), buttonStyle))
+            if (GUI.Button(new Rect(x + 130, y, 120, height), new GUIContent("Zoom in"), buttonStyle))
             {
-                Traverse.Create(typeof(MainMenu)).Field("discordPermanentInviteLink").SetValue("https://google.com");
+                UnityEngine.Camera.main.orthographicSize = 2f; // Adjust the zoom level as needed
+            }
+            y += spacing;
+            if (GUI.Button(new Rect(x + 130, y, 120, height), new GUIContent("Zoom back"), buttonStyle))
+            {
+                UnityEngine.Camera.main.orthographicSize = 4.125f; // Adjust the zoom level as needed
             }
         }
         public void CheckLocation(string location)
@@ -316,6 +322,12 @@ namespace NovaLandsArchipelago
                 archipelagoSession.Locations.CompleteLocationChecks(LocationIDs[check]);
                 LoggerInstance.Msg($"Checked location: {check} (ID: {LocationIDs[check]})");
             }
+        }
+        public static MethodInfo GetMethod(string MethodName, BindingFlags bindingAttributes = BindingFlags.NonPublic | BindingFlags.Static)
+        {
+            StackTrace stackTrace = new StackTrace();
+            Type callingType = stackTrace.GetFrame(1).GetMethod().DeclaringType;
+            return callingType.GetMethod(MethodName, bindingAttributes);
         }
     }
 
