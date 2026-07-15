@@ -1,6 +1,6 @@
-﻿using Archipelago.MultiClient.Net;
-using Archipelago.MultiClient.Net.Enums;
-using Archipelago.MultiClient.Net.Helpers;
+﻿//using Archipelago.MultiClient.Net;
+//using Archipelago.MultiClient.Net.Enums;
+//using Archipelago.MultiClient.Net.Helpers;
 using HarmonyLib;
 using MelonLoader;
 using UnityEngine;
@@ -79,7 +79,7 @@ namespace NovaLandsArchipelago
             Patches.Init();
         }
 
-        public ArchipelagoSession archipelagoSession;
+        //public ArchipelagoSession archipelagoSession;
         private enum FocusField { None, Server, Name, Password }
         private FocusField focused = FocusField.None;
 
@@ -101,7 +101,7 @@ namespace NovaLandsArchipelago
             GUIStyle buttonStyle = new(GUI.skin.button);
 
             // Handle keyboard input when a field is focused
-            Event e = Event.current;
+            /*Event e = Event.current;
             if (!connected && e.type == EventType.KeyDown && focused != FocusField.None)
             {
                 if (e.keyCode == KeyCode.Backspace)
@@ -196,7 +196,7 @@ namespace NovaLandsArchipelago
                         LoggerInstance.Error($"Failed to connect: {result}");
                     }
                 }
-            }
+            }*/
             y += spacing;
 
             // Label for slider
@@ -224,7 +224,7 @@ namespace NovaLandsArchipelago
             // Keep reset button
             if (GUI.Button(new Rect(x + 130, y, 120, height), new GUIContent("Reset zoom"), buttonStyle))
             {
-                zoomValue = 4.125f;
+                zoomValue = 1f;
                 foreach (var cam in UnityEngine.Camera.allCameras)
                 {
                     if(cam!=UnityEngine.Camera.main)
@@ -235,7 +235,7 @@ namespace NovaLandsArchipelago
                 }
             }
         }
-        public void CheckLocation(string location)
+        /*public void CheckLocation(string location)
         {
             if (!connected)
             {
@@ -354,7 +354,7 @@ namespace NovaLandsArchipelago
                 archipelagoSession.Locations.CompleteLocationChecks(LocationIDs[check]);
                 LoggerInstance.Msg($"Checked location: {check} (ID: {LocationIDs[check]})");
             }
-        }
+        }*/
         public static MethodInfo GetMethod(string MethodName, BindingFlags bindingAttributes = BindingFlags.NonPublic | BindingFlags.Static)
         {
             StackTrace stackTrace = new StackTrace();
