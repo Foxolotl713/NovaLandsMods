@@ -12,11 +12,11 @@ namespace NovaLandsArchipelago
         public static Type ResearchesList = GetResearchesList();
         public static Dictionary<string, string> replacements = new()
         {
-            {"OPTIONS", "Wanna change something?"},
+            /*{"OPTIONS", "Wanna change something?"},
             {"EXIT", "DON'T LEAVE ME!!" },
             {"PLAY", "Get your head in the game!" },
             {"EXTRAS", "Cool Skins and stuff" },
-            {"CREDITS", "Meet the team!" }
+            {"CREDITS", "Meet the team!" }*/
         };
 
         private static Type GetTMP_TextDynamic()
@@ -51,7 +51,6 @@ namespace NovaLandsArchipelago
             Core.harmony.Patch(typeof(TextMesh).GetMethod("set_text"), new HarmonyMethod(Core.GetMethod(nameof(TextPatch))));
             Core.harmony.Patch(TMP_Text.GetMethod("set_text"), new HarmonyMethod(Core.GetMethod(nameof(TextPatch))));
             //Core.harmony.Patch(ResearchesList.GetMethod("OnResearched"), new HarmonyMethod(Core.GetMethod(nameof(ResearchesListPatch))));
-            Core.harmony.Patch(typeof(Camera).GetMethod("SetZoom"), new HarmonyMethod(Core.GetMethod(nameof(CameraPatch))));
         }
 
         internal static void TextPatch(ref string value)
@@ -60,11 +59,6 @@ namespace NovaLandsArchipelago
             {
                 value = replacements[value];
             }
-        }
-        internal static void CameraPatch(ref float zoom)
-        {
-            zoom = 0.5f; // Set the zoom level to 0.5
-            Core.Instance.LoggerInstance.Msg($"Camera zoom level changed to: {zoom}");
         }
         internal static void ResearchesListPatch(ref ResearchDescriptor descriptor)
         {
