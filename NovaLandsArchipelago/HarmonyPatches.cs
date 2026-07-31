@@ -50,7 +50,7 @@ namespace NovaLandsArchipelago
             Core.harmony.Patch(typeof(Text).GetMethod("set_text"), new HarmonyMethod(Core.GetMethod(nameof(TextPatch))));
             Core.harmony.Patch(typeof(TextMesh).GetMethod("set_text"), new HarmonyMethod(Core.GetMethod(nameof(TextPatch))));
             Core.harmony.Patch(TMP_Text.GetMethod("set_text"), new HarmonyMethod(Core.GetMethod(nameof(TextPatch))));
-            //Core.harmony.Patch(ResearchesList.GetMethod("OnResearched"), new HarmonyMethod(Core.GetMethod(nameof(ResearchesListPatch))));
+            Core.harmony.Patch(ResearchesList.GetMethod("OnResearched"), new HarmonyMethod(Core.GetMethod(nameof(ResearchesListPatch))));
         }
 
         internal static void TextPatch(ref string value)
