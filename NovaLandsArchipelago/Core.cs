@@ -9,10 +9,10 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-[assembly: MelonInfo(typeof(NovaLandsArchipelago.Core), "NovaLandsZoom", "1.0.1", "Gott", null)]
+[assembly: MelonInfo(typeof(NovaLandsZoom.Core), "NovaLandsZoom", "1.0.2", "Gott", null)]
 [assembly: MelonGame("BEHEMUTT", "Nova Lands")]
 
-namespace NovaLandsArchipelago
+namespace NovaLandsZoom
 {
     public class Core : MelonMod
     {

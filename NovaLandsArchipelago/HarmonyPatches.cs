@@ -4,7 +4,7 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace NovaLandsArchipelago
+namespace NovaLandsZoom
 {
     internal static class Patches
     {

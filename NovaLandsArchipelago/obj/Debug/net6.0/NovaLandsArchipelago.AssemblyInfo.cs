@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("NovaLandsArchipelago")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("NovaLandsZoom")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96bdcf0d43e0be93ba736b3033b5f187da44e3e1")]
-[assembly: System.Reflection.AssemblyProductAttribute("NovaLandsArchipelago")]
-[assembly: System.Reflection.AssemblyTitleAttribute("NovaLandsArchipelago")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e71f9489b9a3c7e13e3ab387a3e33bbd6d3ea1f")]
+[assembly: System.Reflection.AssemblyProductAttribute("NovaLandsZoom")]
+[assembly: System.Reflection.AssemblyTitleAttribute("NovaLandsZoom")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Resources.NeutralResourcesLanguageAttribute("en-US")]
 
