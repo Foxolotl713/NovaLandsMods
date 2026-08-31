@@ -1,16 +1,18 @@
 ﻿using Archipelago.MultiClient.Net;
 using Archipelago.MultiClient.Net.Enums;
 using Archipelago.MultiClient.Net.Helpers;
+using Harmony;
 using HarmonyLib;
 using MelonLoader;
-using UnityEngine;
 using MelonLoader.Utils;
 using System;
 using System.Collections.Generic;
-using System.Reflection;
-using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Reflection;
+using UnityEngine;
+using UnityEngine.UI;
+using static Il2CppSystem.Xml.XmlWellFormedWriter.AttributeValueCache;
 
 [assembly: MelonInfo(typeof(NovaLandsArchipelago.Core), "NovaLandsArchipelago", "0.1.0", "Gott", null)]
 [assembly: MelonGame("BEHEMUTT", "Nova Lands")]
@@ -24,7 +26,7 @@ namespace NovaLandsArchipelago
         private MelonPreferences_Entry<string> Server;
         private MelonPreferences_Entry<string> PlayerName;
         private MelonPreferences_Entry<string> Password;
-        public static bool connected = true;
+        public static bool connected = false;
         public static HarmonyLib.Harmony harmony;
         public Dictionary<string, int> LocationIDs = new()
         {
@@ -65,6 +67,9 @@ namespace NovaLandsArchipelago
             {"Research Supercomputer", 35},
             {"Research Nuclear Tech", 36},
             {"Research Hypercomputer", 37},
+            {"Moschillar", 38},
+            {"Drameleon", 39},
+            {"Tunasa", 40},
         };
         public override void OnInitializeMelon()
         {
@@ -80,20 +85,15 @@ namespace NovaLandsArchipelago
         }
 
         public ArchipelagoSession archipelagoSession;
+        public int goal;
         private enum FocusField { None, Server, Name, Password }
         private FocusField focused = FocusField.None;
-
-        private float zoomValue = 1f;
-        private const float ZoomMin = -1f;
-        private const float ZoomMax = 4f;
-        private float lastZoomValue = 4.125f;
-
         private void DrawMenu()
         {
             // Allow drawing UI even when connected so we can provide a test button for research purchase.
             // Layout values
             int x = 10;
-            int y = 10;
+            int y = 140;
             int width = 300;
             int height = 22;
             int labelWidth = 60;
@@ -182,6 +182,15 @@ namespace NovaLandsArchipelago
 
                     var version = Version.Parse("0.6.7");
                     LoginResult result;
+                    // Must go BEFORE a successful connection attempt
+                    session.Items.ItemReceived += (receivedItemsHelper) => {
+                        var itemReceivedName = receivedItemsHelper.PeekItem().ItemName;
+
+                        Patches.researches.Add(itemReceivedName.ToString());
+
+                        receivedItemsHelper.DequeueItem();
+                    };
+
                     // Call TryConnectAndLogin with an empty string[] for the fifth parameter and the password as the sixth
                     result = session.TryConnectAndLogin("Nova Lands", PlayerName.Value, ItemsHandlingFlags.AllItems, version, System.Array.Empty<string>(), Password.Value);
                     if (result.Successful)
@@ -190,6 +199,8 @@ namespace NovaLandsArchipelago
                         connected = true;
                         // keep a reference to the session (stored as object so we can reflectively call send methods)
                         archipelagoSession = session;
+                        LoginSuccessful Result = (LoginSuccessful)result;
+                        goal = int.Parse(Result.SlotData["goal"].ToString());
                     }
                     else
                     {
@@ -205,7 +216,6 @@ namespace NovaLandsArchipelago
                 LoggerInstance.Msg($"Not connected, skipping location check for: {location}");
                 return;
             }
-            LoggerInstance.Msg($"Checking location for research: {location}");
             var check = "";
             switch (location)
             {
@@ -308,6 +318,15 @@ namespace NovaLandsArchipelago
                 case "HYPERCOMPUTER_NAME":
                     check = "Research Hypercomputer";
                     break;
+                case "Moschillar":
+                    check = "Moschillar";
+                    break;
+                case "Drameleon":
+                    check = "Drameleon";
+                    break;
+                case "Tunasa":
+                    check = "Tunasa";
+                    break;
                 default:
                     LoggerInstance.Msg($"Unknown location checked: {location}");
                     break;
@@ -318,16 +337,23 @@ namespace NovaLandsArchipelago
                 LoggerInstance.Msg($"Checked location: {check} (ID: {LocationIDs[check]})");
             }
         }
+        public void Goal(int reason)
+        {
+            if (!connected)
+            {
+                LoggerInstance.Msg($"Not connected, skipping goal update for: {goal}");
+                return;
+            }
+            if (goal == reason)
+            {
+                archipelagoSession.SetGoalAchieved();
+            }
+        }
         public static MethodInfo GetMethod(string MethodName, BindingFlags bindingAttributes = BindingFlags.NonPublic | BindingFlags.Static)
         {
             StackTrace stackTrace = new StackTrace();
             Type callingType = stackTrace.GetFrame(1).GetMethod().DeclaringType;
             return callingType.GetMethod(MethodName, bindingAttributes);
         }
-    }
-
-    public class ResearchDescriptor
-    {
-        public string researchName;
     }
 }
