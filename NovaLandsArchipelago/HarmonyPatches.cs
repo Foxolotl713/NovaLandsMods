@@ -126,8 +126,9 @@ namespace NovaLandsArchipelago
             }
             return false;
         }
-        internal static void ResearchPopupTechCardPatch(ref Il2Cpp.ResearchState state)
+        internal static void ResearchPopupTechCardPatch(ref Il2Cpp.ResearchState state, ref Il2Cpp.ResearchPopupTechCard __instance)
         {
+            Core.Instance.LoggerInstance.Msg($"Research set to {state} for {__instance.descriptor.ResearchName}");
             if (state == Il2Cpp.ResearchState.LOCKED)
             {
                 state =Il2Cpp.ResearchState.UNLOCKED;

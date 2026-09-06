@@ -327,6 +327,18 @@ namespace NovaLandsArchipelago
                 case "Tunasa":
                     check = "Tunasa";
                     break;
+                case "POWER_I_NAME":
+                    check = "Research Power I";
+                    break;
+                case "POWER_II_NAME":
+                    check = "Research Power II";
+                    break;
+                case "OVERCLOCKIN_I_NAME":
+                    check = "Research Overclocking I";
+                    break;
+                case "OVERCLOCKIN_II_NAME":
+                    check = "Research Overclocking II";
+                    break;
                 default:
                     LoggerInstance.Msg($"Unknown location checked: {location}");
                     break;
