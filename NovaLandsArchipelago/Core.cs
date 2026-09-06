@@ -14,7 +14,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using static Il2CppSystem.Xml.XmlWellFormedWriter.AttributeValueCache;
 
-[assembly: MelonInfo(typeof(NovaLandsArchipelago.Core), "NovaLandsArchipelago", "0.1.0", "Gott", null)]
+[assembly: MelonInfo(typeof(NovaLandsArchipelago.Core), "NovaLandsArchipelago", "0.1.1", "Gott", null)]
 [assembly: MelonGame("BEHEMUTT", "Nova Lands")]
 
 namespace NovaLandsArchipelago
