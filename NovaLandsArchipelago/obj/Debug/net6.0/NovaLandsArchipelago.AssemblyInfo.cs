@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NovaLandsArchipelago")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c33879b1068367b11685b77c6fb7facf9bb28896")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e4221aaf3c8936fbfa51c4ae458ccc934c7659f")]
 [assembly: System.Reflection.AssemblyProductAttribute("NovaLandsArchipelago")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NovaLandsArchipelago")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
