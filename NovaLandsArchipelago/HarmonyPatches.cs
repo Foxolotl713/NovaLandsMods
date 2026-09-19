@@ -17,6 +17,9 @@ namespace NovaLandsArchipelago
         public static Type DrameleonBoss = assembly.GetType("Il2Cpp.DrameleonBoss");
         public static Type TunasaBoss = assembly.GetType("Il2Cpp.TunasaBoss");
         public static Type MuseumAreaController = assembly.GetType("Il2Cpp.MuseumAreaController");
+        public static Type PlayerSkillPopupNode = assembly.GetType("Il2Cpp.PlayerSkillPopupNode");
+        public static Type GemOverclockBuilding = assembly.GetType("Il2Cpp.GemOverclockBuilding");
+        public static Type WorldArea = assembly.GetType("Il2Cpp.WorldArea");
         public static List<string> researches = new();
         public static Dictionary<string, string> researchReplacements = new()
         {
@@ -66,6 +69,28 @@ namespace NovaLandsArchipelago
             {"EXTRAS", "Cool Skins and stuff" },
             {"CREDITS", "Meet the team!" }*/
         };
+        public static Dictionary<string, int> biomeLights = new()
+        {
+            {"TestGrass", 0},
+            {"TestRocks", 0},
+            {"Desert", 0},
+            {"TestSwamp", 0},
+            {"ForestBiome", 0},
+            {"Snow", 0},
+            {"Vulcanic", 0},
+            {"RadioactiveBiome", 0},
+        };
+        public static Dictionary<string, string> biomes = new()
+        {
+            {"TestGrass", "MG"},
+            {"TestRocks", "MR"},
+            {"Desert", "MD"},
+            {"TestSwamp", "MS"},
+            {"ForestBiome", "MF"},
+            {"Snow", "MSn"},
+            {"Vulcanic", "MM"},
+            {"RadioactiveBiome", "MB"},
+        };
         private static Assembly GetAssembly()
         {
             Assembly assembly = AppDomain.CurrentDomain.GetAssemblies().FirstOrDefault(x => x.GetName().Name == "Assembly-CSharp");
@@ -86,7 +111,7 @@ namespace NovaLandsArchipelago
 
             return textMeshProAssembly.GetType("Il2CppTMPro.TMP_Text") ?? textMeshProAssembly.GetType("TMPro.TMP_Text");
         }
-        
+
         public static unsafe void Init()
         {
 
@@ -98,9 +123,11 @@ namespace NovaLandsArchipelago
             Core.harmony.Patch(MoschillarBoss.GetMethod("SpawnDeathLoot"), new HarmonyMethod(Core.GetMethod(nameof(MoschillarBossPatch))));
             Core.harmony.Patch(DrameleonBoss.GetMethod("SpawnDeathLoot"), new HarmonyMethod(Core.GetMethod(nameof(DrameleonBossPatch))));
             Core.harmony.Patch(TunasaBoss.GetMethod("SpawnDeathLoot"), new HarmonyMethod(Core.GetMethod(nameof(TunasaBossPatch))));
-            Core.harmony.Patch(MuseumAreaController.GetMethod("IsAllDioramasComplete"), new HarmonyMethod(Core.GetMethod(nameof(MuseumAreaControllerPatch))));
+            Core.harmony.Patch(MuseumAreaController.GetMethod("UpdateDioramaState", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static, null, new Type[] { typeof(Il2Cpp.WorldBiome), typeof(int), typeof(bool) }, null), new HarmonyMethod(Core.GetMethod(nameof(MuseumAreaControllerPatch))));
+            Core.harmony.Patch(PlayerSkillPopupNode.GetMethod("SetState"), new HarmonyMethod(Core.GetMethod(nameof(PlayerSkillPopupNodePatch))));
+            Core.harmony.Patch(GemOverclockBuilding.GetMethod("GetBonusPerGroup"), new HarmonyMethod(Core.GetMethod(nameof(GemOverclockBuildingPatch))));
+            Core.harmony.Patch(WorldArea.GetMethod("HasBotAntenna"), new HarmonyMethod(Core.GetMethod(nameof(WorldAreaPatch))));
         }
-
         internal static void TextPatch(ref string value)
         {
             if (replacements.ContainsKey(value))
@@ -134,8 +161,17 @@ namespace NovaLandsArchipelago
         {
             if (state == Il2Cpp.ResearchState.LOCKED)
             {
-                state =Il2Cpp.ResearchState.UNLOCKED;
+                state = Il2Cpp.ResearchState.UNLOCKED;
             }
+        }
+        internal static void PlayerSkillPopupNodePatch(ref Il2Cpp.ResearchState state)
+        {
+
+        }
+        internal static void GemOverclockBuildingPatch(ref float __result)
+        {
+            Core.Instance.LoggerInstance.Msg($"Original GemOverclockBuilding Patch result: {__result}");
+            __result *= 10f;
         }
         internal static void MoschillarBossPatch()
         {
@@ -152,12 +188,42 @@ namespace NovaLandsArchipelago
             Core.Instance.CheckLocation("Tunasa");
             Core.Instance.Goal(4);
         }
-        internal static void MuseumAreaControllerPatch(ref bool __result)
+        internal static void MuseumAreaControllerPatch(ref Il2Cpp.WorldBiome biome, ref int numberOfLights)
         {
-            if (__result)
+            biomeLights[biome.BiomeType.ToString()] = numberOfLights;
+            if (biomeLights[biome.BiomeType.ToString()] > 0)
+            {
+                Core.Instance.CheckLocation(biomes[biome.BiomeType.ToString()] + "1");
+            }
+            if (biomeLights[biome.BiomeType.ToString()] > 1)
+            {
+                Core.Instance.CheckLocation(biomes[biome.BiomeType.ToString()] + "2");
+            }
+            if (biomeLights[biome.BiomeType.ToString()] > 2)
+            {
+                Core.Instance.CheckLocation(biomes[biome.BiomeType.ToString()] + "3");
+            }
+            if (biomeLights[biome.BiomeType.ToString()] > 3)
+            {
+                Core.Instance.CheckLocation(biomes[biome.BiomeType.ToString()] + "4");
+            }
+            if (biomeLights[biome.BiomeType.ToString()] > 4)
+            {
+                Core.Instance.CheckLocation(biomes[biome.BiomeType.ToString()] + "5");
+            }
+            int sum = 0;
+            for (int i = 0; i < 8; i++)
+            {
+                sum += biomeLights[biomeLights.Keys.ElementAt(i)];
+            }
+            if (sum >= Core.Instance.museumGoal)
             {
                 Core.Instance.Goal(1);
             }
+        }
+        internal static void WorldAreaPatch(ref bool __result)
+        {
+            __result = true;
         }
     }
 }
