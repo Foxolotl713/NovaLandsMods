@@ -243,10 +243,6 @@ namespace NovaLandsArchipelago
                     // Must go BEFORE a successful connection attempt
                     session.Items.ItemReceived += (receivedItemsHelper) => {
                         var itemReceivedName = receivedItemsHelper.PeekItem().ItemName;
-                        if (itemReceivedName.ToString().StartsWith("Research"))
-                        {
-                            Patches.researches.Add(itemReceivedName.ToString());
-                        }
                         if (itemReceivedName.ToString().EndsWith("Trap"))
                         {
                             timeleft = 40f;
@@ -286,11 +282,15 @@ namespace NovaLandsArchipelago
                                     break;
                             }
                         }
+                        else
+                        {
+                            Patches.researches.Add(itemReceivedName.ToString());
+                        }
                         receivedItemsHelper.DequeueItem();
                     };
 
                     // Call TryConnectAndLogin with an empty string[] for the fifth parameter and the password as the sixth
-                    result = session.TryConnectAndLogin("Nova Lands", PlayerName.Value, ItemsHandlingFlags.AllItems, version, System.Array.Empty<string>(), Password.Value);
+                    result = session.TryConnectAndLogin("Nova Lands", PlayerName.Value, ItemsHandlingFlags.AllItems, version, password: Password.Value);
                     if (result.Successful)
                     {
                         LoggerInstance.Msg("Successfully connected to Archipelago server!");
