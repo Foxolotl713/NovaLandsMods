@@ -14,7 +14,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using static Il2CppSystem.Xml.XmlWellFormedWriter.AttributeValueCache;
 
-[assembly: MelonInfo(typeof(NovaLandsArchipelago.Core), "NovaLandsArchipelago", "0.2.0", "Gott", null)]
+[assembly: MelonInfo(typeof(NovaLandsArchipelago.Core), "NovaLandsArchipelago", "0.2.1", "Gott", null)]
 [assembly: MelonGame("BEHEMUTT", "Nova Lands")]
 
 namespace NovaLandsArchipelago
@@ -75,41 +75,49 @@ namespace NovaLandsArchipelago
             {"Museum: 3 Grass Dioramas", 313},
             {"Museum: 4 Grass Dioramas", 314},
             {"Museum: 5 Grass Dioramas", 315},
+            {"Museum: Grass Room", 316},
             {"Museum: 1 Rock Dioramas", 321},
             {"Museum: 2 Rock Dioramas", 322},
             {"Museum: 3 Rock Dioramas", 323},
             {"Museum: 4 Rock Dioramas", 324},
             {"Museum: 5 Rock Dioramas", 325},
+            {"Museum: Rock Room", 326},
             {"Museum: 1 Desert Dioramas", 331},
             {"Museum: 2 Desert Dioramas", 332},
             {"Museum: 3 Desert Dioramas", 333},
             {"Museum: 4 Desert Dioramas", 334},
             {"Museum: 5 Desert Dioramas", 335},
+            {"Museum: Desert Room", 336},
             {"Museum: 1 Sea Dioramas", 341},
             {"Museum: 2 Sea Dioramas", 342},
             {"Museum: 3 Sea Dioramas", 343},
             {"Museum: 4 Sea Dioramas", 344},
             {"Museum: 5 Sea Dioramas", 345},
+            {"Museum: Sea Room", 346},
             {"Museum: 1 Forest Dioramas", 351},
             {"Museum: 2 Forest Dioramas", 352},
             {"Museum: 3 Forest Dioramas", 353},
             {"Museum: 4 Forest Dioramas", 354},
             {"Museum: 5 Forest Dioramas", 355},
+            {"Museum: Forest Room", 356},
             {"Museum: 1 Snow Dioramas", 361},
             {"Museum: 2 Snow Dioramas", 362},
             {"Museum: 3 Snow Dioramas", 363},
             {"Museum: 4 Snow Dioramas", 364},
             {"Museum: 5 Snow Dioramas", 365},
+            {"Museum: Snow Room", 366},
             {"Museum: 1 Metallic Dioramas", 371},
             {"Museum: 2 Metallic Dioramas", 372},
             {"Museum: 3 Metallic Dioramas", 373},
             {"Museum: 4 Metallic Dioramas", 374},
             {"Museum: 5 Metallic Dioramas", 375},
+            {"Museum: Metallic Room", 376},
             {"Museum: 1 Behemittium Dioramas", 381},
             {"Museum: 2 Behemittium Dioramas", 382},
             {"Museum: 3 Behemittium Dioramas", 383},
             {"Museum: 4 Behemittium Dioramas", 384},
             {"Museum: 5 Behemittium Dioramas", 385},
+            {"Museum: Behemittium Room", 386}
         };
         public override void OnInitializeMelon()
         {
@@ -284,7 +292,7 @@ namespace NovaLandsArchipelago
                         }
                         else
                         {
-                            Patches.researches.Add(itemReceivedName.ToString());
+                            Patches.researches.Add(itemReceivedName.ToString().ToLower());
                         }
                         receivedItemsHelper.DequeueItem();
                     };
@@ -453,6 +461,9 @@ namespace NovaLandsArchipelago
                 case "MG5":
                     check = "Museum: 5 Grass Dioramas";
                     break;
+                case "MGR":
+                    check = "Museum: Grass Room";
+                    break;
                 case "MR1":
                     check = "Museum: 1 Rock Dioramas";
                     break;
@@ -467,6 +478,9 @@ namespace NovaLandsArchipelago
                     break;
                 case "MR5":
                     check = "Museum: 5 Rock Dioramas";
+                    break;
+                case "MRR":
+                    check = "Museum: Rock Room";
                     break;
                 case "MD1":
                     check = "Museum: 1 Desert Dioramas";
@@ -483,6 +497,9 @@ namespace NovaLandsArchipelago
                 case "MD5":
                     check = "Museum: 5 Desert Dioramas";
                     break;
+                case "MDR":
+                    check = "Museum: Desert Room";
+                    break;
                 case "MS1":
                     check = "Museum: 1 Sea Dioramas";
                     break;
@@ -497,6 +514,9 @@ namespace NovaLandsArchipelago
                     break;
                 case "MS5":
                     check = "Museum: 5 Sea Dioramas";
+                    break;
+                case "MSR":
+                    check = "Museum: Sea Room";
                     break;
                 case "MF1":
                     check = "Museum: 1 Forest Dioramas";
@@ -513,6 +533,9 @@ namespace NovaLandsArchipelago
                 case "MF5":
                     check = "Museum: 5 Forest Dioramas";
                     break;
+                case "MFR":
+                    check = "Museum: Forest Room";
+                    break;
                 case "MSn1":
                     check = "Museum: 1 Snow Dioramas";
                     break;
@@ -527,6 +550,9 @@ namespace NovaLandsArchipelago
                     break;
                 case "MSn5":
                     check = "Museum: 5 Snow Dioramas";
+                    break;
+                case "MSnR":
+                    check = "Museum: Snow Room";
                     break;
                 case "MM1":
                     check = "Museum: 1 Metallic Dioramas";
@@ -543,6 +569,9 @@ namespace NovaLandsArchipelago
                 case "MM5":
                     check = "Museum: 5 Metallic Dioramas";
                     break;
+                case "MMR":
+                    check = "Museum: Metallic Room";
+                    break;
                 case "MB1":
                     check = "Museum: 1 Behemittium Dioramas";
                     break;
@@ -558,6 +587,9 @@ namespace NovaLandsArchipelago
                 case "MB5":
                     check = "Museum: 5 Behemittium Dioramas";
                     break;
+                case "MBR":
+                    check = "Museum: Behemittium Room";
+                    break;
                 default:
                     LoggerInstance.Msg($"Unknown location checked: {location}");
                     break;
@@ -565,7 +597,10 @@ namespace NovaLandsArchipelago
             if (check != "")
             {
                 archipelagoSession.Locations.CompleteLocationChecks(LocationIDs[check]);
-                LoggerInstance.Msg($"Checked location: {check} (ID: {LocationIDs[check]})");
+            }
+            if (check.Contains("5"))
+            {
+                CheckLocation(check.Replace("5", "R"));
             }
         }
         public void Goal(int reason)

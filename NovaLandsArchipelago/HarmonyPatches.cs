@@ -23,43 +23,43 @@ namespace NovaLandsArchipelago
         public static List<string> researches = new();
         public static Dictionary<string, string> researchReplacements = new()
         {
-            {"MASS_PRODUCTION_I_NAME", "Mass Production I"},
-            {"MASS_PRODUCTION_II_NAME", "Mass Production II"},
-            {"JETPACK_I_NAME", "Jetpack"},
-            {"3D_PRINTING_I_NAME", "Explorer Needs I"},
-            {"AUTOMATION_I_NAME", "Automation I"},
-            {"AUTOMATION_II_NAME", "Automation II"},
-            {"CONTAINERS_I_NAME", "Deposits I"},
-            {"CONTAINERS_II_NAME", "Deposits II"},
-            {"ENERGY_RIFLE_I_NAME", "Energy Rifle"},
-            {"EXPLORER_NEEDS_II_NAME", "Explorer Needs II"},
-            {"ADVANCED_PRODUCTION_I_NAME", "Advanced Production I"},
-            {"FARMING_I_NAME", "Farming I"},
-            {"FARMING_II_NAME", "Farming II"},
-            {"ADVANCED_PRODUCTION_II_NAME", "Advanced Production II"},
-            {"RANCHING_I_NAME", "Ranching I"},
-            {"MODULES_I_NAME", "Modules I"},
-            {"RANCHING_II_NAME", "Ranching II"},
-            {"RANCHING_III_NAME", "Ranching III"},
-            {"EXPLORER_NEEDS_III_NAME", "Explorer Needs III"},
-            {"POWER_III_NAME", "Power III"},
-            {"POWER_I_NAME", "Power I"},
-            {"POWER_II_NAME", "Power II"},
-            {"OVERCLOCKIN_I_NAME", "Overclocking I"},
-            {"OVERCLOCKIN_II_NAME", "Overclocking II"},
-            {"ADVANCED_PRODUCTION_III_NAME", "Advanced Production III"},
-            {"LIQUIDS_I_NAME", "Liquids I"},
-            {"COMPLEX_PRODUCTION_I_NAME", "Complex Production I"},
-            {"FARMING_III_NAME", "Farming III"},
-            {"SHIELD_ARMOR_NAME", "Suit Armor"},
-            {"EXPLORER_NEEDS_IV_NAME", "Explorer Needs IV"},
-            {"SUPERHARD_MINERALS_NAME", "Superhard Minerals"},
-            {"COMPLEX_PRODUCTION_II_NAME", "Complex Production II"},
-            {"GLASS_WORKS_NAME", "Glass Works"},
-            {"SUPERCOMPUTER_RESEARCH_NAME", "Supercomputer"},
-            {"DRONES_NAME", "Mass Transport"},
-            {"NUCLEAR_TECH_NAME", "Nuclear Tech"},
-            {"HYPERCOMPUTER_NAME", "Hypercomputer"}
+            {"MASS_PRODUCTION_I_NAME", "mass production i"},
+            {"MASS_PRODUCTION_II_NAME", "mass production ii"},
+            {"JETPACK_I_NAME", "jetpack"},
+            {"3D_PRINTING_I_NAME", "explorer needs i"},
+            {"AUTOMATION_I_NAME", "automation i"},
+            {"AUTOMATION_II_NAME", "automation ii"},
+            {"CONTAINERS_I_NAME", "deposits i"},
+            {"CONTAINERS_II_NAME", "deposits ii"},
+            {"ENERGY_RIFLE_I_NAME", "energy rifle"},
+            {"EXPLORER_NEEDS_II_NAME", "explorer needs ii"},
+            {"ADVANCED_PRODUCTION_I_NAME", "advanced production i"},
+            {"FARMING_I_NAME", "farming i"},
+            {"FARMING_II_NAME", "farming ii"},
+            {"ADVANCED_PRODUCTION_II_NAME", "advanced production ii"},
+            {"RANCHING_I_NAME", "ranching i"},
+            {"MODULES_I_NAME", "modules i"},
+            {"RANCHING_II_NAME", "ranching ii"},
+            {"RANCHING_III_NAME", "ranching iii"},
+            {"EXPLORER_NEEDS_III_NAME", "explorer needs iii"},
+            {"POWER_III_NAME", "power iii"},
+            {"POWER_I_NAME", "power i"},
+            {"POWER_II_NAME", "power ii"},
+            {"OVERCLOCKIN_I_NAME", "overclocking i"},
+            {"OVERCLOCKIN_II_NAME", "overclocking ii"},
+            {"ADVANCED_PRODUCTION_III_NAME", "advanced production iii"},
+            {"LIQUIDS_I_NAME", "liquids i"},
+            {"COMPLEX_PRODUCTION_I_NAME", "complex production i"},
+            {"FARMING_III_NAME", "farming iii"},
+            {"SHIELD_ARMOR_NAME", "suit armor"},
+            {"EXPLORER_NEEDS_IV_NAME", "explorer needs iv"},
+            {"SUPERHARD_MINERALS_NAME", "superhard minerals"},
+            {"COMPLEX_PRODUCTION_II_NAME", "complex production ii"},
+            {"GLASS_WORKS_NAME", "glass works"},
+            {"SUPERCOMPUTER_RESEARCH_NAME", "supercomputer"},
+            {"DRONES_NAME", "mass transport"},
+            {"NUCLEAR_TECH_NAME", "nuclear tech"},
+            {"HYPERCOMPUTER_NAME", "hypercomputer"}
         };
         public static Dictionary<string, string> replacements = new()
         {
@@ -115,9 +115,9 @@ namespace NovaLandsArchipelago
         public static unsafe void Init()
         {
 
-            //Core.harmony.Patch(typeof(Text).GetMethod("set_text"), new HarmonyMethod(Core.GetMethod(nameof(TextPatch))));
-            //Core.harmony.Patch(typeof(TextMesh).GetMethod("set_text"), new HarmonyMethod(Core.GetMethod(nameof(TextPatch))));
-            //Core.harmony.Patch(TMP_Text.GetMethod("set_text"), new HarmonyMethod(Core.GetMethod(nameof(TextPatch))));
+            Core.harmony.Patch(typeof(Text).GetMethod("set_text"), new HarmonyMethod(Core.GetMethod(nameof(TextPatch))));
+            Core.harmony.Patch(typeof(TextMesh).GetMethod("set_text"), new HarmonyMethod(Core.GetMethod(nameof(TextPatch))));
+            Core.harmony.Patch(TMP_Text.GetMethod("set_text"), new HarmonyMethod(Core.GetMethod(nameof(TextPatch))));
             Core.harmony.Patch(ResearchPopup.GetMethod("OnClickResearch"), new HarmonyMethod(Core.GetMethod(nameof(ResearchPopupPatch))));
             Core.harmony.Patch(ResearchPopupTechCard.GetMethod("SetState"), new HarmonyMethod(Core.GetMethod(nameof(ResearchPopupTechCardPatch))));
             Core.harmony.Patch(MoschillarBoss.GetMethod("SpawnDeathLoot"), new HarmonyMethod(Core.GetMethod(nameof(MoschillarBossPatch))));
@@ -130,9 +130,16 @@ namespace NovaLandsArchipelago
         }
         internal static void TextPatch(ref string value)
         {
-            if (replacements.ContainsKey(value))
+            if (researchReplacements.Values.Contains(value.ToLower()))
             {
-                value = replacements[value];
+                if (researches.Contains(value.ToLower()))
+                {
+                    value = $"<color=green>{value}</color>";
+                }
+                else
+                {
+                    value = $"<color=red>{value}</color>";
+                }
             }
         }
         internal static bool ResearchPopupPatch(Il2Cpp.ResearchPopup __instance)
