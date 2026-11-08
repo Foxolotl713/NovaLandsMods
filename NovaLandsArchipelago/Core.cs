@@ -600,7 +600,7 @@ namespace NovaLandsArchipelago
             }
             if (check.Contains("5"))
             {
-                CheckLocation(check.Replace("5", "R"));
+                CheckLocation(location.Replace("5", "R"));
             }
         }
         public void Goal(int reason)
