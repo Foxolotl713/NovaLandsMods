@@ -1,9 +1,11 @@
 using HarmonyLib;
 using Il2Cpp;
+using Il2CppTMPro;
 using System;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
+using static Il2Cpp.DialoguePopup;
 
 namespace NovaLandsArchipelago
 {
@@ -17,9 +19,10 @@ namespace NovaLandsArchipelago
         public static Type DrameleonBoss = assembly.GetType("Il2Cpp.DrameleonBoss");
         public static Type TunasaBoss = assembly.GetType("Il2Cpp.TunasaBoss");
         public static Type MuseumAreaController = assembly.GetType("Il2Cpp.MuseumAreaController");
-        public static Type PlayerSkillPopupNode = assembly.GetType("Il2Cpp.PlayerSkillPopupNode");
+        public static Type PlayerUpgradesList = assembly.GetType("Il2Cpp.PlayerUpgradesList");
         public static Type GemOverclockBuilding = assembly.GetType("Il2Cpp.GemOverclockBuilding");
         public static Type WorldArea = assembly.GetType("Il2Cpp.WorldArea");
+        public static Type CheatsPopup = assembly.GetType("Il2Cpp.CheatsPopup");
         public static List<string> researches = new();
         public static Dictionary<string, string> researchReplacements = new()
         {
@@ -124,9 +127,10 @@ namespace NovaLandsArchipelago
             Core.harmony.Patch(DrameleonBoss.GetMethod("SpawnDeathLoot"), new HarmonyMethod(Core.GetMethod(nameof(DrameleonBossPatch))));
             Core.harmony.Patch(TunasaBoss.GetMethod("SpawnDeathLoot"), new HarmonyMethod(Core.GetMethod(nameof(TunasaBossPatch))));
             Core.harmony.Patch(MuseumAreaController.GetMethod("UpdateDioramaState", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Static, null, new Type[] { typeof(Il2Cpp.WorldBiome), typeof(int), typeof(bool) }, null), new HarmonyMethod(Core.GetMethod(nameof(MuseumAreaControllerPatch))));
-            Core.harmony.Patch(PlayerSkillPopupNode.GetMethod("SetState"), new HarmonyMethod(Core.GetMethod(nameof(PlayerSkillPopupNodePatch))));
-            Core.harmony.Patch(GemOverclockBuilding.GetMethod("GetBonusPerGroup"), new HarmonyMethod(Core.GetMethod(nameof(GemOverclockBuildingPatch))));
+            Core.harmony.Patch(PlayerUpgradesList.GetMethod("SetTechState"), new HarmonyMethod(Core.GetMethod(nameof(PlayerUpgradesListPatch))));
+            //Core.harmony.Patch(GemOverclockBuilding.GetMethod("GetBonusPerGroup"), new HarmonyMethod(Core.GetMethod(nameof(GemOverclockBuildingPatch))));
             Core.harmony.Patch(WorldArea.GetMethod("HasBotAntenna"), new HarmonyMethod(Core.GetMethod(nameof(WorldAreaPatch))));
+            Core.harmony.Patch(CheatsPopup.GetMethod("CheatSpawnSingleResource"), new HarmonyMethod(Core.GetMethod(nameof(CheatsPopupPatch))));
         }
         internal static void TextPatch(ref string value)
         {
@@ -171,9 +175,10 @@ namespace NovaLandsArchipelago
                 state = Il2Cpp.ResearchState.UNLOCKED;
             }
         }
-        internal static void PlayerSkillPopupNodePatch(ref Il2Cpp.ResearchState state)
+        internal static void PlayerUpgradesListPatch(ref Il2Cpp.ResearchState state)
         {
-
+            Core.Instance.LoggerInstance.Msg($"Original PlayerUpgradesList Patch result: {state}");
+            state = Il2Cpp.ResearchState.UNLOCKED;
         }
         internal static void GemOverclockBuildingPatch(ref float __result)
         {
@@ -231,6 +236,10 @@ namespace NovaLandsArchipelago
         internal static void WorldAreaPatch(ref bool __result)
         {
             __result = true;
+        }
+        internal static void CheatsPopupPatch(ref Il2Cpp.CheatsPopup __instance)
+        { 
+            __instance.RaiseCancellation();
         }
     }
 }

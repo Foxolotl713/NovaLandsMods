@@ -3,12 +3,16 @@ using Archipelago.MultiClient.Net.Enums;
 using Archipelago.MultiClient.Net.Helpers;
 using Harmony;
 using HarmonyLib;
+using Il2Cpp;
+using Il2CppEasyFeedback.APIs;
+using Il2CppInterop.Runtime;
 using MelonLoader;
 using MelonLoader.Utils;
 using System;
 using System.Collections.Generic;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
@@ -126,7 +130,7 @@ namespace NovaLandsArchipelago
             LoggerInstance.Msg("Initialized.");
             MelonEvents.OnGUI.Subscribe(DrawMenu, 100); // The higher the value, the lower the priority.
             ConnectionData = MelonPreferences.CreateCategory("ConnectionData");
-            Server = ConnectionData.CreateEntry("Server", "archipelago.gg:40000");
+            Server = ConnectionData.CreateEntry("Server", "archipelago.gg:38281");
             PlayerName = ConnectionData.CreateEntry("PlayerName", "Player1");
             Password = ConnectionData.CreateEntry("Password", "");
             Patches.Init();
@@ -136,6 +140,9 @@ namespace NovaLandsArchipelago
         public int goal;
         public float timeleft;
         public string currentTrap;
+        public int randomskin = 0;
+        public int exp = 0;
+        public List<string> Rewards = new List<string>();
         public int museumGoal;
         private enum FocusField { None, Server, Name, Password }
         private FocusField focused = FocusField.None;
@@ -155,6 +162,41 @@ namespace NovaLandsArchipelago
                         cam.orthographicSize = 4.125f;
                     }
                 }
+            }
+            if (randomskin > 0)
+            {
+                randomskin -= 1;
+                var b = UnityEngine.Object.FindAnyObjectByType<Il2Cpp.PopupManager>();
+                b.RemovePopup();
+                b.Reset();
+                b.ShowPopup(Il2Cpp.PopupId.CHEATS_POPUP);
+                var c = UnityEngine.Object.FindAnyObjectByType<Il2Cpp.CheatsPopup>();
+                c.Setup();
+                c.OnClickRandomizePlayerSkin();
+                c.Hide();
+                b.RemovePopup();
+                b.Reset();
+                Time.timeScale = 1f;
+            }
+            if (exp > 0)
+            {
+                exp -= 1;
+                var b = UnityEngine.Object.FindAnyObjectByType<Il2Cpp.PopupManager>();
+                foreach (var a in UnityEngine.Object.FindObjectsOfType<Il2Cpp.BasePopup>())
+                {
+                    a.Hide();
+                }
+                b.RemovePopup();
+                b.Reset();
+                b.ShowPopup(Il2Cpp.PopupId.CHEATS_POPUP);
+                var c = UnityEngine.Object.FindAnyObjectByType<Il2Cpp.CheatsPopup>();
+                c.Setup();
+                c.OnClickIncreaseLevel();
+                c.OnClickIncreaseLevel();
+                c.Hide();
+                b.RemovePopup();
+                b.Reset();
+                Time.timeScale = 1f;
             }
             // Allow drawing UI even when connected so we can provide a test button for research purchase.
             // Layout values
@@ -249,7 +291,8 @@ namespace NovaLandsArchipelago
                     var version = Version.Parse("0.6.7");
                     LoginResult result;
                     // Must go BEFORE a successful connection attempt
-                    session.Items.ItemReceived += (receivedItemsHelper) => {
+                    session.Items.ItemReceived += (receivedItemsHelper) =>
+                    {
                         var itemReceivedName = receivedItemsHelper.PeekItem().ItemName;
                         if (itemReceivedName.ToString().EndsWith("Trap"))
                         {
@@ -288,6 +331,39 @@ namespace NovaLandsArchipelago
                                         }
                                     }
                                     break;
+                                case "Random Skin Trap":
+                                    randomskin += 1;
+                                    break;
+                                default:
+                                    LoggerInstance.Msg($"Received unknown trap: {itemReceivedName.ToString()}");
+                                    break;
+                            }
+                        }
+                        if (itemReceivedName.ToString().StartsWith("2"))
+                        {
+                            switch (itemReceivedName.ToString())
+                            {
+                                case "2 Steel":
+                                    Rewards.Add("2 Steel");
+                                    break;
+                                case "2 Plastic":
+                                    Rewards.Add("2 Plastic");
+                                    break;
+                                case "2 Glass":
+                                    Rewards.Add("2 Glass");
+                                    break;
+                                case "2 Iron Ingots":
+                                    Rewards.Add("2 Iron Ingots");
+                                    break;
+                                case "2 Copper Ingots":
+                                    Rewards.Add("2 Copper Ingots");
+                                    break;
+                                case "2 Levels":
+                                    exp += 1;
+                                    break;
+                                default:
+                                    LoggerInstance.Msg($"Received unknown item: {itemReceivedName.ToString()}");
+                                    break;
                             }
                         }
                         else
@@ -312,6 +388,66 @@ namespace NovaLandsArchipelago
                     else
                     {
                         LoggerInstance.Error($"Failed to connect: {result}");
+                    }
+                }
+            }
+            if (Rewards.Count > 0)
+            {
+                if (GUI.Button(new Rect(x + 130, y, 120, height), new GUIContent("Spawn Rewards"), buttonStyle))
+                {
+                    var id = Il2Cpp.ResourceIdClass.SteelResource;
+                    LoggerInstance.Msg($"Spawning rewards: {string.Join(", ", Rewards)}");
+
+                    var b = UnityEngine.Object.FindAnyObjectByType<Il2Cpp.PopupManager>();
+                    if (b == null)
+                    {
+                        LoggerInstance.Error("PopupManager not found. Cannot spawn rewards.");
+                        return;
+                    }
+                    b.ShowPopup(Il2Cpp.PopupId.CHEATS_POPUP);
+                    var c = UnityEngine.Object.FindAnyObjectByType<Il2Cpp.CheatsPopup>();
+                    if (c == null)
+                    {
+                        LoggerInstance.Error("CheatsPopup not found. Cannot spawn rewards.");
+                        return;
+                    }
+                    c.Setup();
+                    foreach (var a in UnityEngine.Object.FindObjectsOfType<WorldArea>())
+                    {
+                        if (a.player != null)
+                        {
+                            foreach (var reward in Rewards)
+                            {
+                                switch (reward)
+                                {
+                                    case "2 Steel":
+                                        id = Il2Cpp.ResourceIdClass.SteelResource;
+                                        break;
+                                    case "2 Plastic":
+                                        id = Il2Cpp.ResourceIdClass.PlasticResource;
+                                        break;
+                                    case "2 Glass":
+                                        id = Il2Cpp.ResourceIdClass.GlassResource;
+                                        break;
+                                    case "2 Iron Ingots":
+                                        id = Il2Cpp.ResourceIdClass.IronIngotResource;
+                                        break;
+                                    case "2 Copper Ingots":
+                                        id = Il2Cpp.ResourceIdClass.CopperIngotResource;
+                                        break;
+                                    default:
+                                        LoggerInstance.Msg($"Unknown reward: {reward}");
+                                        continue; // Skip unknown rewards
+                                }
+                                LoggerInstance.Msg($"Spawning reward: {reward}");
+                                c.CheatSpawnSingleResource(new Vector2(0, 0), id, a, 2);
+                            }
+                            c.Hide();
+                            b.RemovePopup();
+                            b.Reset();
+                            Time.timeScale = 1f;
+                            Rewards.Clear();
+                        }
                     }
                 }
             }
